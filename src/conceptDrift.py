@@ -74,7 +74,7 @@ for y in resultsEdges["results"]["bindings"]:
 dot = write(g1)
 G = pgv.AGraph(dot)
 G.layout(prog='dot')
-G.draw('foo.png')
+G.draw('../output/foo.png')
 print G.string()
 # gvv = gv.readstring(dot)
 # gv.layout(gvv,'dot')
