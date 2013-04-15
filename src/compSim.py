@@ -5,7 +5,7 @@ from __future__ import division
 import os
 import gzip
 
-dataDir = '../data'
+dataDir = '../data/efo'
 tmpDir = '../tmp'
 res = []
 
@@ -45,5 +45,6 @@ for i in os.listdir(dataDir):
         row.append(max((fijCompSize - fjCompSize)/fiCompSize, (fijCompSize - fiCompSize)/fjCompSize))
     res.append(row)
 
+print os.listdir(dataDir)
 for row in res:
     print row
