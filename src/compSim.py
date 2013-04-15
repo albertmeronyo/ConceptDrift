@@ -1,8 +1,11 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import os
 import gzip
 
-dataDir = './data'
-tmpDir = './tmp'
+dataDir = '../data'
+tmpDir = '../tmp'
 res = []
 
 for i in os.listdir(dataDir):
@@ -33,4 +36,5 @@ for i in os.listdir(dataDir):
         row.append(fijCompSize - fiCompSize)
     res.append(row)
 
-print res
+for row in res:
+    print row
