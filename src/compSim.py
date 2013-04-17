@@ -5,11 +5,11 @@ from __future__ import division
 import os
 import gzip
 
-dataDir = '../data/efo'
+dataDir = '../data/ecgo-sum'
 tmpDir = '../tmp'
 res = []
 
-for i in os.listdir(dataDir):
+for i in sorted(os.listdir(dataDir)):
     fi = open(os.path.join(dataDir, i), 'r')
     fiComp = gzip.open(os.path.join(tmpDir, i + '.gz'), 'wb')
     fiComp.writelines(fi)
@@ -19,7 +19,7 @@ for i in os.listdir(dataDir):
     fiCompSize = len(fiComp.read())
     fiComp.close()
     row = []
-    for j in os.listdir(dataDir):
+    for j in sorted(os.listdir(dataDir)):
         if i == j:
             row.append('x')
             continue
@@ -45,6 +45,6 @@ for i in os.listdir(dataDir):
         row.append(max((fijCompSize - fjCompSize)/fiCompSize, (fijCompSize - fiCompSize)/fjCompSize))
     res.append(row)
 
-print os.listdir(dataDir)
+print sorted(os.listdir(dataDir))
 for row in res:
     print row
