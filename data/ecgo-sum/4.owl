@@ -1,10 +1,8 @@
-    <owl:Class rdf:about="#ECG_000000641">
-        <rdfs:label rdf:datatype="&xsd;string">Right_arm</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#ECG_000000486"/>
-        <dc:description rdf:datatype="&xsd;string"></dc:description>
-        <dc:date rdf:datatype="&xsd;string"
-            >2009-03-04 10:11:27</dc:date>
-        <dc:source rdf:datatype="&xsd;string">FMA</dc:source>
-        <dc:creator rdf:datatype="&xsd;string"
-            >Stephen J. Granite</dc:creator>
-    </owl:Class>
+<owl:Class rdf:about="#ECG_000000641">
+  <rdfs:label rdf:datatype="&xsd;string">Right_arm</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#ECG_000000486"/>
+  <dc:description rdf:datatype="&xsd;string"></dc:description>
+  <dc:date rdf:datatype="&xsd;string">2009-03-04 10:11:27</dc:date>
+  <dc:source rdf:datatype="&xsd;string">FMA</dc:source>
+  <dc:creator rdf:datatype="&xsd;string">Stephen J. Granite</dc:creator>
+</owl:Class>

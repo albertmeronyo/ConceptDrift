@@ -1,11 +1,7 @@
-  <owl:Class rdf:ID="Right_arm">
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Stephen J. Granite</dc:creator>
-    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    ></dc:description>
-    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >2009-03-04 10:11:27</dc:date>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >FMA</dc:source>
-    <rdfs:subClassOf rdf:resource="#Arm"/>
-  </owl:Class>
+<owl:Class rdf:ID="Right_arm">
+  <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen J. Granite</dc:creator>
+  <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+  <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-03-04 10:11:27</dc:date>
+  <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA</dc:source>
+  <rdfs:subClassOf rdf:resource="#Arm"/>
+</owl:Class>
