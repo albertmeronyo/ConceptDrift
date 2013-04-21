@@ -25,7 +25,7 @@ WHERE {
 ?s a skos:Concept ;
 d2s:value ?value .
 ?value skos:prefLabel ?label .
-}
+} ORDER BY ?value
 """)
 
 print "SPARQLing for source concepts..."
@@ -62,7 +62,7 @@ WHERE {
 ?s a skos:Concept ;
 d2s:value ?value .
 ?value skos:prefLabel ?label .
-}
+} ORDER BY ?value
 """)
 
 print "SPARQLing for destination concepts..."
