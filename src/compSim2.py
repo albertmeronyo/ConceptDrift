@@ -7,6 +7,7 @@ import gzip
 from SPARQLWrapper import SPARQLWrapper, JSON
 import hashlib
 import json
+import sys
 
 tmpDir = '../tmp/'
 res = []
@@ -19,7 +20,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX d2s: <http://www.data2semantics.org/core/> 
 
-SELECT ?value ?label
+SELECT DISTINCT ?value ?label
 FROM <http://www.cedar-project.nl/data/1859>
 WHERE {
 ?s a skos:Concept ;
@@ -28,7 +29,7 @@ d2s:value ?value .
 } ORDER BY ?value
 """)
 
-print "SPARQLing for source concepts..."
+sys.stderr.write("SPARQLing for source concepts...\n")
 sparqlConceptsA = sparql.query().convert()
 
 sparql.setQuery("""
@@ -36,7 +37,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX d2s: <http://www.data2semantics.org/core/> 
 
-SELECT ?value ?p ?o
+SELECT DISTINCT ?value ?p ?o
 FROM <http://www.cedar-project.nl/data/1859>
 WHERE {
 ?value ?p ?o .
@@ -48,7 +49,7 @@ d2s:value ?value .
 }}} ORDER BY ?value
 """)
 
-print "SPARQLing for source descriptions..."
+sys.stderr.write("SPARQLing for source descriptions...\n")
 sparqlDescriptionsA = sparql.query().convert()
 
 sparql.setQuery("""
@@ -56,7 +57,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX d2s: <http://www.data2semantics.org/core/> 
 
-SELECT ?value ?label
+SELECT DISTINCT ?value ?label
 FROM <http://www.cedar-project.nl/data/1889>
 WHERE {
 ?s a skos:Concept ;
@@ -65,7 +66,7 @@ d2s:value ?value .
 } ORDER BY ?value
 """)
 
-print "SPARQLing for destination concepts..."
+sys.stderr.write("SPARQLing for destination concepts...\n")
 sparqlConceptsB = sparql.query().convert()
 
 sparql.setQuery("""
@@ -73,7 +74,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX d2s: <http://www.data2semantics.org/core/> 
 
-SELECT ?value ?p ?o
+SELECT DISTINCT ?value ?p ?o
 FROM <http://www.cedar-project.nl/data/1889>
 WHERE {
 ?value ?p ?o .
@@ -85,14 +86,14 @@ d2s:value ?value .
 }}} ORDER BY ?value
 """)
 
-print "SPARQLing for destination descriptions..."
+sys.stderr.write("SPARQLing for destination descriptions...\n")
 sparqlDescriptionsB = sparql.query().convert()
 
 
 totalRows = len(sparqlConceptsA["results"]["bindings"])
-print "Origin has {} concepts, destination has {}".format(len(sparqlConceptsA["results"]["bindings"]),
-                                                          len(sparqlConceptsB["results"]["bindings"]))
-print "Computing distances..."
+sys.stderr.write("Origin has {} concepts, destination has {}\n".format(len(sparqlConceptsA["results"]["bindings"]),
+                                                          len(sparqlConceptsB["results"]["bindings"])))
+sys.stderr.write("Computing distances...\n")
 doneRows = 0
 for i in sparqlConceptsA["results"]["bindings"]:
     fi = []
@@ -129,7 +130,7 @@ for i in sparqlConceptsA["results"]["bindings"]:
         row.append(max((fijCompSize - fjCompSize)/fiCompSize, (fijCompSize - fiCompSize)/fjCompSize))
     res.append(row)
     doneRows += 1
-    print "{}% done.".format(doneRows/totalRows*100)
+    sys.stderr.write("{}% done.\n".format(doneRows/totalRows*100))
 
 for row in res:
     print row
