@@ -1,0 +1,41 @@
+# 1. Dimensions of a table, 1889
+
+PREFIX d2s: <http://www.data2semantics.org/core/>
+
+SELECT DISTINCT ?s
+FROM <http://lod.cedar-project.nl/resource/BRT_1889_08_T1>
+WHERE {
+ ?s a d2s:Dimension .
+}
+
+# 2. Dimensions of a table, 1899
+
+PREFIX d2s: <http://www.data2semantics.org/core/>
+
+SELECT DISTINCT ?s 
+FROM <http://lod.cedar-project.nl/resource/BRT_1899_04_T>
+WHERE {
+ ?s a d2s:Dimension .
+}
+
+########################
+# Dataset construction #
+########################
+
+# 3. Population value, 1889
+
+PREFIX d2s: <http://www.data2semantics.org/core/>
+PREFIX cd: <http://www.data2semantics.org/data/BRT_1889_08_T1_marked/Tabel_1/>
+PREFIX ns1: <http://www.data2semantics.org/core/Tabel_1/> 
+
+SELECT ?cell ?population
+FROM <http://lod.cedar-project.nl/resource/BRT_1889_08_T1>
+WHERE {
+ ?cell d2s:isObservation [ d2s:dimension cd:12___1878 ,
+       			   		 cd:M ,
+					 cd:O ;
+			   ns1:BENAMING_van_de_onderdeelen_der_onderscheidene_beroepsklassen__met_de_daartoe_behoordende_beroepen cd:I/b_/Diamantslijpers__incl__verstellers_ ;
+			   ns1:Positie_in_het_beroep__aangeduid_met_A__B__C_of_D_ cd:D ;
+       			   d2s:populationSize ?population ] .
+}
+
