@@ -34,8 +34,7 @@ WHERE {
  ?cell d2s:isObservation [ d2s:dimension cd:12___1878 ,
        			   		 cd:M ,
 					 cd:O ;
-			   ns1:BENAMING_van_de_onderdeelen_der_onderscheidene_beroepsklassen__met_de_daartoe_behoordende_beroepen cd:I/b_/Diamantslijpers__incl__verstellers_ ;
+			   ns1:BENAMING_van_de_onderdeelen_der_onderscheidene_beroepsklassen__met_de_daartoe_behoordende_beroepen <http://www.data2semantics.org/data/BRT_1889_08_T1_marked/Tabel_1/I/b_/Diamantslijpers__incl__verstellers_> ;
 			   ns1:Positie_in_het_beroep__aangeduid_met_A__B__C_of_D_ cd:D ;
        			   d2s:populationSize ?population ] .
 }
-
