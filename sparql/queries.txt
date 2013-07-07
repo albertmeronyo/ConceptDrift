@@ -85,7 +85,7 @@ PREFIX cd: <http://www.data2semantics.org/data/BRT_1899_04_T_marked/Noordholland
 PREFIX ns1: <http://www.data2semantics.org/core/Noordholland/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT DISTINCT ?age_s ?gender_s ?marital_status_s ?municipality_s ?occupation_s ?position_s ?population
+SELECT DISTINCT (str(?age_s) AS ?age_c) (str(?gender_s) AS ?gender_c) (str(?marital_status_s) AS ?marital_status_c) (str(?municipality_s) AS ?municipality_c) (str(?occupation_s) AS ?occupation_c) (str(?position_s) AS ?position_c) ?population
 FROM <http://lod.cedar-project.nl/resource/BRT_1899_04_T>
 WHERE {
  ?cell d2s:isObservation [ d2s:dimension ?gender ;
