@@ -98,7 +98,7 @@ df$occupation_c <- as.factor(df$occupation_c)
 df$position_c <- as.factor(df$position_c)
 df$population <- as.numeric(df$population)
 # Load HISCO data and merge
-h1 <- read.xls('/Users/Albert/Downloads/index/1889_08_T1.xls')
+h1 <- read.xls('1889_08_T1.xls')
 h1$ID <- NULL
 h1$ALTBEROEP <- NULL 
 h1$STATUS <- NULL 
@@ -125,7 +125,7 @@ df2$occupation_c <- as.factor(df2$occupation_c)
 df2$position_c <- as.factor(df2$position_c)
 df2$population <- as.numeric(df2$population)
 # Load HISCO data and merge
-h2 <- read.xls('/Users/Albert/Downloads/index2/1899_04_T.xls')
+h2 <- read.xls('1899_04_T.xls')
 h2$ID <- NULL
 h2$ALTBEROEP <- NULL 
 h2$STATUS <- NULL 
