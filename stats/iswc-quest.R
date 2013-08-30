@@ -201,3 +201,26 @@ for(i in 1:2) {
 q.update <- paste(pre, body, post)
 # SPARQL UPDATE
 res.update <- SPARQL(endpoint,update=q.update,ns=prefix,extra=options)
+
+#######################
+# Additional statistics
+#######################
+# How many HISCO codes are non-common in both graphs
+length(setdiff(df.hisco$HISCO, common.hcodes))
+length(setdiff(df2.hisco$HISCO, common.hcodes))
+# Drift by major group
+pvalues.major <- c()
+df.hisco$HISCO <- as.numeric(df.hisco$HISCO)
+df2.hisco$HISCO <- as.numeric(df2.hisco$HISCO)
+for(h in 1:10) {
+  p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= (h - 1) * 10000) & (df.hisco$HISCO < h * 10000) ,'population'], 
+                   df2.hisco[(df2.hisco$HISCO >= (h - 1) * 10000) & (df2.hisco$HISCO < h * 10000),'population'])
+  pvalues.major <- append(pvalues.major, p.major$p.value)
+}
+
+pvalues.major <- append(pvalues.major, p.major$p.value)
+hp.major <- data.frame(common.hcodes, pvalues)
+hp <- hp[complete.cases(hp),]
+hp <- hp[order(hp$pvalues),]
+# Select only the ones clearly refusing H_0 (p-values under 0.05)
+hp.safe <- hp[hp$pvalues < 0.05,]
