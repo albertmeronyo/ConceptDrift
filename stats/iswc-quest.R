@@ -4,7 +4,7 @@ library(gdata)
 ##########################
 # Retrieve data via SPARQL
 ##########################
-endpoint <- "http://lod.cedar-project.nl:8897/sparql/"
+endpoint <- "http://lod.cedar-project.nl:8080/sparql/cedar"
 options <- NULL
 #prefix <- c("lop","http://semanticweb.cs.vu.nl/poseidon/ns/instances/",
 #            "eez","http://semanticweb.cs.vu.nl/poseidon/ns/eez/")
