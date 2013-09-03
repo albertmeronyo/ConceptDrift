@@ -1,0 +1,24 @@
+# Australia full dataset
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX imes: <http://rdf.abs.gov.au/meta/demo/measure/>
+PREFIX idim: <http://rdf.abs.gov.au/meta/dimension/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?sex_l ?age_l ?location_l ?labour_l ?population
+FROM <http://lod.cedar-project.nl/resource/semstats-australia>
+WHERE {
+ ?o a qb:Observation ;
+    imes:pop2011 ?population ;
+    idim:AGE5P ?age ;
+    idim:ASGS ?location ;
+    idim:LFSP ?labour ;
+    idim:SEX ?sex .
+ ?sex skos:prefLabel ?sex_l .
+ ?age skos:prefLabel ?age_l .
+ ?location skos:prefLabel ?location_l .
+ ?labour skos:prefLabel ?labour_l .
+}
+
+
+
+
