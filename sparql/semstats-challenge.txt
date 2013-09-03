@@ -17,8 +17,29 @@ WHERE {
  ?age skos:prefLabel ?age_l .
  ?location skos:prefLabel ?location_l .
  ?labour skos:prefLabel ?labour_l .
-}
+} LIMIT 100
 
+# France full dataset
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX idim: <http://rdf.insee.fr/meta/dimension/>
+PREFIX idim-cog2012:  <http://rdf.insee.fr/meta/cog2012/dimension/>
+PREFIX imes-demo: <http://rdf.insee.fr/meta/demo/mesure/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-
-
+SELECT ?sex_l ?age_l ?location_l ?labour_l ?population
+FROM <http://lod.cedar-project.nl/resource/semstats-france>
+WHERE {
+ ?o a qb:Observation ;
+      idim:ageq65 ?age ;
+      idim:sexe ?sex ;
+      idim:tactr ?labour ;
+      idim-cog2012:arrondissementMunicipal ?location ;
+      imes-demo:pop2010 ?population .
+ ?sex skos:prefLabel ?sex_l .
+ ?age skos:prefLabel ?age_l .
+ ?labour skos:prefLabel ?labour_l .
+ ?location skos:prefLabel ?location_l .
+ FILTER(langMatches(lang(?sex_l), "EN"))
+ FILTER(langMatches(lang(?age_l), "EN"))
+ FILTER(langMatches(lang(?labour_l), "EN"))
+} LIMIT 100
