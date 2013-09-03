@@ -4,7 +4,7 @@ PREFIX imes: <http://rdf.abs.gov.au/meta/demo/measure/>
 PREFIX idim: <http://rdf.abs.gov.au/meta/dimension/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT ?sex_l ?age_l ?location_l ?labour_l ?population
+SELECT (str(?sex_l) AS ?sex_l) (str(?age_l) AS ?age_l) (str(?location_l) AS ?location_l) (str(?labour_l) AS ?labour_l) ?population
 FROM <http://lod.cedar-project.nl/resource/semstats-australia>
 WHERE {
  ?o a qb:Observation ;
@@ -19,6 +19,19 @@ WHERE {
  ?labour skos:prefLabel ?labour_l .
 } LIMIT 100
 
+# Australian locations
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX idim: <http://rdf.abs.gov.au/meta/dimension/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT str(?location_l)
+FROM <http://lod.cedar-project.nl/resource/semstats-australia>
+WHERE {
+ ?o a qb:Observation ;
+    idim:ASGS ?location .
+ ?location skos:prefLabel ?location_l .
+}
+
 # France full dataset
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX idim: <http://rdf.insee.fr/meta/dimension/>
@@ -26,14 +39,14 @@ PREFIX idim-cog2012:  <http://rdf.insee.fr/meta/cog2012/dimension/>
 PREFIX imes-demo: <http://rdf.insee.fr/meta/demo/mesure/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT ?sex_l ?age_l ?location_l ?labour_l ?population
+SELECT (str(?sex_l) AS ?sex_l) (str(?age_l) as ?age_l) (str(?location_l) AS ?location_l) (str(?labour_l) AS ?labour_l) ?population
 FROM <http://lod.cedar-project.nl/resource/semstats-france>
 WHERE {
  ?o a qb:Observation ;
       idim:ageq65 ?age ;
       idim:sexe ?sex ;
       idim:tactr ?labour ;
-      idim-cog2012:arrondissementMunicipal ?location ;
+      idim-cog2012:commune ?location ;
       imes-demo:pop2010 ?population .
  ?sex skos:prefLabel ?sex_l .
  ?age skos:prefLabel ?age_l .
@@ -43,3 +56,16 @@ WHERE {
  FILTER(langMatches(lang(?age_l), "EN"))
  FILTER(langMatches(lang(?labour_l), "EN"))
 } LIMIT 100
+
+# French locations
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX idim-cog2012:  <http://rdf.insee.fr/meta/cog2012/dimension/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT str(?location_l)
+FROM <http://lod.cedar-project.nl/resource/semstats-france>
+WHERE {
+ ?o a qb:Observation ;
+      idim-cog2012:arrondissementMunicipal ?location .
+ ?location skos:prefLabel ?location_l .
+}
