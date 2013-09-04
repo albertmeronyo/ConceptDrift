@@ -1,13 +1,17 @@
+########################
 # Australia full dataset
+########################
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX imes: <http://rdf.abs.gov.au/meta/demo/measure/>
 PREFIX idim: <http://rdf.abs.gov.au/meta/dimension/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX census-ds:  <http://id.abs.gov.au/demo/census/2011/dataSet/>
 
 SELECT (str(?sex_l) AS ?sex_l) (str(?age_l) AS ?age_l) (str(?location_l) AS ?location_l) (str(?labour_l) AS ?labour_l) ?population
 FROM <http://lod.cedar-project.nl/resource/semstats-australia>
 WHERE {
  ?o a qb:Observation ;
+    qb:dataSet census-ds:STATE ;
     imes:pop2011 ?population ;
     idim:AGE5P ?age ;
     idim:ASGS ?location ;
@@ -17,36 +21,60 @@ WHERE {
  ?age skos:prefLabel ?age_l .
  ?location skos:prefLabel ?location_l .
  ?labour skos:prefLabel ?labour_l .
-} LIMIT 100
+}
 
-# Australian locations
+# Australian locations (regions)
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX idim: <http://rdf.abs.gov.au/meta/dimension/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX census-ds:  <http://id.abs.gov.au/demo/census/2011/dataSet/>
 
 SELECT DISTINCT str(?location_l)
 FROM <http://lod.cedar-project.nl/resource/semstats-australia>
 WHERE {
  ?o a qb:Observation ;
+    qb:dataSet census-ds:STATE ;
     idim:ASGS ?location .
  ?location skos:prefLabel ?location_l .
 }
 
+# GSP per capita from DBPedia
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT (str(?state_l) AS ?state_l) (xsd:integer(?gsp) AS ?gsp)
+WHERE {
+?state dbpedia2:gsppercapita ?gsp .
+?state rdfs:label ?state_l .
+FILTER(langMatches(lang(?state_l), "EN"))
+}
+
+#####################
 # France full dataset
+#####################
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX idim: <http://rdf.insee.fr/meta/dimension/>
 PREFIX idim-cog2012:  <http://rdf.insee.fr/meta/cog2012/dimension/>
+PREFIX iatt-cog2012:  <http://rdf.insee.fr/meta/cog2012/attribut/>
 PREFIX imes-demo: <http://rdf.insee.fr/meta/demo/mesure/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT (str(?sex_l) AS ?sex_l) (str(?age_l) as ?age_l) (str(?location_l) AS ?location_l) (str(?labour_l) AS ?labour_l) ?population
+SELECT (str(?sex_l) AS ?sex_l) (str(?age_l) as ?age_l) (str(?location_l) AS ?location_l) (str(?labour_l) AS ?labour_l) (SUM(?population) AS ?population)
 FROM <http://lod.cedar-project.nl/resource/semstats-france>
 WHERE {
  ?o a qb:Observation ;
       idim:ageq65 ?age ;
       idim:sexe ?sex ;
       idim:tactr ?labour ;
-      idim-cog2012:commune ?location ;
+      iatt-cog2012:region ?location ;
       imes-demo:pop2010 ?population .
  ?sex skos:prefLabel ?sex_l .
  ?age skos:prefLabel ?age_l .
@@ -55,17 +83,38 @@ WHERE {
  FILTER(langMatches(lang(?sex_l), "EN"))
  FILTER(langMatches(lang(?age_l), "EN"))
  FILTER(langMatches(lang(?labour_l), "EN"))
-} LIMIT 100
+} GROUP BY ?sex_l ?age_l ?location_l ?labour_l
 
-# French locations
+# French locations (regions)
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX idim-cog2012:  <http://rdf.insee.fr/meta/cog2012/dimension/>
+PREFIX iatt-cog2012:  <http://rdf.insee.fr/meta/cog2012/attribut/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX pop5-ds:  <http://id.insee.fr/demo/pop5/2010/dataSet/> 
 
 SELECT DISTINCT str(?location_l)
 FROM <http://lod.cedar-project.nl/resource/semstats-france>
 WHERE {
  ?o a qb:Observation ;
-      idim-cog2012:arrondissementMunicipal ?location .
+    qb:dataSet pop5-ds:com ;
+    iatt-cog2012:region ?location .
  ?location skos:prefLabel ?location_l .
+}
+
+# GDP per capita from DBPedia
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT (str(?state_l) AS ?state_l) (xsd:integer(?gsp) AS ?gsp)
+WHERE {
+?state dbpedia2:gdpPerCapita ?gsp .
+?state rdfs:label ?state_l .
 }

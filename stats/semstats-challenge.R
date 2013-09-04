@@ -1,5 +1,8 @@
 library(SPARQL)
 library(gdata)
+library(ggplot2)
+library(gplots)
+library(RColorBrewer)
 
 ##########################
 # Retrieve data via SPARQL
@@ -10,11 +13,13 @@ prefix <- c()
 sparql_prefix <- "PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX imes: <http://rdf.abs.gov.au/meta/demo/measure/>
 PREFIX idim: <http://rdf.abs.gov.au/meta/dimension/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX census-ds:  <http://id.abs.gov.au/demo/census/2011/dataSet/>"
 q <- paste(sparql_prefix,"SELECT (str(?sex_l) AS ?sex_l) (str(?age_l) AS ?age_l) (str(?location_l) AS ?location_l) (str(?labour_l) AS ?labour_l) ?population
 FROM <http://lod.cedar-project.nl/resource/semstats-australia>
 WHERE {
  ?o a qb:Observation ;
+    qb:dataSet census-ds:STATE ;
     imes:pop2011 ?population ;
     idim:AGE5P ?age ;
     idim:ASGS ?location ;
@@ -29,17 +34,18 @@ WHERE {
 sparql_prefix2 <- "PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX idim: <http://rdf.insee.fr/meta/dimension/>
 PREFIX idim-cog2012:  <http://rdf.insee.fr/meta/cog2012/dimension/>
+PREFIX iatt-cog2012:  <http://rdf.insee.fr/meta/cog2012/attribut/>
 PREFIX imes-demo: <http://rdf.insee.fr/meta/demo/mesure/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
 
-q2 <- paste(sparql_prefix2,"SELECT (str(?sex_l) AS ?sex_l) (str(?age_l) as ?age_l) (str(?location_l) AS ?location_l) (str(?labour_l) AS ?labour_l) ?population
+q2 <- paste(sparql_prefix2,"SELECT (str(?sex_l) AS ?sex_l) (str(?age_l) as ?age_l) (str(?location_l) AS ?location_l) (str(?labour_l) AS ?labour_l) (SUM(?population) AS ?population)
 FROM <http://lod.cedar-project.nl/resource/semstats-france>
 WHERE {
  ?o a qb:Observation ;
       idim:ageq65 ?age ;
       idim:sexe ?sex ;
       idim:tactr ?labour ;
-      idim-cog2012:commune ?location ;
+      iatt-cog2012:region ?location ;
       imes-demo:pop2010 ?population .
  ?sex skos:prefLabel ?sex_l .
  ?age skos:prefLabel ?age_l .
@@ -48,17 +54,121 @@ WHERE {
  FILTER(langMatches(lang(?sex_l), \"EN\"))
  FILTER(langMatches(lang(?age_l), \"EN\"))
  FILTER(langMatches(lang(?labour_l), \"EN\"))
-}") 
+} GROUP BY ?sex_l ?age_l ?location_l ?labour_l") 
 
 res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
 res2 <- SPARQL(endpoint,q2,ns=prefix,extra=options)$results
+
+# DBPedia queries for GDP
+dbpedia_endpoint <- "http://dbpedia.org/sparql"
+g_sparql_prefix <- "PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
+gq <- paste(g_sparql_prefix,"SELECT str(?state_l) xsd:integer(?gsp)
+WHERE {
+?state dbpedia2:gsppercapita ?gsp .
+?state rdfs:label ?state_l .
+FILTER(langMatches(lang(?state_l), \"EN\"))
+}")
+g2_sparql_prefix <- "PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
+gq2 <- paste(g2_sparql_prefix,"SELECT str(?state_l) xsd:integer(?gsp)
+WHERE {
+?state dbpedia2:gdpPerCapita ?gsp .
+?state rdfs:label ?state_l .
+}
+")
+
+gdp <- SPARQL(dbpedia_endpoint,gq,ns=prefix,extra=options)$results
+gdp2 <- SPARQL(dbpedia_endpoint,gq2,ns=prefix,extra=options)$results
+
+#############
+# Pre-process
+#############
+# Remove other territories of Australia
+res <- res[-grep('Other Territories',res$location_l),]
+# Merge GDP data
+a.idx <- data.frame(location_l=au.regions,idx=c(1,2,3,4,5,6,7,8))
+b.idx <- data.frame(location_l=gdp$location_l, idx=c(1,3,8,7,4,6,5,2))
+t <- merge(a.idx, b.idx, by='idx')
+gdp.norm <- merge(gdp,t,by.x='location_l',by.y='location_l.y')
+gdp.norm$location_l <- NULL
+gdp.norm$idx <- NULL
+# Assign column data types
+res$sex_l <- as.factor(res$sex_l)
+res$age_l <- as.factor(res$age_l)
+res$location_l <- as.factor(res$location_l)
+res$labour_l <- as.factor(res$labour_l)
+res$population <- as.numeric(res$population)
+res2$sex_l <- as.factor(res2$sex_l)
+res2$age_l <- as.factor(res2$age_l)
+res2$location_l <- as.factor(res2$location_l)
+res2$labour_l <- as.factor(res2$labour_l)
+res2$population <- as.numeric(res2$population)
 
 #######################################################
 # First experiment: extensional stability based linkage
 #######################################################
 # Extract all different australian locations
-au.cities <- unique(res$location_l)
+au.regions <- unique(res$location_l)
 # Extract all different french locations
-fr.cities <- unique(res2$location_l)
+fr.regions <- unique(res2$location_l)
 # Do wilcox.test for all possible pairings
- 
+p.matrix <- matrix(c(0), nrow=length(au.regions), ncol=length(fr.regions), byrow=TRUE)
+dimnames(p.matrix) <- list(au.regions, fr.regions)
+for(i in au.regions) {
+  for(j in fr.regions) {
+    p <- wilcox.test(res[res$location_l == i,'population'],
+                     res2[res2$location_l == j,'population'])
+    p.matrix[i,j] <- p$p.value
+  }
+}
+# Same experiment, young unemployment
+p.matrix.yu <- matrix(c(0), nrow=length(au.regions), ncol=length(fr.regions), byrow=TRUE)
+dimnames(p.matrix.yu) <- list(au.regions, fr.regions)
+for(i in au.regions) {
+  for(j in fr.regions) {
+    p <- wilcox.test(res[res$location_l == i & (res$age_l == '15-19 years' | res$age_l == '20-24 years') & res$labour_l == 'Unemployed, Total','population'],
+                     res2[res2$location_l == j & (res2$age_l == '15 to 19 years' | res2$age_l == '20 to 24 years') & res2$labour_l == 'Unemployed','population'])
+    p.matrix.yu[i,j] <- p$p.value
+  }
+}
+# Same experiment, elderly employment
+p.matrix.ee <- matrix(c(0), nrow=length(au.regions), ncol=length(fr.regions), byrow=TRUE)
+dimnames(p.matrix.ee) <- list(au.regions, fr.regions)
+for(i in au.regions) {
+  for(j in fr.regions) {
+    p <- wilcox.test(res[res$location_l == i & (res$age_l == '65 + years') & res$labour_l == 'Employed, Total','population'],
+                     res2[res2$location_l == j & (res2$age_l == '65 years and over') & res2$labour_l == 'Employed','population'])
+    p.matrix.ee[i,j] <- p$p.value
+  }
+}
+
+#######
+# Plots
+#######
+myCol <- c("white", "green", "yellow", "orange", "red")
+myBreaks <- c(.05, .1, .25, .5, .75, 1)
+hm <- heatmap.2(p.matrix, scale="none", Rowv=NA, Colv=NA,
+                col = myCol, 
+                breaks = myBreaks,
+                dendrogram = "none",  
+                margins=c(5,5), cexRow=0.5, cexCol=1.0, key=TRUE, keysize=1.5,
+                trace="none")
+legend("left", fill = myCol,
+       legend = c(".05 to .1", ".1 to .25", ".25 to .5", ".5 to .75", ".75 to 1"))
