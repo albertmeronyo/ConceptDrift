@@ -109,6 +109,7 @@ t <- merge(a.idx, b.idx, by='idx')
 gdp.norm <- merge(gdp,t,by.x='location_l',by.y='location_l.y')
 gdp.norm$location_l <- NULL
 gdp.norm$idx <- NULL
+colnames(gdp.norm) <- c('gsp', 'location_l')
 # Assign column data types
 res$sex_l <- as.factor(res$sex_l)
 res$age_l <- as.factor(res$age_l)
@@ -157,6 +158,49 @@ for(i in au.regions) {
                      res2[res2$location_l == j & (res2$age_l == '65 years and over') & res2$labour_l == 'Employed','population'])
     p.matrix.ee[i,j] <- p$p.value
   }
+}
+
+################################################
+# Second experiment: extensional change with GDP
+################################################
+# Order GDP data frames
+gdp.sorted <- gdp.norm[order(gdp.norm$gsp),]
+# Evolution with GDP: global population
+gdp.sorted$location_l <- as.character(gdp.sorted$location_l)
+p.gdp <- c()
+prev.location <- gdp.sorted$location_l[1]
+for (i in gdp.sorted$location_l) {
+  p <- wilcox.test(res[res$location_l == prev.location,'population'],
+                   res[res$location_l == i,'population'])
+  p.gdp <- append(p.gdp, p$p.value)
+  prev.location <- i
+}
+# Evolution with GDP: youth unemployment
+p.gdp.yu <- c()
+prev.location <- gdp.sorted$location_l[1]
+for (i in gdp.sorted$location_l) {
+  p <- wilcox.test(res[res$location_l == prev.location & (res$age_l == '15-19 years' | res$age_l == '20-24 years') & res$labour_l == 'Unemployed, Total','population'],
+                   res[res$location_l == i & (res$age_l == '15-19 years' | res$age_l == '20-24 years') & res$labour_l == 'Unemployed, Total','population'])
+  p.gdp.yu <- append(p.gdp, p$p.value)
+  prev.location <- i
+}
+# Evolution with GDP: youth unemployment, males
+p.gdp.yu.m <- c()
+prev.location <- gdp.sorted$location_l[1]
+for (i in gdp.sorted$location_l) {
+  p <- wilcox.test(res[res$sex_l == 'Male' & res$location_l == prev.location & (res$age_l == '15-19 years' | res$age_l == '20-24 years') & res$labour_l == 'Unemployed, Total','population'],
+                   res[res$sex_l == 'Male' & res$location_l == i & (res$age_l == '15-19 years' | res$age_l == '20-24 years') & res$labour_l == 'Unemployed, Total','population'])
+  p.gdp.yu.m <- append(p.gdp, p$p.value)
+  prev.location <- i
+}
+# Evolution with GDP: youth unemployment, females
+p.gdp.yu.f <- c()
+prev.location <- gdp.sorted$location_l[1]
+for (i in gdp.sorted$location_l) {
+  p <- wilcox.test(res[res$sex_l == 'Female' & res$location_l == prev.location & (res$age_l == '15-19 years' | res$age_l == '20-24 years') & res$labour_l == 'Unemployed, Total','population'],
+                   res[res$sex_l == 'Female' & res$location_l == i & (res$age_l == '15-19 years' | res$age_l == '20-24 years') & res$labour_l == 'Unemployed, Total','population'])
+  p.gdp.yu.f <- append(p.gdp, p$p.value)
+  prev.location <- i
 }
 
 #######
