@@ -45,7 +45,7 @@ WHERE {
       idim:ageq65 ?age ;
       idim:sexe ?sex ;
       idim:tactr ?labour ;
-      iatt-cog2012:region ?location ;
+      iatt-cog2012:departement ?location ;
       imes-demo:pop2010 ?population .
  ?sex skos:prefLabel ?sex_l .
  ?age skos:prefLabel ?age_l .
@@ -59,7 +59,7 @@ WHERE {
 res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
 res2 <- SPARQL(endpoint,q2,ns=prefix,extra=options)$results
 
-# DBPedia queries for GDP
+# DBPedia queries
 dbpedia_endpoint <- "http://dbpedia.org/sparql"
 g_sparql_prefix <- "PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -87,10 +87,13 @@ PREFIX : <http://dbpedia.org/resource/>
 PREFIX dbpedia2: <http://dbpedia.org/property/>
 PREFIX dbpedia: <http://dbpedia.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
-gq2 <- paste(g2_sparql_prefix,"SELECT str(?state_l) xsd:integer(?gsp)
+gq2 <- paste(g2_sparql_prefix,"SELECT (str(?location_l) AS ?location_l) (xsd:integer(?population) AS ?population) (xsd:float(?area) AS ?area)
 WHERE {
-?state dbpedia2:gdpPerCapita ?gsp .
-?state rdfs:label ?state_l .
+ ?location dbpedia2:subdivisionType :Regions_of_France ;
+                <http://dbpedia.org/ontology/PopulatedPlace/areaTotal> ?area ;
+                <http://dbpedia.org/ontology/populationTotal> ?population .
+ ?location rdfs:label ?location_l .
+FILTER(langMatches(lang(?location_l), \"EN\"))
 }
 ")
 
@@ -110,6 +113,22 @@ gdp.norm <- merge(gdp,t,by.x='location_l',by.y='location_l.y')
 gdp.norm$location_l <- NULL
 gdp.norm$idx <- NULL
 colnames(gdp.norm) <- c('gsp', 'location_l')
+# Generate population density
+pop.norm <- data.frame(gdp2, gdp2$population/gdp2$area)
+colnames(pop.norm) <- c('location_l', 'population', 'area', 'density')
+bar <- data.frame(fr.regions)
+pop.fr <- merge(pop.norm,bar, by.x='location_l', by.y='fr.regions')
+pop.fr <- rbind(pop.fr, c('Var', pop.norm[26,2], pop.norm[26,3], pop.norm[26,4]))
+pop.fr <- rbind(pop.fr,c('Nord', pop.norm[100,2], pop.norm[100,3], pop.norm[100,4]))
+pop.fr <- rbind(pop.fr,c('Jura', pop.norm[93,2], pop.norm[93,3], pop.norm[93,4]))
+pop.fr <- rbind(pop.fr,c('Tarn', pop.norm[70,2], pop.norm[70,3], pop.norm[70,4]))
+pop.fr <- rbind(pop.fr,c('Rhône', pop.norm[65,2], pop.norm[65,3], pop.norm[65,4]))
+pop.fr <- rbind(pop.fr,c('Cher', pop.norm[9,2], pop.norm[9,3], pop.norm[9,4]))
+pop.fr <- rbind(pop.fr,c('Ardennes', pop.norm[31,2], pop.norm[31,3], pop.norm[31,4]))
+pop.fr <- rbind(pop.fr,c('Landes', pop.norm[94,2], pop.norm[94,3], pop.norm[94,4]))
+pop.fr <- rbind(pop.fr,c('Lot', pop.norm[96,2], pop.norm[96,3], pop.norm[96,4]))
+pop.fr <- rbind(pop.fr,c('Paris', pop.norm[7,2], pop.norm[7,3], pop.norm[7,4]))
+pop.fr$density <- as.numeric(pop.fr$density)
 # Assign column data types
 res$sex_l <- as.factor(res$sex_l)
 res$age_l <- as.factor(res$age_l)
@@ -203,6 +222,18 @@ for (i in gdp.sorted$location_l) {
   prev.location <- i
 }
 
+# For France we use population density instead
+pop.sorted <- pop.fr[order(pop.fr$density),]
+# Evolution with density: youth unemployment
+p.density.yu <- c()
+prev.location <- pop.sorted$location_l[1]
+for (i in pop.sorted$location_l) {
+  p <- wilcox.test(res2[res2$location_l == prev.location & (res2$age_l == '15 to 19 years' | res2$age_l == '20 to 24 years') & res2$labour_l == 'Unemployed','population'],
+                   res2[res2$location_l == i & (res2$age_l == '15 to 19 years' | res2$age_l == '20 to 24 years') & res2$labour_l == 'Unemployed','population'])
+  p.density.yu <- append(p.density.yu, p$p.value)
+  prev.location <- i
+}
+
 #######
 # Plots
 #######
@@ -216,3 +247,37 @@ hm <- heatmap.2(p.matrix, scale="none", Rowv=NA, Colv=NA,
                 trace="none")
 legend("left", fill = myCol,
        legend = c(".05 to .1", ".1 to .25", ".25 to .5", ".5 to .75", ".75 to 1"))
+
+# GDP similarity evolution
+alpha <- 2
+p.gdp.dist <- c()
+p.gdp.prev <- p.gdp.yu[1]
+for(x in p.gdp.yu) {
+  if (x < 0.05) {
+    dist <- p.gdp.prev - (x + alpha)
+    #dist <- p.gdp.prev - alpha^x
+    #dist <- p.gdp.prev - x
+  } else {
+    dist <- p.gdp.prev
+  }
+  p.gdp.dist <- append(p.gdp.dist, dist)
+  p.gdp.prev <- dist
+}
+plot(p.gdp.dist)
+
+# Density similarity evolution
+alpha <- 2
+p.density.dist <- c()
+p.density.prev <- p.density.yu[1]
+for(x in p.density.yu) {
+  if (x < 0.05) {
+    #dist <- p.density.prev - (x + alpha)
+    #dist <- p.density.prev - alpha^x
+    dist <- p.density.prev - x
+  } else {
+    dist <- p.density.prev
+  }
+  p.density.dist <- append(p.density.dist, dist)
+  p.density.prev <- dist
+}
+plot(p.gdp.dist)

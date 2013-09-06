@@ -38,7 +38,7 @@ WHERE {
  ?location skos:prefLabel ?location_l .
 }
 
-# GSP per capita from DBPedia
+# Additional data from DBPedia
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -50,12 +50,16 @@ PREFIX dbpedia2: <http://dbpedia.org/property/>
 PREFIX dbpedia: <http://dbpedia.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT (str(?state_l) AS ?state_l) (xsd:integer(?gsp) AS ?gsp)
+SELECT (str(?location_l) AS ?location_l) (xsd:integer(?population) AS ?population) (xsd:float(?are) AS ?area) (xsd:integer(?gsp) AS ?gsp)
 WHERE {
-?state dbpedia2:gsppercapita ?gsp .
-?state rdfs:label ?state_l .
-FILTER(langMatches(lang(?state_l), "EN"))
+ ?location <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:States_and_territories_of_Australia> ;
+                <http://dbpedia.org/ontology/PopulatedPlace/populationTotal> ?population ;
+                <http://dbpedia.org/ontology/PopulatedPlace/areaTotal> ?density ;
+                dbpedia2:gsppercapita ?gsp .
+ ?location rdfs:label ?location_l .
+FILTER(langMatches(lang(?location_l), "EN"))
 }
+
 
 #####################
 # France full dataset
@@ -74,7 +78,7 @@ WHERE {
       idim:ageq65 ?age ;
       idim:sexe ?sex ;
       idim:tactr ?labour ;
-      iatt-cog2012:region ?location ;
+      iatt-cog2012:departement ?location ;
       imes-demo:pop2010 ?population .
  ?sex skos:prefLabel ?sex_l .
  ?age skos:prefLabel ?age_l .
@@ -101,7 +105,7 @@ WHERE {
  ?location skos:prefLabel ?location_l .
 }
 
-# GDP per capita from DBPedia
+# Additional data from DBPedia
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -113,8 +117,11 @@ PREFIX dbpedia2: <http://dbpedia.org/property/>
 PREFIX dbpedia: <http://dbpedia.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT (str(?state_l) AS ?state_l) (xsd:integer(?gsp) AS ?gsp)
+SELECT (str(?location_l) AS ?location_l) (xsd:integer(?population) AS ?population) (xsd:float(?area) AS ?area)
 WHERE {
-?state dbpedia2:gdpPerCapita ?gsp .
-?state rdfs:label ?state_l .
+ ?location dbpedia2:subdivisionType :Regions_of_France ;
+                <http://dbpedia.org/ontology/PopulatedPlace/areaTotal> ?area ;
+                <http://dbpedia.org/ontology/populationTotal> ?population .
+ ?location rdfs:label ?location_l .
+FILTER(langMatches(lang(?location_l), "EN"))
 }
