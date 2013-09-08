@@ -249,14 +249,14 @@ legend("left", fill = myCol,
        legend = c(".05 to .1", ".1 to .25", ".25 to .5", ".5 to .75", ".75 to 1"))
 
 # GDP similarity evolution
-alpha <- 2
+alpha <- 0.1
 p.gdp.dist <- c()
 p.gdp.prev <- p.gdp.yu[1]
 for(x in p.gdp.yu) {
   if (x < 0.05) {
-    dist <- p.gdp.prev - (x + alpha)
-    #dist <- p.gdp.prev - alpha^x
-    #dist <- p.gdp.prev - x
+    #dist <- p.gdp.prev - (x + alpha)
+    dist <- p.gdp.prev - alpha^x
+    #dist <- p.gdp.prev - alpha*x
   } else {
     dist <- p.gdp.prev
   }
@@ -280,4 +280,4 @@ for(x in p.density.yu) {
   p.density.dist <- append(p.density.dist, dist)
   p.density.prev <- dist
 }
-plot(p.gdp.dist)
+plot(p.density.dist)
