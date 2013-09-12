@@ -11,26 +11,34 @@ source('config.R')
 ##########################
 options <- NULL
 prefix <- c()
-a.query <- paste(prefixes,
-           "SELECT ?population FROM <",
-           a.graph,
-           ">
-WHERE {
-           ?cell d2s:isObservation [ d2s:dimension ?gender ;
-           d2s:dimension ?marital_status ;
-           d2s:dimension ?age ;
-           ns1:BENAMING_van_de_onderdeelen_der_onderscheidene_beroepsklassen__met_de_daartoe_behoordende_beroepen ?occupation ; <",
-           a.numeric.predicate,
-           "> ?population ] .
+a.variable.pattern <- ""
+a.values.pattern <- "FILTER ("
+for (i in 1:length(a.variables.names)) {
+    a.variable.pattern <- paste(a.variable.pattern,
+                                a.variables.predicates[i], ' ?',
+                                a.variables.names[i], ' ; ',
+                                sep = '')
+    a.values.pattern <- paste(a.values.pattern,
+                              ' ?', a.variables.names[i],
+                              ' IN (')
+    for (j in 1:length(a.variables.values[i])) {
+        a.values.pattern <- paste(a.values.pattern,
+                                  a.variables.values[i][j])
+        
+    }
+                              
+}
 
-           OPTIONAL {
-           ?cell d2s:isObservation [ns1:Positie_in_het_beroep__aangeduid_met_A__B__C_of_D_ ?position] .
-           ?position skos:prefLabel ?position_s .
-           }
-           
-           ?occupation skos:broader ?occ_subclass .
-           ?occ_subclass skos:broader ?occ_class .
-           ?occ_class skos:broader ?municipality .
+a.query <- paste(prefixes,
+                 "SELECT ?population FROM <",
+                 a.graph,
+                 "> WHERE { ?cell d2s:isObservation [",
+                 a.variable.pattern,
+                 a.numeric.predicate,
+                 " ?population ] .
+                 ?occupation skos:broader ?occ_subclass .
+                 ?occ_subclass skos:broader ?occ_class .
+                 ?occ_class skos:broader ?municipality .
            
            FILTER (?gender IN (cd:M, cd:V))
            FILTER (?marital_status IN (cd:O, cd:G))
@@ -46,15 +54,10 @@ WHERE {
             d2s:dimension ?marital_status ;
             d2s:dimension ?age ;
             ns1:Benaming_van_de_onderdeelen_der_onderscheidene_beroepsklassen__met_de_daartoe_behoorende_beroepen ?occupation ;
-            ns1:Gemeenten ?municipality ; <",
+            ns1:Gemeenten ?municipality ; ",
             b.numeric.predicate,
-            "> ?population ] .
+            " ?population ] .
 
-            OPTIONAL {
-            ?cell d2s:isObservation [ ns1:Positie_in_het_beroep ?position ] .
-            ?position skos:prefLabel ?position_s .
-            }
-            
             FILTER (?gender IN (cd:MANNEN, cd:VROUWEN))
             FILTER (?marital_status IN (cd:O_, cd:G_))
             FILTER (?age IN (cd:12_of_13_1887_-_1886, cd:14_of_15_1885_-_1884, cd:16_of_17_1883_-_1882, cd:18_-_22_1881_-_1877, cd:23_-_35_1876_-_1864, cd:beneden_12_jaar_1888_en_later, cd:51_-_60_1848_-_1839, cd:61_-_65_1838_-_1834, cd:66_-_70_1833_-_1829, cd:71_en_daarboven_1828_en_vroeger, cd:36_-_50_1863_-_1849))
