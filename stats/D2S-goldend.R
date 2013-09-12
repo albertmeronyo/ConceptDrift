@@ -15,8 +15,15 @@ sparql_prefix <- "PREFIX d2s: <http://www.data2semantics.org/core/>
                   PREFIX cd: <http://www.data2semantics.org/data/BRT_1889_08_T1_marked/Tabel_1/>
                   PREFIX ns1: <http://www.data2semantics.org/core/Tabel_1/>
                   PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
-q <- paste(sparql_prefix,"SELECT DISTINCT (str(?age_s) AS ?age_c) (str(?gender_s) AS ?gender_c) (str(?marital_status_s) AS ?marital_status_c) (str(?municipality_s) AS ?municipality_c) (str(?occ_class_s) AS ?occ_class_c) (str(?occ_subclass_s) AS ?occ_subclass_c) (str(?occupation_s) AS ?occupation_c) ?occupation (REPLACE(?position_s, \"^ +| +$\", \"\") AS ?position_c) ?population
-FROM <http://lod.cedar-project.nl/resource/BRT_1889_08_T1>
+q <- paste(sparql_prefix,
+           "SELECT DISTINCT (str(?age_s) AS ?age_c) (str(?gender_s) AS ?gender_c)
+ (str(?marital_status_s) AS ?marital_status_c) (str(?municipality_s) AS ?municipality_c)
+ (str(?occ_class_s) AS ?occ_class_c) (str(?occ_subclass_s) AS ?occ_subclass_c)
+ (str(?occupation_s) AS ?occupation_c) ?occupation
+ (REPLACE(?position_s, \"^ +| +$\", \"\") AS ?position_c) ?population
+ FROM <",
+           graph.a,
+           ">
 WHERE {
            ?cell d2s:isObservation [ d2s:dimension ?gender ;
            d2s:dimension ?marital_status ;
@@ -43,7 +50,7 @@ WHERE {
            FILTER (?gender IN (cd:M, cd:V))
            FILTER (?marital_status IN (cd:O, cd:G))
            FILTER (?age IN (cd:12___1878, cd:13___1876, cd:14_---_15__1875___---_1874, cd:16_---_17__1873___---_1872, cd:1878_en_later__beneden_12_j_, cd:18_---_22__1871___---_1867, cd:Geboortejaren___leeftijd_in_j_, cd:25_---_35__1864___---_1854, cd:36_---_50__1853___---_1839, cd:51_---_60__1838___---_1829, cd:61_---_65__1828___---_1824, cd:66_---_70__1823_---_1818, cd:71_en_daarboven__1818_en_vroeger, cd:Van_onbekenden_leeftijd, cd:23_---_24__1866___---_1865))
-           } ORDER BY (?cell)")
+           } ORDER BY (?cell) LIMIT 100", sep = '')
 
 sparql_prefix2 <- "PREFIX d2s: <http://www.data2semantics.org/core/>
 PREFIX cd: <http://www.data2semantics.org/data/BRT_1899_04_T_marked/Noordholland/>
@@ -52,7 +59,9 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
 
 q2 <- paste(sparql_prefix2,
             "SELECT DISTINCT (str(?age_s) AS ?age_c) (str(?gender_s) AS ?gender_c) (str(?marital_status_s) AS ?marital_status_c) (str(?municipality_s) AS ?municipality_c) ?occupation (str(?occupation_s) AS ?occupation_c) (str(?position_s) AS ?position_c) ?population
-FROM <http://lod.cedar-project.nl/resource/BRT_1899_04_T>
+FROM <",
+            graph.b,
+            ">
 WHERE {
             ?cell d2s:isObservation [ d2s:dimension ?gender ;
             d2s:dimension ?marital_status ;
@@ -75,20 +84,20 @@ WHERE {
             FILTER (?gender IN (cd:MANNEN, cd:VROUWEN))
             FILTER (?marital_status IN (cd:O_, cd:G_))
             FILTER (?age IN (cd:12_of_13_1887_-_1886, cd:14_of_15_1885_-_1884, cd:16_of_17_1883_-_1882, cd:18_-_22_1881_-_1877, cd:23_-_35_1876_-_1864, cd:beneden_12_jaar_1888_en_later, cd:51_-_60_1848_-_1839, cd:61_-_65_1838_-_1834, cd:66_-_70_1833_-_1829, cd:71_en_daarboven_1828_en_vroeger, cd:36_-_50_1863_-_1849))
-            } ORDER BY (?cell)") 
+            } ORDER BY (?cell) LIMIT 100", sep = '') 
 
-#res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
-#res2 <- SPARQL(endpoint,q2,ns=prefix,extra=options)$results
+res <- SPARQL(endpoint, q, ns = prefix, extra = options)$results
+res2 <- SPARQL(endpoint, q2, ns = prefix, extra = options)$results
 
 #############
 # Pre-process
 #############
 # Data.frame for first dataset, removing all totals
-df <- data.frame(res[-grep("(Totaal|totaal)", res$occupation_c),])
+df <- data.frame(res[-grep("(Totaal|totaal)", res$occupation_c), ])
 # Remove all rows with NAs
-df <- df[complete.cases(df),]
+df <- df[complete.cases(df), ]
 # Remove possibly duplicated rows
-df <- df[!duplicated(df),]
+df <- df[!duplicated(df), ]
 # Assign column data types
 df$age_c <- as.factor(df$age_c)
 df$gender_c <- as.factor(df$gender_c)
