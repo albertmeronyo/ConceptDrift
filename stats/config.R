@@ -18,7 +18,7 @@ a.numeric.predicate <- 'd2s:populationSize'
 # allowed values in A
 # First, variable names. These are arbitrary names
 a.variables.names <- list('gender',
-                          'marital_stauts',
+                          'marital_status',
                           'age',
                           'occupation')
 # Second, variable predicates. These are the predicates that correspond
@@ -28,7 +28,7 @@ a.variables.predicates <- list('d2s:dimension',
                                'd2s:dimension',
                                'ns1a:BENAMING_van_de_onderdeelen_der_onderscheidene_beroepsklassen__met_de_daartoe_behoordende_beroepen')
 # Third, variable values. These are the values the previously declared
-# variables are restricted to (if no restriction applies, leave an empty array)
+# variables are restricted to (if no restriction applies, leave an empty list)
 a.variables.values <- list(
                         list('cda:M',
                              'cda:V'),
