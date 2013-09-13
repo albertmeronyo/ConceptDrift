@@ -139,8 +139,8 @@ df$population <- as.numeric(df$population)
 # Load HISCO data and merge
 h1 <- read.xls('1889_08_T1.xls')
 h1$ID <- NULL
-h1$ALTBEROEP <- NULL 
-h1$STATUS <- NULL 
+h1$ALTBEROEP <- NULL
+h1$STATUS <- NULL
 h1$REL <- NULL
 h1 <- h1[complete.cases(h1),]
 df.hisco <- merge(df, h1, by.y=c("BEROEP","POSITIE"), by.x=c("occupation_c","position_c"))
