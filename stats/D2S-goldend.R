@@ -13,18 +13,32 @@ options <- NULL
 prefix <- c()
 
 # Fill pattern of observations and FILTER clauses, dataset A
+a.projections.pattern <- ""
 a.variable.pattern <- ""
+a.labels.pattern <- ""
 a.values.pattern <- ""
 for (i in 1:length(a.variables.names)) {
+    a.projections.pattern <- paste(a.projections.pattern,
+                                   ' (str(?',
+                                   a.variables.names[i],
+                                   ') AS ?',
+                                   a.variables.names[i],
+                                   ') ', sep = '')
     a.variable.pattern <- paste(a.variable.pattern,
                                 a.variables.predicates[i], ' ?',
-                                a.variables.names[i], ' ; ',
+                                a.variables.names[i], '_v ; ',
                                 sep = '')
+    a.labels.pattern <- paste(a.labels.pattern, ' ?',
+                              a.variables.names[i],
+                              '_v skos:prefLabel ?',
+                              a.variables.names[i],
+                              ' . ',
+                              sep = '')
     if (length(a.variables.values[[i]] > 0)) {
         a.values.pattern <- paste(a.values.pattern, "FILTER (")
         a.values.pattern <- paste(a.values.pattern,
                                   ' ?', a.variables.names[i],
-                                  ' IN (', sep = '')
+                                  '_v IN (', sep = '')
         for (j in 1:length(a.variables.values[[i]])) {
             a.values.pattern <- paste(a.values.pattern,
                                       a.variables.values[[i]][j])
@@ -37,18 +51,32 @@ for (i in 1:length(a.variables.names)) {
 }
 
 # Fill pattern of observations and FILTER clauses, dataset B
+b.projections.pattern <- ""
 b.variable.pattern <- ""
+b.labels.pattern <- ""
 b.values.pattern <- ""
 for (i in 1:length(b.variables.names)) {
+    b.projections.pattern <- paste(b.projections.pattern,
+                                   ' (str(?',
+                                   b.variables.names[i],
+                                   ') AS ?',
+                                   b.variables.names[i],
+                                   ') ', sep = '')
     b.variable.pattern <- paste(b.variable.pattern,
                                 b.variables.predicates[i], ' ?',
-                                b.variables.names[i], ' ; ',
+                                b.variables.names[i], '_v ; ',
                                 sep = '')
+    b.labels.pattern <- paste(b.labels.pattern, ' ?',
+                              b.variables.names[i],
+                              '_v skos:prefLabel ?',
+                              b.variables.names[i],
+                              ' . ',
+                              sep = '')
     if (length(b.variables.values[[i]] > 0)) {
         b.values.pattern <- paste(b.values.pattern, "FILTER (")
         b.values.pattern <- paste(b.values.pattern,
                                   ' ?', b.variables.names[i],
-                                  ' IN (', sep = '')
+                                  '_v IN (', sep = '')
         for (j in 1:length(b.variables.values[[i]])) {
             b.values.pattern <- paste(b.values.pattern,
                                       b.variables.values[[i]][j])
@@ -61,25 +89,28 @@ for (i in 1:length(b.variables.names)) {
 }
 
 a.query <- paste(prefixes,
-                 "SELECT ?population FROM <",
+                 "SELECT DISTINCT",
+                 a.projections.pattern,
+                 "?population FROM <",
                  a.graph,
                  "> WHERE { ?cell d2s:isObservation [",
                  a.variable.pattern,
                  a.numeric.predicate,
-                 " ?population ] .
-                 ?occupation skos:broader ?occ_subclass .
-                 ?occ_subclass skos:broader ?occ_class .
-                 ?occ_class skos:broader ?municipality .",
+                 " ?population ] . ?occupation_v skos:broader ?occ_subclass . ?occ_subclass skos:broader ?occ_class . ?occ_class skos:broader ?municipality .",
+                 a.labels.pattern,
                  a.values.pattern,
                  "} LIMIT 100", sep = '')
            
 b.query <- paste(prefixes,
-                 "SELECT ?population FROM <",
+                 "SELECT DISTINCT",
+                 b.projections.pattern,
+                 "?population FROM <",
                  b.graph,
                  "> WHERE { ?cell d2s:isObservation [",
                  b.variable.pattern,
                  b.numeric.predicate,
                  " ?population ] .",
+                 b.labels.pattern,
                  b.values.pattern,
                  "} LIMIT 100", sep = '') 
 
@@ -117,7 +148,7 @@ df.hisco <- df.hisco[!duplicated(df.hisco),]
 df.hisco$HISCO <- as.factor(df.hisco$HISCO)
 
 # Data.frame for second dataset, removing all totals
-df2 <- data.frame(b.res[-grep("(Totaal|totaal)", b.res2$occupation_c),])
+df2 <- data.frame(b.res[-grep("(Totaal|totaal)", b.res$occupation_c),])
 # We also remove the totals for the whole province ("Geheele Provincie")
 df2 <- data.frame(df2[-grep("Geheele", df2$municipality_c),])
 # (OPTIONAL) Remove all rows with non-identified municipalities ("Gemeentes met...")
@@ -158,6 +189,6 @@ common.hcodes <- intersect(hcodes, hcodes2)
 ################################################
 # Process: Wilcoxon test on provided data arrays
 ################################################
-p <- wilcox.test(df.hisco[df.hisco$HISCO == h,'population'], 
-                 df2.hisco[df2.hisco$HISCO == h,'population'])
+p <- wilcox.test(a.res[,'population'], 
+                 b.res[,'population'])
 p$p.value
