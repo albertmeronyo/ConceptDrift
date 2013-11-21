@@ -162,66 +162,28 @@ hp <- hp[order(hp$pvalues),]
 # Select only the ones clearly refusing H_0 (p-values under 0.05)
 hp.safe <- hp[hp$pvalues < 0.05,]
 
-#######################################
-# Report back non-identical populations
-#######################################
-hp.safe$common.hcodes <- as.character(hp.safe$common.hcodes)
-df.hisco$HISCO <- as.character(df.hisco$HISCO)
-df2.hisco$HISCO <- as.character(df2.hisco$HISCO)
-# We issue triples describing a population change between dimensions of both datasets
-pre <- "PREFIX d2s: <http://www.data2semantics.org/core/>
-        INSERT DATA
-        { GRAPH <http://lod.cedar-project.nl/resource/BRT_1889_08_T1> {"
-post <- "} }"
-body <- ""
-for(i in 1:2) {
-  uris <- unique(df.hisco[df.hisco$HISCO == hp.safe[i,'common.hcodes'], 'occupation'])
-  uris2 <- unique(df2.hisco[df2.hisco$HISCO == hp.safe[i,'common.hcodes'], 'occupation'])
-  pvalue <- hp.safe[i,'pvalues']
-  for(j in 1:length(uris)) {
-    #uri <- paste('<', u1, '>', sep='')
-    body <- paste(body,uris[j], "d2s:isShift [")
-    for(k in 1:length(uris2)) {
-      #uri2 <- paste('<', u2, '>', sep='')
-      if(k == 1) {
-        triple.shift <- paste('d2s:shift', uris2[k])
-      } else {
-        triple.shift <- paste(uris2[k])
-      }
-      if(k == length(uris2)) {
-        triple.shift <- paste(triple.shift, ';')
-      } else {
-        triple.shift <- paste(triple.shift, ',')
-      }
-      body <- paste(body, triple.shift)
-    }
-    body <- paste(body, "d2s:confidence", pvalue, '] .')
-  }
-}
-q.update <- paste(pre, body, post)
-# SPARQL UPDATE
-res.update <- SPARQL(endpoint,update=q.update,ns=prefix,extra=options)
+###################################################################
+# Data reformatting for Formal Concept Analysis (FCA) python script
+###################################################################
 
-#######################
-# Additional statistics
-#######################
-# How many HISCO codes are non-common in both graphs
-length(setdiff(df.hisco$HISCO, common.hcodes))
-length(setdiff(df2.hisco$HISCO, common.hcodes))
-# Drift by HISCO major group
-pvalues.major <- c()
-df.hisco$HISCO <- as.numeric(df.hisco$HISCO)
-df2.hisco$HISCO <- as.numeric(df2.hisco$HISCO)
-# HISCO major groups 0 and 1 go together
-p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= 0) & (df.hisco$HISCO < 20000) ,'population'], 
-                       df2.hisco[(df2.hisco$HISCO >= 0) & (df2.hisco$HISCO < 20000),'population'])
-pvalues.major <- append(pvalues.major, p.major$p.value)
-for(h in 3:7) {
-  p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= (h - 1) * 10000) & (df.hisco$HISCO < h * 10000) ,'population'], 
-                   df2.hisco[(df2.hisco$HISCO >= (h - 1) * 10000) & (df2.hisco$HISCO < h * 10000),'population'])
-  pvalues.major <- append(pvalues.major, p.major$p.value)
+# For each HISCO code, generate a pair with the code itself and its attribute
+# We'll generate concept lattices for datasets a and b
+relation.a <- data.frame(hisco = character(0), attrib = character(0))
+relation.b <- data.frame(hisco = character(0), attrib = character(0))
+
+for (h in common.hcodes) {
+    place.a <- levels(df.hisco[df.hisco$HISCO == h, 'municipality_c'])
+    position.a <- levels(df.hisco[df.hisco$HISCO == h, 'position_c'])
+    age.a <- levels(df.hisco[df.hisco$HISCO == h, 'age_c'])
+    gender.a <- levels(df.hisco[df.hisco$HISCO == h, 'gender_c'])
+    marital.a <- levels(df.hisco[df.hisco$HISCO == h, 'marital_status_c'])
+    place.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'municipality_c'])
+    position.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'position_c'])
+    age.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'age_c'])
+    gender.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'gender_c'])
+    marital.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'marital_status_c'])
+                                   
+    for (pa in place.a) {
+        relation.a <- rbind(relation.a, c(as.character(h), as.character(pa)))
+    }
 }
-# HISCO major groups 7, 8 and 9 go together
-p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= 70000) & (df.hisco$HISCO < 100000) ,'population'], 
-                         df2.hisco[(df2.hisco$HISCO >= 70000) & (df2.hisco$HISCO < 100000),'population'])
-pvalues.major <- append(pvalues.major, p.major$p.value)
