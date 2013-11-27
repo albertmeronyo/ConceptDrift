@@ -10,12 +10,12 @@ options <- NULL
 #            "eez","http://semanticweb.cs.vu.nl/poseidon/ns/eez/")
 prefix <- c()
 sparql_prefix <- "PREFIX d2s: <http://www.data2semantics.org/core/>
-                  PREFIX cd: <http://www.data2semantics.org/data/BRT_1889_08_T1_marked/Tabel_1/>
-                  PREFIX ns1: <http://www.data2semantics.org/core/Tabel_1/>
-                  PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
+PREFIX cd: <http://www.data2semantics.org/data/BRT_1889_08_T1_marked/Tabel_1/>
+PREFIX ns1: <http://www.data2semantics.org/core/Tabel_1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
 q <- paste(sparql_prefix,"SELECT DISTINCT (str(?age_s) AS ?age_c) (str(?gender_s) AS ?gender_c) (str(?marital_status_s) AS ?marital_status_c) (str(?municipality_s) AS ?municipality_c) (str(?occ_class_s) AS ?occ_class_c) (str(?occ_subclass_s) AS ?occ_subclass_c) (str(?occupation_s) AS ?occupation_c) ?occupation (REPLACE(?position_s, \"^ +| +$\", \"\") AS ?position_c) ?population
-FROM <http://lod.cedar-project.nl/resource/BRT_1889_08_T1>
-WHERE {
+           FROM <http://lod.cedar-project.nl/resource/BRT_1889_08_T1>
+           WHERE {
            ?cell d2s:isObservation [ d2s:dimension ?gender ;
            d2s:dimension ?marital_status ;
            d2s:dimension ?age ;
@@ -50,8 +50,8 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
 
 q2 <- paste(sparql_prefix2,
             "SELECT DISTINCT (str(?age_s) AS ?age_c) (str(?gender_s) AS ?gender_c) (str(?marital_status_s) AS ?marital_status_c) (str(?municipality_s) AS ?municipality_c) ?occupation (str(?occupation_s) AS ?occupation_c) (str(?position_s) AS ?position_c) ?population
-FROM <http://lod.cedar-project.nl/resource/BRT_1899_04_T>
-WHERE {
+            FROM <http://lod.cedar-project.nl/resource/BRT_1899_04_T>
+            WHERE {
             ?cell d2s:isObservation [ d2s:dimension ?gender ;
             d2s:dimension ?marital_status ;
             d2s:dimension ?age ;
@@ -170,8 +170,8 @@ df.hisco$HISCO <- as.character(df.hisco$HISCO)
 df2.hisco$HISCO <- as.character(df2.hisco$HISCO)
 # We issue triples describing a population change between dimensions of both datasets
 pre <- "PREFIX d2s: <http://www.data2semantics.org/core/>
-        INSERT DATA
-        { GRAPH <http://lod.cedar-project.nl/resource/BRT_1889_08_T1> {"
+INSERT DATA
+{ GRAPH <http://lod.cedar-project.nl/resource/BRT_1889_08_T1> {"
 post <- "} }"
 body <- ""
 for(i in 1:2) {
@@ -218,10 +218,10 @@ p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= 0) & (df.hisco$HISCO < 20000)
 pvalues.major <- append(pvalues.major, p.major$p.value)
 for(h in 3:7) {
   p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= (h - 1) * 10000) & (df.hisco$HISCO < h * 10000) ,'population'], 
-                   df2.hisco[(df2.hisco$HISCO >= (h - 1) * 10000) & (df2.hisco$HISCO < h * 10000),'population'])
+                         df2.hisco[(df2.hisco$HISCO >= (h - 1) * 10000) & (df2.hisco$HISCO < h * 10000),'population'])
   pvalues.major <- append(pvalues.major, p.major$p.value)
 }
 # HISCO major groups 7, 8 and 9 go together
 p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= 70000) & (df.hisco$HISCO < 100000) ,'population'], 
-                         df2.hisco[(df2.hisco$HISCO >= 70000) & (df2.hisco$HISCO < 100000),'population'])
+                       df2.hisco[(df2.hisco$HISCO >= 70000) & (df2.hisco$HISCO < 100000),'population'])
 pvalues.major <- append(pvalues.major, p.major$p.value)
