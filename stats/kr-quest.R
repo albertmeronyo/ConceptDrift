@@ -182,18 +182,32 @@ b$occupation <- NULL
 a <- subset(a, !a$position_c %in% c('Z'))
 a$position_c <- factor(a$position_c)
 
-# Municipalities
+# Municipality
 # Source error: in a, 'X' should be 'Amsterdam' and 'III' should be 'Den Helder'
 levels(a$municipality_c) <- c('Alkmaar', 'Amsterdam', 'Edam', 'Enkhuizen', 'Haarlem', 'Haarlemmermeer', 'Hilversum', 'Hoorn', 'Den Helder', 'Nieuwer Amstel', 'Purmerend', 'Sloten', 'Texel', 'Velsen', 'Weesp', 'Amsterdam', 'Zaandam')
 # Make values consistent in b
 levels(b$municipality_c) <- c('Alkmaar', 'Amsterdam', 'Beverwijk', 'Bloemendaal', 'Bussum', 'Edam', 'Enkhuizen', 'Haarlem', 'Haarlemmermeer', 'Den Helder', 'Hilversum', 'Hoorn', 'Nieuwer Amstel', 'Purmerend', 'Sloten', 'Texel', 'Velzen', 'Weesp', 'Wormerveer', 'Zaandam')
 
+# Age
 # Age names
 levels(a$age_c) <- c('12 years', '13 years', '14 to 15 years', '16 to 17 years', '18 to 22 years', 'Less than 12 years', '23 to 24 years', '25 to 35 years', '36 to 50 years', '51 to 60 years', '61 to 65 years', '66 to 70 years', 'More than 71 years', 'Geboortejaren.  leeftijd in j.', 'Unknown age')
 levels(b$age_c) <- c('12 to 13 years', '14 to 15 years', '16 to 17 years', '18 to 22 years', '23 to 35 years', '36 to 50 years', '51 to 60 years', '61 to 65 years', '66 to 70 years', 'More than 71 years', 'Less than 12 years')
-
 # Age ranges: merge rows in dataframe a of 12 and 13 years, and 23-24 and 25-35
+levels(a$age_c) <- c('12 to 13 years', '12 to 13 years', '14 to 15 years', '16 to 17 years', '18 to 22 years', 'Less than 12 years', '23 to 35 years', '23 to 35 years', '36 to 50 years', '51 to 60 years', '61 to 65 years', '66 to 70 years', 'More than 71 years', 'Geboortejaren.  leeftijd in j.', 'Unknown age')
 
+# Gender / marital status
+levels(a$gender_c) <- c('Male', 'Female')
+levels(b$gender_c) <- c('Male', 'Female')
+levels(a$marital_status_c) <- c('Married', 'Unmarried')
+levels(b$marital_status_c) <- c('Married', 'Unmarried')
+
+# Aggregate all observations that share *all* factors, except maybe population
+a <- with(a, aggregate(population, by = list(position_c = position_c, age_c = age_c, gender_c = gender_c, marital_status_c = marital_status_c, municipality_c = municipality_c, HISCO = HISCO), FUN = sum))
+b <- with(b, aggregate(population, by = list(position_c = position_c, age_c = age_c, gender_c = gender_c, marital_status_c = marital_status_c, municipality_c = municipality_c, HISCO = HISCO), FUN = sum))
+colnames(a) <- c('position', 'age', 'gender', 'marital_status', 'municipality', 'hisco', 'population')
+colnames(b) <- c('position', 'age', 'gender', 'marital_status', 'municipality', 'hisco', 'population')
+a$hisco <- as.factor(a$hisco)
+b$hisco <- as.factor(b$hisco)
 
 ###################################################################
 # Data reformatting for Formal Concept Analysis (FCA) python script
