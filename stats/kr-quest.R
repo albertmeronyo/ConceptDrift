@@ -162,6 +162,33 @@ hp <- hp[order(hp$pvalues),]
 # Select only the ones clearly refusing H_0 (p-values under 0.05)
 hp.safe <- hp[hp$pvalues < 0.05,]
 
+##############################
+# Manual dataset harmonization
+##############################
+
+a <- df.hisco
+b <- df2.hisco
+
+# Removal of non-common or not useful columns
+a$occupation <- NULL
+a$occupation_c <- NULL
+a$occ_class_c <- NULL
+a$occ_subclass_c <- NULL
+
+b$occupation_c <- NULL
+b$occupation <- NULL
+
+# Position: removal of factor 'Z'
+a <- subset(a, !a$position_c %in% c('Z'))
+a$position_c <- factor(a$position_c)
+
+# Age names
+levels(a$age_c) <- c('12 years', '13 years', '14 to 15 years', '16 to 17 years', '18 to 22 years', 'Less than 12 years', '23 to 24 years', '25 to 35 years', '36 to 50 years', '51 to 60 years', '61 to 65 years', '66 to 70 years', 'More than 71 years', 'Geboortejaren.  leeftijd in j.', 'Unknown age')
+levels(b$age_c) <- c('12 to 13 years', '14 to 15 years', '16 to 17 years', '18 to 22 years', '23 to 35 years', '36 to 50 years', '51 to 60 years', '61 to 65 years', '66 to 70 years', 'More than 71 years', 'Less than 12 years')
+
+# Age ranges: merge rows in dataframe a of 12 and 13 years, and 23-24 and 25-35
+
+
 ###################################################################
 # Data reformatting for Formal Concept Analysis (FCA) python script
 ###################################################################
