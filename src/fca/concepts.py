@@ -48,6 +48,7 @@ import collections
 import sys
 import gc
 
+import csv
 
 class formalConcept:
         """ A formal concept is comprised of an extent and and intent.
@@ -1001,5 +1002,90 @@ if __name__=="__main__":
                 print "Graphs equal!!!"
         else:
                 print "ERROR: graphs NOT equal!!!"
+
         
+        # Lattices for census occupations 1889
+        relation = []
+        with open('relation-a.csv', 'rb') as csvfile:
+                spamreader = csv.reader(csvfile, delimiter=',', quotechar='\"')
+                for row in spamreader:
+                        relation += [(row[1], row[2])]
         
+        concepts=formalConcepts(relation)
+        concepts.computeLattice()
+        print "Lattice for census occupations 1889"
+        print concepts
+        print
+
+        # write to dot-file, use colored edges.
+        dotfile=open("simpleNeuralCode.dot","w")
+        concepts.dotPrint(dotfile,colorlist=["black","red","blue","green"])
+        dotfile.close()
+        
+        conlst=map(lambda x:concepts.concepts[x],[2,3,4,5,1,0])
+        for prune in conlst:
+                print "Pruning concept ",prune.cnum
+                print "-------------------"
+                concepts.prune(prune)
+                print concepts
+                print
+                
+                
+        for prunelimit in range(1,5):
+                concepts=formalConcepts(relation)
+                concepts.computeLattice()
+                print "Pruning all concepts with |extent|<=",prunelimit
+                print "-------------------------------------"
+                concepts.pruneSmallerExtents(prunelimit)
+                print concepts
+                print
+                
+                print "Generating concepts with extent >=",prunelimit
+                print "---------------------------------------"
+                conbyob=formalConcepts(relation)
+                concepts.computeMinExtentLattice(prunelimit+1)
+                print concepts
+
+
+        # Lattices for census occupations 1899
+        relation = []
+        with open('relation-b.csv', 'rb') as csvfile:
+                spamreader = csv.reader(csvfile, delimiter=',', quotechar='\"')
+                for row in spamreader:
+                        relation += [(row[1], row[2])]
+        
+        concepts=formalConcepts(relation)
+        concepts.computeLattice()
+        print "Lattice for census occupations 1899"
+        print concepts
+        print
+
+        # write to dot-file, use colored edges.
+        dotfile=open("simpleNeuralCode.dot","w")
+        concepts.dotPrint(dotfile,colorlist=["black","red","blue","green"])
+        dotfile.close()
+        
+        conlst=map(lambda x:concepts.concepts[x],[2,3,4,5,1,0])
+        for prune in conlst:
+                print "Pruning concept ",prune.cnum
+                print "-------------------"
+                concepts.prune(prune)
+                print concepts
+                print
+                
+                
+        for prunelimit in range(1,5):
+                concepts=formalConcepts(relation)
+                concepts.computeLattice()
+                print "Pruning all concepts with |extent|<=",prunelimit
+                print "-------------------------------------"
+                concepts.pruneSmallerExtents(prunelimit)
+                print concepts
+                print
+                
+                print "Generating concepts with extent >=",prunelimit
+                print "---------------------------------------"
+                conbyob=formalConcepts(relation)
+                concepts.computeMinExtentLattice(prunelimit+1)
+                print concepts
+
