@@ -206,8 +206,6 @@ a <- with(a, aggregate(population, by = list(position_c = position_c, age_c = ag
 b <- with(b, aggregate(population, by = list(position_c = position_c, age_c = age_c, gender_c = gender_c, marital_status_c = marital_status_c, municipality_c = municipality_c, HISCO = HISCO), FUN = sum))
 colnames(a) <- c('position', 'age', 'gender', 'marital_status', 'municipality', 'hisco', 'population')
 colnames(b) <- c('position', 'age', 'gender', 'marital_status', 'municipality', 'hisco', 'population')
-a$hisco <- as.factor(a$hisco)
-b$hisco <- as.factor(b$hisco)
 
 ###################################################################
 # Data reformatting for Formal Concept Analysis (FCA) python script
@@ -215,22 +213,42 @@ b$hisco <- as.factor(b$hisco)
 
 # For each HISCO code, generate a pair with the code itself and its attribute
 # We'll generate concept lattices for datasets a and b
-relation.a <- data.frame(hisco = character(0), attrib = character(0))
-relation.b <- data.frame(hisco = character(0), attrib = character(0))
+relation.a <- data.frame(num=rep(NA, 2), txt=rep("", 2), stringsAsFactors=FALSE)
+relation.b <- data.frame(num=rep(NA, 2), txt=rep("", 2), stringsAsFactors=FALSE)
 
 for (h in common.hcodes) {
-    place.a <- levels(df.hisco[df.hisco$HISCO == h, 'municipality_c'])
-    position.a <- levels(df.hisco[df.hisco$HISCO == h, 'position_c'])
-    age.a <- levels(df.hisco[df.hisco$HISCO == h, 'age_c'])
-    gender.a <- levels(df.hisco[df.hisco$HISCO == h, 'gender_c'])
-    marital.a <- levels(df.hisco[df.hisco$HISCO == h, 'marital_status_c'])
-    place.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'municipality_c'])
-    position.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'position_c'])
-    age.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'age_c'])
-    gender.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'gender_c'])
-    marital.b <- levels(df2.hisco[df2.hisco$HISCO == h, 'marital_status_c'])
-                                   
-    for (pa in place.a) {
-        relation.a <- rbind(relation.a, c(as.character(h), as.character(pa)))
+    for (place in levels(factor(a[a$hisco == h, 'municipality']))) {
+      relation.a <- rbind(relation.a, c(h, place))
+    }
+    for (position in levels(factor(a[a$hisco == h, 'position']))) {
+      relation.a <- rbind(relation.a, c(h, position))
+    }
+    for (age in levels(factor(a[a$hisco == h, 'age']))) {
+      relation.a <- rbind(relation.a, c(h, age))
+    }
+    for (gender in levels(factor(a[a$hisco == h, 'gender']))) {
+      relation.a <- rbind(relation.a, c(h, gender))
+    }
+    for (marital in levels(factor(a[a$hisco == h, 'marital_status']))) {
+      relation.a <- rbind(relation.a, c(h, marital))
+    }
+    
+    for (place in levels(factor(b[b$hisco == h, 'municipality']))) {
+      relation.b <- rbind(relation.b, c(h, place))
+    }
+    for (position in levels(factor(b[b$hisco == h, 'position']))) {
+      relation.b <- rbind(relation.b, c(h, position))
+    }
+    for (age in levels(factor(b[b$hisco == h, 'age']))) {
+      relation.b <- rbind(relation.b, c(h, age))
+    }
+    for (gender in levels(factor(b[b$hisco == h, 'gender']))) {
+      relation.b <- rbind(relation.b, c(h, gender))
+    }
+    for (marital in levels(factor(b[b$hisco == h, 'marital_status']))) {
+      relation.b <- rbind(relation.b, c(h, marital))
     }
 }
+
+relation.a <- relation.a[complete.cases(relation.a),]
+relation.b <- relation.b[complete.cases(relation.b),]
