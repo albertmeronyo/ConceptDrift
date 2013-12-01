@@ -253,3 +253,44 @@ for (h in common.hcodes) {
 relation.a <- relation.a[complete.cases(relation.a),]
 relation.b <- relation.b[complete.cases(relation.b),]
 
+# We codify the contexts more "purely" for applications like concept explorer
+rel.a <- data.frame(hisco=c(), stringsAsFactors=FALSE)
+rel.b <- data.frame(hisco=c(), stringsAsFactors=FALSE)
+
+for (h in common.hcodes) {
+  rel.a[h,'hisco'] <- h
+  for (place in levels(factor(a[a$hisco == h, 'municipality']))) {
+    rel.a[h,place] <- '1'
+  }
+  for (position in levels(factor(a[a$hisco == h, 'position']))) {
+    rel.a[h,position] <- '1'
+  }
+  for (age in levels(factor(a[a$hisco == h, 'age']))) {
+    rel.a[h,age] <- '1'
+  }
+  for (gender in levels(factor(a[a$hisco == h, 'gender']))) {
+    rel.a[h,gender] <- '1'
+  }
+  for (marital in levels(factor(a[a$hisco == h, 'marital_status']))) {
+    rel.a[h,marital] <- '1'
+  }
+  
+  for (place in levels(factor(b[b$hisco == h, 'municipality']))) {
+    rel.b[h,place] <- '1'
+  }
+  for (position in levels(factor(b[b$hisco == h, 'position']))) {
+    rel.b[h,position] <- '1'
+  }
+  for (age in levels(factor(b[b$hisco == h, 'age']))) {
+    rel.b[h,age] <- '1'
+  }
+  for (gender in levels(factor(b[b$hisco == h, 'gender']))) {
+    rel.b[h,gender] <- '1'
+  }
+  for (marital in levels(factor(b[b$hisco == h, 'marital_status']))) {
+    rel.b[h,marital] <- '1'
+  }
+}
+
+rel.a[is.na(rel.a)] <- 0
+rel.b[is.na(rel.b)] <- 0
