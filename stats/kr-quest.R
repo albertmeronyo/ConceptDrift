@@ -294,3 +294,5 @@ for (h in common.hcodes) {
 
 rel.a[is.na(rel.a)] <- 0
 rel.b[is.na(rel.b)] <- 0
+row.names(rel.a) <- NULL
+row.names(rel.b) <- NULL
