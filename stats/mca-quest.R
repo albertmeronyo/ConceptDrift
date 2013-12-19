@@ -1,4 +1,5 @@
 library(SPARQL)
+library(gdata)
 
 ##########################
 # Retrieve data via SPARQL
@@ -95,7 +96,7 @@ df$occupation_c <- as.factor(df$occupation_c)
 df$position_c <- as.factor(df$position_c)
 df$population <- as.numeric(df$population)
 # Load HISCO data and merge
-h1 <- read.xls('/Users/Albert/src/ConceptDrift/stats/1889_08_T1.xls')
+h1 <- read.xls('/home/amp/src/ConceptDrift/stats/1889_08_T1.xls')
 h1$ID <- NULL
 h1$ALTBEROEP <- NULL 
 h1$STATUS <- NULL 
@@ -122,7 +123,7 @@ df2$occupation_c <- as.factor(df2$occupation_c)
 df2$position_c <- as.factor(df2$position_c)
 df2$population <- as.numeric(df2$population)
 # Load HISCO data and merge
-h2 <- read.xls('/Users/Albert/src/ConceptDrift/stats/1899_04_T.xls')
+h2 <- read.xls('/home/amp/src/ConceptDrift/stats/1899_04_T.xls')
 h2$ID <- NULL
 h2$ALTBEROEP <- NULL 
 h2$STATUS <- NULL 
@@ -144,81 +145,47 @@ for(hcode in levels(df2.hisco$HISCO)) {
 # Common HISCO codes between the two years
 common.hcodes <- intersect(hcodes, hcodes2)
 
-######################################################
-# Process: Wilcoxon test over all HISCO class pairings
-######################################################
-pvalues <- c()
-for(h in common.hcodes) {
-  p <- wilcox.test(df.hisco[df.hisco$HISCO == h,'population'], 
-                   df2.hisco[df2.hisco$HISCO == h,'population'])
-  pvalues <- append(pvalues, p$p.value)
-}
-hp <- data.frame(common.hcodes, pvalues)
-hp <- hp[complete.cases(hp),]
-hp <- hp[order(hp$pvalues),]
-# Select only the ones clearly refusing H_0 (p-values under 0.05)
-hp.safe <- hp[hp$pvalues < 0.05,]
+##############################
+# Manual dataset harmonization
+##############################
 
-#######################################
-# Report back non-identical populations
-#######################################
-hp.safe$common.hcodes <- as.character(hp.safe$common.hcodes)
-df.hisco$HISCO <- as.character(df.hisco$HISCO)
-df2.hisco$HISCO <- as.character(df2.hisco$HISCO)
-# We issue triples describing a population change between dimensions of both datasets
-pre <- "PREFIX d2s: <http://www.data2semantics.org/core/>
-        INSERT DATA
-        { GRAPH <http://lod.cedar-project.nl/resource/BRT_1889_08_T1> {"
-post <- "} }"
-body <- ""
-for(i in 1:2) {
-  uris <- unique(df.hisco[df.hisco$HISCO == hp.safe[i,'common.hcodes'], 'occupation'])
-  uris2 <- unique(df2.hisco[df2.hisco$HISCO == hp.safe[i,'common.hcodes'], 'occupation'])
-  pvalue <- hp.safe[i,'pvalues']
-  for(j in 1:length(uris)) {
-    #uri <- paste('<', u1, '>', sep='')
-    body <- paste(body,uris[j], "d2s:isShift [")
-    for(k in 1:length(uris2)) {
-      #uri2 <- paste('<', u2, '>', sep='')
-      if(k == 1) {
-        triple.shift <- paste('d2s:shift', uris2[k])
-      } else {
-        triple.shift <- paste(uris2[k])
-      }
-      if(k == length(uris2)) {
-        triple.shift <- paste(triple.shift, ';')
-      } else {
-        triple.shift <- paste(triple.shift, ',')
-      }
-      body <- paste(body, triple.shift)
-    }
-    body <- paste(body, "d2s:confidence", pvalue, '] .')
-  }
-}
-q.update <- paste(pre, body, post)
-# SPARQL UPDATE
-res.update <- SPARQL(endpoint,update=q.update,ns=prefix,extra=options)
+a <- df.hisco
+b <- df2.hisco
 
-#######################
-# Additional statistics
-#######################
-# How many HISCO codes are non-common in both graphs
-length(setdiff(df.hisco$HISCO, common.hcodes))
-length(setdiff(df2.hisco$HISCO, common.hcodes))
-# Drift by HISCO major group
-pvalues.major <- c()
-df.hisco$HISCO <- as.numeric(df.hisco$HISCO)
-df2.hisco$HISCO <- as.numeric(df2.hisco$HISCO)
-# HISCO major groups 0 and 1 go together
-p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= 0) & (df.hisco$HISCO < 20000) ,'population'], 
-                       df2.hisco[(df2.hisco$HISCO >= 0) & (df2.hisco$HISCO < 20000),'population'])
-pvalues.major <- append(pvalues.major, p.major$p.value)
-for(h in 3:7) {
-  p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= (h - 1) * 10000) & (df.hisco$HISCO < h * 10000) ,'population'], 
-                   df2.hisco[(df2.hisco$HISCO >= (h - 1) * 10000) & (df2.hisco$HISCO < h * 10000),'population'])
-  pvalues.major <- append(pvalues.major, p.major$p.value)
-}
-# HISCO major groups 7, 8 and 9 go together
-p.major <- wilcox.test(df.hisco[(df.hisco$HISCO >= 70000) & (df.hisco$HISCO < 100000) ,'population'], 
-                         df2.hisco[(df2.hisco$HISCO >= 70000) & (df2.hisco$HISCO < 100000),'population'])
-pvalues.major <- append(pvalues.major, p.major$p.value)
+# Removal of non-common or not useful columns
+a$occupation <- NULL
+a$occupation_c <- NULL
+a$occ_class_c <- NULL
+a$occ_subclass_c <- NULL
+
+b$occupation_c <- NULL
+b$occupation <- NULL
+
+# Position: removal of factor 'Z'
+a <- subset(a, !a$position_c %in% c('Z'))
+a$position_c <- factor(a$position_c)
+
+# Municipality
+# Source error: in a, 'X' should be 'Amsterdam' and 'III' should be 'Den Helder'
+levels(a$municipality_c) <- c('Alkmaar', 'Amsterdam', 'Edam', 'Enkhuizen', 'Haarlem', 'Haarlemmermeer', 'Hilversum', 'Hoorn', 'Den Helder', 'Nieuwer Amstel', 'Purmerend', 'Sloten', 'Texel', 'Velsen', 'Weesp', 'Amsterdam', 'Zaandam')
+# Make values consistent in b
+levels(b$municipality_c) <- c('Alkmaar', 'Amsterdam', 'Beverwijk', 'Bloemendaal', 'Bussum', 'Edam', 'Enkhuizen', 'Haarlem', 'Haarlemmermeer', 'Den Helder', 'Hilversum', 'Hoorn', 'Nieuwer Amstel', 'Purmerend', 'Sloten', 'Texel', 'Velzen', 'Weesp', 'Wormerveer', 'Zaandam')
+
+# Age
+# Age names
+levels(a$age_c) <- c('12 years', '13 years', '14 to 15 years', '16 to 17 years', '18 to 22 years', 'Less than 12 years', '23 to 24 years', '25 to 35 years', '36 to 50 years', '51 to 60 years', '61 to 65 years', '66 to 70 years', 'More than 71 years', 'Geboortejaren.  leeftijd in j.', 'Unknown age')
+levels(b$age_c) <- c('12 to 13 years', '14 to 15 years', '16 to 17 years', '18 to 22 years', '23 to 35 years', '36 to 50 years', '51 to 60 years', '61 to 65 years', '66 to 70 years', 'More than 71 years', 'Less than 12 years')
+# Age ranges: merge rows in dataframe a of 12 and 13 years, and 23-24 and 25-35
+levels(a$age_c) <- c('12 to 13 years', '12 to 13 years', '14 to 15 years', '16 to 17 years', '18 to 22 years', 'Less than 12 years', '23 to 35 years', '23 to 35 years', '36 to 50 years', '51 to 60 years', '61 to 65 years', '66 to 70 years', 'More than 71 years', 'Geboortejaren.  leeftijd in j.', 'Unknown age')
+
+# Gender / marital status
+levels(a$gender_c) <- c('Male', 'Female')
+levels(b$gender_c) <- c('Male', 'Female')
+levels(a$marital_status_c) <- c('Married', 'Unmarried')
+levels(b$marital_status_c) <- c('Married', 'Unmarried')
+
+# Aggregate all observations that share *all* factors, except maybe population
+a <- with(a, aggregate(population, by = list(position_c = position_c, age_c = age_c, gender_c = gender_c, marital_status_c = marital_status_c, municipality_c = municipality_c, HISCO = HISCO), FUN = sum))
+b <- with(b, aggregate(population, by = list(position_c = position_c, age_c = age_c, gender_c = gender_c, marital_status_c = marital_status_c, municipality_c = municipality_c, HISCO = HISCO), FUN = sum))
+colnames(a) <- c('position', 'age', 'gender', 'marital_status', 'municipality', 'hisco', 'population')
+colnames(b) <- c('position', 'age', 'gender', 'marital_status', 'municipality', 'hisco', 'population')
