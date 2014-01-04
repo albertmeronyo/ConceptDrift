@@ -1,4 +1,3 @@
-library(SPARQL)
 library(gdata)
 
 ###########################
@@ -41,8 +40,10 @@ df.hisco$HISCO <- as.factor(df.hisco$HISCO)
 df2 <- data.frame(res2[-grep("(Totaal|totaal)", res2$occupation_c),])
 # We also remove the totals for the whole province ("Geheele Provincie")
 df2 <- data.frame(df2[-grep("Geheele", df2$municipality_c),])
-# (OPTIONAL) Remove all rows with non-identified municipalities ("Gemeentes met...")
+# (OPTIONAL) Remove all rows with non-identified municipalities ("Gemeenten met...")
 df2 <- data.frame(df2[-grep("Gemeenten met", df2$municipality_c),])
+# Update list of levels (we just removed some)
+df2$municipality_c <- factor(df2$municipality_c)
 # Remove all rows with NAs
 df2 <- df2[complete.cases(df2),]
 # Assign column data types
@@ -98,7 +99,7 @@ a$position_c <- factor(a$position_c)
 
 # Municipality
 # Source error: in a, 'X' should be 'Amsterdam' and 'III' should be 'Den Helder'
-levels(a$municipality_c) <- c('Alkmaar', 'Amsterdam', 'Edam', 'Enkhuizen', 'Haarlem', 'Haarlemmermeer', 'Hilversum', 'Hoorn', 'Den Helder', 'Nieuwer Amstel', 'Purmerend', 'Sloten', 'Texel', 'Velsen', 'Weesp', 'Amsterdam', 'Zaandam')
+levels(a$municipality_c) <- c('Alkmaar', 'Amsterdam', 'Edam', 'Enkhuizen', 'Haarlem', 'Haarlemmermeer', 'Hilversum', 'Hoorn', 'Den Helder', 'Nieuwer Amstel', 'Purmerend', 'Sloten', 'Texel', 'Velsen', 'Weesp', 'Amsterdam', 'Haarlem', 'Zaandam')
 # Make values consistent in b
 levels(b$municipality_c) <- c('Alkmaar', 'Amsterdam', 'Beverwijk', 'Bloemendaal', 'Bussum', 'Edam', 'Enkhuizen', 'Haarlem', 'Haarlemmermeer', 'Den Helder', 'Hilversum', 'Hoorn', 'Nieuwer Amstel', 'Purmerend', 'Sloten', 'Texel', 'Velzen', 'Weesp', 'Wormerveer', 'Zaandam')
 
@@ -120,3 +121,18 @@ a <- with(a, aggregate(population, by = list(position_c = position_c, age_c = ag
 b <- with(b, aggregate(population, by = list(position_c = position_c, age_c = age_c, gender_c = gender_c, marital_status_c = marital_status_c, municipality_c = municipality_c, HISCO = HISCO), FUN = sum))
 colnames(a) <- c('position', 'age', 'gender', 'marital_status', 'municipality', 'hisco', 'population')
 colnames(b) <- c('position', 'age', 'gender', 'marital_status', 'municipality', 'hisco', 'population')
+
+# Now the dataset looks OK, but we remove 'Unknown age', 'Leeftijd...' and empty cells because they look as incomplete or missing data
+a <- subset(a, !a$age %in% c('Unknown age', 'Geboortejaren.  leeftijd in j.'))
+a$age <- factor(a$age)
+a <- subset(a, !a$position %in% c(''))
+a$position <- factor(a$position)
+b <- subset(b, !b$position %in% c(''))
+b$position <- factor(b$position)
+
+# HISCO code -1 means "no mapping" and -2 means "Unemployed".
+# -2 could be interesting, but -1 seems to be introducing noise and we delete it
+a <- subset(a, !a$hisco %in% c('-1'))
+a$hisco <- factor(a$hisco)
+b <- subset(b, !b$hisco %in% c('-1'))
+b$hisco <- factor(b$hisco)
