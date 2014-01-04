@@ -136,3 +136,14 @@ a <- subset(a, !a$hisco %in% c('-1'))
 a$hisco <- factor(a$hisco)
 b <- subset(b, !b$hisco %in% c('-1'))
 b$hisco <- factor(b$hisco)
+
+################################
+# Removal of column "population"
+################################
+
+# We use the population counts to repeat the rows as many times as this column specifies
+# Then we remove the column
+a <- a[rep(1:nrow(a), a$population),]
+b <- b[rep(1:nrow(b), b$population),]
+a$population <- NULL
+b$population <- NULL
