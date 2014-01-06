@@ -161,12 +161,13 @@ cats_b <- apply(b, 2, function(x) nlevels(as.factor(x)))
 # MCA of the FactoMineR package
 mca1_a <- MCA(a, graph = FALSE)
 mca1_b <- MCA(b, graph = FALSE)
+
 # MCA of the MASS package
 mca2_a <- mca(a, nf = 5)
 mca2_b <- mca(b, nf = 5)
 
 # Plots
 mca2_a_vars_df <- data.frame(mca2_a$cs, Variable = rep(names(cats_a), cats_a))
-ggplot(data = mca2_a_vars_df, aes(x = X1, y = X2, label = rownames(mca2_vars_df))) + geom_hline(yintercept = 0, colour = "gray70") + geom_vline(xintercept = 0, colour = "gray70") + geom_text(aes(colour = Variable)) + ggtitle("MCA plot of variables using R package MASS")
+ggplot(data = mca2_a_vars_df, aes(x = X1, y = X2, label = rownames(mca2_a_vars_df))) + geom_hline(yintercept = 0, colour = "gray70") + geom_vline(xintercept = 0, colour = "gray70") + geom_text(aes(colour = Variable)) + ggtitle("MCA plot of variables using R package MASS")
 mca2_b_vars_df <- data.frame(mca2_b$cs, Variable = rep(names(cats_b), cats_b))
-ggplot(data = mca2_b_vars_df, aes(x = X1, y = X2, label = rownames(mca2_vars_df))) + geom_hline(yintercept = 0, colour = "gray70") + geom_vline(xintercept = 0, colour = "gray70") + geom_text(aes(colour = Variable)) + ggtitle("MCA plot of variables using R package MASS")
+ggplot(data = mca2_b_vars_df, aes(x = X1, y = X2, label = rownames(mca2_b_vars_df))) + geom_hline(yintercept = 0, colour = "gray70") + geom_vline(xintercept = 0, colour = "gray70") + geom_text(aes(colour = Variable)) + ggtitle("MCA plot of variables using R package MASS")
