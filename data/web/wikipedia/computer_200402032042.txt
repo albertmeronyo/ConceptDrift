@@ -1,0 +1,310 @@
+
+
+
+
+                  [http://en.wikipedia.org/
+                  wiki/Computer][Go]
+                               [sparklines]
+                               [/static/
+                               images/
+                               toolbar/      Jan       FEB  _JJ_UU_NN
+_[_W_a_y_b_a_c_k_ _M_a_c_h_i_n_e_] _66_33_11_ _cc_aa_pp_tt_uu_rr_ee_ss transp-       [Previous 3    _[_N_e_x_t    _C_l_o_s_e _H_e_l_p
+                  3 Feb 04 -   yellow-       capture]       _c_a_p_t_u_r_e_]
+                  15 Jan 14    pixel.png] [/ 2003      2004 _22_00_00_55
+                               static/
+                               images/
+                               toolbar/
+                               transp-red-
+                               pixel.png]
+
+  _M_a_i_n_ _P_a_g_e | _R_e_c_e_n_t_ _c_h_a_n_g_e_s | _E_d_i_t_ _t_h_i_s                      Not logged in
+  _p_a_g_e | _P_a_g_e_ _h_i_s_t_o_r_y                                         _L_o_g_ _i_n | _H_e_l_p
+  _P_r_i_n_t_a_b_l_e_ _v_e_r_s_i_o_n | _D_i_s_c_l_a_i_m_e_r_s        [search             ] [Go] [Search]
+  Other languages: _C_a_t_a_l_à | _C_y_m_r_a_e_g | _D_a_n_s_k | _D_e_u_t_s_c_h | _E_s_p_e_r_a_n_t_o | _E_s_p_a_ñ_o_l
+  | _S_u_o_m_i | _F_r_a_n_ç_a_i_s | _â_Ñ_è_Ù_ê_ _(_I_v_r_i_t_) | _M_a_g_y_a_r | _å_,_ž_ _(_N_i_h_o_n_g_o_) | _\_m_´_ 
+  _(_H_a_n_g_u_k_e_o_) | _L_a_t_i_n_a | _M_a_l_a_y_a_l_a_m | _N_e_d_e_r_l_a_n_d_s | _N_o_r_s_k | _P_o_l_s_k_i | _P_o_r_t_u_g_u_ê_s
+  | _R_o_m_â_n_ | _C_A_A_:_8_9_ _(_R_u_s_s_k_i_j_) | _S_i_m_p_l_e_ _E_n_g_l_i_s_h | _!_@_?_A_:_8_ _(_S_r_p_s_k_i_) | _S_v_e_n_s_k_a |
+  _T_ü_r_k_ç_e | _-_‡_ _(_Z_h_o_n_g_w_e_n_)
+************ CCoommppuutteerr ************
+From Wikipedia, the free encyclopedia.
+The word ccoommppuutteerr used to mean a person who computes. In current language, a
+ccoommppuutteerr is any device used to process _i_n_f_o_r_m_a_t_i_o_n according to a well-defined
+_p_r_o_c_e_d_u_r_e.
+The word was originally used to describe people employed to do _a_r_i_t_h_m_e_t_i_c
+_c_a_l_c_u_l_a_t_i_o_n_s, with or without mechanical aids, but was transferred to the
+machines themselves. Originally, the information processing was almost
+exclusively related to arithmetical problems, but modern computers are used for
+many tasks unrelated to _m_a_t_h_e_m_a_t_i_c_s.
+Within such a definition sit mechanical devices such as the _s_l_i_d_e_ _r_u_l_e, the
+gamut of _m_e_c_h_a_n_i_c_a_l_ _c_a_l_c_u_l_a_t_o_r_s from the _a_b_a_c_u_s onwards, as well as all
+contemporary electronic computers.
+   TTaabbllee ooff ccoonntteennttss
+_1_ _D_e_f_i_n_i_t_i_o_n_s
+_1_._1_ _E_m_b_e_d_d_e_d_ _C_o_m_p_u_t_e_r_s
+_1_._2_ _P_e_r_s_o_n_a_l_ _C_o_m_p_u_t_e_r_s
+_2_ _H_o_w_ _C_o_m_p_u_t_e_r_s_ _W_o_r_k
+_2_._1_ _M_e_m_o_r_y
+_2_._2_ _P_r_o_c_e_s_s_i_n_g
+_2_._3_ _I_n_p_u_t_ _a_n_d_ _O_u_t_p_u_t
+_2_._4_ _I_n_s_t_r_u_c_t_i_o_n_s
+_2_._5_ _A_r_c_h_i_t_e_c_t_u_r_e
+_2_._6_ _P_r_o_g_r_a_m_s
+_2_._6_._1_ _O_p_e_r_a_t_i_n_g_ _S_y_s_t_e_m
+_3_ _U_s_e_s_ _o_f_ _c_o_m_p_u_t_e_r_s
+_4_ _T_h_e_ _w_o_r_d_ _"_c_o_m_p_u_t_e_r_"
+_5_ _S_e_e_ _A_l_s_o
+_5_._1_ _C_o_m_p_u_t_e_r_ _T_y_p_e_s
+********** DDeeffiinniittiioonnss **********
+However, the above definition includes many special-purpose devices that can
+compute only one or a limited range of functions. When considering modern
+computers, their most notable characteristic that distinguishes them from
+earlier computing devices is that, given the right _p_r_o_g_r_a_m_m_i_n_g, any computer
+can _e_m_u_l_a_t_e the behaviour of any other (though perhaps limited by storage
+capacity and at different speeds), and, indeed, it is believed that current
+machines can emulate any future computing devices we invent (though undoubtedly
+more slowly). In some sense, then, this threshold capability is a useful test
+for identifying "general-purpose" computers from earlier special-purpose
+devices. This "general-purpose" definition can be formalised into a requirement
+that a certain machine must be able to emulate the behaviour of a universal
+_T_u_r_i_n_g_ _m_a_c_h_i_n_e. Machines meeting this definition are referred to as _T_u_r_i_n_g_-
+_c_o_m_p_l_e_t_e, and the first of them appeared in the 1940's in a flurry of
+developments around the world. See the _h_i_s_t_o_r_y_ _o_f_ _c_o_m_p_u_t_i_n_g article for more
+details of this period.
+******** EEmmbbeeddddeedd CCoommppuutteerrss ********
+In the last 200 years or so, however, many household devices, notably including
+_v_i_d_e_o_ _g_a_m_e consoles but extending to mobile _t_e_l_e_p_h_o_n_e_s, _v_i_d_e_o_ _c_a_s_s_e_t_t_e
+_r_e_c_o_r_d_e_r_s, PDA's and myriad other household, industrial, automotive, and other
+electronic devices, all contain computer-like circuitry capable of meeting the
+above Turing-completeness requirement (with the proviso that the programming of
+these devices is often hardwired into a _R_O_M _c_h_i_p which would need to be
+replaced to change the programming of the machine). These computers inside
+other special-purpose devices are commonly referred to as "_m_i_c_r_o_c_o_n_t_r_o_l_l_e_r_s" or
+"_e_m_b_e_d_d_e_d_ _c_o_m_p_u_t_e_r_s". Therefore, many restrict the definition of computers to
+devices whose primary purpose is information processing rather than being a
+part of a larger system such as a telephone, _m_i_c_r_o_w_a_v_e_ _o_v_e_n, or _a_i_r_c_r_a_f_t, and
+can be adapted for a variety of purposes by the user without physical
+modification. _M_a_i_n_f_r_a_m_e_ _c_o_m_p_u_t_e_r_s, _m_i_n_i_c_o_m_p_u_t_e_r_s, and _p_e_r_s_o_n_a_l_ _c_o_m_p_u_t_e_r_s are
+the main types of computers meeting this definition.
+******** PPeerrssoonnaall CCoommppuutteerrss ********
+Finally, many people who are unfamiliar with other forms of computers use the
+term exclusively to refer to _p_e_r_s_o_n_a_l_ _c_o_m_p_u_t_e_r_s.
+********** HHooww CCoommppuutteerrss WWoorrkk **********
+While the technologies used in _d_i_g_i_t_a_l computers have changed dramatically
+since the first computers of the _1_9_4_0_s (see _H_i_s_t_o_r_y_ _o_f_ _c_o_m_p_u_t_i_n_g_ _h_a_r_d_w_a_r_e for
+more details), most still use the _v_o_n_ _N_e_u_m_a_n_n_ _a_r_c_h_i_t_e_c_t_u_r_e proposed in the
+early 1940s by _J_o_h_n_ _v_o_n_ _N_e_u_m_a_n_n.
+Von Neumann's _a_r_c_h_i_t_e_c_t_u_r_e describes a computer with four main sections: the
+_A_r_i_t_h_m_e_t_i_c_ _a_n_d_ _L_o_g_i_c_ _U_n_i_t (ALU), the _c_o_n_t_r_o_l_ _c_i_r_c_u_i_t_r_y, the _m_e_m_o_r_y, and the
+input and output devices (collectively termed I/O). These parts are
+interconnected by a bundle of wires, a "_b_u_s."
+******** MMeemmoorryy ********
+In this system, _mm_ee_mm_oo_rr_yy is a sequence of numbered "cells" or "pigeon holes,"
+each containing a small piece of information. The information may be an
+instruction to tell the computer what to do. The cell may contain _d_a_t_a that the
+computer needs to perform the instruction. Any slot may contain either, and
+indeed what is at one time data might be instructions later.
+In general, memory can be rewritten over millions of times - it is a scratchpad
+rather than a stone tablet.
+The size of each cell, and the number of cells, varies greatly from computer to
+computer, and the technologies used to implement memory have varied greatly -
+from electromechanical relays, to mercury-filled tubes (and later springs) in
+which acoustic pulses were formed, to matrices of permanent magnets, to
+individual transistors, to integrated circuits with millions of _c_a_p_a_c_i_t_o_r_s on a
+single chip.
+******** PPrroocceessssiinngg ********
+The _aa_rr_ii_tt_hh_mm_ee_tt_ii_cc_ _aa_nn_dd_ _ll_oo_gg_ii_cc_aa_ll_ _uu_nn_ii_tt, or ALU, is the device that performs elementary
+operations such as arithmetic operations (addition, subtraction, and so on),
+logical operations (_A_N_D_,_ _O_R_,_ _N_O_T), and comparison operations (for example,
+comparing the contents of two "slots" for equality). This unit is where the
+"real work" is done.
+The _cc_oo_nn_tt_rr_oo_ll_ _uu_nn_ii_tt keeps track of which slot contains the current instruction
+that the computer is performing, telling the ALU what operation to perform and
+retrieving the information (from the memory) that it needs to perform it, and
+transfers the result back to the appropriate memory location. Once that occurs,
+the control unit goes to the next instruction (typically located in the next
+slot, unless the instruction is a jump instruction informing the computer that
+the next instruction is located in another location).
+******** IInnppuutt aanndd OOuuttppuutt ********
+The _II_//_OO allows the computer to obtain information from the outside world, and
+send the results of its work back there. There are incredibly broad range of I/
+O devices, from the familiar _k_e_y_b_o_a_r_d_s, _m_o_n_i_t_o_r_s and _f_l_o_p_p_y_ _d_i_s_k drives, to the
+more unusual such as _w_e_b_c_a_m_s.
+******** IInnssttrruuccttiioonnss ********
+The instructions discussed above are not the rich instructions of a human
+language. A computer only has a limited number of well-defined, simple
+instructions. Typical sorts of instructions supported by most computers are
+"copy the contents of cell 123, and place the copy in cell 456", "add the
+contents of cell 666 to cell 042, and place the result in cell 013", and "if
+the contents of cell 999 are 0, your next instruction is at cell 345".
+Instructions are represented within the computer as numbers - the code for
+"copy" might be 001, for example. The particular instruction set that a
+specific computer supports is known as that computer's _m_a_c_h_i_n_e_ _l_a_n_g_u_a_g_e. In
+practice, people do not normally write the instructions for computers directly
+in machine language but rather use a "high level" _p_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e which is
+then translated into the machine language automatically by special computer
+programs (interpreters and compilers). Some programming languages map very
+closely to the machine language, such as _a_s_s_e_m_b_l_e_r (low level languages); at
+the other end, languages like _P_r_o_l_o_g are based on abstract principles far
+removed from the details of the machine's actual operation (high level
+languages).
+******** AArrcchhiitteeccttuurree ********
+Contemporary computers put the _A_L_U and _c_o_n_t_r_o_l_ _u_n_i_t into a single _i_n_t_e_g_r_a_t_e_d
+_c_i_r_c_u_i_t known as the _C_e_n_t_r_a_l_ _P_r_o_c_e_s_s_i_n_g_ _U_n_i_t or CPU. Typically, the computer's
+memory is located on a few small integrated circuits near the CPU. The
+overwhelming majority of the computer's mass is either ancilliary systems (for
+instance, to supply electrical power) or I/O devices.
+Some larger computers differ from the above model in one major respect - they
+have multiple CPUs and control units working simultaneously. Additionally, a
+few computers, used mainly for research purposes and scientific computing, have
+differed significantly from the above model, but they have found little
+commercial application.
+The functioning of a computer is therefore in principle quite straightforward.
+The computer fetches instructions and data from its memory. The instructions
+are executed, the results are stored, and the next instruction is fetched. This
+procedure repeats until the computer is turned off.
+******** PPrrooggrraammss ********
+_C_o_m_p_u_t_e_r_ _p_r_o_g_r_a_m_s are simply large lists of instructions for the computer to
+execute, perhaps with tables of data. Many computer programs contain millions
+of instructions, and many of those instructions are executed repeatedly. A
+typical modern _P_C (in the year _2_0_0_3) can execute around 2-3 billion
+instructions per second. Computers do not gain their extraordinary capabilities
+through the ability to execute complex instructions. Rather, they do millions
+of simple instructions arranged by clever people, "programmers." Good
+programmers develop sets of instructions to do common tasks (for instance, draw
+a dot on screen) and then make those sets of instructions available to other
+programmers.
+Nowadays, most computers appear to execute several programs at the same time.
+This is usually referred to as _m_u_l_t_i_t_a_s_k_i_n_g. In reality, the CPU executes
+instructions from one program, then after a short period of time, it switches
+to a second program and executes some of its instructions. This small interval
+of time is often referred to as a time slice. This creates the illusion of
+multiple programs being executed simultaneously by sharing the CPU's time
+between the programs. This is similar to how a movie is simply a rapid
+succession of still frames. The _o_p_e_r_a_t_i_n_g_ _s_y_s_t_e_m is the program that usually
+controls this time sharing.
+****** OOppeerraattiinngg SSyysstteemm ******
+The _o_p_e_r_a_t_i_n_g_ _s_y_s_t_e_m is a sort of catch-all of useful pieces of code. Whenever
+some kind of computer code becomes sharable by many different types of computer
+program, over many years, programmers eventually move it into the operating
+system.
+The operating system, decides which programs are run, when, and what resources
+(such as memory or I/O) they get to use. The operating system also provides
+services to other programs, such as code ("drivers") which allow programmers to
+write programs for a machine without needing to know the intimate details of
+all attached electronic devices.
+********** UUsseess ooff ccoommppuutteerrss **********
+The first digital computers, with their large size and cost, mainly performed
+scientific calculation. _E_N_I_A_C, an early US computer originally designed to
+calculate ballistics firing tables for artilery, calculated neutron cross-
+sectional densities to see if the _h_y_d_r_o_g_e_n_ _b_o_m_b would work properly (this
+calculation, performed in December 1945 through January 1946 and involving over
+a million _p_u_n_c_h_ _c_a_r_d_s of data, showed the design then under consideration would
+fail). The _C_S_I_R_ _M_k_ _I, the first Australian computer, evaluated rainfall
+patterns for the catchment of the _S_n_o_w_y_ _M_o_u_n_t_a_i_n_s_ _s_c_h_e_m_e, a large _h_y_d_r_o_e_l_e_c_t_r_i_c
+generation project. Others were used in _c_r_y_p_t_a_n_a_l_y_s_i_s, for example the world's
+first programmable _d_i_g_i_t_a_l electronic computer, _C_o_l_o_s_s_u_s, built during _W_o_r_l_d
+_W_a_r_ _I_I. However, early visionaries also anticipated that programming would
+allow chess playing, moving pictures and other uses.
+People in governments and large corporations also used computers to automate
+many of the _d_a_t_a collection and processing tasks previously performed by humans
+- for example, maintaining and updating accounts and inventories. In academia,
+scientists of all sorts began to use computers for their own analyses.
+Continual reductions in the costs of computers saw them adopted by ever-smaller
+organizations. Businesses, organizations, and governments often employ a large
+number of small computers to accomplish tasks that were previously done by an
+expensive, large _m_a_i_n_f_r_a_m_e computer. Collections of the smaller computers in
+one location is referred to as a _s_e_r_v_e_r_ _f_a_r_m.
+With the invention of the _m_i_c_r_o_p_r_o_c_e_s_s_o_r in the _1_9_7_0_s, it became possible to
+produce very inexpensive computers. _P_e_r_s_o_n_a_l_ _c_o_m_p_u_t_e_r_s became popular for many
+tasks, including keeping books, writing and printing documents. Calculating
+forecasts and other repetitive math with _s_p_r_e_a_d_s_h_e_e_t_s, communicating with _e_-
+_m_a_i_l and, the _I_n_t_e_r_n_e_t. However, computers' wide availability and easy
+customization has seen them used for many other purposes.
+At the same time, small computers, usually with fixed programming, began to
+find their way into other devices such as home appliances, automobiles,
+aeroplanes, and industrial equipment. These _e_m_b_e_d_d_e_d processors controlled the
+behaviour of such devices more easily, allowing more complex control behaviours
+(for instance, the development of _a_n_t_i_-_l_o_c_k_ _b_r_a_k_e_s in cars). By the start of
+the twenty-first century, most electrical devices, most forms of powered
+transport, and most factory production lines are controlled by computers. Most
+engineers predict that this trend will continue.
+********** TThhee wwoorrdd ""ccoommppuutteerr"" **********
+Over the years there has been several slightly different meanings to the word
+ccoommppuutteerr,, and several different words for the thing we now usually call a
+computer.
+For instance "computer" was once commonly used to mean a person employed to do
+arithmetic calculations, with or without mechanical aids. According to the
+Barnhart Concise Dictionary of Etymology, the word came into use in English in
+1646 as a word for a "person who computes" and then by 1897 also for a
+mechanical calculating machine. During World War II it referred e.g. to U.S.
+and British servicewomen whose job it was to calculate the trajectories of
+large artillery shells with such machines.
+_C_h_a_r_l_e_s_ _B_a_b_b_a_g_e designed one of the first computing machines called the
+_A_n_a_l_y_t_i_c_a_l_ _e_n_g_i_n_e, but due to technological problems it was not built in his
+lifetime. Various simple mechanical devices such as the _s_l_i_d_e_ _r_u_l_e kind have
+also been called computers. In some cases they were referred to as "analog
+computers", as they represented numbers by continuous physical quantities
+rather than by discrete binary digits. What are now called simply "computers"
+were once commonly called "digital computers" to distinguish them from these
+other devices (which are still used in the field of _a_n_a_l_o_g_ _s_i_g_n_a_l_ _p_r_o_c_e_s_s_i_n_g,
+for example).
+In thinking of other words for the computer, it is worth noting that in other
+languages the word chosen does not always have the same literal meaning as the
+_E_n_g_l_i_s_h_ _l_a_n_g_u_a_g_e word. In _F_r_e_n_c_h for example, the word is "ordinateur", which
+means approximately "organizer", or "sorting machine". The _S_p_a_n_i_s_h word is
+"ordenador" , with the same meaning, although in some countries they use the
+anglicism computadora. In _I_t_a_l_i_a_n, computer is "calcolatore", calculator,
+emphasizing its computational uses over logical ones like sorting. In _S_w_e_d_i_s_h,
+a computer is called "dator" from "data". At least in the 1950s, they were
+called "matematikmaskin" ("mathematics machine"). In Chinese, a computer is
+called "dian now" or an "electric brain". In English, other words and phrases
+have been used, such as "data processing machine".
+********** SSeeee AAllssoo **********
+    * _c_o_m_p_u_t_e_r_ _e_x_p_o
+    * _c_o_m_p_u_t_e_r_ _s_c_i_e_n_c_e
+    * _c_o_m_p_u_t_i_n_g
+    * _c_o_m_p_u_t_i_n_g_ _a_n_a_l_o_g_i_e_s
+    * _c_o_m_p_u_t_e_r_s_ _i_n_ _f_i_c_t_i_o_n
+    * _d_i_g_i_t_a_l
+    * _h_i_s_t_o_r_y_ _o_f_ _c_o_m_p_u_t_i_n_g
+******** CCoommppuutteerr TTyyppeess ********
+    * _a_n_a_l_o_g_ _c_o_m_p_u_t_e_r
+    * _p_u_l_s_e_ _c_o_m_p_u_t_e_r
+    * _m_i_c_r_o_c_o_m_p_u_t_e_r
+          o _h_o_m_e_ _c_o_m_p_u_t_e_r
+          o _p_e_r_s_o_n_a_l_ _c_o_m_p_u_t_e_r
+          o _s_e_r_v_e_r
+    * _m_i_n_i_c_o_m_p_u_t_e_r
+    * _m_a_i_n_f_r_a_m_e_ _c_o_m_p_u_t_e_r
+    * _s_u_p_e_r_c_o_m_p_u_t_e_r
+
+  _EE_dd_ii_tt_ _tt_hh_ii_ss_ _pp_aa_gg_ee | _D_i_s_c_u_s_s_ _t_h_i_s_ _p_a_g_e | _P_a_g_e_ _h_i_s_t_o_r_y | _W_h_a_t_ _l_i_n_k_s_ _h_e_r_e | _R_e_l_a_t_e_d
+  _c_h_a_n_g_e_s
+  Other languages: _C_a_t_a_l_à | _C_y_m_r_a_e_g | _D_a_n_s_k | _D_e_u_t_s_c_h | _E_s_p_e_r_a_n_t_o | _E_s_p_a_ñ_o_l |
+  _S_u_o_m_i | _F_r_a_n_ç_a_i_s | _â_Ñ_è_Ù_ê_ _(_I_v_r_i_t_) | _M_a_g_y_a_r | _å_,_ž_ _(_N_i_h_o_n_g_o_) | _\_m_´_ _(_H_a_n_g_u_k_e_o_) |
+  _L_a_t_i_n_a | _M_a_l_a_y_a_l_a_m | _N_e_d_e_r_l_a_n_d_s | _N_o_r_s_k | _P_o_l_s_k_i | _P_o_r_t_u_g_u_ê_s | _R_o_m_â_n_ | _C_A_A_:
+  _8_9_ _(_R_u_s_s_k_i_j_) | _S_i_m_p_l_e_ _E_n_g_l_i_s_h | _!_@_?_A_:_8_ _(_S_r_p_s_k_i_) | _S_v_e_n_s_k_a | _T_ü_r_k_ç_e | _-_‡_ 
+  _(_Z_h_o_n_g_w_e_n_)
+  _M_a_i_n_ _P_a_g_e | _A_b_o_u_t_ _W_i_k_i_p_e_d_i_a | _R_e_c_e_n_t_ _c_h_a_n_g_e_s |
+  [search             ] [Go] [Search]
+
+  This page was last modified 03:15, 29 Jan 2004. All text is available under
+  the terms of the _G_N_U_ _F_r_e_e_ _D_o_c_u_m_e_n_t_a_t_i_o_n_ _L_i_c_e_n_s_e (see _CC_oo_pp_yy_rr_ii_gg_hh_tt_ss for details).
+  _DD_ii_ss_cc_ll_aa_ii_mm_ee_rr_ss. Wikipedia is powered by _M_e_d_i_a_W_i_k_i, an open source _w_i_k_i engine.
+_[_[_M_a_i_n_ _P_a_g_e_]_]
+===============================================================================
+_M_a_i_n_ _P_a_g_e
+_R_e_c_e_n_t_ _c_h_a_n_g_e_s
+_R_a_n_d_o_m_ _p_a_g_e
+_C_u_r_r_e_n_t_ _e_v_e_n_t_s
+===============================================================================
+_EE_dd_ii_tt_ _tt_hh_ii_ss_ _pp_aa_gg_ee
+_D_i_s_c_u_s_s_ _t_h_i_s_ _p_a_g_e
+_P_a_g_e_ _h_i_s_t_o_r_y
+_W_h_a_t_ _l_i_n_k_s_ _h_e_r_e
+_R_e_l_a_t_e_d_ _c_h_a_n_g_e_s
+===============================================================================
+_S_p_e_c_i_a_l_ _p_a_g_e_s
+_C_o_n_t_a_c_t_ _u_s
+_D_o_n_a_t_i_o_n_s
+

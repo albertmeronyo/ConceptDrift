@@ -1,0 +1,539 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en"><head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+<title>Computer - Wikipedia</title>
+<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1">
+<meta name="robots" content="index,follow">
+<link rel="shortcut icon" href="/web/20040203204241im_/http://en.wikipedia.org/favicon.ico">
+<link rel="stylesheet" href="/web/20040203204241cs_/http://en.wikipedia.org/style/wikistandard.css">
+<script type="text/javascript" src="/web/20040203204241js_/http://en.wikipedia.org/style/wikibits.js"></script>
+<style type='text/css'><!--
+a.new, #quickbar a.new { color: #CC2200; }
+#quickbar { position: absolute; top: 4px; left: 4px; border-right: 1px solid gray; }
+#article { margin-left: 152px; margin-right: 4px; }
+//--></style>
+</head>
+
+<body bgcolor='#FFFFFF' onload=''>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app1.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/en.wikipedia.org\/wiki\/Computer";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "3";
+var displayMonth = "Feb";
+var displayYear = "2004";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://en.wikipedia.org/wiki/Computer" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20040203204241" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jan
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 20:42:41 Feb 3, 2004">FEB</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20040616085839/http://en.wikipedia.org/wiki/Computer" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="16 Jun 2004"><strong>JUN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 20:42:41 Feb 3, 2004">3</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20040616085839/http://en.wikipedia.org/wiki/Computer" title="8:58:39 Jun 16, 2004" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2003
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 20:42:41 Feb 3, 2004">2004</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20050204085345/http://en.wikipedia.org/wiki/Computer" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="4 Feb 2005"><strong>2005</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20040203204241*/http://en.wikipedia.org/wiki/Computer" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>631 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">3 Feb 04 - 15 Jan 14</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:1:010001472995_2005:-1:887688bda998_2006:-1:786120646311_2007:-1:122004322842_2008:-1:431222032203_2009:-1:025520231141_2010:-1:546520010574_2011:-1:111302513023_2012:-1:3823a5677464_2013:-1:7447033603cf_2014:-1:c00000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+<div id='content'>
+<div id='topbar'><table width='98%' border=0 cellspacing=0><tr><td width='152' rowspan='2'>&nbsp;</td><td  align='left' valign='top'><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Main_Page" class='internal' title ="Main Page">Main Page</a> |
+<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Special:Recentchanges" class='internal' title ="Special:Recentchanges">Recent changes</a> |
+<a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Computer&action=edit" class='internal' title ="Computer">Edit this page</a> |
+<a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Computer&action=history" class='internal' title ="Computer">Page history</a><p class='subtitle'><a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Computer&printable=yes" class='internal' title ="Computer">Printable version</a> | <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" class='internal' title ="Wikipedia:General disclaimer">Disclaimers</a></td>
+<td  valign='top' align='right' nowrap>Not logged in
+<br><a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Special:Userlogin&returnto=Computer" class='internal' title ="Special:Userlogin">Log in</a> | <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Wikipedia:Help" class='internal' title ="Wikipedia:Help">Help</a>
+<br><form name='search' class='inline' method=get action="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml"><input type=text name="search" size=19 value="">
+<input type=submit name="go" value="Go">&nbsp;<input type=submit value="Search"></form></td></tr>
+<tr><td class='top' colspan="2">Other languages: <a href="/web/20040203204241/http://ca.wikipedia.org/wiki/Ordinador" class='external' title="ca:Ordinador">Catal&#224;</a> | <a href="/web/20040203204241/http://cy.wikipedia.org/wiki/Cyfrifiadur" class='external' title="cy:Cyfrifiadur">Cymraeg</a> | <a href="/web/20040203204241/http://da.wikipedia.org/wiki/Computer" class='external' title="da:Computer">Dansk</a> | <a href="/web/20040203204241/http://de.wikipedia.org/wiki/Computer" class='external' title="de:Computer">Deutsch</a> | <a href="/web/20040203204241/http://eo.wikipedia.org/wiki/Komputilo" class='external' title="eo:Komputilo">Esperanto</a> | <a href="/web/20040203204241/http://es.wikipedia.org/wiki/Computadora" class='external' title="es:Computadora">Espa&#241;ol</a> | <a href="/web/20040203204241/http://fi.wikipedia.org/wiki/Tietokone" class='external' title="fi:Tietokone">Suomi</a> | <a href="/web/20040203204241/http://fr.wikipedia.org/wiki/Ordinateur" class='external' title="fr:Ordinateur">Fran&#231;ais</a> | <a href="/web/20040203204241/http://he.wikipedia.org/wiki/%D7%9E%D7%97%D7%A9%D7%91" class='external' title="he:">&#1506;&#1489;&#1512;&#1497;&#1514; (Ivrit)</a> | <a href="/web/20040203204241/http://hu.wikipedia.org/wiki/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9p" class='external' title="hu:Számítógép">Magyar</a> | <a href="/web/20040203204241/http://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" class='external' title="ja:">&#26085;&#26412;&#35486; (Nihongo)</a> | <a href="/web/20040203204241/http://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0" class='external' title="ko:">&#54620;&#44397;&#50612; (Hangukeo)</a> | <a href="/web/20040203204241/http://la.wikipedia.org/wiki/Computator" class='external' title="la:Computator">Latina</a> | <a href="/web/20040203204241/http://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%82%E0%B4%AA%E0%B5%8D%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%B0%E0%B5%8D%E2%80%8D" class='external' title="ml:">Malayalam</a> | <a href="/web/20040203204241/http://nl.wikipedia.org/wiki/Computer" class='external' title="nl:Computer">Nederlands</a> | <a href="/web/20040203204241/http://no.wikipedia.org/wiki/Datamaskin" class='external' title="no:Datamaskin">Norsk</a> | <a href="/web/20040203204241/http://pl.wikipedia.org/wiki/Komputer" class='external' title="pl:Komputer">Polski</a> | <a href="/web/20040203204241/http://pt.wikipedia.org/wiki/Computador" class='external' title="pt:Computador">Portugu&#234;s</a> | <a href="/web/20040203204241/http://ro.wikipedia.org/wiki/Computer" class='external' title="ro:Computer">Rom&#226;n&#259;</a> | <a href="/web/20040203204241/http://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D1%8B" class='external' title="ru:">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; (Russkij)</a> | <a href="/web/20040203204241/http://simple.wikipedia.org/wiki/Computer" class='external' title="simple:Computer">Simple English</a> | <a href="/web/20040203204241/http://sr.wikipedia.org/wiki/%D0%A0%D0%B0%D1%87%D1%83%D0%BD%D0%B0%D1%80" class='external' title="sr:">&#1057;&#1088;&#1087;&#1089;&#1082;&#1080; (Srpski)</a> | <a href="/web/20040203204241/http://sv.wikipedia.org/wiki/Dator" class='external' title="sv:Dator">Svenska</a> | <a href="/web/20040203204241/http://tr.wikipedia.org/wiki/Bilgisayar" class='external' title="tr:Bilgisayar">T&#252;rk&#231;e</a> | <a href="/web/20040203204241/http://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA" class='external' title="zh:">&#20013;&#25991; (Zhongwen)</a></td></tr></table>
+</div>
+
+<div id='article'><h1 class='pagetitle'>Computer</h1><p class='subtitle'>From Wikipedia, the free encyclopedia.
+
+<p><a name="top"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+The word <em><strong>computer</strong></em> used to mean a person who computes. In current language, a <strong>computer</strong> is any device used to process <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Information" class='internal' title ="Information">information</a> according to a well-defined <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Procedure" class='internal' title ="Procedure">procedure</a>.
+
+<p>
+The word was originally used to describe people employed to do <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Arithmetic" class='internal' title ="Arithmetic">arithmetic</a> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Calculation" class='internal' title ="Calculation">calculations</a>, with or without mechanical aids, but was transferred to the machines themselves.  Originally, the information processing was almost exclusively related to arithmetical problems, but modern computers are used for many tasks unrelated to <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Mathematics" class='internal' title ="Mathematics">mathematics</a>.
+
+<p>
+Within such a definition sit mechanical devices such as the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Slide_rule" class='internal' title ="Slide rule">slide rule</a>, the gamut of <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Mechanical_calculator" class='internal' title ="Mechanical calculator">mechanical calculators</a> from the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Abacus" class='internal' title ="Abacus">abacus</a> onwards, as well as all contemporary electronic computers.
+
+<p>
+
+<p><table border="0" id="toc"><tr><td align="center">
+<b>Table of contents</b> <script type='text/javascript'>showTocToggle("show","hide")</script></td></tr><tr id='tocinside'><td align="left">
+<div style="margin-bottom:0px;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Definitions">1 Definitions</A><BR>
+</div>
+<div style="margin-left:2em;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Embedded_Computers">1.1 Embedded Computers</A><BR>
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Personal_Computers">1.2 Personal Computers</A><BR>
+</div>
+<div style="margin-bottom:0px;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#How_Computers_Work">2 How Computers Work</A><BR>
+</div>
+<div style="margin-left:2em;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Memory">2.1 Memory</A><BR>
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Processing">2.2 Processing</A><BR>
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Input_and_Output">2.3 Input and Output</A><BR>
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Instructions">2.4 Instructions</A><BR>
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Architecture">2.5 Architecture</A><BR>
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Programs">2.6 Programs</A><BR>
+<div style="margin-left:2em;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Operating_System">2.6.1 Operating System</A><BR>
+</div>
+</div>
+<div style="margin-bottom:0px;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Uses_of_computers">3 Uses of computers</A><BR>
+</div>
+<div style="margin-bottom:0px;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#The_word_computer">4 The word "computer"</A><BR>
+</div>
+<div style="margin-bottom:0px;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#See_Also">5 See Also</A><BR>
+</div>
+<div style="margin-left:2em;">
+<A CLASS="internal" HREF="/web/20040203204241/http://en.wikipedia.org/wiki/Computer#Computer_Types">5.1 Computer Types</A><BR>
+</div>
+</td></tr></table><P>
+<h2><a name="Definitions">Definitions</a></h2>
+
+However, the above definition includes many special-purpose devices that can compute only one or a limited range of functions.  When considering modern computers, their most notable characteristic that distinguishes them from earlier computing devices is that, given the right <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Programming" class='internal' title ="Programming">programming</a>, any computer can <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Emulator" class='internal' title ="Emulator">emulate</a> the behaviour of any other (though perhaps limited by storage capacity and at different speeds), and, indeed, it is believed that current machines can emulate any future computing devices we invent (though undoubtedly more slowly). In some sense, then, this threshold capability is a useful test for identifying "general-purpose" computers from earlier special-purpose devices.  This "general-purpose" definition can be formalised into a requirement that a certain machine must be able to emulate the behaviour of a universal <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Turing_machine" class='internal' title ="Turing machine">Turing machine</a>.  Machines meeting this definition are referred to as <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Turing-complete" class='internal' title ="Turing-complete">Turing-complete</a>, and the first of them appeared in the 1940's in a flurry of developments around the world.  See the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/History_of_computing" class='internal' title ="History of computing">history of computing</a> article for more details of this period.
+
+<p>
+
+<h3><a name="Embedded_Computers">Embedded Computers</a></h3>
+
+In the last 200 years or so, however, many household devices, notably including <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Video_game" class='internal' title ="Video game">video game</a> consoles but extending to mobile <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Telephone" class='internal' title ="Telephone">telephones</a>, <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Video_cassette_recorder" class='internal' title ="Video cassette recorder">video cassette recorders</a>, PDA's and myriad other household, industrial, automotive, and other electronic devices, all contain computer-like circuitry capable of meeting the above Turing-completeness requirement (with the proviso that the programming of these devices is often hardwired into a <a href="/web/20040203204241/http://en.wikipedia.org/wiki/ROM" class='internal' title ="ROM">ROM</a> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Chip" class='internal' title ="Chip">chip</a> which would need to be replaced to change the programming of the machine).  These computers inside other special-purpose devices are commonly referred to as "<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Microcontroller" class='internal' title ="Microcontroller">microcontrollers</a>" or "<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Embedded_computer" class='internal' title ="Embedded computer">embedded computers</a>".  Therefore, many restrict the definition of computers to devices whose primary purpose is information processing rather than being a part of a larger system such as a telephone, <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Microwave_oven" class='internal' title ="Microwave oven">microwave oven</a>, or <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Aircraft" class='internal' title ="Aircraft">aircraft</a>, and can be adapted for a variety of purposes by the user without physical modification.  <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Mainframe_computer" class='internal' title ="Mainframe computer">Mainframe computers</a>, <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Minicomputer" class='internal' title ="Minicomputer">minicomputers</a>, and <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Personal_computer" class='internal' title ="Personal computer">personal computers</a> are the main types of computers meeting this definition.
+
+<p>
+
+<h3><a name="Personal_Computers">Personal Computers</a></h3>
+
+Finally, many people who are unfamiliar with other forms of computers use the term exclusively to refer to <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Personal_computer" class='internal' title ="Personal computer">personal computers</a>.
+
+<p>
+
+<h2><a name="How_Computers_Work">How Computers Work</a></h2>
+
+While the technologies used in <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Digital" class='internal' title ="Digital">digital</a> computers have changed dramatically since the first computers of the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/1940s" class='internal' title ="1940s">1940s</a> (see <a href="/web/20040203204241/http://en.wikipedia.org/wiki/History_of_computing_hardware" class='internal' title ="History of computing hardware">History of computing hardware</a> for more details), most still use the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Von_Neumann_architecture" class='internal' title ="Von Neumann architecture">von Neumann architecture</a> proposed in the early 1940s by <a href="/web/20040203204241/http://en.wikipedia.org/wiki/John_von_Neumann" class='internal' title ="John von Neumann">John von Neumann</a>.  
+
+<p>
+Von Neumann's <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Von_Neumann_architecture" class='internal' title ="Von Neumann architecture">architecture</a> describes a computer with four main sections: the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/ALU" class='internal' title ="ALU">Arithmetic and Logic Unit</a> (ALU), the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Control_unit" class='internal' title ="Control unit">control circuitry</a>, the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computer_storage" class='internal' title ="Computer storage">memory</a>, and the input and output devices (collectively termed I/O).  These parts are interconnected by a bundle of wires, a "<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computer_bus" class='internal' title ="Computer bus">bus</a>."
+
+<p>
+
+<h3><a name="Memory">Memory</a></h3>
+
+In this system, <b><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computer_storage" class='internal' title ="Computer storage">memory</a></b> is a sequence of numbered "cells" or "pigeon holes," each containing a small piece of information.  The information may be an instruction to tell the computer what to do.  The cell may contain <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Data" class='internal' title ="Data">data</a> that the computer needs to perform the instruction.  Any slot may contain either, and indeed what is at one time data might be instructions later. 
+
+<p>
+In general, memory can be rewritten over millions of times - it is a scratchpad rather than a stone tablet.  
+
+<p>
+The size of each cell, and the number of cells, varies greatly from computer to computer, and the technologies used to implement memory have varied greatly - from electromechanical relays, to mercury-filled tubes (and later springs) in which acoustic pulses were formed, to matrices of permanent magnets, to individual transistors, to integrated circuits with millions of <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Capacitor" class='internal' title ="Capacitor">capacitors</a> on a single chip.  
+
+<p>
+
+<h3><a name="Processing">Processing</a></h3>
+
+The <b><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Arithmetic_and_logical_unit" class='internal' title ="Arithmetic and logical unit">arithmetic and logical unit</a></b>, or ALU, is the device that performs elementary operations such as arithmetic operations (addition, subtraction, and so on), logical operations (<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Logic_gate" class='internal' title ="Logic gate">AND, OR, NOT</a>), and comparison operations (for example, comparing the contents of two "slots" for equality).  This unit is where the "real work" is done.
+
+<p>
+The <b><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Control_unit" class='internal' title ="Control unit">control unit</a></b> keeps track of which slot contains the current instruction that the computer is performing, telling the ALU what operation to perform and retrieving the information (from the memory) that it needs to perform it, and transfers the result back to the appropriate memory location.  Once that occurs, the control unit goes to the next instruction (typically located in the next slot, unless the instruction is a jump instruction informing the computer that the next instruction is located in another location).
+
+<p>
+
+<h3><a name="Input_and_Output">Input and Output</a></h3>
+
+The <b><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Input/output" class='internal' title ="Input/output">I/O</a></b> allows the computer to obtain information from the outside world, and send the results of its work back there.  There are incredibly broad range of I/O devices, from the familiar <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Alphanumeric_keyboard" class='internal' title ="Alphanumeric keyboard">keyboards</a>, <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Monitor" class='internal' title ="Monitor">monitors</a> and <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Floppy_disk" class='internal' title ="Floppy disk">floppy disk</a> drives, to the more unusual such as <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Webcam" class='internal' title ="Webcam">webcams</a>.
+
+<p>
+
+<h3><a name="Instructions">Instructions</a></h3>
+
+The instructions discussed above are not the rich instructions of a human language.  A computer only has a limited number of well-defined, simple instructions.  Typical sorts of instructions supported by most computers are "copy the contents of cell 123, and place the copy in cell 456", "add the contents of cell 666 to cell 042, and place the result in cell 013", and "if the contents of cell 999 are 0, your next instruction is at cell 345".
+
+<p>
+Instructions are represented within the computer as numbers - the code for "copy" might be 001, for example.  The particular instruction set that a specific computer supports is known as that computer's <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Machine_language" class='internal' title ="Machine language">machine language</a>.  In practice, people do not normally write the instructions for computers directly in machine language but rather use a "high level" <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Programming_language" class='internal' title ="Programming language">programming language</a> which is then translated into the machine language automatically by special computer programs (interpreters and compilers).  Some programming languages map very closely to the machine language, such as <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Assembler" class='internal' title ="Assembler">assembler</a> (low level languages); at the other end, languages like <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Prolog" class='internal' title ="Prolog">Prolog</a> are based on abstract principles far removed from the details of the machine's actual operation (high level languages).
+
+<p>
+
+<h3><a name="Architecture">Architecture</a></h3>
+
+Contemporary computers put the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/ALU" class='internal' title ="ALU">ALU</a> and <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Control_unit" class='internal' title ="Control unit">control unit</a> into a single <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Integrated_circuit" class='internal' title ="Integrated circuit">integrated circuit</a> known as the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/CPU" class='internal' title ="CPU">Central Processing Unit</a> or CPU.  Typically, the computer's memory is located on a few small integrated circuits near the CPU.  The overwhelming majority of the computer's mass is either ancilliary systems (for instance, to supply electrical power) or I/O devices.
+
+<p>
+Some larger computers differ from the above model in one major respect - they have multiple CPUs and control units working simultaneously.  Additionally, a few computers, used mainly for research purposes and scientific computing, have differed significantly from the above model, but they have found little commercial application.
+
+<p>
+The functioning of a computer is therefore in principle quite straightforward.  The computer fetches instructions and data from its memory.  The instructions are executed, the results are stored, and the next instruction is fetched. This procedure repeats until the computer is turned off.
+
+<p>
+
+<h3><a name="Programs">Programs</a></h3>
+
+<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computer_program" class='internal' title ="Computer program">Computer programs</a> are simply large lists of instructions for the computer to execute, perhaps with tables of data.  Many computer programs contain millions of instructions, and many of those instructions are executed repeatedly.  A typical modern <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Personal_computer" class='internal' title ="Personal computer">PC</a> (in the year <a href="/web/20040203204241/http://en.wikipedia.org/wiki/2003" class='internal' title ="2003">2003</a>) can execute around 2-3 billion instructions per second.  Computers do not gain their extraordinary capabilities through the ability to execute complex instructions.  Rather, they do millions of simple instructions arranged by clever people, "programmers."  Good programmers develop sets of instructions to do common tasks (for instance, draw a dot on screen) and then make those sets of instructions available to other programmers.
+
+<p>
+Nowadays, most computers appear to execute several programs at the same time. This is usually referred to as <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Multitasking" class='internal' title ="Multitasking">multitasking</a>.  In reality, the CPU executes instructions from one program, then after a short period of time, it switches to a second program and executes some of its instructions.  This small interval of time is often referred to as a time slice. This creates the illusion of multiple programs being executed simultaneously by sharing the CPU's time between the programs. This is similar to how a movie is simply a rapid succession of still frames. The <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Operating_system" class='internal' title ="Operating system">operating system</a> is the program that usually controls this time sharing.
+
+<p>
+
+<h4><a name="Operating_System">Operating System</a></h4>
+
+The <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Operating_system" class='internal' title ="Operating system">operating system</a> is a sort of catch-all of useful pieces of code.  Whenever some kind of computer code becomes sharable by many different types of computer program, over many years, programmers eventually move it into the operating system.
+
+<p>
+The operating system, decides which programs are run, when, and what resources (such as memory or I/O) they get to use. The operating system also provides services to other programs, such as code ("drivers") which allow programmers to write programs for a machine without needing to know the intimate details of all attached electronic devices.
+
+<p>
+
+<h2><a name="Uses_of_computers">Uses of computers</a></h2>
+
+The first digital computers, with their large size and cost, mainly performed scientific calculation. <a href="/web/20040203204241/http://en.wikipedia.org/wiki/ENIAC" class='internal' title ="ENIAC">ENIAC</a>, an early US computer originally designed to calculate ballistics firing tables for artilery, calculated neutron cross-sectional densities to see if the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Hydrogen_bomb" class='internal' title ="Hydrogen bomb">hydrogen bomb</a> would work properly (this calculation, performed in December 1945 through January 1946 and involving over a million <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Punch_card" class='internal' title ="Punch card">punch cards</a> of data, showed the design then under consideration would fail).  The <a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=CSIR_Mk_I&action=edit" class='new' title ="CSIR Mk I">CSIR Mk I</a>, the first Australian computer, evaluated rainfall patterns for the catchment of the <a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Snowy_Mountains_scheme&action=edit" class='new' title ="Snowy Mountains scheme">Snowy Mountains scheme</a>, a large <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Hydroelectric" class='internal' title ="Hydroelectric">hydroelectric</a> generation project. Others were used in <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Cryptanalysis" class='internal' title ="Cryptanalysis">cryptanalysis</a>, for example the world's first programmable <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Digital" class='internal' title ="Digital">digital</a> electronic computer, <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Colossus_computer" class='internal' title ="Colossus computer">Colossus</a>, built during <a href="/web/20040203204241/http://en.wikipedia.org/wiki/World_War_II" class='internal' title ="World War II">World War II</a>. However, early visionaries also anticipated that programming would allow chess playing, moving pictures and other uses.  
+
+<p>
+People in governments and large corporations also used computers to automate many of the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Data" class='internal' title ="Data">data</a> collection and processing tasks previously performed by humans - for example, maintaining and updating accounts and inventories.  In academia, scientists of all sorts began to use computers for their own analyses.  Continual reductions in the costs of computers saw them adopted by ever-smaller organizations.  Businesses, organizations, and governments 
+often employ a large number of small computers to accomplish tasks that were previously done by an expensive, large <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Mainframe" class='internal' title ="Mainframe">mainframe</a> computer. Collections of the smaller computers in one location is referred to as a <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Server_farm" class='internal' title ="Server farm">server farm</a>.
+
+<p>
+With the invention of the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Microprocessor" class='internal' title ="Microprocessor">microprocessor</a> in the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/1970s" class='internal' title ="1970s">1970s</a>, it became possible to produce very inexpensive computers.  <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Personal_computer" class='internal' title ="Personal computer">Personal computers</a> became popular for many tasks, including keeping books, writing and printing documents.  Calculating forecasts and other repetitive math with <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Spreadsheet" class='internal' title ="Spreadsheet">spreadsheets</a>, communicating with <a href="/web/20040203204241/http://en.wikipedia.org/wiki/E-mail" class='internal' title ="E-mail">e-mail</a> and, the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Internet" class='internal' title ="Internet">Internet</a>.  However, computers' wide availability and easy customization has seen them used for many other purposes.
+
+<p>
+At the same time, small computers, usually with fixed programming, began to find their way into other devices such as home appliances, automobiles, aeroplanes, and industrial equipment.  These <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Embedded_system" class='internal' title ="Embedded system">embedded</a> processors controlled the behaviour of such devices more easily, allowing more complex control behaviours (for instance, the development of <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Anti-lock_brake" class='internal' title ="Anti-lock brake">anti-lock brakes</a> in cars).  By the start of the twenty-first century, most electrical devices, most forms of powered transport, and most factory production lines are controlled by computers.  Most engineers predict that this trend will continue.
+
+<p>
+
+<h2><a name="The_word_computer">The word "computer"</a></h2>
+
+Over the years there has been several slightly different meanings to the word <em>computer,</em> and several different words for the thing we now usually call a computer.
+
+<p>
+For instance "computer" was once commonly used to mean a person employed to do arithmetic calculations, with or without mechanical aids. According to the Barnhart Concise Dictionary of Etymology, the word came into use in English in 1646 as a word for a "person who computes" and then by 1897 also for a mechanical calculating machine. During World War II it referred e.g. to U.S. and British servicewomen whose job it was to calculate the trajectories of large artillery shells with such machines.
+
+<p>
+<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Charles_Babbage" class='internal' title ="Charles Babbage">Charles Babbage</a> designed one of the first computing machines called the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Analytical_engine" class='internal' title ="Analytical engine">Analytical engine</a>, but due to technological problems it was not built in his lifetime. Various simple mechanical devices such as the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Slide_rule" class='internal' title ="Slide rule">slide rule</a> kind have also been called computers.  In some cases they were referred to as "analog computers", as they represented numbers by continuous physical quantities rather than by discrete binary digits. What are now called simply "computers" were once commonly called "digital computers" to distinguish them from these other devices (which are still used in the field of <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Analog_signal_processing" class='internal' title ="Analog signal processing">analog signal processing</a>, for example).
+
+<p>
+In thinking of other words for the computer, it is worth noting that in other languages the word chosen does not always have the same literal meaning as the <a href="/web/20040203204241/http://en.wikipedia.org/wiki/English_language" class='internal' title ="English language">English language</a> word.  In <a href="/web/20040203204241/http://en.wikipedia.org/wiki/French_language" class='internal' title ="French language">French</a> for example, the word is "ordinateur", which means approximately "organizer", or "sorting machine".  The <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Spanish_language" class='internal' title ="Spanish language">Spanish</a> word is "ordenador" , with the same meaning, although in some countries they use the anglicism <i>computadora</i>.  In <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Italian_language" class='internal' title ="Italian language">Italian</a>, computer is "calcolatore", calculator, emphasizing its computational uses over logical ones like sorting. In <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Swedish_(language)" class='internal' title ="Swedish (language)">Swedish</a>, a computer is called "dator" from "data". At least in the 1950s, they were called "matematikmaskin" ("mathematics machine"). In Chinese, a computer is called "dian now" or an "electric brain". In English, other words and phrases have been used, such as "data processing machine".
+
+<p>
+
+<h2><a name="See_Also">See Also</a></h2>
+
+<ul><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computer_expo" class='internal' title ="Computer expo">computer expo</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computer_science" class='internal' title ="Computer science">computer science</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computing" class='internal' title ="Computing">computing</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computing_analogies" class='internal' title ="Computing analogies">computing analogies</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Computers_in_fiction" class='internal' title ="Computers in fiction">computers in fiction</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Digital" class='internal' title ="Digital">digital</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/History_of_computing" class='internal' title ="History of computing">history of computing</a>
+</li></ul>
+
+<p>
+
+<h3><a name="Computer_Types">Computer Types</a></h3>
+
+<ul><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Analog_computer" class='internal' title ="Analog computer">analog computer</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Pulse_computer" class='internal' title ="Pulse computer">pulse computer</a>
+</li></ul>
+
+<p>
+
+<p>
+
+<ul><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Microcomputer" class='internal' title ="Microcomputer">microcomputer</a>
+
+<ul><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Home_computer" class='internal' title ="Home computer">home computer</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Personal_computer" class='internal' title ="Personal computer">personal computer</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Server" class='internal' title ="Server">server</a>
+</li></ul>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Minicomputer" class='internal' title ="Minicomputer">minicomputer</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Mainframe_computer" class='internal' title ="Mainframe computer">mainframe computer</a>
+</li><li> <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Supercomputer" class='internal' title ="Supercomputer">supercomputer</a>
+</li></ul>
+
+<p>
+</div><br clear=all>
+
+<div id='footer'><table width='98%' border=0 cellspacing=0><tr><td width='152' rowspan='1'>&nbsp;</td><td class='bottom' align='left' valign='top'><strong><a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Computer&action=edit" class='internal' title ="Computer">Edit this page</a></strong> |
+<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Talk:Computer" class='internal' title ="Talk:Computer">Discuss this page</a> |
+<a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Computer&action=history" class='internal' title ="Computer">Page history</a> |
+<a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Special:Whatlinkshere&target=Computer" class='internal' title ="Special:Whatlinkshere">What links here</a> |
+<a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Special:Recentchangeslinked&target=Computer" class='internal' title ="Special:Recentchangeslinked">Related changes</a><br>
+Other languages: <a href="/web/20040203204241/http://ca.wikipedia.org/wiki/Ordinador" class='external' title="ca:Ordinador">Catal&#224;</a> | <a href="/web/20040203204241/http://cy.wikipedia.org/wiki/Cyfrifiadur" class='external' title="cy:Cyfrifiadur">Cymraeg</a> | <a href="/web/20040203204241/http://da.wikipedia.org/wiki/Computer" class='external' title="da:Computer">Dansk</a> | <a href="/web/20040203204241/http://de.wikipedia.org/wiki/Computer" class='external' title="de:Computer">Deutsch</a> | <a href="/web/20040203204241/http://eo.wikipedia.org/wiki/Komputilo" class='external' title="eo:Komputilo">Esperanto</a> | <a href="/web/20040203204241/http://es.wikipedia.org/wiki/Computadora" class='external' title="es:Computadora">Espa&#241;ol</a> | <a href="/web/20040203204241/http://fi.wikipedia.org/wiki/Tietokone" class='external' title="fi:Tietokone">Suomi</a> | <a href="/web/20040203204241/http://fr.wikipedia.org/wiki/Ordinateur" class='external' title="fr:Ordinateur">Fran&#231;ais</a> | <a href="/web/20040203204241/http://he.wikipedia.org/wiki/%D7%9E%D7%97%D7%A9%D7%91" class='external' title="he:">&#1506;&#1489;&#1512;&#1497;&#1514; (Ivrit)</a> | <a href="/web/20040203204241/http://hu.wikipedia.org/wiki/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9p" class='external' title="hu:Számítógép">Magyar</a> | <a href="/web/20040203204241/http://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" class='external' title="ja:">&#26085;&#26412;&#35486; (Nihongo)</a> | <a href="/web/20040203204241/http://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0" class='external' title="ko:">&#54620;&#44397;&#50612; (Hangukeo)</a> | <a href="/web/20040203204241/http://la.wikipedia.org/wiki/Computator" class='external' title="la:Computator">Latina</a> | <a href="/web/20040203204241/http://ml.wikipedia.org/wiki/%E0%B4%95%E0%B4%82%E0%B4%AA%E0%B5%8D%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%B0%E0%B5%8D%E2%80%8D" class='external' title="ml:">Malayalam</a> | <a href="/web/20040203204241/http://nl.wikipedia.org/wiki/Computer" class='external' title="nl:Computer">Nederlands</a> | <a href="/web/20040203204241/http://no.wikipedia.org/wiki/Datamaskin" class='external' title="no:Datamaskin">Norsk</a> | <a href="/web/20040203204241/http://pl.wikipedia.org/wiki/Komputer" class='external' title="pl:Komputer">Polski</a> | <a href="/web/20040203204241/http://pt.wikipedia.org/wiki/Computador" class='external' title="pt:Computador">Portugu&#234;s</a> | <a href="/web/20040203204241/http://ro.wikipedia.org/wiki/Computer" class='external' title="ro:Computer">Rom&#226;n&#259;</a> | <a href="/web/20040203204241/http://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D1%8B" class='external' title="ru:">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; (Russkij)</a> | <a href="/web/20040203204241/http://simple.wikipedia.org/wiki/Computer" class='external' title="simple:Computer">Simple English</a> | <a href="/web/20040203204241/http://sr.wikipedia.org/wiki/%D0%A0%D0%B0%D1%87%D1%83%D0%BD%D0%B0%D1%80" class='external' title="sr:">&#1057;&#1088;&#1087;&#1089;&#1082;&#1080; (Srpski)</a> | <a href="/web/20040203204241/http://sv.wikipedia.org/wiki/Dator" class='external' title="sv:Dator">Svenska</a> | <a href="/web/20040203204241/http://tr.wikipedia.org/wiki/Bilgisayar" class='external' title="tr:Bilgisayar">T&#252;rk&#231;e</a> | <a href="/web/20040203204241/http://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA" class='external' title="zh:">&#20013;&#25991; (Zhongwen)</a>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Main_Page" class='internal' title ="Main Page">Main Page</a> | <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Wikipedia:About" class='internal' title ="Wikipedia:About">About Wikipedia</a> | <a href="/web/20040203204241/http://en.wikipedia.org/wiki/Special:Recentchanges" class='internal' title ="Special:Recentchanges">Recent changes</a> | <form name='search' class='inline' method=get action="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml"><input type=text name="search" size=19 value="">
+<input type=submit name="go" value="Go">&nbsp;<input type=submit value="Search"></form><br><span id='pagestats'> This page was last modified 03:15, 29 Jan 2004. All text is available under the terms of the <a class=internal href='/web/20040203204241/http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License'>GNU Free Documentation License</a> (see <b><a class=internal href='/web/20040203204241/http://en.wikipedia.org/wiki/Wikipedia:Copyrights'>Copyrights</a></b> for details). <b><a class=internal href='/web/20040203204241/http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer'>Disclaimers</a></b>. Wikipedia is powered by <A HREF='/web/20040203204241/http://wikipedia.sourceforge.net/' class ='external'>MediaWiki</A>, an open source <a href='/web/20040203204241/http://en.wikipedia.org/wiki/Wiki' class='internal'>wiki</a> engine.</span></td></tr></table>
+</div>
+</div>
+
+<div id='quickbar'>
+<a href="/web/20040203204241/http://en.wikipedia.org/wiki/Main+Page"><img border=0 src="/web/20040203204241im_/http://en.wikipedia.org/upload/wiki.png" alt="[Main Page]"></a>
+<hr class='sep'><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Main_Page" class='internal' title ="Main Page">Main Page</a>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Special:Recentchanges" class='internal' title ="Special:Recentchanges">Recent changes</a>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Special:Randompage" class='internal' title ="Special:Randompage">Random page</a>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Current_events" class='internal' title ="Current events">Current events</a>
+<br><hr class='sep'><strong><a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Computer&action=edit" class='internal' title ="Computer">Edit this page</a></strong>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Talk:Computer" class='internal' title ="Talk:Computer">Discuss this page</a>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Computer&action=history" class='internal' title ="Computer">Page history</a>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Special:Whatlinkshere&target=Computer" class='internal' title ="Special:Whatlinkshere">What links here</a>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/w/wiki.phtml?title=Special:Recentchangeslinked&target=Computer" class='internal' title ="Special:Recentchangeslinked">Related changes</a>
+<br><hr class='sep'><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Special:Specialpages" class='internal' title ="Special:Specialpages">Special pages</a>
+<br><a href="/web/20040203204241/http://en.wikipedia.org/wiki/Wikipedia:Contact_us" class='internal' title ="Wikipedia:Contact us">Contact us</a>
+<br><a href="/web/20040203204241/http://wikimediafoundation.org/fundraising" class="internal">Donations</a>
+<br></div>
+<!-- Time since request: 0.33 secs. -->
+</body><!-- Cached/compressed 20040129032502 -->
+</html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 20:42:41 Feb 3, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:11:24 Jan 15, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

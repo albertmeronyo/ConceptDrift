@@ -1,0 +1,1543 @@
+
+
+
+
+
+
+
+
+
+
+************ CCoommppuutteerr ************
+From Wikipedia, the free encyclopedia
+Jump to: _n_a_v_i_g_a_t_i_o_n, _s_e_a_r_c_h
+"Computer technology" and "Computer system" redirect here. For the company, see
+_C_o_m_p_u_t_e_r_ _T_e_c_h_n_o_l_o_g_y_ _L_i_m_i_t_e_d. For other uses, see _C_o_m_p_u_t_e_r_ _(_d_i_s_a_m_b_i_g_u_a_t_i_o_n_) and
+_C_o_m_p_u_t_e_r_ _s_y_s_t_e_m_ _(_d_i_s_a_m_b_i_g_u_a_t_i_o_n_).
+_[_P_a_g_e_ _s_e_m_i_-_p_r_o_t_e_c_t_e_d_]
+                                  CCoommppuutteerr
+_[_A_c_e_r_ _A_s_p_i_r_e_ _8_9_2_0_ _G_e_m_s_t_o_n_e_ _b_y_ _G_e_o_r_g_y_._J_P_G_]_[_C_o_l_u_m_b_i_a_ _S_u_p_e_r_c_o_m_p_u_t_e_r_ _-_ _N_A_S_A
+_A_d_v_a_n_c_e_d_ _S_u_p_e_r_c_o_m_p_u_t_i_n_g_ _F_a_c_i_l_i_t_y_._j_p_g_]_[_I_n_t_e_r_t_e_c_ _S_u_p_e_r_b_r_a_i_n_._j_p_g_]
+_[_2_0_1_0_-_0_1_-_2_6_-_t_e_c_h_n_i_k_k_r_e_m_p_e_l_-_b_y_-_R_a_l_f_R_-_0_5_._j_p_g_]_[_T_h_i_n_k_i_n_g_ _M_a_c_h_i_n_e_s_ _C_o_n_n_e_c_t_i_o_n
+_M_a_c_h_i_n_e_ _C_M_-_5_ _F_r_o_s_t_b_u_r_g_ _2_._j_p_g_]_[_G_5_ _s_u_p_p_l_y_i_n_g_ _W_i_k_i_p_e_d_i_a_ _v_i_a_ _G_i_g_a_b_i_t_ _a_t_ _t_h_e_ _L_a_n_g_e
+_N_a_c_h_t_ _d_e_r_ _W_i_s_s_e_n_s_c_h_a_f_t_e_n_ _2_0_0_6_ _i_n_ _D_r_e_s_d_e_n_._J_P_G_]
+_[_D_M_ _I_B_M_ _S_3_6_0_._j_p_g_]_[_A_c_o_r_n_ _B_B_C_ _M_a_s_t_e_r_ _S_e_r_i_e_s_ _M_i_c_r_o_c_o_m_p_u_t_e_r_._j_p_g_]_[_D_e_l_l_ _P_o_w_e_r_E_d_g_e
+_S_e_r_v_e_r_s_._j_p_g_]
+A ccoommppuutteerr is a general purpose device that can be _p_r_o_g_r_a_m_m_e_d to carry out a
+set of arithmetic or logical operations. Since a sequence of operations can be
+readily changed, the computer can solve more than one kind of problem.
+Conventionally, a computer consists of at least one processing element,
+typically a _c_e_n_t_r_a_l_ _p_r_o_c_e_s_s_i_n_g_ _u_n_i_t (CPU) and some form of _m_e_m_o_r_y. The
+processing element carries out arithmetic and logic operations, and a
+sequencing and control unit that can change the order of operations based on
+stored information. Peripheral devices allow information to be retrieved from
+an external source, and the result of operations saved and retrieved.
+In _W_o_r_l_d_ _W_a_r_ _I_I, _m_e_c_h_a_n_i_c_a_l _a_n_a_l_o_g_ _c_o_m_p_u_t_e_r_s were used for specialized military
+applications. During this time the first electronic _d_i_g_i_t_a_l computers were
+developed. Originally they were the size of a large room, consuming as much
+power as several hundred modern _p_e_r_s_o_n_a_l_ _c_o_m_p_u_t_e_r_s (PCs)._[_1_]
+Modern computers based on _i_n_t_e_g_r_a_t_e_d_ _c_i_r_c_u_i_t_s are millions to billions of times
+more capable than the early machines, and occupy a fraction of the space._[_2_]
+Simple computers are small enough to fit into _m_o_b_i_l_e_ _d_e_v_i_c_e_s, and _m_o_b_i_l_e
+_c_o_m_p_u_t_e_r_s can be powered by small _b_a_t_t_e_r_i_e_s. Personal computers in their
+various forms are _i_c_o_n_s of the _I_n_f_o_r_m_a_t_i_o_n_ _A_g_e and are what most people think
+of as ‚Äúcomputers.‚Äù However, the _e_m_b_e_d_d_e_d_ _c_o_m_p_u_t_e_r_s found in many devices
+from _M_P_3_ _p_l_a_y_e_r_s to _f_i_g_h_t_e_r_ _a_i_r_c_r_a_f_t and from toys to _i_n_d_u_s_t_r_i_a_l_ _r_o_b_o_t_s are the
+most numerous.
+********** CCoonntteennttss **********
+    * _1_ _E_t_y_m_o_l_o_g_y
+    * _2_ _H_i_s_t_o_r_y
+          o _2_._1_ _F_i_r_s_t_ _g_e_n_e_r_a_l_-_p_u_r_p_o_s_e_ _c_o_m_p_u_t_i_n_g_ _d_e_v_i_c_e
+          o _2_._2_ _A_n_a_l_o_g_ _c_o_m_p_u_t_e_r_s
+          o _2_._3_ _T_h_e_ _m_o_d_e_r_n_ _c_o_m_p_u_t_e_r
+                # _2_._3_._1_ _E_l_e_c_t_r_o_m_e_c_h_a_n_i_c_a_l_ _c_o_m_p_u_t_e_r_s
+                # _2_._3_._2_ _E_l_e_c_t_r_o_n_i_c_ _p_r_o_g_r_a_m_m_a_b_l_e_ _c_o_m_p_u_t_e_r
+                # _2_._3_._3_ _S_t_o_r_e_d_ _p_r_o_g_r_a_m_ _c_o_m_p_u_t_e_r
+          o _2_._4_ _T_r_a_n_s_i_s_t_o_r_ _c_o_m_p_u_t_e_r_s
+          o _2_._5_ _T_h_e_ _i_n_t_e_g_r_a_t_e_d_ _c_i_r_c_u_i_t
+    * _3_ _P_r_o_g_r_a_m_s
+          o _3_._1_ _S_t_o_r_e_d_ _p_r_o_g_r_a_m_ _a_r_c_h_i_t_e_c_t_u_r_e
+          o _3_._2_ _B_u_g_s
+          o _3_._3_ _M_a_c_h_i_n_e_ _c_o_d_e
+          o _3_._4_ _P_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e
+                # _3_._4_._1_ _L_o_w_-_l_e_v_e_l_ _l_a_n_g_u_a_g_e_s
+                # _3_._4_._2_ _H_i_g_h_e_r_-_l_e_v_e_l_ _l_a_n_g_u_a_g_e_s
+          o _3_._5_ _P_r_o_g_r_a_m_ _d_e_s_i_g_n
+    * _4_ _C_o_m_p_o_n_e_n_t_s
+          o _4_._1_ _C_o_n_t_r_o_l_ _u_n_i_t
+          o _4_._2_ _A_r_i_t_h_m_e_t_i_c_ _l_o_g_i_c_ _u_n_i_t_ _(_A_L_U_)
+          o _4_._3_ _M_e_m_o_r_y
+          o _4_._4_ _I_n_p_u_t_/_o_u_t_p_u_t_ _(_I_/_O_)
+          o _4_._5_ _M_u_l_t_i_t_a_s_k_i_n_g
+          o _4_._6_ _M_u_l_t_i_p_r_o_c_e_s_s_i_n_g
+          o _4_._7_ _N_e_t_w_o_r_k_i_n_g_ _a_n_d_ _t_h_e_ _I_n_t_e_r_n_e_t
+          o _4_._8_ _C_o_m_p_u_t_e_r_ _a_r_c_h_i_t_e_c_t_u_r_e_ _p_a_r_a_d_i_g_m_s
+    * _5_ _M_i_s_c_o_n_c_e_p_t_i_o_n_s
+          o _5_._1_ _R_e_q_u_i_r_e_d_ _t_e_c_h_n_o_l_o_g_y
+    * _6_ _C_a_p_a_b_i_l_i_t_i_e_s_ _o_f_ _c_o_m_p_u_t_e_r_s_ _(_I_n_ _g_e_n_e_r_a_l_)
+    * _7_ _L_i_m_i_t_a_t_i_o_n_s_ _o_f_ _c_o_m_p_u_t_e_r_s_ _(_I_n_ _g_e_n_e_r_a_l_)
+    * _8_ _F_u_r_t_h_e_r_ _t_o_p_i_c_s
+          o _8_._1_ _A_r_t_i_f_i_c_i_a_l_ _i_n_t_e_l_l_i_g_e_n_c_e
+          o _8_._2_ _H_a_r_d_w_a_r_e
+                # _8_._2_._1_ _H_i_s_t_o_r_y_ _o_f_ _c_o_m_p_u_t_i_n_g_ _h_a_r_d_w_a_r_e
+                # _8_._2_._2_ _O_t_h_e_r_ _h_a_r_d_w_a_r_e_ _t_o_p_i_c_s
+          o _8_._3_ _S_o_f_t_w_a_r_e
+          o _8_._4_ _L_a_n_g_u_a_g_e_s
+          o _8_._5_ _P_r_o_f_e_s_s_i_o_n_s_ _a_n_d_ _o_r_g_a_n_i_z_a_t_i_o_n_s
+    * _9_ _D_e_g_r_a_d_a_t_i_o_n
+    * _1_0_ _S_e_e_ _a_l_s_o
+    * _1_1_ _N_o_t_e_s
+    * _1_2_ _R_e_f_e_r_e_n_c_e_s
+    * _1_3_ _E_x_t_e_r_n_a_l_ _l_i_n_k_s
+********** EEttyymmoollooggyy **********
+The first use of the word ‚Äúcomputer‚Äù was recorded in 1613 in a book called
+‚ÄúThe yong mans gleanings‚Äù by English writer Richard Braithwait I haue read
+the truest computer of Times, and the best Arithmetician that euer breathed,
+and he reduceth thy dayes into a short number. It referred to a person who
+carried out calculations, or computations, and the word continued with the same
+meaning until the middle of the 20th century. From the end of the 19th century
+the word began to take on its more familiar meaning, a machine that carries out
+computations._[_3_]
+********** HHiissttoorryy **********
+Main article: _H_i_s_t_o_r_y_ _o_f_ _c_o_m_p_u_t_i_n_g_ _h_a_r_d_w_a_r_e
+Although rudimentary calculating devices first appeared in antiquity and
+mechanical calculating aids were invented in the 17th century, the first
+'computers' were conceived of in the 19th century, and only emerged in their
+modern form in the 1940s.
+******** FFiirrsstt ggeenneerraall--ppuurrppoossee ccoommppuuttiinngg ddeevviiccee ********
+A portion of _B_a_b_b_a_g_e_'_s _D_i_f_f_e_r_e_n_c_e_ _e_n_g_i_n_e.
+_C_h_a_r_l_e_s_ _B_a_b_b_a_g_e, an English mechanical engineer and _p_o_l_y_m_a_t_h, originated the
+concept of a programmable computer. Considered the "_f_a_t_h_e_r_ _o_f_ _t_h_e_ _c_o_m_p_u_t_e_r",_[_4_]
+he conceptualized and invented the first _m_e_c_h_a_n_i_c_a_l_ _c_o_m_p_u_t_e_r in the early 19th
+century. After working on his revolutionary _d_i_f_f_e_r_e_n_c_e_ _e_n_g_i_n_e, designed to aid
+in navigational calculations, in 1833 he realized that a much more general
+design, an _A_n_a_l_y_t_i_c_a_l_ _E_n_g_i_n_e, was possible. The input of programs and data was
+to be provided to the machine via _p_u_n_c_h_e_d_ _c_a_r_d_s, a method being used at the
+time to direct mechanical _l_o_o_m_s such as the _J_a_c_q_u_a_r_d_ _l_o_o_m. For output, the
+machine would have a printer, a curve plotter and a bell. The machine would
+also be able to punch numbers onto cards to be read in later. The Engine
+incorporated an _a_r_i_t_h_m_e_t_i_c_ _l_o_g_i_c_ _u_n_i_t, _c_o_n_t_r_o_l_ _f_l_o_w in the form of _c_o_n_d_i_t_i_o_n_a_l
+_b_r_a_n_c_h_i_n_g and _l_o_o_p_s, and integrated _m_e_m_o_r_y, making it the first design for a
+general-purpose computer that could be described in modern terms as _T_u_r_i_n_g_-
+_c_o_m_p_l_e_t_e._[_5_]_[_6_]
+The machine was about a century ahead of its time. All the parts for his
+machine had to be made by hand - this was a major problem for a device with
+thousands of parts. Eventually, the project was dissolved with the decision of
+the _B_r_i_t_i_s_h_ _G_o_v_e_r_n_m_e_n_t to cease funding. Babbage's failure to complete the
+analytical engine can be chiefly attributed to difficulties not only of
+politics and financing, but also to his desire to develop an increasingly
+sophisticated computer and to move ahead faster than anyone else could follow.
+Nevertheless his son, Henry Babbage, completed a simplified version of the
+analytical engine's computing unit (the mill) in 1888. He gave a successful
+demonstration of its use in computing tables in 1906.
+******** AAnnaalloogg ccoommppuutteerrss ********
+_S_i_r_ _W_i_l_l_i_a_m_ _T_h_o_m_s_o_n's third tide-predicting machine design, 1879-81
+During the first half of the 20th century, many scientific _c_o_m_p_u_t_i_n_g needs were
+met by increasingly sophisticated _a_n_a_l_o_g_ _c_o_m_p_u_t_e_r_s, which used a direct
+mechanical or electrical model of the problem as a basis for _c_o_m_p_u_t_a_t_i_o_n.
+However, these were not programmable and generally lacked the versatility and
+accuracy of modern digital computers._[_7_]
+The first modern analog computer was a _t_i_d_e_-_p_r_e_d_i_c_t_i_n_g_ _m_a_c_h_i_n_e, invented by _S_i_r
+_W_i_l_l_i_a_m_ _T_h_o_m_s_o_n in 1872. The _d_i_f_f_e_r_e_n_t_i_a_l_ _a_n_a_l_y_s_e_r, a mechanical analog
+computer designed to solve differential equations by integration using wheel-
+and-disc mechanisms, was conceptualized in 1876 by _J_a_m_e_s_ _T_h_o_m_s_o_n, the brother
+of the more famous Lord Kelvin._[_8_]
+The art of mechanical analog computing reached its zenith with the _d_i_f_f_e_r_e_n_t_i_a_l
+_a_n_a_l_y_z_e_r, built by H. L. Hazen and _V_a_n_n_e_v_a_r_ _B_u_s_h at _M_I_T starting in 1927. This
+built on the mechanical integrators of _J_a_m_e_s_ _T_h_o_m_s_o_n and the torque amplifiers
+invented by H. W. Nieman. A dozen of these devices were built before their
+obsolescence became obvious.
+******** TThhee mmooddeerrnn ccoommppuutteerr ********
+_A_l_a_n_ _T_u_r_i_n_g was the first to conceptualize the modern computer, a device that
+became known as the _U_n_i_v_e_r_s_a_l_ _T_u_r_i_n_g_ _m_a_c_h_i_n_e.
+The principle of the modern computer was first described by _c_o_m_p_u_t_e_r_ _s_c_i_e_n_t_i_s_t
+_A_l_a_n_ _T_u_r_i_n_g, who set out the idea in his seminal 1936 paper,_[_9_] On Computable
+Numbers. Turing reformulated _K_u_r_t_ _G_√_∂_d_e_l's 1931 results on the limits of proof
+and computation, replacing G√∂del's universal arithmetic-based formal language
+with the formal and simple hypothetical devices that became known as _T_u_r_i_n_g
+_m_a_c_h_i_n_e_s. He proved that some such machine would be capable of performing any
+conceivable mathematical computation if it were representable as an _a_l_g_o_r_i_t_h_m.
+He went on to prove that there was no solution to the Entscheidungsproblem by
+first showing that the _h_a_l_t_i_n_g_ _p_r_o_b_l_e_m for Turing machines is _u_n_d_e_c_i_d_a_b_l_e: in
+general, it is not possible to decide algorithmically whether a given Turing
+machine will ever halt.
+He also introduced the notion of a 'Universal Machine' (now known as a
+_U_n_i_v_e_r_s_a_l_ _T_u_r_i_n_g_ _m_a_c_h_i_n_e), with the idea that such a machine could perform the
+tasks of any other machine, or in other words, it is provably capable of
+computing anything that is computable by executing a program stored on tape,
+allowing the machine to be programmable. _V_o_n_ _N_e_u_m_a_n_n acknowledged that the
+central concept of the modern computer was due to this paper._[_1_0_] Turing
+machines are to this day a central object of study in _t_h_e_o_r_y_ _o_f_ _c_o_m_p_u_t_a_t_i_o_n.
+Except for the limitations imposed by their finite memory stores, modern
+computers are said to be _T_u_r_i_n_g_-_c_o_m_p_l_e_t_e, which is to say, they have _a_l_g_o_r_i_t_h_m
+execution capability equivalent to a _u_n_i_v_e_r_s_a_l_ _T_u_r_i_n_g_ _m_a_c_h_i_n_e.
+****** EElleeccttrroommeecchhaanniiccaall ccoommppuutteerrss ******
+Replica of _Z_u_s_e's _Z_3, the first fully automatic, digital (electromechanical)
+computer.
+Early digital computers were electromechanical - electric switches drove
+mechanical relays to perform the calculation. These devices had a low operating
+speed and were eventually superseded by much faster all-electric computers,
+originally using _v_a_c_u_u_m_ _t_u_b_e_s. The _Z_2, created by German engineer _K_o_n_r_a_d_ _Z_u_s_e
+in 1939, was one of the earliest examples of an electromechanical relay
+computer._[_1_1_]
+In 1941, Zuse followed his earlier machine up with the _Z_3, the world's first
+working _e_l_e_c_t_r_o_m_e_c_h_a_n_i_c_a_l _p_r_o_g_r_a_m_m_a_b_l_e, fully automatic digital computer._[_1_2_]
+_[_1_3_] The Z3 was built with 2000 _r_e_l_a_y_s, implementing a 22 _b_i_t _w_o_r_d_ _l_e_n_g_t_h that
+operated at a _c_l_o_c_k_ _f_r_e_q_u_e_n_c_y of about 5‚Äì10 _H_z._[_1_4_] Program code and data
+were stored on punched _f_i_l_m. It was quite similar to modern machines in some
+respects, pioneering numerous advances such as _f_l_o_a_t_i_n_g_ _p_o_i_n_t_ _n_u_m_b_e_r_s.
+Replacement of the hard-to-implement decimal system (used in _C_h_a_r_l_e_s_ _B_a_b_b_a_g_e's
+earlier design) by the simpler _b_i_n_a_r_y system meant that Zuse's machines were
+easier to build and potentially more reliable, given the technologies available
+at that time._[_1_5_] The Z3 was probably a complete _T_u_r_i_n_g_ _m_a_c_h_i_n_e.
+****** EElleeccttrroonniicc pprrooggrraammmmaabbllee ccoommppuutteerr ******
+Purely _e_l_e_c_t_r_o_n_i_c_ _c_i_r_c_u_i_t elements soon replaced their mechanical and
+electromechanical equivalents, at the same time that digital calculation
+replaced analog. The engineer _T_o_m_m_y_ _F_l_o_w_e_r_s, working at the _P_o_s_t_ _O_f_f_i_c_e
+_R_e_s_e_a_r_c_h_ _S_t_a_t_i_o_n in _D_o_l_l_i_s_ _H_i_l_l in the 1930s, began to explore the possible use
+of electronics for the _t_e_l_e_p_h_o_n_e_ _e_x_c_h_a_n_g_e. Experimental equipment that he built
+in 1934 went into operation 5 years later, converting a portion of the
+_t_e_l_e_p_h_o_n_e_ _e_x_c_h_a_n_g_e network into an electronic data processing system, using
+thousands of _v_a_c_u_u_m_ _t_u_b_e_s._[_7_] In the US, John Vincent Atanasoff and Clifford E.
+Berry of Iowa State University developed and tested the _A_t_a_n_a_s_o_f_f_‚_Ä_ì_B_e_r_r_y
+_C_o_m_p_u_t_e_r (ABC) in 1942,_[_1_6_] The first electronic digital calculating device.
+_[_1_7_] This design was also all-electronic and used about 300 vacuum tubes, with
+capacitors fixed in a mechanically rotating drum for memory._[_1_8_]
+Colossus was the first _e_l_e_c_t_r_o_n_i_c _d_i_g_i_t_a_l _p_r_o_g_r_a_m_m_a_b_l_e computing device, and
+was used to break German ciphers during World War II.
+During World War II, the British at _B_l_e_t_c_h_l_e_y_ _P_a_r_k achieved a number of
+successes at breaking encrypted German military communications. The German
+encryption machine, _E_n_i_g_m_a, was first attacked with the help of the electro-
+mechanical _b_o_m_b_e_s. To crack the more sophisticated German _L_o_r_e_n_z_ _S_Z_ _4_0_/_4_2
+machine, used for high-level Army communications, _M_a_x_ _N_e_w_m_a_n and his colleagues
+commissioned Flowers to build the Colossus._[_1_8_] He spent eleven months from
+early February 1943 designing and building the first Colossus._[_1_9_] After a
+functional test in December 1943, Colossus was shipped to Bletchley Park, where
+it was delivered on 18 January 1944_[_2_0_] and attacked its first message on 5
+February._[_1_8_]
+Colossus was the world's first _e_l_e_c_t_r_o_n_i_c _d_i_g_i_t_a_l _p_r_o_g_r_a_m_m_a_b_l_e computer._[_7_] It
+used a large number of valves (vacuum tubes). It had paper-tape input and was
+capable of being configured to perform a variety of _b_o_o_l_e_a_n_ _l_o_g_i_c_a_l operations
+on its data, but it was not _T_u_r_i_n_g_-_c_o_m_p_l_e_t_e. Nine Mk II Colossi were built (The
+Mk I was converted to a Mk II making ten machines in total). Colossus Mark I
+contained 1500 thermionic valves (tubes), but Mark II with 2400 valves, was
+both 5 times faster and simpler to operate than Mark 1, greatly speeding the
+decoding process._[_2_1_]_[_2_2_]
+_E_N_I_A_C was the first Turing-complete device,and performed ballistics trajectory
+calculations for the _U_n_i_t_e_d_ _S_t_a_t_e_s_ _A_r_m_y.
+The US-built _E_N_I_A_C (Electronic Numerical Integrator and Computer) was the first
+electronic programmable computer built in the US. Although the ENIAC was
+similar to the Colossus it was much faster and more flexible. It was
+unambiguously a Turing-complete device and could compute any problem that would
+fit into its memory. Like the Colossus, a "program" on the ENIAC was defined by
+the states of its patch cables and switches, a far cry from the _s_t_o_r_e_d_ _p_r_o_g_r_a_m
+electronic machines that came later. Once a program was written, it had to be
+mechanically set into the machine with manual resetting of plugs and switches.
+It combined the high speed of electronics with the ability to be programmed for
+many complex problems. It could add or subtract 5000 times a second, a thousand
+times faster than any other machine. It also had modules to multiply, divide,
+and square root. High speed memory was limited to 20 words (about 80 bytes).
+Built under the direction of _J_o_h_n_ _M_a_u_c_h_l_y and _J_._ _P_r_e_s_p_e_r_ _E_c_k_e_r_t at the
+University of Pennsylvania, ENIAC's development and construction lasted from
+1943 to full operation at the end of 1945. The machine was huge, weighing 30
+tons, using 200 kilowatts of electric power and contained over 18,000 vacuum
+tubes, 1,500 relays, and hundreds of thousands of resistors, capacitors, and
+inductors._[_2_3_]
+****** SSttoorreedd pprrooggrraamm ccoommppuutteerr ******
+_[_T_h_r_e_e_ _t_a_l_l_ _r_a_c_k_s_ _c_o_n_t_a_i_n_i_n_g_ _e_l_e_c_t_r_o_n_i_c_ _c_i_r_c_u_i_t_ _b_o_a_r_d_s_]
+A section of the _M_a_n_c_h_e_s_t_e_r_ _S_m_a_l_l_-_S_c_a_l_e_ _E_x_p_e_r_i_m_e_n_t_a_l_ _M_a_c_h_i_n_e, the first stored-
+program computer.
+Early computing machines had fixed programs. Changing its function required the
+re-wiring and re-structuring of the machine._[_1_8_] With the proposal of the
+stored-program computer this changed. A stored-program computer includes by
+design an _i_n_s_t_r_u_c_t_i_o_n_ _s_e_t and can store in memory a set of instructions (a
+_p_r_o_g_r_a_m) that details the _c_o_m_p_u_t_a_t_i_o_n. The theoretical basis for the stored-
+program computer was laid by _A_l_a_n_ _T_u_r_i_n_g in his 1936 paper. In 1945 Turing
+joined the _N_a_t_i_o_n_a_l_ _P_h_y_s_i_c_a_l_ _L_a_b_o_r_a_t_o_r_y and began work on developing an
+electronic stored-program digital computer. His 1945 report ‚ÄòProposed
+Electronic Calculator‚Äô was the first specification for such a device. _J_o_h_n
+_v_o_n_ _N_e_u_m_a_n_n at the _U_n_i_v_e_r_s_i_t_y_ _o_f_ _P_e_n_n_s_y_l_v_a_n_i_a, also circulated his _F_i_r_s_t_ _D_r_a_f_t
+_o_f_ _a_ _R_e_p_o_r_t_ _o_n_ _t_h_e_ _E_D_V_A_C in 1945._[_7_]
+_F_e_r_r_a_n_t_i_ _M_a_r_k_ _1, c. 1951.
+The Manchester Small-Scale Experimental Machine, nicknamed Baby, was the
+world's first _s_t_o_r_e_d_-_p_r_o_g_r_a_m_ _c_o_m_p_u_t_e_r. It was built at the _V_i_c_t_o_r_i_a_ _U_n_i_v_e_r_s_i_t_y
+_o_f_ _M_a_n_c_h_e_s_t_e_r by _F_r_e_d_e_r_i_c_ _C_._ _W_i_l_l_i_a_m_s, _T_o_m_ _K_i_l_b_u_r_n and Geoff Tootill, and ran
+its first program on 21 June 1948._[_2_4_] It was designed as a _t_e_s_t_b_e_d for the
+_W_i_l_l_i_a_m_s_ _t_u_b_e the first _r_a_n_d_o_m_-_a_c_c_e_s_s digital storage device._[_2_5_] Although the
+computer was considered "small and primitive" by the standards of its time, it
+was the first working machine to contain all of the elements essential to a
+modern electronic computer._[_2_6_] As soon as the SSEM had demonstrated the
+feasibility of its design, a project was initiated at the university to develop
+it into a more usable computer, the _M_a_n_c_h_e_s_t_e_r_ _M_a_r_k_ _1.
+The Mark 1 in turn quickly became the prototype for the _F_e_r_r_a_n_t_i_ _M_a_r_k_ _1, the
+world's first commercially available general-purpose computer._[_2_7_] Built by
+_F_e_r_r_a_n_t_i, it was delivered to the _U_n_i_v_e_r_s_i_t_y_ _o_f_ _M_a_n_c_h_e_s_t_e_r in February 1951. At
+least seven of these later machines were delivered between 1953 and 1957, one
+of them to _S_h_e_l_l labs in _A_m_s_t_e_r_d_a_m._[_2_8_] In October 1947, the directors of
+British catering company _J_._ _L_y_o_n_s_ _&_ _C_o_m_p_a_n_y decided to take an active role in
+promoting the commercial development of computers. The _L_E_O_ _I computer became
+operational in April 1951 _[_2_9_] and ran the world's first regular routine office
+computer _j_o_b.
+******** TTrraannssiissttoorr ccoommppuutteerrss ********
+A _b_i_p_o_l_a_r_ _j_u_n_c_t_i_o_n_ _t_r_a_n_s_i_s_t_o_r
+The bipolar _t_r_a_n_s_i_s_t_o_r was invented in 1947. From 1955 onwards transistors
+replaced _v_a_c_u_u_m_ _t_u_b_e_s in computer designs, giving rise to the "second
+generation" of computers. Compared to vacuum tubes, transistors have many
+advantages: they are smaller, and require less power than vacuum tubes, so give
+off less heat. Silicon junction transistors were much more reliable than vacuum
+tubes and had longer, indefinite, service life. Transistorized computers could
+contain tens of thousands of binary logic circuits in a relatively compact
+space.
+At the _U_n_i_v_e_r_s_i_t_y_ _o_f_ _M_a_n_c_h_e_s_t_e_r, a team under the leadership of _T_o_m_ _K_i_l_b_u_r_n
+designed and built a machine using the newly developed _t_r_a_n_s_i_s_t_o_r_s instead of
+valves._[_3_0_] Their first _t_r_a_n_s_i_s_t_o_r_i_s_e_d_ _c_o_m_p_u_t_e_r and the first in the world, was
+_o_p_e_r_a_t_i_o_n_a_l_ _b_y_ _1_9_5_3, and a second version was completed there in April 1955.
+However, the machine did make use of valves to generate its 125 kHz clock
+waveforms and in the circuitry to read and write on its magnetic _d_r_u_m_ _m_e_m_o_r_y,
+so it was not the first completely transistorized computer. That distinction
+goes to the _H_a_r_w_e_l_l_ _C_A_D_E_T of 1955,_[_3_1_] built by the electronics division of the
+_A_t_o_m_i_c_ _E_n_e_r_g_y_ _R_e_s_e_a_r_c_h_ _E_s_t_a_b_l_i_s_h_m_e_n_t at _H_a_r_w_e_l_l._[_3_2_]_[_3_3_]
+******** TThhee iinntteeggrraatteedd cciirrccuuiitt ********
+The next great advance in computing power came with the advent of the
+_i_n_t_e_g_r_a_t_e_d_ _c_i_r_c_u_i_t. The idea of the integrated circuit was first conceived by a
+radar scientist working for the _R_o_y_a_l_ _R_a_d_a_r_ _E_s_t_a_b_l_i_s_h_m_e_n_t of the _M_i_n_i_s_t_r_y_ _o_f
+_D_e_f_e_n_c_e, _G_e_o_f_f_r_e_y_ _W_._A_._ _D_u_m_m_e_r. Dummer presented the first public description of
+an integrated circuit at the Symposium on Progress in Quality Electronic
+Components in _W_a_s_h_i_n_g_t_o_n_,_ _D_._C_. on 7 May 1952._[_3_4_]
+_J_a_c_k_ _K_i_l_b_y's original integrated circuit.
+The first practical ICs were invented by _J_a_c_k_ _K_i_l_b_y at _T_e_x_a_s_ _I_n_s_t_r_u_m_e_n_t_s and
+_R_o_b_e_r_t_ _N_o_y_c_e at _F_a_i_r_c_h_i_l_d_ _S_e_m_i_c_o_n_d_u_c_t_o_r._[_3_5_] Kilby recorded his initial ideas
+concerning the integrated circuit in July 1958, successfully demonstrating the
+first working integrated example on 12 September 1958._[_3_6_] In his patent
+application of 6 February 1959, Kilby described his new device as ‚Äúa body of
+semiconductor material ... wherein all the components of the electronic circuit
+are completely integrated.‚Äù_[_3_7_] Noyce also came up with his own idea of an
+integrated circuit half a year later than Kilby._[_3_8_] His chip solved many
+practical problems that Kilby's had not. Produced at Fairchild Semiconductor,
+it was made of _s_i_l_i_c_o_n, whereas Kilby's chip was made of _g_e_r_m_a_n_i_u_m.
+This new development heralded an explosion in the commercial and personal use
+of computers and led to the invention of the _m_i_c_r_o_p_r_o_c_e_s_s_o_r. While the subject
+of exactly which device was the first microprocessor is contentious, partly due
+to lack of agreement on the exact definition of the term "microprocessor", it
+is largely undisputed that the first single-chip microprocessor was the Intel
+4004,_[_3_9_] designed and realized by _T_e_d_ _H_o_f_f, _F_e_d_e_r_i_c_o_ _F_a_g_g_i_n, and Stanley Mazor
+at _I_n_t_e_l._[_4_0_]
+********** PPrrooggrraammss **********
+The defining feature of modern computers which distinguishes them from all
+other machines is that they can be _p_r_o_g_r_a_m_m_e_d. That is to say that some type of
+_i_n_s_t_r_u_c_t_i_o_n_s (the _p_r_o_g_r_a_m) can be given to the computer, and it will process
+them. Modern computers based on the _v_o_n_ _N_e_u_m_a_n_n_ _a_r_c_h_i_t_e_c_t_u_r_e often have machine
+code in the form of an _i_m_p_e_r_a_t_i_v_e_ _p_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e.
+In practical terms, a computer program may be just a few instructions or extend
+to many millions of instructions, as do the programs for _w_o_r_d_ _p_r_o_c_e_s_s_o_r_s and
+_w_e_b_ _b_r_o_w_s_e_r_s for example. A typical modern computer can execute billions of
+instructions per second (_g_i_g_a_f_l_o_p_s) and rarely makes a mistake over many years
+of operation. Large computer programs consisting of several million
+instructions may take teams of _p_r_o_g_r_a_m_m_e_r_s years to write, and due to the
+complexity of the task almost certainly contain errors.
+******** SSttoorreedd pprrooggrraamm aarrcchhiitteeccttuurree ********
+Main articles: _C_o_m_p_u_t_e_r_ _p_r_o_g_r_a_m and _C_o_m_p_u_t_e_r_ _p_r_o_g_r_a_m_m_i_n_g
+Replica of the Small-Scale Experimental Machine (SSEM), the world's first
+_s_t_o_r_e_d_-_p_r_o_g_r_a_m_ _c_o_m_p_u_t_e_r, at the _M_u_s_e_u_m_ _o_f_ _S_c_i_e_n_c_e_ _a_n_d_ _I_n_d_u_s_t_r_y in Manchester,
+England
+This section applies to most common _R_A_M_ _m_a_c_h_i_n_e-based computers.
+In most cases, computer instructions are simple: add one number to another,
+move some data from one location to another, send a message to some external
+device, etc. These instructions are read from the computer's _m_e_m_o_r_y and are
+generally carried out (_e_x_e_c_u_t_e_d) in the order they were given. However, there
+are usually specialized instructions to tell the computer to jump ahead or
+backwards to some other place in the program and to carry on executing from
+there. These are called ‚Äújump‚Äù instructions (or _b_r_a_n_c_h_e_s). Furthermore,
+jump instructions may be made to happen _c_o_n_d_i_t_i_o_n_a_l_l_y so that different
+sequences of instructions may be used depending on the result of some previous
+calculation or some external event. Many computers directly support _s_u_b_r_o_u_t_i_n_e_s
+by providing a type of jump that ‚Äúremembers‚Äù the location it jumped from
+and another instruction to return to the instruction following that jump
+instruction.
+Program execution might be likened to reading a book. While a person will
+normally read each word and line in sequence, they may at times jump back to an
+earlier place in the text or skip sections that are not of interest. Similarly,
+a computer may sometimes go back and repeat the instructions in some section of
+the program over and over again until some internal condition is met. This is
+called the _f_l_o_w_ _o_f_ _c_o_n_t_r_o_l within the program and it is what allows the
+computer to perform tasks repeatedly without human intervention.
+Comparatively, a person using a pocket _c_a_l_c_u_l_a_t_o_r can perform a basic
+arithmetic operation such as adding two numbers with just a few button presses.
+But to add together all of the numbers from 1 to 1,000 would take thousands of
+button presses and a lot of time, with a near certainty of making a mistake. On
+the other hand, a computer may be programmed to do this with just a few simple
+instructions. For example:
+      mov No. 0, sum     ; set sum to 0
+      mov No. 1, num     ; set num to 1
+loop: add num, sum    ; add num to sum
+      add No. 1, num     ; add 1 to num
+      cmp num, #1000  ; compare num to 1000
+      ble loop        ; if num <= 1000, go back to 'loop'
+      halt            ; end of program. stop running
+Once told to run this program, the computer will perform the repetitive
+addition task without further human intervention. It will almost never make a
+mistake and a modern PC can complete the task in about a millionth of a second.
+_[_4_1_]
+******** BBuuggss ********
+Main article: _S_o_f_t_w_a_r_e_ _b_u_g
+The actual first computer bug, a moth found trapped on a relay of the Harvard
+Mark II computer
+Errors in computer programs are called ‚Äú_b_u_g_s.‚Äù They may be benign and not
+affect the usefulness of the program, or have only subtle effects. But in some
+cases, they may cause the program or the entire system to ‚Äú_h_a_n_g,‚Äù becoming
+unresponsive to input such as _m_o_u_s_e clicks or keystrokes, to completely fail,
+or to _c_r_a_s_h. Otherwise benign bugs may sometimes be harnessed for malicious
+intent by an unscrupulous user writing an _e_x_p_l_o_i_t, code designed to take
+advantage of a bug and disrupt a computer's proper execution. Bugs are usually
+not the fault of the computer. Since computers merely execute the instructions
+they are given, bugs are nearly always the result of programmer error or an
+oversight made in the program's design._[_4_2_]
+Admiral _G_r_a_c_e_ _H_o_p_p_e_r, an American computer scientist and developer of the first
+_c_o_m_p_i_l_e_r, is credited for having first used the term ‚Äúbugs‚Äù in computing
+after a dead moth was found shorting a relay in the _H_a_r_v_a_r_d_ _M_a_r_k_ _I_I computer in
+September 1947._[_4_3_]
+******** MMaacchhiinnee ccooddee ********
+In most computers, individual instructions are stored as _m_a_c_h_i_n_e_ _c_o_d_e with each
+instruction being given a unique number (its operation code or _o_p_c_o_d_e for
+short). The command to add two numbers together would have one opcode; the
+command to multiply them would have a different opcode, and so on. The simplest
+computers are able to perform any of a handful of different instructions; the
+more complex computers have several hundred to choose from, each with a unique
+numerical code. Since the computer's memory is able to store numbers, it can
+also store the instruction codes. This leads to the important fact that entire
+programs (which are just lists of these instructions) can be represented as
+lists of numbers and can themselves be manipulated inside the computer in the
+same way as numeric data. The fundamental concept of storing programs in the
+computer's memory alongside the data they operate on is the crux of the von
+Neumann, or stored program, architecture. In some cases, a computer might store
+some or all of its program in memory that is kept separate from the data it
+operates on. This is called the _H_a_r_v_a_r_d_ _a_r_c_h_i_t_e_c_t_u_r_e after the _H_a_r_v_a_r_d_ _M_a_r_k_ _I
+computer. Modern von Neumann computers display some traits of the Harvard
+architecture in their designs, such as in _C_P_U_ _c_a_c_h_e_s.
+While it is possible to write computer programs as long lists of numbers
+(_m_a_c_h_i_n_e_ _l_a_n_g_u_a_g_e) and while this technique was used with many early computers,
+_[_4_4_] it is extremely tedious and potentially error-prone to do so in practice,
+especially for complicated programs. Instead, each basic instruction can be
+given a short name that is indicative of its function and easy to remember ‚Äì
+a _m_n_e_m_o_n_i_c such as ADD, SUB, MULT or JUMP. These mnemonics are collectively
+known as a computer's _a_s_s_e_m_b_l_y_ _l_a_n_g_u_a_g_e. Converting programs written in
+assembly language into something the computer can actually understand (machine
+language) is usually done by a computer program called an assembler.
+A 1970s _p_u_n_c_h_e_d_ _c_a_r_d containing one line from a _F_O_R_T_R_A_N program. The card
+reads: ‚ÄúZ(1) = Y + W(1)‚Äù and is labeled ‚ÄúPROJ039‚Äù for identification
+purposes.
+******** PPrrooggrraammmmiinngg llaanngguuaaggee ********
+Main article: _P_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e
+Programming languages provide various ways of specifying programs for computers
+to run. Unlike _n_a_t_u_r_a_l_ _l_a_n_g_u_a_g_e_s, programming languages are designed to permit
+no ambiguity and to be concise. They are purely written languages and are often
+difficult to read aloud. They are generally either translated into _m_a_c_h_i_n_e_ _c_o_d_e
+by a _c_o_m_p_i_l_e_r or an _a_s_s_e_m_b_l_e_r before being run, or translated directly at run
+time by an _i_n_t_e_r_p_r_e_t_e_r. Sometimes programs are executed by a hybrid method of
+the two techniques.
+****** LLooww--lleevveell llaanngguuaaggeess ******
+Main article: _L_o_w_-_l_e_v_e_l_ _p_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e
+Machine languages and the assembly languages that represent them (collectively
+termed low-level programming languages) tend to be unique to a particular type
+of computer. For instance, an _A_R_M_ _a_r_c_h_i_t_e_c_t_u_r_e computer (such as may be found
+in a _P_D_A or a _h_a_n_d_-_h_e_l_d_ _v_i_d_e_o_g_a_m_e) cannot understand the machine language of an
+_I_n_t_e_l_ _P_e_n_t_i_u_m or the _A_M_D_ _A_t_h_l_o_n_ _6_4 computer that might be in a _P_C._[_4_5_]
+****** HHiigghheerr--lleevveell llaanngguuaaggeess ******
+Main article: _H_i_g_h_-_l_e_v_e_l_ _p_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e
+Though considerably easier than in machine language, writing long programs in
+assembly language is often difficult and is also error prone. Therefore, most
+practical programs are written in more abstract _h_i_g_h_-_l_e_v_e_l_ _p_r_o_g_r_a_m_m_i_n_g
+_l_a_n_g_u_a_g_e_s that are able to express the needs of the _p_r_o_g_r_a_m_m_e_r more
+conveniently (and thereby help reduce programmer error). High level languages
+are usually ‚Äúcompiled‚Äù into machine language (or sometimes into assembly
+language and then into machine language) using another computer program called
+a _c_o_m_p_i_l_e_r._[_4_6_] High level languages are less related to the workings of the
+target computer than assembly language, and more related to the language and
+structure of the problem(s) to be solved by the final program. It is therefore
+often possible to use different compilers to translate the same high level
+language program into the machine language of many different types of computer.
+This is part of the means by which software like video games may be made
+available for different computer architectures such as personal computers and
+various _v_i_d_e_o_ _g_a_m_e_ _c_o_n_s_o_l_e_s.
+******** PPrrooggrraamm ddeessiiggnn ********
+                        This section ddooeess nnoott _cc_ii_tt_ee aannyy _rr_ee_ff_ee_rr_ee_nn_cc_ee_ss_ _oo_rr_ _ss_oo_uu_rr_cc_ee_ss.
+_[_Q_u_e_s_t_i_o_n_ _b_o_o_k_-_n_e_w_._s_v_g_] Please help improve this section by _a_d_d_i_n_g_ _c_i_t_a_t_i_o_n_s_ _t_o
+                        _r_e_l_i_a_b_l_e_ _s_o_u_r_c_e_s. Unsourced material may be challenged
+                        and _r_e_m_o_v_e_d. (July 2012)
+Program design of small programs is relatively simple and involves the analysis
+of the problem, collection of inputs, using the programming constructs within
+languages, devising or using established procedures and algorithms, providing
+data for output devices and solutions to the problem as applicable. As problems
+become larger and more complex, features such as subprograms, modules, formal
+documentation, and new paradigms such as object-oriented programming are
+encountered. Large programs involving thousands of line of code and more
+require formal software methodologies. The task of developing large _s_o_f_t_w_a_r_e
+systems presents a significant intellectual challenge. Producing software with
+an acceptably high reliability within a predictable schedule and budget has
+historically been difficult; the academic and professional discipline of
+_s_o_f_t_w_a_r_e_ _e_n_g_i_n_e_e_r_i_n_g concentrates specifically on this challenge.
+********** CCoommppoonneennttss **********
+Main articles: _C_e_n_t_r_a_l_ _p_r_o_c_e_s_s_i_n_g_ _u_n_i_t and _M_i_c_r_o_p_r_o_c_e_s_s_o_r
+[File:Computer Components.webm]_ 
+Video demonstrating the standard components of a "slimline" computer
+A general purpose computer has four main components: the _a_r_i_t_h_m_e_t_i_c_ _l_o_g_i_c_ _u_n_i_t
+(ALU), the _c_o_n_t_r_o_l_ _u_n_i_t, the _m_e_m_o_r_y, and the input and output devices
+(collectively termed I/O). These parts are interconnected by _b_u_s_e_s, often made
+of groups of _w_i_r_e_s.
+Inside each of these parts are thousands to trillions of small _e_l_e_c_t_r_i_c_a_l
+_c_i_r_c_u_i_t_s which can be turned off or on by means of an _e_l_e_c_t_r_o_n_i_c_ _s_w_i_t_c_h. Each
+circuit represents a _b_i_t (binary digit) of information so that when the circuit
+is on it represents a ‚Äú1‚Äù, and when off it represents a ‚Äú0‚Äù (in
+positive logic representation). The circuits are arranged in _l_o_g_i_c_ _g_a_t_e_s so
+that one or more of the circuits may control the state of one or more of the
+other circuits.
+The control unit, ALU, registers, and basic I/O (and often other hardware
+closely linked with these) are collectively known as a _c_e_n_t_r_a_l_ _p_r_o_c_e_s_s_i_n_g_ _u_n_i_t
+(CPU). Early CPUs were composed of many separate components but since the mid-
+1970s CPUs have typically been constructed on a single _i_n_t_e_g_r_a_t_e_d_ _c_i_r_c_u_i_t
+called a _m_i_c_r_o_p_r_o_c_e_s_s_o_r.
+******** CCoonnttrrooll uunniitt ********
+Main articles: _C_P_U_ _d_e_s_i_g_n and _C_o_n_t_r_o_l_ _u_n_i_t
+Diagram showing how a particular _M_I_P_S_ _a_r_c_h_i_t_e_c_t_u_r_e instruction would be decoded
+by the control system
+The control unit (often called a control system or central controller) manages
+the computer's various components; it reads and interprets (decodes) the
+program instructions, transforming them into a series of control signals which
+activate other parts of the computer._[_4_7_] Control systems in advanced computers
+may change the order of some instructions so as to improve performance.
+A key component common to all CPUs is the _p_r_o_g_r_a_m_ _c_o_u_n_t_e_r, a special memory
+cell (a _r_e_g_i_s_t_e_r) that keeps track of which location in memory the next
+instruction is to be read from._[_4_8_]
+The control system's function is as follows‚Äînote that this is a simplified
+description, and some of these steps may be performed concurrently or in a
+different order depending on the type of CPU:
+   1. Read the code for the next instruction from the cell indicated by the
+      program counter.
+   2. Decode the numerical code for the instruction into a set of commands or
+      signals for each of the other systems.
+   3. Increment the program counter so it points to the next instruction.
+   4. Read whatever data the instruction requires from cells in memory (or
+      perhaps from an input device). The location of this required data is
+      typically stored within the instruction code.
+   5. Provide the necessary data to an ALU or register.
+   6. If the instruction requires an ALU or specialized hardware to complete,
+      instruct the hardware to perform the requested operation.
+   7. Write the result from the ALU back to a memory location or to a register
+      or perhaps an output device.
+   8. Jump back to step (1).
+Since the program counter is (conceptually) just another set of memory cells,
+it can be changed by calculations done in the ALU. Adding 100 to the program
+counter would cause the next instruction to be read from a place 100 locations
+further down the program. Instructions that modify the program counter are
+often known as ‚Äújumps‚Äù and allow for loops (instructions that are repeated
+by the computer) and often conditional instruction execution (both examples of
+_c_o_n_t_r_o_l_ _f_l_o_w).
+The sequence of operations that the control unit goes through to process an
+instruction is in itself like a short computer program, and indeed, in some
+more complex CPU designs, there is another yet smaller computer called a
+_m_i_c_r_o_s_e_q_u_e_n_c_e_r, which runs a _m_i_c_r_o_c_o_d_e program that causes all of these events
+to happen.
+******** AArriitthhmmeettiicc llooggiicc uunniitt ((AALLUU)) ********
+Main article: _A_r_i_t_h_m_e_t_i_c_ _l_o_g_i_c_ _u_n_i_t
+The ALU is capable of performing two classes of operations: arithmetic and
+logic._[_4_9_]
+The set of arithmetic operations that a particular ALU supports may be limited
+to addition and subtraction, or might include multiplication, division,
+_t_r_i_g_o_n_o_m_e_t_r_y functions such as sine, cosine, etc., and _s_q_u_a_r_e_ _r_o_o_t_s. Some can
+only operate on whole numbers (_i_n_t_e_g_e_r_s) whilst others use _f_l_o_a_t_i_n_g_ _p_o_i_n_t to
+represent _r_e_a_l_ _n_u_m_b_e_r_s, albeit with limited precision. However, any computer
+that is capable of performing just the simplest operations can be programmed to
+break down the more complex operations into simple steps that it can perform.
+Therefore, any computer can be programmed to perform any arithmetic
+operation‚Äîalthough it will take more time to do so if its ALU does not
+directly support the operation. An ALU may also compare numbers and return
+_b_o_o_l_e_a_n_ _t_r_u_t_h_ _v_a_l_u_e_s (true or false) depending on whether one is equal to,
+greater than or less than the other (‚Äúis 64 greater than 65?‚Äù).
+Logic operations involve _B_o_o_l_e_a_n_ _l_o_g_i_c: _A_N_D, _O_R, _X_O_R and _N_O_T. These can be
+useful for creating complicated _c_o_n_d_i_t_i_o_n_a_l_ _s_t_a_t_e_m_e_n_t_s and processing _b_o_o_l_e_a_n
+_l_o_g_i_c.
+_S_u_p_e_r_s_c_a_l_a_r computers may contain multiple ALUs, allowing them to process
+several instructions simultaneously._[_5_0_] _G_r_a_p_h_i_c_s_ _p_r_o_c_e_s_s_o_r_s and computers with
+_S_I_M_D and _M_I_M_D features often contain ALUs that can perform arithmetic on
+_v_e_c_t_o_r_s and _m_a_t_r_i_c_e_s.
+******** MMeemmoorryy ********
+Main article: _C_o_m_p_u_t_e_r_ _d_a_t_a_ _s_t_o_r_a_g_e
+_M_a_g_n_e_t_i_c_ _c_o_r_e_ _m_e_m_o_r_y was the computer memory of choice throughout the 1960s,
+until it was replaced by semiconductor memory.
+A computer's memory can be viewed as a list of cells into which numbers can be
+placed or read. Each cell has a numbered ‚Äúaddress‚Äù and can store a single
+number. The computer can be instructed to ‚Äúput the number 123 into the cell
+numbered 1357‚Äù or to ‚Äúadd the number that is in cell 1357 to the number
+that is in cell 2468 and put the answer into cell 1595.‚Äù The information
+stored in memory may represent practically anything. Letters, numbers, even
+computer instructions can be placed into memory with equal ease. Since the CPU
+does not differentiate between different types of information, it is the
+software's responsibility to give significance to what the memory sees as
+nothing but a series of numbers.
+In almost all modern computers, each memory cell is set up to store _b_i_n_a_r_y
+_n_u_m_b_e_r_s in groups of eight bits (called a _b_y_t_e). Each byte is able to represent
+256 different numbers (2^8 = 256); either from 0 to 255 or ‚àí128 to +127. To
+store larger numbers, several consecutive bytes may be used (typically, two,
+four or eight). When negative numbers are required, they are usually stored in
+_t_w_o_'_s_ _c_o_m_p_l_e_m_e_n_t notation. Other arrangements are possible, but are usually not
+seen outside of specialized applications or historical contexts. A computer can
+store any kind of information in memory if it can be represented numerically.
+Modern computers have billions or even trillions of bytes of memory.
+The CPU contains a special set of memory cells called _r_e_g_i_s_t_e_r_s that can be
+read and written to much more rapidly than the main memory area. There are
+typically between two and one hundred registers depending on the type of CPU.
+Registers are used for the most frequently needed data items to avoid having to
+access main memory every time data is needed. As data is constantly being
+worked on, reducing the need to access main memory (which is often slow
+compared to the ALU and control units) greatly increases the computer's speed.
+Computer main memory comes in two principal varieties: _r_a_n_d_o_m_-_a_c_c_e_s_s_ _m_e_m_o_r_y or
+RAM and _r_e_a_d_-_o_n_l_y_ _m_e_m_o_r_y or ROM. RAM can be read and written to anytime the CPU
+commands it, but ROM is preloaded with data and software that never changes,
+therefore the CPU can only read from it. ROM is typically used to store the
+computer's initial start-up instructions. In general, the contents of RAM are
+erased when the power to the computer is turned off, but ROM retains its data
+indefinitely. In a PC, the ROM contains a specialized program called the _B_I_O_S
+that orchestrates loading the computer's _o_p_e_r_a_t_i_n_g_ _s_y_s_t_e_m from the hard disk
+drive into RAM whenever the computer is turned on or reset. In _e_m_b_e_d_d_e_d
+_c_o_m_p_u_t_e_r_s, which frequently do not have disk drives, all of the required
+software may be stored in ROM. Software stored in ROM is often called _f_i_r_m_w_a_r_e,
+because it is notionally more like hardware than software. _F_l_a_s_h_ _m_e_m_o_r_y blurs
+the distinction between ROM and RAM, as it retains its data when turned off but
+is also rewritable. It is typically much slower than conventional ROM and RAM
+however, so its use is restricted to applications where high speed is
+unnecessary._[_5_1_]
+In more sophisticated computers there may be one or more RAM _c_a_c_h_e_ _m_e_m_o_r_i_e_s,
+which are slower than registers but faster than main memory. Generally
+computers with this sort of cache are designed to move frequently needed data
+into the cache automatically, often without the need for any intervention on
+the programmer's part.
+******** IInnppuutt//oouuttppuutt ((II//OO)) ********
+Main article: _I_n_p_u_t_/_o_u_t_p_u_t
+_H_a_r_d_ _d_i_s_k_ _d_r_i_v_e_s are common storage devices used with computers.
+I/O is the means by which a computer exchanges information with the outside
+world._[_5_2_] Devices that provide input or output to the computer are called
+_p_e_r_i_p_h_e_r_a_l_s._[_5_3_] On a typical personal computer, peripherals include input
+devices like the keyboard and _m_o_u_s_e, and output devices such as the _d_i_s_p_l_a_y and
+_p_r_i_n_t_e_r. _H_a_r_d_ _d_i_s_k_ _d_r_i_v_e_s, _f_l_o_p_p_y_ _d_i_s_k_ _d_r_i_v_e_s and _o_p_t_i_c_a_l_ _d_i_s_c_ _d_r_i_v_e_s serve as
+both input and output devices. _C_o_m_p_u_t_e_r_ _n_e_t_w_o_r_k_i_n_g is another form of I/O.
+I/O devices are often complex computers in their own right, with their own CPU
+and memory. A _g_r_a_p_h_i_c_s_ _p_r_o_c_e_s_s_i_n_g_ _u_n_i_t might contain fifty or more tiny
+computers that perform the calculations necessary to display _3_D_ _g_r_a_p_h_i_c_s.
+[_c_i_t_a_t_i_o_n_ _n_e_e_d_e_d] Modern _d_e_s_k_t_o_p_ _c_o_m_p_u_t_e_r_s contain many smaller computers that
+assist the main CPU in performing I/O.
+******** MMuullttiittaasskkiinngg ********
+Main article: _C_o_m_p_u_t_e_r_ _m_u_l_t_i_t_a_s_k_i_n_g
+While a computer may be viewed as running one gigantic program stored in its
+main memory, in some systems it is necessary to give the appearance of running
+several programs simultaneously. This is achieved by multitasking i.e. having
+the computer switch rapidly between running each program in turn._[_5_4_]
+One means by which this is done is with a special signal called an _i_n_t_e_r_r_u_p_t,
+which can periodically cause the computer to stop executing instructions where
+it was and do something else instead. By remembering where it was executing
+prior to the interrupt, the computer can return to that task later. If several
+programs are running ‚Äúat the same time,‚Äù then the interrupt generator might
+be causing several hundred interrupts per second, causing a program switch each
+time. Since modern computers typically execute instructions several orders of
+magnitude faster than human perception, it may appear that many programs are
+running at the same time even though only one is ever executing in any given
+instant. This method of multitasking is sometimes termed ‚Äútime-sharing‚Äù
+since each program is allocated a ‚Äúslice‚Äù of time in turn._[_5_5_]
+Before the era of cheap computers, the principal use for multitasking was to
+allow many people to share the same computer.
+Seemingly, multitasking would cause a computer that is switching between
+several programs to run more slowly, in direct proportion to the number of
+programs it is running, but most programs spend much of their time waiting for
+slow input/output devices to complete their tasks. If a program is waiting for
+the user to click on the mouse or press a key on the keyboard, then it will not
+take a ‚Äútime slice‚Äù until the event it is waiting for has occurred. This
+frees up time for other programs to execute so that many programs may be run
+simultaneously without unacceptable speed loss.
+******** MMuullttiipprroocceessssiinngg ********
+Main article: _M_u_l_t_i_p_r_o_c_e_s_s_i_n_g
+_C_r_a_y designed many supercomputers that used multiprocessing heavily.
+Some computers are designed to distribute their work across several CPUs in a
+multiprocessing configuration, a technique once employed only in large and
+powerful machines such as _s_u_p_e_r_c_o_m_p_u_t_e_r_s, _m_a_i_n_f_r_a_m_e_ _c_o_m_p_u_t_e_r_s and _s_e_r_v_e_r_s.
+Multiprocessor and _m_u_l_t_i_-_c_o_r_e (multiple CPUs on a single integrated circuit)
+personal and laptop computers are now widely available, and are being
+increasingly used in lower-end markets as a result.
+Supercomputers in particular often have highly unique architectures that differ
+significantly from the basic stored-program architecture and from general
+purpose computers._[_5_6_] They often feature thousands of CPUs, customized high-
+speed interconnects, and specialized computing hardware. Such designs tend to
+be useful only for specialized tasks due to the large scale of program
+organization required to successfully utilize most of the available resources
+at once. Supercomputers usually see usage in large-scale _s_i_m_u_l_a_t_i_o_n, _g_r_a_p_h_i_c_s
+_r_e_n_d_e_r_i_n_g, and _c_r_y_p_t_o_g_r_a_p_h_y applications, as well as with other so-called
+‚Äú_e_m_b_a_r_r_a_s_s_i_n_g_l_y_ _p_a_r_a_l_l_e_l‚Äù tasks.
+******** NNeettwwoorrkkiinngg aanndd tthhee IInntteerrnneett ********
+Main articles: _C_o_m_p_u_t_e_r_ _n_e_t_w_o_r_k_i_n_g and _I_n_t_e_r_n_e_t
+Visualization of a portion of the _r_o_u_t_e_s on the Internet
+Computers have been used to coordinate information between multiple locations
+since the 1950s. The U.S. military's _S_A_G_E system was the first large-scale
+example of such a system, which led to a number of special-purpose commercial
+systems such as _S_a_b_r_e._[_5_7_]
+In the 1970s, computer engineers at research institutions throughout the United
+States began to link their computers together using telecommunications
+technology. The effort was funded by ARPA (now _D_A_R_P_A), and the _c_o_m_p_u_t_e_r_ _n_e_t_w_o_r_k
+that resulted was called the _A_R_P_A_N_E_T._[_5_8_] The technologies that made the
+Arpanet possible spread and evolved.
+In time, the network spread beyond academic and military institutions and
+became known as the Internet. The emergence of networking involved a
+redefinition of the nature and boundaries of the computer. Computer operating
+systems and applications were modified to include the ability to define and
+access the resources of other computers on the network, such as peripheral
+devices, stored information, and the like, as extensions of the resources of an
+individual computer. Initially these facilities were available primarily to
+people working in high-tech environments, but in the 1990s the spread of
+applications like e-mail and the _W_o_r_l_d_ _W_i_d_e_ _W_e_b, combined with the development
+of cheap, fast networking technologies like _E_t_h_e_r_n_e_t and _A_D_S_L saw computer
+networking become almost ubiquitous. In fact, the number of computers that are
+networked is growing phenomenally. A very large proportion of personal
+computers regularly connect to the Internet to communicate and receive
+information. ‚ÄúWireless‚Äù networking, often utilizing mobile phone networks,
+has meant networking is becoming increasingly ubiquitous even in mobile
+computing environments.
+******** CCoommppuutteerr aarrcchhiitteeccttuurree ppaarraaddiiggmmss ********
+There are many types of _c_o_m_p_u_t_e_r_ _a_r_c_h_i_t_e_c_t_u_r_e_s:
+    * _Q_u_a_n_t_u_m_ _c_o_m_p_u_t_e_r vs _C_h_e_m_i_c_a_l_ _c_o_m_p_u_t_e_r
+    * _S_c_a_l_a_r_ _p_r_o_c_e_s_s_o_r vs _V_e_c_t_o_r_ _p_r_o_c_e_s_s_o_r
+    * _N_o_n_-_U_n_i_f_o_r_m_ _M_e_m_o_r_y_ _A_c_c_e_s_s (NUMA) computers
+    * _R_e_g_i_s_t_e_r_ _m_a_c_h_i_n_e vs _S_t_a_c_k_ _m_a_c_h_i_n_e
+    * _H_a_r_v_a_r_d_ _a_r_c_h_i_t_e_c_t_u_r_e vs _v_o_n_ _N_e_u_m_a_n_n_ _a_r_c_h_i_t_e_c_t_u_r_e
+    * _C_e_l_l_u_l_a_r_ _a_r_c_h_i_t_e_c_t_u_r_e
+Of all these _a_b_s_t_r_a_c_t_ _m_a_c_h_i_n_e_s, a quantum computer holds the most promise for
+revolutionizing computing._[_5_9_]
+_L_o_g_i_c_ _g_a_t_e_s are a common abstraction which can apply to most of the above
+_d_i_g_i_t_a_l or _a_n_a_l_o_g paradigms.
+The ability to store and execute lists of instructions called _p_r_o_g_r_a_m_s makes
+computers extremely versatile, distinguishing them from _c_a_l_c_u_l_a_t_o_r_s. The
+_C_h_u_r_c_h_‚_Ä_ì_T_u_r_i_n_g_ _t_h_e_s_i_s is a mathematical statement of this versatility: any
+computer with a _m_i_n_i_m_u_m_ _c_a_p_a_b_i_l_i_t_y_ _(_b_e_i_n_g_ _T_u_r_i_n_g_-_c_o_m_p_l_e_t_e_) is, in principle,
+capable of performing the same tasks that any other computer can perform.
+Therefore any type of computer (_n_e_t_b_o_o_k, _s_u_p_e_r_c_o_m_p_u_t_e_r, _c_e_l_l_u_l_a_r_ _a_u_t_o_m_a_t_o_n,
+etc.) is able to perform the same computational tasks, given enough time and
+storage capacity.
+********** MMiissccoonncceeppttiioonnss **********
+Main articles: _H_u_m_a_n_ _c_o_m_p_u_t_e_r and _H_a_r_v_a_r_d_ _C_o_m_p_u_t_e_r_s
+Women as computers in NACA High Speed Flight Station "Computer Room"
+A computer does not need to be _e_l_e_c_t_r_o_n_i_c, nor even have a _p_r_o_c_e_s_s_o_r, nor _R_A_M,
+nor even a _h_a_r_d_ _d_i_s_k. While popular usage of the word ‚Äúcomputer‚Äù is
+synonymous with a personal electronic computer, the modern_[_6_0_] definition of a
+computer is literally ‚ÄúA device that computes, especially a programmable
+[usually] electronic machine that performs high-speed mathematical or logical
+operations or that assembles, stores, correlates, or otherwise processes
+information.‚Äù_[_6_1_] Any device which processes information qualifies as a
+computer, especially if the processing is purposeful.
+******** RReeqquuiirreedd tteecchhnnoollooggyy ********
+Main article: _U_n_c_o_n_v_e_n_t_i_o_n_a_l_ _c_o_m_p_u_t_i_n_g
+Historically, computers evolved from _m_e_c_h_a_n_i_c_a_l_ _c_o_m_p_u_t_e_r_s and eventually from
+_v_a_c_u_u_m_ _t_u_b_e_s to _t_r_a_n_s_i_s_t_o_r_s. However, conceptually computational systems as
+_f_l_e_x_i_b_l_e as a personal computer can be built out of almost anything. For
+example, a computer can be made out of billiard balls (_b_i_l_l_i_a_r_d_ _b_a_l_l_ _c_o_m_p_u_t_e_r);
+an often quoted example.[_c_i_t_a_t_i_o_n_ _n_e_e_d_e_d] More realistically, modern computers
+are made out of _t_r_a_n_s_i_s_t_o_r_s made of _p_h_o_t_o_l_i_t_h_o_g_r_a_p_h_e_d _s_e_m_i_c_o_n_d_u_c_t_o_r_s.
+There is active research to make computers out of many promising new types of
+technology, such as _o_p_t_i_c_a_l_ _c_o_m_p_u_t_e_r_s, _D_N_A_ _c_o_m_p_u_t_e_r_s, _n_e_u_r_a_l_ _c_o_m_p_u_t_e_r_s, and
+_q_u_a_n_t_u_m_ _c_o_m_p_u_t_e_r_s. Most computers are universal, and are able to calculate any
+_c_o_m_p_u_t_a_b_l_e_ _f_u_n_c_t_i_o_n, and are limited only by their memory capacity and
+operating speed. However different designs of computers can give very different
+performance for particular problems; for example quantum computers can
+potentially break some modern encryption algorithms (by _q_u_a_n_t_u_m_ _f_a_c_t_o_r_i_n_g) very
+quickly.
+********** CCaappaabbiilliittiieess ooff ccoommppuutteerrss ((IInn ggeenneerraall)) **********
+1.) Ability to perform certain logical and mathematical functions.
+2.) Ability to store data and/or information.
+3.) Ability to retrieve data and/or information.
+4.) Ability to search data and/or information.
+5.) Ability to compare data and/or information.
+6.) Ability to sort data and/or information.
+7.) Ability to control errors.
+8.) Ability to check itself.
+9.) Ability to perform a set of tasks with speed and accuracy.
+10.) Ability to do a set of tasks repetitively.
+11.) Ability to provide new time dimensions.
+12.) Excellent substitute for writing instrument and paper.
+********** LLiimmiittaattiioonnss ooff ccoommppuutteerrss ((IInn ggeenneerraall)) **********
+1.) Dependence on prepared set of instructions.
+2.) Inability to derive meanings from objects.
+3.) Inability to generate data and/or information on its own.
+4.) Cannot correct wrong instructions.
+5.) Dependence on electricity.
+6.) Dependence on human interventions.
+7.) Inability to decide on its own.
+8.) Not maintenance-free.
+9.) Limited to the processing speed of its interconnected peripherals.
+10.) Limited to the available amount of storage on primary data storage
+devices.
+11.) Limited to the available amount of storage on secondary data storage
+devices.
+12.) Not a long-term investment.
+********** FFuurrtthheerr ttooppiiccss **********
+    * _G_l_o_s_s_a_r_y_ _o_f_ _c_o_m_p_u_t_e_r_s
+******** AArrttiiffiicciiaall iinntteelllliiggeennccee ********
+A computer will solve problems in exactly the way it is programmed to, without
+regard to efficiency, alternative solutions, possible shortcuts, or possible
+errors in the code. Computer programs that learn and adapt are part of the
+emerging field of _a_r_t_i_f_i_c_i_a_l_ _i_n_t_e_l_l_i_g_e_n_c_e and _m_a_c_h_i_n_e_ _l_e_a_r_n_i_n_g.
+******** HHaarrddwwaarree ********
+Main articles: _C_o_m_p_u_t_e_r_ _h_a_r_d_w_a_r_e and _P_e_r_s_o_n_a_l_ _c_o_m_p_u_t_e_r_ _h_a_r_d_w_a_r_e
+The term hardware covers all of those parts of a computer that are tangible
+objects. Circuits, displays, power supplies, cables, keyboards, printers and
+mice are all hardware.
+****** HHiissttoorryy ooff ccoommppuuttiinngg hhaarrddwwaarree ******
+Main article: _H_i_s_t_o_r_y_ _o_f_ _c_o_m_p_u_t_i_n_g_ _h_a_r_d_w_a_r_e
+                                                     _P_a_s_c_a_l_'_s_ _c_a_l_c_u_l_a_t_o_r,
+                          Calculators                _A_r_i_t_h_m_o_m_e_t_e_r, _D_i_f_f_e_r_e_n_c_e
+First generation                                     _e_n_g_i_n_e, _Q_u_e_v_e_d_o_'_s
+(mechanical/                                         _a_n_a_l_y_t_i_c_a_l_ _m_a_c_h_i_n_e_s
+electromechanical)                                   _J_a_c_q_u_a_r_d_ _l_o_o_m, _A_n_a_l_y_t_i_c_a_l
+                          Programmable devices       _e_n_g_i_n_e, _I_B_M_ _A_S_C_C_/_H_a_r_v_a_r_d
+                                                     _M_a_r_k_ _I, _H_a_r_v_a_r_d_ _M_a_r_k_ _I_I,
+                                                     _I_B_M_ _S_S_E_C, _Z_3
+                                                     _A_t_a_n_a_s_o_f_f_‚_Ä_ì_B_e_r_r_y
+                          Calculators                _C_o_m_p_u_t_e_r, _I_B_M_ _6_0_4, _U_N_I_V_A_C
+                                                     _6_0, _U_N_I_V_A_C_ _1_2_0
+                                                     _C_o_l_o_s_s_u_s, _E_N_I_A_C,
+Second generation (vacuum                            _M_a_n_c_h_e_s_t_e_r_ _S_m_a_l_l_-_S_c_a_l_e
+tubes)                                               _E_x_p_e_r_i_m_e_n_t_a_l_ _M_a_c_h_i_n_e,
+                          _P_r_o_g_r_a_m_m_a_b_l_e_ _d_e_v_i_c_e_s       _E_D_S_A_C, _M_a_n_c_h_e_s_t_e_r_ _M_a_r_k_ _1,
+                                                     _F_e_r_r_a_n_t_i_ _P_e_g_a_s_u_s, _F_e_r_r_a_n_t_i
+                                                     _M_e_r_c_u_r_y, _C_S_I_R_A_C, _E_D_V_A_C,
+                                                     _U_N_I_V_A_C_ _I, _I_B_M_ _7_0_1, _I_B_M
+                                                     _7_0_2, _I_B_M_ _6_5_0, _Z_2_2
+Third generation          _M_a_i_n_f_r_a_m_e_s                 _I_B_M_ _7_0_9_0, _I_B_M_ _7_0_8_0, _I_B_M
+(discrete transistors and                            _S_y_s_t_e_m_/_3_6_0, _B_U_N_C_H
+SSI, MSI, LSI _i_n_t_e_g_r_a_t_e_d  _M_i_n_i_c_o_m_p_u_t_e_r               _P_D_P_-_8, _P_D_P_-_1_1, _I_B_M_ _S_y_s_t_e_m_/
+_c_i_r_c_u_i_t_s)                                            _3_2, _I_B_M_ _S_y_s_t_e_m_/_3_6
+                          Minicomputer               _V_A_X, _I_B_M_ _S_y_s_t_e_m_ _i
+                          _4_-_b_i_t microcomputer        _I_n_t_e_l_ _4_0_0_4, _I_n_t_e_l_ _4_0_4_0
+                                                     _I_n_t_e_l_ _8_0_0_8, _I_n_t_e_l_ _8_0_8_0,
+                          _8_-_b_i_t microcomputer        _M_o_t_o_r_o_l_a_ _6_8_0_0, _M_o_t_o_r_o_l_a
+                                                     _6_8_0_9, _M_O_S_ _T_e_c_h_n_o_l_o_g_y_ _6_5_0_2,
+                                                     _Z_i_l_o_g_ _Z_8_0
+                          _1_6_-_b_i_t microcomputer       _I_n_t_e_l_ _8_0_8_8, _Z_i_l_o_g_ _Z_8_0_0_0,
+                                                     _W_D_C_ _6_5_8_1_6_/_6_5_8_0_2
+                          _3_2_-_b_i_t microcomputer       _I_n_t_e_l_ _8_0_3_8_6, _P_e_n_t_i_u_m,
+Fourth generation (VLSI                              _M_o_t_o_r_o_l_a_ _6_8_0_0_0, _A_R_M
+integrated circuits)                                 _A_l_p_h_a, _M_I_P_S, _P_A_-_R_I_S_C,
+                          _6_4_-_b_i_t microcomputer_[_6_2_]   _P_o_w_e_r_P_C, _S_P_A_R_C, _x_8_6_-_6_4,
+                                                     _A_R_M_v_8_-_A
+                          _E_m_b_e_d_d_e_d_ _c_o_m_p_u_t_e_r          _I_n_t_e_l_ _8_0_4_8, _I_n_t_e_l_ _8_0_5_1
+                                                     _D_e_s_k_t_o_p_ _c_o_m_p_u_t_e_r, _H_o_m_e
+                                                     _c_o_m_p_u_t_e_r, _L_a_p_t_o_p_ _c_o_m_p_u_t_e_r,
+                          Personal computer          _P_e_r_s_o_n_a_l_ _d_i_g_i_t_a_l_ _a_s_s_i_s_t_a_n_t
+                                                     (PDA), _P_o_r_t_a_b_l_e_ _c_o_m_p_u_t_e_r,
+                                                     _T_a_b_l_e_t_ _P_C, _W_e_a_r_a_b_l_e
+                                                     _c_o_m_p_u_t_e_r
+                          _Q_u_a_n_t_u_m_ _c_o_m_p_u_t_e_r, _C_h_e_m_i_c_a_l
+Theoretical/experimental  _c_o_m_p_u_t_e_r, _D_N_A_ _c_o_m_p_u_t_i_n_g,
+                          _O_p_t_i_c_a_l_ _c_o_m_p_u_t_e_r,
+                          _S_p_i_n_t_r_o_n_i_c_s_ _b_a_s_e_d_ _c_o_m_p_u_t_e_r
+****** OOtthheerr hhaarrddwwaarree ttooppiiccss ******
+                                               _M_o_u_s_e, _k_e_y_b_o_a_r_d, _j_o_y_s_t_i_c_k, _i_m_a_g_e
+                          Input                _s_c_a_n_n_e_r, _w_e_b_c_a_m, _g_r_a_p_h_i_c_s
+_P_e_r_i_p_h_e_r_a_l_ _d_e_v_i_c_e (_i_n_p_u_t_/                      _t_a_b_l_e_t, _m_i_c_r_o_p_h_o_n_e
+_o_u_t_p_u_t)                   Output               _M_o_n_i_t_o_r, _p_r_i_n_t_e_r, _l_o_u_d_s_p_e_a_k_e_r
+                                               _F_l_o_p_p_y_ _d_i_s_k_ _d_r_i_v_e, _h_a_r_d_ _d_i_s_k
+                          Both                 _d_r_i_v_e, _o_p_t_i_c_a_l_ _d_i_s_c drive,
+                                               _t_e_l_e_p_r_i_n_t_e_r
+                          Short range          _R_S_-_2_3_2, _S_C_S_I, _P_C_I, _U_S_B
+_C_o_m_p_u_t_e_r_ _b_u_s_s_e_s           Long range (_c_o_m_p_u_t_e_r _E_t_h_e_r_n_e_t, _A_T_M, _F_D_D_I
+                          _n_e_t_w_o_r_k_i_n_g)
+******** SSooffttwwaarree ********
+Main article: _C_o_m_p_u_t_e_r_ _s_o_f_t_w_a_r_e
+Software refers to parts of the computer which do not have a material form,
+such as programs, data, protocols, etc. When software is stored in hardware
+that cannot easily be modified (such as _B_I_O_S _R_O_M in an _I_B_M_ _P_C_ _c_o_m_p_a_t_i_b_l_e), it
+is sometimes called ‚Äúfirmware.‚Äù
+                                           _U_N_I_X_ _S_y_s_t_e_m_ _V, _I_B_M_ _A_I_X, _H_P_-_U_X,
+                 _U_n_i_x and _B_S_D              _S_o_l_a_r_i_s (_S_u_n_O_S), _I_R_I_X, _L_i_s_t_ _o_f
+                                           _B_S_D_ _o_p_e_r_a_t_i_n_g_ _s_y_s_t_e_m_s
+                                           _L_i_s_t_ _o_f_ _L_i_n_u_x_ _d_i_s_t_r_i_b_u_t_i_o_n_s,
+                 _G_N_U/_L_i_n_u_x                 _C_o_m_p_a_r_i_s_o_n_ _o_f_ _L_i_n_u_x
+                                           _d_i_s_t_r_i_b_u_t_i_o_n_s
+                                           _W_i_n_d_o_w_s_ _9_5, _W_i_n_d_o_w_s_ _9_8, _W_i_n_d_o_w_s
+                 _M_i_c_r_o_s_o_f_t_ _W_i_n_d_o_w_s         _N_T, _W_i_n_d_o_w_s_ _2_0_0_0, _W_i_n_d_o_w_s_ _M_e,
+_O_p_e_r_a_t_i_n_g_ _s_y_s_t_e_m                           _W_i_n_d_o_w_s_ _X_P, _W_i_n_d_o_w_s_ _V_i_s_t_a,
+                                           _W_i_n_d_o_w_s_ _7, _W_i_n_d_o_w_s_ _8
+                 _D_O_S                       _8_6_-_D_O_S (QDOS), _I_B_M_ _P_C_ _D_O_S, _M_S_-
+                                           _D_O_S, _D_R_-_D_O_S, _F_r_e_e_D_O_S
+                 _M_a_c_ _O_S                    _M_a_c_ _O_S_ _c_l_a_s_s_i_c, _M_a_c_ _O_S_ _X
+                 _E_m_b_e_d_d_e_d and _r_e_a_l_-_t_i_m_e    _L_i_s_t_ _o_f_ _e_m_b_e_d_d_e_d_ _o_p_e_r_a_t_i_n_g
+                                           _s_y_s_t_e_m_s
+                 Experimental              _A_m_o_e_b_a, _O_b_e_r_o_n/_B_l_u_e_b_o_t_t_l_e, _P_l_a_n
+                                           _9_ _f_r_o_m_ _B_e_l_l_ _L_a_b_s
+                 _M_u_l_t_i_m_e_d_i_a                _D_i_r_e_c_t_X, _O_p_e_n_G_L, _O_p_e_n_A_L
+_L_i_b_r_a_r_y          Programming library       _C_ _s_t_a_n_d_a_r_d_ _l_i_b_r_a_r_y, _S_t_a_n_d_a_r_d
+                                           _T_e_m_p_l_a_t_e_ _L_i_b_r_a_r_y
+_D_a_t_a             _P_r_o_t_o_c_o_l                  _T_C_P_/_I_P, _K_e_r_m_i_t, _F_T_P, _H_T_T_P, _S_M_T_P
+                 _F_i_l_e_ _f_o_r_m_a_t               _H_T_M_L, _X_M_L, _J_P_E_G, _M_P_E_G, _P_N_G
+                 _G_r_a_p_h_i_c_a_l_ _u_s_e_r_ _i_n_t_e_r_f_a_c_e  _M_i_c_r_o_s_o_f_t_ _W_i_n_d_o_w_s, _G_N_O_M_E, _K_D_E,
+_U_s_e_r_ _i_n_t_e_r_f_a_c_e   (_W_I_M_P)                    _Q_N_X_ _P_h_o_t_o_n, _C_D_E, _G_E_M, _A_q_u_a
+                 _T_e_x_t_-_b_a_s_e_d_ _u_s_e_r_ _i_n_t_e_r_f_a_c_e _C_o_m_m_a_n_d_-_l_i_n_e_ _i_n_t_e_r_f_a_c_e, _T_e_x_t
+                                           _u_s_e_r_ _i_n_t_e_r_f_a_c_e
+                                           _W_o_r_d_ _p_r_o_c_e_s_s_i_n_g, _D_e_s_k_t_o_p
+                                           _p_u_b_l_i_s_h_i_n_g, _P_r_e_s_e_n_t_a_t_i_o_n
+                 _O_f_f_i_c_e_ _s_u_i_t_e              _p_r_o_g_r_a_m, _D_a_t_a_b_a_s_e_ _m_a_n_a_g_e_m_e_n_t
+                                           _s_y_s_t_e_m, Scheduling & Time
+                                           management, _S_p_r_e_a_d_s_h_e_e_t,
+                                           _A_c_c_o_u_n_t_i_n_g_ _s_o_f_t_w_a_r_e
+                                           _B_r_o_w_s_e_r, _E_-_m_a_i_l_ _c_l_i_e_n_t, _W_e_b
+                 Internet Access           _s_e_r_v_e_r, _M_a_i_l_ _t_r_a_n_s_f_e_r_ _a_g_e_n_t,
+                                           _I_n_s_t_a_n_t_ _m_e_s_s_a_g_i_n_g
+                                           _C_o_m_p_u_t_e_r_-_a_i_d_e_d_ _d_e_s_i_g_n,
+                                           _C_o_m_p_u_t_e_r_-_a_i_d_e_d_ _m_a_n_u_f_a_c_t_u_r_i_n_g,
+                 Design and manufacturing  Plant management, Robotic
+                                           manufacturing, Supply chain
+                                           management
+                                           _R_a_s_t_e_r_ _g_r_a_p_h_i_c_s_ _e_d_i_t_o_r, _V_e_c_t_o_r
+                                           _g_r_a_p_h_i_c_s_ _e_d_i_t_o_r, _3_D_ _m_o_d_e_l_e_r,
+                 _G_r_a_p_h_i_c_s                  _A_n_i_m_a_t_i_o_n_ _e_d_i_t_o_r, _3_D_ _c_o_m_p_u_t_e_r
+                                           _g_r_a_p_h_i_c_s, _V_i_d_e_o_ _e_d_i_t_i_n_g, _I_m_a_g_e
+                                           _p_r_o_c_e_s_s_i_n_g
+                                           _D_i_g_i_t_a_l_ _a_u_d_i_o_ _e_d_i_t_o_r, _A_u_d_i_o
+_A_p_p_l_i_c_a_t_i_o_n      _A_u_d_i_o                     _p_l_a_y_b_a_c_k, Mixing, _A_u_d_i_o
+                                           _s_y_n_t_h_e_s_i_s, _C_o_m_p_u_t_e_r_ _m_u_s_i_c
+                                           _C_o_m_p_i_l_e_r, _A_s_s_e_m_b_l_e_r,
+                                           _I_n_t_e_r_p_r_e_t_e_r, _D_e_b_u_g_g_e_r, _T_e_x_t
+                                           _e_d_i_t_o_r, _I_n_t_e_g_r_a_t_e_d_ _d_e_v_e_l_o_p_m_e_n_t
+                 _S_o_f_t_w_a_r_e_ _e_n_g_i_n_e_e_r_i_n_g      _e_n_v_i_r_o_n_m_e_n_t, _S_o_f_t_w_a_r_e
+                                           _p_e_r_f_o_r_m_a_n_c_e_ _a_n_a_l_y_s_i_s, _R_e_v_i_s_i_o_n
+                                           _c_o_n_t_r_o_l, _S_o_f_t_w_a_r_e_ _c_o_n_f_i_g_u_r_a_t_i_o_n
+                                           _m_a_n_a_g_e_m_e_n_t
+                 Educational               _E_d_u_t_a_i_n_m_e_n_t, _E_d_u_c_a_t_i_o_n_a_l_ _g_a_m_e,
+                                           _S_e_r_i_o_u_s_ _g_a_m_e, _F_l_i_g_h_t_ _s_i_m_u_l_a_t_o_r
+                                           _S_t_r_a_t_e_g_y, Arcade, _P_u_z_z_l_e,
+                                           Simulation, _F_i_r_s_t_-_p_e_r_s_o_n
+                 _G_a_m_e_s                     _s_h_o_o_t_e_r, _P_l_a_t_f_o_r_m, _M_a_s_s_i_v_e_l_y
+                                           _m_u_l_t_i_p_l_a_y_e_r, _I_n_t_e_r_a_c_t_i_v_e
+                                           _f_i_c_t_i_o_n
+                                           _A_r_t_i_f_i_c_i_a_l_ _i_n_t_e_l_l_i_g_e_n_c_e,
+                                           _A_n_t_i_v_i_r_u_s_ _s_o_f_t_w_a_r_e, _M_a_l_w_a_r_e
+                 Misc                      _s_c_a_n_n_e_r, _I_n_s_t_a_l_l_e_r/_P_a_c_k_a_g_e
+                                           _m_a_n_a_g_e_m_e_n_t_ _s_y_s_t_e_m_s, _F_i_l_e
+                                           _m_a_n_a_g_e_r
+******** LLaanngguuaaggeess ********
+There are thousands of different programming languages‚Äîsome intended to be
+general purpose, others useful only for highly specialized applications.
+                             _PP_rr_oo_gg_rr_aa_mm_mm_ii_nn_gg_ _ll_aa_nn_gg_uu_aa_gg_ee_ss
+                                     _T_i_m_e_l_i_n_e_ _o_f_ _p_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e_s, _L_i_s_t_ _o_f
+                                     _p_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e_s_ _b_y_ _c_a_t_e_g_o_r_y,
+Lists of programming languages       _G_e_n_e_r_a_t_i_o_n_a_l_ _l_i_s_t_ _o_f_ _p_r_o_g_r_a_m_m_i_n_g
+                                     _l_a_n_g_u_a_g_e_s, _L_i_s_t_ _o_f_ _p_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e_s,
+                                     _N_o_n_-_E_n_g_l_i_s_h_-_b_a_s_e_d_ _p_r_o_g_r_a_m_m_i_n_g_ _l_a_n_g_u_a_g_e_s
+Commonly used _a_s_s_e_m_b_l_y_ _l_a_n_g_u_a_g_e_s     _A_R_M, _M_I_P_S, _x_8_6
+Commonly used _h_i_g_h_-_l_e_v_e_l_ _p_r_o_g_r_a_m_m_i_n_g _A_d_a, _B_A_S_I_C, _C, _C_+_+, _C_#, _C_O_B_O_L, _F_o_r_t_r_a_n,
+_l_a_n_g_u_a_g_e_s                            _J_a_v_a, _L_i_s_p, _P_a_s_c_a_l, _O_b_j_e_c_t_ _P_a_s_c_a_l
+Commonly used _s_c_r_i_p_t_i_n_g_ _l_a_n_g_u_a_g_e_s    _B_o_u_r_n_e_ _s_c_r_i_p_t, _J_a_v_a_S_c_r_i_p_t, _P_y_t_h_o_n, _R_u_b_y,
+                                     _P_H_P, _P_e_r_l
+******** PPrrooffeessssiioonnss aanndd oorrggaanniizzaattiioonnss ********
+As the use of computers has spread throughout society, there are an increasing
+number of careers involving computers.
+                        _CC_oo_mm_pp_uu_tt_ee_rr_--_rr_ee_ll_aa_tt_ee_dd_ _pp_rr_oo_ff_ee_ss_ss_ii_oo_nn_ss
+                 _E_l_e_c_t_r_i_c_a_l_ _e_n_g_i_n_e_e_r_i_n_g, _E_l_e_c_t_r_o_n_i_c_ _e_n_g_i_n_e_e_r_i_n_g, _C_o_m_p_u_t_e_r
+Hardware-related _e_n_g_i_n_e_e_r_i_n_g, _T_e_l_e_c_o_m_m_u_n_i_c_a_t_i_o_n_s_ _e_n_g_i_n_e_e_r_i_n_g, _O_p_t_i_c_a_l
+                 _e_n_g_i_n_e_e_r_i_n_g, _N_a_n_o_e_n_g_i_n_e_e_r_i_n_g
+                 _C_o_m_p_u_t_e_r_ _s_c_i_e_n_c_e, _C_o_m_p_u_t_e_r_ _e_n_g_i_n_e_e_r_i_n_g, _D_e_s_k_t_o_p_ _p_u_b_l_i_s_h_i_n_g,
+Software-related _H_u_m_a_n_‚_Ä_ì_c_o_m_p_u_t_e_r_ _i_n_t_e_r_a_c_t_i_o_n, Information technology,
+                 _I_n_f_o_r_m_a_t_i_o_n_ _s_y_s_t_e_m_s, _C_o_m_p_u_t_a_t_i_o_n_a_l_ _s_c_i_e_n_c_e, _S_o_f_t_w_a_r_e
+                 _e_n_g_i_n_e_e_r_i_n_g, _V_i_d_e_o_ _g_a_m_e_ _i_n_d_u_s_t_r_y, _W_e_b_ _d_e_s_i_g_n
+The need for computers to work well together and to be able to exchange
+information has spawned the need for many standards organizations, clubs and
+societies of both a formal and informal nature.
+                                _OO_rr_gg_aa_nn_ii_zz_aa_tt_ii_oo_nn_ss
+Standards groups                 _A_N_S_I, _I_E_C, _I_E_E_E, _I_E_T_F, _I_S_O, _W_3_C
+Professional societies           _A_C_M, _A_I_S, _I_E_T, _I_F_I_P, _B_C_S
+_F_r_e_e/_o_p_e_n_ _s_o_u_r_c_e_ _s_o_f_t_w_a_r_e groups _F_r_e_e_ _S_o_f_t_w_a_r_e_ _F_o_u_n_d_a_t_i_o_n, _M_o_z_i_l_l_a_ _F_o_u_n_d_a_t_i_o_n,
+                                 _A_p_a_c_h_e_ _S_o_f_t_w_a_r_e_ _F_o_u_n_d_a_t_i_o_n
+********** DDeeggrraaddaattiioonn **********
+_R_a_s_b_e_r_r_y_ _c_r_a_z_y_ _a_n_t_s have been known to consume the insides of electrical wiring
+in computers; preferring _D_C to _A_C currents. This behavior is not well
+understood by scientists._[_6_3_]
+********** SSeeee aallssoo **********
+_[_P_o_r_t_a_l_ _i_c_o_n_] _I_n_f_o_r_m_a_t_i_o_n_ _t_e_c_h_n_o_l_o_g_y_ _p_o_r_t_a_l
+    * _C_o_m_p_u_t_a_b_i_l_i_t_y_ _t_h_e_o_r_y
+    * _C_o_m_p_u_t_e_r_ _i_n_s_e_c_u_r_i_t_y
+    * _C_o_m_p_u_t_e_r_ _s_e_c_u_r_i_t_y
+    * _L_i_s_t_ _o_f_ _c_o_m_p_u_t_e_r_ _t_e_r_m_ _e_t_y_m_o_l_o_g_i_e_s
+    * _L_i_s_t_ _o_f_ _f_i_c_t_i_o_n_a_l_ _c_o_m_p_u_t_e_r_s
+    * _P_u_l_s_e_ _c_o_m_p_u_t_a_t_i_o_n
+    * _T_O_P_5_0_0 (list of most powerful computers)
+********** NNootteess **********
+   1. _^^ In 1946, _E_N_I_A_C required an estimated 174 kW. By comparison, a modern
+      laptop computer may use around 30 W; nearly six thousand times less.
+      _"_A_p_p_r_o_x_i_m_a_t_e_ _D_e_s_k_t_o_p_ _&_ _N_o_t_e_b_o_o_k_ _P_o_w_e_r_ _U_s_a_g_e_". University of Pennsylvania.
+      Retrieved 20 June 2009. 
+   2. _^^ Early computers such as _C_o_l_o_s_s_u_s and _E_N_I_A_C were able to process between
+      5 and 100 operations per second. A modern ‚Äú_c_o_m_m_o_d_i_t_y‚Äù _m_i_c_r_o_p_r_o_c_e_s_s_o_r
+      (as of 2007) can process billions of operations per second, and many of
+      these operations are more complicated and useful than early computer
+      operations. _"_I_n_t_e_l_ _C_o_r_e_2_ _D_u_o_ _M_o_b_i_l_e_ _P_r_o_c_e_s_s_o_r_:_ _F_e_a_t_u_r_e_s_". Intel
+      Corporation. Retrieved 20 June 2009. 
+   3. _^^ _c_o_m_p_u_t_e_r_,_ _n_.. Oxford English Dictionary (2 ed.). Oxford University
+      Press. 1989. Retrieved 10 April 2009. 
+   4. _^^ Halacy, Daniel Stephen (1970). Charles Babbage, Father of the Computer.
+      Crowell-Collier Press. _I_S_B_N _0_-_0_2_-_7_4_1_3_7_0_-_5. 
+   5. _^^ _"_B_a_b_b_a_g_e_". Online stuff. Science Museum. 2007-01-19. Retrieved 2012-08-
+      01. 
+   6. _^^ _"_L_e_t_'_s_ _b_u_i_l_d_ _B_a_b_b_a_g_e_'_s_ _u_l_t_i_m_a_t_e_ _m_e_c_h_a_n_i_c_a_l_ _c_o_m_p_u_t_e_r_". opinion. New
+      Scientist. 23 December 2010. Retrieved 2012-08-01. 
+   7. ^ _aa _bb _cc _dd _"_T_h_e_ _M_o_d_e_r_n_ _H_i_s_t_o_r_y_ _o_f_ _C_o_m_p_u_t_i_n_g_". Stanford Encyclopedia of
+      Philosophy. 
+   8. _^^ Ray Girvan, _"_T_h_e_ _r_e_v_e_a_l_e_d_ _g_r_a_c_e_ _o_f_ _t_h_e_ _m_e_c_h_a_n_i_s_m_:_ _c_o_m_p_u_t_i_n_g_ _a_f_t_e_r
+      _B_a_b_b_a_g_e_", Scientific Computing World, May/June 2003
+   9. _^^ _P_r_o_c_e_e_d_i_n_g_s_ _o_f_ _t_h_e_ _L_o_n_d_o_n_ _M_a_t_h_e_m_a_t_i_c_a_l_ _S_o_c_i_e_t_y
+  10. _^^ "von Neumann ... firmly emphasized to me, and to others I am sure, that
+      the fundamental conception is owing to Turing‚Äîinsofar as not
+      anticipated by Babbage, Lovelace and others." Letter by _S_t_a_n_l_e_y_ _F_r_a_n_k_e_l
+      to _B_r_i_a_n_ _R_a_n_d_e_l_l, 1972, quoted in _J_a_c_k_ _C_o_p_e_l_a_n_d (2004) The Essential
+      Turing, p22.
+  11. _^^ Zuse, Horst. _"_P_a_r_t_ _4_:_ _K_o_n_r_a_d_ _Z_u_s_e_'_s_ _Z_1_ _a_n_d_ _Z_3_ _C_o_m_p_u_t_e_r_s_". The Life and
+      Work of Konrad Zuse. EPE Online. Archived from _t_h_e_ _o_r_i_g_i_n_a_l on 2008-06-
+      01. Retrieved 2008-06-17. 
+  12. _^^ _Z_u_s_e_,_ _K_o_n_r_a_d (2010) [1984], The Computer ‚Äì My Life Translated by
+      McKenna, Patricia and Ross, J. Andrew from: Der Computer, mein Lebenswerk
+      (1984) (in English translated from German), Berlin/Heidelberg: Springer-
+      Verlag, _I_S_B_N _9_7_8_-_3_-_6_4_2_-_0_8_1_5_1_-_4 
+  13. _^^ _"_A_ _C_o_m_p_u_t_e_r_ _P_i_o_n_e_e_r_ _R_e_d_i_s_c_o_v_e_r_e_d_,_ _5_0_ _Y_e_a_r_s_ _O_n_". The New York Times.
+      April 20, 1994. 
+  14. _^^ _Z_u_s_e_,_ _K_o_n_r_a_d (1993). Der Computer. Mein Lebenswerk. (in German) (3rd
+      ed.). Berlin: Springer-Verlag. p. 55. _I_S_B_N _9_7_8_-_3_-_5_4_0_-_5_6_2_9_2_-_4. 
+  15. _^^ _C_r_a_s_h_!_ _T_h_e_ _S_t_o_r_y_ _o_f_ _I_T_:_ _Z_u_s_e at the _W_a_y_b_a_c_k_ _M_a_c_h_i_n_e (archived March 18,
+      2008)
+  16. _^^ January 15, 1941 notice in the Des Moines Register.
+  17. _^^ Arthur W. Burks. The First Electronic Computer. 
+  18. ^ _aa _bb _cc _dd Copeland, Jack (2006), Colossus: The Secrets of Bletchley
+      Park's Codebreaking Computers, Oxford: _O_x_f_o_r_d_ _U_n_i_v_e_r_s_i_t_y_ _P_r_e_s_s,
+      pp. 101‚Äì115, _I_S_B_N _0_-_1_9_-_2_8_4_0_5_5_-_X 
+  19. _^^ _"_B_l_e_t_c_h_l_e_y_'_s_ _c_o_d_e_-_c_r_a_c_k_i_n_g_ _C_o_l_o_s_s_u_s_", BBC News, 2 February 2010,
+      retrieved 19 October 2012 
+  20. _^^ The Colossus Rebuild _h_t_t_p_:_/_/_w_w_w_._t_n_m_o_c_._o_r_g_/_c_o_l_o_s_s_u_s_-_r_e_b_u_i_l_d_-_s_t_o_r_y
+  21. _^^ _R_a_n_d_e_l_l_,_ _B_r_i_a_n; Fensom, Harry; Milne, Frank A. (15 March 1995),
+      _"_O_b_i_t_u_a_r_y_:_ _A_l_l_e_n_ _C_o_o_m_b_s_", The Independent, retrieved 18 October 2012 
+  22. _^^ Fensom, Jim (8 November 2010), _H_a_r_r_y_ _F_e_n_s_o_m_ _o_b_i_t_u_a_r_y, retrieved 17
+      October 2012 
+  23. _^^ _G_e_n_e_r_a_t_i_o_n_s_ _o_f_ _C_o_m_p_u_t_e_r_s
+  24. _^^ Enticknap, Nicholas (Summer 1998), _"_C_o_m_p_u_t_i_n_g_'_s_ _G_o_l_d_e_n_ _J_u_b_i_l_e_e_",
+      Resurrection (The Computer Conservation Society) (20), _I_S_S_N _0_9_5_8_-_7_4_0_3,
+      retrieved 19 April 2008 
+  25. _^^ _"_E_a_r_l_y_ _c_o_m_p_u_t_e_r_s_ _a_t_ _M_a_n_c_h_e_s_t_e_r_ _U_n_i_v_e_r_s_i_t_y_", Resurrection (The Computer
+      Conservation Society) 11 (4), Summer 1992, _I_S_S_N _0_9_5_8_-_7_4_0_3, retrieved 7
+      July 2010 
+  26. _^^ _E_a_r_l_y_ _E_l_e_c_t_r_o_n_i_c_ _C_o_m_p_u_t_e_r_s_ _(_1_9_4_6_‚_Ä_ì_5_1_), University of Manchester,
+      retrieved 16 November 2008 
+  27. _^^ Napper, R. B. E., _I_n_t_r_o_d_u_c_t_i_o_n_ _t_o_ _t_h_e_ _M_a_r_k_ _1, The University of
+      Manchester, retrieved 4 November 2008 
+  28. _^^ _C_o_m_p_u_t_e_r_ _C_o_n_s_e_r_v_a_t_i_o_n_ _S_o_c_i_e_t_y, _O_u_r_ _C_o_m_p_u_t_e_r_ _H_e_r_i_t_a_g_e_ _P_i_l_o_t_ _S_t_u_d_y_:
+      _D_e_l_i_v_e_r_i_e_s_ _o_f_ _F_e_r_r_a_n_t_i_ _M_a_r_k_ _I_ _a_n_d_ _M_a_r_k_ _I_ _S_t_a_r_ _c_o_m_p_u_t_e_r_s_., retrieved 9
+      January 2010 
+  29. _^^ Lavington, Simon. _"_A_ _b_r_i_e_f_ _h_i_s_t_o_r_y_ _o_f_ _B_r_i_t_i_s_h_ _c_o_m_p_u_t_e_r_s_:_ _t_h_e_ _f_i_r_s_t_ _2_5
+      _y_e_a_r_s_ _(_1_9_4_8_‚_Ä_ì_1_9_7_3_)_._". _B_r_i_t_i_s_h_ _C_o_m_p_u_t_e_r_ _S_o_c_i_e_t_y. Retrieved 10 January
+      2010. 
+  30. _^^ Lavington, Simon (1998), A History of Manchester Computers (2 ed.),
+      Swindon: The British Computer Society, pp. 34‚Äì35 
+  31. _^^ Cooke-Yarborough, E. H. (June 1998), _"_S_o_m_e_ _e_a_r_l_y_ _t_r_a_n_s_i_s_t_o_r
+      _a_p_p_l_i_c_a_t_i_o_n_s_ _i_n_ _t_h_e_ _U_K_", Engineering and Science Education Journal (IEE)
+      77 (3): 100‚Äì106, _d_o_i:_1_0_._1_0_4_9_/_e_s_e_j_:_1_9_9_8_0_3_0_1, _I_S_S_N _0_9_6_3_-_7_3_4_6, retrieved 7
+      June 2009  (subscription required)
+  32. _^^ Cooke-Yarborough, E.H. (1957). Introduction to Transistor Circuits.
+      Edinburgh: Oliver and Boyd. p. 139. 
+  33. _^^ Cooke-Yarborough, E.H. (June 1998). _"_S_o_m_e_ _e_a_r_l_y_ _t_r_a_n_s_i_s_t_o_r_ _a_p_p_l_i_c_a_t_i_o_n_s
+      _i_n_ _t_h_e_ _U_K_". Engineering and Science Education Journal (London, UK: IEE) 77
+      (3): 100‚Äì106. _d_o_i:_1_0_._1_0_4_9_/_e_s_e_j_:_1_9_9_8_0_3_0_1. _I_S_S_N _0_9_6_3_-_7_3_4_6. Retrieved
+      2009-06-07. 
+  34. _^^ _"_T_h_e_ _H_a_p_l_e_s_s_ _T_a_l_e_ _o_f_ _G_e_o_f_f_r_e_y_ _D_u_m_m_e_r_", (n.d.), (HTML), Electronic
+      Product News, accessed 8 July 2008.
+  35. _^^ _K_i_l_b_y_,_ _J_a_c_k (2000), _N_o_b_e_l_ _l_e_c_t_u_r_e, Stockholm: Nobel Foundation,
+      retrieved 2008-05-15 
+  36. _^^ _T_h_e_ _C_h_i_p_ _t_h_a_t_ _J_a_c_k_ _B_u_i_l_t, (c. 2008), (HTML), Texas Instruments,
+      Retrieved 29 May 2008.
+  37. _^^ Winston, Brian (1998). _M_e_d_i_a_ _T_e_c_h_n_o_l_o_g_y_ _a_n_d_ _S_o_c_i_e_t_y_:_ _A_ _H_i_s_t_o_r_y_ _:_ _F_r_o_m
+      _t_h_e_ _T_e_l_e_g_r_a_p_h_ _t_o_ _t_h_e_ _I_n_t_e_r_n_e_t. Routledge. p. 221. _I_S_B_N _9_7_8_-_0_-_4_1_5_-_1_4_2_3_0_-
+      _4. 
+  38. _^^ _R_o_b_e_r_t_ _N_o_y_c_e's Unitary circuit, _U_S_ _p_a_t_e_n_t_ _2_9_8_1_8_7_7, "Semiconductor
+      device-and-lead structure", issued 1961-04-25, assigned to _F_a_i_r_c_h_i_l_d
+      _S_e_m_i_c_o_n_d_u_c_t_o_r_ _C_o_r_p_o_r_a_t_i_o_n 
+  39. _^^ Intel_4004 (November 1971), _I_n_t_e_l_'_s_ _F_i_r_s_t_ _M_i_c_r_o_p_r_o_c_e_s_s_o_r_‚_Ä_î_t_h_e_ _I_n_t_e_l
+      _4_0_0_4, Intel Corp., retrieved 2008-05-17 
+  40. _^^ The Intel 4004 (1971) die was 12 mm2, composed of 2300 transistors; by
+      comparison, the Pentium Pro was 306 mm2, composed of 5.5 million
+      transistors, according to Patterson, David; Hennessy, John (1998),
+      Computer Organization and Design, San Francisco: _M_o_r_g_a_n_ _K_a_u_f_m_a_n_n,
+      pp. 27‚Äì39, _I_S_B_N _1_-_5_5_8_6_0_-_4_2_8_-_6 
+  41. _^^ This program was written similarly to those for the _P_D_P_-_1_1 _m_i_n_i_c_o_m_p_u_t_e_r
+      and shows some typical things a computer can do. All the text after the
+      semicolons are _c_o_m_m_e_n_t_s for the benefit of human readers. These have no
+      significance to the computer and are ignored. (_D_i_g_i_t_a_l_ _E_q_u_i_p_m_e_n_t
+      _C_o_r_p_o_r_a_t_i_o_n_ _1_9_7_2)
+  42. _^^ It is not universally true that bugs are solely due to programmer
+      oversight. Computer hardware may fail or may itself have a fundamental
+      problem that produces unexpected results in certain situations. For
+      instance, the _P_e_n_t_i_u_m_ _F_D_I_V_ _b_u_g caused some _I_n_t_e_l _m_i_c_r_o_p_r_o_c_e_s_s_o_r_s in the
+      early 1990s to produce inaccurate results for certain _f_l_o_a_t_i_n_g_ _p_o_i_n_t
+      division operations. This was caused by a flaw in the microprocessor
+      design and resulted in a partial recall of the affected devices.
+  43. _^^ Taylor, Alexander L., III (16 April 1984). _"_T_h_e_ _W_i_z_a_r_d_ _I_n_s_i_d_e_ _t_h_e
+      _M_a_c_h_i_n_e_". _T_I_M_E. Retrieved 17 February 2007.  (subscription required)
+  44. _^^ Even some later computers were commonly programmed directly in machine
+      code. Some _m_i_n_i_c_o_m_p_u_t_e_r_s like the _D_E_C _P_D_P_-_8 could be programmed directly
+      from a panel of switches. However, this method was usually used only as
+      part of the _b_o_o_t_i_n_g process. Most modern computers boot entirely
+      automatically by reading a boot program from some _n_o_n_-_v_o_l_a_t_i_l_e_ _m_e_m_o_r_y.
+  45. _^^ However, there is sometimes some form of machine language compatibility
+      between different computers. An _x_8_6_-_6_4 compatible microprocessor like the
+      _A_M_D _A_t_h_l_o_n_ _6_4 is able to run most of the same programs that an _I_n_t_e_l_ _C_o_r_e
+      _2 microprocessor can, as well as programs designed for earlier
+      microprocessors like the Intel _P_e_n_t_i_u_m_s and _I_n_t_e_l_ _8_0_4_8_6. This contrasts
+      with very early commercial computers, which were often one-of-a-kind and
+      totally incompatible with other computers.
+  46. _^^ High level languages are also often _i_n_t_e_r_p_r_e_t_e_d rather than compiled.
+      Interpreted languages are translated into machine code on the fly, while
+      running, by another program called an _i_n_t_e_r_p_r_e_t_e_r.
+  47. _^^ The control unit's role in interpreting instructions has varied
+      somewhat in the past. Although the control unit is solely responsible for
+      instruction interpretation in most modern computers, this is not always
+      the case. Many computers include some instructions that may only be
+      partially interpreted by the control system and partially interpreted by
+      another device. This is especially the case with specialized computing
+      hardware that may be partially self-contained. For example, _E_D_V_A_C, one of
+      the earliest stored-program computers, used a central control unit that
+      only interpreted four instructions. All of the arithmetic-related
+      instructions were passed on to its arithmetic unit and further decoded
+      there.
+  48. _^^ Instructions often occupy more than one memory address, therefore the
+      program counter usually increases by the number of memory locations
+      required to store one instruction.
+  49. _^^ David J. Eck (2000). The Most Complex Machine: A Survey of Computers
+      and Computing. A K Peters, Ltd. p. 54. _I_S_B_N _9_7_8_-_1_-_5_6_8_8_1_-_1_2_8_-_4. 
+  50. _^^ Erricos John Kontoghiorghes (2006). Handbook of Parallel Computing and
+      Statistics. CRC Press. p. 45. _I_S_B_N _9_7_8_-_0_-_8_2_4_7_-_4_0_6_7_-_2. 
+  51. _^^ Flash memory also may only be rewritten a limited number of times
+      before wearing out, making it less useful for heavy random access usage.
+      (_V_e_r_m_a_ _&_ _M_i_e_l_k_e_ _1_9_8_8)
+  52. _^^ Donald Eadie (1968). Introduction to the Basic Computer. Prentice-Hall.
+      p. 12. 
+  53. _^^ Arpad Barna; Dan I. Porat (1976). Introduction to Microcomputers and
+      the Microprocessors. Wiley. p. 85. _I_S_B_N _9_7_8_-_0_-_4_7_1_-_0_5_0_5_1_-_3.  Cite uses
+      deprecated parameters (_h_e_l_p)
+  54. _^^ Jerry Peek; Grace Todino, John Strang (2002). Learning the UNIX
+      Operating System: A Concise Guide for the New User. O'Reilly. p. 130.
+      _I_S_B_N _9_7_8_-_0_-_5_9_6_-_0_0_2_6_1_-_9.  Cite uses deprecated parameters (_h_e_l_p)
+  55. _^^ Gillian M. Davis (2002). Noise Reduction in Speech Applications. CRC
+      Press. p. 111. _I_S_B_N _9_7_8_-_0_-_8_4_9_3_-_0_9_4_9_-_6. 
+  56. _^^ However, it is also very common to construct supercomputers out of many
+      pieces of cheap commodity hardware; usually individual computers
+      connected by networks. These so-called _c_o_m_p_u_t_e_r_ _c_l_u_s_t_e_r_s can often
+      provide supercomputer performance at a much lower cost than customized
+      designs. While custom architectures are still used for most of the most
+      powerful supercomputers, there has been a proliferation of cluster
+      computers in recent years. (_T_O_P_5_0_0_ _2_0_0_6)
+  57. _^^ Agatha C. Hughes (2000). Systems, Experts, and Computers. _M_I_T_ _P_r_e_s_s.
+      p. 161. _I_S_B_N _9_7_8_-_0_-_2_6_2_-_0_8_2_8_5_-_3. "The experience of SAGE helped make
+      possible the first truly large-scale commercial real-time network: the
+      SABRE computerized airline reservations system..." 
+  58. _^^ _"_A_ _B_r_i_e_f_ _H_i_s_t_o_r_y_ _o_f_ _t_h_e_ _I_n_t_e_r_n_e_t_". _I_n_t_e_r_n_e_t_ _S_o_c_i_e_t_y. Retrieved 20
+      September 2008. 
+  59. _^^ _"_C_o_m_p_u_t_e_r_ _a_r_c_h_i_t_e_c_t_u_r_e_:_ _f_u_n_d_a_m_e_n_t_a_l_s_ _a_n_d_ _p_r_i_n_c_i_p_l_e_s_ _o_f_ _c_o_m_p_u_t_e_r_ _d_e_s_i_g_n_"
+      by Joseph D. Dumas 2006. page 340.
+  60. _^^ According to the _S_h_o_r_t_e_r_ _O_x_f_o_r_d_ _E_n_g_l_i_s_h_ _D_i_c_t_i_o_n_a_r_y (6th ed, 2007), the
+      word computer dates back to the mid 17th century, when it referred to
+      ‚ÄúA person who makes calculations; specifically a person employed for
+      this in an observatory etc.‚Äù
+  61. _^^ _"_D_e_f_i_n_i_t_i_o_n_ _o_f_ _c_o_m_p_u_t_e_r_". Thefreedictionary.com. Retrieved 29 January
+      2012. 
+  62. _^^ Most major 64-bit _i_n_s_t_r_u_c_t_i_o_n_ _s_e_t_ _a_r_c_h_i_t_e_c_t_u_r_e_s are extensions of
+      earlier designs. All of the architectures listed in this table, except
+      for Alpha, existed in 32-bit forms before their 64-bit incarnations were
+      introduced.
+  63. _^^ Andrew R Hickey (May 15, 2008). _"_'_C_r_a_z_y_'_ _A_n_t_ _I_n_v_a_s_i_o_n_ _F_r_y_i_n_g_ _C_o_m_p_u_t_e_r
+      _E_q_u_i_p_m_e_n_t_". 
+********** RReeffeerreenncceess **********
+    * Fuegi, J. and Francis, J. "Lovelace & Babbage and the creation of the
+      1843 'notes'". IEEE Annals of the History of Computing 25 No. 4
+      (October‚ÄìDecember 2003): _D_i_g_i_t_a_l_ _O_b_j_e_c_t_ _I_d_e_n_t_i_f_i_e_r[_d_e_a_d_ _l_i_n_k]
+    * _aa Kempf, Karl (1961). _H_i_s_t_o_r_i_c_a_l_ _M_o_n_o_g_r_a_p_h_:_ _E_l_e_c_t_r_o_n_i_c_ _C_o_m_p_u_t_e_r_s_ _W_i_t_h_i_n
+      _t_h_e_ _O_r_d_n_a_n_c_e_ _C_o_r_p_s. _A_b_e_r_d_e_e_n_ _P_r_o_v_i_n_g_ _G_r_o_u_n_d (_U_n_i_t_e_d_ _S_t_a_t_e_s_ _A_r_m_y). 
+    * _aa Phillips, Tony (2000). _"_T_h_e_ _A_n_t_i_k_y_t_h_e_r_a_ _M_e_c_h_a_n_i_s_m_ _I_". American
+      Mathematical Society. Retrieved 5 April 2006. 
+    * _aa Shannon, Claude Elwood (1940). _A_ _s_y_m_b_o_l_i_c_ _a_n_a_l_y_s_i_s_ _o_f_ _r_e_l_a_y_ _a_n_d
+      _s_w_i_t_c_h_i_n_g_ _c_i_r_c_u_i_t_s. Massachusetts Institute of Technology. 
+    * _D_i_g_i_t_a_l_ _E_q_u_i_p_m_e_n_t_ _C_o_r_p_o_r_a_t_i_o_n (1972). _P_D_P_-_1_1_/_4_0_ _P_r_o_c_e_s_s_o_r_ _H_a_n_d_b_o_o_k (PDF).
+      _M_a_y_n_a_r_d_,_ _M_A: Digital Equipment Corporation. 
+    * Verma, G.; Mielke, N. (1988). Reliability performance of ETOX based flash
+      memories. IEEE International Reliability Physics Symposium. 
+    * Doron D. Swade (February 1993). Redeeming Charles Babbage's Mechanical
+      Computer. Scientific American. p. 89.  Cite uses deprecated parameters
+      (_h_e_l_p)
+    * _M_e_u_e_r_,_ _H_a_n_s; Strohmaier, Erich; Simon, Horst; _D_o_n_g_a_r_r_a_,_ _J_a_c_k (13 November
+      2006). _"_A_r_c_h_i_t_e_c_t_u_r_e_s_ _S_h_a_r_e_ _O_v_e_r_ _T_i_m_e_". _T_O_P_5_0_0. Retrieved 27 November
+      2006.  Cite uses deprecated parameters (_h_e_l_p)
+    * Lavington, Simon (1998). A History of Manchester Computers (2 ed.).
+      Swindon: The British Computer Society. _I_S_B_N _9_7_8_-_0_-_9_0_2_5_0_5_-_0_1_-_8. 
+    * Stokes, Jon (2007). Inside the Machine: An Illustrated Introduction to
+      Microprocessors and Computer Architecture. San Francisco: No Starch
+      Press. _I_S_B_N _9_7_8_-_1_-_5_9_3_2_7_-_1_0_4_-_6. 
+    * Zuse, Konrad (1993). The Computer - My life. Berlin: Pringler-Verlag.
+      _I_S_B_N _0_-_3_8_7_-_5_6_4_5_3_-_5. 
+    * Felt, Dorr E. (1916). _M_e_c_h_a_n_i_c_a_l_ _a_r_i_t_h_m_e_t_i_c_,_ _o_r_ _T_h_e_ _h_i_s_t_o_r_y_ _o_f_ _t_h_e
+      _c_o_u_n_t_i_n_g_ _m_a_c_h_i_n_e. Chicago: Washington Institute. 
+    * Ifrah, Georges (2001). The Universal History of Computing: From the
+      Abacus to the Quantum Computer. New York: John Wiley & Sons. _I_S_B_N _0_-_4_7_1_-
+      _3_9_6_7_1_-_0. 
+    * Berkeley, Edmund (1949). Giant Brains, or Machines That Think. John Wiley
+      & Sons. 
+    * Cohen, Bernard (2000). Howard Aiken, Portrait of a computer pioneer.
+      Cambridge, Massachusetts: The MIT Press. _I_S_B_N _9_7_8_-_0_-_2_6_2_5_3_1_7_-_9_-_5. 
+    * Ligonni√®re, Robert (1987). Pr√©histoire et Histoire des ordinateurs.
+      Paris: Robert Laffont. _I_S_B_N _9_-_7_8_2_2_2_1_-_0_5_2_6_1_7. 
+    * Couffignal, Louis (1933). Les machines √  calculer ; leurs principes,
+      leur √©volution. Paris: Gauthier-Villars. 
+    * Essinger, James (2004). Jacquard's Web, How a hand loom led to the birth
+      of the information age. Oxford University Press. _I_S_B_N _0_-_1_9_-_2_8_0_5_7_7_-_0. 
+    * Hyman, Anthony (1985). Charles Babbage: Pioneer of the Computer.
+      Princeton University Press. _I_S_B_N _9_7_8_-_0_-_6_9_1_0_2_3_7_-_7_-_9. 
+    * Cohen, Bernard (2000). Howard Aiken, Portrait of a computer pioneer.
+      Cambridge, Massachusetts: The MIT Press. _I_S_B_N _9_7_8_-_0_-_2_6_2_5_3_1_7_-_9_-_5. 
+    * Bowden, B. V. (1953). Faster than thought. New York, Toronto, London:
+      Pitman publishing corporation. 
+    * Moseley, Maboth (1964). Irascible Genius, Charles Babbage, inventor.
+      London: Hutchinson. 
+    * Collier, Bruce (1970). _T_h_e_ _l_i_t_t_l_e_ _e_n_g_i_n_e_ _t_h_a_t_ _c_o_u_l_d_'_v_e_:_ _T_h_e_ _c_a_l_c_u_l_a_t_i_n_g
+      _m_a_c_h_i_n_e_s_ _o_f_ _C_h_a_r_l_e_s_ _B_a_b_b_a_g_e. Garland Publishing Inc. _I_S_B_N _0_-_8_2_4_0_-_0_0_4_3_-_9. 
+    * Randell, Brian (1982). _"_F_r_o_m_ _A_n_a_l_y_t_i_c_a_l_ _E_n_g_i_n_e_ _t_o_ _E_l_e_c_t_r_o_n_i_c_ _D_i_g_i_t_a_l
+      _C_o_m_p_u_t_e_r_:_ _T_h_e_ _C_o_n_t_r_i_b_u_t_i_o_n_s_ _o_f_ _L_u_d_g_a_t_e_,_ _T_o_r_r_e_s_,_ _a_n_d_ _B_u_s_h_". Retrieved 29
+      October 2013. 
+********** EExxtteerrnnaall lliinnkkss **********
+Find more about CCoommppuutteerr at Wikipedia's _s_i_s_t_e_r_ _p_r_o_j_e_c_t_s
+ _D_e_f_i_n_i_t_i_o_n_s_ _a_n_d_ _t_r_a_n_s_l_a_t_i_o_n_s from Wiktionary
+ _M_e_d_i_a from Commons
+ _Q_u_o_t_a_t_i_o_n_s from Wikiquote
+ _S_o_u_r_c_e_ _t_e_x_t_s from Wikisource
+ _T_e_x_t_b_o_o_k_s from Wikibooks
+ _L_e_a_r_n_i_n_g_ _r_e_s_o_u_r_c_e_s from Wikiversity
+    * _A_ _B_r_i_e_f_ _H_i_s_t_o_r_y_ _o_f_ _C_o_m_p_u_t_i_n_g [_d_e_a_d_ _l_i_n_k] ‚Äì slideshow by _L_i_f_e_ _m_a_g_a_z_i_n_e
+    ** _vv
+    ** _tt
+    ** _ee
+_CC_oo_mm_pp_uu_tt_ee_rr_ _ss_ii_zz_ee_ss
+_C_l_a_s_s_e_s_ _o_f_ _c_o_m_p_u_t_e_r_s
+           * _S_u_p_e_r
+LLaarrggeerr     * _M_i_n_i_s_u_p_e_r
+           * _M_a_i_n_f_r_a_m_e
+           * _M_i_d_r_a_n_g_e
+_MM_ii_nn_ii       * _S_u_p_e_r_m_i_n_i
+           * _S_e_r_v_e_r
+           * _P_e_r_s_o_n_a_l
+                 o _W_o_r_k_s_t_a_t_i_o_n
+                 o _D_e_s_k_t_o_p
+                 o _H_o_m_e
+                 o _S_F_F
+                       # _N_e_t_t_o_p
+_MM_ii_cc_rr_oo      * _P_l_u_g
+           * _P_o_r_t_a_b_l_e
+           * _V_i_d_e_o_ _g_a_m_e_ _a_r_c_a_d_e_ _c_a_b_i_n_e_t
+                 o _A_r_c_a_d_e_ _s_y_s_t_e_m_ _b_o_a_r_d
+           * _V_i_d_e_o_ _g_a_m_e_ _c_o_n_s_o_l_e
+                 o _M_i_c_r_o_c_o_n_s_o_l_e
+           * _I_n_t_e_r_a_c_t_i_v_e_ _k_i_o_s_k
+           * _S_m_a_r_t_ _T_V
+                                 * _D_e_s_k_t_o_p_ _r_e_p_l_a_c_e_m_e_n_t_ _c_o_m_p_u_t_e_r
+                                 * _S_u_b_n_o_t_e_b_o_o_k
+       _LL_aa_pp_tt_oo_pp                          o _N_e_t_b_o_o_k
+                                       o _S_m_a_r_t_b_o_o_k
+                                       o _U_l_t_r_a_b_o_o_k
+                                 * _U_l_t_r_a_-_m_o_b_i_l_e_ _P_C
+       _TT_aa_bb_ll_ee_tt_ _cc_oo_mm_pp_uu_tt_ee_rr           * _M_o_b_i_l_e_ _I_n_t_e_r_n_e_t_ _d_e_v_i_c_e
+                                       o _I_n_t_e_r_n_e_t_ _t_a_b_l_e_t
+                                 * _H_a_n_d_h_e_l_d_ _P_C
+                                       o _P_a_l_m_-_s_i_z_e_ _P_C
+                                       o _P_o_c_k_e_t_ _c_o_m_p_u_t_e_r
+                                 * _P_D_A
+                                       o _E_l_e_c_t_r_o_n_i_c_ _o_r_g_a_n_i_z_e_r
+                                       o _E_D_A
+                                 * _M_o_b_i_l_e_ _p_h_o_n_e
+       _II_nn_ff_oo_rr_mm_aa_tt_ii_oo_nn_ _aa_pp_pp_ll_ii_aa_nn_cc_ee           o _F_e_a_t_u_r_e_ _p_h_o_n_e
+_MM_oo_bb_ii_ll_ee                                 o _S_m_a_r_t_p_h_o_n_e
+                                             # _P_h_a_b_l_e_t
+                                 * _P_M_P
+                                       o _D_A_P
+                                 * _E_-_b_o_o_k_ _r_e_a_d_e_r
+                                 * _H_a_n_d_h_e_l_d_ _g_a_m_e_ _c_o_n_s_o_l_e
+                                 * _P_o_r_t_a_b_l_e/_M_o_b_i_l_e_ _d_a_t_a_ _t_e_r_m_i_n_a_l
+                                 * _S_c_i_e_n_t_i_f_i_c
+       _CC_aa_ll_cc_uu_ll_aa_tt_oo_rr_ss               * _P_r_o_g_r_a_m_m_a_b_l_e
+                                 * _G_r_a_p_h_i_n_g
+                                 * _D_i_g_i_t_a_l_ _W_r_i_s_t_w_a_t_c_h
+                                       o _C_a_l_c_u_l_a_t_o_r_ _w_a_t_c_h
+                                       o _S_m_a_r_t_w_a_t_c_h
+       _WW_ee_aa_rr_aa_bb_ll_ee_ _cc_oo_mm_pp_uu_tt_ee_rr                     # _W_a_t_c_h_ _p_h_o_n_e
+                                 * _V_i_r_t_u_a_l_ _r_e_t_i_n_a_l_ _d_i_s_p_l_a_y
+                                 * _H_e_a_d_-_m_o_u_n_t_e_d_ _d_i_s_p_l_a_y
+                                       o _H_e_a_d_-_u_p_ _d_i_s_p_l_a_y
+           * _M_i_c_r_o_c_o_n_t_r_o_l_l_e_r
+           * _N_a_n_o_c_o_m_p_u_t_e_r
+OOtthheerrss     * _P_i_z_z_a_ _b_o_x_ _f_o_r_m_ _f_a_c_t_o_r
+           * _S_i_n_g_l_e_-_b_o_a_r_d_ _c_o_m_p_u_t_e_r
+           * _S_m_a_r_t_d_u_s_t
+           * _W_i_r_e_l_e_s_s_ _s_e_n_s_o_r_ _n_e_t_w_o_r_k
+
+Retrieved from "_h_t_t_p_:_/_/_e_n_._w_i_k_i_p_e_d_i_a_._o_r_g_/_w_/
+_i_n_d_e_x_._p_h_p_?_t_i_t_l_e_=_C_o_m_p_u_t_e_r_&_o_l_d_i_d_=_5_9_0_7_7_0_1_4_8"
+_C_a_t_e_g_o_r_i_e_s:
+    * _C_o_m_p_u_t_e_r_s
+Hidden categories:
+    * _P_a_g_e_s_ _c_o_n_t_a_i_n_i_n_g_ _l_i_n_k_s_ _t_o_ _s_u_b_s_c_r_i_p_t_i_o_n_-_o_n_l_y_ _c_o_n_t_e_n_t
+    * _P_a_g_e_s_ _c_o_n_t_a_i_n_i_n_g_ _c_i_t_e_ _t_e_m_p_l_a_t_e_s_ _w_i_t_h_ _d_e_p_r_e_c_a_t_e_d_ _p_a_r_a_m_e_t_e_r_s
+    * _W_i_k_i_p_e_d_i_a_ _i_n_d_e_f_i_n_i_t_e_l_y_ _s_e_m_i_-_p_r_o_t_e_c_t_e_d_ _p_a_g_e_s
+    * _W_i_k_i_p_e_d_i_a_ _i_n_d_e_f_i_n_i_t_e_l_y_ _m_o_v_e_-_p_r_o_t_e_c_t_e_d_ _p_a_g_e_s
+    * _A_r_t_i_c_l_e_s_ _w_h_i_c_h_ _u_s_e_ _i_n_f_o_b_o_x_ _t_e_m_p_l_a_t_e_s_ _w_i_t_h_ _n_o_ _d_a_t_a_ _r_o_w_s
+    * _A_r_t_i_c_l_e_s_ _n_e_e_d_i_n_g_ _a_d_d_i_t_i_o_n_a_l_ _r_e_f_e_r_e_n_c_e_s_ _f_r_o_m_ _J_u_l_y_ _2_0_1_2
+    * _A_l_l_ _a_r_t_i_c_l_e_s_ _n_e_e_d_i_n_g_ _a_d_d_i_t_i_o_n_a_l_ _r_e_f_e_r_e_n_c_e_s
+    * _A_l_l_ _a_r_t_i_c_l_e_s_ _w_i_t_h_ _u_n_s_o_u_r_c_e_d_ _s_t_a_t_e_m_e_n_t_s
+    * _A_r_t_i_c_l_e_s_ _w_i_t_h_ _u_n_s_o_u_r_c_e_d_ _s_t_a_t_e_m_e_n_t_s_ _f_r_o_m_ _D_e_c_e_m_b_e_r_ _2_0_0_7
+    * _A_r_t_i_c_l_e_s_ _w_i_t_h_ _u_n_s_o_u_r_c_e_d_ _s_t_a_t_e_m_e_n_t_s_ _f_r_o_m_ _D_e_c_e_m_b_e_r_ _2_0_1_2
+    * _A_l_l_ _a_r_t_i_c_l_e_s_ _w_i_t_h_ _d_e_a_d_ _e_x_t_e_r_n_a_l_ _l_i_n_k_s
+    * _A_r_t_i_c_l_e_s_ _w_i_t_h_ _d_e_a_d_ _e_x_t_e_r_n_a_l_ _l_i_n_k_s_ _f_r_o_m_ _O_c_t_o_b_e_r_ _2_0_1_3
+    * _U_s_e_ _d_m_y_ _d_a_t_e_s_ _f_r_o_m_ _A_p_r_i_l_ _2_0_1_2
+********** NNaavviiggaattiioonn mmeennuu **********
+******** PPeerrssoonnaall ttoooollss ********
+    * _C_r_e_a_t_e_ _a_c_c_o_u_n_t
+    * _L_o_g_ _i_n
+******** NNaammeessppaacceess ********
+    * _A_r_t_i_c_l_e
+    * _T_a_l_k
+VVaarriiaannttss
+******** VViieewwss ********
+    * _R_e_a_d
+    * _V_i_e_w_ _s_o_u_r_c_e
+    * _V_i_e_w_ _h_i_s_t_o_r_y
+AAccttiioonnss
+******** SSeeaarrcchh ********
+[search              ]
+[Search]
+******** NNaavviiggaattiioonn ********
+    * _M_a_i_n_ _p_a_g_e
+    * _C_o_n_t_e_n_t_s
+    * _F_e_a_t_u_r_e_d_ _c_o_n_t_e_n_t
+    * _C_u_r_r_e_n_t_ _e_v_e_n_t_s
+    * _R_a_n_d_o_m_ _a_r_t_i_c_l_e
+    * _D_o_n_a_t_e_ _t_o_ _W_i_k_i_p_e_d_i_a
+******** IInntteerraaccttiioonn ********
+    * _H_e_l_p
+    * _A_b_o_u_t_ _W_i_k_i_p_e_d_i_a
+    * _C_o_m_m_u_n_i_t_y_ _p_o_r_t_a_l
+    * _R_e_c_e_n_t_ _c_h_a_n_g_e_s
+    * _C_o_n_t_a_c_t_ _p_a_g_e
+******** TToooollss ********
+    * _W_h_a_t_ _l_i_n_k_s_ _h_e_r_e
+    * _R_e_l_a_t_e_d_ _c_h_a_n_g_e_s
+    * _U_p_l_o_a_d_ _f_i_l_e
+    * _S_p_e_c_i_a_l_ _p_a_g_e_s
+    * _P_e_r_m_a_n_e_n_t_ _l_i_n_k
+    * _P_a_g_e_ _i_n_f_o_r_m_a_t_i_o_n
+    * _D_a_t_a_ _i_t_e_m
+    * _C_i_t_e_ _t_h_i_s_ _p_a_g_e
+******** PPrriinntt//eexxppoorrtt ********
+    * _C_r_e_a_t_e_ _a_ _b_o_o_k
+    * _D_o_w_n_l_o_a_d_ _a_s_ _P_D_F
+    * _P_r_i_n_t_a_b_l_e_ _v_e_r_s_i_o_n
+******** LLaanngguuaaggeess ********
+    * _A_c_√_®_h
+    * _A_f_r_i_k_a_a_n_s
+    * _A_l_e_m_a_n_n_i_s_c_h
+    * _·_ä_ _·_à_õ_·_à_≠_·_ä_õ
+    * _√_Ü_n_g_l_i_s_c
+    * _ÿ_ß_Ÿ_Ñ_ÿ_π_ÿ_±_ÿ_®_Ÿ_ä_ÿ_©
+    * _A_r_a_g_o_n_√_©_s
+    * _‹_ê_‹_™_‹_°_‹_ù_‹_ê
+    * _‡_¶_Ö_‡_¶_∏_‡_¶_Æ_‡_ß_Ä_‡_¶_Ø_‡_¶_º_‡_¶_æ
+    * _A_s_t_u_r_i_a_n_u
+    * _A_v_a_√_±_e_'_·_∫_Ω
+    * _A_z_…_ô_r_b_a_y_c_a_n_c_a
+    * _‡_¶_¨_‡_¶_æ_‡_¶_Ç_‡_¶_≤_‡_¶_æ
+    * _B_√_¢_n_-_l_√_¢_m_-_g_√_∫
+    * _–_ë_–_∞_—_à_“_°_–_æ_—_Ä_—_Ç_—_Å_–_∞
+    * _–_ë_–_µ_–_ª_–_∞_—_Ä_—_É_—_Å_–_∫_–_∞_—_è
+    * _–_ë_–_µ_–_ª_–_∞_—_Ä_—_É_—_Å_–_∫_–_∞_—_è_ _(_—_Ç_–_∞_—_Ä_–_∞_—_à_–_∫_–_µ_–_≤_—_ñ_—_Ü_–_∞_)_‚_Ä_é
+    * _–_ë_—_ä_–_ª_–_≥_–_∞_—_Ä_—_Å_–_∫_–_∏
+    * _B_o_a_r_i_s_c_h
+    * _‡_Ω_ñ_‡_Ω_º_‡_Ω_ë_‡_º_ã_‡_Ω_°_‡_Ω_≤_‡_Ω_Ç
+    * _B_o_s_a_n_s_k_i
+    * _B_r_e_z_h_o_n_e_g
+    * _C_a_t_a_l_√_ 
+    * _–_ß_”_ë_–_≤_–_∞_—_à_–_ª_–_∞
+    * _C_e_b_u_a_n_o
+    * _ƒ_å_e_≈_°_t_i_n_a
+    * _C_y_m_r_a_e_g
+    * _D_a_n_s_k
+    * _D_e_u_t_s_c_h
+    * _D_i_n_√_©_ _b_i_z_a_a_d
+    * _E_e_s_t_i
+    * _Œ_ï_Œ_ª_Œ_ª_Œ_∑_Œ_Ω_Œ_π_Œ_∫_Œ_¨
+    * _E_m_i_l_i_√_ _n_ _e_ _r_u_m_a_g_n_√_≤_l
+    * _–_≠_—_Ä_–_∑_—_è_–_Ω_—_å
+    * _E_s_p_a_√_±_o_l
+    * _E_s_p_e_r_a_n_t_o
+    * _E_u_s_k_a_r_a
+    * _Ÿ_Å_ÿ_ß_ÿ_±_ÿ_≥_€_å
+    * _F_i_j_i_ _H_i_n_d_i
+    * _F_√_∏_r_o_y_s_k_t
+    * _F_r_a_n_√_ß_a_i_s
+    * _F_r_y_s_k
+    * _F_u_r_l_a_n
+    * _G_a_e_i_l_g_e
+    * _G_a_e_l_g
+    * _G_√_ _i_d_h_l_i_g
+    * _G_a_l_e_g_o
+    * _Ë_¥_õ_Ë_™_û
+    * _‡_™_ó_‡_´_Å_‡_™_ú_‡_™_∞_‡_™_æ_‡_™_§_‡_´_Ä
+    * __ê_å_≤__ê_å_ø__ê_ç_Ñ__ê_å_π__ê_ç_É__ê_å_∫
+    * _Â_Æ_¢_Â_Æ_∂_Ë_™_û_/_H_a_k_-_k_√_¢_-_n_g_√_Æ
+    * _Ì_ï_ú_Í_µ_≠_Ï_ñ_¥
+    * _H_a_u_s_a
+    * _’_Ä_’_°_’_µ_’_•_÷_Ä_’_•_’_∂
+    * _‡_§_π_‡_§_ø_‡_§_®_‡_•_ç_‡_§_¶_‡_•_Ä
+    * _H_r_v_a_t_s_k_i
+    * _I_d_o
+    * _I_g_b_o
+    * _I_l_o_k_a_n_o
+    * _‡_¶_¨_‡_¶_ø_‡_¶_∑_‡_ß_ç_‡_¶_£_‡_ß_Å_‡_¶_™_‡_ß_ç_‡_¶_∞_‡_¶_ø_‡_¶_Ø_‡_¶_º_‡_¶_æ_ _‡_¶_Æ_‡_¶_£_‡_¶_ø_‡_¶_™_‡_ß_Å_‡_¶_∞_‡_ß_Ä
+    * _B_a_h_a_s_a_ _I_n_d_o_n_e_s_i_a
+    * _I_n_t_e_r_l_i_n_g_u_a
+    * _·_ê_É_·_ì_Ñ_·_í_É_·_ë_é_·_ë_ê_·_ë_¶_/_i_n_u_k_t_i_t_u_t
+    * _I_s_i_X_h_o_s_a
+    * _I_s_i_Z_u_l_u
+    * _√_ç_s_l_e_n_s_k_a
+    * _I_t_a_l_i_a_n_o
+    * _◊_¢_◊_ë_◊_®_◊_ô_◊_™
+    * _B_a_s_a_ _J_a_w_a
+    * _‡_≤_ï_‡_≤_®_‡_≥_ç_‡_≤_®_‡_≤_°
+    * _K_a_p_a_m_p_a_n_g_a_n
+    * _–_ö_—_ä_–_∞_—_Ä_–_∞_—_á_–_∞_–_π_-_–_º_–_∞_–_ª_–_∫_—_ä_–_∞_—_Ä
+    * _·_É_•_·_É_ê_·_É_ _·_É_ó_·_É_£_·_É_ö_·_É_ò
+    * _‡_§_ï_‡_•_â_‡_§_∂_‡_•_Å_‡_§_∞_ _/_ _⁄_©_Ÿ_≤_ÿ_¥_Ÿ_è_ÿ_±
+    * _“_ö_–_∞_–_∑_–_∞_“_õ_—_à_–_∞
+    * _K_e_r_n_o_w_e_k
+    * _K_i_s_w_a_h_i_l_i
+    * _–_ö_–_æ_–_º_–_∏
+    * _K_o_n_g_o
+    * _K_r_e_y_√_≤_l_ _a_y_i_s_y_e_n
+    * _K_u_r_d_√_Æ
+    * _–_ö_—_ã_—_Ä_–_≥_—_ã_–_∑_—_á_–_∞
+    * _L_a_d_i_n_o
+    * _–_õ_–_µ_–_∑_–_≥_–_∏
+    * _‡_∫_•_‡_∫_≤_‡_∫_ß
+    * _L_a_t_i_n_a
+    * _L_a_t_v_i_e_≈_°_u
+    * _L_√_´_t_z_e_b_u_e_r_g_e_s_c_h
+    * _L_i_e_t_u_v_i_≈_≥
+    * _L_i_m_b_u_r_g_s
+    * _L_i_n_g_√_°_l_a
+    * _L_o_j_b_a_n
+    * _L_u_m_b_a_a_r_t
+    * _M_a_g_y_a_r
+    * _–_ú_–_∞_–_∫_–_µ_–_¥_–_æ_–_Ω_—_Å_–_∫_–_∏
+    * _M_a_l_a_g_a_s_y
+    * _‡_¥_Æ_‡_¥_≤_‡_¥_Ø_‡_¥_æ_‡_¥_≥_‡_¥_Ç
+    * _M_a_l_t_i
+    * _‡_§_Æ_‡_§_∞_‡_§_æ_‡_§_ _‡_•_Ä
+    * _·_É_õ_·_É_ê_·_É_ _·_É_í_·_É_ê_·_É_ö_·_É_£_·_É_ _·_É_ò
+    * _Ÿ_Ö_ÿ_µ_ÿ_±_Ÿ_â
+    * _Ÿ_Ö_ÿ_ß_ÿ_≤_Ÿ_ê_ÿ_±_Ÿ_à_Ÿ_Ü_€_å
+    * _B_a_h_a_s_a_ _M_e_l_a_y_u
+    * _M_i_r_a_n_d_√_©_s
+    * _–_ú_–_æ_–_Ω_–_≥_–_æ_–_ª
+    * _·_Ä_ô_·_Ä_º_·_Ä_î_·_Ä_∫_·_Ä_ô_·_Ä_¨_·_Ä_ò_·_Ä_¨_·_Ä_û_·_Ä_¨
+    * _N_ƒ_Å_h_u_a_t_l
+    * _N_e_d_e_r_l_a_n_d_s
+    * _N_e_d_e_r_s_a_k_s_i_e_s
+    * _‡_§_®_‡_•_á_‡_§_™_‡_§_æ_‡_§_≤_‡_•_Ä
+    * _‡_§_®_‡_•_á_‡_§_™_‡_§_æ_‡_§_≤_ _‡_§_≠_‡_§_æ_‡_§_∑_‡_§_æ
+    * _Ê_ó_•_Ê_ú_¨_Ë_™_û
+    * _N_a_p_u_l_i_t_a_n_o
+    * _N_o_r_f_u_k_ _/_ _P_i_t_k_e_r_n
+    * _N_o_r_s_k_ _b_o_k_m_√_•_l
+    * _N_o_r_s_k_ _n_y_n_o_r_s_k
+    * _O_c_c_i_t_a_n
+    * _–_û_–_ª_—_ã_–_∫_ _–_º_–_∞_—_Ä_–_∏_–_π
+    * _‡_¨_ì_‡_¨_°_‡_¨_º_‡_¨_ø_‡_¨_Ü
+    * _O_ _ª_z_b_e_k_c_h_a
+    * _‡_®_™_‡_©_∞_‡_®_ú_‡_®_æ_‡_®_¨_‡_©_Ä
+    * _Ÿ_æ_Ÿ_Ü_ÿ_¨_ÿ_ß_ÿ_®_€_å
+    * _Ÿ_æ_⁄_ö_ÿ_™_Ÿ_à
+    * _·_û_ó_·_û_∂_·_û_ü_·_û_∂_·_û_Å_·_ü_í_·_û_ò_·_ü_Ç_·_û_ö
+    * _P_i_e_m_o_n_t_√_®_i_s
+    * _P_l_a_t_t_d_√_º_√_º_t_s_c_h
+    * _P_o_l_s_k_i
+    * _Œ_ _Œ_ø_Œ_Ω_œ_Ñ_Œ_π_Œ_±_Œ_∫_Œ_¨
+    * _P_o_r_t_u_g_u_√_™_s
+    * _Q_ƒ_±_r_ƒ_±_m_t_a_t_a_r_c_a
+    * _R_o_m_√_¢_n_ƒ_É
+    * _R_u_n_a_ _S_i_m_i
+    * _–_ _—_É_—_Å_–_∏_–_Ω_—_å_—_Å_–_∫_—_ã_–_π
+    * _–_ _—_É_—_Å_—_Å_–_∫_–_∏_–_π
+    * _–_°_–_∞_—_Ö_–_∞_ _—_Ç_—_ã_–_ª_–_∞
+    * _‡_§_∏_‡_§_Ç_‡_§_∏_‡_•_ç_‡_§_ï_‡_•_É_‡_§_§_‡_§_Æ_‡_•_ç
+    * _S_a_r_d_u
+    * _S_c_o_t_s
+    * _S_e_e_l_t_e_r_s_k
+    * _S_h_q_i_p
+    * _S_i_c_i_l_i_a_n_u
+    * _‡_∑_É_‡_∑_í_‡_∂_Ç_‡_∑_Ñ_‡_∂_Ω
+    * _S_i_m_p_l_e_ _E_n_g_l_i_s_h
+    * _S_l_o_v_e_n_ƒ_ç_i_n_a
+    * _S_l_o_v_e_n_≈_°_ƒ_ç_i_n_a
+    * _–_°_–_ª_–_æ_–_≤_—_£_–_Ω_—_å_—_Å_–_∫_—_ä_ _/_ _‚_∞_î_‚_∞_é_‚_∞_ë_‚_∞_Ç_‚_∞_°_‚_∞_ê_‚_∞_ _‚_∞_î_‚_∞_ç_‚_∞_ü
+    * _≈_ö_l_≈_Ø_n_s_k_i
+    * _S_o_o_m_a_a_l_i_g_a
+    * _–_°_—_Ä_–_ø_—_Å_–_∫_–_∏_ _/_ _s_r_p_s_k_i
+    * _S_r_p_s_k_o_h_r_v_a_t_s_k_i_ _/_ _—_Å_—_Ä_–_ø_—_Å_–_∫_–_æ_—_Ö_—_Ä_–_≤_–_∞_—_Ç_—_Å_–_∫_–_∏
+    * _B_a_s_a_ _S_u_n_d_a
+    * _S_u_o_m_i
+    * _S_v_e_n_s_k_a
+    * _T_a_g_a_l_o_g
+    * _‡_Æ_§_‡_Æ_Æ_‡_Æ_ø_‡_Æ_¥_‡_Ø_ç
+    * _–_¢_–_∞_—_Ç_–_∞_—_Ä_—_á_–_∞_/_t_a_t_a_r_√_ß_a
+    * _‡_∞_§_‡_±_Ü_‡_∞_≤_‡_±_Å_‡_∞_ó_‡_±_Å
+    * _‡_π_Ñ_‡_∏_ó_‡_∏_¢
+    * _–_¢_–_æ_“_∑_–_∏_–_∫_”_£
+    * _T_s_e_t_s_√_™_h_e_s_t_√_¢_h_e_s_e
+    * _T_√_º_r_k_√_ß_e
+    * _T_√_º_r_k_m_e_n_√_ß_e
+    * _·_®_Ö_·_®_î_ _·_®_ï_·_®_ò_·_®_Å_·_®_ó
+    * _–_£_–_∫_—_Ä_–_∞_—_ó_–_Ω_—_Å_—_å_–_∫_–_∞
+    * _ÿ_ß_ÿ_±_ÿ_Ø_Ÿ_à
+    * _ÿ_¶_€_á_Ÿ_ä_ÿ_∫_€_á_ÿ_±_⁄_Ü_€_ï_ _/_ _U_y_g_h_u_r_c_h_e
+    * _V_a_h_c_u_e_n_g_h
+    * _V_√_®_n_e_t_o
+    * _T_i_·_∫_ø_n_g_ _V_i_·_ª_á_t
+    * _V_√_µ_r_o
+    * _W_a_l_o_n
+    * _Ê_ñ_á_Ë_®_Ä
+    * _W_e_s_t_-_V_l_a_m_s
+    * _W_i_n_a_r_a_y
+    * _W_o_l_o_f
+    * _Â_ê_¥_Ë_Ø_≠
+    * _◊_ô_◊_ô_÷_¥_◊_ì_◊_ô_◊_©
+    * _Y_o_r_√_π_b_√_°
+    * _Á_≤_µ_Ë_™_û
+    * _Z_a_z_a_k_i
+    * _≈_Ω_e_m_a_i_t_ƒ_ó_≈_°_k_a
+    * _‰_∏_≠_Ê_ñ_á
+    * _E_d_i_t_ _l_i_n_k_s
+    * This page was last modified on 15 January 2014 at 04:23.
+    * Text is available under the _C_r_e_a_t_i_v_e_ _C_o_m_m_o_n_s_ _A_t_t_r_i_b_u_t_i_o_n_-_S_h_a_r_e_A_l_i_k_e
+      _L_i_c_e_n_s_e; additional terms may apply. By using this site, you agree to the
+      _T_e_r_m_s_ _o_f_ _U_s_e and _P_r_i_v_a_c_y_ _P_o_l_i_c_y_.
+      Wikipedia¬Æ is a registered trademark of the _W_i_k_i_m_e_d_i_a_ _F_o_u_n_d_a_t_i_o_n_,_ _I_n_c_.,
+      a non-profit organization.
+    * _P_r_i_v_a_c_y_ _p_o_l_i_c_y
+    * _A_b_o_u_t_ _W_i_k_i_p_e_d_i_a
+    * _D_i_s_c_l_a_i_m_e_r_s
+    * _C_o_n_t_a_c_t_ _W_i_k_i_p_e_d_i_a
+    * _D_e_v_e_l_o_p_e_r_s
+    * _M_o_b_i_l_e_ _v_i_e_w
+    * _[_W_i_k_i_m_e_d_i_a_ _F_o_u_n_d_a_t_i_o_n_]
+    * _[_P_o_w_e_r_e_d_ _b_y_ _M_e_d_i_a_W_i_k_i_]
+
