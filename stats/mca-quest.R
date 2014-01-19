@@ -151,6 +151,10 @@ b <- b[rep(1:nrow(b), b$population),]
 a$population <- NULL
 b$population <- NULL
 
+# Save to CSV
+write.table(a, file='/home/amp/src/ConceptDrift/stats/BRT_1889_NH_pp.csv', sep=',', row.names=F)
+write.table(b, file='/home/amp/src/ConceptDrift/stats/BRT_1899_NH_pp.csv', sep=',', row.names=F)
+
 #####
 # MCA
 #####
