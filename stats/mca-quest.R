@@ -140,6 +140,9 @@ a$hisco <- factor(a$hisco)
 b <- subset(b, !b$hisco %in% c('-1'))
 b$hisco <- factor(b$hisco)
 
+a$hisco <- as.factor(a$hisco)
+b$hisco <- as.factor(b$hisco)
+
 ################################
 # Removal of column "population"
 ################################
