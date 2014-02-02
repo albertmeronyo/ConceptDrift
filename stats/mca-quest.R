@@ -6,8 +6,8 @@ require(ggplot2)
 ###########################
 # Load CSV with SPARQL dump
 ###########################
-res <- read.csv('/home/amp/src/ConceptDrift/stats/BRT_1889_08_T1.csv', header = TRUE)
-res2 <- read.csv('/home/amp/src/ConceptDrift/stats/BRT_1899_04_T.csv', header = TRUE)
+res <- read.csv('/Users/Albert/src/ConceptDrift/stats/BRT_1889_08_T1.csv', header = TRUE)
+res2 <- read.csv('/Users/Albert/src/ConceptDrift/stats/BRT_1899_04_T.csv', header = TRUE)
 
 #############
 # Pre-process
@@ -29,7 +29,7 @@ df$occupation_c <- as.factor(df$occupation_c)
 df$position_c <- as.factor(df$position_c)
 df$population <- as.numeric(df$population)
 # Load HISCO data and merge
-h1 <- read.xls('/home/amp/src/ConceptDrift/stats/1889_08_T1.xls')
+h1 <- read.xls('/Users/Albert/src/ConceptDrift/stats/1889_08_T1.xls')
 h1$ID <- NULL
 h1$ALTBEROEP <- NULL 
 h1$STATUS <- NULL 
@@ -58,7 +58,7 @@ df2$occupation_c <- as.factor(df2$occupation_c)
 df2$position_c <- as.factor(df2$position_c)
 df2$population <- as.numeric(df2$population)
 # Load HISCO data and merge
-h2 <- read.xls('/home/amp/src/ConceptDrift/stats/1899_04_T.xls')
+h2 <- read.xls('/Users/Albert/src/ConceptDrift/stats/1899_04_T.xls')
 h2$ID <- NULL
 h2$ALTBEROEP <- NULL 
 h2$STATUS <- NULL 
@@ -155,8 +155,8 @@ a$population <- NULL
 b$population <- NULL
 
 # Save to CSV
-write.table(a, file='/home/amp/src/ConceptDrift/stats/BRT_1889_NH_pp.csv', sep=',', row.names=F)
-write.table(b, file='/home/amp/src/ConceptDrift/stats/BRT_1899_NH_pp.csv', sep=',', row.names=F)
+write.table(a, file='/Users/Albert/src/ConceptDrift/stats/BRT_1889_NH_pp.csv', sep=',', row.names=F)
+write.table(b, file='/Users/Albert/src/ConceptDrift/stats/BRT_1899_NH_pp.csv', sep=',', row.names=F)
 
 #####
 # MCA
