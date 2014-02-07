@@ -1,8 +1,8 @@
 ###########################
 # Load CSV with SPARQL dump
 ###########################
-res <- read.csv('/Users/Albert/src/ConceptDrift/stats/BRT_1889_08_T1.csv', header = TRUE)
-res2 <- read.csv('/Users/Albert/src/ConceptDrift/stats/BRT_1899_04_T.csv', header = TRUE)
+res <- read.csv('/home/amp/src/ConceptDrift/stats/data/BRT_1889_08_T1.csv', header = TRUE)
+res2 <- read.csv('/home/amp/src/ConceptDrift/stats/data/BRT_1899_04_T.csv', header = TRUE)
 
 #############
 # Pre-process
