@@ -1,0 +1,8 @@
+# All categories and direct children
+
+SELECT ?super (COUNT(?sub) AS ?dirChildren)
+FROM <http://dbpedia.org/3.9/categories>
+WHERE {
+?sub skos:broader ?super
+} GROUP BY ?super
+
