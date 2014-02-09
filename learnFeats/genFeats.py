@@ -51,6 +51,7 @@ h.parse("../dbpedia-dump/3.8/article_categories_en.nt", format="nt")
 
 tree = {}
 top = URIRef("http://dbpedia.org/resource/Category:Contents")
+subject35 = URIRef("http://www.w3.org/2004/02/skos/core#subject")
 
 recSKOS(g, tree, top)
 
@@ -77,7 +78,7 @@ for ds in datasets:
                               countChildren(tree_o, key, 2),
                               countChildren(tree_o, key, 3),
                               countSiblings(g_o, key),
-                              countArticles(h_o, key),
+                              countArticles(h_o, key, subject35) if ds == "3.5.1" else countArticles(h_o, key),
                               1 if key in tree and countChildren(tree, key, 0) > countChildren(tree_o, key, 0) else 0 ])
 
     # Clean
