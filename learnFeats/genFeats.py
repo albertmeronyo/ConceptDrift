@@ -78,9 +78,39 @@ for ds in datasets:
                               countChildren(tree_o, key, 3),
                               countSiblings(g_o, key),
                               countArticles(h_o, key),
-                              1 if key in tree and countChildren(tree_o, key, 0) > countChildren(tree, key, 0) else 0 ])
+                              1 if key in tree and countChildren(tree, key, 0) > countChildren(tree_o, key, 0) else 0 ])
 
     # Clean
     g_o = None
     h_o = None
     gc.collect()
+
+
+# Load sources                                                                                                                                       
+g_o = Graph()
+h_o = Graph()
+g_o.parse("../dbpedia-dump/3.9/skos_categories_en.nt", format="nt")
+h_o.parse("../dbpedia-dump/3.9/article_categories_en.nt", format="nt")
+
+# Compute tree                                                                                                                                       
+tree_o = {}
+recSKOS(g_o, tree_o, top)
+
+# Write stats on THIS tree, compare last attribute with 3.8 tree                                                                                     
+with open('feats_3.9.csv', 'wb') as csvfile:
+    writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    for key in tree:
+        writer.writerow([ key.encode('utf-8'),
+                          countChildren(tree, key, 0),
+                          countChildren(tree, key, 1),
+                          countChildren(tree, key, 2),
+                          countChildren(tree, key, 3),
+                          countSiblings(g, key),
+                          countArticles(h, key),
+                          1 if key in tree_o and countChildren(tree_o, key, 0) > countChildren(tree, key, 0) else 0 ])
+
+# Clean                                                                                                                                              
+g_o = None
+h_o = None
+gc.collect()
+
