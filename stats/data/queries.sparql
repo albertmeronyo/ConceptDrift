@@ -1,3 +1,57 @@
+# Table for the NL totals, 1849
+
+PREFIX d2s: <http://lod.cedar-project.nl/core/>
+PREFIX ns1: <http://lod.cedar-project.nl/core/DERDE_GEDEELTE/>
+PREFIX cd: <http://lod.cedar-project.nl/resource/VT_1849_07_H3/DERDE_GEDEELTE/>
+
+SELECT DISTINCT ?gender_s ?age_s ?occupation_s ?place_s ?population
+FROM <http://lod.cedar-project.nl/resource/VT_1849_07_H3>
+WHERE {
+?cell d2s:isObservation [ d2s:dimension ?gender ;
+      d2s:dimension ?age ;
+      ns1:Beroepen_of_middelen_van_bestaan ?occupation ;
+      ns1:Gebied ?place ;
+      d2s:populationSize ?population ] .
+
+      ?gender skos:prefLabel ?gender_s .
+      ?age skos:prefLabel ?age_s .
+      ?occupation skos:prefLabel ?occupation_s .
+      ?place skos:prefLabel ?place_s .
+
+      FILTER (?gender IN (cd:Mannelijk, cd:Vrouwelijk, cd:Totaal))
+      FILTER (?age IN (cd:Beneden_de_10_jaren, cd:Van_10_en_11_jaren, cd:Van_12_tot_en_met_15_jaren, cd:Van_16_jaren_en_daarboven, cd:TOTAAL))
+}
+
+
+# Table for the NL totals, 1859
+
+PREFIX d2s: <http://www.data2semantics.org/core/>
+PREFIX ns3: <http://www.data2semantics.org/core/het_Rijk/>
+PREFIX cd: <http://www.data2semantics.org/data/VT_1859_02_H2_marked/het_Rijk/>
+
+SELECT DISTINCT ?gender_s ?factual_s ?age_s ?occupation_s ?class_s ?population
+FROM <http://lod.cedar-project.nl/resource/VT_1859_02_H2>
+WHERE {
+?cell d2s:isObservation [ d2s:dimension ?gender ;
+      d2s:dimension ?factual ;
+      d2s:dimension ?age ;
+      ns3:BEROEPEN_OF_MIDDELEN_VAN_BESTAAN ?occupation ;
+      ns3:BEROEPSKLASSEN ?class ;
+      d2s:populationSize ?population ] .
+
+      ?gender skos:prefLabel ?gender_s .
+      ?factual skos:prefLabel ?factual_s .
+      ?age skos:prefLabel ?age_s .
+      ?occupation skos:prefLabel ?occupation_s .
+      ?class skos:prefLabel ?class_s .
+
+
+      FILTER (?gender IN (cd:M_, cd:V_))
+      FILTER (?factual IN (cd:Werkelijke_bevolking, cd:Feitelijke_bevolking))
+      FILTER (?age IN (cd:PERSONEN_BENEDEN_DE__10_JAREN_GEBOREN_IN_1859-1850, cd:PERSONEN_VAN_10_EN_11_JAREN_GEBOREN_IN_1849-1848, cd:PERSONEN_VAN_12_EN_16_JAREN_GEBOREN_IN_1847-1844, cd:PERSONEN_VAN_16_EN_23_JAREN_GEBOREN_IN_1843-1837, cd:PERSONEN_VAN_23_JAREN_EN_DAARBOVEN_GEBOREN_IN_1836_EN_VROEGERE_JAREN, cd:ALGEMEEN_TOTAAL))
+      
+}
+
 # Table for the NL totals, 1889
 
 PREFIX d2s: <http://www.data2semantics.org/core/>
