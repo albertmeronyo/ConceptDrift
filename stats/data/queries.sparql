@@ -4,7 +4,7 @@ PREFIX d2s: <http://lod.cedar-project.nl/core/>
 PREFIX ns1: <http://lod.cedar-project.nl/core/DERDE_GEDEELTE/>
 PREFIX cd: <http://lod.cedar-project.nl/resource/VT_1849_07_H3/DERDE_GEDEELTE/>
 
-SELECT DISTINCT ?gender_s ?age_s ?occupation_s ?place_s ?population
+SELECT DISTINCT (str(?gender_s) AS ?gender_c) (str(?age_s) AS ?age_c) (str(?occupation_s) AS ?occupation_c) (str(?place_s) AS ?place_c) ?population
 FROM <http://lod.cedar-project.nl/resource/VT_1849_07_H3>
 WHERE {
 ?cell d2s:isObservation [ d2s:dimension ?gender ;
@@ -29,7 +29,7 @@ PREFIX d2s: <http://www.data2semantics.org/core/>
 PREFIX ns3: <http://www.data2semantics.org/core/het_Rijk/>
 PREFIX cd: <http://www.data2semantics.org/data/VT_1859_02_H2_marked/het_Rijk/>
 
-SELECT DISTINCT ?gender_s ?factual_s ?age_s ?occupation_s ?class_s ?population
+SELECT DISTINCT (str(?gender_s) AS ?gender_c) (str(?factual_s) AS ?factual_c) (str(?age_s) AS ?age_c) (str(?occupation_s) AS ?occupation_c) (str(?class_s) AS ?class_c) ?population
 FROM <http://lod.cedar-project.nl/resource/VT_1859_02_H2>
 WHERE {
 ?cell d2s:isObservation [ d2s:dimension ?gender ;
