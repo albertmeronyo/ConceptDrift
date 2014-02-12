@@ -35,7 +35,6 @@ nb <- naiveBayes(train_n[,-7], train_n[,7])
 
 # Prediction
 pred <- predict(nb, eval_n[,-7])
-pred <- round(pred)
 comp <- data.frame(pred, eval_n[,7])
 colnames(comp) <- c("predict", "real")
 
