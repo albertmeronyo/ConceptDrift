@@ -3,8 +3,8 @@ library(e1071)
 library(kernlab)
 
 # Read training and evaluation data
-train <- read.csv("/home/amp/src/ConceptDrift/learnFeats/feats_train.csv", header=TRUE)
-eval <- read.csv("/home/amp/src/ConceptDrift/learnFeats/feats_eval.csv", header=TRUE)
+train <- read.csv("~/src/ConceptDrift/learnFeats/feats_train.csv", header=TRUE)
+eval <- read.csv("~/src/ConceptDrift/learnFeats/feats_eval.csv", header=TRUE)
 
 train_labels <- train[,1]
 eval_labels <- eval[,1]
@@ -37,12 +37,22 @@ neural <- nnet(train_n[,-7], train_n[,7], size = 20, entropy=T, maxit=1000)
 set.seed(5)
 nb <- naiveBayes(train_n[,-7], train_n[,7]) 
 
+# Prediction
+pred <- predict(neural, eval_n[,-7])
+pred <- round(pred)
+comp <- data.frame(pred, eval_n[,7])
+colnames(comp) <- c("predict", "real")
+
+# Error and confusion matrix
+nrow(comp[comp$predict != comp$real,])/nrow(comp)
+table(pred, eval[,7])
+
 # Train model - SVM
 svp <- ksvm(train_n[,7],train_labels,type="C-svc",kernel='polydot',C=10,scaled=c())
 
-
 # Prediction
-pred <- predict(nb, eval_n[,-7])
+pred <- predict(svp, eval_n[,-7])
+pred <- round(pred)
 comp <- data.frame(pred, eval_n[,7])
 colnames(comp) <- c("predict", "real")
 
