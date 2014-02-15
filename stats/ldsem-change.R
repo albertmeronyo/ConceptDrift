@@ -56,7 +56,7 @@ sparql_prefix3 <- "PREFIX d2s: <http://www.data2semantics.org/core/>
 PREFIX cd: <http://www.data2semantics.org/data/BRT_1889_02_T1_marked/Table_1/>
 PREFIX ns1: <http://www.data2semantics.org/core/Table_1/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
-q3 <- paste(sparql_prefix3,"SELECT DISTINCT (str(?age_s) AS ?age_c) (str(?gender_s) AS ?gender_c) (str(?marital_status_s) AS ?marital_status_c) (str(?occ_class_s) AS ?occ_class_c) (str(?occ_subclass_s) AS ?occ_subclass_c) (str(?occupation_s) AS ?occupation_c) ?occupation (REPLACE(?position_s, \"^ +| +$\", \"\") AS ?position_c) ?population
+q3 <- paste(sparql_prefix3,"SELECT DISTINCT (str(?age_s) AS ?age_c) (str(?gender_s) AS ?gender_c) (str(?marital_status_s) AS ?marital_status_c) (str(?occupation_s) AS ?occupation_c) (REPLACE(?position_s, \"^ +| +$\", \"\") AS ?position_c) ?population
 FROM <http://lod.cedar-project.nl/resource/BRT_1889_02_T1>
 WHERE {
            ?cell d2s:isObservation [ d2s:dimension ?gender ;
@@ -69,10 +69,6 @@ WHERE {
            ?position skos:prefLabel ?position_s .
            }
            
-           ?occupation skos:broader ?occ_subclass .
-           ?occ_subclass skos:broader ?occ_class .
-           ?occ_class skos:prefLabel ?occ_class_s .
-           ?occ_subclass skos:prefLabel ?occ_subclass_s .
            ?cell d2s:cell ?cell_s .
            ?age skos:prefLabel ?age_s .
            ?gender skos:prefLabel ?gender_s .
@@ -97,9 +93,9 @@ df49 <- res
 df59 <- res2
 df89 <- res3
 # Remove all rows with NAs
-df49 <- df49[complete.cases(df49),]
-df59 <- df59[complete.cases(df59),]
-df89 <- df89[complete.cases(df89),]
+# df49 <- df49[complete.cases(df49),]
+# df59 <- df59[complete.cases(df59),]
+# df89 <- df89[complete.cases(df89),]
 # Remove possibly duplicated rows
 df49 <- df49[!duplicated(df49),]
 df59 <- df59[!duplicated(df59),]
@@ -119,16 +115,10 @@ df59$population <- as.numeric(df59$population)
 df89$age_c <- as.factor(df89$age_c)
 df89$gender_c <- as.factor(df89$gender_c)
 df89$marital_status_c <- as.factor(df89$marital_status_c)
-df89$occ_class_c <- as.factor(df89$occ_class_c)
-df89$occ_subclass_c <- as.factor(df89$occ_subclass_c)
 df89$occupation_c <- as.factor(df89$occupation_c)
 df89$occupation <- as.factor(df89$occupation)
 df89$position_c <- as.factor(df89$position_c)
 df89$population <- as.numeric(df89$population)
-# Remove columns we won't use
-df89$occ_class_c <- NULL
-df89$occ_subclass_c <- NULL
-df89$occupation <- NULL
 # Remove partial totals
 df49 <- df49[-grep("TOTAAL", df49$occupation_c),]
 df59 <- df59[-grep("TOTAAL", df59$occupation_c),]
