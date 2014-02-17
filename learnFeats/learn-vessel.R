@@ -48,7 +48,7 @@ nrow(comp[comp$predict != comp$real,])/nrow(comp)
 table(pred, eval[,7])
 
 # Train model - SVM
-svp <- ksvm(train_n[,7],train_labels,type="C-svc",kernel='vesseldot',C=100,scaled=c())
+svp <- ksvm(train_n[,7],train_labels,type="C-svc",kernel='besseldot',C=100,scaled=c())
 
 # Prediction
 pred <- predict(svp, eval_n[,-7])
