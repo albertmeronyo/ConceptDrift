@@ -1,5 +1,7 @@
 library(nnet)
 
+source("evaluate.R")
+
 # Read training and evaluation data
 train <- read.csv("~/src/ConceptDrift/learnFeats/feats_train.csv", header=TRUE)
 eval <- read.csv("~/src/ConceptDrift/learnFeats/feats_eval.csv", header=TRUE)
@@ -41,17 +43,5 @@ pred <- round(pred)
 comp <- data.frame(pred, eval_n[,7])
 colnames(comp) <- c("predict", "real")
 
-# Error and confusion matrix
-error <- nrow(comp[comp$predict != comp$real,])/nrow(comp)
-confusion <- table(pred, eval[,7])
-tn <- confusion[1,1]
-fn <- confusion[1,2]
-fp <- confusion[2,1]
-tp <- confusion[2,2]
-precision <- tp / (tp + fp)
-recall <- tp / (tp + fn)
-f <- 2 * (precision * recall) / (precision + recall)
-confusion
-print(paste("precision: " , precision))
-print(paste("recall: ", recall))
-print(paste("f-measure: ", f))
+evaluate(comp)
+
