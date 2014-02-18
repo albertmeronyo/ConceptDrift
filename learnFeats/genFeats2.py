@@ -49,11 +49,24 @@ def countArticles(g, n, dcsubject = URIRef("http://purl.org/dc/terms/subject")):
         arts.append(s)
     return len(arts)
 
+def countArticlesChildren(g, h, n, r,  dcsubject = URIRef("http://purl.org/dc/terms/subject")):
+    # How many articles in this node and r children levels
+    if n not in h:
+        return countArticles(g, n, dcsubject)
+    else:
+        if r > 0:
+            childCounts = []
+            for child in h[n]:
+                childCounts.append(countArticlesChildren(g, h, child, r - 1, dcsubject))
+            return countArticles(g, n, dcsubject) + sum(childCounts)
+        else:
+            return countArticles(g, n, dcsubject)
+
 
 g = Graph()
-g.parse("../dbpedia-dump/3.8/skos_categories_en.nt", format="nt")
+g.parse("../../../dbpedia-dump/3.8/skos_categories_en.nt", format="nt")
 h = Graph()
-h.parse("../dbpedia-dump/3.8/article_categories_en.nt", format="nt")
+h.parse("../../../dbpedia-dump/3.8/article_categories_en.nt", format="nt")
 
 tree = {}
 top = URIRef("http://dbpedia.org/resource/Category:Contents")
@@ -67,8 +80,8 @@ for ds in datasets:
     # Load sources
     g_o = Graph()
     h_o = Graph()
-    g_o.parse("../dbpedia-dump/" + ds + "/skos_categories_en.nt", format="nt")
-    h_o.parse("../dbpedia-dump/" + ds + "/article_categories_en.nt", format="nt")
+    g_o.parse("../../../dbpedia-dump/" + ds + "/skos_categories_en.nt", format="nt")
+    h_o.parse("../../../dbpedia-dump/" + ds + "/article_categories_en.nt", format="nt")
     
     # Compute tree
     tree_o = {}
@@ -78,15 +91,37 @@ for ds in datasets:
     with open('feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         for key in tree_o:
-            writer.writerow([ key.encode('utf-8'), 
-                              countChildren(tree_o, key, 0), 
-                              countChildren(tree_o, key, 1), 
-                              countChildren(tree_o, key, 2),
-                              countChildren(tree_o, key, 3),
-                              countParents(g_o, key),
-                              countSiblings(g_o, key),
-                              countArticles(h_o, key, subject35) if ds == "3.5.1" else countArticles(h_o, key),
-                              0 if key in tree and countChildren(tree, key, 0) == countChildren(tree_o, key, 0) and countParents(g, key) == countParents(g_o, key)  else 1 ])
+            node = key.encode('utf-8')
+            dirChildren = countChildren(tree_o, key, 0)
+            dirChildren1 = countChildren(tree_o, key, 1)
+            dirChildren2 = countChildren(tree_o, key, 2)
+            dirChildren3 = countChildren(tree_o, key, 3)
+            numParents = countParents(g_o, key)
+            numSiblings = countSiblings(g_o, key)
+            dirArticles = countArticles(h_o, key, subject35) if ds == "3.5.1" else countArticles(h_o, key)
+            dirArticlesChildren0 = countArticlesChildren(h_o, tree_o, key, 0, subject35) if ds == "3.5.1" else countArticlesChildren(h_o, tree_o, key, 0)
+            dirArticlesChildren1 = countArticlesChildren(h_o, tree_o, key, 1, subject35) if ds == "3.5.1" else countArticlesChildren(h_o, tree_o, key, 1)
+            dirArticlesChildren2 = countArticlesChildren(h_o, tree_o, key, 2, subject35) if ds == "3.5.1" else countArticlesChildren(h_o, tree_o, key, 2)
+            dirArticlesChildren3 = countArticlesChildren(h_o, tree_o, key, 3, subject35) if ds == "3.5.1" else countArticlesChildren(h_o, tree_o, key, 3)
+            changed = 0 if key in tree and countChildren(tree, key, 0) == countChildren(tree_o, key, 0) and countParents(g, key) == countParents(g_o, key) else 1
+            writer.writerow([ node, 
+                              dirChildren, 
+                              dirChildren1, 
+                              dirChildren2,
+                              dirChildren3,
+                              numParents,
+                              numSiblings,
+                              dirArticles,
+                              dirArticlesChildren0,
+                              dirArticlesChildren1,
+                              dirArticlesChildren2,
+                              dirArticlesChildren3,
+                              dirArticles / dirChildren if dirChildren > 0 else dirArticles,
+                              dirArticlesChildren0 / dirChildren if dirChildren > 0 else dirArticlesChildren0,
+                              dirArticlesChildren1 / dirChildren1 if dirChildren1 > 0 else dirArticlesChildren1,
+                              dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
+                              dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
+                              changed ])
 
     # Clean
     g_o = None
@@ -97,8 +132,8 @@ for ds in datasets:
 # Load sources                                                                                                                                       
 g_o = Graph()
 h_o = Graph()
-g_o.parse("../dbpedia-dump/3.9/skos_categories_en.nt", format="nt")
-h_o.parse("../dbpedia-dump/3.9/article_categories_en.nt", format="nt")
+g_o.parse("../../../dbpedia-dump/3.9/skos_categories_en.nt", format="nt")
+h_o.parse("../../../dbpedia-dump/3.9/article_categories_en.nt", format="nt")
 
 # Compute tree                                                                                                                                       
 tree_o = {}
@@ -108,14 +143,37 @@ recSKOS(g_o, tree_o, top)
 with open('feats_3.9.csv', 'wb') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     for key in tree:
-        writer.writerow([ key.encode('utf-8'),
-                          countChildren(tree, key, 0),
-                          countChildren(tree, key, 1),
-                          countChildren(tree, key, 2),
-                          countChildren(tree, key, 3),
-                          countSiblings(g, key),
-                          countArticles(h, key),
-                          0 if key in tree_o and countChildren(tree_o, key, 0) == countChildren(tree, key, 0) and countParents(g_o, key) == countParents(g, key) else 1 ])
+        node = key.encode('utf-8')
+        dirChildren = countChildren(tree, key, 0)
+        dirChildren1 = countChildren(tree, key, 1)
+        dirChildren2 = countChildren(tree, key, 2)
+        dirChildren3 = countChildren(tree, key, 3)
+        numParents = countParents(g, key)
+        numSiblings = countSiblings(g, key)
+        dirArticles = countArticles(h, key)
+        dirArticlesChildren0 = countArticlesChildren(h, tree, key, 0)
+        dirArticlesChildren1 = countArticlesChildren(h, tree, key, 1)
+        dirArticlesChildren2 = countArticlesChildren(h, tree, key, 2)
+        dirArticlesChildren3 = countArticlesChildren(h, tree, key, 3)
+        changed = 0 if key in tree_o and countChildren(tree_o, key, 0) == countChildren(tree, key, 0) and countParents(g_o, key) == countParents(g, key) else 1
+        writer.writerow([ node,
+                          dirChildren, 
+                          dirChildren1, 
+                          dirChildren2,
+                          dirChildren3,
+                          numParents,
+                          numSiblings,
+                          dirArticles,
+                          dirArticlesChildren0,
+                          dirArticlesChildren1,
+                          dirArticlesChildren2,
+                          dirArticlesChildren3,
+                          dirArticles / dirChildren if dirChildren > 0 else dirArticles,
+                          dirArticlesChildren0 / dirChildren if dirChildren > 0 else dirArticlesChildren0,
+                          dirArticlesChildren1 / dirChildren1 if dirChildren1 > 0 else dirArticlesChildren1,
+                          dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
+                          dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
+                          changed ])
 
 # Clean                                                                                                                                              
 g_o = None
