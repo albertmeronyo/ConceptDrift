@@ -1,0 +1,5 @@
+* Classifiers
+
+- BayesNet: K = 0.25, roc = 0.69
+- SMO w/ Logistic: K = 0.05, roc = 0.68
+- SMO w/ Logistic, Kern exp = 2: K = , roc = 
