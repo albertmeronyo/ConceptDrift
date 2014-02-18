@@ -8,10 +8,6 @@ source("data-pp.R")
 set.seed(4)
 neural <- nnet(trainN[,-7], trainN[,7], size = 8, entropy = T, decaying = 0, maxit = 1000)
 
-# Train model - Naive Bayes
-# set.seed(5)
-# nb <- naiveBayes(trainN[,-7], trainN[,7]) 
-
 # Prediction
 pred <- predict(neural, evalN[,-7])
 pred <- round(pred)
