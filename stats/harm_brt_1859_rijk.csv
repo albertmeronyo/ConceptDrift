@@ -1,0 +1,1491 @@
+"gender_c" "age_c" "occupation_c" "population"
+"1" "Male" "16 to 23 years" "Aannemers" 27
+"2" "Male" "Older than 23" "Aannemers" 1149
+"3" "Male" "16 to 23 years" "Aardappelenmeelfabriekanten" 10
+"4" "Male" "Older than 23" "Aardappelenmeelfabriekanten" 26
+"5" "Male" "Younger than 10" "Aardewerk- en porceleinfabriekanten en werklieden" 30
+"6" "Male" "10 to 11" "Aardewerk- en porceleinfabriekanten en werklieden" 97
+"7" "Female" "10 to 11" "Aardewerk- en porceleinfabriekanten en werklieden" 32
+"8" "Male" "12 to 15" "Aardewerk- en porceleinfabriekanten en werklieden" 282
+"9" "Female" "12 to 15" "Aardewerk- en porceleinfabriekanten en werklieden" 102
+"10" "Male" "16 to 23 years" "Aardewerk- en porceleinfabriekanten en werklieden" 384
+"11" "Female" "16 to 23 years" "Aardewerk- en porceleinfabriekanten en werklieden" 238
+"12" "Male" "Older than 23" "Aardewerk- en porceleinfabriekanten en werklieden" 709
+"13" "Female" "Older than 23" "Aardewerk- en porceleinfabriekanten en werklieden" 146
+"14" "Male" "16 to 23 years" "Advokaten" 31
+"15" "Male" "Older than 23" "Advokaten" 1177
+"16" "Male" "Older than 23" "Aluinfabriekanten" 2
+"17" "Male" "12 to 15" "Ambtenaren. gemeente" 6
+"18" "Male" "16 to 23 years" "Ambtenaren. gemeente" 118
+"19" "Male" "Older than 23" "Ambtenaren. gemeente" 8671
+"20" "Female" "Older than 23" "Ambtenaren. gemeente" 8
+"21" "Male" "16 to 23 years" "Ambtenaren. niet genoemde" 7
+"22" "Male" "Older than 23" "Ambtenaren. niet genoemde" 403
+"23" "Male" "12 to 15" "Ambtenaren. provinciale" 2
+"24" "Male" "16 to 23 years" "Ambtenaren. provinciale" 36
+"25" "Male" "Older than 23" "Ambtenaren. provinciale" 1043
+"26" "Male" "12 to 15" "Ambtenaren. rijks" 6
+"27" "Male" "16 to 23 years" "Ambtenaren. rijks" 214
+"28" "Male" "Older than 23" "Ambtenaren. rijks" 10119
+"29" "Female" "Older than 23" "Ambtenaren. rijks" 8
+"30" "Male" "10 to 11" "Apothekers, droogisten en scheikundigen" 12
+"31" "Male" "12 to 15" "Apothekers, droogisten en scheikundigen" 241
+"32" "Male" "16 to 23 years" "Apothekers, droogisten en scheikundigen" 718
+"33" "Male" "Older than 23" "Apothekers, droogisten en scheikundigen" 3399
+"34" "Female" "Older than 23" "Apothekers, droogisten en scheikundigen" 30
+"35" "Male" "Younger than 10" "Arbeiders, daglooners" 160
+"36" "Female" "Younger than 10" "Arbeiders, daglooners" 162
+"37" "Male" "10 to 11" "Arbeiders, daglooners" 594
+"38" "Female" "10 to 11" "Arbeiders, daglooners" 297
+"39" "Male" "12 to 15" "Arbeiders, daglooners" 14041
+"40" "Female" "12 to 15" "Arbeiders, daglooners" 4369
+"41" "Male" "16 to 23 years" "Arbeiders, daglooners" 54025
+"42" "Female" "16 to 23 years" "Arbeiders, daglooners" 14858
+"43" "Male" "Older than 23" "Arbeiders, daglooners" 312523
+"44" "Female" "Older than 23" "Arbeiders, daglooners" 75107
+"45" "Male" "12 to 15" "Asch-, bagger- en vuilnislieden" 14
+"46" "Male" "16 to 23 years" "Asch-, bagger- en vuilnislieden" 64
+"47" "Male" "Older than 23" "Asch-, bagger- en vuilnislieden" 744
+"48" "Male" "12 to 15" "Azijnstokers, kunstazijnmakers" 2
+"49" "Male" "16 to 23 years" "Azijnstokers, kunstazijnmakers" 42
+"50" "Male" "Older than 23" "Azijnstokers, kunstazijnmakers" 248
+"51" "Female" "Older than 23" "Azijnstokers, kunstazijnmakers" 4
+"52" "Male" "10 to 11" "Baardscheerders, kappers en paruikenmakers" 6
+"53" "Male" "12 to 15" "Baardscheerders, kappers en paruikenmakers" 231
+"54" "Male" "16 to 23 years" "Baardscheerders, kappers en paruikenmakers" 663
+"55" "Male" "Older than 23" "Baardscheerders, kappers en paruikenmakers" 4175
+"56" "Female" "Older than 23" "Baardscheerders, kappers en paruikenmakers" 62
+"57" "Male" "Older than 23" "Badstoofhouders" 36
+"58" "Female" "Older than 23" "Badstoofhouders" 10
+"59" "Female" "16 to 23 years" "Bakers" 2
+"60" "Female" "Older than 23" "Bakers" 278
+"61" "Male" "16 to 23 years" "Bankiers, geldwisselaars, kassiers" 9
+"62" "Male" "Older than 23" "Bankiers, geldwisselaars, kassiers" 433
+"63" "Female" "Older than 23" "Bankiers, geldwisselaars, kassiers" 2
+"64" "Male" "10 to 11" "Bedden- en matrassenmakers, behangers en stoffeerders" 8
+"65" "Male" "12 to 15" "Bedden- en matrassenmakers, behangers en stoffeerders" 326
+"66" "Female" "12 to 15" "Bedden- en matrassenmakers, behangers en stoffeerders" 2
+"67" "Male" "16 to 23 years" "Bedden- en matrassenmakers, behangers en stoffeerders" 777
+"68" "Male" "Older than 23" "Bedden- en matrassenmakers, behangers en stoffeerders" 2974
+"69" "Female" "Older than 23" "Bedden- en matrassenmakers, behangers en stoffeerders" 58
+"70" "Male" "Younger than 10" "Beeldhouwers, lofwerksnijders" 2
+"71" "Male" "10 to 11" "Beeldhouwers, lofwerksnijders" 8
+"72" "Male" "12 to 15" "Beeldhouwers, lofwerksnijders" 125
+"73" "Male" "16 to 23 years" "Beeldhouwers, lofwerksnijders" 389
+"74" "Male" "Older than 23" "Beeldhouwers, lofwerksnijders" 659
+"75" "Male" "Older than 23" "Been- en ivoorbranders" 2
+"76" "Male" "Older than 23" "Beenzwartfabriekanten" 8
+"77" "Male" "16 to 23 years" "Behangseldrukkers" 2
+"78" "Male" "Older than 23" "Behangseldrukkers" 8
+"79" "Male" "16 to 23 years" "Beleenbankhouders, inbrengers" 2
+"80" "Male" "Older than 23" "Beleenbankhouders, inbrengers" 192
+"81" "Female" "Older than 23" "Beleenbankhouders, inbrengers" 74
+"82" "Female" "16 to 23 years" "Besteders" 3
+"83" "Male" "Older than 23" "Besteders" 100
+"84" "Female" "Older than 23" "Besteders" 238
+"85" "Female" "10 to 11" "Bestellers, expediteurs, factoors, voetboden" 2
+"86" "Male" "12 to 15" "Bestellers, expediteurs, factoors, voetboden" 8
+"87" "Male" "16 to 23 years" "Bestellers, expediteurs, factoors, voetboden" 114
+"88" "Female" "16 to 23 years" "Bestellers, expediteurs, factoors, voetboden" 2
+"89" "Male" "Older than 23" "Bestellers, expediteurs, factoors, voetboden" 2704
+"90" "Female" "Older than 23" "Bestellers, expediteurs, factoors, voetboden" 134
+"91" "Male" "Younger than 10" "Bezembinders, rietboeren, rijswerkers" 2
+"92" "Male" "10 to 11" "Bezembinders, rietboeren, rijswerkers" 4
+"93" "Female" "10 to 11" "Bezembinders, rietboeren, rijswerkers" 2
+"94" "Male" "12 to 15" "Bezembinders, rietboeren, rijswerkers" 60
+"95" "Female" "12 to 15" "Bezembinders, rietboeren, rijswerkers" 2
+"96" "Male" "16 to 23 years" "Bezembinders, rietboeren, rijswerkers" 154
+"97" "Female" "16 to 23 years" "Bezembinders, rietboeren, rijswerkers" 18
+"98" "Male" "Older than 23" "Bezembinders, rietboeren, rijswerkers" 854
+"99" "Female" "Older than 23" "Bezembinders, rietboeren, rijswerkers" 104
+"100" "Male" "12 to 15" "Bierbrouwers, bierstekers" 22
+"101" "Male" "16 to 23 years" "Bierbrouwers, bierstekers" 240
+"102" "Male" "Older than 23" "Bierbrouwers, bierstekers" 2075
+"103" "Female" "Older than 23" "Bierbrouwers, bierstekers" 76
+"104" "Male" "12 to 15" "Bijenhouders" 6
+"105" "Male" "16 to 23 years" "Bijenhouders" 10
+"106" "Male" "Older than 23" "Bijenhouders" 237
+"107" "Male" "Older than 23" "Bijenkorvenmakers" 2
+"108" "Male" "16 to 23 years" "Billard- en kaatsballenmakers" 8
+"109" "Male" "Older than 23" "Billard- en kaatsballenmakers" 42
+"110" "Male" "10 to 11" "Bleekers" 8
+"111" "Male" "12 to 15" "Bleekers" 81
+"112" "Female" "12 to 15" "Bleekers" 12
+"113" "Male" "16 to 23 years" "Bleekers" 371
+"114" "Female" "16 to 23 years" "Bleekers" 135
+"115" "Male" "Older than 23" "Bleekers" 2197
+"116" "Female" "Older than 23" "Bleekers" 722
+"117" "Male" "10 to 11" "Blikwerkers en lampenmakers" 6
+"118" "Male" "12 to 15" "Blikwerkers en lampenmakers" 76
+"119" "Male" "16 to 23 years" "Blikwerkers en lampenmakers" 158
+"120" "Male" "Older than 23" "Blikwerkers en lampenmakers" 714
+"121" "Female" "Older than 23" "Blikwerkers en lampenmakers" 6
+"122" "Male" "Younger than 10" "Bloemisten, boomkweekers, tuiniers, warmoezeniers" 5
+"123" "Male" "10 to 11" "Bloemisten, boomkweekers, tuiniers, warmoezeniers" 70
+"124" "Male" "12 to 15" "Bloemisten, boomkweekers, tuiniers, warmoezeniers" 1007
+"125" "Female" "12 to 15" "Bloemisten, boomkweekers, tuiniers, warmoezeniers" 18
+"126" "Male" "16 to 23 years" "Bloemisten, boomkweekers, tuiniers, warmoezeniers" 3426
+"127" "Female" "16 to 23 years" "Bloemisten, boomkweekers, tuiniers, warmoezeniers" 68
+"128" "Male" "Older than 23" "Bloemisten, boomkweekers, tuiniers, warmoezeniers" 17774
+"129" "Female" "Older than 23" "Bloemisten, boomkweekers, tuiniers, warmoezeniers" 924
+"130" "Male" "16 to 23 years" "Blok-, mast- en pompenmakers" 1
+"131" "Male" "Older than 23" "Blok-, mast- en pompenmakers" 66
+"132" "Male" "10 to 11" "Boek- en dagbladdrukkers en verkoopers" 64
+"133" "Male" "12 to 15" "Boek- en dagbladdrukkers en verkoopers" 736
+"134" "Male" "16 to 23 years" "Boek- en dagbladdrukkers en verkoopers" 1639
+"135" "Male" "Older than 23" "Boek- en dagbladdrukkers en verkoopers" 4686
+"136" "Female" "Older than 23" "Boek- en dagbladdrukkers en verkoopers" 66
+"137" "Male" "Younger than 10" "Boekbinders" 4
+"138" "Male" "10 to 11" "Boekbinders" 68
+"139" "Male" "12 to 15" "Boekbinders" 630
+"140" "Male" "16 to 23 years" "Boekbinders" 990
+"141" "Male" "Older than 23" "Boekbinders" 1948
+"142" "Female" "Older than 23" "Boekbinders" 14
+"143" "Male" "10 to 11" "Bontwerkers" 2
+"144" "Female" "10 to 11" "Bontwerkers" 7
+"145" "Male" "12 to 15" "Bontwerkers" 18
+"146" "Female" "12 to 15" "Bontwerkers" 22
+"147" "Male" "16 to 23 years" "Bontwerkers" 65
+"148" "Female" "16 to 23 years" "Bontwerkers" 28
+"149" "Male" "Older than 23" "Bontwerkers" 306
+"150" "Female" "Older than 23" "Bontwerkers" 24
+"151" "Male" "10 to 11" "Bordpapier (werkers in), doozen- en kaartenmakers" 2
+"152" "Male" "12 to 15" "Bordpapier (werkers in), doozen- en kaartenmakers" 16
+"153" "Female" "12 to 15" "Bordpapier (werkers in), doozen- en kaartenmakers" 6
+"154" "Male" "16 to 23 years" "Bordpapier (werkers in), doozen- en kaartenmakers" 26
+"155" "Female" "16 to 23 years" "Bordpapier (werkers in), doozen- en kaartenmakers" 10
+"156" "Male" "Older than 23" "Bordpapier (werkers in), doozen- en kaartenmakers" 219
+"157" "Female" "Older than 23" "Bordpapier (werkers in), doozen- en kaartenmakers" 14
+"158" "Male" "Younger than 10" "Borstelmakers" 4
+"159" "Male" "10 to 11" "Borstelmakers" 8
+"160" "Male" "12 to 15" "Borstelmakers" 130
+"161" "Male" "16 to 23 years" "Borstelmakers" 404
+"162" "Female" "16 to 23 years" "Borstelmakers" 2
+"163" "Male" "Older than 23" "Borstelmakers" 1357
+"164" "Female" "Older than 23" "Borstelmakers" 38
+"165" "Male" "12 to 15" "Bouwmeesters" 8
+"166" "Male" "16 to 23 years" "Bouwmeesters" 86
+"167" "Male" "Older than 23" "Bouwmeesters" 391
+"168" "Male" "12 to 15" "Branders en stokers van siroop, likeuren, sterke dranken" 68
+"169" "Male" "16 to 23 years" "Branders en stokers van siroop, likeuren, sterke dranken" 364
+"170" "Male" "Older than 23" "Branders en stokers van siroop, likeuren, sterke dranken" 3179
+"171" "Female" "Older than 23" "Branders en stokers van siroop, likeuren, sterke dranken" 22
+"172" "Male" "12 to 15" "Brandspuitmakers" 14
+"173" "Male" "Older than 23" "Brandspuitmakers" 10
+"174" "Male" "12 to 15" "Breuk- en draagbanden-, keurslijfmakers" 2
+"175" "Female" "12 to 15" "Breuk- en draagbanden-, keurslijfmakers" 6
+"176" "Male" "16 to 23 years" "Breuk- en draagbanden-, keurslijfmakers" 4
+"177" "Female" "16 to 23 years" "Breuk- en draagbanden-, keurslijfmakers" 20
+"178" "Male" "Older than 23" "Breuk- en draagbanden-, keurslijfmakers" 90
+"179" "Female" "Older than 23" "Breuk- en draagbanden-, keurslijfmakers" 51
+"180" "Male" "16 to 23 years" "Brillenslijpers en verkoopers" 8
+"181" "Male" "Older than 23" "Brillenslijpers en verkoopers" 52
+"182" "Male" "Younger than 10" "Brood-, kleingoed-, koek- en banketbakkers" 6
+"183" "Female" "Younger than 10" "Brood-, kleingoed-, koek- en banketbakkers" 2
+"184" "Male" "10 to 11" "Brood-, kleingoed-, koek- en banketbakkers" 63
+"185" "Male" "12 to 15" "Brood-, kleingoed-, koek- en banketbakkers" 2171
+"186" "Female" "12 to 15" "Brood-, kleingoed-, koek- en banketbakkers" 6
+"187" "Male" "16 to 23 years" "Brood-, kleingoed-, koek- en banketbakkers" 7614
+"188" "Female" "16 to 23 years" "Brood-, kleingoed-, koek- en banketbakkers" 17
+"189" "Male" "Older than 23" "Brood-, kleingoed-, koek- en banketbakkers" 26777
+"190" "Female" "Older than 23" "Brood-, kleingoed-, koek- en banketbakkers" 784
+"191" "Male" "12 to 15" "Broodslijters" 6
+"192" "Male" "16 to 23 years" "Broodslijters" 40
+"193" "Male" "Older than 23" "Broodslijters" 130
+"194" "Female" "Older than 23" "Broodslijters" 6
+"195" "Male" "Younger than 10" "Chicoreifabriekanten en werklieden" 2
+"196" "Male" "10 to 11" "Chicoreifabriekanten en werklieden" 2
+"197" "Female" "10 to 11" "Chicoreifabriekanten en werklieden" 2
+"198" "Male" "12 to 15" "Chicoreifabriekanten en werklieden" 10
+"199" "Male" "16 to 23 years" "Chicoreifabriekanten en werklieden" 32
+"200" "Male" "Older than 23" "Chicoreifabriekanten en werklieden" 162
+"201" "Female" "Older than 23" "Chicoreifabriekanten en werklieden" 10
+"202" "Male" "12 to 15" "Chocoladefabriekanten" 2
+"203" "Male" "16 to 23 years" "Chocoladefabriekanten" 12
+"204" "Male" "Older than 23" "Chocoladefabriekanten" 64
+"205" "Male" "12 to 15" "Dagbladrondbrengers" 14
+"206" "Male" "16 to 23 years" "Dagbladrondbrengers" 30
+"207" "Female" "16 to 23 years" "Dagbladrondbrengers" 4
+"208" "Male" "Older than 23" "Dagbladrondbrengers" 150
+"209" "Female" "Older than 23" "Dagbladrondbrengers" 32
+"210" "Male" "12 to 15" "Dagbladschrijvers, letterkundigen" 2
+"211" "Male" "16 to 23 years" "Dagbladschrijvers, letterkundigen" 1
+"212" "Male" "Older than 23" "Dagbladschrijvers, letterkundigen" 163
+"213" "Male" "16 to 23 years" "Debiteurs en gedelegeerden in de loterij" 6
+"214" "Male" "Older than 23" "Debiteurs en gedelegeerden in de loterij" 420
+"215" "Female" "Older than 23" "Debiteurs en gedelegeerden in de loterij" 16
+"216" "Male" "10 to 11" "Dekkers (lei-, pannen-, riet-, enz.)" 4
+"217" "Male" "12 to 15" "Dekkers (lei-, pannen-, riet-, enz.)" 116
+"218" "Male" "16 to 23 years" "Dekkers (lei-, pannen-, riet-, enz.)" 460
+"219" "Male" "Older than 23" "Dekkers (lei-, pannen-, riet-, enz.)" 3892
+"220" "Female" "Older than 23" "Dekkers (lei-, pannen-, riet-, enz.)" 10
+"221" "Male" "16 to 23 years" "Deurwaarders" 2
+"222" "Male" "Older than 23" "Deurwaarders" 804
+"223" "Male" "Younger than 10" "Dienstboden, portiers enz." 43
+"224" "Female" "Younger than 10" "Dienstboden, portiers enz." 104
+"225" "Male" "10 to 11" "Dienstboden, portiers enz." 154
+"226" "Female" "10 to 11" "Dienstboden, portiers enz." 667
+"227" "Male" "12 to 15" "Dienstboden, portiers enz." 3938
+"228" "Female" "12 to 15" "Dienstboden, portiers enz." 17065
+"229" "Male" "16 to 23 years" "Dienstboden, portiers enz." 18156
+"230" "Female" "16 to 23 years" "Dienstboden, portiers enz." 105182
+"231" "Male" "Older than 23" "Dienstboden, portiers enz." 39252
+"232" "Female" "Older than 23" "Dienstboden, portiers enz." 144415
+"233" "Male" "12 to 15" "Doodgravers en bedienaars van begrafenissen" 2
+"234" "Male" "16 to 23 years" "Doodgravers en bedienaars van begrafenissen" 23
+"235" "Male" "Older than 23" "Doodgravers en bedienaars van begrafenissen" 1670
+"236" "Female" "Older than 23" "Doodgravers en bedienaars van begrafenissen" 4
+"237" "Male" "16 to 23 years" "Eendenkooihouders" 2
+"238" "Male" "Older than 23" "Eendenkooihouders" 28
+"239" "Male" "Older than 23" "Evangelisten" 5
+"240" "Male" "Older than 23" "Fabriekanten van friesch-groen" 2
+"241" "Male" "Older than 23" "Fabriekanten van kunstmest" 2
+"242" "Male" "12 to 15" "Fabriekanten van verfwaren" 6
+"243" "Male" "16 to 23 years" "Fabriekanten van verfwaren" 12
+"244" "Male" "Older than 23" "Fabriekanten van verfwaren" 16
+"245" "Male" "10 to 11" "Fabriekanten van verschillenden aard en werklieden" 2
+"246" "Female" "10 to 11" "Fabriekanten van verschillenden aard en werklieden" 22
+"247" "Male" "12 to 15" "Fabriekanten van verschillenden aard en werklieden" 23
+"248" "Female" "12 to 15" "Fabriekanten van verschillenden aard en werklieden" 38
+"249" "Male" "16 to 23 years" "Fabriekanten van verschillenden aard en werklieden" 57
+"250" "Female" "16 to 23 years" "Fabriekanten van verschillenden aard en werklieden" 120
+"251" "Male" "Older than 23" "Fabriekanten van verschillenden aard en werklieden" 879
+"252" "Female" "Older than 23" "Fabriekanten van verschillenden aard en werklieden" 134
+"253" "Male" "12 to 15" "Fineerzagers" 2
+"254" "Male" "16 to 23 years" "Fineerzagers" 4
+"255" "Male" "Older than 23" "Fineerzagers" 42
+"256" "Male" "12 to 15" "Gaarkeukenhouders" 14
+"257" "Male" "16 to 23 years" "Gaarkeukenhouders" 82
+"258" "Male" "Older than 23" "Gaarkeukenhouders" 593
+"259" "Female" "Older than 23" "Gaarkeukenhouders" 72
+"260" "Male" "12 to 15" "Galanteriewarenhandelaars en verkoopers" 12
+"261" "Female" "12 to 15" "Galanteriewarenhandelaars en verkoopers" 4
+"262" "Male" "16 to 23 years" "Galanteriewarenhandelaars en verkoopers" 67
+"263" "Female" "16 to 23 years" "Galanteriewarenhandelaars en verkoopers" 5
+"264" "Male" "Older than 23" "Galanteriewarenhandelaars en verkoopers" 514
+"265" "Female" "Older than 23" "Galanteriewarenhandelaars en verkoopers" 91
+"266" "Male" "12 to 15" "Garen- en bandwinkeliers" 2
+"267" "Male" "16 to 23 years" "Garen- en bandwinkeliers" 8
+"268" "Female" "16 to 23 years" "Garen- en bandwinkeliers" 32
+"269" "Male" "Older than 23" "Garen- en bandwinkeliers" 371
+"270" "Female" "Older than 23" "Garen- en bandwinkeliers" 353
+"271" "Male" "12 to 15" "Garentwijnders" 2
+"272" "Male" "16 to 23 years" "Garentwijnders" 2
+"273" "Male" "Older than 23" "Garentwijnders" 6
+"274" "Female" "Older than 23" "Garentwijnders" 4
+"275" "Male" "12 to 15" "Gazfabriekanten" 2
+"276" "Male" "16 to 23 years" "Gazfabriekanten" 59
+"277" "Male" "Older than 23" "Gazfabriekanten" 412
+"278" "Male" "12 to 15" "Gazvitters" 4
+"279" "Male" "16 to 23 years" "Gazvitters" 4
+"280" "Male" "Older than 23" "Gazvitters" 75
+"281" "Male" "12 to 15" "Geneesheeren, heelmeesters, officieren van gezondheid, vroedmeesters, vrouwen, oog- en tandmeesters" 2
+"282" "Male" "16 to 23 years" "Geneesheeren, heelmeesters, officieren van gezondheid, vroedmeesters, vrouwen, oog- en tandmeesters" 109
+"283" "Female" "16 to 23 years" "Geneesheeren, heelmeesters, officieren van gezondheid, vroedmeesters, vrouwen, oog- en tandmeesters" 10
+"284" "Male" "Older than 23" "Geneesheeren, heelmeesters, officieren van gezondheid, vroedmeesters, vrouwen, oog- en tandmeesters" 5033
+"285" "Female" "Older than 23" "Geneesheeren, heelmeesters, officieren van gezondheid, vroedmeesters, vrouwen, oog- en tandmeesters" 1302
+"286" "Male" "16 to 23 years" "Gepensioneerden (burgerlijke en militaire)" 15
+"287" "Male" "Older than 23" "Gepensioneerden (burgerlijke en militaire)" 11201
+"288" "Female" "Older than 23" "Gepensioneerden (burgerlijke en militaire)" 530
+"289" "Male" "10 to 11" "Geschutgieters, geweermakers" 4
+"290" "Male" "12 to 15" "Geschutgieters, geweermakers" 114
+"291" "Male" "16 to 23 years" "Geschutgieters, geweermakers" 320
+"292" "Female" "16 to 23 years" "Geschutgieters, geweermakers" 4
+"293" "Male" "Older than 23" "Geschutgieters, geweermakers" 687
+"294" "Female" "Older than 23" "Geschutgieters, geweermakers" 2
+"295" "Male" "16 to 23 years" "Gevangenbewaarders en andere beambten in gevangenissen" 1
+"296" "Female" "16 to 23 years" "Gevangenbewaarders en andere beambten in gevangenissen" 2
+"297" "Male" "Older than 23" "Gevangenbewaarders en andere beambten in gevangenissen" 366
+"298" "Female" "Older than 23" "Gevangenbewaarders en andere beambten in gevangenissen" 20
+"299" "Male" "16 to 23 years" "Gezanten van vreemde mogendheden" 1
+"300" "Male" "Older than 23" "Gezanten van vreemde mogendheden" 93
+"301" "Female" "16 to 23 years" "Gezelschapsjufvrouwen" 1
+"302" "Female" "Older than 23" "Gezelschapsjufvrouwen" 24
+"303" "Male" "12 to 15" "Gistverkoopers" 4
+"304" "Male" "16 to 23 years" "Gistverkoopers" 16
+"305" "Male" "Older than 23" "Gistverkoopers" 62
+"306" "Male" "Younger than 10" "Glasblazers" 12
+"307" "Male" "10 to 11" "Glasblazers" 34
+"308" "Female" "10 to 11" "Glasblazers" 2
+"309" "Male" "12 to 15" "Glasblazers" 118
+"310" "Male" "16 to 23 years" "Glasblazers" 210
+"311" "Female" "16 to 23 years" "Glasblazers" 2
+"312" "Male" "Older than 23" "Glasblazers" 412
+"313" "Female" "Older than 23" "Glasblazers" 12
+"314" "Male" "12 to 15" "Godsdienstleeraren en aan de dienst verbonden personen. Israelieten dienstdoende personen" 6
+"315" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Israelieten dienstdoende personen" 6
+"316" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Israelieten dienstdoende personen" 158
+"317" "Female" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Israelieten dienstdoende personen" 20
+"318" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Israelieten rabbijnen" 2
+"319" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Israelieten rabbijnen" 76
+"320" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten dienstdoende personen" 3
+"321" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten dienstdoende personen" 580
+"322" "Female" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten dienstdoende personen" 102
+"323" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten katechiseermeesters" 1
+"324" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten katechiseermeesters" 11
+"325" "Female" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten katechiseermeesters" 1
+"326" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten kweekel. voor het zendelingwerk" 14
+"327" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten kweekel. voor het zendelingwerk" 12
+"328" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten predikanten" 9
+"329" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Protestanten predikanten" 3587
+"330" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken dienstdoende personen" 10
+"331" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken dienstdoende personen" 645
+"332" "Female" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken dienstdoende personen" 122
+"333" "Female" "12 to 15" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken geestelijke zusters" 2
+"334" "Female" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken geestelijke zusters" 183
+"335" "Female" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken geestelijke zusters" 1807
+"336" "Male" "12 to 15" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken kloosterlingen" 16
+"337" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken kloosterlingen" 92
+"338" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken kloosterlingen" 708
+"339" "Male" "16 to 23 years" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken pastoors, kapelaans" 10
+"340" "Male" "Older than 23" "Godsdienstleeraren en aan de dienst verbonden personen. Roomschkatholijken pastoors, kapelaans" 3380
+"341" "Female" "Younger than 10" "Gouddraadtrekkers, passementwerkers" 12
+"342" "Male" "10 to 11" "Gouddraadtrekkers, passementwerkers" 12
+"343" "Female" "10 to 11" "Gouddraadtrekkers, passementwerkers" 14
+"344" "Male" "12 to 15" "Gouddraadtrekkers, passementwerkers" 86
+"345" "Female" "12 to 15" "Gouddraadtrekkers, passementwerkers" 104
+"346" "Male" "16 to 23 years" "Gouddraadtrekkers, passementwerkers" 182
+"347" "Female" "16 to 23 years" "Gouddraadtrekkers, passementwerkers" 266
+"348" "Male" "Older than 23" "Gouddraadtrekkers, passementwerkers" 577
+"349" "Female" "Older than 23" "Gouddraadtrekkers, passementwerkers" 538
+"350" "Male" "12 to 15" "Graanhandelaars" 4
+"351" "Male" "16 to 23 years" "Graanhandelaars" 47
+"352" "Male" "Older than 23" "Graanhandelaars" 625
+"353" "Female" "Older than 23" "Graanhandelaars" 8
+"354" "Male" "12 to 15" "Graveurs op metaal en steen, stempelsnijders" 28
+"355" "Male" "16 to 23 years" "Graveurs op metaal en steen, stempelsnijders" 129
+"356" "Male" "Older than 23" "Graveurs op metaal en steen, stempelsnijders" 478
+"357" "Male" "16 to 23 years" "Griendbazen" 1
+"358" "Male" "Older than 23" "Griendbazen" 5
+"359" "Male" "12 to 15" "Groenten- en fruitverkoopers" 36
+"360" "Female" "12 to 15" "Groenten- en fruitverkoopers" 6
+"361" "Male" "16 to 23 years" "Groenten- en fruitverkoopers" 128
+"362" "Female" "16 to 23 years" "Groenten- en fruitverkoopers" 59
+"363" "Male" "Older than 23" "Groenten- en fruitverkoopers" 1056
+"364" "Female" "Older than 23" "Groenten- en fruitverkoopers" 1564
+"365" "Male" "16 to 23 years" "Grondeigenaars" 6
+"366" "Female" "16 to 23 years" "Grondeigenaars" 2
+"367" "Male" "Older than 23" "Grondeigenaars" 359
+"368" "Female" "Older than 23" "Grondeigenaars" 32
+"369" "Male" "16 to 23 years" "Grossiers en slijters" 17
+"370" "Female" "16 to 23 years" "Grossiers en slijters" 2
+"371" "Male" "Older than 23" "Grossiers en slijters" 1036
+"372" "Female" "Older than 23" "Grossiers en slijters" 155
+"373" "Male" "10 to 11" "Grutters- en kruideniers" 4
+"374" "Male" "12 to 15" "Grutters- en kruideniers" 122
+"375" "Male" "16 to 23 years" "Grutters- en kruideniers" 587
+"376" "Female" "16 to 23 years" "Grutters- en kruideniers" 6
+"377" "Male" "Older than 23" "Grutters- en kruideniers" 4967
+"378" "Female" "Older than 23" "Grutters- en kruideniers" 716
+"379" "Male" "16 to 23 years" "Haarkammenmakers" 6
+"380" "Male" "Older than 23" "Haarkammenmakers" 12
+"381" "Male" "12 to 15" "Haarwerkers" 1
+"382" "Male" "16 to 23 years" "Haarwerkers" 12
+"383" "Male" "Older than 23" "Haarwerkers" 108
+"384" "Female" "Older than 23" "Haarwerkers" 4
+"385" "Male" "12 to 15" "Handelsleerlingen" 28
+"386" "Male" "16 to 23 years" "Handelsleerlingen" 104
+"387" "Male" "Older than 23" "Handelsleerlingen" 41
+"388" "Male" "12 to 15" "Handelsreizigers" 4
+"389" "Male" "16 to 23 years" "Handelsreizigers" 163
+"390" "Male" "Older than 23" "Handelsreizigers" 1101
+"391" "Female" "Older than 23" "Handelsreizigers" 16
+"392" "Male" "12 to 15" "Handschoenmakers" 8
+"393" "Male" "16 to 23 years" "Handschoenmakers" 22
+"394" "Female" "16 to 23 years" "Handschoenmakers" 4
+"395" "Male" "Older than 23" "Handschoenmakers" 63
+"396" "Female" "Older than 23" "Handschoenmakers" 22
+"397" "Male" "Older than 23" "Haven- en bakenmeesters" 153
+"398" "Male" "Older than 23" "Heemraden en verdere ambtenaren bij de waterschappen" 266
+"399" "Male" "16 to 23 years" "Heetmaaijers" 1
+"400" "Male" "16 to 23 years" "Hengstensnijders" 1
+"401" "Male" "Older than 23" "Hengstensnijders" 20
+"402" "Female" "Older than 23" "Hengstensnijders" 2
+"403" "Male" "10 to 11" "Hennep- en vlasbereiders" 6
+"404" "Male" "12 to 15" "Hennep- en vlasbereiders" 184
+"405" "Female" "12 to 15" "Hennep- en vlasbereiders" 104
+"406" "Male" "16 to 23 years" "Hennep- en vlasbereiders" 577
+"407" "Female" "16 to 23 years" "Hennep- en vlasbereiders" 350
+"408" "Male" "Older than 23" "Hennep- en vlasbereiders" 2071
+"409" "Female" "Older than 23" "Hennep- en vlasbereiders" 1160
+"410" "Male" "12 to 15" "Herbergiers-, kasteleins- en koffijhuishouders" 6
+"411" "Male" "16 to 23 years" "Herbergiers-, kasteleins- en koffijhuishouders" 104
+"412" "Female" "16 to 23 years" "Herbergiers-, kasteleins- en koffijhuishouders" 16
+"413" "Male" "Older than 23" "Herbergiers-, kasteleins- en koffijhuishouders" 7379
+"414" "Female" "Older than 23" "Herbergiers-, kasteleins- en koffijhuishouders" 2052
+"415" "Male" "Younger than 10" "Herders, hengstenhouders en veehoeders" 22
+"416" "Male" "10 to 11" "Herders, hengstenhouders en veehoeders" 53
+"417" "Female" "10 to 11" "Herders, hengstenhouders en veehoeders" 4
+"418" "Male" "12 to 15" "Herders, hengstenhouders en veehoeders" 1020
+"419" "Female" "12 to 15" "Herders, hengstenhouders en veehoeders" 25
+"420" "Male" "16 to 23 years" "Herders, hengstenhouders en veehoeders" 1137
+"421" "Female" "16 to 23 years" "Herders, hengstenhouders en veehoeders" 36
+"422" "Male" "Older than 23" "Herders, hengstenhouders en veehoeders" 2526
+"423" "Female" "Older than 23" "Herders, hengstenhouders en veehoeders" 76
+"424" "Male" "Younger than 10" "Hoeden-, petten- en stroohoedenmakers" 2
+"425" "Male" "10 to 11" "Hoeden-, petten- en stroohoedenmakers" 6
+"426" "Female" "10 to 11" "Hoeden-, petten- en stroohoedenmakers" 1
+"427" "Male" "12 to 15" "Hoeden-, petten- en stroohoedenmakers" 194
+"428" "Female" "12 to 15" "Hoeden-, petten- en stroohoedenmakers" 88
+"429" "Male" "16 to 23 years" "Hoeden-, petten- en stroohoedenmakers" 515
+"430" "Female" "16 to 23 years" "Hoeden-, petten- en stroohoedenmakers" 332
+"431" "Male" "Older than 23" "Hoeden-, petten- en stroohoedenmakers" 2269
+"432" "Female" "Older than 23" "Hoeden-, petten- en stroohoedenmakers" 684
+"433" "Male" "16 to 23 years" "Hoogleeraren aan hoogescholen, seminarien enz." 9
+"434" "Male" "Older than 23" "Hoogleeraren aan hoogescholen, seminarien enz." 415
+"435" "Male" "12 to 15" "Houtenmatenmakers" 2
+"436" "Male" "16 to 23 years" "Houtenmatenmakers" 2
+"437" "Male" "Older than 23" "Houtenmatenmakers" 2
+"438" "Male" "16 to 23 years" "Houthakkers" 28
+"439" "Male" "Older than 23" "Houthakkers" 107
+"440" "Male" "16 to 23 years" "Houtvletters" 10
+"441" "Male" "Older than 23" "Houtvletters" 128
+"442" "Male" "10 to 11" "Houtzaagmolenaars, houtzagers, houtverkoopers" 4
+"443" "Male" "12 to 15" "Houtzaagmolenaars, houtzagers, houtverkoopers" 214
+"444" "Male" "16 to 23 years" "Houtzaagmolenaars, houtzagers, houtverkoopers" 1069
+"445" "Male" "Older than 23" "Houtzaagmolenaars, houtzagers, houtverkoopers" 4831
+"446" "Female" "Older than 23" "Houtzaagmolenaars, houtzagers, houtverkoopers" 24
+"447" "Male" "Older than 23" "Huisbewaarders" 3
+"448" "Female" "Older than 23" "Huisbewaarders" 4
+"449" "Female" "16 to 23 years" "Huishoudsters" 10
+"450" "Female" "Older than 23" "Huishoudsters" 61
+"451" "Male" "Younger than 10" "Huisleerlingen" 1572
+"452" "Female" "Younger than 10" "Huisleerlingen" 1896
+"453" "Male" "10 to 11" "Huisleerlingen" 432
+"454" "Female" "10 to 11" "Huisleerlingen" 720
+"455" "Male" "12 to 15" "Huisleerlingen" 945
+"456" "Female" "12 to 15" "Huisleerlingen" 1223
+"457" "Male" "16 to 23 years" "Huisleerlingen" 605
+"458" "Female" "16 to 23 years" "Huisleerlingen" 605
+"459" "Male" "Older than 23" "Huisleerlingen" 36
+"460" "Female" "Older than 23" "Huisleerlingen" 34
+"461" "Female" "12 to 15" "Huisopvoeders" 1
+"462" "Male" "16 to 23 years" "Huisopvoeders" 7
+"463" "Female" "16 to 23 years" "Huisopvoeders" 15
+"464" "Male" "Older than 23" "Huisopvoeders" 4
+"465" "Female" "Older than 23" "Huisopvoeders" 48
+"466" "Male" "16 to 23 years" "IJkmeesters" 2
+"467" "Male" "Older than 23" "IJkmeesters" 54
+"468" "Male" "10 to 11" "IJzer- en kagchelverkoopers" 2
+"469" "Male" "12 to 15" "IJzer- en kagchelverkoopers" 42
+"470" "Male" "16 to 23 years" "IJzer- en kagchelverkoopers" 102
+"471" "Male" "Older than 23" "IJzer- en kagchelverkoopers" 497
+"472" "Female" "Older than 23" "IJzer- en kagchelverkoopers" 10
+"473" "Male" "12 to 15" "IJzer- en koperdraaijers" 10
+"474" "Male" "16 to 23 years" "IJzer- en koperdraaijers" 58
+"475" "Male" "Older than 23" "IJzer- en koperdraaijers" 164
+"476" "Male" "10 to 11" "IJzergieters" 4
+"477" "Male" "12 to 15" "IJzergieters" 70
+"478" "Male" "16 to 23 years" "IJzergieters" 375
+"479" "Male" "Older than 23" "IJzergieters" 1005
+"480" "Female" "Older than 23" "IJzergieters" 4
+"481" "Male" "12 to 15" "Ingenieurs en verdere ambtenaren van den waterstaat" 2
+"482" "Male" "16 to 23 years" "Ingenieurs en verdere ambtenaren van den waterstaat" 34
+"483" "Male" "Older than 23" "Ingenieurs en verdere ambtenaren van den waterstaat" 609
+"484" "Male" "Older than 23" "Inktfabriekanten" 4
+"485" "Male" "Older than 23" "Inleggers van levensbehoeften" 10
+"486" "Male" "12 to 15" "Jagers" 2
+"487" "Male" "16 to 23 years" "Jagers" 16
+"488" "Male" "Older than 23" "Jagers" 305
+"489" "Male" "Older than 23" "Jagthagelgieters" 8
+"490" "Male" "Younger than 10" "Juweliers, goud- en zilversmeden" 8
+"491" "Male" "10 to 11" "Juweliers, goud- en zilversmeden" 60
+"492" "Male" "12 to 15" "Juweliers, goud- en zilversmeden" 712
+"493" "Female" "12 to 15" "Juweliers, goud- en zilversmeden" 12
+"494" "Male" "16 to 23 years" "Juweliers, goud- en zilversmeden" 1469
+"495" "Female" "16 to 23 years" "Juweliers, goud- en zilversmeden" 4
+"496" "Male" "Older than 23" "Juweliers, goud- en zilversmeden" 3957
+"497" "Female" "Older than 23" "Juweliers, goud- en zilversmeden" 56
+"498" "Female" "10 to 11" "Kaarders en wolkammers" 6
+"499" "Male" "12 to 15" "Kaarders en wolkammers" 6
+"500" "Female" "12 to 15" "Kaarders en wolkammers" 2
+"501" "Male" "16 to 23 years" "Kaarders en wolkammers" 98
+"502" "Female" "16 to 23 years" "Kaarders en wolkammers" 10
+"503" "Male" "Older than 23" "Kaarders en wolkammers" 960
+"504" "Female" "Older than 23" "Kaarders en wolkammers" 76
+"505" "Male" "10 to 11" "Kaarsenmakers (was- en smeer-)" 2
+"506" "Male" "12 to 15" "Kaarsenmakers (was- en smeer-)" 26
+"507" "Male" "16 to 23 years" "Kaarsenmakers (was- en smeer-)" 84
+"508" "Male" "Older than 23" "Kaarsenmakers (was- en smeer-)" 465
+"509" "Female" "Older than 23" "Kaarsenmakers (was- en smeer-)" 12
+"510" "Male" "Younger than 10" "Kabinet- en schrijnwerkers, kunstdraaijers" 4
+"511" "Male" "10 to 11" "Kabinet- en schrijnwerkers, kunstdraaijers" 58
+"512" "Male" "12 to 15" "Kabinet- en schrijnwerkers, kunstdraaijers" 1287
+"513" "Male" "16 to 23 years" "Kabinet- en schrijnwerkers, kunstdraaijers" 2735
+"514" "Male" "Older than 23" "Kabinet- en schrijnwerkers, kunstdraaijers" 7515
+"515" "Female" "Older than 23" "Kabinet- en schrijnwerkers, kunstdraaijers" 12
+"516" "Male" "12 to 15" "Kadetten, adelborsten" 145
+"517" "Male" "16 to 23 years" "Kadetten, adelborsten" 783
+"518" "Male" "Older than 23" "Kadetten, adelborsten" 8
+"519" "Male" "10 to 11" "Kalkbranders, cement- en trasmakers" 12
+"520" "Male" "12 to 15" "Kalkbranders, cement- en trasmakers" 18
+"521" "Male" "16 to 23 years" "Kalkbranders, cement- en trasmakers" 52
+"522" "Male" "Older than 23" "Kalkbranders, cement- en trasmakers" 359
+"523" "Female" "Older than 23" "Kalkbranders, cement- en trasmakers" 16
+"524" "Male" "10 to 11" "Kantoor- en winkelbedienden" 28
+"525" "Female" "10 to 11" "Kantoor- en winkelbedienden" 2
+"526" "Male" "12 to 15" "Kantoor- en winkelbedienden" 1766
+"527" "Female" "12 to 15" "Kantoor- en winkelbedienden" 158
+"528" "Male" "16 to 23 years" "Kantoor- en winkelbedienden" 6896
+"529" "Female" "16 to 23 years" "Kantoor- en winkelbedienden" 991
+"530" "Male" "Older than 23" "Kantoor- en winkelbedienden" 11468
+"531" "Female" "Older than 23" "Kantoor- en winkelbedienden" 1898
+"532" "Male" "12 to 15" "Katoendrukkers" 10
+"533" "Male" "16 to 23 years" "Katoendrukkers" 39
+"534" "Male" "Older than 23" "Katoendrukkers" 120
+"535" "Male" "12 to 15" "Kleederen- en gemaaktgoedverkoopers" 6
+"536" "Male" "16 to 23 years" "Kleederen- en gemaaktgoedverkoopers" 32
+"537" "Female" "16 to 23 years" "Kleederen- en gemaaktgoedverkoopers" 10
+"538" "Male" "Older than 23" "Kleederen- en gemaaktgoedverkoopers" 564
+"539" "Female" "Older than 23" "Kleederen- en gemaaktgoedverkoopers" 94
+"540" "Male" "Younger than 10" "Kleedermakers" 16
+"541" "Male" "10 to 11" "Kleedermakers" 188
+"542" "Male" "12 to 15" "Kleedermakers" 3180
+"543" "Female" "12 to 15" "Kleedermakers" 2
+"544" "Male" "16 to 23 years" "Kleedermakers" 7201
+"545" "Female" "16 to 23 years" "Kleedermakers" 19
+"546" "Male" "Older than 23" "Kleedermakers" 32166
+"547" "Female" "Older than 23" "Kleedermakers" 80
+"548" "Male" "12 to 15" "Kleinhandelaren en winkeliers" 125
+"549" "Female" "12 to 15" "Kleinhandelaren en winkeliers" 26
+"550" "Male" "16 to 23 years" "Kleinhandelaren en winkeliers" 741
+"551" "Female" "16 to 23 years" "Kleinhandelaren en winkeliers" 353
+"552" "Male" "Older than 23" "Kleinhandelaren en winkeliers" 25712
+"553" "Female" "Older than 23" "Kleinhandelaren en winkeliers" 19314
+"554" "Male" "10 to 11" "Klerken en schrijvers" 4
+"555" "Male" "12 to 15" "Klerken en schrijvers" 336
+"556" "Male" "16 to 23 years" "Klerken en schrijvers" 1432
+"557" "Male" "Older than 23" "Klerken en schrijvers" 2876
+"558" "Male" "Older than 23" "Klokkenisten" 2
+"559" "Female" "Older than 23" "Klokkenisten" 2
+"560" "Male" "Younger than 10" "Klompenmakers" 2
+"561" "Female" "Younger than 10" "Klompenmakers" 6
+"562" "Male" "10 to 11" "Klompenmakers" 8
+"563" "Male" "12 to 15" "Klompenmakers" 238
+"564" "Female" "12 to 15" "Klompenmakers" 2
+"565" "Male" "16 to 23 years" "Klompenmakers" 1296
+"566" "Female" "16 to 23 years" "Klompenmakers" 2
+"567" "Male" "Older than 23" "Klompenmakers" 8997
+"568" "Female" "Older than 23" "Klompenmakers" 22
+"569" "Male" "12 to 15" "Knoopenmakers" 14
+"570" "Male" "16 to 23 years" "Knoopenmakers" 44
+"571" "Male" "Older than 23" "Knoopenmakers" 372
+"572" "Female" "Older than 23" "Knoopenmakers" 28
+"573" "Male" "16 to 23 years" "Kolenbranders" 4
+"574" "Male" "Older than 23" "Kolenbranders" 29
+"575" "Male" "16 to 23 years" "Koninklijk huis (personen verbonden aan het)" 8
+"576" "Female" "16 to 23 years" "Koninklijk huis (personen verbonden aan het)" 2
+"577" "Male" "Older than 23" "Koninklijk huis (personen verbonden aan het)" 234
+"578" "Female" "Older than 23" "Koninklijk huis (personen verbonden aan het)" 60
+"579" "Male" "10 to 11" "Kooplieden in manufakturen" 1
+"580" "Male" "12 to 15" "Kooplieden in manufakturen" 2
+"581" "Female" "12 to 15" "Kooplieden in manufakturen" 2
+"582" "Male" "16 to 23 years" "Kooplieden in manufakturen" 98
+"583" "Female" "16 to 23 years" "Kooplieden in manufakturen" 38
+"584" "Male" "Older than 23" "Kooplieden in manufakturen" 1201
+"585" "Female" "Older than 23" "Kooplieden in manufakturen" 235
+"586" "Male" "10 to 11" "Kooplieden van verschillenden aard" 8
+"587" "Female" "10 to 11" "Kooplieden van verschillenden aard" 3
+"588" "Male" "12 to 15" "Kooplieden van verschillenden aard" 215
+"589" "Female" "12 to 15" "Kooplieden van verschillenden aard" 44
+"590" "Male" "16 to 23 years" "Kooplieden van verschillenden aard" 2198
+"591" "Female" "16 to 23 years" "Kooplieden van verschillenden aard" 379
+"592" "Male" "Older than 23" "Kooplieden van verschillenden aard" 26738
+"593" "Female" "Older than 23" "Kooplieden van verschillenden aard" 4558
+"594" "Male" "12 to 15" "Koordslagers knechts" 14
+"595" "Female" "12 to 15" "Koordslagers knechts" 2
+"596" "Male" "16 to 23 years" "Koordslagers knechts" 6
+"597" "Female" "16 to 23 years" "Koordslagers knechts" 8
+"598" "Male" "Older than 23" "Koordslagers knechts" 4
+"599" "Female" "Older than 23" "Koordslagers knechts" 6
+"600" "Male" "Older than 23" "Koordslagers meesters" 2
+"601" "Male" "10 to 11" "Koorn- en pelmolenaars" 6
+"602" "Male" "12 to 15" "Koorn- en pelmolenaars" 356
+"603" "Male" "16 to 23 years" "Koorn- en pelmolenaars" 1812
+"604" "Female" "16 to 23 years" "Koorn- en pelmolenaars" 4
+"605" "Male" "Older than 23" "Koorn- en pelmolenaars" 8513
+"606" "Female" "Older than 23" "Koorn- en pelmolenaars" 132
+"607" "Male" "16 to 23 years" "Koornverschieters" 11
+"608" "Female" "16 to 23 years" "Koornverschieters" 2
+"609" "Male" "Older than 23" "Koornverschieters" 98
+"610" "Female" "Older than 23" "Koornverschieters" 6
+"611" "Male" "Younger than 10" "Koper- en blikslagers, draadvlechters" 4
+"612" "Male" "10 to 11" "Koper- en blikslagers, draadvlechters" 74
+"613" "Male" "12 to 15" "Koper- en blikslagers, draadvlechters" 831
+"614" "Male" "16 to 23 years" "Koper- en blikslagers, draadvlechters" 1540
+"615" "Male" "Older than 23" "Koper- en blikslagers, draadvlechters" 4980
+"616" "Female" "Older than 23" "Koper- en blikslagers, draadvlechters" 28
+"617" "Male" "10 to 11" "Koper- en geelgieters" 4
+"618" "Male" "12 to 15" "Koper- en geelgieters" 86
+"619" "Male" "16 to 23 years" "Koper- en geelgieters" 179
+"620" "Male" "Older than 23" "Koper- en geelgieters" 512
+"621" "Female" "Older than 23" "Koper- en geelgieters" 6
+"622" "Male" "16 to 23 years" "Kostschoolhouders" 16
+"623" "Female" "16 to 23 years" "Kostschoolhouders" 37
+"624" "Male" "Older than 23" "Kostschoolhouders" 379
+"625" "Female" "Older than 23" "Kostschoolhouders" 218
+"626" "Male" "Older than 23" "Kousenfabriekanten" 14
+"627" "Female" "Older than 23" "Kousenfabriekanten" 2
+"628" "Male" "10 to 11" "Kramers" 2
+"629" "Male" "12 to 15" "Kramers" 129
+"630" "Female" "12 to 15" "Kramers" 46
+"631" "Male" "16 to 23 years" "Kramers" 500
+"632" "Female" "16 to 23 years" "Kramers" 197
+"633" "Male" "Older than 23" "Kramers" 2325
+"634" "Female" "Older than 23" "Kramers" 1957
+"635" "Male" "12 to 15" "Krammers" 2
+"636" "Male" "16 to 23 years" "Krammers" 3
+"637" "Male" "Older than 23" "Krammers" 18
+"638" "Female" "Older than 23" "Krammers" 7
+"639" "Male" "10 to 11" "Krib- en dijkwerkers, heibazen" 2
+"640" "Male" "12 to 15" "Krib- en dijkwerkers, heibazen" 66
+"641" "Male" "16 to 23 years" "Krib- en dijkwerkers, heibazen" 236
+"642" "Female" "16 to 23 years" "Krib- en dijkwerkers, heibazen" 2
+"643" "Male" "Older than 23" "Krib- en dijkwerkers, heibazen" 1084
+"644" "Male" "12 to 15" "Krijgslieden beneden den rang van tweeden luitenant" 160
+"645" "Male" "16 to 23 years" "Krijgslieden beneden den rang van tweeden luitenant" 17470
+"646" "Male" "Older than 23" "Krijgslieden beneden den rang van tweeden luitenant" 20878
+"647" "Male" "16 to 23 years" "Krijgslieden van en boven den rang van tweeden luitenant" 195
+"648" "Male" "Older than 23" "Krijgslieden van en boven den rang van tweeden luitenant" 3106
+"649" "Male" "12 to 15" "Kroeghouders, tappers" 12
+"650" "Female" "12 to 15" "Kroeghouders, tappers" 6
+"651" "Male" "16 to 23 years" "Kroeghouders, tappers" 278
+"652" "Female" "16 to 23 years" "Kroeghouders, tappers" 38
+"653" "Male" "Older than 23" "Kroeghouders, tappers" 6913
+"654" "Female" "Older than 23" "Kroeghouders, tappers" 3881
+"655" "Male" "Older than 23" "Kruidenzoekers" 6
+"656" "Male" "12 to 15" "Kruidfabriekanten en vuurwerkmakers" 2
+"657" "Male" "16 to 23 years" "Kruidfabriekanten en vuurwerkmakers" 20
+"658" "Male" "Older than 23" "Kruidfabriekanten en vuurwerkmakers" 53
+"659" "Male" "10 to 11" "Kruijers en sjouwers" 16
+"660" "Male" "12 to 15" "Kruijers en sjouwers" 453
+"661" "Male" "16 to 23 years" "Kruijers en sjouwers" 2382
+"662" "Female" "16 to 23 years" "Kruijers en sjouwers" 4
+"663" "Male" "Older than 23" "Kruijers en sjouwers" 21037
+"664" "Female" "Older than 23" "Kruijers en sjouwers" 78
+"665" "Male" "Younger than 10" "Kuipers en hoepelmakers" 2
+"666" "Male" "10 to 11" "Kuipers en hoepelmakers" 48
+"667" "Male" "12 to 15" "Kuipers en hoepelmakers" 1072
+"668" "Male" "16 to 23 years" "Kuipers en hoepelmakers" 2458
+"669" "Male" "Older than 23" "Kuipers en hoepelmakers" 8590
+"670" "Female" "Older than 23" "Kuipers en hoepelmakers" 108
+"671" "Male" "10 to 11" "Kunstenaars en goochelaars" 2
+"672" "Male" "12 to 15" "Kunstenaars en goochelaars" 19
+"673" "Female" "12 to 15" "Kunstenaars en goochelaars" 2
+"674" "Male" "16 to 23 years" "Kunstenaars en goochelaars" 32
+"675" "Male" "Older than 23" "Kunstenaars en goochelaars" 77
+"676" "Female" "Older than 23" "Kunstenaars en goochelaars" 9
+"677" "Male" "16 to 23 years" "Kunstkoopers" 4
+"678" "Male" "Older than 23" "Kunstkoopers" 43
+"679" "Male" "10 to 11" "Kunstlakkers" 6
+"680" "Male" "12 to 15" "Kunstlakkers" 42
+"681" "Male" "16 to 23 years" "Kunstlakkers" 77
+"682" "Male" "Older than 23" "Kunstlakkers" 206
+"683" "Male" "Younger than 10" "Kunstoefenaren muziekanten, muziekmeesters" 1
+"684" "Male" "10 to 11" "Kunstoefenaren muziekanten, muziekmeesters" 2
+"685" "Female" "10 to 11" "Kunstoefenaren muziekanten, muziekmeesters" 1
+"686" "Male" "12 to 15" "Kunstoefenaren muziekanten, muziekmeesters" 45
+"687" "Male" "16 to 23 years" "Kunstoefenaren muziekanten, muziekmeesters" 260
+"688" "Female" "16 to 23 years" "Kunstoefenaren muziekanten, muziekmeesters" 10
+"689" "Male" "Older than 23" "Kunstoefenaren muziekanten, muziekmeesters" 2019
+"690" "Female" "Older than 23" "Kunstoefenaren muziekanten, muziekmeesters" 47
+"691" "Male" "12 to 15" "Kunstoefenaren schilders" 28
+"692" "Male" "16 to 23 years" "Kunstoefenaren schilders" 101
+"693" "Male" "Older than 23" "Kunstoefenaren schilders" 749
+"694" "Female" "Older than 23" "Kunstoefenaren schilders" 10
+"695" "Male" "10 to 11" "Kunstoefenaren teekenaars, teekenmeesters, decorateurs" 4
+"696" "Male" "12 to 15" "Kunstoefenaren teekenaars, teekenmeesters, decorateurs" 6
+"697" "Male" "16 to 23 years" "Kunstoefenaren teekenaars, teekenmeesters, decorateurs" 71
+"698" "Male" "Older than 23" "Kunstoefenaren teekenaars, teekenmeesters, decorateurs" 549
+"699" "Female" "Older than 23" "Kunstoefenaren teekenaars, teekenmeesters, decorateurs" 2
+"700" "Male" "Younger than 10" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 1
+"701" "Female" "Younger than 10" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 3
+"702" "Male" "10 to 11" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 4
+"703" "Male" "12 to 15" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 9
+"704" "Female" "12 to 15" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 2
+"705" "Male" "16 to 23 years" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 39
+"706" "Female" "16 to 23 years" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 37
+"707" "Male" "Older than 23" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 426
+"708" "Female" "Older than 23" "Kunstoefenaren tooneelspelers, dansmeesters en zangers" 146
+"709" "Male" "12 to 15" "Kunstwerkers" 14
+"710" "Male" "16 to 23 years" "Kunstwerkers" 16
+"711" "Male" "Older than 23" "Kunstwerkers" 110
+"712" "Female" "Older than 23" "Kunstwerkers" 10
+"713" "Male" "12 to 15" "Kurkensnijders" 44
+"714" "Male" "16 to 23 years" "Kurkensnijders" 88
+"715" "Male" "Older than 23" "Kurkensnijders" 160
+"716" "Female" "Older than 23" "Kurkensnijders" 2
+"717" "Male" "Older than 23" "Kustlichtwachters" 9
+"718" "Male" "16 to 23 years" "Kweekelingen aan 's Rijks hospitaal" 146
+"719" "Male" "Older than 23" "Kweekelingen aan 's Rijks hospitaal" 6
+"720" "Male" "16 to 23 years" "Kweekelingen aan 's Rijks veeartsenijschool" 42
+"721" "Male" "Younger than 10" "Kweekelingen voor 't lager onderwijs" 2
+"722" "Male" "10 to 11" "Kweekelingen voor 't lager onderwijs" 22
+"723" "Female" "10 to 11" "Kweekelingen voor 't lager onderwijs" 2
+"724" "Male" "12 to 15" "Kweekelingen voor 't lager onderwijs" 808
+"725" "Female" "12 to 15" "Kweekelingen voor 't lager onderwijs" 57
+"726" "Male" "16 to 23 years" "Kweekelingen voor 't lager onderwijs" 208
+"727" "Female" "16 to 23 years" "Kweekelingen voor 't lager onderwijs" 26
+"728" "Male" "Older than 23" "Kweekelingen voor 't lager onderwijs" 4
+"729" "Male" "12 to 15" "Landbouw- en landhuishoudkundige scholen (leerlingen aan)" 1
+"730" "Male" "16 to 23 years" "Landbouw- en landhuishoudkundige scholen (leerlingen aan)" 25
+"731" "Male" "Older than 23" "Landbouw- en landhuishoudkundige scholen (leerlingen aan)" 10
+"732" "Male" "Younger than 10" "Landbouwers" 196
+"733" "Female" "Younger than 10" "Landbouwers" 150
+"734" "Male" "10 to 11" "Landbouwers" 704
+"735" "Female" "10 to 11" "Landbouwers" 354
+"736" "Male" "12 to 15" "Landbouwers" 14394
+"737" "Female" "12 to 15" "Landbouwers" 3457
+"738" "Male" "16 to 23 years" "Landbouwers" 56195
+"739" "Female" "16 to 23 years" "Landbouwers" 11225
+"740" "Male" "Older than 23" "Landbouwers" 271868
+"741" "Female" "Older than 23" "Landbouwers" 50810
+"742" "Male" "Older than 23" "Landhuishoudkundigen" 2
+"743" "Male" "12 to 15" "Landmeters" 10
+"744" "Male" "16 to 23 years" "Landmeters" 47
+"745" "Male" "Older than 23" "Landmeters" 216
+"746" "Male" "16 to 23 years" "Lantaarnopstekers" 2
+"747" "Male" "Older than 23" "Lantaarnopstekers" 72
+"748" "Female" "Older than 23" "Lantaarnopstekers" 4
+"749" "Male" "Older than 23" "Lavementzetters" 4
+"750" "Female" "Older than 23" "Lavementzetters" 8
+"751" "Male" "10 to 11" "Lederbereiders en looijers" 6
+"752" "Male" "12 to 15" "Lederbereiders en looijers" 124
+"753" "Male" "16 to 23 years" "Lederbereiders en looijers" 703
+"754" "Female" "16 to 23 years" "Lederbereiders en looijers" 10
+"755" "Male" "Older than 23" "Lederbereiders en looijers" 3603
+"756" "Female" "Older than 23" "Lederbereiders en looijers" 70
+"757" "Male" "12 to 15" "Leestenmakers" 6
+"758" "Male" "16 to 23 years" "Leestenmakers" 16
+"759" "Male" "Older than 23" "Leestenmakers" 20
+"760" "Male" "12 to 15" "Lettergieters" 36
+"761" "Male" "16 to 23 years" "Lettergieters" 104
+"762" "Male" "Older than 23" "Lettergieters" 275
+"763" "Male" "12 to 15" "Liefdadige gestichten dienstdoend personeel in" 4
+"764" "Female" "12 to 15" "Liefdadige gestichten dienstdoend personeel in" 4
+"765" "Male" "16 to 23 years" "Liefdadige gestichten dienstdoend personeel in" 36
+"766" "Female" "16 to 23 years" "Liefdadige gestichten dienstdoend personeel in" 113
+"767" "Male" "Older than 23" "Liefdadige gestichten dienstdoend personeel in" 903
+"768" "Female" "Older than 23" "Liefdadige gestichten dienstdoend personeel in" 908
+"769" "Male" "16 to 23 years" "Liefdadige gestichten hoofden in" 1
+"770" "Female" "16 to 23 years" "Liefdadige gestichten hoofden in" 2
+"771" "Male" "Older than 23" "Liefdadige gestichten hoofden in" 413
+"772" "Female" "Older than 23" "Liefdadige gestichten hoofden in" 370
+"773" "Male" "16 to 23 years" "Lijmzieders" 6
+"774" "Male" "Older than 23" "Lijmzieders" 32
+"775" "Male" "Older than 23" "Lijnmeelfabriekanten" 4
+"776" "Male" "12 to 15" "Likdoornsnijders" 2
+"777" "Male" "Older than 23" "Likdoornsnijders" 2
+"778" "Male" "12 to 15" "Linieerders" 2
+"779" "Male" "16 to 23 years" "Linieerders" 2
+"780" "Male" "Older than 23" "Linieerders" 32
+"781" "Male" "12 to 15" "Lintwerkers" 30
+"782" "Male" "16 to 23 years" "Lintwerkers" 18
+"783" "Male" "Older than 23" "Lintwerkers" 50
+"784" "Male" "10 to 11" "Loodgieters en pompenmakers" 4
+"785" "Male" "12 to 15" "Loodgieters en pompenmakers" 145
+"786" "Male" "16 to 23 years" "Loodgieters en pompenmakers" 448
+"787" "Male" "Older than 23" "Loodgieters en pompenmakers" 1646
+"788" "Female" "Older than 23" "Loodgieters en pompenmakers" 8
+"789" "Male" "12 to 15" "Loodswezen (personen bij het)" 8
+"790" "Male" "16 to 23 years" "Loodswezen (personen bij het)" 18
+"791" "Male" "Older than 23" "Loodswezen (personen bij het)" 270
+"792" "Male" "Older than 23" "Loodwitmakers" 70
+"793" "Male" "Older than 23" "Loogstokers" 7
+"794" "Male" "Older than 23" "Magazijnmeesters" 86
+"795" "Male" "16 to 23 years" "Makelaars en kargadoors" 37
+"796" "Male" "Older than 23" "Makelaars en kargadoors" 1584
+"797" "Male" "10 to 11" "Mandenmakers" 22
+"798" "Male" "12 to 15" "Mandenmakers" 304
+"799" "Female" "12 to 15" "Mandenmakers" 10
+"800" "Male" "16 to 23 years" "Mandenmakers" 562
+"801" "Female" "16 to 23 years" "Mandenmakers" 8
+"802" "Male" "Older than 23" "Mandenmakers" 2740
+"803" "Female" "Older than 23" "Mandenmakers" 36
+"804" "Female" "Older than 23" "Mangelvrouwen" 8
+"805" "Male" "16 to 23 years" "Manufakturen fabriekanten" 80
+"806" "Female" "16 to 23 years" "Manufakturen fabriekanten" 6
+"807" "Male" "Older than 23" "Manufakturen fabriekanten" 1284
+"808" "Female" "Older than 23" "Manufakturen fabriekanten" 82
+"809" "Male" "Younger than 10" "Manufakturen werklieden" 46
+"810" "Female" "Younger than 10" "Manufakturen werklieden" 4
+"811" "Male" "10 to 11" "Manufakturen werklieden" 128
+"812" "Female" "10 to 11" "Manufakturen werklieden" 22
+"813" "Male" "12 to 15" "Manufakturen werklieden" 674
+"814" "Female" "12 to 15" "Manufakturen werklieden" 130
+"815" "Male" "16 to 23 years" "Manufakturen werklieden" 1095
+"816" "Female" "16 to 23 years" "Manufakturen werklieden" 218
+"817" "Male" "Older than 23" "Manufakturen werklieden" 3042
+"818" "Female" "Older than 23" "Manufakturen werklieden" 226
+"819" "Male" "Older than 23" "Marmerschuurders" 2
+"820" "Male" "Older than 23" "Mastenmakers" 2
+"821" "Male" "Younger than 10" "Mattenmakers" 10
+"822" "Female" "Younger than 10" "Mattenmakers" 8
+"823" "Male" "10 to 11" "Mattenmakers" 24
+"824" "Female" "10 to 11" "Mattenmakers" 8
+"825" "Male" "12 to 15" "Mattenmakers" 140
+"826" "Female" "12 to 15" "Mattenmakers" 146
+"827" "Male" "16 to 23 years" "Mattenmakers" 165
+"828" "Female" "16 to 23 years" "Mattenmakers" 186
+"829" "Male" "Older than 23" "Mattenmakers" 681
+"830" "Female" "Older than 23" "Mattenmakers" 586
+"831" "Male" "16 to 23 years" "Meekrapbereiders, droogers" 50
+"832" "Female" "16 to 23 years" "Meekrapbereiders, droogers" 1
+"833" "Male" "Older than 23" "Meekrapbereiders, droogers" 305
+"834" "Male" "16 to 23 years" "Meesters (keur-, markt-, waag-), afslagers" 8
+"835" "Male" "Older than 23" "Meesters (keur-, markt-, waag-), afslagers" 370
+"836" "Female" "Older than 23" "Meesters (keur-, markt-, waag-), afslagers" 14
+"837" "Male" "16 to 23 years" "Meeters (koorn-, kolen-, hout-, hooi enz.), wijnstekers" 10
+"838" "Male" "Older than 23" "Meeters (koorn-, kolen-, hout-, hooi enz.), wijnstekers" 774
+"839" "Female" "Older than 23" "Meeters (koorn-, kolen-, hout-, hooi enz.), wijnstekers" 216
+"840" "Male" "12 to 15" "Melk-, boter- en kaasverkoopers" 18
+"841" "Male" "16 to 23 years" "Melk-, boter- en kaasverkoopers" 133
+"842" "Female" "16 to 23 years" "Melk-, boter- en kaasverkoopers" 14
+"843" "Male" "Older than 23" "Melk-, boter- en kaasverkoopers" 2302
+"844" "Female" "Older than 23" "Melk-, boter- en kaasverkoopers" 439
+"845" "Male" "12 to 15" "Messenmakers en slijpers" 6
+"846" "Male" "16 to 23 years" "Messenmakers en slijpers" 18
+"847" "Male" "Older than 23" "Messenmakers en slijpers" 207
+"848" "Male" "10 to 11" "Metselaars" 26
+"849" "Male" "12 to 15" "Metselaars" 860
+"850" "Male" "16 to 23 years" "Metselaars" 3541
+"851" "Male" "Older than 23" "Metselaars" 21166
+"852" "Female" "Older than 23" "Metselaars" 30
+"853" "Male" "12 to 15" "Mijnwerkers" 22
+"854" "Male" "16 to 23 years" "Mijnwerkers" 224
+"855" "Male" "Older than 23" "Mijnwerkers" 662
+"856" "Female" "16 to 23 years" "Minnen" 4
+"857" "Female" "Older than 23" "Minnen" 14
+"858" "Male" "16 to 23 years" "Modelmakers" 1
+"859" "Male" "Older than 23" "Modelmakers" 21
+"860" "Female" "10 to 11" "Modemakers en bloemenmakers" 20
+"861" "Female" "12 to 15" "Modemakers en bloemenmakers" 388
+"862" "Male" "16 to 23 years" "Modemakers en bloemenmakers" 4
+"863" "Female" "16 to 23 years" "Modemakers en bloemenmakers" 1472
+"864" "Male" "Older than 23" "Modemakers en bloemenmakers" 21
+"865" "Female" "Older than 23" "Modemakers en bloemenmakers" 3174
+"866" "Male" "10 to 11" "Molenmakers" 2
+"867" "Male" "12 to 15" "Molenmakers" 28
+"868" "Male" "16 to 23 years" "Molenmakers" 117
+"869" "Male" "Older than 23" "Molenmakers" 583
+"870" "Female" "Older than 23" "Molenmakers" 4
+"871" "Male" "Older than 23" "Mosterdmolenaars" 7
+"872" "Male" "16 to 23 years" "Moutmolenaars" 2
+"873" "Male" "Older than 23" "Moutmolenaars" 16
+"874" "Female" "Older than 23" "Moutmolenaars" 2
+"875" "Male" "10 to 11" "Muziekinstrument-, orgel-, fortepianomakers en verkoopers" 2
+"876" "Male" "12 to 15" "Muziekinstrument-, orgel-, fortepianomakers en verkoopers" 50
+"877" "Male" "16 to 23 years" "Muziekinstrument-, orgel-, fortepianomakers en verkoopers" 130
+"878" "Male" "Older than 23" "Muziekinstrument-, orgel-, fortepianomakers en verkoopers" 660
+"879" "Female" "Older than 23" "Muziekinstrument-, orgel-, fortepianomakers en verkoopers" 2
+"880" "Female" "Younger than 10" "Naaisters, breisters, strijksters, waschvrouwen, werksters" 104
+"881" "Female" "10 to 11" "Naaisters, breisters, strijksters, waschvrouwen, werksters" 670
+"882" "Female" "12 to 15" "Naaisters, breisters, strijksters, waschvrouwen, werksters" 6105
+"883" "Female" "16 to 23 years" "Naaisters, breisters, strijksters, waschvrouwen, werksters" 15709
+"884" "Male" "Older than 23" "Naaisters, breisters, strijksters, waschvrouwen, werksters" 1
+"885" "Female" "Older than 23" "Naaisters, breisters, strijksters, waschvrouwen, werksters" 66830
+"886" "Male" "16 to 23 years" "Nachtwerkers" 8
+"887" "Male" "Older than 23" "Nachtwerkers" 256
+"888" "Male" "12 to 15" "Nettenmakers" 6
+"889" "Female" "12 to 15" "Nettenmakers" 1
+"890" "Male" "16 to 23 years" "Nettenmakers" 6
+"891" "Male" "Older than 23" "Nettenmakers" 156
+"892" "Male" "16 to 23 years" "Notarissen" 6
+"893" "Male" "Older than 23" "Notarissen" 1413
+"894" "Male" "16 to 23 years" "Notarissen (kandidaat)" 14
+"895" "Male" "Older than 23" "Notarissen (kandidaat)" 235
+"896" "Male" "10 to 11" "Olieslagers" 12
+"897" "Male" "12 to 15" "Olieslagers" 140
+"898" "Male" "16 to 23 years" "Olieslagers" 592
+"899" "Female" "16 to 23 years" "Olieslagers" 1
+"900" "Male" "Older than 23" "Olieslagers" 2688
+"901" "Female" "Older than 23" "Olieslagers" 16
+"902" "Male" "16 to 23 years" "Omroepers, aanplakkers" 4
+"903" "Male" "Older than 23" "Omroepers, aanplakkers" 224
+"904" "Female" "Older than 23" "Omroepers, aanplakkers" 8
+"905" "Male" "16 to 23 years" "Ondernemers en direkteurs van naamlooze en handelmaatschappijen" 4
+"906" "Male" "Older than 23" "Ondernemers en direkteurs van naamlooze en handelmaatschappijen" 60
+"907" "Male" "16 to 23 years" "Ondernemers van begrafenis- en ziekenfondsen" 4
+"908" "Male" "Older than 23" "Ondernemers van begrafenis- en ziekenfondsen" 226
+"909" "Female" "Older than 23" "Ondernemers van begrafenis- en ziekenfondsen" 2
+"910" "Male" "Older than 23" "Ondernemers van openbare verkoopingen" 8
+"911" "Male" "16 to 23 years" "Ondernemers van publieke wagens en verdere middelen van vervoer" 6
+"912" "Male" "Older than 23" "Ondernemers van publieke wagens en verdere middelen van vervoer" 85
+"913" "Female" "Older than 23" "Ondernemers van publieke wagens en verdere middelen van vervoer" 12
+"914" "Male" "16 to 23 years" "Ondernemers van waarborgmaatschappijen (assuradeurs)" 10
+"915" "Male" "Older than 23" "Ondernemers van waarborgmaatschappijen (assuradeurs)" 425
+"916" "Male" "16 to 23 years" "Onderwijzers, onderwijzeressen, aan de lagere scholen" 2114
+"917" "Female" "16 to 23 years" "Onderwijzers, onderwijzeressen, aan de lagere scholen" 557
+"918" "Male" "Older than 23" "Onderwijzers, onderwijzeressen, aan de lagere scholen" 8868
+"919" "Female" "Older than 23" "Onderwijzers, onderwijzeressen, aan de lagere scholen" 2649
+"920" "Male" "Older than 23" "Onderwijzers, onderwijzeressen, aan landbouw- en landhuishoudkundige scholen" 9
+"921" "Male" "16 to 23 years" "Onderwijzers, onderwijzeressen, aan Latijnsche scholen" 4
+"922" "Male" "Older than 23" "Onderwijzers, onderwijzeressen, aan Latijnsche scholen" 185
+"923" "Male" "16 to 23 years" "Onderwijzers, onderwijzeressen, aan zeevaartscholen" 2
+"924" "Male" "Older than 23" "Onderwijzers, onderwijzeressen, aan zeevaartscholen" 10
+"925" "Male" "16 to 23 years" "Onderwijzers, onderwijzeressen, hulp-" 272
+"926" "Female" "16 to 23 years" "Onderwijzers, onderwijzeressen, hulp-" 24
+"927" "Male" "Older than 23" "Onderwijzers, onderwijzeressen, hulp-" 183
+"928" "Female" "Older than 23" "Onderwijzers, onderwijzeressen, hulp-" 41
+"929" "Male" "16 to 23 years" "Opzieners (vesting-, krijgs- en waterstaat-)" 1
+"930" "Male" "Older than 23" "Opzieners (vesting-, krijgs- en waterstaat-)" 85
+"931" "Male" "16 to 23 years" "Opzieners der jagt en visscherij" 5
+"932" "Male" "Older than 23" "Opzieners der jagt en visscherij" 70
+"933" "Male" "Older than 23" "Opzieners van openbare werken" 11
+"934" "Male" "12 to 15" "Opzigters en conducteurs" 6
+"935" "Male" "16 to 23 years" "Opzigters en conducteurs" 51
+"936" "Female" "16 to 23 years" "Opzigters en conducteurs" 2
+"937" "Male" "Older than 23" "Opzigters en conducteurs" 1409
+"938" "Female" "Older than 23" "Opzigters en conducteurs" 74
+"939" "Male" "10 to 11" "Opzigters en stokers van stoomwerktuigen" 2
+"940" "Male" "12 to 15" "Opzigters en stokers van stoomwerktuigen" 22
+"941" "Male" "16 to 23 years" "Opzigters en stokers van stoomwerktuigen" 238
+"942" "Male" "Older than 23" "Opzigters en stokers van stoomwerktuigen" 1456
+"943" "Female" "Younger than 10" "Orgeldraaijers en straatmuziekanten" 2
+"944" "Male" "12 to 15" "Orgeldraaijers en straatmuziekanten" 6
+"945" "Female" "12 to 15" "Orgeldraaijers en straatmuziekanten" 4
+"946" "Male" "16 to 23 years" "Orgeldraaijers en straatmuziekanten" 30
+"947" "Female" "16 to 23 years" "Orgeldraaijers en straatmuziekanten" 9
+"948" "Male" "Older than 23" "Orgeldraaijers en straatmuziekanten" 201
+"949" "Female" "Older than 23" "Orgeldraaijers en straatmuziekanten" 46
+"950" "Male" "12 to 15" "Oudijzerverkoopers" 34
+"951" "Male" "16 to 23 years" "Oudijzerverkoopers" 124
+"952" "Female" "16 to 23 years" "Oudijzerverkoopers" 2
+"953" "Male" "Older than 23" "Oudijzerverkoopers" 614
+"954" "Female" "Older than 23" "Oudijzerverkoopers" 32
+"955" "Male" "10 to 11" "Pakhuisknechts" 8
+"956" "Male" "12 to 15" "Pakhuisknechts" 64
+"957" "Male" "16 to 23 years" "Pakhuisknechts" 482
+"958" "Male" "Older than 23" "Pakhuisknechts" 3500
+"959" "Male" "Younger than 10" "Papierfabriekanten en werklieden" 2
+"960" "Female" "Younger than 10" "Papierfabriekanten en werklieden" 6
+"961" "Male" "10 to 11" "Papierfabriekanten en werklieden" 22
+"962" "Female" "10 to 11" "Papierfabriekanten en werklieden" 28
+"963" "Male" "12 to 15" "Papierfabriekanten en werklieden" 236
+"964" "Female" "12 to 15" "Papierfabriekanten en werklieden" 136
+"965" "Male" "16 to 23 years" "Papierfabriekanten en werklieden" 322
+"966" "Female" "16 to 23 years" "Papierfabriekanten en werklieden" 252
+"967" "Male" "Older than 23" "Papierfabriekanten en werklieden" 1477
+"968" "Female" "Older than 23" "Papierfabriekanten en werklieden" 167
+"969" "Male" "16 to 23 years" "Papierhandelaars" 10
+"970" "Male" "Older than 23" "Papierhandelaars" 85
+"971" "Female" "Older than 23" "Papierhandelaars" 2
+"972" "Male" "Older than 23" "Pek- en teerstokers" 2
+"973" "Male" "16 to 23 years" "Pennenbereiders" 2
+"974" "Male" "Older than 23" "Pennenbereiders" 5
+"975" "Male" "12 to 15" "Photografen" 1
+"976" "Female" "12 to 15" "Photografen" 2
+"977" "Male" "16 to 23 years" "Photografen" 10
+"978" "Male" "Older than 23" "Photografen" 168
+"979" "Male" "Older than 23" "Pijpendoppenmakers" 4
+"980" "Male" "Younger than 10" "Pijpenmakers en knechts" 2
+"981" "Male" "10 to 11" "Pijpenmakers en knechts" 12
+"982" "Male" "12 to 15" "Pijpenmakers en knechts" 66
+"983" "Female" "12 to 15" "Pijpenmakers en knechts" 42
+"984" "Male" "16 to 23 years" "Pijpenmakers en knechts" 152
+"985" "Female" "16 to 23 years" "Pijpenmakers en knechts" 106
+"986" "Male" "Older than 23" "Pijpenmakers en knechts" 758
+"987" "Female" "Older than 23" "Pijpenmakers en knechts" 464
+"988" "Female" "12 to 15" "Pikeurs, paardrijders" 2
+"989" "Male" "16 to 23 years" "Pikeurs, paardrijders" 12
+"990" "Male" "Older than 23" "Pikeurs, paardrijders" 51
+"991" "Female" "Older than 23" "Pikeurs, paardrijders" 2
+"992" "Male" "16 to 23 years" "Pleistergieters, boetseerders" 6
+"993" "Male" "Older than 23" "Pleistergieters, boetseerders" 18
+"994" "Male" "16 to 23 years" "Poeliers" 5
+"995" "Male" "Older than 23" "Poeliers" 82
+"996" "Male" "16 to 23 years" "Politie. direkteurs, commissarissen, agenten, veld- en boschwachters" 28
+"997" "Male" "Older than 23" "Politie. direkteurs, commissarissen, agenten, veld- en boschwachters" 6257
+"998" "Female" "Older than 23" "Politie. direkteurs, commissarissen, agenten, veld- en boschwachters" 4
+"999" "Male" "16 to 23 years" "Politie. marechaussees" 4
+"1000" "Male" "Older than 23" "Politie. marechaussees" 687
+"1001" "Male" "Younger than 10" "Potten-, pannen-, steen- en tegelbakkers" 16
+"1002" "Female" "Younger than 10" "Potten-, pannen-, steen- en tegelbakkers" 2
+"1003" "Male" "10 to 11" "Potten-, pannen-, steen- en tegelbakkers" 86
+"1004" "Female" "10 to 11" "Potten-, pannen-, steen- en tegelbakkers" 6
+"1005" "Male" "12 to 15" "Potten-, pannen-, steen- en tegelbakkers" 534
+"1006" "Female" "12 to 15" "Potten-, pannen-, steen- en tegelbakkers" 32
+"1007" "Male" "16 to 23 years" "Potten-, pannen-, steen- en tegelbakkers" 1330
+"1008" "Female" "16 to 23 years" "Potten-, pannen-, steen- en tegelbakkers" 72
+"1009" "Male" "Older than 23" "Potten-, pannen-, steen- en tegelbakkers" 5132
+"1010" "Female" "Older than 23" "Potten-, pannen-, steen- en tegelbakkers" 320
+"1011" "Male" "16 to 23 years" "Prokureurs" 2
+"1012" "Male" "Older than 23" "Prokureurs" 291
+"1013" "Female" "16 to 23 years" "Publieke vrouwen" 82
+"1014" "Female" "Older than 23" "Publieke vrouwen" 796
+"1015" "Male" "16 to 23 years" "Publiekhuishouders" 1
+"1016" "Male" "Older than 23" "Publiekhuishouders" 23
+"1017" "Male" "16 to 23 years" "Reeders" 1
+"1018" "Male" "Older than 23" "Reeders" 319
+"1019" "Female" "Older than 23" "Reeders" 18
+"1020" "Female" "10 to 11" "Regenschermmakers" 2
+"1021" "Male" "12 to 15" "Regenschermmakers" 15
+"1022" "Female" "12 to 15" "Regenschermmakers" 2
+"1023" "Male" "16 to 23 years" "Regenschermmakers" 74
+"1024" "Male" "Older than 23" "Regenschermmakers" 375
+"1025" "Female" "Older than 23" "Regenschermmakers" 16
+"1026" "Male" "16 to 23 years" "Regterlijke magt" 6
+"1027" "Male" "Older than 23" "Regterlijke magt" 1220
+"1028" "Male" "12 to 15" "Renteniers" 2
+"1029" "Female" "12 to 15" "Renteniers" 4
+"1030" "Male" "16 to 23 years" "Renteniers" 21
+"1031" "Female" "16 to 23 years" "Renteniers" 29
+"1032" "Male" "Older than 23" "Renteniers" 2522
+"1033" "Female" "Older than 23" "Renteniers" 1598
+"1034" "Male" "16 to 23 years" "Rentmeesters" 3
+"1035" "Female" "16 to 23 years" "Rentmeesters" 2
+"1036" "Male" "Older than 23" "Rentmeesters" 259
+"1037" "Female" "Older than 23" "Rentmeesters" 2
+"1038" "Male" "Younger than 10" "Rijtuig-, wagen- en zadelmakers" 2
+"1039" "Male" "10 to 11" "Rijtuig-, wagen- en zadelmakers" 36
+"1040" "Male" "12 to 15" "Rijtuig-, wagen- en zadelmakers" 1042
+"1041" "Male" "16 to 23 years" "Rijtuig-, wagen- en zadelmakers" 2352
+"1042" "Male" "Older than 23" "Rijtuig-, wagen- en zadelmakers" 8676
+"1043" "Female" "Older than 23" "Rijtuig-, wagen- en zadelmakers" 92
+"1044" "Male" "10 to 11" "Rijtuigschilders" 4
+"1045" "Male" "12 to 15" "Rijtuigschilders" 70
+"1046" "Male" "16 to 23 years" "Rijtuigschilders" 206
+"1047" "Male" "Older than 23" "Rijtuigschilders" 476
+"1048" "Female" "Older than 23" "Rijtuigschilders" 2
+"1049" "Male" "12 to 15" "Run- en schorsmolenaars" 8
+"1050" "Male" "16 to 23 years" "Run- en schorsmolenaars" 14
+"1051" "Male" "Older than 23" "Run- en schorsmolenaars" 52
+"1052" "Male" "Older than 23" "Runhandelaars" 2
+"1053" "Male" "Older than 23" "Sagofabriekanten" 2
+"1054" "Male" "Younger than 10" "Schaarslijpers" 2
+"1055" "Male" "10 to 11" "Schaarslijpers" 2
+"1056" "Male" "12 to 15" "Schaarslijpers" 18
+"1057" "Male" "16 to 23 years" "Schaarslijpers" 37
+"1058" "Male" "Older than 23" "Schaarslijpers" 378
+"1059" "Male" "Older than 23" "Schatters" 78
+"1060" "Male" "Younger than 10" "Scheep-, blok en zeilmakers" 4
+"1061" "Male" "10 to 11" "Scheep-, blok en zeilmakers" 36
+"1062" "Male" "12 to 15" "Scheep-, blok en zeilmakers" 969
+"1063" "Male" "16 to 23 years" "Scheep-, blok en zeilmakers" 3260
+"1064" "Male" "Older than 23" "Scheep-, blok en zeilmakers" 10852
+"1065" "Female" "Older than 23" "Scheep-, blok en zeilmakers" 66
+"1066" "Male" "16 to 23 years" "Scheepsexperten" 18
+"1067" "Male" "Older than 23" "Scheepsexperten" 5
+"1068" "Male" "12 to 15" "Scheepsjagers" 2
+"1069" "Male" "16 to 23 years" "Scheepsjagers" 5
+"1070" "Male" "Older than 23" "Scheepsjagers" 23
+"1071" "Male" "Older than 23" "Scheepszeilnaaldenmakers" 4
+"1072" "Male" "16 to 23 years" "Scheepwakers" 1
+"1073" "Male" "Older than 23" "Scheepwakers" 106
+"1074" "Male" "16 to 23 years" "Scheikundige voortbrengselen (fabriekanten in), verfverkoopers" 10
+"1075" "Male" "Older than 23" "Scheikundige voortbrengselen (fabriekanten in), verfverkoopers" 104
+"1076" "Female" "Older than 23" "Scheikundige voortbrengselen (fabriekanten in), verfverkoopers" 4
+"1077" "Male" "12 to 15" "Schelpvisschers" 2
+"1078" "Male" "16 to 23 years" "Schelpvisschers" 55
+"1079" "Male" "Older than 23" "Schelpvisschers" 375
+"1080" "Male" "Older than 23" "Schermmeesters" 22
+"1081" "Male" "Younger than 10" "Schilders (huis) en glazenmakers" 2
+"1082" "Male" "10 to 11" "Schilders (huis) en glazenmakers" 62
+"1083" "Male" "12 to 15" "Schilders (huis) en glazenmakers" 1405
+"1084" "Male" "16 to 23 years" "Schilders (huis) en glazenmakers" 3864
+"1085" "Male" "Older than 23" "Schilders (huis) en glazenmakers" 17641
+"1086" "Female" "Older than 23" "Schilders (huis) en glazenmakers" 70
+"1087" "Male" "Younger than 10" "Schippers, loodsen, matrozen (koopvaardij-), schuitenverhuurders enz." 35
+"1088" "Male" "10 to 11" "Schippers, loodsen, matrozen (koopvaardij-), schuitenverhuurders enz." 117
+"1089" "Male" "12 to 15" "Schippers, loodsen, matrozen (koopvaardij-), schuitenverhuurders enz." 2414
+"1090" "Female" "12 to 15" "Schippers, loodsen, matrozen (koopvaardij-), schuitenverhuurders enz." 4
+"1091" "Male" "16 to 23 years" "Schippers, loodsen, matrozen (koopvaardij-), schuitenverhuurders enz." 13358
+"1092" "Female" "16 to 23 years" "Schippers, loodsen, matrozen (koopvaardij-), schuitenverhuurders enz." 7
+"1093" "Male" "Older than 23" "Schippers, loodsen, matrozen (koopvaardij-), schuitenverhuurders enz." 53814
+"1094" "Female" "Older than 23" "Schippers, loodsen, matrozen (koopvaardij-), schuitenverhuurders enz." 570
+"1095" "Male" "Younger than 10" "Schoenmakers en lappers" 106
+"1096" "Male" "10 to 11" "Schoenmakers en lappers" 400
+"1097" "Female" "10 to 11" "Schoenmakers en lappers" 2
+"1098" "Male" "12 to 15" "Schoenmakers en lappers" 4068
+"1099" "Female" "12 to 15" "Schoenmakers en lappers" 30
+"1100" "Male" "16 to 23 years" "Schoenmakers en lappers" 8474
+"1101" "Female" "16 to 23 years" "Schoenmakers en lappers" 110
+"1102" "Male" "Older than 23" "Schoenmakers en lappers" 36728
+"1103" "Female" "Older than 23" "Schoenmakers en lappers" 275
+"1104" "Male" "Younger than 10" "Schoolleerlingen/1" 266354
+"1105" "Female" "Younger than 10" "Schoolleerlingen/1" 239913
+"1106" "Male" "10 to 11" "Schoolleerlingen/1" 88614
+"1107" "Female" "10 to 11" "Schoolleerlingen/1" 75520
+"1108" "Male" "12 to 15" "Schoolleerlingen/1" 58539
+"1109" "Female" "12 to 15" "Schoolleerlingen/1" 41333
+"1110" "Male" "16 to 23 years" "Schoolleerlingen/1" 6977
+"1111" "Female" "16 to 23 years" "Schoolleerlingen/1" 5042
+"1112" "Male" "Older than 23" "Schoolleerlingen/1" 409
+"1113" "Female" "Older than 23" "Schoolleerlingen/1" 202
+"1114" "Male" "10 to 11" "Schoorsteenvegers" 10
+"1115" "Male" "12 to 15" "Schoorsteenvegers" 44
+"1116" "Male" "16 to 23 years" "Schoorsteenvegers" 133
+"1117" "Male" "Older than 23" "Schoorsteenvegers" 521
+"1118" "Female" "Older than 23" "Schoorsteenvegers" 6
+"1119" "Male" "12 to 15" "Schoppenmakers" 6
+"1120" "Male" "16 to 23 years" "Schoppenmakers" 12
+"1121" "Male" "Older than 23" "Schoppenmakers" 22
+"1122" "Male" "Older than 23" "Siroopfabriekanten" 10
+"1123" "Male" "Younger than 10" "Slijpers (diamant-, glas-, marmer-, metaal-)" 2
+"1124" "Male" "10 to 11" "Slijpers (diamant-, glas-, marmer-, metaal-)" 22
+"1125" "Male" "12 to 15" "Slijpers (diamant-, glas-, marmer-, metaal-)" 210
+"1126" "Female" "12 to 15" "Slijpers (diamant-, glas-, marmer-, metaal-)" 8
+"1127" "Male" "16 to 23 years" "Slijpers (diamant-, glas-, marmer-, metaal-)" 798
+"1128" "Female" "16 to 23 years" "Slijpers (diamant-, glas-, marmer-, metaal-)" 12
+"1129" "Male" "Older than 23" "Slijpers (diamant-, glas-, marmer-, metaal-)" 2226
+"1130" "Female" "Older than 23" "Slijpers (diamant-, glas-, marmer-, metaal-)" 2
+"1131" "Male" "Younger than 10" "Smeden (hoef-, kagchel- en andere)" 4
+"1132" "Male" "10 to 11" "Smeden (hoef-, kagchel- en andere)" 116
+"1133" "Male" "12 to 15" "Smeden (hoef-, kagchel- en andere)" 2923
+"1134" "Male" "16 to 23 years" "Smeden (hoef-, kagchel- en andere)" 8208
+"1135" "Female" "16 to 23 years" "Smeden (hoef-, kagchel- en andere)" 7
+"1136" "Male" "Older than 23" "Smeden (hoef-, kagchel- en andere)" 24184
+"1137" "Female" "Older than 23" "Smeden (hoef-, kagchel- en andere)" 222
+"1138" "Male" "12 to 15" "Solliciteurs en klerken" 28
+"1139" "Male" "16 to 23 years" "Solliciteurs en klerken" 76
+"1140" "Male" "Older than 23" "Solliciteurs en klerken" 85
+"1141" "Male" "Older than 23" "Speelkaartenfabriekanten" 1
+"1142" "Male" "16 to 23 years" "Speldenfabriekanten en werklieden" 2
+"1143" "Female" "16 to 23 years" "Speldenfabriekanten en werklieden" 6
+"1144" "Male" "Older than 23" "Speldenfabriekanten en werklieden" 12
+"1145" "Female" "Older than 23" "Speldenfabriekanten en werklieden" 8
+"1146" "Male" "10 to 11" "Spiegelmakers en verkoopers" 2
+"1147" "Male" "12 to 15" "Spiegelmakers en verkoopers" 44
+"1148" "Male" "16 to 23 years" "Spiegelmakers en verkoopers" 114
+"1149" "Male" "Older than 23" "Spiegelmakers en verkoopers" 316
+"1150" "Female" "Older than 23" "Spiegelmakers en verkoopers" 2
+"1151" "Male" "10 to 11" "Spijkermakers" 2
+"1152" "Male" "12 to 15" "Spijkermakers" 38
+"1153" "Male" "16 to 23 years" "Spijkermakers" 72
+"1154" "Male" "Older than 23" "Spijkermakers" 226
+"1155" "Male" "Younger than 10" "Spinners, wevers en spoelders" 318
+"1156" "Female" "Younger than 10" "Spinners, wevers en spoelders" 178
+"1157" "Male" "10 to 11" "Spinners, wevers en spoelders" 708
+"1158" "Female" "10 to 11" "Spinners, wevers en spoelders" 476
+"1159" "Male" "12 to 15" "Spinners, wevers en spoelders" 4272
+"1160" "Female" "12 to 15" "Spinners, wevers en spoelders" 2262
+"1161" "Male" "16 to 23 years" "Spinners, wevers en spoelders" 10329
+"1162" "Female" "16 to 23 years" "Spinners, wevers en spoelders" 5593
+"1163" "Male" "Older than 23" "Spinners, wevers en spoelders" 31896
+"1164" "Female" "Older than 23" "Spinners, wevers en spoelders" 12486
+"1165" "Male" "12 to 15" "Spoorweg- en stoombootbeambten" 10
+"1166" "Male" "16 to 23 years" "Spoorweg- en stoombootbeambten" 81
+"1167" "Female" "16 to 23 years" "Spoorweg- en stoombootbeambten" 2
+"1168" "Male" "Older than 23" "Spoorweg- en stoombootbeambten" 1600
+"1169" "Female" "Older than 23" "Spoorweg- en stoombootbeambten" 10
+"1170" "Male" "12 to 15" "Stalhouders, rijtuigenverhuurders" 8
+"1171" "Male" "16 to 23 years" "Stalhouders, rijtuigenverhuurders" 60
+"1172" "Male" "Older than 23" "Stalhouders, rijtuigenverhuurders" 1146
+"1173" "Female" "Older than 23" "Stalhouders, rijtuigenverhuurders" 70
+"1174" "Male" "12 to 15" "Stangenmakers" 2
+"1175" "Male" "16 to 23 years" "Stangenmakers" 2
+"1176" "Male" "Older than 23" "Stangenmakers" 2
+"1177" "Male" "10 to 11" "Steen- en plaatdrukkers" 12
+"1178" "Male" "12 to 15" "Steen- en plaatdrukkers" 110
+"1179" "Male" "16 to 23 years" "Steen- en plaatdrukkers" 207
+"1180" "Male" "Older than 23" "Steen- en plaatdrukkers" 577
+"1181" "Female" "Older than 23" "Steen- en plaatdrukkers" 4
+"1182" "Male" "10 to 11" "Steenhouwers" 10
+"1183" "Male" "12 to 15" "Steenhouwers" 174
+"1184" "Male" "16 to 23 years" "Steenhouwers" 508
+"1185" "Female" "16 to 23 years" "Steenhouwers" 2
+"1186" "Male" "Older than 23" "Steenhouwers" 1284
+"1187" "Female" "Older than 23" "Steenhouwers" 4
+"1188" "Male" "12 to 15" "Steenkolen-, hout- en turfverkoopers" 2
+"1189" "Male" "16 to 23 years" "Steenkolen-, hout- en turfverkoopers" 24
+"1190" "Female" "16 to 23 years" "Steenkolen-, hout- en turfverkoopers" 2
+"1191" "Male" "Older than 23" "Steenkolen-, hout- en turfverkoopers" 702
+"1192" "Female" "Older than 23" "Steenkolen-, hout- en turfverkoopers" 106
+"1193" "Male" "16 to 23 years" "Steenkoopers" 2
+"1194" "Male" "Older than 23" "Steenkoopers" 54
+"1195" "Male" "Older than 23" "Stellingverhuurders" 4
+"1196" "Male" "12 to 15" "Stijfselfabriekanten" 8
+"1197" "Male" "16 to 23 years" "Stijfselfabriekanten" 12
+"1198" "Male" "Older than 23" "Stijfselfabriekanten" 144
+"1199" "Male" "Younger than 10" "Stoelenbekleeders, draaijers, makers, matters" 2
+"1200" "Male" "10 to 11" "Stoelenbekleeders, draaijers, makers, matters" 24
+"1201" "Male" "12 to 15" "Stoelenbekleeders, draaijers, makers, matters" 186
+"1202" "Female" "12 to 15" "Stoelenbekleeders, draaijers, makers, matters" 2
+"1203" "Male" "16 to 23 years" "Stoelenbekleeders, draaijers, makers, matters" 485
+"1204" "Female" "16 to 23 years" "Stoelenbekleeders, draaijers, makers, matters" 4
+"1205" "Male" "Older than 23" "Stoelenbekleeders, draaijers, makers, matters" 2279
+"1206" "Female" "Older than 23" "Stoelenbekleeders, draaijers, makers, matters" 64
+"1207" "Male" "Younger than 10" "Stoffenverwers en glanzers" 2
+"1208" "Male" "10 to 11" "Stoffenverwers en glanzers" 10
+"1209" "Male" "12 to 15" "Stoffenverwers en glanzers" 57
+"1210" "Male" "16 to 23 years" "Stoffenverwers en glanzers" 251
+"1211" "Female" "16 to 23 years" "Stoffenverwers en glanzers" 8
+"1212" "Male" "Older than 23" "Stoffenverwers en glanzers" 1516
+"1213" "Female" "Older than 23" "Stoffenverwers en glanzers" 62
+"1214" "Male" "Older than 23" "Stoommeelfabriekanten" 2
+"1215" "Male" "12 to 15" "Straatmakers" 30
+"1216" "Male" "16 to 23 years" "Straatmakers" 102
+"1217" "Male" "Older than 23" "Straatmakers" 741
+"1218" "Male" "Older than 23" "Strandmeesters" 18
+"1219" "Male" "12 to 15" "Studenten aan hoogescholen, athenaea, seminarien, clinische scholen, enz." 617
+"1220" "Male" "16 to 23 years" "Studenten aan hoogescholen, athenaea, seminarien, clinische scholen, enz." 3023
+"1221" "Male" "Older than 23" "Studenten aan hoogescholen, athenaea, seminarien, clinische scholen, enz." 1391
+"1222" "Male" "10 to 11" "Stukadoors en witters" 20
+"1223" "Male" "12 to 15" "Stukadoors en witters" 63
+"1224" "Male" "16 to 23 years" "Stukadoors en witters" 390
+"1225" "Male" "Older than 23" "Stukadoors en witters" 1895
+"1226" "Female" "Older than 23" "Stukadoors en witters" 4
+"1227" "Male" "10 to 11" "Suiker- en pasteibakkers" 4
+"1228" "Male" "12 to 15" "Suiker- en pasteibakkers" 26
+"1229" "Male" "16 to 23 years" "Suiker- en pasteibakkers" 134
+"1230" "Male" "Older than 23" "Suiker- en pasteibakkers" 1891
+"1231" "Female" "Older than 23" "Suiker- en pasteibakkers" 18
+"1232" "Male" "12 to 15" "Suikerraffinadeurs" 2
+"1233" "Male" "16 to 23 years" "Suikerraffinadeurs" 20
+"1234" "Male" "Older than 23" "Suikerraffinadeurs" 416
+"1235" "Male" "16 to 23 years" "Surnumerairs bij de belasting, posterijen enz." 16
+"1236" "Male" "Older than 23" "Surnumerairs bij de belasting, posterijen enz." 118
+"1237" "Male" "16 to 23 years" "Taalmeesters, translateurs" 10
+"1238" "Male" "Older than 23" "Taalmeesters, translateurs" 128
+"1239" "Male" "16 to 23 years" "Tabak- en cigaren- fabriekanten" 514
+"1240" "Female" "16 to 23 years" "Tabak- en cigaren- fabriekanten" 4
+"1241" "Male" "Older than 23" "Tabak- en cigaren- fabriekanten" 1763
+"1242" "Female" "Older than 23" "Tabak- en cigaren- fabriekanten" 12
+"1243" "Male" "Younger than 10" "Tabak- en cigaren- kervers, knechts" 58
+"1244" "Female" "Younger than 10" "Tabak- en cigaren- kervers, knechts" 6
+"1245" "Male" "10 to 11" "Tabak- en cigaren- kervers, knechts" 314
+"1246" "Female" "10 to 11" "Tabak- en cigaren- kervers, knechts" 12
+"1247" "Male" "12 to 15" "Tabak- en cigaren- kervers, knechts" 2360
+"1248" "Female" "12 to 15" "Tabak- en cigaren- kervers, knechts" 48
+"1249" "Male" "16 to 23 years" "Tabak- en cigaren- kervers, knechts" 3435
+"1250" "Female" "16 to 23 years" "Tabak- en cigaren- kervers, knechts" 68
+"1251" "Male" "Older than 23" "Tabak- en cigaren- kervers, knechts" 4115
+"1252" "Female" "Older than 23" "Tabak- en cigaren- kervers, knechts" 38
+"1253" "Male" "16 to 23 years" "Tabak- en cigaren- verkoopers" 268
+"1254" "Female" "16 to 23 years" "Tabak- en cigaren- verkoopers" 2
+"1255" "Male" "Older than 23" "Tabak- en cigaren- verkoopers" 953
+"1256" "Female" "Older than 23" "Tabak- en cigaren- verkoopers" 22
+"1257" "Male" "12 to 15" "Tabaksplanters" 128
+"1258" "Female" "12 to 15" "Tabaksplanters" 10
+"1259" "Male" "16 to 23 years" "Tabaksplanters" 403
+"1260" "Female" "16 to 23 years" "Tabaksplanters" 40
+"1261" "Male" "Older than 23" "Tabaksplanters" 4197
+"1262" "Female" "Older than 23" "Tabaksplanters" 194
+"1263" "Male" "Younger than 10" "Tapijtfabriekanten en werklieden" 6
+"1264" "Female" "Younger than 10" "Tapijtfabriekanten en werklieden" 4
+"1265" "Male" "10 to 11" "Tapijtfabriekanten en werklieden" 16
+"1266" "Female" "10 to 11" "Tapijtfabriekanten en werklieden" 6
+"1267" "Male" "12 to 15" "Tapijtfabriekanten en werklieden" 44
+"1268" "Female" "12 to 15" "Tapijtfabriekanten en werklieden" 16
+"1269" "Male" "16 to 23 years" "Tapijtfabriekanten en werklieden" 121
+"1270" "Female" "16 to 23 years" "Tapijtfabriekanten en werklieden" 30
+"1271" "Male" "Older than 23" "Tapijtfabriekanten en werklieden" 498
+"1272" "Female" "Older than 23" "Tapijtfabriekanten en werklieden" 24
+"1273" "Male" "12 to 15" "Telegrafisten" 2
+"1274" "Male" "16 to 23 years" "Telegrafisten" 46
+"1275" "Male" "Older than 23" "Telegrafisten" 252
+"1276" "Male" "Younger than 10" "Timmerlieden en kistenmakers" 4
+"1277" "Male" "10 to 11" "Timmerlieden en kistenmakers" 205
+"1278" "Male" "12 to 15" "Timmerlieden en kistenmakers" 6030
+"1279" "Male" "16 to 23 years" "Timmerlieden en kistenmakers" 14787
+"1280" "Male" "Older than 23" "Timmerlieden en kistenmakers" 51365
+"1281" "Female" "Older than 23" "Timmerlieden en kistenmakers" 78
+"1282" "Male" "10 to 11" "Tingieters" 2
+"1283" "Male" "12 to 15" "Tingieters" 22
+"1284" "Male" "16 to 23 years" "Tingieters" 59
+"1285" "Male" "Older than 23" "Tingieters" 259
+"1286" "Female" "Older than 23" "Tingieters" 2
+"1287" "Male" "12 to 15" "Tol- en pontgaarders, sluiswachters" 6
+"1288" "Male" "16 to 23 years" "Tol- en pontgaarders, sluiswachters" 34
+"1289" "Male" "Older than 23" "Tol- en pontgaarders, sluiswachters" 2223
+"1290" "Female" "Older than 23" "Tol- en pontgaarders, sluiswachters" 92
+"1291" "Male" "Younger than 10" "Touwslagers" 8
+"1292" "Male" "10 to 11" "Touwslagers" 60
+"1293" "Female" "10 to 11" "Touwslagers" 2
+"1294" "Male" "12 to 15" "Touwslagers" 580
+"1295" "Female" "12 to 15" "Touwslagers" 2
+"1296" "Male" "16 to 23 years" "Touwslagers" 1059
+"1297" "Female" "16 to 23 years" "Touwslagers" 36
+"1298" "Male" "Older than 23" "Touwslagers" 3451
+"1299" "Female" "Older than 23" "Touwslagers" 48
+"1300" "Male" "Older than 23" "Traanstokers" 2
+"1301" "Male" "10 to 11" "Turf-, kolen- en koorndragers" 2
+"1302" "Male" "12 to 15" "Turf-, kolen- en koorndragers" 26
+"1303" "Male" "16 to 23 years" "Turf-, kolen- en koorndragers" 139
+"1304" "Female" "16 to 23 years" "Turf-, kolen- en koorndragers" 4
+"1305" "Male" "Older than 23" "Turf-, kolen- en koorndragers" 3171
+"1306" "Female" "Older than 23" "Turf-, kolen- en koorndragers" 176
+"1307" "Male" "Younger than 10" "Uitdragers en venters" 2
+"1308" "Male" "10 to 11" "Uitdragers en venters" 6
+"1309" "Male" "12 to 15" "Uitdragers en venters" 175
+"1310" "Female" "12 to 15" "Uitdragers en venters" 21
+"1311" "Male" "16 to 23 years" "Uitdragers en venters" 441
+"1312" "Female" "16 to 23 years" "Uitdragers en venters" 110
+"1313" "Male" "Older than 23" "Uitdragers en venters" 2228
+"1314" "Female" "Older than 23" "Uitdragers en venters" 1072
+"1315" "Male" "10 to 11" "Uurwerkmakers" 20
+"1316" "Male" "12 to 15" "Uurwerkmakers" 305
+"1317" "Male" "16 to 23 years" "Uurwerkmakers" 927
+"1318" "Male" "Older than 23" "Uurwerkmakers" 3003
+"1319" "Female" "Older than 23" "Uurwerkmakers" 18
+"1320" "Male" "16 to 23 years" "Veeartsen" 10
+"1321" "Male" "Older than 23" "Veeartsen" 660
+"1322" "Male" "Younger than 10" "Veehouders-, paarden- en veeverkoopers" 8
+"1323" "Male" "10 to 11" "Veehouders-, paarden- en veeverkoopers" 157
+"1324" "Male" "12 to 15" "Veehouders-, paarden- en veeverkoopers" 3014
+"1325" "Female" "12 to 15" "Veehouders-, paarden- en veeverkoopers" 196
+"1326" "Male" "16 to 23 years" "Veehouders-, paarden- en veeverkoopers" 12152
+"1327" "Female" "16 to 23 years" "Veehouders-, paarden- en veeverkoopers" 303
+"1328" "Male" "Older than 23" "Veehouders-, paarden- en veeverkoopers" 45220
+"1329" "Female" "Older than 23" "Veehouders-, paarden- en veeverkoopers" 3536
+"1330" "Male" "12 to 15" "Veenlieden" 106
+"1331" "Male" "16 to 23 years" "Veenlieden" 374
+"1332" "Female" "16 to 23 years" "Veenlieden" 6
+"1333" "Male" "Older than 23" "Veenlieden" 2055
+"1334" "Female" "Older than 23" "Veenlieden" 48
+"1335" "Male" "12 to 15" "Vellenblooters" 4
+"1336" "Male" "16 to 23 years" "Vellenblooters" 2
+"1337" "Male" "Older than 23" "Vellenblooters" 20
+"1338" "Male" "16 to 23 years" "Vendumeesters" 2
+"1339" "Male" "Older than 23" "Vendumeesters" 32
+"1340" "Male" "Older than 23" "Verfhoutmolenaars" 8
+"1341" "Male" "10 to 11" "Vergulders en lijstenmakers" 2
+"1342" "Male" "12 to 15" "Vergulders en lijstenmakers" 44
+"1343" "Male" "16 to 23 years" "Vergulders en lijstenmakers" 110
+"1344" "Male" "Older than 23" "Vergulders en lijstenmakers" 388
+"1345" "Female" "Older than 23" "Vergulders en lijstenmakers" 2
+"1346" "Male" "12 to 15" "Verveeners" 2
+"1347" "Male" "16 to 23 years" "Verveeners" 37
+"1348" "Female" "16 to 23 years" "Verveeners" 2
+"1349" "Male" "Older than 23" "Verveeners" 202
+"1350" "Female" "Older than 23" "Verveeners" 18
+"1351" "Male" "Older than 23" "Veteranen" 22
+"1352" "Male" "16 to 23 years" "Villers" 10
+"1353" "Male" "Older than 23" "Villers" 54
+"1354" "Male" "12 to 15" "Vischdroogers en rookers" 2
+"1355" "Male" "16 to 23 years" "Vischdroogers en rookers" 2
+"1356" "Male" "Older than 23" "Vischdroogers en rookers" 152
+"1357" "Female" "Older than 23" "Vischdroogers en rookers" 6
+"1358" "Male" "12 to 15" "Vischverkoopers" 34
+"1359" "Female" "12 to 15" "Vischverkoopers" 4
+"1360" "Male" "16 to 23 years" "Vischverkoopers" 194
+"1361" "Female" "16 to 23 years" "Vischverkoopers" 84
+"1362" "Male" "Older than 23" "Vischverkoopers" 1576
+"1363" "Female" "Older than 23" "Vischverkoopers" 802
+"1364" "Male" "Younger than 10" "Visschers" 4
+"1365" "Male" "10 to 11" "Visschers" 52
+"1366" "Male" "12 to 15" "Visschers" 930
+"1367" "Male" "16 to 23 years" "Visschers" 2184
+"1368" "Male" "Older than 23" "Visschers" 10103
+"1369" "Female" "Older than 23" "Visschers" 14
+"1370" "Male" "10 to 11" "Vleeschhouwers en spekslagers" 16
+"1371" "Male" "12 to 15" "Vleeschhouwers en spekslagers" 671
+"1372" "Male" "16 to 23 years" "Vleeschhouwers en spekslagers" 2676
+"1373" "Female" "16 to 23 years" "Vleeschhouwers en spekslagers" 6
+"1374" "Male" "Older than 23" "Vleeschhouwers en spekslagers" 12809
+"1375" "Female" "Older than 23" "Vleeschhouwers en spekslagers" 184
+"1376" "Male" "Older than 23" "Voddenrapers" 4
+"1377" "Male" "10 to 11" "Voerlieden, koetsiers, loopers, postknechten" 20
+"1378" "Male" "12 to 15" "Voerlieden, koetsiers, loopers, postknechten" 297
+"1379" "Male" "16 to 23 years" "Voerlieden, koetsiers, loopers, postknechten" 1520
+"1380" "Male" "Older than 23" "Voerlieden, koetsiers, loopers, postknechten" 12135
+"1381" "Female" "Older than 23" "Voerlieden, koetsiers, loopers, postknechten" 70
+"1382" "Male" "Older than 23" "Vogelvangers" 4
+"1383" "Male" "10 to 11" "Vogelverkoopers" 2
+"1384" "Male" "12 to 15" "Vogelverkoopers" 8
+"1385" "Male" "16 to 23 years" "Vogelverkoopers" 28
+"1386" "Male" "Older than 23" "Vogelverkoopers" 350
+"1387" "Female" "Older than 23" "Vogelverkoopers" 11
+"1388" "Male" "Older than 23" "Volmolenaars" 2
+"1389" "Male" "16 to 23 years" "Waagdragers" 8
+"1390" "Male" "Older than 23" "Waagdragers" 250
+"1391" "Male" "16 to 23 years" "Wafel- en poffertjesbakkers" 2
+"1392" "Female" "16 to 23 years" "Wafel- en poffertjesbakkers" 2
+"1393" "Male" "Older than 23" "Wafel- en poffertjesbakkers" 54
+"1394" "Female" "Older than 23" "Wafel- en poffertjesbakkers" 58
+"1395" "Male" "Older than 23" "Wasbleekers" 2
+"1396" "Male" "16 to 23 years" "Wasdoekfabriekanten" 4
+"1397" "Male" "Older than 23" "Wasdoekfabriekanten" 8
+"1398" "Male" "16 to 23 years" "Water- en vuurverkoopers" 6
+"1399" "Female" "16 to 23 years" "Water- en vuurverkoopers" 2
+"1400" "Male" "Older than 23" "Water- en vuurverkoopers" 22
+"1401" "Female" "Older than 23" "Water- en vuurverkoopers" 298
+"1402" "Male" "16 to 23 years" "Waterbouwkundige leerlingen" 4
+"1403" "Male" "Older than 23" "Waterbouwkundige leerlingen" 1
+"1404" "Male" "10 to 11" "Watermolenaars" 2
+"1405" "Male" "12 to 15" "Watermolenaars" 28
+"1406" "Male" "16 to 23 years" "Watermolenaars" 104
+"1407" "Male" "Older than 23" "Watermolenaars" 2116
+"1408" "Female" "Older than 23" "Watermolenaars" 30
+"1409" "Male" "12 to 15" "Wekkers" 2
+"1410" "Male" "16 to 23 years" "Wekkers" 8
+"1411" "Male" "Older than 23" "Wekkers" 104
+"1412" "Female" "Older than 23" "Wekkers" 30
+"1413" "Male" "10 to 11" "Werktuigkundigen en makers" 6
+"1414" "Male" "12 to 15" "Werktuigkundigen en makers" 53
+"1415" "Male" "16 to 23 years" "Werktuigkundigen en makers" 231
+"1416" "Male" "Older than 23" "Werktuigkundigen en makers" 711
+"1417" "Female" "Older than 23" "Werktuigkundigen en makers" 2
+"1418" "Male" "Younger than 10" "Weverskammen-, spoel- en rietmakers" 2
+"1419" "Female" "Younger than 10" "Weverskammen-, spoel- en rietmakers" 2
+"1420" "Male" "10 to 11" "Weverskammen-, spoel- en rietmakers" 8
+"1421" "Female" "10 to 11" "Weverskammen-, spoel- en rietmakers" 6
+"1422" "Male" "12 to 15" "Weverskammen-, spoel- en rietmakers" 8
+"1423" "Female" "12 to 15" "Weverskammen-, spoel- en rietmakers" 6
+"1424" "Male" "16 to 23 years" "Weverskammen-, spoel- en rietmakers" 12
+"1425" "Female" "16 to 23 years" "Weverskammen-, spoel- en rietmakers" 8
+"1426" "Male" "Older than 23" "Weverskammen-, spoel- en rietmakers" 76
+"1427" "Female" "Older than 23" "Weverskammen-, spoel- en rietmakers" 16
+"1428" "Male" "10 to 11" "Wieldraaijers" 4
+"1429" "Male" "12 to 15" "Wieldraaijers" 14
+"1430" "Male" "16 to 23 years" "Wieldraaijers" 60
+"1431" "Male" "Older than 23" "Wieldraaijers" 157
+"1432" "Female" "Older than 23" "Wieldraaijers" 2
+"1433" "Male" "Older than 23" "Wijndragers of kraankinderen" 18
+"1434" "Male" "12 to 15" "Wijnhandelaren" 22
+"1435" "Male" "16 to 23 years" "Wijnhandelaren" 200
+"1436" "Male" "Older than 23" "Wijnhandelaren" 1510
+"1437" "Female" "Older than 23" "Wijnhandelaren" 50
+"1438" "Male" "Older than 23" "Zaadverkoopers" 4
+"1439" "Male" "12 to 15" "Zaakwaarnemers" 6
+"1440" "Male" "16 to 23 years" "Zaakwaarnemers" 265
+"1441" "Female" "16 to 23 years" "Zaakwaarnemers" 2
+"1442" "Male" "Older than 23" "Zaakwaarnemers" 5844
+"1443" "Female" "Older than 23" "Zaakwaarnemers" 14
+"1444" "Female" "10 to 11" "Zakkenmakers" 2
+"1445" "Male" "12 to 15" "Zakkenmakers" 8
+"1446" "Male" "16 to 23 years" "Zakkenmakers" 26
+"1447" "Female" "16 to 23 years" "Zakkenmakers" 8
+"1448" "Male" "Older than 23" "Zakkenmakers" 118
+"1449" "Female" "Older than 23" "Zakkenmakers" 118
+"1450" "Male" "Older than 23" "Zakkenverhuurders" 2
+"1451" "Male" "Older than 23" "Zandverkoopers" 6
+"1452" "Male" "10 to 11" "Zeeftenmakers" 6
+"1453" "Male" "12 to 15" "Zeeftenmakers" 4
+"1454" "Male" "16 to 23 years" "Zeeftenmakers" 11
+"1455" "Male" "Older than 23" "Zeeftenmakers" 84
+"1456" "Male" "Older than 23" "Zeehandelaars" 50
+"1457" "Female" "Older than 23" "Zeehandelaars" 2
+"1458" "Male" "10 to 11" "Zeelieden en mariniers beneden den rang van adelborst 1ste klasse" 3
+"1459" "Male" "12 to 15" "Zeelieden en mariniers beneden den rang van adelborst 1ste klasse" 311
+"1460" "Male" "16 to 23 years" "Zeelieden en mariniers beneden den rang van adelborst 1ste klasse" 2236
+"1461" "Male" "Older than 23" "Zeelieden en mariniers beneden den rang van adelborst 1ste klasse" 4486
+"1462" "Male" "16 to 23 years" "Zeelieden en mariniers van en boven den rang van adelborst 1ste kl." 60
+"1463" "Male" "Older than 23" "Zeelieden en mariniers van en boven den rang van adelborst 1ste kl." 356
+"1464" "Male" "16 to 23 years" "Zeemtouwers" 6
+"1465" "Male" "Older than 23" "Zeemtouwers" 64
+"1466" "Male" "10 to 11" "Zeepzieders" 4
+"1467" "Male" "12 to 15" "Zeepzieders" 56
+"1468" "Male" "16 to 23 years" "Zeepzieders" 66
+"1469" "Male" "Older than 23" "Zeepzieders" 395
+"1470" "Male" "12 to 15" "Zeevaartscholen te Amsterdam en Groningen (leerlingen aan de)" 15
+"1471" "Male" "16 to 23 years" "Zeevaartscholen te Amsterdam en Groningen (leerlingen aan de)" 173
+"1472" "Female" "12 to 15" "Ziekenoppassers" 2
+"1473" "Male" "16 to 23 years" "Ziekenoppassers" 8
+"1474" "Female" "16 to 23 years" "Ziekenoppassers" 6
+"1475" "Male" "Older than 23" "Ziekenoppassers" 178
+"1476" "Female" "Older than 23" "Ziekenoppassers" 12
+"1477" "Male" "Older than 23" "Zijdefabriekanten" 1
+"1478" "Male" "12 to 15" "Zoutzieders" 6
+"1479" "Male" "16 to 23 years" "Zoutzieders" 24
+"1480" "Male" "Older than 23" "Zoutzieders" 297
+"1481" "Female" "Older than 23" "Zoutzieders" 10
+"1482" "Male" "12 to 15" "Zwaardvegers" 6
+"1483" "Male" "16 to 23 years" "Zwaardvegers" 6
+"1484" "Male" "Older than 23" "Zwaardvegers" 92
+"1485" "Male" "Older than 23" "Zwavelmakers" 8
+"1486" "Female" "Older than 23" "Zwavelmakers" 2
+"1487" "Male" "16 to 23 years" "Zwavelstokkenmakers en verkoopers" 4
+"1488" "Female" "16 to 23 years" "Zwavelstokkenmakers en verkoopers" 2
+"1489" "Male" "Older than 23" "Zwavelstokkenmakers en verkoopers" 30
+"1490" "Female" "Older than 23" "Zwavelstokkenmakers en verkoopers" 4
