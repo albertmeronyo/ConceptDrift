@@ -97,9 +97,9 @@ df89 <- res3
 # df59 <- df59[complete.cases(df59),]
 # df89 <- df89[complete.cases(df89),]
 # Remove possibly duplicated rows
-df49 <- df49[!duplicated(df49),]
-df59 <- df59[!duplicated(df59),]
-df89 <- df89[!duplicated(df89),]
+# df49 <- df49[!duplicated(df49),]
+# df59 <- df59[!duplicated(df59),]
+# df89 <- df89[!duplicated(df89),]
 # Assign column data types
 df49$gender_c <- as.factor(df49$gender_c)
 df49$age_c <- as.factor(df49$age_c)
