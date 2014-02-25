@@ -103,19 +103,19 @@ df89 <- res3
 # Assign column data types
 df49$gender_c <- as.factor(df49$gender_c)
 df49$age_c <- as.factor(df49$age_c)
-df49$occupation_c <- as.factor(df49$occupation_c)
+df49$occupation_c <- as.character(df49$occupation_c)
 df49$place_c <- as.factor(df49$place_c)
 df49$population <- as.numeric(df49$population)
 df59$gender_c <- as.factor(df59$gender_c)
 df59$factual_c <- as.factor(df59$factual_c)
 df59$age_c <- as.factor(df59$age_c)
-df59$occupation_c <- as.factor(df59$occupation_c)
+df59$occupation_c <- as.character(df59$occupation_c)
 df59$class_c <- as.factor(df59$class_c)
 df59$population <- as.numeric(df59$population)
 df89$age_c <- as.factor(df89$age_c)
 df89$gender_c <- as.factor(df89$gender_c)
 df89$marital_status_c <- as.factor(df89$marital_status_c)
-df89$occupation_c <- as.factor(df89$occupation_c)
+df89$occupation_c <- as.character(df89$occupation_c)
 df89$occupation <- as.factor(df89$occupation)
 df89$position_c <- as.factor(df89$position_c)
 df89$population <- as.numeric(df89$population)
@@ -123,6 +123,10 @@ df89$population <- as.numeric(df89$population)
 df49 <- df49[-grep("TOTAAL", df49$occupation_c),]
 df59 <- df59[-grep("TOTAAL", df59$occupation_c),]
 df89 <- df89[-grep("(Totaal|totaal)", df89$occupation_c),]
+
+df49$occupation_c <- as.factor(df49$occupation_c)
+df59$occupation_c <- as.factor(df59$occupation_c)
+df89$occupation_c <- as.factor(df89$occupation_c)
 
 ###############
 # Harmonization
@@ -178,3 +182,29 @@ df59_all <- aggregate(df59$population, list(df59$occupation), FUN = sum)
 colnames(df59_all) <- c('occupation', 'population')
 df89_all <- aggregate(df89$population, list(df89$occupation), FUN = sum)
 colnames(df89_all) <- c('occupation', 'population')
+
+#############
+# Pooled data
+#############
+
+df49.date <- cbind(1849, df49)
+colnames(df49.date) <- c('year', 'gender', 'age', 'occupation', 'population')
+df49.date$row.names <- NULL
+df59.date <- cbind(1859, df59)
+colnames(df59.date) <- c('year', 'gender', 'age', 'occupation', 'population')
+df59.date$row.names <- NULL
+df89.date <- cbind(1889, df89)
+colnames(df89.date) <- c('year', 'age', 'gender', 'occupation', 'population')
+df89.date$row.names <- NULL
+
+pool <- rbind(df49.date, df59.date, df89.date)
+pool$year <- as.factor(pool$year)
+
+# Conversion to numeric
+pool$gender <- as.numeric(pool$gender)
+levels(pool$age) <- c('1', '2', '7', '8', '11', '12', '4', '5', '6', '9', '10', '3', '13', '14', '15', '16', '17', '18', '19')
+pool$age <- as.numeric(pool$age)
+# Additional cleansing
+levels(pool$occupation)[levels(pool$occupation) == "Directeuren  "] <- "Directeuren"
+levels(pool$occupation)[levels(pool$occupation) == "Agenten   "] <- "Agenten"
+pool$occupation <- as.numeric(pool$occupation)
