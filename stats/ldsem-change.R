@@ -208,3 +208,12 @@ pool$age <- as.numeric(pool$age)
 levels(pool$occupation)[levels(pool$occupation) == "Directeuren  "] <- "Directeuren"
 levels(pool$occupation)[levels(pool$occupation) == "Agenten   "] <- "Agenten"
 pool$occupation <- as.numeric(pool$occupation)
+
+# We use the population column to repeat the rows as many times as this column specifies
+# Then we remove the column
+pool <- pool[complete.cases(pool),]
+pool <- pool[rep(1:nrow(pool), pool$population),]
+pool$population <- NULL
+
+# Save to CSV
+write.table(pool, file='/Users/Albert/src/ConceptDrift/stats/pooled_numeric_unfolded_Peter.csv', sep=',', row.names=F)
