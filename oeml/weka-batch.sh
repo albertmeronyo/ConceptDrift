@@ -41,15 +41,15 @@ echo "SMO completed."
 echo "Starting VotedPerceptron..."
 java $MEM $WEKAPATH weka.classifiers.functions.VotedPerceptron $INPUT -i -o -I 1 -E 1.0 -S 1 -M 10000 >> $OUTPUT
 echo "VotedPerceptron completed."
-echo "Starting IBk..."
-java $MEM $WEKAPATH weka.classifiers.lazy.IBk $INPUT -i -o -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\"" >> $OUTPUT
-echo "IBk completed."
-echo "Starting KStar..."
-java $MEM $WEKAPATH weka.classifiers.lazy.KStar $INPUT -i -o -B 20 -M a >> $OUTPUT
-echo "KStar completed."
-echo "Starting LWL..."
-java $MEM $WEKAPATH weka.classifiers.lazy.LWL $INPUT -i -o -U 0 -K -1 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\"" -W weka.classifiers.trees.DecisionStump >> $OUTPUT
-echo "LWL completed."
+# echo "Starting IBk..."
+# java $MEM $WEKAPATH weka.classifiers.lazy.IBk $INPUT -i -o -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\"" >> $OUTPUT
+# echo "IBk completed."
+# echo "Starting KStar..."
+# java $MEM $WEKAPATH weka.classifiers.lazy.KStar $INPUT -i -o -B 20 -M a >> $OUTPUT
+# echo "KStar completed."
+# echo "Starting LWL..."
+# java $MEM $WEKAPATH weka.classifiers.lazy.LWL $INPUT -i -o -U 0 -K -1 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\"" -W weka.classifiers.trees.DecisionStump >> $OUTPUT
+# echo "LWL completed."
 echo "Starting DecisionTable..."
 java $MEM $WEKAPATH weka.classifiers.rules.DecisionTable $INPUT -i -o -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5" >> $OUTPUT
 echo "DecisionTable completed."
