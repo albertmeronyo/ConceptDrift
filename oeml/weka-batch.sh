@@ -7,7 +7,7 @@ WEKAPATH="-classpath weka.jar"
 
 echo "Starting WEKA-batch..."
 
-cat /dev/null > $OUTPUT
+# cat /dev/null > $OUTPUT
 echo "Starting BayesNet..."
 java $MEM $WEKAPATH weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5 $INPUT -i -o >> $OUTPUT
 echo "BayesNet completed."
@@ -41,9 +41,9 @@ echo "SMO completed."
 echo "Starting VotedPerceptron..."
 java $MEM $WEKAPATH weka.classifiers.functions.VotedPerceptron -I 1 -E 1.0 -S 1 -M 10000 $INPUT -i -o >> $OUTPUT
 echo "VotedPerceptron completed."
-echo "Starting IBk..."
-java $MEM $WEKAPATH weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\"" $INPUT -i -o >> $OUTPUT
-echo "IBk completed."
+# echo "Starting IBk..."
+# java $MEM $WEKAPATH weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\"" $INPUT -i -o >> $OUTPUT
+# echo "IBk completed."
 echo "Starting KStar..."
 java $MEM $WEKAPATH weka.classifiers.lazy.KStar -B 20 -M a $INPUT -i -o >> $OUTPUT
 echo "KStar completed."

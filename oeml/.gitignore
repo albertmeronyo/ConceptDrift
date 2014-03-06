@@ -4,3 +4,4 @@
 !.gitignore
 *.pyc
 results.txt
+error.txt
