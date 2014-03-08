@@ -62,21 +62,21 @@ echo "Starting WEKA-batch..."
 # echo "Starting PART..."
 # java $MEM $WEKAPATH weka.classifiers.rules.PART $INPUT -i -o -M 2 -C 0.25 -Q 1 >> $OUTPUT
 # echo "PART completed."
-echo "Starting ZeroR..."
-java $MEM $WEKAPATH weka.classifiers.rules.ZeroR $INPUT -i -o >> $OUTPUT
-echo "ZeroR completed."
-echo "Starting DecisionStump..."
-java $MEM $WEKAPATH weka.classifiers.trees.DecisionStump $INPUT -i -o >> $OUTPUT
-echo "DecisionStump completed."
-echo "Starting HoeffdingTree..."
-java $MEM $WEKAPATH weka.classifiers.trees.HoeffdingTree $INPUT -i -o -L 2 -S 1 -E 1.0E-7 -H 0.05 -M 0.01 -G 200.0 -N 0.0 >> $OUTPUT
-echo "HoeffdingTree completed."
-echo "Starting J48..."
-java $MEM $WEKAPATH weka.classifiers.trees.J48 $INPUT -i -o -C 0.25 -M 2 >> $OUTPUT
-echo "J48 completed."
-echo "Starting LMT..."
-java $MEM $WEKAPATH weka.classifiers.trees.LMT $INPUT -i -o -I -1 -M 15 -W 0.0 >> $OUTPUT
-echo "LMT completed."
+# echo "Starting ZeroR..."
+# java $MEM $WEKAPATH weka.classifiers.rules.ZeroR $INPUT -i -o >> $OUTPUT
+# echo "ZeroR completed."
+# echo "Starting DecisionStump..."
+# java $MEM $WEKAPATH weka.classifiers.trees.DecisionStump $INPUT -i -o >> $OUTPUT
+# echo "DecisionStump completed."
+# echo "Starting HoeffdingTree..."
+# java $MEM $WEKAPATH weka.classifiers.trees.HoeffdingTree $INPUT -i -o -L 2 -S 1 -E 1.0E-7 -H 0.05 -M 0.01 -G 200.0 -N 0.0 >> $OUTPUT
+# echo "HoeffdingTree completed."
+# echo "Starting J48..."
+# java $MEM $WEKAPATH weka.classifiers.trees.J48 $INPUT -i -o -C 0.25 -M 2 >> $OUTPUT
+# echo "J48 completed."
+# echo "Starting LMT..."
+# java $MEM $WEKAPATH weka.classifiers.trees.LMT $INPUT -i -o -I -1 -M 15 -W 0.0 >> $OUTPUT
+# echo "LMT completed."
 echo "Starting RandomForest with 10 trees..."
 java $MEM $WEKAPATH weka.classifiers.trees.RandomForest $INPUT -i -o -I 10 -K 0 -S 1 -num-slots 1 >> $OUTPUT
 echo "RandomForest with 10 trees completed."
