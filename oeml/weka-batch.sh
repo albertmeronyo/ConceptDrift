@@ -2,7 +2,7 @@
 
 INPUT="-t data/dbpedia-feats-train-rnames.arff"
 OUTPUT="results.txt"
-MEM="-Xmx24g"
+MEM="-Xmx18g"
 WEKAPATH="-classpath weka.jar"
 
 echo "Starting WEKA-batch..."
