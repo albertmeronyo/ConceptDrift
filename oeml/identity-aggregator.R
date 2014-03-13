@@ -9,8 +9,8 @@ df.c <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats-change_3.7.csv'
 
 # If all = F, we only consider nodes in all snapshots
 # Otherwise, consider everything and fill with NAs
-merged <- merge(df.a, df.b, by="V1", all = F)  
-merged <- merge(merged, df.c, by="V1", all = F)
+merged <- merge(df.a, df.b, by="V1", all = T)  
+merged <- merge(merged, df.c, by="V1", all = T)
 
 # Target variable: disjunction between targets
 merged$V18.x[is.na(merged$V18.x)] <- 0
@@ -34,7 +34,7 @@ colnames(merged) <- c('resource',
                       'extended')
 
 # Quote everything
-merged <- data.frame(lapply(merged, as.character), stringsAsFactors=FALSE)
+# merged <- data.frame(lapply(merged, as.character), stringsAsFactors=FALSE)
 
 # Save dataset
-write.csv(merged, "/Users/Albert/src/ConceptDrift/oeml/data/dbpedia-feats-identity-nona-train.csv", quote = TRUE, row.names=FALSE)
+write.csv(merged, "/Users/Albert/src/ConceptDrift/oeml/data/dbpedia-feats-identity-na-train.csv", quote = TRUE, na = "", row.names = FALSE)
