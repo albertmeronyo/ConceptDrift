@@ -9,8 +9,8 @@ df.c <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats-change_3.7.csv'
 
 # If all = F, we only consider nodes in all snapshots
 # Otherwise, consider everything and fill with NAs
-merged <- merge(df.a, df.b, by="V1", all = T)  
-merged <- merge(merged, df.c, by="V1", all = T)
+merged <- merge(df.a, df.b, by="V1", all = F)  
+merged <- merge(merged, df.c, by="V1", all = F)
 
 # Target variable: disjunction between targets
 merged$V18.x[is.na(merged$V18.x)] <- 0
@@ -19,7 +19,7 @@ merged$V18[is.na(merged$V18)] <- 0
 t <- merged$V18.x + merged$V18.y + merged$V18
 t[t > 1] <- 1
 merged <- cbind(merged, t)
-merged$t <- as.factor(merged$t)
+merged$t <- as.character(merged$t)
 
 # Aemove old targets ones
 merged$V18.x <- NULL
@@ -33,5 +33,8 @@ colnames(merged) <- c('resource',
                       'children0.2', 'children1.2', 'children2.2', 'children3.2', 'parents.2', 'siblings.2', 'members.2', 'membersChildren0.2', 'membersChildren1.2', 'membersChildren2.2', 'membersChildren3.2','ratio.2','ratio0.2','ratio1.2','ratio2.2','ratio3.2',
                       'extended')
 
+# Quote everything
+merged <- data.frame(lapply(merged, as.character), stringsAsFactors=FALSE)
+
 # Save dataset
-write.csv(merged, "/Users/Albert/src/ConceptDrift/oeml/data/dbpedia-feats-identity-na-train.csv", row.names=FALSE)
+write.csv(merged, "/Users/Albert/src/ConceptDrift/oeml/data/dbpedia-feats-identity-nona-train.csv", quote = TRUE, row.names=FALSE)
