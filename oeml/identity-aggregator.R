@@ -3,16 +3,19 @@
 ##########################################################
 
 # Read data
-df.a <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats_3.5.1.csv', header=F)
-df.b <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats_3.6.csv', header=F)
-df.c <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats_3.7.csv', header=F)
+df.a <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats-change_3.5.1.csv', header=F)
+df.b <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats-change_3.6.csv', header=F)
+df.c <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats-change_3.7.csv', header=F)
 
 # If all = F, we only consider nodes in all snapshots
 # Otherwise, consider everything and fill with NAs
-merged <- merge(df.a, df.b, by="V1", all = F)  
-merged <- merge(merged, df.c, by="V1", all = F)
+merged <- merge(df.a, df.b, by="V1", all = T)  
+merged <- merge(merged, df.c, by="V1", all = T)
 
 # Target variable: disjunction between targets
+merged$V18.x[is.na(merged$V18.x)] <- 0
+merged$V18.y[is.na(merged$V18.y)] <- 0
+merged$V18[is.na(merged$V18)] <- 0
 t <- merged$V18.x + merged$V18.y + merged$V18
 t[t > 1] <- 1
 merged <- cbind(merged, t)
@@ -31,4 +34,4 @@ colnames(merged) <- c('resource',
                       'extended')
 
 # Save dataset
-write.csv(merged, "/Users/Albert/src/ConceptDrift/oeml/data/merged.csv", row.names=FALSE)
+write.csv(merged, "/Users/Albert/src/ConceptDrift/oeml/data/dbpedia-feats-identity-na-train.csv", row.names=FALSE)
