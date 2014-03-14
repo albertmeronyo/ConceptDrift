@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INPUT="-t data/dbpedia-feats-train-rnames.arff"
+INPUT="-t data/dbpedia-feats-identity-nona-train.arff"
 OUTPUT="results.txt"
 MEM="-Xmx18g"
 WEKAPATH="-classpath weka.jar"
