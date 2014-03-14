@@ -12,6 +12,10 @@ parser.add_argument('--input', '-i',
 parser.add_argument('--output', '-o',
                     help = "Output file", 
                     required = True)
+parser.add_argument('-n',
+                    help = "Number of ontology snapshots (min. 3)",
+                    choices = range(3, 13),
+                    default = 3)
 parser.add_argument('--std', '-s',
                     help = "Whether structure comes in OWL or SKOS terms",
                     choices = ["SKOS", "OWL"],
