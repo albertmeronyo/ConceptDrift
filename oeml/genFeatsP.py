@@ -2,8 +2,18 @@ from rdflib import Graph
 from rdflib.namespace import URIRef, SKOS
 import argparse
 import sys
+import os
 import csv
 import gc
+
+# Argument parsing
+
+def check_n(value):
+    ivalue = int(value)
+    if ivalue < 3:
+        raise argparse.ArgumentTypeError("%s is an invalid ontology snapshots number (min. 3)" % value)
+    return ivalue
+
 
 parser = argparse.ArgumentParser(description="Generates learning dataset from OWL/SKOS versioned datasets")
 parser.add_argument('--input', '-i',
@@ -14,7 +24,7 @@ parser.add_argument('--output', '-o',
                     required = True)
 parser.add_argument('-n',
                     help = "Number of ontology snapshots (min. 3)",
-                    choices = range(3, 13),
+                    type = check_n,
                     default = 3)
 parser.add_argument('--std', '-s',
                     help = "Whether structure comes in OWL or SKOS terms",
@@ -22,6 +32,11 @@ parser.add_argument('--std', '-s',
                     required = True)
 
 args = parser.parse_args()
+
+print args.input, args.output, args.n, args.std
+
+if not os.path.exists(args.output):
+    os.makedirs(directory)
 
 sys.setrecursionlimit(30000)
 
@@ -81,6 +96,27 @@ def countArticlesChildren(g, h, n, r,  dcsubject = URIRef("http://purl.org/dc/te
         else:
             return countArticles(g, n, dcsubject)
 
+###########
+# Snapshots
+###########
+# Load subdirs from input dir
+snapshots = []
+for f in os.listdir(args.input):
+    if os.path.isdir(args.input + f):
+        snapshots.append(f)
+
+snapshots.sort()
+
+# Only use the specified amount
+
+snapshots = snapshots[len(snapshots) - args.n:]
+t_snapshots = snapshots[:-2]
+r_snapshot = snapshots[-2]
+e_snapshot = snapshots[-1]
+
+print snapshots, t_snapshots, r_snapshot, e_snapshot
+
+# Load the reference dataset
 
 g = Graph()
 g.parse("../../../dbpedia-dump/3.8/skos_categories_en.nt", format="nt")
@@ -93,21 +129,19 @@ subject35 = URIRef("http://www.w3.org/2004/02/skos/core#subject")
 
 recSKOS(g, tree, top)
 
-datasets = ['3.5.1', '3.6', '3.7']
-
-for ds in datasets:
+for ds in t_snapshots:
     # Load sources
     g_o = Graph()
     h_o = Graph()
-    g_o.parse("../../../dbpedia-dump/" + ds + "/skos_categories_en.nt", format="nt")
-    h_o.parse("../../../dbpedia-dump/" + ds + "/article_categories_en.nt", format="nt")
+    g_o.parse(args.input + ds + "/skos_categories_en.nt", format="nt")
+    h_o.parse(args.input + ds + "/article_categories_en.nt", format="nt")
     
     # Compute tree
     tree_o = {}
     recSKOS(g_o, tree_o, top)
 
     # Write stats on THIS tree, compare last attribute with 3.8 tree
-    with open('feats_' + ds + '.csv', 'wb') as csvfile:
+    with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         for key in tree_o:
             node = key.encode('utf-8')
@@ -151,15 +185,15 @@ for ds in datasets:
 # Load sources                                                                                                                                       
 g_o = Graph()
 h_o = Graph()
-g_o.parse("../../../dbpedia-dump/3.9/skos_categories_en.nt", format="nt")
-h_o.parse("../../../dbpedia-dump/3.9/article_categories_en.nt", format="nt")
+g_o.parse(args.input + e_snapshot + "/skos_categories_en.nt", format="nt")
+h_o.parse(args.input + e_snapshot + "article_categories_en.nt", format="nt")
 
 # Compute tree                                                                                                                                       
 tree_o = {}
 recSKOS(g_o, tree_o, top)
 
 # Write stats on THIS tree, compare last attribute with 3.8 tree                                                                                     
-with open('feats_3.9.csv', 'wb') as csvfile:
+with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     for key in tree:
         node = key.encode('utf-8')
