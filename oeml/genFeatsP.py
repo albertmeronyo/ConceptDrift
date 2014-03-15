@@ -119,9 +119,9 @@ print snapshots, t_snapshots, r_snapshot, e_snapshot
 # Load the reference dataset
 
 g = Graph()
-g.parse("../../../dbpedia-dump/3.8/skos_categories_en.nt", format="nt")
+g.parse(args.input + r_snapshot + "/skos_categories_en.nt", format="nt")
 h = Graph()
-h.parse("../../../dbpedia-dump/3.8/article_categories_en.nt", format="nt")
+h.parse(args.input + r_snapshot + "/article_categories_en.nt", format="nt")
 
 tree = {}
 top = URIRef("http://dbpedia.org/resource/Category:Contents")
@@ -186,7 +186,7 @@ for ds in t_snapshots:
 g_o = Graph()
 h_o = Graph()
 g_o.parse(args.input + e_snapshot + "/skos_categories_en.nt", format="nt")
-h_o.parse(args.input + e_snapshot + "article_categories_en.nt", format="nt")
+h_o.parse(args.input + e_snapshot + "/article_categories_en.nt", format="nt")
 
 # Compute tree                                                                                                                                       
 tree_o = {}
