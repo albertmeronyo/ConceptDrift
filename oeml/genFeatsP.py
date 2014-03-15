@@ -102,7 +102,7 @@ def countArticlesChildren(g, h, n, r,  dcsubject = URIRef("http://purl.org/dc/te
 # Load subdirs from input dir
 snapshots = []
 for f in os.listdir(args.input):
-    if os.path.isdir(args.input + f):
+    if not os.path.isdir(args.input + f):
         snapshots.append(f)
 
 snapshots.sort()
@@ -119,28 +119,22 @@ print snapshots, t_snapshots, r_snapshot, e_snapshot
 # Load the reference dataset
 
 g = Graph()
-g.parse(args.input + r_snapshot + "/skos_categories_en.nt", format="nt")
-h = Graph()
-h.parse(args.input + r_snapshot + "/article_categories_en.nt", format="nt")
+g.parse(args.input + r_snapshot, format="nt")
 
 tree = {}
 top = URIRef("http://dbpedia.org/resource/Category:Contents")
-subject35 = URIRef("http://www.w3.org/2004/02/skos/core#subject")
 
 recSKOS(g, tree, top)
 
 for ds in t_snapshots:
     # Load sources
     g_o = Graph()
-    h_o = Graph()
-    g_o.parse(args.input + ds + "/skos_categories_en.nt", format="nt")
-    h_o.parse(args.input + ds + "/article_categories_en.nt", format="nt")
+    g_o.parse(args.input + ds, format="nt")
     
     # Compute tree
     tree_o = {}
     recSKOS(g_o, tree_o, top)
 
-    # Write stats on THIS tree, compare last attribute with 3.8 tree
     with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         for key in tree_o:
@@ -151,11 +145,11 @@ for ds in t_snapshots:
             dirChildren3 = countChildren(tree_o, key, 3)
             numParents = countParents(g_o, key)
             numSiblings = countSiblings(g_o, key)
-            dirArticles = countArticles(h_o, key, subject35) if ds == "3.5.1" else countArticles(h_o, key)
-            dirArticlesChildren0 = countArticlesChildren(h_o, tree_o, key, 0, subject35) if ds == "3.5.1" else countArticlesChildren(h_o, tree_o, key, 0)
-            dirArticlesChildren1 = countArticlesChildren(h_o, tree_o, key, 1, subject35) if ds == "3.5.1" else countArticlesChildren(h_o, tree_o, key, 1)
-            dirArticlesChildren2 = countArticlesChildren(h_o, tree_o, key, 2, subject35) if ds == "3.5.1" else countArticlesChildren(h_o, tree_o, key, 2)
-            dirArticlesChildren3 = countArticlesChildren(h_o, tree_o, key, 3, subject35) if ds == "3.5.1" else countArticlesChildren(h_o, tree_o, key, 3)
+            dirArticles = countArticles(g_o, key)
+            dirArticlesChildren0 = countArticlesChildren(g_o, tree_o, key, 0)
+            dirArticlesChildren1 = countArticlesChildren(g_o, tree_o, key, 1)
+            dirArticlesChildren2 = countArticlesChildren(g_o, tree_o, key, 2)
+            dirArticlesChildren3 = countArticlesChildren(g_o, tree_o, key, 3)
             changed = 0 if key in tree and countChildren(tree, key, 0) == countChildren(tree_o, key, 0) and countParents(g, key) == countParents(g_o, key) else 1
             writer.writerow([ node, 
                               dirChildren, 
@@ -178,15 +172,12 @@ for ds in t_snapshots:
 
     # Clean
     g_o = None
-    h_o = None
     gc.collect()
 
 
 # Load sources                                                                                                                                       
 g_o = Graph()
-h_o = Graph()
-g_o.parse(args.input + e_snapshot + "/skos_categories_en.nt", format="nt")
-h_o.parse(args.input + e_snapshot + "/article_categories_en.nt", format="nt")
+g_o.parse(args.input + e_snapshot, format="nt")
 
 # Compute tree                                                                                                                                       
 tree_o = {}
@@ -203,11 +194,11 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
         dirChildren3 = countChildren(tree, key, 3)
         numParents = countParents(g, key)
         numSiblings = countSiblings(g, key)
-        dirArticles = countArticles(h, key)
-        dirArticlesChildren0 = countArticlesChildren(h, tree, key, 0)
-        dirArticlesChildren1 = countArticlesChildren(h, tree, key, 1)
-        dirArticlesChildren2 = countArticlesChildren(h, tree, key, 2)
-        dirArticlesChildren3 = countArticlesChildren(h, tree, key, 3)
+        dirArticles = countArticles(g, key)
+        dirArticlesChildren0 = countArticlesChildren(g, tree, key, 0)
+        dirArticlesChildren1 = countArticlesChildren(g, tree, key, 1)
+        dirArticlesChildren2 = countArticlesChildren(g, tree, key, 2)
+        dirArticlesChildren3 = countArticlesChildren(g, tree, key, 3)
         changed = 0 if key in tree_o and countChildren(tree_o, key, 0) == countChildren(tree, key, 0) and countParents(g_o, key) == countParents(g, key) else 1
         writer.writerow([ node,
                           dirChildren, 
@@ -230,6 +221,5 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
 
 # Clean                                                                                                                                              
 g_o = None
-h_o = None
 gc.collect()
 
