@@ -26,14 +26,20 @@ parser.add_argument('-n',
                     help = "Number of ontology snapshots (min. 3)",
                     type = check_n,
                     default = 3)
-parser.add_argument('--std', '-s',
-                    help = "Whether structure comes in OWL or SKOS terms",
-                    choices = ["SKOS", "OWL"],
+parser.add_argument('--top', '-t',
+                    help = "URI of the top structural concept",
                     required = True)
+parser.add_argument('--str', '-s',
+                    help = "URI of the structural property",
+                    required = True)
+parser.add_argument('--member', '-m',
+                    help = "URI of the membership or usage property",
+                    required = True)
+
 
 args = parser.parse_args()
 
-print args.input, args.output, args.n, args.std
+print args.input, args.output, args.n, args.top, args.str, args.member
 
 if not os.path.exists(args.output):
     os.makedirs(directory)
@@ -41,12 +47,13 @@ if not os.path.exists(args.output):
 sys.setrecursionlimit(30000)
 
 def recSKOS(g, h, n):
-    if (None, SKOS.broader, n) not in g:
+    structprop = URIRef(args.str)
+    if (None, structprop, n) not in g:
         return True
     else: 
         if n not in h:
             h[n] = []
-        for s, p, o in g.triples( (None, SKOS.broader, n) ):
+        for s, p, o in g.triples( (None, structprop, n) ):
             if s not in h[n]:
                 h[n].append(s)
                 recSKOS(g, h, s)
@@ -64,26 +71,28 @@ def countChildren(h, n, r):
             return len(h[n])
 
 def countSiblings(g, n):
+    structprop = URIRef(args.str)
     siblings = []
-    for s, p, o in g.triples( (n, SKOS.broader, None) ):
-        for s2, p2, o2 in g.triples( (None, SKOS.broader, o) ):
+    for s, p, o in g.triples( (n, structprop, None) ):
+        for s2, p2, o2 in g.triples( (None, structprop, o) ):
             siblings.append([s2, p2, o2])
     return len(siblings)
 
 def countParents(g, n):
+    structprop = URIRef(args.str)
     parents = []
-    for s, p, o in g.triples( (n, SKOS.broader, None) ):
+    for s, p, o in g.triples( (n, structprop, None) ):
         parents.append(o)
     return len(parents)
 
-def countArticles(g, n, dcsubject = URIRef("http://purl.org/dc/terms/subject")):
+def countArticles(g, n, dcsubject = URIRef(args.member)):
     # How many articles have n as subject category
     arts = []
     for s, p, o in g.triples( (None, dcsubject, n) ):
         arts.append(s)
     return len(arts)
 
-def countArticlesChildren(g, h, n, r,  dcsubject = URIRef("http://purl.org/dc/terms/subject")):
+def countArticlesChildren(g, h, n, r,  dcsubject = URIRef(args.member)):
     # How many articles in this node and r children levels
     if n not in h:
         return countArticles(g, n, dcsubject)
@@ -122,7 +131,7 @@ g = Graph()
 g.parse(args.input + r_snapshot, format="nt")
 
 tree = {}
-top = URIRef("http://dbpedia.org/resource/Category:Contents")
+top = URIRef(args.top)
 
 recSKOS(g, tree, top)
 
