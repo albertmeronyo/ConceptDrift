@@ -1,4 +1,4 @@
-#!/bin/bash
+1;2c#!/bin/bash
 
 INPUT="-t data/dbpedia-feats-identity-na-train.arff"
 OUTPUT="results.txt"
@@ -77,15 +77,15 @@ echo "J48 completed."
 # echo "Starting LMT..."
 # java $MEM $WEKAPATH weka.classifiers.trees.LMT $INPUT -i -o -I -1 -M 15 -W 0.0 >> $OUTPUT
 # echo "LMT completed."
-echo "Starting RandomForest with 10 trees..."
+echo "Starting RandomForest..."
 java $MEM $WEKAPATH weka.classifiers.trees.RandomForest $INPUT -i -o -I 10 -K 0 -S 1 -num-slots 1 >> $OUTPUT
-echo "RandomForest with 10 trees completed."
-echo "Starting RandomForest with 50 trees..."
-java $MEM $WEKAPATH weka.classifiers.trees.RandomForest $INPUT -i -o -I 50 -K 0 -S 1 -num-slots 1 >> $OUTPUT
-echo "RandomForest with 50 trees completed."
-echo "Starting RandomForest with 100 trees..."
-java $MEM $WEKAPATH weka.classifiers.trees.RandomForest $INPUT -i -o -I 100 -K 0 -S 1 -num-slots 1 >> $OUTPUT
-echo "RandomForest with 100 trees completed."
+echo "RandomForest completed."
+# echo "Starting RandomForest with 50 trees..."
+# java $MEM $WEKAPATH weka.classifiers.trees.RandomForest $INPUT -i -o -I 50 -K 0 -S 1 -num-slots 1 >> $OUTPUT
+# echo "RandomForest with 50 trees completed."
+# echo "Starting RandomForest with 100 trees..."
+# java $MEM $WEKAPATH weka.classifiers.trees.RandomForest $INPUT -i -o -I 100 -K 0 -S 1 -num-slots 1 >> $OUTPUT
+# echo "RandomForest with 100 trees completed."
 echo "Starting RandomTrees..."
 java $MEM $WEKAPATH weka.classifiers.trees.RandomTree $INPUT -i -o -K 0 -M 1.0 -S 1 >> $OUTPUT
 echo "RandomTree completed."
