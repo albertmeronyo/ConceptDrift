@@ -2,6 +2,19 @@
 # Pastes columns to preserve identity of instances in OEML
 ##########################################################
 
+args <- commandArgs(trailingOnly = TRUE)
+all <- list()
+
+# Read all data files except last (eval dataset)
+i <- 0
+for (f in args[1:length(args)-1]){
+    all[i] <- read.csv(f, header=F)
+    i <- i + 1
+}
+
+head(all)
+
+
 df.a <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats-change_3.5.1.csv', header=F)
 df.b <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats-change_3.6.csv', header=F)
 df.c <- read.csv('/Users/Albert/src/ConceptDrift/oeml/data/feats-change_3.7.csv', header=F)
