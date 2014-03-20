@@ -34,8 +34,9 @@ targets <- targets + 1
 targets <- c(num.feats, targets)
 
 # Target variable: disjunction between targets
+# If NA is present some change happened
 for (i in targets) {
-  merged[is.na(merged[,i]),i] <- 0
+  merged[is.na(merged[,i]),i] <- 1
 }
 
 t <- merged[,targets[1]]
