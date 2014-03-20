@@ -54,6 +54,9 @@ for (i in targets) {
   j <- j + 1
 }
 
+# Remove instance names
+merged[,1] <- NULL
+
 # Rename features
 #colnames(merged) <- c('resource', 
 #                      'children0.0', 'children1.0', 'children2.0', 'children3.0', 'parents.0', 'siblings.0', 'members.0', 'membersChildren0.0', 'membersChildren1.0', 'membersChildren2.0', 'membersChildren3.0','ratio.0','ratio0.0','ratio1.0','ratio2.0','ratio3.0',

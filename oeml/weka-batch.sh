@@ -1,9 +1,13 @@
 #!/bin/bash
 
-INPUT="-t data/dbpedia-feats-identity-na-train.arff"
 OUTPUT="results.txt"
 MEM="-Xmx18g"
 WEKAPATH="-classpath weka.jar"
+
+# Conversion of last attribute to nominal
+java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $1 -o $1.arff
+
+INPUT="-t $1.arff"
 
 echo "Starting WEKA-batch..."
 
