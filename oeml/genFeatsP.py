@@ -35,11 +35,14 @@ parser.add_argument('--str', '-s',
 parser.add_argument('--member', '-m',
                     help = "URI of the membership or usage property",
                     required = True)
-
+parser.add_argument('--format', '-f',
+                    help = "Serialization format of the input files",
+                    choices = ['html', 'hturtle', 'mdata', 'microdata', 'n3', 'nquads', 'nt', 'rdfa', 'rdfa1.0', 'rdfa1.1', 'trix', 'turtle', 'xml'],
+                    required = True)
 
 args = parser.parse_args()
 
-print args.input, args.output, args.n, args.top, args.str, args.member
+print args.input, args.output, args.n, args.top, args.str, args.member, args.format
 
 if not os.path.exists(args.output):
     os.makedirs(directory)
@@ -128,7 +131,7 @@ print snapshots, t_snapshots, r_snapshot, e_snapshot
 # Load the reference dataset
 
 g = Graph()
-g.parse(args.input + r_snapshot)
+g.parse(args.input + r_snapshot, format=args.format)
 
 tree = {}
 top = URIRef(args.top)
@@ -138,7 +141,7 @@ recSKOS(g, tree, top)
 for ds in t_snapshots:
     # Load sources
     g_o = Graph()
-    g_o.parse(args.input + ds)
+    g_o.parse(args.input + ds, format=args.format)
     
     # Compute tree
     tree_o = {}
@@ -186,7 +189,7 @@ for ds in t_snapshots:
 
 # Load sources                                                                                                                                       
 g_o = Graph()
-g_o.parse(args.input + e_snapshot)
+g_o.parse(args.input + e_snapshot, format=args.format)
 
 # Compute tree                                                                                                                                       
 tree_o = {}
