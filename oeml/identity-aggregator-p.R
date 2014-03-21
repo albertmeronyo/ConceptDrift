@@ -15,43 +15,46 @@ print(paste("Output file: ", output.file))
 all <- lapply(input.files, read.csv, header=F)
 
 merged <- data.frame(all[1])
-num.feats <- ncol(merged)
-for (i in 2:length(all)) {
-  df <- data.frame(all[i])
-  # If all = F, we only consider nodes in all snapshots
-  # Otherwise, consider everything and fill with NAs
-  merged <- merge(merged, df, by=1, all = F)  
-}
 
-# List of column numbers where target variables lie
-targets <- c()
-for (i in num.feats:length(merged)) {
-  if (i %% (num.feats - 1) == 0) {
-    targets <- c(targets, i)
-  }  
-}
-targets <- targets + 1
-targets <- c(num.feats, targets)
+if (length(input.files) > 1) {
+    num.feats <- ncol(merged)
+    for (i in 2:length(all)) {
+        df <- data.frame(all[i])
+        # If all = F, we only consider nodes in all snapshots
+        # Otherwise, consider everything and fill with NAs
+        merged <- merge(merged, df, by=1, all = F)  
+    }
 
-# Target variable: disjunction between targets
-# If NA is present some change happened
-for (i in targets) {
-  merged[is.na(merged[,i]),i] <- 1
-}
+    # List of column numbers where target variables lie
+    targets <- c()
+    for (i in num.feats:length(merged)) {
+        if (i %% (num.feats - 1) == 0) {
+            targets <- c(targets, i)
+        }  
+    }
+    targets <- targets + 1
+    targets <- c(num.feats, targets)
 
-t <- merged[,targets[1]]
-for (i in targets[2:length(targets)]) {
-  t <- t + merged[,i]
-}
-t[t > 1] <- 1
-merged <- cbind(merged, t)
-merged$t <- as.character(merged$t)
+    # Target variable: disjunction between targets
+    # If NA is present some change happened
+    for (i in targets) {
+        merged[is.na(merged[,i]),i] <- 1
+    }
 
-# Remove old targets ones
-j <- 0
-for (i in targets) {
-  merged[,i - j] <- NULL
-  j <- j + 1
+    t <- merged[,targets[1]]
+    for (i in targets[2:length(targets)]) {
+        t <- t + merged[,i]
+    }
+    t[t > 1] <- 1
+    merged <- cbind(merged, t)
+    merged$t <- as.character(merged$t)
+
+    # Remove old targets ones
+    j <- 0
+    for (i in targets) {
+        merged[,i - j] <- NULL
+        j <- j + 1
+    }
 }
 
 # Remove instance names
