@@ -128,7 +128,7 @@ print snapshots, t_snapshots, r_snapshot, e_snapshot
 # Load the reference dataset
 
 g = Graph()
-g.parse(args.input + r_snapshot, format="nt")
+g.parse(args.input + r_snapshot)
 
 tree = {}
 top = URIRef(args.top)
@@ -138,7 +138,7 @@ recSKOS(g, tree, top)
 for ds in t_snapshots:
     # Load sources
     g_o = Graph()
-    g_o.parse(args.input + ds, format="nt")
+    g_o.parse(args.input + ds)
     
     # Compute tree
     tree_o = {}
@@ -186,7 +186,7 @@ for ds in t_snapshots:
 
 # Load sources                                                                                                                                       
 g_o = Graph()
-g_o.parse(args.input + e_snapshot, format="nt")
+g_o.parse(args.input + e_snapshot)
 
 # Compute tree                                                                                                                                       
 tree_o = {}
