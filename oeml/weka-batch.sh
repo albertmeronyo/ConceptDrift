@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OUTPUT="results.txt"
+OUTPUT=$2
 MEM="-Xmx18g"
 WEKAPATH="-classpath weka.jar"
 
