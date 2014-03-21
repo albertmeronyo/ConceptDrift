@@ -5,3 +5,5 @@
 *.pyc
 results.txt
 error.txt
+*.csv
+*.arff
