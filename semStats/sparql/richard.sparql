@@ -1,0 +1,20 @@
+PREFIX cedar: <http://cedar.example.org/ns#>
+PREFIX cedardata: <http://cedar.example.org/resource/>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#>
+PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+
+SELECT DISTINCT ?sex ?municipality ?marital_status ?occupation ?position ?population
+FROM <http://lod.cedar-project.nl/resource/r1/cedar-dataset>
+WHERE { GRAPH ?g {
+?o a qb:Observation .
+?o sdmx-dimension:sex ?sex .
+?o cedar:maritalStatus ?marital_status .
+?o cedar:occupation ?occupation .
+?o cedar:occupationPosition ?position .
+?o cedar:populationSize ?population .
+?o cedar:city ?municipality .
+?o qb:dataSet cedardata:BRT-1899 .
+FILTER (?municipality IN (<http://cedar.example.org/ns#ac-11053>, <http://cedar.example.org/ns#ac-11053>, <http://cedar.example.org/ns#ac-11065>, <http://cedar.example.org/ns#ac-11400>, <http://cedar.example.org/ns#ac-10174>, <http://cedar.example.org/ns#ac-11069>, <http://cedar.example.org/ns#ac-11088>, <http://cedar.example.org/ns#ac-11190>, <http://cedar.example.org/ns#ac-11030>, <http://cedar.example.org/ns#ac-10320>, <http://cedar.example.org/ns#ac-10689>, <http://cedar.example.org/ns#ac-10326>, <http://cedar.example.org/ns#ac-11088>, <http://cedar.example.org/ns#ac-11007>, <http://cedar.example.org/ns#ac-11400>, <http://cedar.example.org/ns#ac-10245>, <http://cedar.example.org/ns#ac-10899>, <http://cedar.example.org/ns#ac-10311>, <http://cedar.example.org/ns#ac-10933>, <http://cedar.example.org/ns#ac-10245>, <http://cedar.example.org/ns#ac-10364>, <http://cedar.example.org/ns#ac-10746>, <http://cedar.example.org/ns#ac-10708>, <http://cedar.example.org/ns#ac-10076>, <http://cedar.example.org/ns#ac-10224>, <http://cedar.example.org/ns#ac-11339>, <http://cedar.example.org/ns#ac-11435>, <http://cedar.example.org/ns#ac-10395>, <http://cedar.example.org/ns#ac-10174>, <http://cedar.example.org/ns#ac-10174>, <http://cedar.example.org/ns#ac-10115>, <http://cedar.example.org/ns#ac-10854>, <http://cedar.example.org/ns#ac-10806>, <http://cedar.example.org/ns#ac-10907>, <http://cedar.example.org/ns#ac-10076>, <http://cedar.example.org/ns#ac-11246>, <http://cedar.example.org/ns#ac-10858>, <http://cedar.example.org/ns#ac-10641>, <http://cedar.example.org/ns#ac-10253>, <http://cedar.example.org/ns#ac-10443>, <http://cedar.example.org/ns#ac-11148>, <http://cedar.example.org/ns#ac-11045>, <http://cedar.example.org/ns#ac-11166>, <http://cedar.example.org/ns#ac-11382>, <http://cedar.example.org/ns#ac-10384>, <http://cedar.example.org/ns#ac-10858>, <http://cedar.example.org/ns#ac-11100>, <http://cedar.example.org/ns#ac-10409>, <http://cedar.example.org/ns#ac-10409>, <http://cedar.example.org/ns#ac-11069>, <http://cedar.example.org/ns#ac-11069>, <http://cedar.example.org/ns#ac-11079>, <http://cedar.example.org/ns#ac-10279>, <http://cedar.example.org/ns#ac-10358>, <http://cedar.example.org/ns#ac-10358>, <http://cedar.example.org/ns#ac-11189>, <http://cedar.example.org/ns#ac-11053>, <http://cedar.example.org/ns#ac-10913>, <http://cedar.example.org/ns#ac-11169>, <http://cedar.example.org/ns#ac-10381>, <http://cedar.example.org/ns#ac-11183>, <http://cedar.example.org/ns#ac-11362>, <http://cedar.example.org/ns#ac-10546>, <http://cedar.example.org/ns#ac-10546>, <http://cedar.example.org/ns#ac-11347>, <http://cedar.example.org/ns#ac-10694>, <http://cedar.example.org/ns#ac-10643>, <http://cedar.example.org/ns#ac-11088>, <http://cedar.example.org/ns#ac-11088>, <http://cedar.example.org/ns#ac-10643>, <http://cedar.example.org/ns#ac-10105>, <http://cedar.example.org/ns#ac-10893>, <http://cedar.example.org/ns#ac-10676>, <http://cedar.example.org/ns#ac-10888>, <http://cedar.example.org/ns#ac-10194>, <http://cedar.example.org/ns#ac-10633>, <http://cedar.example.org/ns#ac-10746>, <http://cedar.example.org/ns#ac-10303>, <http://cedar.example.org/ns#ac-10093>, <http://cedar.example.org/ns#ac-10654>))
+}
+} ORDER BY ?municipality
