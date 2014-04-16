@@ -5,6 +5,7 @@ import sys
 import os
 import csv
 import gc
+import json
 
 # Argument parsing
 
@@ -138,6 +139,10 @@ top = URIRef(args.top)
 
 recSKOS(g, tree, top)
 
+print "The reference dataset has %s nodes" % str(len(tree))
+
+print(json.dumps(tree, indent=4))
+
 for ds in t_snapshots:
     # Load sources
     g_o = Graph()
@@ -194,6 +199,10 @@ g_o.parse(args.input + e_snapshot, format=args.format)
 # Compute tree                                                                                                                                       
 tree_o = {}
 recSKOS(g_o, tree_o, top)
+
+print "The evaluation dataset has %s nodes" % str(len(tree_o))
+
+print(json.dumps(tree_o, indent=4))
 
 # Write stats on THIS tree, compare last attribute with 3.8 tree                                                                                     
 with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
