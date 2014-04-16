@@ -154,23 +154,25 @@ for ds in t_snapshots:
 
     with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        for key in tree_o:
-            node = key.encode('utf-8')
-            dirChildren = countChildren(tree_o, key, 0)
-            dirChildren1 = countChildren(tree_o, key, 1)
-            dirChildren2 = countChildren(tree_o, key, 2)
-            dirChildren3 = countChildren(tree_o, key, 3)
-            numParents = countParents(g_o, key)
-            numSiblings = countSiblings(g_o, key)
-            dirArticles = countArticles(g_o, key)
-            dirArticlesChildren0 = countArticlesChildren(g_o, tree_o, key, 0)
-            dirArticlesChildren1 = countArticlesChildren(g_o, tree_o, key, 1)
-            dirArticlesChildren2 = countArticlesChildren(g_o, tree_o, key, 2)
-            dirArticlesChildren3 = countArticlesChildren(g_o, tree_o, key, 3)
-            changed = 0 if key in tree and countChildren(tree, key, 0) == countChildren(tree_o, key, 0) and countParents(g, key) == countParents(g_o, key) else 1
-            writer.writerow([ node, 
-                              dirChildren, 
-                              dirChildren1, 
+        nodeStack = []
+        nodeStack.append(args.top)
+        while nodeStack:
+            node = nodeStack.pop().encode('utf-8')
+            dirChildren = countChildren(tree_o, node, 0)
+            dirChildren1 = countChildren(tree_o, node, 1)
+            dirChildren2 = countChildren(tree_o, node, 2)
+            dirChildren3 = countChildren(tree_o, node, 3)
+            numParents = countParents(g_o, node)
+            numSiblings = countSiblings(g_o, node)
+            dirArticles = countArticles(g_o, node)
+            dirArticlesChildren0 = countArticlesChildren(g_o, tree_o, node, 0)
+            dirArticlesChildren1 = countArticlesChildren(g_o, tree_o, node, 1)
+            dirArticlesChildren2 = countArticlesChildren(g_o, tree_o, node, 2)
+            dirArticlesChildren3 = countArticlesChildren(g_o, tree_o, node, 3)
+            changed = 0 if ((node in tree) or (node in tree.values())) and countChildren(tree, node, 0) == countChildren(tree_o, node, 0) and countParents(g, node) == countParents(g_o, node) else 1
+            writer.writerow([ node,
+                              dirChildren,
+                              dirChildren1,
                               dirChildren2,
                               dirChildren3,
                               numParents,
@@ -186,6 +188,40 @@ for ds in t_snapshots:
                               dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
                               dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
                               changed ])
+            for child in tree_o[node]:
+                nodeStack.append(child)
+        # for key in tree_o:
+        #     node = key.encode('utf-8')
+        #     dirChildren = countChildren(tree_o, key, 0)
+        #     dirChildren1 = countChildren(tree_o, key, 1)
+        #     dirChildren2 = countChildren(tree_o, key, 2)
+        #     dirChildren3 = countChildren(tree_o, key, 3)
+        #     numParents = countParents(g_o, key)
+        #     numSiblings = countSiblings(g_o, key)
+        #     dirArticles = countArticles(g_o, key)
+        #     dirArticlesChildren0 = countArticlesChildren(g_o, tree_o, key, 0)
+        #     dirArticlesChildren1 = countArticlesChildren(g_o, tree_o, key, 1)
+        #     dirArticlesChildren2 = countArticlesChildren(g_o, tree_o, key, 2)
+        #     dirArticlesChildren3 = countArticlesChildren(g_o, tree_o, key, 3)
+        #     changed = 0 if key in tree and countChildren(tree, key, 0) == countChildren(tree_o, key, 0) and countParents(g, key) == countParents(g_o, key) else 1
+        #     writer.writerow([ node, 
+        #                       dirChildren, 
+        #                       dirChildren1, 
+        #                       dirChildren2,
+        #                       dirChildren3,
+        #                       numParents,
+        #                       numSiblings,
+        #                       dirArticles,
+        #                       dirArticlesChildren0,
+        #                       dirArticlesChildren1,
+        #                       dirArticlesChildren2,
+        #                       dirArticlesChildren3,
+        #                       dirArticles / dirChildren if dirChildren > 0 else dirArticles,
+        #                       dirArticlesChildren0 / dirChildren if dirChildren > 0 else dirArticlesChildren0,
+        #                       dirArticlesChildren1 / dirChildren1 if dirChildren1 > 0 else dirArticlesChildren1,
+        #                       dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
+        #                       dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
+        #                       changed ])
 
     # Clean
     g_o = None
@@ -207,23 +243,25 @@ print(json.dumps(tree_o, indent=4))
 # Write stats on THIS tree, compare last attribute with 3.8 tree                                                                                     
 with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    for key in tree:
-        node = key.encode('utf-8')
-        dirChildren = countChildren(tree, key, 0)
-        dirChildren1 = countChildren(tree, key, 1)
-        dirChildren2 = countChildren(tree, key, 2)
-        dirChildren3 = countChildren(tree, key, 3)
-        numParents = countParents(g, key)
-        numSiblings = countSiblings(g, key)
-        dirArticles = countArticles(g, key)
-        dirArticlesChildren0 = countArticlesChildren(g, tree, key, 0)
-        dirArticlesChildren1 = countArticlesChildren(g, tree, key, 1)
-        dirArticlesChildren2 = countArticlesChildren(g, tree, key, 2)
-        dirArticlesChildren3 = countArticlesChildren(g, tree, key, 3)
-        changed = 0 if key in tree_o and countChildren(tree_o, key, 0) == countChildren(tree, key, 0) and countParents(g_o, key) == countParents(g, key) else 1
+    nodeStack = []
+    nodeStack.append(args.top)
+    while nodeStack:
+        node = nodeStack.pop().encode('utf-8')
+        dirChildren = countChildren(tree, node, 0)
+        dirChildren1 = countChildren(tree, node, 1)
+        dirChildren2 = countChildren(tree, node, 2)
+        dirChildren3 = countChildren(tree, node, 3)
+        numParents = countParents(g, node)
+        numSiblings = countSiblings(g, node)
+        dirArticles = countArticles(g, node)
+        dirArticlesChildren0 = countArticlesChildren(g, tree, node, 0)
+        dirArticlesChildren1 = countArticlesChildren(g, tree, node, 1)
+        dirArticlesChildren2 = countArticlesChildren(g, tree, node, 2)
+        dirArticlesChildren3 = countArticlesChildren(g, tree, node, 3)
+        changed = 0 if ((node in tree_o) or node in tree_o.values()) and countChildren(tree_o, node, 0) == countChildren(tree, node, 0) and countParents(g_o, node) == countParents(g, node) else 1
         writer.writerow([ node,
-                          dirChildren, 
-                          dirChildren1, 
+                          dirChildren,
+                          dirChildren1,
                           dirChildren2,
                           dirChildren3,
                           numParents,
@@ -239,6 +277,40 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
                           dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
                           dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
                           changed ])
+        for child in tree_o[node]:
+            nodeStack.append(child)
+    # for key in tree:
+    #     node = key.encode('utf-8')
+    #     dirChildren = countChildren(tree, key, 0)
+    #     dirChildren1 = countChildren(tree, key, 1)
+    #     dirChildren2 = countChildren(tree, key, 2)
+    #     dirChildren3 = countChildren(tree, key, 3)
+    #     numParents = countParents(g, key)
+    #     numSiblings = countSiblings(g, key)
+    #     dirArticles = countArticles(g, key)
+    #     dirArticlesChildren0 = countArticlesChildren(g, tree, key, 0)
+    #     dirArticlesChildren1 = countArticlesChildren(g, tree, key, 1)
+    #     dirArticlesChildren2 = countArticlesChildren(g, tree, key, 2)
+    #     dirArticlesChildren3 = countArticlesChildren(g, tree, key, 3)
+    #     changed = 0 if key in tree_o and countChildren(tree_o, key, 0) == countChildren(tree, key, 0) and countParents(g_o, key) == countParents(g, key) else 1
+    #     writer.writerow([ node,
+    #                       dirChildren, 
+    #                       dirChildren1, 
+    #                       dirChildren2,
+    #                       dirChildren3,
+    #                       numParents,
+    #                       numSiblings,
+    #                       dirArticles,
+    #                       dirArticlesChildren0,
+    #                       dirArticlesChildren1,
+    #                       dirArticlesChildren2,
+    #                       dirArticlesChildren3,
+    #                       dirArticles / dirChildren if dirChildren > 0 else dirArticles,
+    #                       dirArticlesChildren0 / dirChildren if dirChildren > 0 else dirArticlesChildren0,
+    #                       dirArticlesChildren1 / dirChildren1 if dirChildren1 > 0 else dirArticlesChildren1,
+    #                       dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
+    #                       dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
+    #                       changed ])
 
 # Clean                                                                                                                                              
 g_o = None
