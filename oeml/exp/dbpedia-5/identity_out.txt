@@ -1,0 +1,4 @@
+[1] "Input file:  ./exp/dbpedia-5//feats_3.5.1-dbpedia_categories_en.nt.csv"
+[2] "Input file:  ./exp/dbpedia-5//feats_3.6-dbpedia_categories_en.nt.csv"  
+[3] "Input file:  ./exp/dbpedia-5//feats_3.7-dbpedia_categories_en.nt.csv"  
+[1] "Output file:  ./exp/dbpedia-5//training.csv"

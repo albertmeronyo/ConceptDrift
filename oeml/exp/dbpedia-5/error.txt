@@ -1,0 +1,8 @@
+usage: genFeatsP.py [-h] --input INPUT --output OUTPUT [-n N] --top TOP --str
+                    STR --member MEMBER --format
+                    {html,hturtle,mdata,microdata,n3,nquads,nt,rdfa,rdfa1.0,rdfa1.1,trix,turtle,xml}
+genFeatsP.py: error: argument --top/-t: expected one argument
+During startup - Warning message:
+Setting LC_CTYPE failed, using "C" 
+
+Execution halted

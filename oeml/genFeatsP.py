@@ -155,7 +155,7 @@ for ds in t_snapshots:
     with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         nodeStack = []
-        nodeStack.append(args.top)
+        nodeStack.append(top)
         while nodeStack:
             node = nodeStack.pop().encode('utf-8')
             dirChildren = countChildren(tree_o, node, 0)
@@ -244,7 +244,7 @@ print(json.dumps(tree_o, indent=4))
 with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     nodeStack = []
-    nodeStack.append(args.top)
+    nodeStack.append(top)
     while nodeStack:
         node = nodeStack.pop().encode('utf-8')
         dirChildren = countChildren(tree, node, 0)
