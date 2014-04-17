@@ -139,7 +139,7 @@ top = URIRef(args.top)
 
 recSKOS(g, tree, top)
 
-print "The reference dataset has %s nodes" % str(len(tree))
+print "Dataset %s has %s nodes" % (r_snapshot, str(len(tree)))
 
 print(json.dumps(tree, indent=4))
 
@@ -151,6 +151,10 @@ for ds in t_snapshots:
     # Compute tree
     tree_o = {}
     recSKOS(g_o, tree_o, top)
+
+    print "Dataset %s has %s nodes" % (ds, str(len(tree)))
+
+    print(json.dumps(tree_o, indent=4))
 
     with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -236,7 +240,7 @@ g_o.parse(args.input + e_snapshot, format=args.format)
 tree_o = {}
 recSKOS(g_o, tree_o, top)
 
-print "The evaluation dataset has %s nodes" % str(len(tree_o))
+print "Dataset %s has %s nodes" % (e_snapshot, str(len(tree)))
 
 print(json.dumps(tree_o, indent=4))
 
