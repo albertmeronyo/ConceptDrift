@@ -192,8 +192,9 @@ for ds in t_snapshots:
                               dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
                               dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
                               changed ])
-            for child in tree_o[node]:
-                nodeStack.append(child)
+            if node in tree_o:
+                for child in tree_o[node]:
+                    nodeStack.append(child)
         # for key in tree_o:
         #     node = key.encode('utf-8')
         #     dirChildren = countChildren(tree_o, key, 0)
@@ -281,8 +282,9 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
                           dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
                           dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
                           changed ])
-        for child in tree_o[node]:
-            nodeStack.append(child)
+        if node in tree:
+            for child in tree[node]:
+                nodeStack.append(child)
     # for key in tree:
     #     node = key.encode('utf-8')
     #     dirChildren = countChildren(tree, key, 0)
