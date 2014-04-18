@@ -61,6 +61,7 @@ if (length(input.files) > 1) {
 merged[,1] <- NULL
 
 # Rename features
+colnames(merged) <- as.character(seq(1:length(colnames(merged))))
 #colnames(merged) <- c('resource', 
 #                      'children0.0', 'children1.0', 'children2.0', 'children3.0', 'parents.0', 'siblings.0', 'members.0', 'membersChildren0.0', 'membersChildren1.0', 'membersChildren2.0', 'membersChildren3.0','ratio.0','ratio0.0','ratio1.0','ratio2.0','ratio3.0',
 #                      'children0.1', 'children1.1', 'children2.1', 'children3.1', 'parents.1', 'siblings.1', 'members.1', 'membersChildren0.1', 'membersChildren1.1', 'membersChildren2.1', 'membersChildren3.1','ratio.1','ratio0.1','ratio1.1','ratio2.1','ratio3.1',
