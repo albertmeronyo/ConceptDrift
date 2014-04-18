@@ -152,7 +152,7 @@ for ds in t_snapshots:
     tree_o = {}
     recSKOS(g_o, tree_o, top)
 
-    print "Dataset %s has %s nodes" % (ds, str(len(tree)))
+    print "Dataset %s has %s nodes" % (ds, str(len(tree_o)))
 
     print(json.dumps(tree_o, indent=4))
 
@@ -161,7 +161,7 @@ for ds in t_snapshots:
         nodeStack = []
         nodeStack.append(top)
         while nodeStack:
-            node = nodeStack.pop().encode('utf-8')
+            node = nodeStack.pop()
             dirChildren = countChildren(tree_o, node, 0)
             dirChildren1 = countChildren(tree_o, node, 1)
             dirChildren2 = countChildren(tree_o, node, 2)
@@ -250,7 +250,7 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
     nodeStack = []
     nodeStack.append(top)
     while nodeStack:
-        node = nodeStack.pop().encode('utf-8')
+        node = nodeStack.pop()
         dirChildren = countChildren(tree, node, 0)
         dirChildren1 = countChildren(tree, node, 1)
         dirChildren2 = countChildren(tree, node, 2)
