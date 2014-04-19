@@ -158,8 +158,11 @@ for ds in t_snapshots:
 
     with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        # Stack to do a DFS on the hierarchy
         nodeStack = []
         nodeStack.append(top)
+        # Set to avoid cycles (i.e. repeating a node)
+        doneNodeSet = set()
         while nodeStack:
             node = nodeStack.pop()
             dirChildren = countChildren(tree_o, node, 0)
@@ -192,9 +195,14 @@ for ds in t_snapshots:
                               dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
                               dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
                               changed ])
+            # We mark this node as done
+            doneNodeSet.add(node)
+            # If node is not a leaf, process all its children
             if node in tree_o:
                 for child in tree_o[node]:
-                    nodeStack.append(child)
+                    # Add this child iff not processed yet
+                    if child not in doneNodeSet:
+                        nodeStack.append(child)
         # for key in tree_o:
         #     node = key.encode('utf-8')
         #     dirChildren = countChildren(tree_o, key, 0)
@@ -248,8 +256,11 @@ print(json.dumps(tree_o, indent=4))
 # Write stats on THIS tree, compare last attribute with 3.8 tree                                                                                     
 with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    # Stack to do a DFS on the hierarchy
     nodeStack = []
     nodeStack.append(top)
+    # Set to avoid cycles (i.e. repeating a node)
+    doneNodeSet = set()
     while nodeStack:
         node = nodeStack.pop()
         dirChildren = countChildren(tree, node, 0)
@@ -282,9 +293,14 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
                           dirArticlesChildren2 / dirChildren2 if dirChildren2 > 0 else dirArticlesChildren2,
                           dirArticlesChildren3 / dirChildren3 if dirChildren3 > 0 else dirArticlesChildren3,
                           changed ])
+        # We mark this node as done
+        doneNodeSet.add(node)
+        # If node is not a leaf, process all its children
         if node in tree:
             for child in tree[node]:
-                nodeStack.append(child)
+                # Add this child iff not processed yet
+                if child not in doneNodeSet:
+                    nodeStack.append(child)
     # for key in tree:
     #     node = key.encode('utf-8')
     #     dirChildren = countChildren(tree, key, 0)
