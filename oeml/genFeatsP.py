@@ -177,7 +177,7 @@ for ds in t_snapshots:
             dirArticlesChildren2 = countArticlesChildren(g_o, tree_o, node, 2)
             dirArticlesChildren3 = countArticlesChildren(g_o, tree_o, node, 3)
             changed = 0 if ((node in tree) or (node in tree.values())) and countChildren(tree, node, 0) == countChildren(tree_o, node, 0) and countParents(g, node) == countParents(g_o, node) else 1
-            writer.writerow([ node,
+            writer.writerow([ str(node).encode('utf-8'),
                               dirChildren,
                               dirChildren1,
                               dirChildren2,
@@ -275,7 +275,7 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
         dirArticlesChildren2 = countArticlesChildren(g, tree, node, 2)
         dirArticlesChildren3 = countArticlesChildren(g, tree, node, 3)
         changed = 0 if ((node in tree_o) or node in tree_o.values()) and countChildren(tree_o, node, 0) == countChildren(tree, node, 0) and countParents(g_o, node) == countParents(g, node) else 1
-        writer.writerow([ node,
+        writer.writerow([ str(node).encode('utf-8'),
                           dirChildren,
                           dirChildren1,
                           dirChildren2,
