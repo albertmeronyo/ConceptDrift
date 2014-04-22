@@ -5,9 +5,11 @@
 args <- commandArgs(trailingOnly = TRUE)
 
 input.files <- head(args,-2)
-output.file <- tail(args,1)
+output.file <- head(tail(args,2),1)
+in.all.snaps <- tail(args,1)
 print(paste("Input file: ", input.files))
 print(paste("Output file: ", output.file))
+print(paste("Non-common: ", in.all.snaps))
 
 # Read all data files except last (eval dataset)
 all <- lapply(input.files, read.csv, header=F)
@@ -20,7 +22,7 @@ if (length(input.files) > 1) {
         df <- data.frame(all[i])
         # If all = F, we only consider nodes in all snapshots
         # Otherwise, consider everything and fill with NAs
-        merged <- merge(merged, df, by=1, all = F)  
+        merged <- merge(merged, df, by=1, all = in.all.snaps)  
     }
 
     # List of column numbers where target variables lie
