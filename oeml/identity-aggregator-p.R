@@ -9,7 +9,7 @@ output.file <- head(tail(args,2),1)
 in.all.snaps <- tail(args,1)
 print(paste("Input file: ", input.files))
 print(paste("Output file: ", output.file))
-print(paste("Non-common: ", in.all.snaps))
+print(paste("Terms in all snaps: ", in.all.snaps))
 
 # Read all data files except last (eval dataset)
 all <- lapply(input.files, read.csv, header=F)
