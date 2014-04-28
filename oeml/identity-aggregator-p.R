@@ -64,4 +64,4 @@ merged[,1] <- NULL
 colnames(merged) <- as.character(seq(1:length(colnames(merged))))
 
 # Save dataset
-write.csv(merged, output.file, quote = TRUE, na = "", row.names = FALSE)
+write.csv(merged, output.file, quote = FALSE, na = "", row.names = FALSE)
