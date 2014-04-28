@@ -40,10 +40,14 @@ parser.add_argument('--format', '-f',
                     help = "Serialization format of the input files",
                     choices = ['html', 'hturtle', 'mdata', 'microdata', 'n3', 'nquads', 'nt', 'rdfa', 'rdfa1.0', 'rdfa1.1', 'trix', 'turtle', 'xml'],
                     required = True)
+parser.add_argument('--change-definition', '-c',
+                    help = "Definition of concept change",
+                    choices = ['novelChildren', 'nonEqualChildren', 'childrenParents', 'multiClass'],
+                    required = True)
 
 args = parser.parse_args()
 
-print args.input, args.output, args.n, args.top, args.str, args.member, args.format
+print args.input, args.output, args.n, args.top, args.str, args.member, args.format, args.change_definition
 
 if not os.path.exists(args.output):
     os.makedirs(directory)
@@ -176,7 +180,30 @@ for ds in t_snapshots:
             dirArticlesChildren1 = countArticlesChildren(g_o, tree_o, node, 1)
             dirArticlesChildren2 = countArticlesChildren(g_o, tree_o, node, 2)
             dirArticlesChildren3 = countArticlesChildren(g_o, tree_o, node, 3)
-            changed = 0 if ((node in tree) or (node in tree.values())) and countChildren(tree, node, 0) == countChildren(tree_o, node, 0) and countParents(g, node) == countParents(g_o, node) else 1
+            # Definition of change
+            changed = 0
+            if not ((node in tree) or (node in tree.values())):
+                changed = 1
+            if args.change_definition == 'novelChildren':
+                if countChildren(tree, node, 0) > countChildren(tree_o, node, 0):
+                    changed = 1
+            elif args.change_definition == 'nonEqualChildren':
+                if not countChildren(tree, node, 0) == countChildren(tree_o, node, 0):
+                    changed = 1
+            elif args.change_definition == 'childrenParents':
+                if not (countChildren(tree, node, 0) == countChildren(tree_o, node, 0) and countParents(g, node) == countParents(g_o, node)):
+                    changed = 1
+            elif args.change_definition == 'multiClass':
+                # Target classes: 0 stable, 1 extended, 2 shrink, 3 lost
+                if node in tree or node in tree.values():
+                    if countChildren(tree_o, node, 0) == countChildren(tree, node, 0):
+                        changed = 0
+                    elif countChildren(tree, node, 0) > countChildren(tree_o, node, 0):
+                        changed = 1
+                    else:
+                        changed = 2
+                else:
+                    changed = 3
             writer.writerow([ str(node).encode('utf-8'),
                               dirChildren,
                               dirChildren1,
@@ -274,7 +301,30 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
         dirArticlesChildren1 = countArticlesChildren(g, tree, node, 1)
         dirArticlesChildren2 = countArticlesChildren(g, tree, node, 2)
         dirArticlesChildren3 = countArticlesChildren(g, tree, node, 3)
-        changed = 0 if ((node in tree_o) or node in tree_o.values()) and countChildren(tree_o, node, 0) == countChildren(tree, node, 0) and countParents(g_o, node) == countParents(g, node) else 1
+        # Definition of change
+        changed = 0
+        if not ((node in tree_o) or (node in tree_o.values())):
+            changed = 1
+        if args.change_definition == 'novelChildren':
+            if countChildren(tree_o, node, 0) > countChildren(tree, node, 0):
+                changed = 1
+        elif args.change_definition == 'nonEqualChildren':
+            if not countChildren(tree_o, node, 0) == countChildren(tree, node, 0):
+                changed = 1
+        elif args.change_definition == 'childrenParents':
+            if not (countChildren(tree_o, node, 0) == countChildren(tree, node, 0) and countParents(g_o, node) == countParents(g, node)):
+                changed = 1
+        elif args.change_definition == 'multiClass':
+            # Target classes: 0 stable, 1 extended, 2 shrink, 3 lost
+            if node in tree_o or node in tree_o.values():
+                if countChildren(tree, node, 0) == countChildren(tree_o, node, 0):
+                    changed = 0
+                elif countChildren(tree_o, node, 0) > countChildren(tree, node, 0):
+                    changed = 1
+                else:
+                    changed = 2
+            else:
+                changed = 3
         writer.writerow([ str(node).encode('utf-8'),
                           dirChildren,
                           dirChildren1,
