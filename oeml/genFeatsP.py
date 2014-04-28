@@ -27,6 +27,14 @@ parser.add_argument('-n',
                     help = "Number of ontology snapshots (min. 3)",
                     type = check_n,
                     default = 3)
+parser.add_argument('--delta-tt', '-dtt',
+                    help = "Delta TT parameter, how many versions to skip in evaluation",
+                    type = int,
+                    required = True)
+parser.add_argument('--delta-fc', '-dfc',
+                    help = "Delta FC parameter, how many versions to skip in training",
+                    type = int,
+                    required = True)
 parser.add_argument('--top', '-t',
                     help = "URI of the top structural concept",
                     required = True)
@@ -47,7 +55,15 @@ parser.add_argument('--change-definition', '-c',
 
 args = parser.parse_args()
 
-print args.input, args.output, args.n, args.top, args.str, args.member, args.format, args.change_definition
+print args.input, args.output, args.n, args.top, args.str, args.member, args.format, args.change_definition, args.delta_tt, args.delta_fc
+
+if args.delta_tt not in range(1, int(args.n) - 2 + 1):
+    print "Delta TT must be in range 1-%s" % str(int(args.n) - 2)
+    sys.exit()
+
+if args.delta_fc not in range(1, int(args.n) - 1 - int(args.delta_tt) + 1):
+    print "Delta FC must be in range 1-%s" % str(int(args.n) - 1 - int(args.delta_tt))
+    sys.exit()
 
 if not os.path.exists(args.output):
     os.makedirs(directory)
@@ -125,10 +141,13 @@ for f in os.listdir(args.input):
 snapshots.sort()
 
 # Only use the specified amount
+# DeltaTT indicates how many versions to skip from the end
+# for the reference snapshot
+# DeltaFC does so for the training snapshots
 
 snapshots = snapshots[len(snapshots) - args.n:]
-t_snapshots = snapshots[:-2]
-r_snapshot = snapshots[-2]
+t_snapshots = snapshots[:-(args.delta_tt + args.delta_fc)]
+r_snapshot = snapshots[-(1 + args.delta_tt)]
 e_snapshot = snapshots[-1]
 
 print snapshots, t_snapshots, r_snapshot, e_snapshot
