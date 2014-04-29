@@ -6,72 +6,48 @@ EXP_DIRECTORY="./exp/"
 
 # 1. Parameters
 
-CHANGE_DEFS=('novelChildren' 'nonEqualChildren' 'childrenParents' 'multiClass')
-IN_ALL_SNAPS=('T' 'F')
-
 # CEDAR
 
-CEDAR_NAME="cedar-brt"
-CEDAR_INPUT_DATA="../../../cedar-brt-drift/"
-CEDAR_N=8
-CEDAR_TOP="http://cedar.example.org/ns#hisco"
-CEDAR_SUB_PROP="http://www.w3.org/2004/02/skos/core#broader"
-CEDAR_MEMB_PROP="http://cedar.example.org/ns#occupation"
+NAME="cedar-brt"
+INPUT_DATA="../../../cedar-brt-drift/"
+N=8
+TOP="http://cedar.example.org/ns#hisco"
+SUB_PROP="http://www.w3.org/2004/02/skos/core#broader"
+MEMB_PROP="http://cedar.example.org/ns#occupation"
 
 # DBpedia ontology
 
-DBO_NAME="dbpedia-ontology"
-DBO_INPUT_DATA="../../../dbpedia-ontology/"
-DBO_N=5
-DBO_TOP="http://www.w3.org/2002/07/owl#Thing"
-DBO_SUB_PROP="http://www.w3.org/2000/01/rdf-schema#subClassOf"
-DBO_MEMB_PROP="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+NAME="dbpedia-ontology"
+INPUT_DATA="../../../dbpedia-ontology/"
+N=5
+TOP="http://www.w3.org/2002/07/owl#Thing"
+SUB_PROP="http://www.w3.org/2000/01/rdf-schema#subClassOf"
+MEMB_PROP="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
 
 # DBpedia categories
 
-DBC_NAME="dbpedia-categories"
+NAME="dbpedia-categories"
 DBO_INTPU_DATA="../../../dbpedia-dump-clean/"
-DBC_N=5
-DBC_TOP="http://dbpedia.org/resource/Category:Contents"
-DBC_SUB_PROP="http://www.w3.org/2004/02/skos/core#broader"
-DBC_MEMB_PROP="http://purl.org/dc/terms/subject"
+N=5
+TOP="http://dbpedia.org/resource/Category:Contents"
+SUB_PROP="http://www.w3.org/2004/02/skos/core#broader"
+MEMB_PROP="http://purl.org/dc/terms/subject"
 
 
 # 2. Permutations
-let "END_I=$CEDAR_N-2"
-echo $END_I
+
+# let "END_I=$N-1"
+let "END_I=1"
 for i in $(seq 1 $END_I)
 do
-    let "END_J=$CEDAR_N-2-$END_I"
-    echo $END_J
+    # let "END_J=$N-1-$i"
+    let "END_J=1"
     for j in $(seq 1 $END_J)
     do
-	IFS=,
-	eval echo $CEDAR_NAME-$CEDAR_N-$i-$j-{"${CHANGE_DEFS[*]}"}-{"${IN_ALL_SNAPS[*]}"}
+        # echo $NAME-$N-$i-$j-{'novelChildren','nonEqualChildren','childrenParents','multiClass'}-{'T','F'}
+	mkdir $EXP_DIRECTORY/$NAME-$N-$i-$j-{'novelChildren','nonEqualChildren','childrenParents','multiClass'}-{'T','F'} 2> /dev/null
+	eval echo -e "./oeml.sh "$INPUT_DATA" "$EXP_DIRECTORY$NAME-$N-$i-$j-{'novelChildren','nonEqualChildren','childrenParents','multiClass'}-{'T','F'}/" "$N" "$i" "$j" "{'novelChildren','nonEqualChildren','childrenParents','multiClass'}" "{'T','F'}" "$TOP" "$SUB_PROP" "$MEMB_PROP
     done
 done
-
-# 2. Preparation of the directory tree
-
-# if [ ! -d "$EXP_DIRECTORY/cedar-brt-3-1-1-NC-cp-f" ]; then
-#     mkdir $EXP_DIRECTORY/cedar-brt-3-1-1-NC-cp-f;
-# fi
-# if [ ! -d "$EXP_DIRECTORY/cedar-brt-3-1-1-C-cp-f" ]; then
-#     mkdir $EXP_DIRECTORY/cedar-brt-3-1-1-C-cp-f;
-# fi
-# if [ ! -d "$EXP_DIRECTORY/cedar-brt-5-1-1-NC-cp-f" ]; then
-#     mkdir $EXP_DIRECTORY/cedar-brt-5-1-1-NC-cp-f;
-# fi
-# if [ ! -d "$EXP_DIRECTORY/cedar-brt-5-1-1-C-cp-f" ]; then
-#     mkdir $EXP_DIRECTORY/cedar-brt-5-1-1-C-cp-f;
-# fi
-
-
-
-# CEDAR dataset
-# ./oeml.sh ../../../cedar-brt-drift/ ./exp/cedar-brt-3-1-1-NC-cp-f/ 3 1 1 novelChildren T http://cedar.example.org/ns#hisco http://www.w3.org/2004/02/skos/core#broader http://cedar.example.org/ns#occupation &
-# ./oeml.sh ../../../cedar-brt-drift/ ./exp/cedar-brt-3-1-1-C-cp-f/ 3 novelChildren F http://cedar.example.org/ns#hisco http://www.w3.org/2004/02/skos/core#broader http://cedar.example.org/ns#occupation &
-# ./oeml.sh ../../../cedar-brt-drift/ ./exp/cedar-brt-5-1-1-NC-cp-f/ 5 novelChildren T http://cedar.example.org/ns#hisco http://www.w3.org/2004/02/skos/core#broader http://cedar.example.org/ns#occupation &
-# ./oeml.sh ../../../cedar-brt-drift/ ./exp/cedar-brt-5-1-1-C-cp-f/ 5 novelChildren F http://cedar.example.org/ns#hisco http://www.w3.org/2004/02/skos/core#broader http://cedar.example.org/ns#occupation &
 
 exit 0
