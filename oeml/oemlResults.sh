@@ -10,3 +10,5 @@ do
     cat $EXPDIR$f/results.txt | grep "Weighted\|weka\|Precision";
     printf '\n\n';
 done
+
+exit 0

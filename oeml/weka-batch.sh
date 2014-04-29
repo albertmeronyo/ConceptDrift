@@ -126,3 +126,5 @@ java $MEM $WEKAPATH weka.classifiers.trees.REPTree $INPUT -i -o -M 2 -V 0.001 -N
 echo "REPTree completed."
 
 echo "All done."
+
+exit 0
