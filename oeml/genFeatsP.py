@@ -230,9 +230,11 @@ for ds in t_snapshots:
                 if not countParents(g_o, node) == countParents(g, node):
                     changed = 1
             elif args.change_definition == 'oneDrift':
-                
-            elif args.change_definition == 'oneDrift':
-                
+                if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node):
+                    changed = 1
+            elif args.change_definition == 'allDrift':
+                if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node):
+                    changed = 1
             writer.writerow([ str(node).encode('utf-8'),
                               dirChildren,
                               dirChildren1,
@@ -355,7 +357,16 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
             else:
                 changed = 3
         elif args.change_definition == 'extDrift':
-            if not countArticles(g, node) == countArticles(g_o, node):
+            if not countArticles(g_o, node) == countArticles(g, node):
+                changed = 1
+        elif args.change_definition == 'intDrift':
+            if not countParents(g_o, node) == countParents(g, node):
+                changed = 1
+        elif args.change_definition == 'oneDrift':
+            if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node):
+                changed = 1
+        elif args.change_definition == 'allDrift':
+            if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node):
                 changed = 1
         writer.writerow([ str(node).encode('utf-8'),
                           dirChildren,
