@@ -50,7 +50,7 @@ parser.add_argument('--format', '-f',
                     required = True)
 parser.add_argument('--change-definition', '-c',
                     help = "Definition of concept change",
-                    choices = ['novelChildren', 'nonEqualChildren', 'childrenParents', 'multiClass'],
+                    choices = ['novelChildren', 'nonEqualChildren', 'childrenParents', 'multiClass', 'extDrift'],
                     required = True)
 
 args = parser.parse_args()
@@ -223,6 +223,9 @@ for ds in t_snapshots:
                         changed = 2
                 else:
                     changed = 3
+            elif args.change_definition == 'extDrift':
+                if not countArticles(g_o, node) == countArticles(g, node):
+                    changed = 1
             writer.writerow([ str(node).encode('utf-8'),
                               dirChildren,
                               dirChildren1,
