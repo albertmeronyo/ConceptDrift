@@ -50,7 +50,7 @@ parser.add_argument('--format', '-f',
                     required = True)
 parser.add_argument('--change-definition', '-c',
                     help = "Definition of concept change",
-                    choices = ['novelChildren', 'nonEqualChildren', 'childrenParents', 'multiClass', 'extDrift'],
+                    choices = ['novelChildren', 'nonEqualChildren', 'childrenParents', 'multiClass', 'extDrift', 'intDrift', 'labDrift', 'oneDrift', 'allDrift'],
                     required = True)
 
 args = parser.parse_args()
@@ -347,6 +347,9 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
                     changed = 2
             else:
                 changed = 3
+        elif args.change_definition == 'extDrift':
+            if not countArticles(g, node) == countArticles(g_o, node):
+                changed = 1
         writer.writerow([ str(node).encode('utf-8'),
                           dirChildren,
                           dirChildren1,
