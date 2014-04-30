@@ -226,6 +226,13 @@ for ds in t_snapshots:
             elif args.change_definition == 'extDrift':
                 if not countArticles(g_o, node) == countArticles(g, node):
                     changed = 1
+            elif args.change_definition == 'intDrift':
+                if not countParents(g_o, node) == countParents(g, node):
+                    changed = 1
+            elif args.change_definition == 'oneDrift':
+                
+            elif args.change_definition == 'oneDrift':
+                
             writer.writerow([ str(node).encode('utf-8'),
                               dirChildren,
                               dirChildren1,
