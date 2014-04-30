@@ -6,8 +6,8 @@ EXP_DIRECTORY="./exp/"
 
 # 1. Parameters
 
-CHANGE_DEFS=(novelChildren nonEqualChildren childrenParents multiClass)
-IN_ALL_SNAPS=(T F)
+CHANGE_DEFS=(oneDrift allDrift)
+IN_ALL_SNAPS=(T)
 
 # DBpedia ontology
 
@@ -17,6 +17,7 @@ N=5
 TOP="http://www.w3.org/2002/07/owl#Thing"
 SUB_PROP="http://www.w3.org/2000/01/rdf-schema#subClassOf"
 MEMB_PROP="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+LABEL_PROP="http://www.w3.org/2000/01/rdf-schema#label"
 
 # 2. Permutations
 
@@ -37,7 +38,7 @@ do
     for IAS in "${IN_ALL_SNAPS[@]}"
     do
 	mkdir $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ 2> /dev/null
-	./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ $N 1 1 $CD $IAS $TOP $SUB_PROP $MEMB_PROP
+	./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ $N 1 1 $CD $IAS $TOP $SUB_PROP $MEMB_PROP $LABEL_PROP
     done
 done
 

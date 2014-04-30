@@ -6,8 +6,8 @@ EXP_DIRECTORY="./exp/"
 
 # 1. Parameters
 
-CHANGE_DEFS=(novelChildren nonEqualChildren childrenParents multiClass)
-IN_ALL_SNAPS=(T F)
+CHANGE_DEFS=(oneDrift allDrift)
+IN_ALL_SNAPS=(T)
 
 # DBpedia categories
 
@@ -17,6 +17,7 @@ N=5
 TOP="http://dbpedia.org/resource/Category:Contents"
 SUB_PROP="http://www.w3.org/2004/02/skos/core#broader"
 MEMB_PROP="http://purl.org/dc/terms/subject"
+LABEL_PROP="http://www.w3.org/2004/02/skos/core#prefLabel"
 
 # 2. Permutations
 
@@ -37,7 +38,7 @@ do
     for IAS in "${IN_ALL_SNAPS[@]}"
     do
 	mkdir $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ 2> /dev/null
-	./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ $N 1 1 $CD $IAS $TOP $SUB_PROP $MEMB_PROP
+	./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ $N 1 1 $CD $IAS $TOP $SUB_PROP $MEMB_PROP $LABEL_PROP
     done
 done
 
