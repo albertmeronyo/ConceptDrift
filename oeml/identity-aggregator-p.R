@@ -4,7 +4,7 @@
 
 args <- commandArgs(trailingOnly = TRUE)
 
-input.files <- head(args,-2)
+input.files <- head(args,-3)
 output.file <- head(tail(args,2),1)
 in.all.snaps <- tail(args,1)
 print(paste("Input file: ", input.files))
