@@ -4,11 +4,13 @@
 
 args <- commandArgs(trailingOnly = TRUE)
 
-input.files <- head(args,-3)
-output.file <- head(tail(args,2),1)
+input.files <- head(args,-4)
+output.file.training <- head(tail(args,3),1)
+output.file.eval <- head(tail(args,2),1)
 in.all.snaps <- tail(args,1)
 print(paste("Input file: ", input.files))
-print(paste("Output file: ", output.file))
+print(paste("Output file training: ", output.file.training))
+print(paste("Output file evaluation: ", output.file.eval))
 print(paste("Terms in all snaps: ", in.all.snaps))
 
 # Read all data files except last (eval dataset)
@@ -64,4 +66,18 @@ merged[,1] <- NULL
 colnames(merged) <- as.character(seq(1:length(colnames(merged))))
 
 # Save dataset
-write.csv(merged, output.file, quote = FALSE, na = "", row.names = FALSE)
+write.csv(merged, output.file.training, quote = FALSE, na = "", row.names = FALSE)
+
+####################
+# Evaluation dataset
+####################
+eval <- read.csv(tail(head(args,-3),1), header=F)
+
+# Remove instance names
+eval[,1] <- NULL
+
+# Rename features
+colnames(eval) <- as.character(seq(1:length(colnames(eval))))
+
+# Save dataset
+write.csv(eval, output.file.eval, quote = FALSE, na = "", row.names = FALSE)
