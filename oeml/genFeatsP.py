@@ -1,5 +1,5 @@
 from rdflib import Graph
-from rdflib.namespace import URIRef, SKOS
+from rdflib.namespace import URIRef, SKOS, RDFS
 import argparse
 import sys
 import os
@@ -44,6 +44,9 @@ parser.add_argument('--str', '-s',
 parser.add_argument('--member', '-m',
                     help = "URI of the membership or usage property",
                     required = True)
+parser.add_argument('--label', '-l',
+                    help = "URI of the label property",
+                    required = True)
 parser.add_argument('--format', '-f',
                     help = "Serialization format of the input files",
                     choices = ['html', 'hturtle', 'mdata', 'microdata', 'n3', 'nquads', 'nt', 'rdfa', 'rdfa1.0', 'rdfa1.1', 'trix', 'turtle', 'xml'],
@@ -55,7 +58,7 @@ parser.add_argument('--change-definition', '-c',
 
 args = parser.parse_args()
 
-print args.input, args.output, args.n, args.top, args.str, args.member, args.format, args.change_definition, args.delta_tt, args.delta_fc
+print args.input, args.output, args.n, args.top, args.str, args.member, args.label, args.format, args.change_definition, args.delta_tt, args.delta_fc
 
 if args.delta_tt not in range(1, int(args.n) - 2 + 1):
     print "Delta TT must be in range 1-%s" % str(int(args.n) - 2)
@@ -129,6 +132,22 @@ def countArticlesChildren(g, h, n, r,  dcsubject = URIRef(args.member)):
         else:
             return countArticles(g, n, dcsubject)
 
+def fillLabels(l, t, n, g):
+    labelProp = URIRef(args.label)
+    nodeStack = []
+    nodeStack.append(n)
+    doneNodeSet = set()
+    while nodeStack:
+        c = nodeStack.pop()
+        if c not in l:
+            l[c] = []
+        for s, p, o in g.triples( (c, labelProp, None) ):
+            l[c].append(o)
+        doneNodeSet.append(c)
+        for child in t[c]:
+            if child not in doneNodeSet:
+                nodeStack.append(child)
+
 ###########
 # Snapshots
 ###########
@@ -158,13 +177,17 @@ g = Graph()
 g.parse(args.input + r_snapshot, format=args.format)
 
 tree = {}
+labels = {}
 top = URIRef(args.top)
 
 recSKOS(g, tree, top)
+fillLabels(labels, tree, top, g)
 
 print "Dataset %s has %s nodes" % (r_snapshot, str(len(tree)))
 
 print(json.dumps(tree, indent=4))
+
+print(jsoin.dumps(labels, indent=4))
 
 for ds in t_snapshots:
     # Load sources
