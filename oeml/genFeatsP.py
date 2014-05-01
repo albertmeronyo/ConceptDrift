@@ -144,9 +144,10 @@ def fillLabels(l, t, n, g):
         for s, p, o in g.triples( (c, labelProp, None) ):
             l[c].append(o)
         doneNodeSet.add(c)
-        for child in t[c]:
-            if child not in doneNodeSet:
-                nodeStack.append(child)
+        if c in t:
+            for child in t[c]:
+                if child not in doneNodeSet:
+                    nodeStack.append(child)
 
 ###########
 # Snapshots
@@ -187,7 +188,7 @@ print "Dataset %s has %s nodes" % (r_snapshot, str(len(tree)))
 
 print(json.dumps(tree, indent=4))
 
-print(jsoin.dumps(labels, indent=4))
+print(json.dumps(labels, indent=4))
 
 for ds in t_snapshots:
     # Load sources
