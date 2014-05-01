@@ -77,7 +77,7 @@ eval <- read.csv(tail(head(args,-3),1), header=F)
 eval[,1] <- NULL
 
 # Rename features
-colnames(eval) <- as.character(seq(1:length(colnames(eval))))
+colnames(eval) <- as.character(seq(1:length(colnames(merged))))
 
 # Save dataset
 write.csv(eval, output.file.eval, quote = FALSE, na = "", row.names = FALSE)
