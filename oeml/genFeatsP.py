@@ -6,6 +6,7 @@ import os
 import csv
 import gc
 import json
+import Levenshtein
 
 # Argument parsing
 
@@ -53,7 +54,7 @@ parser.add_argument('--format', '-f',
                     required = True)
 parser.add_argument('--change-definition', '-c',
                     help = "Definition of concept change",
-                    choices = ['novelChildren', 'nonEqualChildren', 'childrenParents', 'multiClass', 'extDrift', 'intDrift', 'labDrift', 'oneDrift', 'allDrift'],
+                    choices = ['novelChildren', 'nonEqualChildren', 'childrenParents', 'multiClass', 'extDrift', 'intDrift', 'labelDrift', 'oneDrift', 'allDrift'],
                     required = True)
 
 args = parser.parse_args()
@@ -143,12 +144,20 @@ def fillLabels(l, t, n, g):
             l[c] = []
         for s, p, o in g.triples( (c, labelProp, None) ):
             l[c].append(o)
-            print o
+            print o.encode('utf-8')
         doneNodeSet.add(c)
         if c in t:
             for child in t[c]:
                 if child not in doneNodeSet:
                     nodeStack.append(child)
+
+def simLabels(n, l1, l2):
+    if n not in l1 or n not in l2:
+        return 0
+    s1 = " ".join(l1[n])
+    s2 = " ".join(l2[n])
+    return ratio(s1, s2)
+
 
 ###########
 # Snapshots
@@ -198,7 +207,9 @@ for ds in t_snapshots:
     
     # Compute tree
     tree_o = {}
+    labels_o = {}
     recSKOS(g_o, tree_o, top)
+    fillLabels(labels_o, tree_o, top, g_o)
 
     print "Dataset %s has %s nodes" % (ds, str(len(tree_o)))
 
@@ -253,6 +264,9 @@ for ds in t_snapshots:
                     changed = 1
             elif args.change_definition == 'intDrift':
                 if not countParents(g_o, node) == countParents(g, node):
+                    changed = 1
+            elif args.change_definition == 'labelDrift':
+                if not simLabels(node, labels, labels_o) > 0.5:
                     changed = 1
             elif args.change_definition == 'oneDrift':
                 if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node):
@@ -330,7 +344,9 @@ g_o.parse(args.input + e_snapshot, format=args.format)
 
 # Compute tree                                                                                                                                       
 tree_o = {}
+labels_o = {}
 recSKOS(g_o, tree_o, top)
+fillLabels(labels_o, tree_o, top, g_o)
 
 print "Dataset %s has %s nodes" % (e_snapshot, str(len(tree)))
 
@@ -387,11 +403,14 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
         elif args.change_definition == 'intDrift':
             if not countParents(g_o, node) == countParents(g, node):
                 changed = 1
+        elif args.change_definition == 'labelDrift':
+            if not simLabels(node, labels, labels_o) > 0.5:
+                changed = 1
         elif args.change_definition == 'oneDrift':
-            if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node):
+            if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node) or not simLabels(node, labels, labels_o) > 0.5:
                 changed = 1
         elif args.change_definition == 'allDrift':
-            if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node):
+            if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node) and not simLabels(node, labels, labels_o) > 0.5:
                 changed = 1
         writer.writerow([ str(node).encode('utf-8'),
                           dirChildren,
