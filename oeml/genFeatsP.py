@@ -143,6 +143,7 @@ def fillLabels(l, t, n, g):
             l[c] = []
         for s, p, o in g.triples( (c, labelProp, None) ):
             l[c].append(o)
+            print o
         doneNodeSet.add(c)
         if c in t:
             for child in t[c]:
