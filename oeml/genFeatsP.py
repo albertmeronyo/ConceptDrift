@@ -157,7 +157,7 @@ def simLabels(n, l1, l2):
     maxScore = 0
     for w1 in l1[n]:
         for w2 in l2[n]:
-            currentScore = ratio(w1, w2)
+            currentScore = Levenshtein.ratio(w1, w2)
             if currentScore > maxScore:
                 maxScore = currentScore
     return maxScore
