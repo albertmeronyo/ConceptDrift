@@ -154,9 +154,15 @@ def fillLabels(l, t, n, g):
 def simLabels(n, l1, l2):
     if n not in l1 or n not in l2:
         return 0
-    s1 = " ".join(l1[n])
-    s2 = " ".join(l2[n])
-    return ratio(s1, s2)
+    maxScore = 0
+    for w1 in l1[n]:
+        for w2 in l2[n]:
+            currentScore = ratio(w1, w2)
+            if currentScore > maxScore:
+                maxScore = currentScore
+    return maxScore
+
+labelThreshold = 0.8
 
 
 ###########
@@ -266,13 +272,13 @@ for ds in t_snapshots:
                 if not countParents(g_o, node) == countParents(g, node):
                     changed = 1
             elif args.change_definition == 'labelDrift':
-                if not simLabels(node, labels, labels_o) > 0.5:
+                if not simLabels(node, labels, labels_o) > labelThreshold:
                     changed = 1
             elif args.change_definition == 'oneDrift':
-                if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node):
+                if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node) or not simLabels(node, labels, labels_o) > labelThreshold:
                     changed = 1
             elif args.change_definition == 'allDrift':
-                if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node):
+                if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node) and not simLabels(node, labels, labels_o) > labelThreshold:
                     changed = 1
             writer.writerow([ str(node).encode('utf-8'),
                               dirChildren,
@@ -404,13 +410,13 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
             if not countParents(g_o, node) == countParents(g, node):
                 changed = 1
         elif args.change_definition == 'labelDrift':
-            if not simLabels(node, labels, labels_o) > 0.5:
+            if not simLabels(node, labels, labels_o) > labelThreshold:
                 changed = 1
         elif args.change_definition == 'oneDrift':
-            if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node) or not simLabels(node, labels, labels_o) > 0.5:
+            if not countArticles(g_o, node) == countArticles(g, node) or not countParents(g_o, node) == countParents(g, node) or not simLabels(node, labels, labels_o) > labelThreshold:
                 changed = 1
         elif args.change_definition == 'allDrift':
-            if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node) and not simLabels(node, labels, labels_o) > 0.5:
+            if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node) and not simLabels(node, labels, labels_o) > labelThreshold:
                 changed = 1
         writer.writerow([ str(node).encode('utf-8'),
                           dirChildren,
