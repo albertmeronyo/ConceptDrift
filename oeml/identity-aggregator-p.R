@@ -22,12 +22,17 @@ if (length(input.files) > 1) {
     num.feats <- ncol(merged)
     for (i in 2:length(all)) {
         df <- data.frame(all[i])
+	colnames(df) <- as.character(seq(1:length(colnames(df))))
         # If all = F, we only consider nodes in all snapshots
         # Otherwise, consider everything and fill with NAs
-        merged <- merge(merged, df, by=1, all = in.all.snaps)  
+	print(head(merged))
+	print(head(df))
+        merged <- merge(merged, df, by.x=1, by.y=1, all = in.all.snaps)
+	colnames(merged) <- as.character(seq(1:length(colnames(merged))))
     }
 
     # List of column numbers where target variables lie
+    
     targets <- c()
     for (i in num.feats:length(merged)) {
         if (i %% (num.feats - 1) == 0) {
@@ -78,6 +83,8 @@ eval[,1] <- NULL
 # Save target column, remove
 eval.targets <- eval[,ncol(eval)]
 eval[,ncol(eval)] <- NULL
+ncol(merged)
+ncol(eval)
 
 # Add columns as NAs
 diff <- ncol(merged) - ncol(eval) - 1
