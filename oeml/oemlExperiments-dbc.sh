@@ -6,7 +6,7 @@ EXP_DIRECTORY="./exp/"
 
 # 1. Parameters
 
-CHANGE_DEFS=(oneDrift allDrift)
+CHANGE_DEFS=(allDrift)
 IN_ALL_SNAPS=(T)
 
 # DBpedia categories
