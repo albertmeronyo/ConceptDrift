@@ -10,6 +10,9 @@ java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $
 # Id., evaluation dataset
 java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $2 -o $2.arff
 
+# NA fields of evaluation as numeric
+sed 's/string/numeric/g' $2.arff > $2.arff
+
 INPUT="-t $1.arff"
 TEST="-T $2.arff"
 MODEL="-d $3"
