@@ -181,7 +181,7 @@ snapshots.sort()
 # for the reference snapshot
 # DeltaFC does so for the training snapshots
 
-snapshots = snapshots[len(snapshots) - args.n:]
+snapshots = snapshots[:args.n]
 t_snapshots = snapshots[:-(args.delta_tt + args.delta_fc)]
 r_snapshot = snapshots[-(1 + args.delta_tt)]
 e_snapshot = snapshots[-1]

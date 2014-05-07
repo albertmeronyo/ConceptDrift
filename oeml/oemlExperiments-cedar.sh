@@ -33,13 +33,18 @@ LABEL_PROP="http://www.w3.org/2004/02/skos/core#prefLabel"
 #     done
 # done
 
-for CD in "${CHANGE_DEFS[@]}"
+# for CD in "${CHANGE_DEFS[@]}"
+# do
+#     for IAS in "${IN_ALL_SNAPS[@]}"
+#     do
+# 	mkdir $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ 2> /dev/null
+# 	./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ $N 1 1 $CD $IAS $TOP $SUB_PROP $MEMB_PROP $LABEL_PROP
+#     done
+# done
+
+for n in $(seq 3 8)
 do
-    for IAS in "${IN_ALL_SNAPS[@]}"
-    do
-	mkdir $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ 2> /dev/null
-	./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ $N 1 1 $CD $IAS $TOP $SUB_PROP $MEMB_PROP $LABEL_PROP
-    done
-done
+    mkdir $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/ 2> /dev/null
+    ./oeml.sh ../../../cedar-brt-drift/ $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/ $n 1 1 allDrift T http://cedar.example.org/ns#hisco http://www.w3.org/2004/02/skos/core#broader http://cedar.example.org/ns#occupation http://www.w3.org/2004/02/skos/core#prefLabel
 
 exit 0
