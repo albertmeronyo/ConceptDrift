@@ -7,13 +7,16 @@ WEKAPATH="-classpath weka.jar"
 # Conversion of last attribute to nominal, training dataset
 java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $1 -o $1.arff
 
+# NA fileds of training as numeric
+sed 's/string/numeric/g' $1.arff > $1.num.arff
+
 # Id., evaluation dataset
 java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $2 -o $2.arff
 
 # NA fields of evaluation as numeric
 sed 's/string/numeric/g' $2.arff > $2.num.arff
 
-INPUT="-t $1.arff"
+INPUT="-t $1.num.arff"
 TEST="-T $2.num.arff"
 MODEL="-d $3"
 USE_MODEL="-l $3"
