@@ -90,11 +90,12 @@ ncol(eval)
 diff <- ncol(merged) - ncol(eval) - 1
 if (diff > 0) {
    eval[as.character(seq(1:diff))] <- NA
-   eval['foo'] <- eval.targets
 }
 
+eval['foo'] <- eval.targets
+
 # Rename features
-colnames(eval) <- as.character(seq(1:length(colnames(merged))))
+colnames(eval) <- as.character(seq(1:ncol(merged)))
 
 # Save dataset
 write.csv(eval, output.file.eval, quote = FALSE, na = "", row.names = FALSE)
