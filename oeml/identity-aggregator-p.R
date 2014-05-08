@@ -88,8 +88,10 @@ ncol(eval)
 
 # Add columns as NAs
 diff <- ncol(merged) - ncol(eval) - 1
-eval[as.character(seq(1:diff))] <- NA
-eval['foo'] <- eval.targets
+if (diff > 0) {
+   eval[as.character(seq(1:diff))] <- NA
+   eval['foo'] <- eval.targets
+}
 
 # Rename features
 colnames(eval) <- as.character(seq(1:length(colnames(merged))))
