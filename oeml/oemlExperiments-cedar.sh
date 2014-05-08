@@ -45,6 +45,7 @@ LABEL_PROP="http://www.w3.org/2004/02/skos/core#prefLabel"
 for n in $(seq 3 8)
 do
     mkdir $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/ 2> /dev/null
+    rm -rf $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/ 2> /dev/null
     ./oeml.sh ../../../cedar-brt-drift/ $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/ $n 1 1 allDrift T http://cedar.example.org/ns#hisco http://www.w3.org/2004/02/skos/core#broader http://cedar.example.org/ns#occupation http://www.w3.org/2004/02/skos/core#prefLabel
 done
 

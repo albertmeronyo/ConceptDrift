@@ -38,6 +38,7 @@ do
     for IAS in "${IN_ALL_SNAPS[@]}"
     do
 	mkdir $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ 2> /dev/null
+	rm -rf $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ 2> /dev/null
 	./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$N-1-1-$CD-$IAS/ $N 1 1 $CD $IAS $TOP $SUB_PROP $MEMB_PROP $LABEL_PROP
     done
 done
