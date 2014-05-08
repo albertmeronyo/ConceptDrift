@@ -14,7 +14,7 @@ LABEL_PROP=${11}
 PARTIAL_TREE=${12}
 
 python genFeatsP.py -i $DATA_DIR -o $EXP_DIR -n $NUM_SNAPS -dtt $DELTA_TT -dfc $DELTA_FC -c $CHANGE -t $TOP_CAT -s $SUB_PROP -m $IN_PROP -l $LABEL_PROP -f nt $PARTIAL_TREE 2> $EXP_DIR/error.txt > $EXP_DIR/feats_out.txt
-Rscript identity-aggregator-p.R $EXP_DIR/*.csv $EXP_DIR/training.csv $EXP_DIR/evaluation.csv $IN_ALL_SNAPS 2>> $EXP_DIR/error.txt > $EXP_DIR/identity_out.txt
+Rscript identity-aggregator-p.R $EXP_DIR/feats*.csv $EXP_DIR/training.csv $EXP_DIR/evaluation.csv $IN_ALL_SNAPS 2>> $EXP_DIR/error.txt > $EXP_DIR/identity_out.txt
 ./weka-batch.sh $EXP_DIR/training.csv $EXP_DIR/evaluation.csv $EXP_DIR/temp.model $EXP_DIR/results.txt 2>> $EXP_DIR/error.txt > $EXP_DIR/weka_out.txt
 
 exit 0
