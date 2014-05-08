@@ -7,7 +7,7 @@ EXPDIR="./exp/"
 for f in `ls $EXPDIR`
 do
     echo 'EXPERIMENT '$f;
-    cat $EXPDIR$f/results.txt | grep "Weighted\|weka\|Precision";
+    cat $EXPDIR$f/results.txt | grep "Weighted\|weka";
     printf '\n\n';
 done
 
