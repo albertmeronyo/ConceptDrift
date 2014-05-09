@@ -148,7 +148,7 @@ def fillLabels(l, t, n, g):
             l[c] = []
         for s, p, o in g.triples( (c, labelProp, None) ):
             l[c].append(o)
-            print o.encode('utf-8')
+            # print o.encode('utf-8')
         doneNodeSet.add(c)
         if c in t:
             for child in t[c]:
@@ -206,9 +206,9 @@ fillLabels(labels, tree, top, g)
 
 print "Dataset %s has %s nodes" % (r_snapshot, str(len(tree)))
 
-print(json.dumps(tree, indent=4))
+# print(json.dumps(tree, indent=4))
 
-print(json.dumps(labels, indent=4))
+# print(json.dumps(labels, indent=4))
 
 for ds in t_snapshots:
     # Load sources
@@ -223,7 +223,7 @@ for ds in t_snapshots:
 
     print "Dataset %s has %s nodes" % (ds, str(len(tree_o)))
 
-    print(json.dumps(tree_o, indent=4))
+    # print(json.dumps(tree_o, indent=4))
 
     with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -401,7 +401,7 @@ fillLabels(labels_o, tree_o, top, g_o)
 
 print "Dataset %s has %s nodes" % (e_snapshot, str(len(tree)))
 
-print(json.dumps(tree_o, indent=4))
+# print(json.dumps(tree_o, indent=4))
 
 # Write stats on THIS tree, compare last attribute with 3.8 tree                                                                                     
 with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
