@@ -43,11 +43,11 @@ LABEL_PROP="http://www.w3.org/2000/01/rdf-schema#label"
 #     done
 # done
 
-for n in $(seq 3 4)
+for n in $(seq 3 5)
 do
-    mkdir $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/ 2> /dev/null
-    rm -rf $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/* 2> /dev/null
-    ./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$n-1-1-inDrift-T/ $n 1 1 intDrift T $TOP $SUB_PROP $MEMB_PROP $LABEL_PROP
+    mkdir $EXP_DIRECTORY$NAME-$n-1-1-intDrift-T/ 2> /dev/null
+    rm -rf $EXP_DIRECTORY$NAME-$n-1-1-intDrift-T/* 2> /dev/null
+    ./oeml.sh $INPUT_DATA $EXP_DIRECTORY$NAME-$n-1-1-intDrift-T/ $n 1 1 intDrift T $TOP $SUB_PROP $MEMB_PROP $LABEL_PROP
 done
 
 exit 0
