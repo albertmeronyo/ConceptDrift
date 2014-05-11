@@ -43,7 +43,7 @@ LABEL_PROP="http://www.w3.org/2000/01/rdf-schema#label"
 #     done
 # done
 
-for n in $(seq 3 5)
+for n in $(seq 3 8)
 do
     mkdir $EXP_DIRECTORY$NAME-$n-1-1-intDrift-T/ 2> /dev/null
     rm -rf $EXP_DIRECTORY$NAME-$n-1-1-intDrift-T/* 2> /dev/null
