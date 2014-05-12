@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concept Drift on the Web</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1>Concept Drift on the Web</h1>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <p>An awesome paragraph</p>
+
+    <h2>Predicting Concept Drift in Linked Data</h2>
+
+    <p>The development and maintenance of Knowledge Organization
+      Systems (KOS) such as classification schemas, taxonomies and
+      ontologies is a knowledge intensive task that requires a lot of
+      manual effort. Librarians, historians and social scientists,
+      among others, need to constantly adapt these KOS to deal with
+      the change of meaning of concepts (i.e. \emph{concept drift})
+      that comes with new data releases and novel data links. In this
+      paper we introduce a method to automatically detect which parts
+      of a KOS are likely to experience concept drift. Our approach is
+      based on using supervised learning on features extracted from
+      past versions to predict the concepts that will experience drift
+      in a future version. We find that a state of the art predictor
+      for concept extension in biomedical ontologies can be adapted to
+      predict concept drift in KOS in a domain-independent
+      manner. This result is confirmed by our experiments on a variety
+      of datasets (encyclopedic, cross-domain, and socio historical),
+      enabling the creation of a generic tool to assist knowledge
+      experts in their curation tasks.</p>
+
+  </body>
+</html>
