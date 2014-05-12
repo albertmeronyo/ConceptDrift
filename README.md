@@ -6,7 +6,7 @@ time. This repo contains several experiments to detect, model and
 predict change (or stability) of meaning of concepts over time in the
 Semantic Web, i.e. on RDF/RDFS/SKOS/OWL datasets.
 
-For extended demos/results, see [http://albertmeronyo.github.io/ConceptDrift]
+For extended demos and results, see http://albertmeronyo.github.io/ConceptDrift
 
 Directories on this repo:
 
