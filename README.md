@@ -15,7 +15,10 @@ study concept drift.
 
 Directory: `oeml`
 
-
+For detailed results of the three experiments with the tested WEKA
+classifiers, click <a
+hrer='https://docs.google.com/spreadsheets/d/1eiqr1t5jiJQLEXFMN5-dheyurA2jpslP2WMWBIwH0O0/pubhtml'
+target='_blank'>here</a>. 
 
 ## Extensional Drift in Statistical Linked Data
 
