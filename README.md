@@ -13,9 +13,9 @@ study concept drift.
 
 ## Predicting Concept Drift in Linked Data
 
-Directory: `oeml`
+*Directory:* `oeml`
 
-Associated papers:
+*Associated papers:*
 
 - Predicting Concept Drift in Linked Data (ISWC 2014, under review)
 
@@ -43,9 +43,9 @@ target='_blank'>here</a>.
 
 ## Extensional Drift in Statistical Linked Data
 
-Directory: `semStats` 
+*Directory:* `semStats` 
 
-Associated papers: 
+*Associated papers:*
 
 - <a
 href='http://www.albertmeronyo.org/wp-content/uploads/2013/08/semstats2013_submission_7-1.pdf'
@@ -67,7 +67,7 @@ using paired difference tests on statistical distributions.
 
 ## Concept Drift through Formal Concept Analysis
 
-Directory: `fca`
+*Directory:* `fca`
 
 <a href='http://en.wikipedia.org/wiki/Formal_concept_analysis'
 target='_blank'>Formal Concept Analysis</a> (FCA, Rudolf Wille, 1984)
@@ -77,9 +77,9 @@ is used in versioned datasets to analyse their change over time.
 
 ## Lean Ontology Matching (LeanOM)
 
-Directory: `compressionSimilarity`
+*Directory:* `compressionSimilarity`
 
-Associated papers:
+*Associated papers:*
 
 - Lean Ontology Matching (unpublished)
 
