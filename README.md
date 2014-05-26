@@ -15,6 +15,10 @@ study concept drift.
 
 Directory: `oeml`
 
+Associated papers:
+
+- Predicting Concept Drift in Linked Data (ISWC 2014, under review)
+
 For detailed results of the three experiments with the tested WEKA
 classifiers, click <a
 href='https://docs.google.com/spreadsheets/d/1eiqr1t5jiJQLEXFMN5-dheyurA2jpslP2WMWBIwH0O0/pubhtml'
@@ -29,11 +33,11 @@ Associated papers:
 - <a
 href='http://www.albertmeronyo.org/wp-content/uploads/2013/08/semstats2013_submission_7-1.pdf'
 target='_blank'>Detecting and Reporting Extensional Concept Drift in
-Statistical Linked Data</a> 
+Statistical Linked Data</a> (SemStats workshop, ISWC 2013)
 - <a
 href='http://www.albertmeronyo.org/wp-content/uploads/2013/09/semstats2013_submission_15.pdf
 ' target='_blank'>Non-Temporal Orderings as Proxies for Extensional
-Concept Drift</a> 
+Concept Drift</a> (SemStats challenge, ISWC 2013)
 
 Concepts are main entities in Linked Statistical Data. With new
 versions and dataset releases, these concepts may change and hamper
@@ -57,6 +61,10 @@ is used in versioned datasets to analyse their change over time.
 ## Lean Ontology Matching (LeanOM)
 
 Directory: `compressionSimilarity`
+
+Associated papers:
+
+- Lean Ontology Matching (unpublished)
 
 LeanOM is a quick and straight-forward way of studying change across
 versioned ontologies that come in a normalized serialization. The
