@@ -22,13 +22,27 @@ target='_blank'>here</a>.
 
 ## Extensional Drift in Statistical Linked Data
 
-Directory: `semStats`
+Directory: `semStats` 
+
+Associated papers: 
+
+- <a
+href='http://www.albertmeronyo.org/wp-content/uploads/2013/08/semstats2013_submission_7-1.pdf'
+target='_blank'>Detecting and Reporting Extensional Concept Drift in
+Statistical Linked Data</a> 
+- <a
+href='http://www.albertmeronyo.org/wp-content/uploads/2013/09/semstats2013_submission_15.pdf
+' target='_blank'>Non-Temporal Orderings as Proxies for Extensional
+Concept Drift</a> 
 
 Concepts are main entities in Linked Statistical Data. With new
 versions and dataset releases, these concepts may change and hamper
 comparability of statistical data. In this experiment we use
 straightforward statistical tests to detect extensional concept drift
 (which concerns the objects a concept extends to).
+
+The directory contains R scripts to detect extensional concept drift
+using paired difference tests on statistical distributions.
 
 ## Concept Drift through Formal Concept Analysis
 
@@ -50,9 +64,6 @@ basic idea is to use compression to analyze the amount of new
 information, and use this as an ontology matching method.
 
 
-* `fca` contains few experiments with the Formal Concept Analysis
-(FCA) framework of Rudolf Wille
-* `semStats` contains R scripts to detect extensional concept drift
-  using paired difference tests on statistical distributions
+* `semStats` 
   
 
