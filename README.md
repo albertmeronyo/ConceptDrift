@@ -19,10 +19,25 @@ Associated papers:
 
 - Predicting Concept Drift in Linked Data (ISWC 2014, under review)
 
+The development and maintenance of Knowledge Organization Systems
+(KOS) is a knowledge intensive task that requires a lot of manual ef-
+fort. Librarians, historians and social scientists need to deal with
+the change of meaning of concepts (i.e. concept drift) that comes with
+new data releases and novel data links. In this experiment we develop
+a method to automatically detect which parts of a KOS are likely to
+experience concept drift. The essential idea is to use supervised
+learning on features extracted from past versions to predict the
+concepts that will experience drift in a future version. We run this
+method in three different experiments on datasets of different nature
+(encyclopedic, cross-domain, and socio historical), named cedar-N,
+dbo-N and dbo in the tasks of refining and predicting change.
+
 For detailed results of the three experiments with the tested WEKA
 classifiers, click <a
 href='https://docs.google.com/spreadsheets/d/1eiqr1t5jiJQLEXFMN5-dheyurA2jpslP2WMWBIwH0O0/pubhtml'
-target='_blank'>here</a>. 
+target='_blank'>here</a>.
+
+Dumps of the output of these experiments are available here.
 
 ## Extensional Drift in Statistical Linked Data
 
@@ -70,8 +85,3 @@ LeanOM is a quick and straight-forward way of studying change across
 versioned ontologies that come in a normalized serialization. The
 basic idea is to use compression to analyze the amount of new
 information, and use this as an ontology matching method.
-
-
-* `semStats` 
-  
-
