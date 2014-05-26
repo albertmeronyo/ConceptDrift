@@ -1,0 +1,2600 @@
+weka.classifiers.bayes.BayesNet -i -o -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+
+Time taken to build model: 0.09 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         167               95.4286 %
+Incorrectly Classified Instances         8                4.5714 %
+Kappa statistic                          0.8435
+Mean absolute error                      0.0643
+Root mean squared error                  0.2245
+Relative absolute error                 23.6779 %
+Root relative squared error             61.2351 %
+Coverage of cases (0.95 level)          96      %
+Mean rel. region size (0.95 level)      52.8571 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.964    0.048    0.794      0.964    0.871      0.849    0.996     0.974     0
+                 0.952    0.036    0.993      0.952    0.972      0.849    0.996     0.999     1
+Weighted Avg.    0.954    0.038    0.961      0.954    0.956      0.849    0.996     0.995     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  27   1 |   a = 0
+   7 140 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         157               89.7143 %
+Incorrectly Classified Instances        18               10.2857 %
+Kappa statistic                          0.6818
+Mean absolute error                      0.0981
+Root mean squared error                  0.2997
+Relative absolute error                 36.0776 %
+Root relative squared error             81.7165 %
+Coverage of cases (0.95 level)          93.1429 %
+Mean rel. region size (0.95 level)      52.5714 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.929    0.109    0.619      0.929    0.743      0.704    0.987     0.952     0
+                 0.891    0.071    0.985      0.891    0.936      0.704    0.987     0.997     1
+Weighted Avg.    0.897    0.077    0.926      0.897    0.905      0.704    0.987     0.990     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  26   2 |   a = 0
+  16 131 |   b = 1
+
+
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=16
+Network structure (nodes followed by parents)
+1(2): 17 
+2(2): 17 
+3(2): 17 
+4(2): 17 
+5(1): 17 
+6(1): 17 
+7(3): 17 
+8(3): 17 
+9(3): 17 
+10(3): 17 
+11(3): 17 
+12(2): 17 
+13(2): 17 
+14(2): 17 
+15(2): 17 
+16(2): 17 
+17(2): 
+LogScore Bayes: -1197.6823907907274
+LogScore BDeu: -1240.5430777209308
+LogScore MDL: -1264.7143983102198
+LogScore ENTROPY: -1164.0010718187111
+LogScore AIC: -1203.0010718187111
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         191               93.1707 %
+Incorrectly Classified Instances        14                6.8293 %
+Kappa statistic                          0.7705
+Mean absolute error                      0.09  
+Root mean squared error                  0.2773
+Coverage of cases (0.95 level)          93.1707 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.075    0.698      0.968    0.811      0.786    0.992     0.964     0
+                 0.925    0.032    0.994      0.925    0.958      0.786    0.992     0.998     1
+Weighted Avg.    0.932    0.039    0.949      0.932    0.936      0.786    0.992     0.993     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+  13 161 |   b = 1
+
+weka.classifiers.bayes.NaiveBayes -i -o
+
+Time taken to build model: 0.05 seconds
+Time taken to test model on training data: 0.04 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         164               93.7143 %
+Incorrectly Classified Instances        11                6.2857 %
+Kappa statistic                          0.7479
+Mean absolute error                      0.0604
+Root mean squared error                  0.2429
+Relative absolute error                 22.2567 %
+Root relative squared error             66.2535 %
+Coverage of cases (0.95 level)          94.2857 %
+Mean rel. region size (0.95 level)      50.2857 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.714    0.020    0.870      0.714    0.784      0.753    0.983     0.880     0
+                 0.980    0.286    0.947      0.980    0.963      0.753    0.984     0.997     1
+Weighted Avg.    0.937    0.243    0.935      0.937    0.935      0.753    0.984     0.978     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  20   8 |   a = 0
+   3 144 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         163               93.1429 %
+Incorrectly Classified Instances        12                6.8571 %
+Kappa statistic                          0.7207
+Mean absolute error                      0.0684
+Root mean squared error                  0.2613
+Relative absolute error                 25.1735 %
+Root relative squared error             71.234  %
+Coverage of cases (0.95 level)          93.1429 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.679    0.020    0.864      0.679    0.760      0.728    0.983     0.878     0
+                 0.980    0.321    0.941      0.980    0.960      0.728    0.985     0.997     1
+Weighted Avg.    0.931    0.273    0.929      0.931    0.928      0.728    0.984     0.978     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  19   9 |   a = 0
+   3 144 |   b = 1
+
+
+Naive Bayes Classifier
+
+                     Class
+Attribute                0           1
+                    (0.16)      (0.84)
+=======================================
+1
+  mean               6.2637           0
+  std. dev.          6.0699      0.3077
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+2
+  mean              11.3367           0
+  std. dev.         20.8046      1.2024
+  weight sum             28         147
+  precision          7.2143      7.2143
+
+3
+  mean              13.0867           0
+  std. dev.         32.7953      2.0357
+  weight sum             28         147
+  precision         12.2143     12.2143
+
+4
+  mean              13.3163           0
+  std. dev.         33.3706      2.0714
+  weight sum             28         147
+  precision         12.4286     12.4286
+
+5
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         147
+  precision               1           1
+
+6
+  mean              15.1648     11.7174
+  std. dev.          8.2762      7.1862
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+7
+  mean           66533.9799   5688.8907
+  std. dev.       85990.664  17815.7186
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+8
+  mean           66533.9799   5688.8907
+  std. dev.       85990.664  17815.7186
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+9
+  mean          162755.2978   5318.1647
+  std. dev.     242085.3904  17839.5925
+  weight sum             28         147
+  precision       6355.8554   6355.8554
+
+10
+  mean          222572.3825   4977.8559
+  std. dev.      412531.395  18092.2979
+  weight sum             28         147
+  precision       12195.747   12195.747
+
+11
+  mean          246920.0671   4769.7946
+  std. dev.     523423.4871  18164.6998
+  weight sum             28         147
+  precision      16306.0422  16306.0422
+
+12
+  mean           13912.3356   5725.4253
+  std. dev.      15196.4513   17738.695
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+13
+  mean           13912.3356   5725.4253
+  std. dev.      15196.4513   17738.695
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+14
+  mean           19787.6996   5705.5647
+  std. dev.      24375.2176  17701.9793
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+15
+  mean           20956.2645   5705.5647
+  std. dev.       24662.227  17701.9793
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+16
+  mean            21073.121   5705.5647
+  std. dev.      24627.2268  17701.9793
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         194               94.6341 %
+Incorrectly Classified Instances        11                5.3659 %
+Kappa statistic                          0.7696
+Mean absolute error                      0.0537
+Root mean squared error                  0.2316
+Coverage of cases (0.95 level)          94.6341 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.710    0.011    0.917      0.710    0.800      0.778    0.975     0.867     0
+                 0.989    0.290    0.950      0.989    0.969      0.778    0.976     0.995     1
+Weighted Avg.    0.946    0.248    0.945      0.946    0.943      0.778    0.976     0.976     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   9 |   a = 0
+   2 172 |   b = 1
+
+weka.classifiers.bayes.NaiveBayesMultinomial -i -o
+
+Time taken to build model: 0.03 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         167               95.4286 %
+Incorrectly Classified Instances         8                4.5714 %
+Kappa statistic                          0.8077
+Mean absolute error                      0.0457
+Root mean squared error                  0.2138
+Relative absolute error                 16.8431 %
+Root relative squared error             58.318  %
+Coverage of cases (0.95 level)          95.4286 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.714    0.000    1.000      0.714    0.833      0.823    0.839     0.760     0
+                 1.000    0.286    0.948      1.000    0.974      0.823    0.851     0.946     1
+Weighted Avg.    0.954    0.240    0.957      0.954    0.951      0.823    0.849     0.917     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  20   8 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         167               95.4286 %
+Incorrectly Classified Instances         8                4.5714 %
+Kappa statistic                          0.8077
+Mean absolute error                      0.0457
+Root mean squared error                  0.2138
+Relative absolute error                 16.8204 %
+Root relative squared error             58.2954 %
+Coverage of cases (0.95 level)          95.4286 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.714    0.000    1.000      0.714    0.833      0.823    0.839     0.760     0
+                 1.000    0.286    0.948      1.000    0.974      0.823    0.851     0.946     1
+Weighted Avg.    0.954    0.240    0.957      0.954    0.951      0.823    0.849     0.917     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  20   8 |   a = 0
+   0 147 |   b = 1
+
+
+The independent probability of a class
+--------------------------------------
+0	0.1638418079096045
+1	0.8361581920903954
+
+The probability of a word given the class
+-----------------------------------------
+	0	1	
+1	7.306684338543817E-6	1.1803039377063905E-7	
+2	1.3569556628724246E-5	1.1803039377063905E-7	
+3	1.661748780994539E-5	1.1803039377063905E-7	
+4	1.674274525574897E-5	1.1803039377063905E-7	
+5	1.1690694941670106E-6	1.7468498278054572E-5	
+6	1.8037072195719594E-5	2.0560894594845325E-4	
+7	0.0777795712788351	0.09997764504341983	
+8	0.0777795712788351	0.09997764504341983	
+9	0.19092549887535515	0.09997764504341983	
+10	0.2600195518522403	0.09997764504341983	
+11	0.2886378302871836	0.09997764504341983	
+12	0.01630451120536409	0.09997764504341983	
+13	0.01630451120536409	0.09997764504341983	
+14	0.023093798787775142	0.09997764504341983	
+15	0.024461067313685393	0.09997764504341983	
+16	0.024620645299639195	0.09997764504341983	
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         197               96.0976 %
+Incorrectly Classified Instances         8                3.9024 %
+Kappa statistic                          0.8299
+Mean absolute error                      0.039 
+Root mean squared error                  0.1975
+Coverage of cases (0.95 level)          96.0976 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.742    0.000    1.000      0.742    0.852      0.842    0.851     0.781     0
+                 1.000    0.258    0.956      1.000    0.978      0.842    0.867     0.955     1
+Weighted Avg.    0.961    0.219    0.963      0.961    0.959      0.842    0.865     0.929     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  23   8 |   a = 0
+   0 174 |   b = 1
+
+weka.classifiers.bayes.NaiveBayesMultinomialUpdateable -i -o
+
+Time taken to build model: 0.05 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         167               95.4286 %
+Incorrectly Classified Instances         8                4.5714 %
+Kappa statistic                          0.8077
+Mean absolute error                      0.0457
+Root mean squared error                  0.2138
+Relative absolute error                 16.8431 %
+Root relative squared error             58.318  %
+Coverage of cases (0.95 level)          95.4286 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.714    0.000    1.000      0.714    0.833      0.823    0.839     0.760     0
+                 1.000    0.286    0.948      1.000    0.974      0.823    0.851     0.946     1
+Weighted Avg.    0.954    0.240    0.957      0.954    0.951      0.823    0.849     0.917     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  20   8 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         167               95.4286 %
+Incorrectly Classified Instances         8                4.5714 %
+Kappa statistic                          0.8077
+Mean absolute error                      0.0457
+Root mean squared error                  0.2138
+Relative absolute error                 16.8204 %
+Root relative squared error             58.2954 %
+Coverage of cases (0.95 level)          95.4286 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.714    0.000    1.000      0.714    0.833      0.823    0.839     0.760     0
+                 1.000    0.286    0.948      1.000    0.974      0.823    0.851     0.946     1
+Weighted Avg.    0.954    0.240    0.957      0.954    0.951      0.823    0.849     0.917     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  20   8 |   a = 0
+   0 147 |   b = 1
+
+
+The independent probability of a class
+--------------------------------------
+0	29.0
+1	148.0
+
+The probability of a word given the class
+-----------------------------------------
+	0	1	
+1	1.0035391806143295E76	2.718281828459045	
+2	1.3986421705962793E141	2.718281828459045	
+3	7.066490793756186E172	2.718281828459045	
+4	1.419342617553556E174	2.718281828459045	
+5	1.446257064291475E12	1.886180808490652E64	
+6	4.123027032079202E187	Infinity	
+7	Infinity	Infinity	
+8	Infinity	Infinity	
+9	Infinity	Infinity	
+10	Infinity	Infinity	
+11	Infinity	Infinity	
+12	Infinity	Infinity	
+13	Infinity	Infinity	
+14	Infinity	Infinity	
+15	Infinity	Infinity	
+16	Infinity	Infinity	
+17	2.718281828459045	2.718281828459045	
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         197               96.0976 %
+Incorrectly Classified Instances         8                3.9024 %
+Kappa statistic                          0.8299
+Mean absolute error                      0.039 
+Root mean squared error                  0.1975
+Coverage of cases (0.95 level)          96.0976 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.742    0.000    1.000      0.742    0.852      0.842    0.851     0.781     0
+                 1.000    0.258    0.956      1.000    0.978      0.842    0.867     0.955     1
+Weighted Avg.    0.961    0.219    0.963      0.961    0.959      0.842    0.865     0.929     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  23   8 |   a = 0
+   0 174 |   b = 1
+
+weka.classifiers.bayes.NaiveBayesUpdateable -i -o
+
+Time taken to build model: 0.04 seconds
+Time taken to test model on training data: 0.04 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         164               93.7143 %
+Incorrectly Classified Instances        11                6.2857 %
+Kappa statistic                          0.7479
+Mean absolute error                      0.0604
+Root mean squared error                  0.2429
+Relative absolute error                 22.2567 %
+Root relative squared error             66.2535 %
+Coverage of cases (0.95 level)          94.2857 %
+Mean rel. region size (0.95 level)      50.2857 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.714    0.020    0.870      0.714    0.784      0.753    0.983     0.880     0
+                 0.980    0.286    0.947      0.980    0.963      0.753    0.984     0.997     1
+Weighted Avg.    0.937    0.243    0.935      0.937    0.935      0.753    0.984     0.978     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  20   8 |   a = 0
+   3 144 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         163               93.1429 %
+Incorrectly Classified Instances        12                6.8571 %
+Kappa statistic                          0.7207
+Mean absolute error                      0.0684
+Root mean squared error                  0.2613
+Relative absolute error                 25.1735 %
+Root relative squared error             71.234  %
+Coverage of cases (0.95 level)          93.1429 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.679    0.020    0.864      0.679    0.760      0.728    0.983     0.878     0
+                 0.980    0.321    0.941      0.980    0.960      0.728    0.985     0.997     1
+Weighted Avg.    0.931    0.273    0.929      0.931    0.928      0.728    0.984     0.978     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  19   9 |   a = 0
+   3 144 |   b = 1
+
+
+Naive Bayes Classifier
+
+                     Class
+Attribute                0           1
+                    (0.16)      (0.84)
+=======================================
+1
+  mean               6.2637           0
+  std. dev.          6.0699      0.3077
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+2
+  mean              11.3367           0
+  std. dev.         20.8046      1.2024
+  weight sum             28         147
+  precision          7.2143      7.2143
+
+3
+  mean              13.0867           0
+  std. dev.         32.7953      2.0357
+  weight sum             28         147
+  precision         12.2143     12.2143
+
+4
+  mean              13.3163           0
+  std. dev.         33.3706      2.0714
+  weight sum             28         147
+  precision         12.4286     12.4286
+
+5
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         147
+  precision               1           1
+
+6
+  mean              15.1648     11.7174
+  std. dev.          8.2762      7.1862
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+7
+  mean           66533.9799   5688.8907
+  std. dev.       85990.664  17815.7186
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+8
+  mean           66533.9799   5688.8907
+  std. dev.       85990.664  17815.7186
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+9
+  mean          162755.2978   5318.1647
+  std. dev.     242085.3904  17839.5925
+  weight sum             28         147
+  precision       6355.8554   6355.8554
+
+10
+  mean          222572.3825   4977.8559
+  std. dev.      412531.395  18092.2979
+  weight sum             28         147
+  precision       12195.747   12195.747
+
+11
+  mean          246920.0671   4769.7946
+  std. dev.     523423.4871  18164.6998
+  weight sum             28         147
+  precision      16306.0422  16306.0422
+
+12
+  mean           13912.3356   5725.4253
+  std. dev.      15196.4513   17738.695
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+13
+  mean           13912.3356   5725.4253
+  std. dev.      15196.4513   17738.695
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+14
+  mean           19787.6996   5705.5647
+  std. dev.      24375.2176  17701.9793
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+15
+  mean           20956.2645   5705.5647
+  std. dev.       24662.227  17701.9793
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+16
+  mean            21073.121   5705.5647
+  std. dev.      24627.2268  17701.9793
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         194               94.6341 %
+Incorrectly Classified Instances        11                5.3659 %
+Kappa statistic                          0.7696
+Mean absolute error                      0.0537
+Root mean squared error                  0.2316
+Coverage of cases (0.95 level)          94.6341 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.710    0.011    0.917      0.710    0.800      0.778    0.975     0.867     0
+                 0.989    0.290    0.950      0.989    0.969      0.778    0.976     0.995     1
+Weighted Avg.    0.946    0.248    0.945      0.946    0.943      0.778    0.976     0.976     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   9 |   a = 0
+   2 172 |   b = 1
+
+weka.classifiers.functions.Logistic -i -o -R 1.0E-8 -M -1
+
+Time taken to build model: 0.1 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.033 
+Root mean squared error                  0.1304
+Relative absolute error                 12.1681 %
+Root relative squared error             35.5783 %
+Coverage of cases (0.95 level)          98.8571 %
+Mean rel. region size (0.95 level)      50.8571 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.977     0.966     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.977     0.994     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.977     0.989     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         170               97.1429 %
+Incorrectly Classified Instances         5                2.8571 %
+Kappa statistic                          0.8889
+Mean absolute error                      0.0408
+Root mean squared error                  0.1607
+Relative absolute error                 15.026  %
+Root relative squared error             43.8171 %
+Coverage of cases (0.95 level)          97.7143 %
+Mean rel. region size (0.95 level)      50.8571 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.857    0.007    0.960      0.857    0.906      0.891    0.954     0.938     0
+                 0.993    0.143    0.973      0.993    0.983      0.891    0.954     0.977     1
+Weighted Avg.    0.971    0.121    0.971      0.971    0.971      0.891    0.954     0.971     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  24   4 |   a = 0
+   1 146 |   b = 1
+
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                            Class
+Variable                        0
+=================================
+1                         13.1758
+2                          0.5749
+3                           -0.09
+4                            -0.1
+5                        148.6803
+6                          -0.076
+7                         -0.0001
+8                         -0.0001
+9                         -0.0001
+10                              0
+11                              0
+12                         -0.001
+13                         -0.001
+14                         0.0003
+15                         0.0011
+16                          0.001
+Intercept               -152.0645
+
+
+Odds Ratios...
+                            Class
+Variable                        0
+=================================
+1                     527463.9886
+2                           1.777
+3                          0.9139
+4                          0.9048
+5            3.724141482296059E64
+6                          0.9268
+7                          0.9999
+8                          0.9999
+9                          0.9999
+10                              1
+11                              1
+12                          0.999
+13                          0.999
+14                         1.0003
+15                         1.0011
+16                          1.001
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         200               97.561  %
+Incorrectly Classified Instances         5                2.439  %
+Kappa statistic                          0.9011
+Mean absolute error                      0.0409
+Root mean squared error                  0.1586
+Coverage of cases (0.95 level)          97.561  %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.871    0.006    0.964      0.871    0.915      0.903    0.887     0.892     0
+                 0.994    0.129    0.977      0.994    0.986      0.903    0.887     0.929     1
+Weighted Avg.    0.976    0.110    0.975      0.976    0.975      0.903    0.887     0.923     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  27   4 |   a = 0
+   1 173 |   b = 1
+
+weka.classifiers.functions.MultilayerPerceptron -i -o -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+
+Time taken to build model: 0.72 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         171               97.7143 %
+Incorrectly Classified Instances         4                2.2857 %
+Kappa statistic                          0.9097
+Mean absolute error                      0.0325
+Root mean squared error                  0.1474
+Relative absolute error                 11.9852 %
+Root relative squared error             40.207  %
+Coverage of cases (0.95 level)          98.8571 %
+Mean rel. region size (0.95 level)      53.1429 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.857    0.000    1.000      0.857    0.923      0.913    0.993     0.974     0
+                 1.000    0.143    0.974      1.000    0.987      0.913    0.993     0.999     1
+Weighted Avg.    0.977    0.120    0.978      0.977    0.976      0.913    0.993     0.995     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  24   4 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         170               97.1429 %
+Incorrectly Classified Instances         5                2.8571 %
+Kappa statistic                          0.8889
+Mean absolute error                      0.0549
+Root mean squared error                  0.1674
+Relative absolute error                 20.2064 %
+Root relative squared error             45.6401 %
+Coverage of cases (0.95 level)          98.8571 %
+Mean rel. region size (0.95 level)      56.5714 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.857    0.007    0.960      0.857    0.906      0.891    0.972     0.937     0
+                 0.993    0.143    0.973      0.993    0.983      0.891    0.972     0.994     1
+Weighted Avg.    0.971    0.121    0.971      0.971    0.971      0.891    0.972     0.985     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  24   4 |   a = 0
+   1 146 |   b = 1
+
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    9.215256624020796
+    Node 2    -2.128023003476729
+    Node 3    -0.4003248455059818
+    Node 4    -7.150162880118937
+    Node 5    -2.0711474588001013
+    Node 6    -2.7590523032353556
+    Node 7    -2.44097722089596
+    Node 8    -1.2158285481200726
+    Node 9    -4.385749886233837
+    Node 10    -1.7094650422323052
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -9.209023156783731
+    Node 2    2.1209348675025157
+    Node 3    0.3579664615393995
+    Node 4    7.155503076841572
+    Node 5    2.0330966969275956
+    Node 6    2.7471828709489707
+    Node 7    2.4217256205521367
+    Node 8    1.2631669145622277
+    Node 9    4.405958090779413
+    Node 10    1.7819470231446113
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -2.851996675192378
+    Attrib 1    -7.332059645663115
+    Attrib 2    -0.3394790186404855
+    Attrib 3    0.6435325613691902
+    Attrib 4    0.6568536608331419
+    Attrib 5    -2.0883443801682726
+    Attrib 6    1.5710644492579517
+    Attrib 7    -0.4461572703077277
+    Attrib 8    -0.381988518304533
+    Attrib 9    -0.023935974481965515
+    Attrib 10    0.9341545785802593
+    Attrib 11    1.1691810985348634
+    Attrib 12    1.9655829739612685
+    Attrib 13    1.950642671153105
+    Attrib 14    -1.0542376252388737
+    Attrib 15    -1.1574654350089855
+    Attrib 16    -1.0844279753867931
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -0.8414154474981885
+    Attrib 1    -1.2091692538628434
+    Attrib 2    -0.0753695144938088
+    Attrib 3    0.1686035050163797
+    Attrib 4    0.15889631544585245
+    Attrib 5    -0.45981106852845294
+    Attrib 6    0.269483381240452
+    Attrib 7    -4.2025516409490885E-4
+    Attrib 8    -0.020510415502555487
+    Attrib 9    -0.1176926501990563
+    Attrib 10    0.08073710214884909
+    Attrib 11    0.18510041703620667
+    Attrib 12    0.7360306680608493
+    Attrib 13    0.7666918490408732
+    Attrib 14    0.4286701832555044
+    Attrib 15    0.36561332583138406
+    Attrib 16    0.3753818216476012
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -7.20566681387112
+    Attrib 1    -12.849380207684849
+    Attrib 2    1.3563356887805382
+    Attrib 3    3.31606952934959
+    Attrib 4    3.421363180289513
+    Attrib 5    -6.1324714210496785
+    Attrib 6    -1.7604166623705604
+    Attrib 7    -1.8060514732865323
+    Attrib 8    -1.8066018975827562
+    Attrib 9    1.4513192661341554
+    Attrib 10    3.5863259992425607
+    Attrib 11    4.226126986921046
+    Attrib 12    -0.04831352446352288
+    Attrib 13    -0.026329766547717653
+    Attrib 14    -6.045192866833163
+    Attrib 15    -6.110586812647011
+    Attrib 16    -6.188865899475222
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -2.3211765791462957
+    Attrib 1    -6.100412213845972
+    Attrib 2    -0.34721434605831525
+    Attrib 3    0.4265642684074523
+    Attrib 4    0.47337165296660505
+    Attrib 5    -1.675671751380216
+    Attrib 6    1.573170732486667
+    Attrib 7    -0.30711715313918236
+    Attrib 8    -0.2804366370183425
+    Attrib 9    -0.13037753138213426
+    Attrib 10    0.6238224207094403
+    Attrib 11    0.9225209028838985
+    Attrib 12    1.9035568669189482
+    Attrib 13    1.9161156831360864
+    Attrib 14    -0.5292279536177197
+    Attrib 15    -0.5650957236716518
+    Attrib 16    -0.6094830245655934
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -3.0375149623245705
+    Attrib 1    -9.395882758435818
+    Attrib 2    -0.7899102284441072
+    Attrib 3    0.4833691996464641
+    Attrib 4    0.4494496625945686
+    Attrib 5    -2.2752291937951563
+    Attrib 6    -0.5715038998903331
+    Attrib 7    -0.47199467383332117
+    Attrib 8    -0.48352244351275353
+    Attrib 9    -0.11739387515149124
+    Attrib 10    0.8752613743549091
+    Attrib 11    1.2387893912588581
+    Attrib 12    2.6280028845469725
+    Attrib 13    2.6268690711404905
+    Attrib 14    -1.0811456622316256
+    Attrib 15    -1.1353018864229485
+    Attrib 16    -1.1341872661033807
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -2.8827484631870983
+    Attrib 1    -8.952217164838782
+    Attrib 2    -0.7662588704180984
+    Attrib 3    0.47192335442484873
+    Attrib 4    0.4958717132648862
+    Attrib 5    -2.1136756101687344
+    Attrib 6    -0.2918593404099134
+    Attrib 7    -0.46421550036753795
+    Attrib 8    -0.47631473380274564
+    Attrib 9    -0.19542164139121557
+    Attrib 10    0.8705552673813561
+    Attrib 11    1.2132869739496133
+    Attrib 12    2.5594184615364584
+    Attrib 13    2.477111384839995
+    Attrib 14    -1.0399406551402466
+    Attrib 15    -1.1085341342094712
+    Attrib 16    -1.1423599447775614
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -1.231812874292374
+    Attrib 1    -2.787529283360364
+    Attrib 2    -0.27023458171181597
+    Attrib 3    0.17641288723856807
+    Attrib 4    0.15963230685798827
+    Attrib 5    -0.6524378910944172
+    Attrib 6    1.005656414242703
+    Attrib 7    -5.581400683678807E-4
+    Attrib 8    0.011942549473336816
+    Attrib 9    -0.12225496435640151
+    Attrib 10    0.22081982068649336
+    Attrib 11    0.3338146451796088
+    Attrib 12    1.3736266609008225
+    Attrib 13    1.3868266496047663
+    Attrib 14    0.3608659805684135
+    Attrib 15    0.3288106946967817
+    Attrib 16    0.3471648470589716
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -4.50933707457008
+    Attrib 1    -12.671552384012662
+    Attrib 2    -0.8899167950407642
+    Attrib 3    0.7232636318887038
+    Attrib 4    0.788088967664326
+    Attrib 5    -3.1143240585367367
+    Attrib 6    -1.0038399854697264
+    Attrib 7    -0.43951566211670656
+    Attrib 8    -0.40913118232149726
+    Attrib 9    -0.19357688957972494
+    Attrib 10    1.3008603302934
+    Attrib 11    1.7849185876366673
+    Attrib 12    3.29434967128887
+    Attrib 13    3.2696715584609826
+    Attrib 14    -1.8889790937559248
+    Attrib 15    -2.0059690360497062
+    Attrib 16    -2.0010029045676907
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -1.7968772538478879
+    Attrib 1    -4.509059794988704
+    Attrib 2    -0.37094974947411014
+    Attrib 3    0.2713718205273692
+    Attrib 4    0.3099612382168706
+    Attrib 5    -1.1694245953429314
+    Attrib 6    1.3841033545551436
+    Attrib 7    -0.19408394614037172
+    Attrib 8    -0.10410022030749407
+    Attrib 9    -0.19385707015909162
+    Attrib 10    0.4232029403680436
+    Attrib 11    0.5975176905197941
+    Attrib 12    1.7097854765859253
+    Attrib 13    1.7491335931659007
+    Attrib 14    0.0702105824843197
+    Attrib 15    9.97255358609984E-4
+    Attrib 16    -0.060830738291903066
+Class 0
+    Input
+    Node 0
+Class 1
+    Input
+    Node 1
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         201               98.0488 %
+Incorrectly Classified Instances         4                1.9512 %
+Kappa statistic                          0.9197
+Mean absolute error                      0.0329
+Root mean squared error                  0.1471
+Coverage of cases (0.95 level)          98.0488 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.871    0.000    1.000      0.871    0.931      0.923    0.982     0.951     0
+                 1.000    0.129    0.978      1.000    0.989      0.923    0.982     0.996     1
+Weighted Avg.    0.980    0.110    0.981      0.980    0.980      0.923    0.982     0.990     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  27   4 |   a = 0
+   0 174 |   b = 1
+
+weka.classifiers.functions.SGD -i -o -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001
+
+Time taken to build model: 0.14 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         169               96.5714 %
+Incorrectly Classified Instances         6                3.4286 %
+Kappa statistic                          0.8603
+Mean absolute error                      0.0343
+Root mean squared error                  0.1852
+Relative absolute error                 12.6323 %
+Root relative squared error             50.5049 %
+Coverage of cases (0.95 level)          96.5714 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.000    1.000      0.786    0.880      0.869    0.893     0.820     0
+                 1.000    0.214    0.961      1.000    0.980      0.869    0.893     0.961     1
+Weighted Avg.    0.966    0.180    0.967      0.966    0.964      0.869    0.893     0.938     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   6 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         167               95.4286 %
+Incorrectly Classified Instances         8                4.5714 %
+Kappa statistic                          0.8077
+Mean absolute error                      0.0457
+Root mean squared error                  0.2138
+Relative absolute error                 16.8204 %
+Root relative squared error             58.2954 %
+Coverage of cases (0.95 level)          95.4286 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.714    0.000    1.000      0.714    0.833      0.823    0.857     0.760     0
+                 1.000    0.286    0.948      1.000    0.974      0.823    0.857     0.948     1
+Weighted Avg.    0.954    0.240    0.957      0.954    0.951      0.823    0.857     0.918     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  20   8 |   a = 0
+   0 147 |   b = 1
+
+
+Loss function: Hinge loss (SVM)
+
+17 = 
+
+        -8.7367 (normalized) 1
+ +      -2.4984 (normalized) 2
+ +      -1.507  (normalized) 3
+ +      -1.4822 (normalized) 4
+ +       0.5297 (normalized) 5
+ +       0.0129 (normalized) 6
+ +      -2.2687 (normalized) 7
+ +      -2.2687 (normalized) 8
+ +      -1.8585 (normalized) 9
+ +      -1.0959 (normalized) 10
+ +      -0.8375 (normalized) 11
+ +       1.5036 (normalized) 12
+ +       1.5036 (normalized) 13
+ +       0.0928 (normalized) 14
+ +       0.005  (normalized) 15
+ +       0.0034 (normalized) 16
+ +       0.46  
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         199               97.0732 %
+Incorrectly Classified Instances         6                2.9268 %
+Kappa statistic                          0.8761
+Mean absolute error                      0.0293
+Root mean squared error                  0.1711
+Coverage of cases (0.95 level)          97.0732 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.806    0.000    1.000      0.806    0.893      0.883    0.903     0.836     0
+                 1.000    0.194    0.967      1.000    0.983      0.883    0.903     0.967     1
+Weighted Avg.    0.971    0.164    0.972      0.971    0.969      0.883    0.903     0.947     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   6 |   a = 0
+   0 174 |   b = 1
+
+weka.classifiers.functions.SimpleLogistic -i -o -I 0 -M 500 -H 50 -W 0.0
+
+Time taken to build model: 0.33 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         171               97.7143 %
+Incorrectly Classified Instances         4                2.2857 %
+Kappa statistic                          0.9124
+Mean absolute error                      0.0382
+Root mean squared error                  0.1391
+Relative absolute error                 14.0665 %
+Root relative squared error             37.9414 %
+Coverage of cases (0.95 level)          98.8571 %
+Mean rel. region size (0.95 level)      52.2857 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.007    0.962      0.893    0.926      0.913    0.994     0.978     0
+                 0.993    0.107    0.980      0.993    0.986      0.913    0.994     0.999     1
+Weighted Avg.    0.977    0.091    0.977      0.977    0.977      0.913    0.994     0.995     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   1 146 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         171               97.7143 %
+Incorrectly Classified Instances         4                2.2857 %
+Kappa statistic                          0.9124
+Mean absolute error                      0.0417
+Root mean squared error                  0.154 
+Relative absolute error                 15.3596 %
+Root relative squared error             41.9897 %
+Coverage of cases (0.95 level)          97.7143 %
+Mean rel. region size (0.95 level)      51.7143 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.007    0.962      0.893    0.926      0.913    0.972     0.937     0
+                 0.993    0.107    0.980      0.993    0.986      0.913    0.972     0.993     1
+Weighted Avg.    0.977    0.091    0.977      0.977    0.977      0.913    0.972     0.984     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   1 146 |   b = 1
+
+
+SimpleLogistic:
+
+Class 0 :
+-2.05 + 
+[1] * 3.17 +
+[9] * 0    +
+[12] * 0   
+
+Class 1 :
+2.05 + 
+[1] * -3.17 +
+[9] * 0    +
+[12] * 0   
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         202               98.5366 %
+Incorrectly Classified Instances         3                1.4634 %
+Kappa statistic                          0.9437
+Mean absolute error                      0.0308
+Root mean squared error                  0.1101
+Coverage of cases (0.95 level)          99.5122 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.011    0.938      0.968    0.952      0.944    0.993     0.979     0
+                 0.989    0.032    0.994      0.989    0.991      0.944    0.993     0.999     1
+Weighted Avg.    0.985    0.029    0.986      0.985    0.985      0.944    0.993     0.996     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   2 172 |   b = 1
+
+weka.classifiers.functions.SMO -i -o -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+
+Time taken to build model: 0.08 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         161               92      %
+Incorrectly Classified Instances        14                8      %
+Kappa statistic                          0.6269
+Mean absolute error                      0.08  
+Root mean squared error                  0.2828
+Relative absolute error                 29.4754 %
+Root relative squared error             77.1474 %
+Coverage of cases (0.95 level)          92      %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.500    0.000    1.000      0.500    0.667      0.676    0.750     0.580     0
+                 1.000    0.500    0.913      1.000    0.955      0.676    0.750     0.913     1
+Weighted Avg.    0.920    0.420    0.927      0.920    0.908      0.676    0.750     0.860     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  14  14 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         160               91.4286 %
+Incorrectly Classified Instances        15                8.5714 %
+Kappa statistic                          0.5928
+Mean absolute error                      0.0857
+Root mean squared error                  0.2928
+Relative absolute error                 31.5382 %
+Root relative squared error             79.8243 %
+Coverage of cases (0.95 level)          91.4286 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.464    0.000    1.000      0.464    0.634      0.649    0.732     0.550     0
+                 1.000    0.536    0.907      1.000    0.951      0.649    0.732     0.907     1
+Weighted Avg.    0.914    0.450    0.922      0.914    0.901      0.649    0.732     0.850     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  13  15 |   a = 0
+   0 147 |   b = 1
+
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 1
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -3.0105 * (normalized) 1
+ +      -0.8441 * (normalized) 2
+ +      -0.4986 * (normalized) 3
+ +      -0.49   * (normalized) 4
+ +       0      * (normalized) 5
+ +      -0.0019 * (normalized) 6
+ +      -0.938  * (normalized) 7
+ +      -0.938  * (normalized) 8
+ +      -0.7275 * (normalized) 9
+ +      -0.4229 * (normalized) 10
+ +      -0.3163 * (normalized) 11
+ +       0.5384 * (normalized) 12
+ +       0.5384 * (normalized) 13
+ +       0.0971 * (normalized) 14
+ +       0.035  * (normalized) 15
+ +       0.035  * (normalized) 16
+ +       1.0011
+
+Number of kernel evaluations: 2869 (66.874% cached)
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         192               93.6585 %
+Incorrectly Classified Instances        13                6.3415 %
+Kappa statistic                          0.7015
+Mean absolute error                      0.0634
+Root mean squared error                  0.2518
+Coverage of cases (0.95 level)          93.6585 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.581    0.000    1.000      0.581    0.735      0.735    0.790     0.644     0
+                 1.000    0.419    0.930      1.000    0.964      0.735    0.790     0.930     1
+Weighted Avg.    0.937    0.356    0.941      0.937    0.929      0.735    0.790     0.887     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  18  13 |   a = 0
+   0 174 |   b = 1
+
+weka.classifiers.functions.VotedPerceptron -i -o -I 1 -E 1.0 -S 1 -M 10000
+
+Time taken to build model: 0.05 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          36               20.5714 %
+Incorrectly Classified Instances       139               79.4286 %
+Kappa statistic                          0.0181
+Mean absolute error                      0.7943
+Root mean squared error                  0.8912
+Relative absolute error                292.649  %
+Root relative squared error            243.0888 %
+Coverage of cases (0.95 level)          20.5714 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.946    0.168      1.000    0.287      0.096    0.527     0.168     0
+                 0.054    0.000    1.000      0.054    0.103      0.096    0.950     0.981     1
+Weighted Avg.    0.206    0.151    0.867      0.206    0.133      0.096    0.882     0.851     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+ 139   8 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         156               89.1429 %
+Incorrectly Classified Instances        19               10.8571 %
+Kappa statistic                          0.6332
+Mean absolute error                      0.1087
+Root mean squared error                  0.3285
+Relative absolute error                 39.9894 %
+Root relative squared error             89.5579 %
+Coverage of cases (0.95 level)          89.1429 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.088    0.629      0.786    0.698      0.639    0.933     0.870     0
+                 0.912    0.214    0.957      0.912    0.934      0.639    0.933     0.978     1
+Weighted Avg.    0.891    0.194    0.905      0.891    0.896      0.639    0.933     0.961     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   6 |   a = 0
+  13 134 |   b = 1
+
+
+VotedPerceptron: Number of perceptrons=94
+
+
+=== Error on test data ===
+
+Correctly Classified Instances          36               17.561  %
+Incorrectly Classified Instances       169               82.439  %
+Kappa statistic                          0.0089
+Mean absolute error                      0.8244
+Root mean squared error                  0.908 
+Coverage of cases (0.95 level)          17.561  %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.971    0.155      1.000    0.268      0.067    0.514     0.155     0
+                 0.029    0.000    1.000      0.029    0.056      0.067    0.984     0.994     1
+Weighted Avg.    0.176    0.147    0.872      0.176    0.088      0.067    0.913     0.868     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  31   0 |   a = 0
+ 169   5 |   b = 1
+
+weka.classifiers.rules.DecisionTable -i -o -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+
+Time taken to build model: 0.23 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0444
+Root mean squared error                  0.1306
+Relative absolute error                 16.3717 %
+Root relative squared error             35.6128 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.946     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.946     0.980     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.946     0.969     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0457
+Root mean squared error                  0.1315
+Relative absolute error                 16.8139 %
+Root relative squared error             35.8417 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.909     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.909     0.963     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.909     0.955     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+Decision Table:
+
+Number of training instances: 175
+Number of Rules : 2
+Non matches covered by Majority class.
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 90
+	Merit of best subset found:   98.286
+Evaluation (for feature selection): CV (leave one out) 
+Feature set: 1,17
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         203               99.0244 %
+Incorrectly Classified Instances         2                0.9756 %
+Kappa statistic                          0.962 
+Mean absolute error                      0.0374
+Root mean squared error                  0.0997
+Coverage of cases (0.95 level)          99.0244 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.006    0.968      0.968    0.968      0.962    0.981     0.941     0
+                 0.994    0.032    0.994      0.994    0.994      0.962    0.981     0.993     1
+Weighted Avg.    0.990    0.028    0.990      0.990    0.990      0.962    0.981     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   1 173 |   b = 1
+
+weka.classifiers.rules.JRip -i -o -F 3 -N 2.0 -O 2 -S 1
+
+Time taken to build model: 0.11 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0336
+Root mean squared error                  0.1296
+Relative absolute error                 12.3797 %
+Root relative squared error             35.3534 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.946     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.946     0.980     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.946     0.969     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0336
+Root mean squared error                  0.1303
+Relative absolute error                 12.377  %
+Root relative squared error             35.5268 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.909     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.909     0.963     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.909     0.955     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+JRIP rules:
+===========
+
+(1 >= 1) => 17=0 (25.0/0.0)
+ => 17=1 (150.0/3.0)
+
+Number of Rules : 2
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         203               99.0244 %
+Incorrectly Classified Instances         2                0.9756 %
+Kappa statistic                          0.962 
+Mean absolute error                      0.0265
+Root mean squared error                  0.0995
+Coverage of cases (0.95 level)          99.0244 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.006    0.968      0.968    0.968      0.962    0.981     0.941     0
+                 0.994    0.032    0.994      0.994    0.994      0.962    0.981     0.993     1
+Weighted Avg.    0.990    0.028    0.990      0.990    0.990      0.962    0.981     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   1 173 |   b = 1
+
+weka.classifiers.rules.OneR -i -o -B 6
+
+Time taken to build model: 0.06 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0171
+Root mean squared error                  0.1309
+Relative absolute error                  6.3162 %
+Root relative squared error             35.7123 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.946     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.946     0.980     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.946     0.969     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0171
+Root mean squared error                  0.1309
+Relative absolute error                  6.3076 %
+Root relative squared error             35.6985 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.946     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.946     0.980     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.946     0.969     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+1:
+	< 0.5	-> 1
+	>= 0.5	-> 0
+(172/175 instances correct)
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         203               99.0244 %
+Incorrectly Classified Instances         2                0.9756 %
+Kappa statistic                          0.962 
+Mean absolute error                      0.0098
+Root mean squared error                  0.0988
+Coverage of cases (0.95 level)          99.0244 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.006    0.968      0.968    0.968      0.962    0.981     0.941     0
+                 0.994    0.032    0.994      0.994    0.994      0.962    0.981     0.993     1
+Weighted Avg.    0.990    0.028    0.990      0.990    0.990      0.962    0.981     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   1 173 |   b = 1
+
+weka.classifiers.rules.ZeroR -i -o
+
+Time taken to build model: 0.03 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         147               84      %
+Incorrectly Classified Instances        28               16      %
+Kappa statistic                          0     
+Mean absolute error                      0.2714
+Root mean squared error                  0.3666
+Relative absolute error                100      %
+Root relative squared error            100      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.160     0
+                 1.000    1.000    0.840      1.000    0.913      0.000    0.500     0.840     1
+Weighted Avg.    0.840    0.840    0.706      0.840    0.767      0.000    0.500     0.731     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  28 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         147               84      %
+Incorrectly Classified Instances        28               16      %
+Kappa statistic                          0     
+Mean absolute error                      0.2718
+Root mean squared error                  0.3668
+Relative absolute error                100      %
+Root relative squared error            100      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.464     0.150     0
+                 1.000    1.000    0.840      1.000    0.913      0.000    0.464     0.830     1
+Weighted Avg.    0.840    0.840    0.706      0.840    0.767      0.000    0.464     0.721     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  28 |   a = 0
+   0 147 |   b = 1
+
+
+ZeroR predicts class value: 1
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         174               84.878  %
+Incorrectly Classified Instances        31               15.122  %
+Kappa statistic                          0     
+Mean absolute error                      0.2655
+Root mean squared error                  0.3585
+Coverage of cases (0.95 level)         100      %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.151     0
+                 1.000    1.000    0.849      1.000    0.918      0.000    0.500     0.849     1
+Weighted Avg.    0.849    0.849    0.720      0.849    0.779      0.000    0.500     0.743     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  31 |   a = 0
+   0 174 |   b = 1
+
+weka.classifiers.trees.DecisionStump -i -o
+
+Time taken to build model: 0.04 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0336
+Root mean squared error                  0.1296
+Relative absolute error                 12.3797 %
+Root relative squared error             35.3534 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.946     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.946     0.980     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.946     0.969     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0336
+Root mean squared error                  0.1303
+Relative absolute error                 12.377  %
+Root relative squared error             35.5268 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.909     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.909     0.963     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.909     0.955     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+Decision Stump
+
+Classifications
+
+1 <= 0.5 : 1
+1 > 0.5 : 0
+1 is missing : 1
+
+Class distributions
+
+1 <= 0.5
+0	1	
+0.02	0.98	
+1 > 0.5
+0	1	
+1.0	0.0	
+1 is missing
+0	1	
+0.16	0.84	
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         203               99.0244 %
+Incorrectly Classified Instances         2                0.9756 %
+Kappa statistic                          0.962 
+Mean absolute error                      0.0265
+Root mean squared error                  0.0995
+Coverage of cases (0.95 level)          99.0244 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.006    0.968      0.968    0.968      0.962    0.981     0.941     0
+                 0.994    0.032    0.994      0.994    0.994      0.962    0.981     0.993     1
+Weighted Avg.    0.990    0.028    0.990      0.990    0.990      0.962    0.981     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   1 173 |   b = 1
+
+weka.classifiers.trees.HoeffdingTree -i -o -L 2 -S 1 -E 1.0E-7 -H 0.05 -M 0.01 -G 200.0 -N 0.0
+
+Time taken to build model: 0.09 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         170               97.1429 %
+Incorrectly Classified Instances         5                2.8571 %
+Kappa statistic                          0.8921
+Mean absolute error                      0.0286
+Root mean squared error                  0.169 
+Relative absolute error                 10.5268 %
+Root relative squared error             46.1039 %
+Coverage of cases (0.95 level)          97.1429 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.014    0.926      0.893    0.909      0.892    0.991     0.942     0
+                 0.986    0.107    0.980      0.986    0.983      0.892    0.960     0.985     1
+Weighted Avg.    0.971    0.092    0.971      0.971    0.971      0.892    0.965     0.978     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   2 145 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         170               97.1429 %
+Incorrectly Classified Instances         5                2.8571 %
+Kappa statistic                          0.8921
+Mean absolute error                      0.0286
+Root mean squared error                  0.169 
+Relative absolute error                 10.5127 %
+Root relative squared error             46.0866 %
+Coverage of cases (0.95 level)          97.1429 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.014    0.926      0.893    0.909      0.892    0.988     0.938     0
+                 0.986    0.107    0.980      0.986    0.983      0.892    0.960     0.985     1
+Weighted Avg.    0.971    0.092    0.971      0.971    0.971      0.892    0.964     0.978     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   2 145 |   b = 1
+
+
+1 (148.000) NB1 NB adaptive1
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         201               98.0488 %
+Incorrectly Classified Instances         4                1.9512 %
+Kappa statistic                          0.926 
+Mean absolute error                      0.0195
+Root mean squared error                  0.1397
+Coverage of cases (0.95 level)          98.0488 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.017    0.909      0.968    0.937      0.927    0.985     0.919     0
+                 0.983    0.032    0.994      0.983    0.988      0.927    0.978     0.992     1
+Weighted Avg.    0.980    0.030    0.981      0.980    0.981      0.927    0.979     0.981     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   3 171 |   b = 1
+
+weka.classifiers.trees.J48 -i -o -C 0.25 -M 2
+
+Time taken to build model: 0.06 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0336
+Root mean squared error                  0.1296
+Relative absolute error                 12.3797 %
+Root relative squared error             35.3534 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.946     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.946     0.980     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.946     0.969     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0336
+Root mean squared error                  0.1303
+Relative absolute error                 12.377  %
+Root relative squared error             35.5268 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.909     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.909     0.963     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.909     0.955     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+J48 pruned tree
+------------------
+
+1 <= 0: 1 (150.0/3.0)
+1 > 0: 0 (25.0)
+
+Number of Leaves  : 	2
+
+Size of the tree : 	3
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         203               99.0244 %
+Incorrectly Classified Instances         2                0.9756 %
+Kappa statistic                          0.962 
+Mean absolute error                      0.0265
+Root mean squared error                  0.0995
+Coverage of cases (0.95 level)          99.0244 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.006    0.968      0.968    0.968      0.962    0.981     0.941     0
+                 0.994    0.032    0.994      0.994    0.994      0.962    0.981     0.993     1
+Weighted Avg.    0.990    0.028    0.990      0.990    0.990      0.962    0.981     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   1 173 |   b = 1
+
+weka.classifiers.trees.RandomForest -i -o -I 10 -K 0 -S 1 -num-slots 1
+
+Time taken to build model: 0.09 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         175              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0189
+Root mean squared error                  0.0782
+Relative absolute error                  6.9478 %
+Root relative squared error             21.328  %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      53.4286 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         169               96.5714 %
+Incorrectly Classified Instances         6                3.4286 %
+Kappa statistic                          0.8724
+Mean absolute error                      0.0423
+Root mean squared error                  0.1684
+Relative absolute error                 15.5589 %
+Root relative squared error             45.9018 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      54.2857 %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.020    0.893      0.893    0.893      0.872    0.942     0.906     0
+                 0.980    0.107    0.980      0.980    0.980      0.872    0.942     0.978     1
+Weighted Avg.    0.966    0.093    0.966      0.966    0.966      0.872    0.942     0.967     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   3 144 |   b = 1
+
+
+Random forest of 10 trees, each constructed while considering 5 random features.
+Out of bag error: 0.0514
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         199               97.0732 %
+Incorrectly Classified Instances         6                2.9268 %
+Kappa statistic                          0.8917
+Mean absolute error                      0.0293
+Root mean squared error                  0.1343
+Coverage of cases (0.95 level)          99.0244 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.029    0.857      0.968    0.909      0.894    0.980     0.941     0
+                 0.971    0.032    0.994      0.971    0.983      0.894    0.980     0.993     1
+Weighted Avg.    0.971    0.032    0.973      0.971    0.971      0.894    0.980     0.985     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   5 169 |   b = 1
+
+weka.classifiers.trees.RandomTree -i -o -K 0 -M 1.0 -S 1
+
+Time taken to build model: 0.04 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         175              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         167               95.4286 %
+Incorrectly Classified Instances         8                4.5714 %
+Kappa statistic                          0.8347
+Mean absolute error                      0.0457
+Root mean squared error                  0.2138
+Relative absolute error                 16.8204 %
+Root relative squared error             58.2954 %
+Coverage of cases (0.95 level)          95.4286 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.034    0.833      0.893    0.862      0.835    0.929     0.761     0
+                 0.966    0.107    0.979      0.966    0.973      0.835    0.929     0.975     1
+Weighted Avg.    0.954    0.095    0.956      0.954    0.955      0.835    0.929     0.940     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   5 142 |   b = 1
+
+
+
+RandomTree
+==========
+
+3 < 0.5
+|   7 < 10682.5 : 1 (131/0)
+|   7 >= 10682.5
+|   |   8 < 11627 : 0 (1/0)
+|   |   8 >= 11627
+|   |   |   10 < 27999.5 : 1 (11/0)
+|   |   |   10 >= 27999.5
+|   |   |   |   7 < 34375 : 0 (1/0)
+|   |   |   |   7 >= 34375
+|   |   |   |   |   10 < 56433.5
+|   |   |   |   |   |   7 < 47145.5 : 1 (2/0)
+|   |   |   |   |   |   7 >= 47145.5 : 0 (1/0)
+|   |   |   |   |   10 >= 56433.5 : 1 (3/0)
+3 >= 0.5 : 0 (25/0)
+
+Size of the tree : 15
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         199               97.0732 %
+Incorrectly Classified Instances         6                2.9268 %
+Kappa statistic                          0.8917
+Mean absolute error                      0.0293
+Root mean squared error                  0.1711
+Coverage of cases (0.95 level)          97.0732 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.029    0.857      0.968    0.909      0.894    0.970     0.834     0
+                 0.971    0.032    0.994      0.971    0.983      0.894    0.970     0.990     1
+Weighted Avg.    0.971    0.032    0.973      0.971    0.971      0.894    0.970     0.966     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   5 169 |   b = 1
+
+weka.classifiers.trees.REPTree -i -o -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+
+Time taken to build model: 0.04 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0336
+Root mean squared error                  0.1296
+Relative absolute error                 12.3797 %
+Root relative squared error             35.3534 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.946     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.946     0.980     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.946     0.969     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         172               98.2857 %
+Incorrectly Classified Instances         3                1.7143 %
+Kappa statistic                          0.9333
+Mean absolute error                      0.0336
+Root mean squared error                  0.1303
+Relative absolute error                 12.377  %
+Root relative squared error             35.5268 %
+Coverage of cases (0.95 level)          98.2857 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              175     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.935    0.909     0.910     0
+                 1.000    0.107    0.980      1.000    0.990      0.935    0.909     0.963     1
+Weighted Avg.    0.983    0.090    0.983      0.983    0.982      0.935    0.909     0.955     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 147 |   b = 1
+
+
+
+REPTree
+============
+
+1 < 0.5 : 1 (100/2) [50/1]
+1 >= 0.5 : 0 (16/0) [9/0]
+
+Size of the tree : 3
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         203               99.0244 %
+Incorrectly Classified Instances         2                0.9756 %
+Kappa statistic                          0.962 
+Mean absolute error                      0.0265
+Root mean squared error                  0.0995
+Coverage of cases (0.95 level)          99.0244 %
+Total Number of Instances              205     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.006    0.968      0.968    0.968      0.962    0.981     0.941     0
+                 0.994    0.032    0.994      0.994    0.994      0.962    0.981     0.993     1
+Weighted Avg.    0.990    0.028    0.990      0.990    0.990      0.962    0.981     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30   1 |   a = 0
+   1 173 |   b = 1
+
