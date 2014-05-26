@@ -1,13 +1,12 @@
 Concept Drift on the Web
 ========================
 
-Concept drift referes to the change of meaning of concepts over
+Concept drift refers to the change of meaning of concepts over
 time. This repo contains several experiments to detect, model and
-predict change (or stability) of meaning of concepts over time in the
-Semantic Web, i.e. on RDF/RDFS/SKOS/OWL datasets.
+predict change of meaning of concepts over time in the Semantic Web,
+i.e. on RDF/RDFS/SKOS/OWL datasets. Most of these have been developed
+in the context of the [http://www.albertmeronyo.org/](autor's PhD).
 
-For extended demos and results, see
-http://albertmeronyo.github.io/ConceptDrift
 
 Directories on this repo:
 
