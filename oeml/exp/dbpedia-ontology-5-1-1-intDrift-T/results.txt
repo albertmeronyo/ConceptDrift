@@ -1,0 +1,4736 @@
+weka.classifiers.bayes.BayesNet -i -o -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+
+Time taken to build model: 0.13 seconds
+Time taken to test model on training data: 0.03 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         257               97.3485 %
+Incorrectly Classified Instances         7                2.6515 %
+Kappa statistic                          0.874 
+Mean absolute error                      0.028 
+Root mean squared error                  0.1639
+Relative absolute error                 14.5708 %
+Root relative squared error             53.2249 %
+Coverage of cases (0.95 level)          97.3485 %
+Mean rel. region size (0.95 level)      50.1894 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.030    0.800      1.000    0.889      0.881    0.999     0.993     0
+                 0.970    0.000    1.000      0.970    0.985      0.881    0.999     1.000     1
+Weighted Avg.    0.973    0.003    0.979      0.973    0.975      0.881    0.999     0.999     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   7 229 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         254               96.2121 %
+Incorrectly Classified Instances        10                3.7879 %
+Kappa statistic                          0.8175
+Mean absolute error                      0.0401
+Root mean squared error                  0.1961
+Relative absolute error                 20.8641 %
+Root relative squared error             63.6522 %
+Coverage of cases (0.95 level)          96.2121 %
+Mean rel. region size (0.95 level)      50.5682 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.929    0.034    0.765      0.929    0.839      0.822    0.992     0.965     0
+                 0.966    0.071    0.991      0.966    0.979      0.822    0.992     0.999     1
+Weighted Avg.    0.962    0.067    0.967      0.962    0.964      0.822    0.992     0.995     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  26   2 |   a = 0
+   8 228 |   b = 1
+
+
+Bayes Network Classifier
+not using ADTree
+#attributes=49 #classindex=48
+Network structure (nodes followed by parents)
+1(2): 49 
+2(2): 49 
+3(2): 49 
+4(2): 49 
+5(1): 49 
+6(1): 49 
+7(3): 49 
+8(3): 49 
+9(3): 49 
+10(3): 49 
+11(3): 49 
+12(2): 49 
+13(2): 49 
+14(2): 49 
+15(2): 49 
+16(2): 49 
+17(2): 49 
+18(2): 49 
+19(2): 49 
+20(2): 49 
+21(1): 49 
+22(1): 49 
+23(3): 49 
+24(3): 49 
+25(3): 49 
+26(3): 49 
+27(3): 49 
+28(2): 49 
+29(2): 49 
+30(2): 49 
+31(2): 49 
+32(2): 49 
+33(2): 49 
+34(2): 49 
+35(2): 49 
+36(2): 49 
+37(1): 49 
+38(1): 49 
+39(4): 49 
+40(4): 49 
+41(4): 49 
+42(4): 49 
+43(4): 49 
+44(2): 49 
+45(2): 49 
+46(2): 49 
+47(2): 49 
+48(2): 49 
+49(2): 
+LogScore Bayes: -5050.814617157335
+LogScore BDeu: -5204.155582144856
+LogScore MDL: -5295.779748920269
+LogScore ENTROPY: -4947.282929973622
+LogScore AIC: -5072.282929973623
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         222               86.0465 %
+Incorrectly Classified Instances        36               13.9535 %
+Kappa statistic                          0     
+Mean absolute error                      0.1395
+Root mean squared error                  0.3735
+Coverage of cases (0.95 level)          86.0465 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.992     0.975     0
+                 1.000    1.000    0.860      1.000    0.925      0.000    0.736     0.921     1
+Weighted Avg.    0.860    0.860    0.740      0.860    0.796      0.000    0.772     0.929     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  36 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.bayes.NaiveBayes -i -o
+
+Time taken to build model: 0.06 seconds
+Time taken to test model on training data: 0.05 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         250               94.697  %
+Incorrectly Classified Instances        14                5.303  %
+Kappa statistic                          0.7289
+Mean absolute error                      0.0523
+Root mean squared error                  0.227 
+Relative absolute error                 27.2203 %
+Root relative squared error             73.7142 %
+Coverage of cases (0.95 level)          95.0758 %
+Mean rel. region size (0.95 level)      50.1894 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.034    0.733      0.786    0.759      0.729    0.923     0.702     0
+                 0.966    0.214    0.974      0.966    0.970      0.729    0.879     0.972     1
+Weighted Avg.    0.947    0.195    0.949      0.947    0.948      0.729    0.883     0.943     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   6 |   a = 0
+   8 228 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         249               94.3182 %
+Incorrectly Classified Instances        15                5.6818 %
+Kappa statistic                          0.7139
+Mean absolute error                      0.0562
+Root mean squared error                  0.2343
+Relative absolute error                 29.241  %
+Root relative squared error             76.0813 %
+Coverage of cases (0.95 level)          94.697  %
+Mean rel. region size (0.95 level)      50.3788 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.038    0.710      0.786    0.746      0.715    0.925     0.706     0
+                 0.962    0.214    0.974      0.962    0.968      0.715    0.877     0.971     1
+Weighted Avg.    0.943    0.196    0.946      0.943    0.944      0.715    0.882     0.943     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   6 |   a = 0
+   9 227 |   b = 1
+
+
+Naive Bayes Classifier
+
+                     Class
+Attribute                0           1
+                    (0.11)      (0.89)
+=======================================
+1
+  mean               6.2637           0
+  std. dev.          6.0699      0.3077
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+2
+  mean              11.3367           0
+  std. dev.         20.8046      1.2024
+  weight sum             28         147
+  precision          7.2143      7.2143
+
+3
+  mean              13.0867           0
+  std. dev.         32.7953      2.0357
+  weight sum             28         147
+  precision         12.2143     12.2143
+
+4
+  mean              13.3163           0
+  std. dev.         33.3706      2.0714
+  weight sum             28         147
+  precision         12.4286     12.4286
+
+5
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         147
+  precision               1           1
+
+6
+  mean               14.967     11.7551
+  std. dev.          8.3492      7.1876
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+7
+  mean           66323.6512   5728.9533
+  std. dev.      86131.4232  17822.7442
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+8
+  mean           66323.6512   5728.9533
+  std. dev.      86131.4232  17822.7442
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+9
+  mean          162528.3029   5361.4019
+  std. dev.     242228.9118  17849.7544
+  weight sum             28         147
+  precision       6355.8554   6355.8554
+
+10
+  mean          222572.3825   4977.8559
+  std. dev.      412531.395  18092.2979
+  weight sum             28         147
+  precision       12195.747   12195.747
+
+11
+  mean          246337.7085   4880.7201
+  std. dev.     523688.7471  18185.0099
+  weight sum             28         147
+  precision      16306.0422  16306.0422
+
+12
+  mean           13755.5769   5755.2841
+  std. dev.      15248.5117  17743.8082
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+13
+  mean           13755.5769   5755.2841
+  std. dev.      15248.5117  17743.8082
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+14
+  mean           19631.8909   5735.2425
+  std. dev.      24445.3308  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+15
+  mean           20800.4558   5735.2425
+  std. dev.      24738.8874  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+16
+  mean           20917.3123   5735.2425
+  std. dev.      24704.7328  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+17
+  mean               7.2245      0.0387
+  std. dev.          5.7837      0.2857
+  weight sum             28         177
+  precision          1.7143      1.7143
+
+18
+  mean              13.0179           0
+  std. dev.         21.6428       1.125
+  weight sum             28         177
+  precision            6.75        6.75
+
+19
+  mean              16.1607           0
+  std. dev.          34.136      1.6759
+  weight sum             28         177
+  precision         10.0556     10.0556
+
+20
+  mean              17.7222           0
+  std. dev.         37.8182      1.8796
+  weight sum             28         177
+  precision         11.2778     11.2778
+
+21
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         177
+  precision               1           1
+
+22
+  mean              15.1224     11.1961
+  std. dev.          8.2857      6.5171
+  weight sum             28         177
+  precision          1.7143      1.7143
+
+23
+  mean          116593.7804   5516.3429
+  std. dev.     220797.9679  16707.0711
+  weight sum             28         177
+  precision       5990.1392   5990.1392
+
+24
+  mean          116593.7804   5516.3429
+  std. dev.     220797.9679  16707.0711
+  weight sum             28         177
+  precision       5990.1392   5990.1392
+
+25
+  mean          227373.5813   5657.9981
+  std. dev.     442946.9417  17006.0388
+  weight sum             28         177
+  precision      11922.2103  11922.2103
+
+26
+  mean          297615.5998   5054.9518
+  std. dev.      648733.857  17107.3247
+  weight sum             28         177
+  precision      17543.6564  17543.6564
+
+27
+  mean          329415.7192   4759.5492
+  std. dev.     787382.7575  16905.0346
+  weight sum             28         177
+  precision      21601.0308  21601.0308
+
+28
+  mean            14522.349   5858.1679
+  std. dev.       15295.117  16404.1826
+  weight sum             28         177
+  precision        924.1495    924.1495
+
+29
+  mean            14522.349   5858.1679
+  std. dev.       15295.117  16404.1826
+  weight sum             28         177
+  precision        924.1495    924.1495
+
+30
+  mean           17304.6145   5911.2366
+  std. dev.      20180.7837  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+31
+  mean           17173.2701   5911.2366
+  std. dev.      19936.9638  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+32
+  mean           17370.2866   5911.2366
+  std. dev.      19947.9933  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+33
+  mean               7.9405       0.195
+  std. dev.          6.3984      1.9531
+  weight sum             28         228
+  precision          1.9333      1.9333
+
+34
+  mean              15.5833       0.145
+  std. dev.         24.5601      1.7994
+  weight sum             28         228
+  precision          6.6111      6.6111
+
+35
+  mean              20.1786      0.1487
+  std. dev.         42.4269      2.2402
+  weight sum             28         228
+  precision            11.3        11.3
+
+36
+  mean              21.3179      0.1114
+  std. dev.         47.4042      2.1167
+  weight sum             28         228
+  precision            12.7        12.7
+
+37
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         228
+  precision               1           1
+
+38
+  mean              17.0548     14.3474
+  std. dev.          9.4297        9.12
+  weight sum             28         228
+  precision          1.9333      1.9333
+
+39
+  mean          142319.0408    4803.495
+  std. dev.      280324.306  11862.9246
+  weight sum             28         228
+  precision       6597.5714   6597.5714
+
+40
+  mean          142319.0408    4803.495
+  std. dev.      280324.306  11862.9246
+  weight sum             28         228
+  precision       6597.5714   6597.5714
+
+41
+  mean           271174.847   5243.0759
+  std. dev.     558948.9311  13270.6299
+  weight sum             28         228
+  precision      13136.4978  13136.4978
+
+42
+  mean          350735.3381   4729.5581
+  std. dev.     810984.0921  13867.3181
+  weight sum             28         228
+  precision      19256.0578  19256.0578
+
+43
+  mean          381254.9802   4632.7937
+  std. dev.     940700.2651  13585.1597
+  weight sum             28         228
+  precision      22473.9778  22473.9778
+
+44
+  mean           17227.3058   4986.1941
+  std. dev.      17866.7027  11344.9088
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+45
+  mean           17227.3058   4986.1941
+  std. dev.      17866.7027  11344.9088
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+46
+  mean           18456.7567   5102.1949
+  std. dev.      17236.6072  11428.3092
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+47
+  mean           17807.5133   5130.8453
+  std. dev.      16706.7946   11462.181
+  weight sum             28         228
+  precision        417.9467    417.9467
+
+48
+  mean           17986.6333   5130.8453
+  std. dev.      16763.8828   11462.181
+  weight sum             28         228
+  precision        417.9467    417.9467
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         242               93.7984 %
+Incorrectly Classified Instances        16                6.2016 %
+Kappa statistic                          0.7224
+Mean absolute error                      0.0624
+Root mean squared error                  0.2491
+Coverage of cases (0.95 level)          93.7984 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.694    0.023    0.833      0.694    0.758      0.726    0.987     0.908     0
+                 0.977    0.306    0.952      0.977    0.964      0.726    0.989     0.998     1
+Weighted Avg.    0.938    0.266    0.935      0.938    0.936      0.726    0.988     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25  11 |   a = 0
+   5 217 |   b = 1
+
+weka.classifiers.bayes.NaiveBayesMultinomial -i -o
+
+Naive Bayes Classifier
+
+                     Class
+Attribute                0           1
+                    (0.11)      (0.89)
+=======================================
+1
+  mean               6.2637           0
+  std. dev.          6.0699      0.3077
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+2
+  mean              11.3367           0
+  std. dev.         20.8046      1.2024
+  weight sum             28         147
+  precision          7.2143      7.2143
+
+3
+  mean              13.0867           0
+  std. dev.         32.7953      2.0357
+  weight sum             28         147
+  precision         12.2143     12.2143
+
+4
+  mean              13.3163           0
+  std. dev.         33.3706      2.0714
+  weight sum             28         147
+  precision         12.4286     12.4286
+
+5
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         147
+  precision               1           1
+
+6
+  mean               14.967     11.7551
+  std. dev.          8.3492      7.1876
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+7
+  mean           66323.6512   5728.9533
+  std. dev.      86131.4232  17822.7442
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+8
+  mean           66323.6512   5728.9533
+  std. dev.      86131.4232  17822.7442
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+9
+  mean          162528.3029   5361.4019
+  std. dev.     242228.9118  17849.7544
+  weight sum             28         147
+  precision       6355.8554   6355.8554
+
+10
+  mean          222572.3825   4977.8559
+  std. dev.      412531.395  18092.2979
+  weight sum             28         147
+  precision       12195.747   12195.747
+
+11
+  mean          246337.7085   4880.7201
+  std. dev.     523688.7471  18185.0099
+  weight sum             28         147
+  precision      16306.0422  16306.0422
+
+12
+  mean           13755.5769   5755.2841
+  std. dev.      15248.5117  17743.8082
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+13
+  mean           13755.5769   5755.2841
+  std. dev.      15248.5117  17743.8082
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+14
+  mean           19631.8909   5735.2425
+  std. dev.      24445.3308  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+15
+  mean           20800.4558   5735.2425
+  std. dev.      24738.8874  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+16
+  mean           20917.3123   5735.2425
+  std. dev.      24704.7328  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+17
+  mean               7.2245      0.0387
+  std. dev.          5.7837      0.2857
+  weight sum             28         177
+  precision          1.7143      1.7143
+
+18
+  mean              13.0179           0
+  std. dev.         21.6428       1.125
+  weight sum             28         177
+  precision            6.75        6.75
+
+19
+  mean              16.1607           0
+  std. dev.          34.136      1.6759
+  weight sum             28         177
+  precision         10.0556     10.0556
+
+20
+  mean              17.7222           0
+  std. dev.         37.8182      1.8796
+  weight sum             28         177
+  precision         11.2778     11.2778
+
+21
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         177
+  precision               1           1
+
+22
+  mean              15.1224     11.1961
+  std. dev.          8.2857      6.5171
+  weight sum             28         177
+  precision          1.7143      1.7143
+
+23
+  mean          116593.7804   5516.3429
+  std. dev.     220797.9679  16707.0711
+  weight sum             28         177
+  precision       5990.1392   5990.1392
+
+24
+  mean          116593.7804   5516.3429
+  std. dev.     220797.9679  16707.0711
+  weight sum             28         177
+  precision       5990.1392   5990.1392
+
+25
+  mean          227373.5813   5657.9981
+  std. dev.     442946.9417  17006.0388
+  weight sum             28         177
+  precision      11922.2103  11922.2103
+
+26
+  mean          297615.5998   5054.9518
+  std. dev.      648733.857  17107.3247
+  weight sum             28         177
+  precision      17543.6564  17543.6564
+
+27
+  mean          329415.7192   4759.5492
+  std. dev.     787382.7575  16905.0346
+  weight sum             28         177
+  precision      21601.0308  21601.0308
+
+28
+  mean            14522.349   5858.1679
+  std. dev.       15295.117  16404.1826
+  weight sum             28         177
+  precision        924.1495    924.1495
+
+29
+  mean            14522.349   5858.1679
+  std. dev.       15295.117  16404.1826
+  weight sum             28         177
+  precision        924.1495    924.1495
+
+30
+  mean           17304.6145   5911.2366
+  std. dev.      20180.7837  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+31
+  mean           17173.2701   5911.2366
+  std. dev.      19936.9638  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+32
+  mean           17370.2866   5911.2366
+  std. dev.      19947.9933  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+33
+  mean               7.9405       0.195
+  std. dev.          6.3984      1.9531
+  weight sum             28         228
+  precision          1.9333      1.9333
+
+34
+  mean              15.5833       0.145
+  std. dev.         24.5601      1.7994
+  weight sum             28         228
+  precision          6.6111      6.6111
+
+35
+  mean              20.1786      0.1487
+  std. dev.         42.4269      2.2402
+  weight sum             28         228
+  precision            11.3        11.3
+
+36
+  mean              21.3179      0.1114
+  std. dev.         47.4042      2.1167
+  weight sum             28         228
+  precision            12.7        12.7
+
+37
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         228
+  precision               1           1
+
+38
+  mean              17.0548     14.3474
+  std. dev.          9.4297        9.12
+  weight sum             28         228
+  precision          1.9333      1.9333
+
+39
+  mean          142319.0408    4803.495
+  std. dev.      280324.306  11862.9246
+  weight sum             28         228
+  precision       6597.5714   6597.5714
+
+40
+  mean          142319.0408    4803.495
+  std. dev.      280324.306  11862.9246
+  weight sum             28         228
+  precision       6597.5714   6597.5714
+
+41
+  mean           271174.847   5243.0759
+  std. dev.     558948.9311  13270.6299
+  weight sum             28         228
+  precision      13136.4978  13136.4978
+
+42
+  mean          350735.3381   4729.5581
+  std. dev.     810984.0921  13867.3181
+  weight sum             28         228
+  precision      19256.0578  19256.0578
+
+43
+  mean          381254.9802   4632.7937
+  std. dev.     940700.2651  13585.1597
+  weight sum             28         228
+  precision      22473.9778  22473.9778
+
+44
+  mean           17227.3058   4986.1941
+  std. dev.      17866.7027  11344.9088
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+45
+  mean           17227.3058   4986.1941
+  std. dev.      17866.7027  11344.9088
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+46
+  mean           18456.7567   5102.1949
+  std. dev.      17236.6072  11428.3092
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+47
+  mean           17807.5133   5130.8453
+  std. dev.      16706.7946   11462.181
+  weight sum             28         228
+  precision        417.9467    417.9467
+
+48
+  mean           17986.6333   5130.8453
+  std. dev.      16763.8828   11462.181
+  weight sum             28         228
+  precision        417.9467    417.9467
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         242               93.7984 %
+Incorrectly Classified Instances        16                6.2016 %
+Kappa statistic                          0.7224
+Mean absolute error                      0.0624
+Root mean squared error                  0.2491
+Coverage of cases (0.95 level)          93.7984 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.694    0.023    0.833      0.694    0.758      0.726    0.987     0.908     0
+                 0.977    0.306    0.952      0.977    0.964      0.726    0.989     0.998     1
+Weighted Avg.    0.938    0.266    0.935      0.938    0.936      0.726    0.988     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25  11 |   a = 0
+   5 217 |   b = 1
+
+weka.classifiers.bayes.NaiveBayesMultinomialUpdateable -i -o
+
+Naive Bayes Classifier
+
+                     Class
+Attribute                0           1
+                    (0.11)      (0.89)
+=======================================
+1
+  mean               6.2637           0
+  std. dev.          6.0699      0.3077
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+2
+  mean              11.3367           0
+  std. dev.         20.8046      1.2024
+  weight sum             28         147
+  precision          7.2143      7.2143
+
+3
+  mean              13.0867           0
+  std. dev.         32.7953      2.0357
+  weight sum             28         147
+  precision         12.2143     12.2143
+
+4
+  mean              13.3163           0
+  std. dev.         33.3706      2.0714
+  weight sum             28         147
+  precision         12.4286     12.4286
+
+5
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         147
+  precision               1           1
+
+6
+  mean               14.967     11.7551
+  std. dev.          8.3492      7.1876
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+7
+  mean           66323.6512   5728.9533
+  std. dev.      86131.4232  17822.7442
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+8
+  mean           66323.6512   5728.9533
+  std. dev.      86131.4232  17822.7442
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+9
+  mean          162528.3029   5361.4019
+  std. dev.     242228.9118  17849.7544
+  weight sum             28         147
+  precision       6355.8554   6355.8554
+
+10
+  mean          222572.3825   4977.8559
+  std. dev.      412531.395  18092.2979
+  weight sum             28         147
+  precision       12195.747   12195.747
+
+11
+  mean          246337.7085   4880.7201
+  std. dev.     523688.7471  18185.0099
+  weight sum             28         147
+  precision      16306.0422  16306.0422
+
+12
+  mean           13755.5769   5755.2841
+  std. dev.      15248.5117  17743.8082
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+13
+  mean           13755.5769   5755.2841
+  std. dev.      15248.5117  17743.8082
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+14
+  mean           19631.8909   5735.2425
+  std. dev.      24445.3308  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+15
+  mean           20800.4558   5735.2425
+  std. dev.      24738.8874  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+16
+  mean           20917.3123   5735.2425
+  std. dev.      24704.7328  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+17
+  mean               7.2245      0.0387
+  std. dev.          5.7837      0.2857
+  weight sum             28         177
+  precision          1.7143      1.7143
+
+18
+  mean              13.0179           0
+  std. dev.         21.6428       1.125
+  weight sum             28         177
+  precision            6.75        6.75
+
+19
+  mean              16.1607           0
+  std. dev.          34.136      1.6759
+  weight sum             28         177
+  precision         10.0556     10.0556
+
+20
+  mean              17.7222           0
+  std. dev.         37.8182      1.8796
+  weight sum             28         177
+  precision         11.2778     11.2778
+
+21
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         177
+  precision               1           1
+
+22
+  mean              15.1224     11.1961
+  std. dev.          8.2857      6.5171
+  weight sum             28         177
+  precision          1.7143      1.7143
+
+23
+  mean          116593.7804   5516.3429
+  std. dev.     220797.9679  16707.0711
+  weight sum             28         177
+  precision       5990.1392   5990.1392
+
+24
+  mean          116593.7804   5516.3429
+  std. dev.     220797.9679  16707.0711
+  weight sum             28         177
+  precision       5990.1392   5990.1392
+
+25
+  mean          227373.5813   5657.9981
+  std. dev.     442946.9417  17006.0388
+  weight sum             28         177
+  precision      11922.2103  11922.2103
+
+26
+  mean          297615.5998   5054.9518
+  std. dev.      648733.857  17107.3247
+  weight sum             28         177
+  precision      17543.6564  17543.6564
+
+27
+  mean          329415.7192   4759.5492
+  std. dev.     787382.7575  16905.0346
+  weight sum             28         177
+  precision      21601.0308  21601.0308
+
+28
+  mean            14522.349   5858.1679
+  std. dev.       15295.117  16404.1826
+  weight sum             28         177
+  precision        924.1495    924.1495
+
+29
+  mean            14522.349   5858.1679
+  std. dev.       15295.117  16404.1826
+  weight sum             28         177
+  precision        924.1495    924.1495
+
+30
+  mean           17304.6145   5911.2366
+  std. dev.      20180.7837  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+31
+  mean           17173.2701   5911.2366
+  std. dev.      19936.9638  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+32
+  mean           17370.2866   5911.2366
+  std. dev.      19947.9933  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+33
+  mean               7.9405       0.195
+  std. dev.          6.3984      1.9531
+  weight sum             28         228
+  precision          1.9333      1.9333
+
+34
+  mean              15.5833       0.145
+  std. dev.         24.5601      1.7994
+  weight sum             28         228
+  precision          6.6111      6.6111
+
+35
+  mean              20.1786      0.1487
+  std. dev.         42.4269      2.2402
+  weight sum             28         228
+  precision            11.3        11.3
+
+36
+  mean              21.3179      0.1114
+  std. dev.         47.4042      2.1167
+  weight sum             28         228
+  precision            12.7        12.7
+
+37
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         228
+  precision               1           1
+
+38
+  mean              17.0548     14.3474
+  std. dev.          9.4297        9.12
+  weight sum             28         228
+  precision          1.9333      1.9333
+
+39
+  mean          142319.0408    4803.495
+  std. dev.      280324.306  11862.9246
+  weight sum             28         228
+  precision       6597.5714   6597.5714
+
+40
+  mean          142319.0408    4803.495
+  std. dev.      280324.306  11862.9246
+  weight sum             28         228
+  precision       6597.5714   6597.5714
+
+41
+  mean           271174.847   5243.0759
+  std. dev.     558948.9311  13270.6299
+  weight sum             28         228
+  precision      13136.4978  13136.4978
+
+42
+  mean          350735.3381   4729.5581
+  std. dev.     810984.0921  13867.3181
+  weight sum             28         228
+  precision      19256.0578  19256.0578
+
+43
+  mean          381254.9802   4632.7937
+  std. dev.     940700.2651  13585.1597
+  weight sum             28         228
+  precision      22473.9778  22473.9778
+
+44
+  mean           17227.3058   4986.1941
+  std. dev.      17866.7027  11344.9088
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+45
+  mean           17227.3058   4986.1941
+  std. dev.      17866.7027  11344.9088
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+46
+  mean           18456.7567   5102.1949
+  std. dev.      17236.6072  11428.3092
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+47
+  mean           17807.5133   5130.8453
+  std. dev.      16706.7946   11462.181
+  weight sum             28         228
+  precision        417.9467    417.9467
+
+48
+  mean           17986.6333   5130.8453
+  std. dev.      16763.8828   11462.181
+  weight sum             28         228
+  precision        417.9467    417.9467
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         242               93.7984 %
+Incorrectly Classified Instances        16                6.2016 %
+Kappa statistic                          0.7224
+Mean absolute error                      0.0624
+Root mean squared error                  0.2491
+Coverage of cases (0.95 level)          93.7984 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.694    0.023    0.833      0.694    0.758      0.726    0.987     0.908     0
+                 0.977    0.306    0.952      0.977    0.964      0.726    0.989     0.998     1
+Weighted Avg.    0.938    0.266    0.935      0.938    0.936      0.726    0.988     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25  11 |   a = 0
+   5 217 |   b = 1
+
+weka.classifiers.bayes.NaiveBayesUpdateable -i -o
+
+Time taken to build model: 0.06 seconds
+Time taken to test model on training data: 0.06 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         250               94.697  %
+Incorrectly Classified Instances        14                5.303  %
+Kappa statistic                          0.7289
+Mean absolute error                      0.0523
+Root mean squared error                  0.227 
+Relative absolute error                 27.2203 %
+Root relative squared error             73.7142 %
+Coverage of cases (0.95 level)          95.0758 %
+Mean rel. region size (0.95 level)      50.1894 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.034    0.733      0.786    0.759      0.729    0.923     0.702     0
+                 0.966    0.214    0.974      0.966    0.970      0.729    0.879     0.972     1
+Weighted Avg.    0.947    0.195    0.949      0.947    0.948      0.729    0.883     0.943     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   6 |   a = 0
+   8 228 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         249               94.3182 %
+Incorrectly Classified Instances        15                5.6818 %
+Kappa statistic                          0.7139
+Mean absolute error                      0.0562
+Root mean squared error                  0.2343
+Relative absolute error                 29.241  %
+Root relative squared error             76.0813 %
+Coverage of cases (0.95 level)          94.697  %
+Mean rel. region size (0.95 level)      50.3788 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.038    0.710      0.786    0.746      0.715    0.925     0.706     0
+                 0.962    0.214    0.974      0.962    0.968      0.715    0.877     0.971     1
+Weighted Avg.    0.943    0.196    0.946      0.943    0.944      0.715    0.882     0.943     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   6 |   a = 0
+   9 227 |   b = 1
+
+
+Naive Bayes Classifier
+
+                     Class
+Attribute                0           1
+                    (0.11)      (0.89)
+=======================================
+1
+  mean               6.2637           0
+  std. dev.          6.0699      0.3077
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+2
+  mean              11.3367           0
+  std. dev.         20.8046      1.2024
+  weight sum             28         147
+  precision          7.2143      7.2143
+
+3
+  mean              13.0867           0
+  std. dev.         32.7953      2.0357
+  weight sum             28         147
+  precision         12.2143     12.2143
+
+4
+  mean              13.3163           0
+  std. dev.         33.3706      2.0714
+  weight sum             28         147
+  precision         12.4286     12.4286
+
+5
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         147
+  precision               1           1
+
+6
+  mean               14.967     11.7551
+  std. dev.          8.3492      7.1876
+  weight sum             28         147
+  precision          1.8462      1.8462
+
+7
+  mean           66323.6512   5728.9533
+  std. dev.      86131.4232  17822.7442
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+8
+  mean           66323.6512   5728.9533
+  std. dev.      86131.4232  17822.7442
+  weight sum             28         147
+  precision       1963.0679   1963.0679
+
+9
+  mean          162528.3029   5361.4019
+  std. dev.     242228.9118  17849.7544
+  weight sum             28         147
+  precision       6355.8554   6355.8554
+
+10
+  mean          222572.3825   4977.8559
+  std. dev.      412531.395  18092.2979
+  weight sum             28         147
+  precision       12195.747   12195.747
+
+11
+  mean          246337.7085   4880.7201
+  std. dev.     523688.7471  18185.0099
+  weight sum             28         147
+  precision      16306.0422  16306.0422
+
+12
+  mean           13755.5769   5755.2841
+  std. dev.      15248.5117  17743.8082
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+13
+  mean           13755.5769   5755.2841
+  std. dev.      15248.5117  17743.8082
+  weight sum             28         147
+  precision        1097.311    1097.311
+
+14
+  mean           19631.8909   5735.2425
+  std. dev.      24445.3308  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+15
+  mean           20800.4558   5735.2425
+  std. dev.      24738.8874  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+16
+  mean           20917.3123   5735.2425
+  std. dev.      24704.7328  17707.0163
+  weight sum             28         147
+  precision       1090.6606   1090.6606
+
+17
+  mean               7.2245      0.0387
+  std. dev.          5.7837      0.2857
+  weight sum             28         177
+  precision          1.7143      1.7143
+
+18
+  mean              13.0179           0
+  std. dev.         21.6428       1.125
+  weight sum             28         177
+  precision            6.75        6.75
+
+19
+  mean              16.1607           0
+  std. dev.          34.136      1.6759
+  weight sum             28         177
+  precision         10.0556     10.0556
+
+20
+  mean              17.7222           0
+  std. dev.         37.8182      1.8796
+  weight sum             28         177
+  precision         11.2778     11.2778
+
+21
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         177
+  precision               1           1
+
+22
+  mean              15.1224     11.1961
+  std. dev.          8.2857      6.5171
+  weight sum             28         177
+  precision          1.7143      1.7143
+
+23
+  mean          116593.7804   5516.3429
+  std. dev.     220797.9679  16707.0711
+  weight sum             28         177
+  precision       5990.1392   5990.1392
+
+24
+  mean          116593.7804   5516.3429
+  std. dev.     220797.9679  16707.0711
+  weight sum             28         177
+  precision       5990.1392   5990.1392
+
+25
+  mean          227373.5813   5657.9981
+  std. dev.     442946.9417  17006.0388
+  weight sum             28         177
+  precision      11922.2103  11922.2103
+
+26
+  mean          297615.5998   5054.9518
+  std. dev.      648733.857  17107.3247
+  weight sum             28         177
+  precision      17543.6564  17543.6564
+
+27
+  mean          329415.7192   4759.5492
+  std. dev.     787382.7575  16905.0346
+  weight sum             28         177
+  precision      21601.0308  21601.0308
+
+28
+  mean            14522.349   5858.1679
+  std. dev.       15295.117  16404.1826
+  weight sum             28         177
+  precision        924.1495    924.1495
+
+29
+  mean            14522.349   5858.1679
+  std. dev.       15295.117  16404.1826
+  weight sum             28         177
+  precision        924.1495    924.1495
+
+30
+  mean           17304.6145   5911.2366
+  std. dev.      20180.7837  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+31
+  mean           17173.2701   5911.2366
+  std. dev.      19936.9638  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+32
+  mean           17370.2866   5911.2366
+  std. dev.      19947.9933  16455.5278
+  weight sum             28         177
+  precision        919.4103    919.4103
+
+33
+  mean               7.9405       0.195
+  std. dev.          6.3984      1.9531
+  weight sum             28         228
+  precision          1.9333      1.9333
+
+34
+  mean              15.5833       0.145
+  std. dev.         24.5601      1.7994
+  weight sum             28         228
+  precision          6.6111      6.6111
+
+35
+  mean              20.1786      0.1487
+  std. dev.         42.4269      2.2402
+  weight sum             28         228
+  precision            11.3        11.3
+
+36
+  mean              21.3179      0.1114
+  std. dev.         47.4042      2.1167
+  weight sum             28         228
+  precision            12.7        12.7
+
+37
+  mean               0.9643           1
+  std. dev.          0.1856      0.1667
+  weight sum             28         228
+  precision               1           1
+
+38
+  mean              17.0548     14.3474
+  std. dev.          9.4297        9.12
+  weight sum             28         228
+  precision          1.9333      1.9333
+
+39
+  mean          142319.0408    4803.495
+  std. dev.      280324.306  11862.9246
+  weight sum             28         228
+  precision       6597.5714   6597.5714
+
+40
+  mean          142319.0408    4803.495
+  std. dev.      280324.306  11862.9246
+  weight sum             28         228
+  precision       6597.5714   6597.5714
+
+41
+  mean           271174.847   5243.0759
+  std. dev.     558948.9311  13270.6299
+  weight sum             28         228
+  precision      13136.4978  13136.4978
+
+42
+  mean          350735.3381   4729.5581
+  std. dev.     810984.0921  13867.3181
+  weight sum             28         228
+  precision      19256.0578  19256.0578
+
+43
+  mean          381254.9802   4632.7937
+  std. dev.     940700.2651  13585.1597
+  weight sum             28         228
+  precision      22473.9778  22473.9778
+
+44
+  mean           17227.3058   4986.1941
+  std. dev.      17866.7027  11344.9088
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+45
+  mean           17227.3058   4986.1941
+  std. dev.      17866.7027  11344.9088
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+46
+  mean           18456.7567   5102.1949
+  std. dev.      17236.6072  11428.3092
+  weight sum             28         228
+  precision        419.8125    419.8125
+
+47
+  mean           17807.5133   5130.8453
+  std. dev.      16706.7946   11462.181
+  weight sum             28         228
+  precision        417.9467    417.9467
+
+48
+  mean           17986.6333   5130.8453
+  std. dev.      16763.8828   11462.181
+  weight sum             28         228
+  precision        417.9467    417.9467
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         242               93.7984 %
+Incorrectly Classified Instances        16                6.2016 %
+Kappa statistic                          0.7224
+Mean absolute error                      0.0624
+Root mean squared error                  0.2491
+Coverage of cases (0.95 level)          93.7984 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.694    0.023    0.833      0.694    0.758      0.726    0.987     0.908     0
+                 0.977    0.306    0.952      0.977    0.964      0.726    0.989     0.998     1
+Weighted Avg.    0.938    0.266    0.935      0.938    0.936      0.726    0.988     0.986     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25  11 |   a = 0
+   5 217 |   b = 1
+
+weka.classifiers.functions.Logistic -i -o -R 1.0E-8 -M -1
+
+Time taken to build model: 0.16 seconds
+Time taken to test model on training data: 0.03 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         264              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0.0002 %
+Root relative squared error              0.001  %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         255               96.5909 %
+Incorrectly Classified Instances         9                3.4091 %
+Kappa statistic                          0.8113
+Mean absolute error                      0.0324
+Root mean squared error                  0.1748
+Relative absolute error                 16.8281 %
+Root relative squared error             56.7393 %
+Coverage of cases (0.95 level)          97.3485 %
+Mean rel. region size (0.95 level)      50.5682 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.013    0.880      0.786    0.830      0.813    0.909     0.869     0
+                 0.987    0.214    0.975      0.987    0.981      0.813    0.927     0.984     1
+Weighted Avg.    0.966    0.193    0.965      0.966    0.965      0.813    0.925     0.972     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   6 |   a = 0
+   3 233 |   b = 1
+
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                             Class
+Variable                         0
+==================================
+1                          31.9605
+2                           -2.064
+3                          -2.4841
+4                          -2.4697
+5                          680.906
+6                          -1.4717
+7                          -0.0003
+8                          -0.0003
+9                          -0.0004
+10                         -0.0002
+11                         -0.0002
+12                         -0.0032
+13                         -0.0032
+14                           0.002
+15                          0.0027
+16                          0.0027
+17                          8.0536
+18                         -0.2343
+19                          1.4488
+20                          1.1721
+21                        239.0112
+22                         -1.6083
+23                               0
+24                               0
+25                               0
+26                               0
+27                               0
+28                         -0.0014
+29                         -0.0014
+30                          0.0017
+31                          0.0001
+32                          0.0003
+33                         -7.5373
+34                         -2.1895
+35                          1.0418
+36                          0.9698
+37                       -137.7468
+38                           0.116
+39                          0.0002
+40                          0.0002
+41                          0.0001
+42                          0.0001
+43                          0.0001
+44                         -0.0022
+45                         -0.0022
+46                          0.0053
+47                         -0.0009
+48                         -0.0005
+Intercept                 -793.867
+
+
+Odds Ratios...
+                             Class
+Variable                         0
+==================================
+1              7.59022703756619E13
+2                           0.1269
+3                           0.0834
+4                           0.0846
+5            5.172826002109749E295
+6                           0.2295
+7                           0.9997
+8                           0.9997
+9                           0.9996
+10                          0.9998
+11                          0.9998
+12                          0.9969
+13                          0.9969
+14                           1.002
+15                          1.0027
+16                          1.0027
+17                       3145.1576
+18                          0.7911
+19                          4.2581
+20                          3.2288
+21           6.327576552583494E103
+22                          0.2002
+23                               1
+24                               1
+25                               1
+26                               1
+27                               1
+28                          0.9986
+29                          0.9986
+30                          1.0017
+31                          1.0001
+32                          1.0003
+33                          0.0005
+34                           0.112
+35                          2.8342
+36                          2.6373
+37                               0
+38                          1.1229
+39                          1.0002
+40                          1.0002
+41                          1.0001
+42                          1.0001
+43                          1.0001
+44                          0.9978
+45                          0.9978
+46                          1.0053
+47                          0.9991
+48                          0.9995
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         248               96.124  %
+Incorrectly Classified Instances        10                3.876  %
+Kappa statistic                          0.8173
+Mean absolute error                      0.0425
+Root mean squared error                  0.201 
+Coverage of cases (0.95 level)          96.124  %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.722    0.000    1.000      0.722    0.839      0.831    0.766     0.772     0
+                 1.000    0.278    0.957      1.000    0.978      0.831    0.800     0.926     1
+Weighted Avg.    0.961    0.239    0.963      0.961    0.959      0.831    0.796     0.905     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  26  10 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.functions.MultilayerPerceptron -i -o -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+
+Time taken to build model: 3.34 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         262               99.2424 %
+Incorrectly Classified Instances         2                0.7576 %
+Kappa statistic                          0.9588
+Mean absolute error                      0.0092
+Root mean squared error                  0.0714
+Relative absolute error                  4.7893 %
+Root relative squared error             23.1847 %
+Coverage of cases (0.95 level)          99.6212 %
+Mean rel. region size (0.95 level)      50.5682 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.929    0.000    1.000      0.929    0.963      0.960    0.964     0.968     0
+                 1.000    0.071    0.992      1.000    0.996      0.960    0.964     0.979     1
+Weighted Avg.    0.992    0.064    0.992      0.992    0.992      0.960    0.964     0.978     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  26   2 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         254               96.2121 %
+Incorrectly Classified Instances        10                3.7879 %
+Kappa statistic                          0.8002
+Mean absolute error                      0.0408
+Root mean squared error                  0.1793
+Relative absolute error                 21.2304 %
+Root relative squared error             58.2201 %
+Coverage of cases (0.95 level)          97.7273 %
+Mean rel. region size (0.95 level)      52.2727 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.821    0.021    0.821      0.821    0.821      0.800    0.942     0.866     0
+                 0.979    0.179    0.979      0.979    0.979      0.800    0.942     0.976     1
+Weighted Avg.    0.962    0.162    0.962      0.962    0.962      0.800    0.942     0.964     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  23   5 |   a = 0
+   5 231 |   b = 1
+
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    3.5744852337898187
+    Node 2    -3.2095416625247135
+    Node 3    -2.6642959832816575
+    Node 4    -3.5741898995066346
+    Node 5    -0.6212278435122324
+    Node 6    -2.176696789359591
+    Node 7    0.36021995269993273
+    Node 8    -1.9961658952557697
+    Node 9    -0.04358074142793015
+    Node 10    -0.614479255329793
+    Node 11    4.091032697029583
+    Node 12    -3.724388507514897
+    Node 13    -1.5975552258066164
+    Node 14    -1.0271142067341006
+    Node 15    -1.4911624684061735
+    Node 16    -0.626999759068172
+    Node 17    -0.6814596312372675
+    Node 18    -2.882200093634573
+    Node 19    -1.718830424726672
+    Node 20    -2.5094300121078046
+    Node 21    -0.8882470569823663
+    Node 22    0.5113525733200486
+    Node 23    2.0163320070633537
+    Node 24    -0.8279018314668727
+    Node 25    -0.7853696782807154
+    Node 26    -0.8806880120800838
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -3.565890741474331
+    Node 2    3.261905600486202
+    Node 3    2.7311259530301646
+    Node 4    3.525834665309655
+    Node 5    0.5871590079853028
+    Node 6    2.121193118644302
+    Node 7    -0.2965382995969985
+    Node 8    1.9921480946278285
+    Node 9    0.05920431514861189
+    Node 10    0.6554543878659107
+    Node 11    -4.119762700373149
+    Node 12    3.7131047390141796
+    Node 13    1.6152593962864672
+    Node 14    0.9760642246477857
+    Node 15    1.4834334712280615
+    Node 16    0.5707496645078415
+    Node 17    0.6495784817009137
+    Node 18    2.8817899938873404
+    Node 19    1.7215663515840083
+    Node 20    2.5175630645418563
+    Node 21    0.9082725048746693
+    Node 22    -0.5609853018859831
+    Node 23    -1.9917195151218592
+    Node 24    0.8315986852024474
+    Node 25    0.8125430472371886
+    Node 26    0.8877964913821373
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -0.6472848203706199
+    Attrib 1    -4.809493349144719
+    Attrib 2    0.1472242502414926
+    Attrib 3    0.7751302162675333
+    Attrib 4    0.8060252748253792
+    Attrib 5    -1.866056644436674
+    Attrib 6    0.41106461087906515
+    Attrib 7    -1.213144589187215
+    Attrib 8    -1.1394210759351726
+    Attrib 9    -0.21914131729990086
+    Attrib 10    0.7284002763200745
+    Attrib 11    0.9889162273556585
+    Attrib 12    1.2694501669755214
+    Attrib 13    1.3273252922359977
+    Attrib 14    -0.7776275616759751
+    Attrib 15    -0.8831975121000755
+    Attrib 16    -0.8173542631571368
+    Attrib 17    -5.473044881319386
+    Attrib 18    -1.0368212279458027
+    Attrib 19    -0.12808965263010444
+    Attrib 20    0.034596010805275
+    Attrib 21    -1.5184104088637462
+    Attrib 22    0.21895896928038838
+    Attrib 23    0.45800738249375805
+    Attrib 24    0.3802655049244992
+    Attrib 25    0.32816819913195155
+    Attrib 26    0.5165841052790392
+    Attrib 27    0.6471825059634003
+    Attrib 28    0.7776001307789077
+    Attrib 29    0.8373760995404241
+    Attrib 30    0.1529336234379391
+    Attrib 31    0.12190237163385251
+    Attrib 32    0.1416343749960231
+    Attrib 33    -4.428833962836788
+    Attrib 34    -0.8133381314448361
+    Attrib 35    0.30484471992246187
+    Attrib 36    0.47057874799720995
+    Attrib 37    -1.6136890464932991
+    Attrib 38    -0.32414812764573103
+    Attrib 39    0.8262140045120555
+    Attrib 40    0.7776431412435986
+    Attrib 41    0.6531419383591923
+    Attrib 42    0.801123554442721
+    Attrib 43    0.8977525127726492
+    Attrib 44    1.872836828770223
+    Attrib 45    1.8909034262479492
+    Attrib 46    -0.6744004041024767
+    Attrib 47    -0.702330910398022
+    Attrib 48    -0.7019267735826593
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -0.9275114856435402
+    Attrib 1    -3.2350695117296473
+    Attrib 2    0.7273487975439219
+    Attrib 3    1.308457886931809
+    Attrib 4    1.267212956437202
+    Attrib 5    -2.0871190147714804
+    Attrib 6    1.1244390646397846
+    Attrib 7    -0.08834672940635678
+    Attrib 8    -0.09258261913650738
+    Attrib 9    0.7180207085654907
+    Attrib 10    1.3694868162487623
+    Attrib 11    1.5633013371474433
+    Attrib 12    0.7659730745495428
+    Attrib 13    0.6980716385602541
+    Attrib 14    -0.8288864849560331
+    Attrib 15    -0.8320892771781911
+    Attrib 16    -0.8326804117952559
+    Attrib 17    -4.017803523254597
+    Attrib 18    -0.030685575335035364
+    Attrib 19    0.5913437243576665
+    Attrib 20    0.762574393670923
+    Attrib 21    -1.6674744586617036
+    Attrib 22    0.3651828972176113
+    Attrib 23    0.8644019435030611
+    Attrib 24    0.9517487776121839
+    Attrib 25    0.9504491719843042
+    Attrib 26    1.1191721329179756
+    Attrib 27    1.210432947371576
+    Attrib 28    0.25656017706932427
+    Attrib 29    0.3214622155966101
+    Attrib 30    -0.8429992802387323
+    Attrib 31    -0.851798664842133
+    Attrib 32    -0.9177680788904317
+    Attrib 33    -3.053848668180545
+    Attrib 34    -0.14509635195650117
+    Attrib 35    0.44938697724491455
+    Attrib 36    0.6234185830114445
+    Attrib 37    -1.3014289074481245
+    Attrib 38    -0.113593796585586
+    Attrib 39    0.6315309004502923
+    Attrib 40    0.6776433663128996
+    Attrib 41    0.683551696377581
+    Attrib 42    0.777364223232532
+    Attrib 43    0.8633211609970702
+    Attrib 44    -1.1126809368164605
+    Attrib 45    -1.0785121581149189
+    Attrib 46    -3.4454199396069263
+    Attrib 47    -3.4659726538149394
+    Attrib 48    -3.446384990365911
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -0.6201053491807216
+    Attrib 1    -5.029065698433838
+    Attrib 2    0.12739686655240118
+    Attrib 3    0.854832295431236
+    Attrib 4    0.9305438768779399
+    Attrib 5    -1.9511928580626443
+    Attrib 6    0.3620035421307461
+    Attrib 7    -1.2863433420075416
+    Attrib 8    -1.3109056296073043
+    Attrib 9    -0.21771980662673598
+    Attrib 10    0.7126882356659996
+    Attrib 11    1.0047412705640986
+    Attrib 12    1.4031608327812084
+    Attrib 13    1.3856721199155337
+    Attrib 14    -0.8182169281069823
+    Attrib 15    -0.9090183180498272
+    Attrib 16    -0.8778280543117145
+    Attrib 17    -5.773206668423974
+    Attrib 18    -1.151710442288114
+    Attrib 19    -0.10642379547374112
+    Attrib 20    0.10230217056162465
+    Attrib 21    -1.5894203176300221
+    Attrib 22    0.2929695921326866
+    Attrib 23    0.3966609419645482
+    Attrib 24    0.48212342493752686
+    Attrib 25    0.31751323400530357
+    Attrib 26    0.513468692424833
+    Attrib 27    0.750980903477276
+    Attrib 28    0.9144085592890354
+    Attrib 29    0.912481654109039
+    Attrib 30    0.25744300183356106
+    Attrib 31    0.21634774607506874
+    Attrib 32    0.12543825438836387
+    Attrib 33    -4.716900290153897
+    Attrib 34    -0.927107795718022
+    Attrib 35    0.2691627285473451
+    Attrib 36    0.4207717065878429
+    Attrib 37    -1.7651504360549202
+    Attrib 38    -0.43877718738900706
+    Attrib 39    0.7927707586225982
+    Attrib 40    0.790745820779874
+    Attrib 41    0.6243392460594052
+    Attrib 42    0.7829606500737325
+    Attrib 43    0.8904108917242528
+    Attrib 44    2.0596990327991405
+    Attrib 45    2.0929281472439696
+    Attrib 46    -0.6661613586288051
+    Attrib 47    -0.6678873406974507
+    Attrib 48    -0.6911225411444925
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -0.06385199018098801
+    Attrib 1    -0.3798636022698587
+    Attrib 2    0.21213500255200687
+    Attrib 3    0.2691520944052713
+    Attrib 4    0.26685658494642084
+    Attrib 5    -0.43149447187408624
+    Attrib 6    -0.055455330699947014
+    Attrib 7    -0.08894553707224662
+    Attrib 8    -0.017324293556319256
+    Attrib 9    0.1378160112932737
+    Attrib 10    0.3074748963747685
+    Attrib 11    0.3199930206227183
+    Attrib 12    0.3325453158825189
+    Attrib 13    0.3860294814259281
+    Attrib 14    0.10392874751134942
+    Attrib 15    0.0953212439578662
+    Attrib 16    0.07503150348304377
+    Attrib 17    -0.5902365873436094
+    Attrib 18    -0.008815103291335674
+    Attrib 19    0.07830615829527014
+    Attrib 20    0.13000916659239345
+    Attrib 21    -0.3586608496940476
+    Attrib 22    -0.0013624912758251938
+    Attrib 23    0.1549753224468392
+    Attrib 24    0.16070289418037026
+    Attrib 25    0.10594728772242644
+    Attrib 26    0.21485176230618552
+    Attrib 27    0.1491929489234581
+    Attrib 28    0.1884323523839564
+    Attrib 29    0.2152010080649851
+    Attrib 30    0.1223675331952734
+    Attrib 31    0.16544913958103424
+    Attrib 32    0.1799807148687173
+    Attrib 33    -0.45204746205830976
+    Attrib 34    -0.1894280671840974
+    Attrib 35    0.0018543681903025403
+    Attrib 36    -0.01667835517125121
+    Attrib 37    -0.07883800142835201
+    Attrib 38    -0.0677291449404744
+    Attrib 39    -0.01812286030257892
+    Attrib 40    -0.05718801786742994
+    Attrib 41    -0.00850341300596549
+    Attrib 42    -0.010972276569092783
+    Attrib 43    0.0103054492406294
+    Attrib 44    0.06200768778501534
+    Attrib 45    -0.007372465959697075
+    Attrib 46    -0.17120760715584102
+    Attrib 47    -0.10051721541702799
+    Attrib 48    -0.09527036096526577
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.6609378218036766
+    Attrib 1    -2.8325180075520806
+    Attrib 2    0.5609627329058532
+    Attrib 3    1.1162620184702998
+    Attrib 4    1.1151898313077375
+    Attrib 5    -1.7932702334358652
+    Attrib 6    0.9095839022602774
+    Attrib 7    -0.1934673637879628
+    Attrib 8    -0.18224632540457597
+    Attrib 9    0.5654011419848202
+    Attrib 10    1.1665242747898437
+    Attrib 11    1.3406547810875247
+    Attrib 12    0.6994391260888391
+    Attrib 13    0.7487909235078551
+    Attrib 14    -0.6381715385345194
+    Attrib 15    -0.6604239675202616
+    Attrib 16    -0.6685422509430342
+    Attrib 17    -3.624572558311087
+    Attrib 18    -0.03393048155222244
+    Attrib 19    0.44858112271153716
+    Attrib 20    0.5859633552547237
+    Attrib 21    -1.3896414037402163
+    Attrib 22    0.3005229050847567
+    Attrib 23    0.7600039055502062
+    Attrib 24    0.6862825450517943
+    Attrib 25    0.719894771322274
+    Attrib 26    0.8484768989118241
+    Attrib 27    0.9576523720971913
+    Attrib 28    0.294305900871271
+    Attrib 29    0.2989410894228008
+    Attrib 30    -0.6081382105037492
+    Attrib 31    -0.670372545999537
+    Attrib 32    -0.6890613810875289
+    Attrib 33    -2.650695761407888
+    Attrib 34    -0.19870595335578783
+    Attrib 35    0.3653527199577089
+    Attrib 36    0.4752566606460781
+    Attrib 37    -1.0504463048738395
+    Attrib 38    -0.07417385704232006
+    Attrib 39    0.49837688612813746
+    Attrib 40    0.5255545134768492
+    Attrib 41    0.5361515585869666
+    Attrib 42    0.671195632676918
+    Attrib 43    0.7256794815460048
+    Attrib 44    -0.7228568543304884
+    Attrib 45    -0.656510317667708
+    Attrib 46    -2.7534388099325726
+    Attrib 47    -2.6768321143841174
+    Attrib 48    -2.706656517789814
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -0.011642950912634193
+    Attrib 1    0.36651447128569586
+    Attrib 2    -0.03403591312813925
+    Attrib 3    -0.06883468229481501
+    Attrib 4    -0.07845517586691479
+    Attrib 5    0.08692090232387636
+    Attrib 6    -0.12213881804602343
+    Attrib 7    0.10779813980837233
+    Attrib 8    0.1321134361011442
+    Attrib 9    0.028417705681165344
+    Attrib 10    0.0020991030931586047
+    Attrib 11    -0.10629655360954178
+    Attrib 12    -0.016260019142462338
+    Attrib 13    -0.022191590251765755
+    Attrib 14    0.14036613950064059
+    Attrib 15    0.16878272582364373
+    Attrib 16    0.20507304166304893
+    Attrib 17    0.37647240932061815
+    Attrib 18    0.0902637855658431
+    Attrib 19    0.07840547135732874
+    Attrib 20    0.011000161831183944
+    Attrib 21    0.1111208598962716
+    Attrib 22    -0.11429516398316754
+    Attrib 23    -0.04699288995521643
+    Attrib 24    0.020319628955921726
+    Attrib 25    0.007038486931229887
+    Attrib 26    -0.059370933756106824
+    Attrib 27    -0.008451796505997616
+    Attrib 28    0.004298994931881147
+    Attrib 29    0.024392910294239747
+    Attrib 30    0.1292371023661685
+    Attrib 31    0.10416176209423479
+    Attrib 32    0.07136909439377173
+    Attrib 33    0.2600083953006213
+    Attrib 34    0.0720515869367542
+    Attrib 35    0.042945629526988
+    Attrib 36    0.03797989665880835
+    Attrib 37    0.06141662902586033
+    Attrib 38    -0.07075910168275303
+    Attrib 39    -0.008983687555743563
+    Attrib 40    -0.0016124772472317873
+    Attrib 41    -0.005741882110836526
+    Attrib 42    -0.015666506387320703
+    Attrib 43    0.016955671161721645
+    Attrib 44    -0.029196300171347986
+    Attrib 45    -0.017543668549331634
+    Attrib 46    0.17036711770004576
+    Attrib 47    0.17058400752092312
+    Attrib 48    0.10863748702358647
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.5005941200734602
+    Attrib 1    -3.6819846783988077
+    Attrib 2    0.36945421264998685
+    Attrib 3    0.9518023185911405
+    Attrib 4    1.0013583477124106
+    Attrib 5    -1.797087564493462
+    Attrib 6    0.0124943391285021
+    Attrib 7    -0.6863981977664235
+    Attrib 8    -0.6911456485639837
+    Attrib 9    0.13919803055579277
+    Attrib 10    0.964902919267624
+    Attrib 11    1.1766847562498055
+    Attrib 12    1.0584396362057056
+    Attrib 13    1.0374766991955255
+    Attrib 14    -0.7643620995469179
+    Attrib 15    -0.7896961399878704
+    Attrib 16    -0.7050434405488384
+    Attrib 17    -4.449350976494615
+    Attrib 18    -0.6457372849040154
+    Attrib 19    0.07849350793619646
+    Attrib 20    0.3024470081850623
+    Attrib 21    -1.4119400027347733
+    Attrib 22    -0.17358098634318078
+    Attrib 23    0.5021690906999933
+    Attrib 24    0.5017198051226046
+    Attrib 25    0.4374851013673249
+    Attrib 26    0.6301264480762948
+    Attrib 27    0.7579939730548958
+    Attrib 28    0.4686366726083403
+    Attrib 29    0.46333990978443096
+    Attrib 30    -0.25697671355697094
+    Attrib 31    -0.23478553000403116
+    Attrib 32    -0.3109611506206088
+    Attrib 33    -3.5087516852153255
+    Attrib 34    -0.5777611597077196
+    Attrib 35    0.20141087976634467
+    Attrib 36    0.331185401974552
+    Attrib 37    -1.2234079320958209
+    Attrib 38    -0.5856948909268275
+    Attrib 39    0.5124960177512197
+    Attrib 40    0.4975311308057635
+    Attrib 41    0.46086605560322863
+    Attrib 42    0.542209960120249
+    Attrib 43    0.629850924229867
+    Attrib 44    0.597082084554519
+    Attrib 45    0.6195921067737478
+    Attrib 46    -1.564406361367105
+    Attrib 47    -1.6472520282225283
+    Attrib 48    -1.6428623422686008
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -0.09375063593649056
+    Attrib 1    -0.043846632109001096
+    Attrib 2    0.05279747897882454
+    Attrib 3    0.11529164323035106
+    Attrib 4    0.08541032827015309
+    Attrib 5    -0.11965659133494094
+    Attrib 6    -0.06816771030842532
+    Attrib 7    0.07281386836716201
+    Attrib 8    0.013588089772894418
+    Attrib 9    0.04005868698877079
+    Attrib 10    0.1257415586367374
+    Attrib 11    0.14771844562368183
+    Attrib 12    0.11853852758546751
+    Attrib 13    0.12466044632228832
+    Attrib 14    0.16106665105913104
+    Attrib 15    0.09856843017593028
+    Attrib 16    0.09567723591792246
+    Attrib 17    -0.037612588838437044
+    Attrib 18    0.10187145145786652
+    Attrib 19    0.08631836748403998
+    Attrib 20    0.0921913443847509
+    Attrib 21    -0.12076555406119885
+    Attrib 22    -0.05926703733042004
+    Attrib 23    0.05123982535286242
+    Attrib 24    0.04749985015822859
+    Attrib 25    0.13354386180756225
+    Attrib 26    0.07617054133723529
+    Attrib 27    0.08163779894775718
+    Attrib 28    0.06844927010671818
+    Attrib 29    0.10970404730897852
+    Attrib 30    0.13918640749575226
+    Attrib 31    0.06270476836215123
+    Attrib 32    0.12144735407112173
+    Attrib 33    -0.11972057756725685
+    Attrib 34    0.015937609790131077
+    Attrib 35    0.0043332244460012525
+    Attrib 36    0.06679392599040201
+    Attrib 37    -0.10112936093153556
+    Attrib 38    -0.04654633803755423
+    Attrib 39    0.011785794461026273
+    Attrib 40    0.01202594416556989
+    Attrib 41    0.06079353964985659
+    Attrib 42    0.08851695512912565
+    Attrib 43    0.11209531804932996
+    Attrib 44    0.08338963730929383
+    Attrib 45    0.041337912865219865
+    Attrib 46    0.06052227090504803
+    Attrib 47    0.06322439473978325
+    Attrib 48    0.019024008812806286
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -0.0028269388178003285
+    Attrib 1    -0.32999080521665447
+    Attrib 2    0.2724586185150029
+    Attrib 3    0.29917642772688224
+    Attrib 4    0.3059416740276544
+    Attrib 5    -0.4653020179715008
+    Attrib 6    0.019009426822778487
+    Attrib 7    -0.07085848167225385
+    Attrib 8    -0.012300640393320685
+    Attrib 9    0.09523917741519546
+    Attrib 10    0.28000989185306935
+    Attrib 11    0.3465875274710674
+    Attrib 12    0.37132827640682026
+    Attrib 13    0.40121233984640875
+    Attrib 14    0.128091287151109
+    Attrib 15    0.14313041150638223
+    Attrib 16    0.07373554839133993
+    Attrib 17    -0.546204854530082
+    Attrib 18    0.02146990274073669
+    Attrib 19    0.1520112528419582
+    Attrib 20    0.16139239200266636
+    Attrib 21    -0.29501103540385903
+    Attrib 22    -0.017627573962116994
+    Attrib 23    0.11411671856769763
+    Attrib 24    0.17801388218679015
+    Attrib 25    0.14650975608467715
+    Attrib 26    0.17258768408747144
+    Attrib 27    0.166002571881102
+    Attrib 28    0.17774468009865915
+    Attrib 29    0.1752078978010401
+    Attrib 30    0.11211962140261378
+    Attrib 31    0.18428766427067844
+    Attrib 32    0.11461055434322429
+    Attrib 33    -0.43164015731221606
+    Attrib 34    -0.1532332091817225
+    Attrib 35    -0.041047059259535855
+    Attrib 36    0.0016160133491316963
+    Attrib 37    -0.06805019532945931
+    Attrib 38    -0.09212036575072056
+    Attrib 39    -0.058378872875061466
+    Attrib 40    -0.010091126191212241
+    Attrib 41    -0.04399543671186376
+    Attrib 42    -0.03663878350001243
+    Attrib 43    0.011558289745529984
+    Attrib 44    -0.02863645408026392
+    Attrib 45    2.793387301449734E-4
+    Attrib 46    -0.17182260111329148
+    Attrib 47    -0.1811894615320688
+    Attrib 48    -0.19075760833226235
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -0.43242653899942657
+    Attrib 1    1.5119169647753234
+    Attrib 2    0.030443521137251232
+    Attrib 3    -0.13065923409969635
+    Attrib 4    -0.18746875434782476
+    Attrib 5    0.47055248225720797
+    Attrib 6    0.213564307991974
+    Attrib 7    0.8053863385261663
+    Attrib 8    0.7252213081876074
+    Attrib 9    0.4139964621142488
+    Attrib 10    0.036690548439923164
+    Attrib 11    -0.1209754606981421
+    Attrib 12    -0.7314184937560821
+    Attrib 13    -0.76944776345956
+    Attrib 14    -0.06160091689344418
+    Attrib 15    -0.017278020695044326
+    Attrib 16    0.046518358098776705
+    Attrib 17    1.567558854635245
+    Attrib 18    0.6700568888559196
+    Attrib 19    0.3206661137215317
+    Attrib 20    0.24332899735618763
+    Attrib 21    0.338276682976803
+    Attrib 22    0.16422865976735238
+    Attrib 23    0.12176952500906653
+    Attrib 24    0.15049760426871717
+    Attrib 25    0.23351126435409128
+    Attrib 26    0.1679772176761984
+    Attrib 27    0.01953036598935132
+    Attrib 28    -0.5319445022920505
+    Attrib 29    -0.5323668912925109
+    Attrib 30    -0.7375764034048727
+    Attrib 31    -0.7957643675900268
+    Attrib 32    -0.7899272963125384
+    Attrib 33    1.063330958136184
+    Attrib 34    0.39245142687327694
+    Attrib 35    -0.014957566890867163
+    Attrib 36    -0.057373888109186026
+    Attrib 37    0.6674116811870326
+    Attrib 38    0.11205784857944733
+    Attrib 39    -0.21419721170268358
+    Attrib 40    -0.24161186475038368
+    Attrib 41    -0.06831959082515149
+    Attrib 42    -0.15343907193600254
+    Attrib 43    -0.20051069426882026
+    Attrib 44    -1.4601911249571
+    Attrib 45    -1.4129603876627395
+    Attrib 46    -0.9114347049563066
+    Attrib 47    -0.8221929724727445
+    Attrib 48    -0.8114296566743461
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -0.7941538858331549
+    Attrib 1    -5.36382687270307
+    Attrib 2    0.08811457410442836
+    Attrib 3    0.9007878351470839
+    Attrib 4    0.9165123336141754
+    Attrib 5    -2.029240769566395
+    Attrib 6    0.400405171607512
+    Attrib 7    -1.3571764119034064
+    Attrib 8    -1.3661395472759987
+    Attrib 9    -0.2809472896897418
+    Attrib 10    0.7757227620466277
+    Attrib 11    1.102297248912038
+    Attrib 12    1.4267086228755492
+    Attrib 13    1.4461092244704983
+    Attrib 14    -0.8822510452985914
+    Attrib 15    -0.9352080990918523
+    Attrib 16    -0.9691932271097234
+    Attrib 17    -6.13327619587661
+    Attrib 18    -1.241348271663228
+    Attrib 19    -0.1801566786461975
+    Attrib 20    0.01825845105154829
+    Attrib 21    -1.6388247880013893
+    Attrib 22    0.27464929783072
+    Attrib 23    0.4596189880908776
+    Attrib 24    0.475519248534991
+    Attrib 25    0.3466469209727524
+    Attrib 26    0.5867238483082785
+    Attrib 27    0.79779392561523
+    Attrib 28    0.8808127515082388
+    Attrib 29    0.8818282846999094
+    Attrib 30    0.1480112373015946
+    Attrib 31    0.1315334876823173
+    Attrib 32    0.16362903913137306
+    Attrib 33    -4.949521092712759
+    Attrib 34    -0.8754944498458147
+    Attrib 35    0.3991804272212615
+    Attrib 36    0.5144989849496541
+    Attrib 37    -1.9121141097304037
+    Attrib 38    -0.3916510970588128
+    Attrib 39    0.9335811077200831
+    Attrib 40    0.8935418710899321
+    Attrib 41    0.7173339981208688
+    Attrib 42    0.9911448397403951
+    Attrib 43    1.028516785178119
+    Attrib 44    2.1407517978641724
+    Attrib 45    2.158799813828162
+    Attrib 46    -0.7879797648054488
+    Attrib 47    -0.8067706019174123
+    Attrib 48    -0.894380198922626
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -0.45700199214835996
+    Attrib 1    -2.2790325688323394
+    Attrib 2    0.5030155201969615
+    Attrib 3    0.8184911354164582
+    Attrib 4    0.837239930824835
+    Attrib 5    -1.4502946224304647
+    Attrib 6    0.6431577931798687
+    Attrib 7    -0.16666086697434493
+    Attrib 8    -0.11052629341448113
+    Attrib 9    0.4408720803983735
+    Attrib 10    0.869486737782538
+    Attrib 11    0.9925939345296267
+    Attrib 12    0.5882309375326558
+    Attrib 13    0.5949377312092752
+    Attrib 14    -0.4967175602750073
+    Attrib 15    -0.456702811270567
+    Attrib 16    -0.4760183047887222
+    Attrib 17    -2.8113284015891473
+    Attrib 18    -0.078078219891687
+    Attrib 19    0.3550895636901253
+    Attrib 20    0.4205259088521134
+    Attrib 21    -1.128112026578714
+    Attrib 22    0.27695444682393455
+    Attrib 23    0.5775715910067512
+    Attrib 24    0.5851487223958673
+    Attrib 25    0.589446467425911
+    Attrib 26    0.6198150780100914
+    Attrib 27    0.7831293522547215
+    Attrib 28    0.2815851145627849
+    Attrib 29    0.25958966885947865
+    Attrib 30    -0.3867333473994703
+    Attrib 31    -0.40749762752186186
+    Attrib 32    -0.48694176371812775
+    Attrib 33    -2.0414450053759334
+    Attrib 34    -0.2079883926494749
+    Attrib 35    0.23469208866425414
+    Attrib 36    0.32417710295347946
+    Attrib 37    -0.796961396091468
+    Attrib 38    0.0071039713540527625
+    Attrib 39    0.30336540205979523
+    Attrib 40    0.38095440990111196
+    Attrib 41    0.3354231632071568
+    Attrib 42    0.43470309612195107
+    Attrib 43    0.511112720032744
+    Attrib 44    -0.48910388546071654
+    Attrib 45    -0.4353431713392571
+    Attrib 46    -2.042742647337575
+    Attrib 47    -2.0273937812339744
+    Attrib 48    -2.007851307535968
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -0.16983068637016432
+    Attrib 1    -1.6132978368679523
+    Attrib 2    0.32902843931751613
+    Attrib 3    0.6398364600446751
+    Attrib 4    0.6525959352629322
+    Attrib 5    -1.0345375258867586
+    Attrib 6    0.4317371196226765
+    Attrib 7    -0.14357900644851157
+    Attrib 8    -0.16520842963153387
+    Attrib 9    0.2862154581934885
+    Attrib 10    0.5618938343102233
+    Attrib 11    0.7447252065416651
+    Attrib 12    0.5360726945367059
+    Attrib 13    0.5380464794274217
+    Attrib 14    -0.23342821283211307
+    Attrib 15    -0.28529307855479713
+    Attrib 16    -0.23915712661150101
+    Attrib 17    -1.9974258609504614
+    Attrib 18    -0.10412084037840434
+    Attrib 19    0.24367667477299954
+    Attrib 20    0.23660100608089057
+    Attrib 21    -0.8204914193060974
+    Attrib 22    0.22724839915998085
+    Attrib 23    0.3734028187182456
+    Attrib 24    0.41362365530541373
+    Attrib 25    0.3285487904230815
+    Attrib 26    0.454981528927041
+    Attrib 27    0.5244823240260919
+    Attrib 28    0.3223498762973159
+    Attrib 29    0.25522791075899726
+    Attrib 30    -0.17944160381918703
+    Attrib 31    -0.10984400681571498
+    Attrib 32    -0.20191292553383003
+    Attrib 33    -1.5563174440091871
+    Attrib 34    -0.28848412255793093
+    Attrib 35    0.03201294436759898
+    Attrib 36    0.020450679859514362
+    Attrib 37    -0.48225891883476
+    Attrib 38    -0.06352018203996013
+    Attrib 39    0.10714961207959874
+    Attrib 40    0.10297404630607913
+    Attrib 41    0.06363075241090478
+    Attrib 42    0.11886841076377744
+    Attrib 43    0.22857332136918776
+    Attrib 44    -0.07451367164409312
+    Attrib 45    -0.09075115999398832
+    Attrib 46    -1.1160381107546162
+    Attrib 47    -1.1653708566623455
+    Attrib 48    -1.1173592966323314
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -0.3639279955480111
+    Attrib 1    -1.954376927907569
+    Attrib 2    0.45591240568498725
+    Attrib 3    0.8182073114973129
+    Attrib 4    0.816052888019781
+    Attrib 5    -1.2738270813563115
+    Attrib 6    0.6466741779359366
+    Attrib 7    -0.13896328366513577
+    Attrib 8    -0.0880111275582978
+    Attrib 9    0.3861068630280508
+    Attrib 10    0.8458736224023962
+    Attrib 11    0.9759396403395423
+    Attrib 12    0.6408229554881965
+    Attrib 13    0.6309503274167741
+    Attrib 14    -0.3963484417822179
+    Attrib 15    -0.37480226571955955
+    Attrib 16    -0.3789693910329948
+    Attrib 17    -2.4641595598474195
+    Attrib 18    -0.013603023857213748
+    Attrib 19    0.33251984634235326
+    Attrib 20    0.4586874472907621
+    Attrib 21    -1.0002866967870183
+    Attrib 22    0.27714987081107084
+    Attrib 23    0.5318521904182634
+    Attrib 24    0.5246592362530509
+    Attrib 25    0.5187843242196554
+    Attrib 26    0.6102839090186101
+    Attrib 27    0.6372405370757348
+    Attrib 28    0.3289152851943373
+    Attrib 29    0.29480133638542283
+    Attrib 30    -0.34286838293265653
+    Attrib 31    -0.3732758507973876
+    Attrib 32    -0.3353783081467671
+    Attrib 33    -1.907812511203371
+    Attrib 34    -0.27044338093076664
+    Attrib 35    0.16761517879103785
+    Attrib 36    0.24028158922048734
+    Attrib 37    -0.5946920980339144
+    Attrib 38    -0.04220417060815974
+    Attrib 39    0.21893383967145644
+    Attrib 40    0.27819441348296153
+    Attrib 41    0.22173452527328188
+    Attrib 42    0.35651152935442965
+    Attrib 43    0.40053009108793547
+    Attrib 44    -0.45761616696105495
+    Attrib 45    -0.45394298915787984
+    Attrib 46    -1.893847720824738
+    Attrib 47    -1.8808711896639752
+    Attrib 48    -1.882513962476373
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    -0.06510977354603534
+    Attrib 1    -0.5269957609460485
+    Attrib 2    0.23292647577203762
+    Attrib 3    0.36881081415215633
+    Attrib 4    0.3123468508609018
+    Attrib 5    -0.46943275761876035
+    Attrib 6    0.037576236481448436
+    Attrib 7    -0.051272253520367135
+    Attrib 8    -0.11308036060756657
+    Attrib 9    0.0688883268528477
+    Attrib 10    0.3048093250810481
+    Attrib 11    0.31435128790778133
+    Attrib 12    0.36505302676308093
+    Attrib 13    0.3323656514196659
+    Attrib 14    0.12294340675215375
+    Attrib 15    0.030362225345403733
+    Attrib 16    0.07287087705366307
+    Attrib 17    -0.7150934175984469
+    Attrib 18    -0.09133871856437384
+    Attrib 19    0.1343573633474139
+    Attrib 20    0.10178229819094058
+    Attrib 21    -0.30546151893022433
+    Attrib 22    -0.03081271319827292
+    Attrib 23    0.17376791825936447
+    Attrib 24    0.14014425467529742
+    Attrib 25    0.1243554768606123
+    Attrib 26    0.16173010383615008
+    Attrib 27    0.16683667712769173
+    Attrib 28    0.21527403146543458
+    Attrib 29    0.14711205350917464
+    Attrib 30    0.15168518343194784
+    Attrib 31    0.10409741028158861
+    Attrib 32    0.1421274640867565
+    Attrib 33    -0.5537555876936879
+    Attrib 34    -0.13703217687517366
+    Attrib 35    -0.024066111801669815
+    Attrib 36    0.017473110974710836
+    Attrib 37    -0.16109996316111755
+    Attrib 38    -0.08588515879178166
+    Attrib 39    -0.009880699597213874
+    Attrib 40    -0.01789395063384914
+    Attrib 41    0.006323016144622749
+    Attrib 42    0.02605515109233061
+    Attrib 43    0.028404700299774745
+    Attrib 44    0.05468997865617237
+    Attrib 45    -0.009862970859181355
+    Attrib 46    -0.19310578090037825
+    Attrib 47    -0.15514940594273208
+    Attrib 48    -0.16822379278658586
+Sigmoid Node 17
+    Inputs    Weights
+    Threshold    -0.038070421995230135
+    Attrib 1    -0.3635002057494636
+    Attrib 2    0.24166012151559063
+    Attrib 3    0.296529582061861
+    Attrib 4    0.3147898901519186
+    Attrib 5    -0.4624757292545257
+    Attrib 6    -0.019546873821984636
+    Attrib 7    -0.05647649560983058
+    Attrib 8    -0.01893930067203947
+    Attrib 9    0.10918913224619334
+    Attrib 10    0.29930165592972124
+    Attrib 11    0.3122584740538865
+    Attrib 12    0.3431020811160623
+    Attrib 13    0.3266090352711651
+    Attrib 14    0.14461201322230355
+    Attrib 15    0.14186143758106584
+    Attrib 16    0.14665976779008133
+    Attrib 17    -0.5240419490861913
+    Attrib 18    0.03517507916231199
+    Attrib 19    0.10788406390048716
+    Attrib 20    0.1034639937134745
+    Attrib 21    -0.3576865873377476
+    Attrib 22    -0.014227178795981631
+    Attrib 23    0.13599405754722854
+    Attrib 24    0.1407742881254927
+    Attrib 25    0.15872897514054987
+    Attrib 26    0.21288006490022335
+    Attrib 27    0.17840596341164366
+    Attrib 28    0.25163182658647637
+    Attrib 29    0.26334659245464803
+    Attrib 30    0.13830055929569451
+    Attrib 31    0.14563153855309055
+    Attrib 32    0.19387885875859145
+    Attrib 33    -0.406757834315844
+    Attrib 34    -0.1838726821516098
+    Attrib 35    -0.08145888002783867
+    Attrib 36    -0.07576509379050511
+    Attrib 37    -0.1194032680911056
+    Attrib 38    -0.08096870728703592
+    Attrib 39    -0.0013797212810095372
+    Attrib 40    -0.08478552111509836
+    Attrib 41    -0.06987301467143714
+    Attrib 42    -0.05440808644749
+    Attrib 43    -0.05104908015918102
+    Attrib 44    0.0015001603298751215
+    Attrib 45    -0.019189353548273426
+    Attrib 46    -0.07250301244334494
+    Attrib 47    -0.0905298609494059
+    Attrib 48    -0.15791963905948644
+Sigmoid Node 18
+    Inputs    Weights
+    Threshold    -0.6633439505705752
+    Attrib 1    -3.225276019138641
+    Attrib 2    0.6679735735907222
+    Attrib 3    1.2187978185278758
+    Attrib 4    1.226309718806148
+    Attrib 5    -1.9485544060470212
+    Attrib 6    -1.081211623199469
+    Attrib 7    -0.49697451466961146
+    Attrib 8    -0.4599164402891206
+    Attrib 9    0.3684006858777225
+    Attrib 10    1.1150027419848687
+    Attrib 11    1.3337936726861606
+    Attrib 12    1.1184222040079532
+    Attrib 13    1.110643215600135
+    Attrib 14    -0.7521116809958042
+    Attrib 15    -0.7900657762294355
+    Attrib 16    -0.7759216325950682
+    Attrib 17    -4.075409813554365
+    Attrib 18    -0.4544254133515452
+    Attrib 19    0.25363329213998115
+    Attrib 20    0.32825487678806287
+    Attrib 21    -1.4911333506775264
+    Attrib 22    -0.7839197338374971
+    Attrib 23    0.5911988622718761
+    Attrib 24    0.5666613089230489
+    Attrib 25    0.5601295761109765
+    Attrib 26    0.6783780892864635
+    Attrib 27    0.789730439641963
+    Attrib 28    0.3719496233723867
+    Attrib 29    0.41042995644744273
+    Attrib 30    -0.44454118572729234
+    Attrib 31    -0.460978162119198
+    Attrib 32    -0.464689825947616
+    Attrib 33    -2.979691667869632
+    Attrib 34    -0.6337672566275515
+    Attrib 35    0.13674242174325493
+    Attrib 36    0.26654542094756506
+    Attrib 37    -1.1015825653744284
+    Attrib 38    -1.1373329293939463
+    Attrib 39    0.3800163178764707
+    Attrib 40    0.32178341184068127
+    Attrib 41    0.2752736161689855
+    Attrib 42    0.418599023866738
+    Attrib 43    0.5534389216387646
+    Attrib 44    -0.31250385352401655
+    Attrib 45    -0.31204254468414716
+    Attrib 46    -2.200396278064786
+    Attrib 47    -2.3758626005612573
+    Attrib 48    -2.3085044955344154
+Sigmoid Node 19
+    Inputs    Weights
+    Threshold    -0.4503744119585388
+    Attrib 1    -3.068979271706064
+    Attrib 2    0.35026735503291945
+    Attrib 3    0.9191968705864418
+    Attrib 4    0.9330048085242686
+    Attrib 5    -1.5680185342172634
+    Attrib 6    0.22661888000333047
+    Attrib 7    -0.3994193457572428
+    Attrib 8    -0.38224119833883696
+    Attrib 9    0.32211484831853104
+    Attrib 10    0.9212207312279377
+    Attrib 11    1.0739081444198613
+    Attrib 12    0.7990550072546097
+    Attrib 13    0.7957749206547109
+    Attrib 14    -0.6327789411260326
+    Attrib 15    -0.6176812719893136
+    Attrib 16    -0.6117767968419807
+    Attrib 17    -3.7105163684767657
+    Attrib 18    -0.4061597038400045
+    Attrib 19    0.18651165733899328
+    Attrib 20    0.32237819868586853
+    Attrib 21    -1.2088778571724716
+    Attrib 22    -0.09140517221643049
+    Attrib 23    0.5312431303738852
+    Attrib 24    0.4732603035589675
+    Attrib 25    0.5192923403151847
+    Attrib 26    0.6198378936376239
+    Attrib 27    0.6649162908310227
+    Attrib 28    0.4118907186254765
+    Attrib 29    0.3345624546869807
+    Attrib 30    -0.47531437568812746
+    Attrib 31    -0.49318757051574313
+    Attrib 32    -0.494115684918562
+    Attrib 33    -2.6901803838671037
+    Attrib 34    -0.3268935535181741
+    Attrib 35    0.2916467571902038
+    Attrib 36    0.36072322323496864
+    Attrib 37    -1.052653469206918
+    Attrib 38    -0.3802400276989656
+    Attrib 39    0.4315872059653505
+    Attrib 40    0.5082258291105369
+    Attrib 41    0.41387037389128517
+    Attrib 42    0.5450492843088893
+    Attrib 43    0.6218022386589394
+    Attrib 44    0.023529688713065447
+    Attrib 45    0.08742924691385774
+    Attrib 46    -1.8724618214371547
+    Attrib 47    -1.8513700047583472
+    Attrib 48    -1.8608091955929524
+Sigmoid Node 20
+    Inputs    Weights
+    Threshold    -0.4258798187255401
+    Attrib 1    -4.153131087564839
+    Attrib 2    0.21922953365052247
+    Attrib 3    0.8553394025479695
+    Attrib 4    0.8441537814629334
+    Attrib 5    -1.7123567772288935
+    Attrib 6    0.36490190046465404
+    Attrib 7    -0.9072601894185562
+    Attrib 8    -0.9017045628222206
+    Attrib 9    -0.04257307397796649
+    Attrib 10    0.7488170177575554
+    Attrib 11    1.0076341081325804
+    Attrib 12    1.1829338745448665
+    Attrib 13    1.1851154776018005
+    Attrib 14    -0.698644062423787
+    Attrib 15    -0.7162080837163
+    Attrib 16    -0.7881008379287548
+    Attrib 17    -4.8251744267070125
+    Attrib 18    -0.8378472519394929
+    Attrib 19    -0.008332381232842946
+    Attrib 20    0.11907107120596773
+    Attrib 21    -1.3926100789372635
+    Attrib 22    0.33388659418778416
+    Attrib 23    0.3895733166204829
+    Attrib 24    0.40710647172859415
+    Attrib 25    0.3164169818733395
+    Attrib 26    0.45798668260392345
+    Attrib 27    0.7014932531101876
+    Attrib 28    0.6165527795559299
+    Attrib 29    0.6319414996059723
+    Attrib 30    -0.0385522224105555
+    Attrib 31    -0.06690590767640642
+    Attrib 32    -0.01314460883939263
+    Attrib 33    -3.8168010589653267
+    Attrib 34    -0.7234736781731621
+    Attrib 35    0.20820895240780873
+    Attrib 36    0.3898836343648394
+    Attrib 37    -1.3753273309487077
+    Attrib 38    -0.20639992673663232
+    Attrib 39    0.6604553048390104
+    Attrib 40    0.6795299726596954
+    Attrib 41    0.5098532487266197
+    Attrib 42    0.6640572167095337
+    Attrib 43    0.753053093190383
+    Attrib 44    1.517891668031845
+    Attrib 45    1.436386970723257
+    Attrib 46    -0.7563885533517898
+    Attrib 47    -0.8508407786638517
+    Attrib 48    -0.8754754699981282
+Sigmoid Node 21
+    Inputs    Weights
+    Threshold    -0.13135658265130837
+    Attrib 1    -1.031261527394814
+    Attrib 2    0.28655245706412635
+    Attrib 3    0.5632508722735432
+    Attrib 4    0.5614872747642824
+    Attrib 5    -0.8383446928537649
+    Attrib 6    0.26492046995951535
+    Attrib 7    -0.09350902624626574
+    Attrib 8    -0.10005381058701816
+    Attrib 9    0.21248525190398296
+    Attrib 10    0.4835511077708217
+    Attrib 11    0.5672546159380157
+    Attrib 12    0.5129750539217501
+    Attrib 13    0.529483874340327
+    Attrib 14    -0.09702403839633816
+    Attrib 15    -0.1098520236660715
+    Attrib 16    -0.03126604226816298
+    Attrib 17    -1.398031910840127
+    Attrib 18    -0.08677028031425318
+    Attrib 19    0.15791093833014672
+    Attrib 20    0.2447533697038459
+    Attrib 21    -0.6196175705242828
+    Attrib 22    0.17170902780367955
+    Attrib 23    0.2870767289158549
+    Attrib 24    0.26588282800326424
+    Attrib 25    0.28073707566933676
+    Attrib 26    0.29407773588611413
+    Attrib 27    0.40293143623696115
+    Attrib 28    0.2251693011821221
+    Attrib 29    0.2436921316099996
+    Attrib 30    -0.07137791639538046
+    Attrib 31    -0.07165374388583821
+    Attrib 32    -0.05610993515307423
+    Attrib 33    -1.1413985135787486
+    Attrib 34    -0.3361413352730202
+    Attrib 35    -0.03591432856238272
+    Attrib 36    -0.06342934332142237
+    Attrib 37    -0.29103649856405284
+    Attrib 38    -0.03455584791983797
+    Attrib 39    -0.015227135034691515
+    Attrib 40    0.06241670582832757
+    Attrib 41    -0.040932626387040094
+    Attrib 42    0.06719962248436516
+    Attrib 43    0.08550076899272537
+    Attrib 44    -0.13980249361364766
+    Attrib 45    -0.11582319913400733
+    Attrib 46    -0.7595141260378718
+    Attrib 47    -0.7748891008590798
+    Attrib 48    -0.7661349232760464
+Sigmoid Node 22
+    Inputs    Weights
+    Threshold    0.006840990197076949
+    Attrib 1    0.7883196740150781
+    Attrib 2    -0.0881966310267732
+    Attrib 3    -0.17159493172834417
+    Attrib 4    -0.20146392065555657
+    Attrib 5    0.37403854580422324
+    Attrib 6    -0.18982646803284398
+    Attrib 7    0.1697349537938959
+    Attrib 8    0.1588216974216298
+    Attrib 9    -0.003707170483870313
+    Attrib 10    -0.2006430125983927
+    Attrib 11    -0.24242432478749804
+    Attrib 12    -0.08079249594544484
+    Attrib 13    -0.1197173646237175
+    Attrib 14    0.27462527511439183
+    Attrib 15    0.22107947634541258
+    Attrib 16    0.25937783791731855
+    Attrib 17    0.9195945446796316
+    Attrib 18    0.18778939349818008
+    Attrib 19    -0.008833940461873914
+    Attrib 20    0.0024267183246200557
+    Attrib 21    0.27681806869583775
+    Attrib 22    -0.14493388410716138
+    Attrib 23    -0.06661420217382955
+    Attrib 24    -0.05815144319575793
+    Attrib 25    -0.08575042550777484
+    Attrib 26    -0.10758257190026882
+    Attrib 27    -0.1151241433471961
+    Attrib 28    0.003366581204763761
+    Attrib 29    -0.010756162765440901
+    Attrib 30    0.1194023689025613
+    Attrib 31    0.06928922313995496
+    Attrib 32    0.09199350192280946
+    Attrib 33    0.5615270192455482
+    Attrib 34    0.15571636415352993
+    Attrib 35    -0.011274149831530756
+    Attrib 36    -0.02621386508959272
+    Attrib 37    0.21272310553893992
+    Attrib 38    -4.476837464632322E-4
+    Attrib 39    -0.12911903524939053
+    Attrib 40    -0.09760457536279683
+    Attrib 41    -0.09109107215048862
+    Attrib 42    -0.09231940370336263
+    Attrib 43    -0.10883805128058623
+    Attrib 44    -0.08039682916514934
+    Attrib 45    -0.06503659773601805
+    Attrib 46    0.3442713225123393
+    Attrib 47    0.38672956712174
+    Attrib 48    0.3746127125699379
+Sigmoid Node 23
+    Inputs    Weights
+    Threshold    -0.1257322802006278
+    Attrib 1    0.6148121304987555
+    Attrib 2    -0.15127310746405248
+    Attrib 3    -0.2289309736731159
+    Attrib 4    -0.24422261279658794
+    Attrib 5    0.38220911690711534
+    Attrib 6    0.08030017605712013
+    Attrib 7    0.19874702697711127
+    Attrib 8    0.17155950391103914
+    Attrib 9    -0.016312842258608806
+    Attrib 10    -0.1606666554124067
+    Attrib 11    -0.22360898404563798
+    Attrib 12    -0.2827131199376342
+    Attrib 13    -0.28210080666549336
+    Attrib 14    0.10102013790643814
+    Attrib 15    0.07919493456490659
+    Attrib 16    0.06705783204397127
+    Attrib 17    0.6758381800750476
+    Attrib 18    0.08309625292899216
+    Attrib 19    -0.032860964225233644
+    Attrib 20    -0.10747432608927644
+    Attrib 21    0.32800103048921087
+    Attrib 22    -0.036706970115071305
+    Attrib 23    -0.19055118646528144
+    Attrib 24    -0.13347579083569075
+    Attrib 25    -0.0966399210318424
+    Attrib 26    -0.17628427587529713
+    Attrib 27    -0.22968542582746979
+    Attrib 28    -0.22937258315965314
+    Attrib 29    -0.18640937550263142
+    Attrib 30    -0.238185538531806
+    Attrib 31    -0.19170931894738139
+    Attrib 32    -0.19015807600411494
+    Attrib 33    0.44852785973518583
+    Attrib 34    0.1018056967887461
+    Attrib 35    -0.08697836253974853
+    Attrib 36    -0.12025791469061706
+    Attrib 37    0.23299054648600276
+    Attrib 38    0.1944952100596438
+    Attrib 39    -0.15972931788510855
+    Attrib 40    -0.10855747846352688
+    Attrib 41    -0.06106162243553939
+    Attrib 42    -0.10550729851912775
+    Attrib 43    -0.14097719764339933
+    Attrib 44    -0.6290069369809653
+    Attrib 45    -0.6748221419720773
+    Attrib 46    -0.38777748420019986
+    Attrib 47    -0.3965920765140249
+    Attrib 48    -0.4115610119464829
+Sigmoid Node 24
+    Inputs    Weights
+    Threshold    -0.012045036538415741
+    Attrib 1    -0.5500155532937504
+    Attrib 2    0.24984215233333795
+    Attrib 3    0.44279554552624484
+    Attrib 4    0.41286491883698445
+    Attrib 5    -0.6431094479144593
+    Attrib 6    0.005867957174847866
+    Attrib 7    -0.0485945784633976
+    Attrib 8    -0.033785270601116156
+    Attrib 9    0.1406967030647756
+    Attrib 10    0.34086436770365103
+    Attrib 11    0.4602796507458399
+    Attrib 12    0.44001810852355505
+    Attrib 13    0.4416922574371791
+    Attrib 14    0.07313793193243182
+    Attrib 15    0.0908066155568715
+    Attrib 16    0.0719182147758575
+    Attrib 17    -0.8258107302544917
+    Attrib 18    -0.029011272400145588
+    Attrib 19    0.10236664675181267
+    Attrib 20    0.13810151579819024
+    Attrib 21    -0.4364661806733814
+    Attrib 22    0.12132768815608656
+    Attrib 23    0.13441000244681206
+    Attrib 24    0.14658677350568172
+    Attrib 25    0.216217525797725
+    Attrib 26    0.2115781942589051
+    Attrib 27    0.2652904916832118
+    Attrib 28    0.20388217169848474
+    Attrib 29    0.2505707967984342
+    Attrib 30    0.15541396790704434
+    Attrib 31    0.13599890446328827
+    Attrib 32    0.12887162322008056
+    Attrib 33    -0.6808843095758172
+    Attrib 34    -0.28979433671291477
+    Attrib 35    -0.133626178012545
+    Attrib 36    -0.03953023942609013
+    Attrib 37    -0.12378771348382106
+    Attrib 38    -0.04313654657170965
+    Attrib 39    -0.035734093482133245
+    Attrib 40    -0.04808624414795182
+    Attrib 41    -0.07027396461253581
+    Attrib 42    -0.08764859899803934
+    Attrib 43    -0.002623703270255792
+    Attrib 44    -0.02283275045622051
+    Attrib 45    -0.09026126796887267
+    Attrib 46    -0.3407623983721369
+    Attrib 47    -0.3083451556744291
+    Attrib 48    -0.3610779527131575
+Sigmoid Node 25
+    Inputs    Weights
+    Threshold    -0.025033602800189247
+    Attrib 1    -0.701961968135744
+    Attrib 2    0.23627756282438067
+    Attrib 3    0.3877277639085688
+    Attrib 4    0.3757588670108769
+    Attrib 5    -0.6216016905708298
+    Attrib 6    0.04624065262898619
+    Attrib 7    -0.08581666081999936
+    Attrib 8    -0.09650724731400304
+    Attrib 9    0.1097356460718405
+    Attrib 10    0.32976255752757994
+    Attrib 11    0.40009995556150063
+    Attrib 12    0.4901855544312168
+    Attrib 13    0.5009949545772979
+    Attrib 14    0.11061712384206465
+    Attrib 15    0.014257032806352878
+    Attrib 16    0.07011134301110644
+    Attrib 17    -1.007813616870217
+    Attrib 18    -0.08652259252159147
+    Attrib 19    0.07454618402735462
+    Attrib 20    0.15805252317904778
+    Attrib 21    -0.3962224733296796
+    Attrib 22    0.0811116634434801
+    Attrib 23    0.1944473438903319
+    Attrib 24    0.1559152876697845
+    Attrib 25    0.13595356174291223
+    Attrib 26    0.2545903238525565
+    Attrib 27    0.23589007561980832
+    Attrib 28    0.28894078504278775
+    Attrib 29    0.26068183849008597
+    Attrib 30    0.12283309513128375
+    Attrib 31    0.11106288989159523
+    Attrib 32    0.10146273252372444
+    Attrib 33    -0.7400671696678963
+    Attrib 34    -0.2761262574079736
+    Attrib 35    -0.07921399162801251
+    Attrib 36    -0.012256224085140927
+    Attrib 37    -0.2077384617714549
+    Attrib 38    -0.10256395289049368
+    Attrib 39    -0.07120901271953188
+    Attrib 40    -0.0698944670249501
+    Attrib 41    -0.056073081872729316
+    Attrib 42    -0.0515941254181145
+    Attrib 43    -0.012971545873371447
+    Attrib 44    0.06328173016862175
+    Attrib 45    0.04640070570839853
+    Attrib 46    -0.21309488445834165
+    Attrib 47    -0.2401351790260225
+    Attrib 48    -0.2554148495657042
+Sigmoid Node 26
+    Inputs    Weights
+    Threshold    -0.16821336959436173
+    Attrib 1    -1.1805995356456804
+    Attrib 2    0.3426619131639775
+    Attrib 3    0.5679336303117365
+    Attrib 4    0.5388523032170148
+    Attrib 5    -0.8372254499685435
+    Attrib 6    0.2885635778002028
+    Attrib 7    -0.12536764879140833
+    Attrib 8    -0.15375596398802108
+    Attrib 9    0.24388796631063053
+    Attrib 10    0.47967027191934253
+    Attrib 11    0.550009795877479
+    Attrib 12    0.508342481683562
+    Attrib 13    0.5517093013118268
+    Attrib 14    -0.14078197913435694
+    Attrib 15    -0.08848293163906369
+    Attrib 16    -0.14640294743540333
+    Attrib 17    -1.611024596151846
+    Attrib 18    -0.09680904946257064
+    Attrib 19    0.20986342507839784
+    Attrib 20    0.22294613198957797
+    Attrib 21    -0.6801799486377087
+    Attrib 22    0.1805724684502886
+    Attrib 23    0.28869911447590046
+    Attrib 24    0.31963782996684376
+    Attrib 25    0.26102148585263757
+    Attrib 26    0.3819011864656451
+    Attrib 27    0.3964260531982602
+    Attrib 28    0.26055482549091175
+    Attrib 29    0.2329831611799592
+    Attrib 30    -0.028213577948022085
+    Attrib 31    -0.07970315001832907
+    Attrib 32    -0.027876759860158085
+    Attrib 33    -1.2692952148424732
+    Attrib 34    -0.2940587721284516
+    Attrib 35    -0.0548088173628171
+    Attrib 36    -0.029641059147040617
+    Attrib 37    -0.315061474003772
+    Attrib 38    -0.03891590169582812
+    Attrib 39    0.030747964371406547
+    Attrib 40    0.060773456489674985
+    Attrib 41    -0.020680807228523047
+    Attrib 42    0.10134635338748375
+    Attrib 43    0.13904102932479812
+    Attrib 44    -0.07407400488298348
+    Attrib 45    -0.14414271065887574
+    Attrib 46    -0.8451864072157947
+    Attrib 47    -0.8170538266137164
+    Attrib 48    -0.8761557566320595
+Class 0
+    Input
+    Node 0
+Class 1
+    Input
+    Node 1
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         244               94.5736 %
+Incorrectly Classified Instances        14                5.4264 %
+Kappa statistic                          0.73  
+Mean absolute error                      0.062 
+Root mean squared error                  0.2091
+Coverage of cases (0.95 level)          98.062  %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.611    0.000    1.000      0.611    0.759      0.758    0.961     0.929     0
+                 1.000    0.389    0.941      1.000    0.969      0.758    0.961     0.977     1
+Weighted Avg.    0.946    0.335    0.949      0.946    0.940      0.758    0.961     0.970     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22  14 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.functions.SGD -i -o -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001
+
+Time taken to build model: 0.11 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         257               97.3485 %
+Incorrectly Classified Instances         7                2.6515 %
+Kappa statistic                          0.8429
+Mean absolute error                      0.0265
+Root mean squared error                  0.1628
+Relative absolute error                 13.8131 %
+Root relative squared error             52.8805 %
+Coverage of cases (0.95 level)          97.3485 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.750    0.000    1.000      0.750    0.857      0.853    0.875     0.777     0
+                 1.000    0.250    0.971      1.000    0.985      0.853    0.875     0.971     1
+Weighted Avg.    0.973    0.223    0.974      0.973    0.972      0.853    0.875     0.951     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  21   7 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         256               96.9697 %
+Incorrectly Classified Instances         8                3.0303 %
+Kappa statistic                          0.8235
+Mean absolute error                      0.0303
+Root mean squared error                  0.1741
+Relative absolute error                 15.7621 %
+Root relative squared error             56.5166 %
+Coverage of cases (0.95 level)          96.9697 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.750    0.004    0.955      0.750    0.840      0.831    0.873     0.742     0
+                 0.996    0.250    0.971      0.996    0.983      0.831    0.873     0.971     1
+Weighted Avg.    0.970    0.224    0.969      0.970    0.968      0.831    0.873     0.947     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  21   7 |   a = 0
+   1 235 |   b = 1
+
+
+Loss function: Hinge loss (SVM)
+
+49 = 
+
+        -4.521  (normalized) 1
+ +      -0.7962 (normalized) 2
+ +      -0.3386 (normalized) 3
+ +      -0.3274 (normalized) 4
+ +       0.2088 (normalized) 5
+ +      -0.3991 (normalized) 6
+ +      -0.9275 (normalized) 7
+ +      -0.9275 (normalized) 8
+ +      -0.4502 (normalized) 9
+ +      -0.0588 (normalized) 10
+ +       0.0347 (normalized) 11
+ +       0.6002 (normalized) 12
+ +       0.6002 (normalized) 13
+ +      -0.4663 (normalized) 14
+ +      -0.5025 (normalized) 15
+ +      -0.4959 (normalized) 16
+ +      -5.5502 (normalized) 17
+ +      -1.3358 (normalized) 18
+ +      -0.8304 (normalized) 19
+ +      -0.7229 (normalized) 20
+ +       0.3068 (normalized) 21
+ +       0.5399 (normalized) 22
+ +      -0.2748 (normalized) 23
+ +      -0.2748 (normalized) 24
+ +      -0.3595 (normalized) 25
+ +      -0.2397 (normalized) 26
+ +      -0.1802 (normalized) 27
+ +       0.5296 (normalized) 28
+ +       0.5296 (normalized) 29
+ +      -0.1502 (normalized) 30
+ +      -0.0074 (normalized) 31
+ +      -0.0251 (normalized) 32
+ +      -0.2458 (normalized) 33
+ +      -0.5124 (normalized) 34
+ +      -0.3959 (normalized) 35
+ +      -0.359  (normalized) 36
+ +       0.5324 (normalized) 37
+ +       0.0767 (normalized) 38
+ +      -0.6233 (normalized) 39
+ +      -0.6233 (normalized) 40
+ +      -0.728  (normalized) 41
+ +      -0.5854 (normalized) 42
+ +      -0.5321 (normalized) 43
+ +       0.5107 (normalized) 44
+ +       0.5107 (normalized) 45
+ +      -0.8002 (normalized) 46
+ +      -0.2284 (normalized) 47
+ +      -0.2794 (normalized) 48
+ +       0.52  
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         242               93.7984 %
+Incorrectly Classified Instances        16                6.2016 %
+Kappa statistic                          0.6827
+Mean absolute error                      0.062 
+Root mean squared error                  0.249 
+Coverage of cases (0.95 level)          93.7984 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.556    0.000    1.000      0.556    0.714      0.720    0.778     0.618     0
+                 1.000    0.444    0.933      1.000    0.965      0.720    0.778     0.933     1
+Weighted Avg.    0.938    0.382    0.942      0.938    0.930      0.720    0.778     0.889     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  20  16 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.functions.SimpleLogistic -i -o -I 0 -M 500 -H 50 -W 0.0
+
+Time taken to build model: 0.42 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         259               98.1061 %
+Incorrectly Classified Instances         5                1.8939 %
+Kappa statistic                          0.8916
+Mean absolute error                      0.0338
+Root mean squared error                  0.1329
+Relative absolute error                 17.6251 %
+Root relative squared error             43.146  %
+Coverage of cases (0.95 level)          99.2424 %
+Mean rel. region size (0.95 level)      52.6515 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.821    0.000    1.000      0.821    0.902      0.897    0.961     0.943     0
+                 1.000    0.179    0.979      1.000    0.990      0.897    0.961     0.978     1
+Weighted Avg.    0.981    0.160    0.981      0.981    0.980      0.897    0.961     0.974     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  23   5 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         258               97.7273 %
+Incorrectly Classified Instances         6                2.2727 %
+Kappa statistic                          0.8763
+Mean absolute error                      0.0367
+Root mean squared error                  0.1368
+Relative absolute error                 19.067  %
+Root relative squared error             44.4089 %
+Coverage of cases (0.95 level)          99.2424 %
+Mean rel. region size (0.95 level)      54.1667 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.857    0.008    0.923      0.857    0.889      0.877    0.983     0.903     0
+                 0.992    0.143    0.983      0.992    0.987      0.877    0.983     0.998     1
+Weighted Avg.    0.977    0.129    0.977      0.977    0.977      0.877    0.983     0.987     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  24   4 |   a = 0
+   2 234 |   b = 1
+
+
+SimpleLogistic:
+
+Class 0 :
+-154.96 + 
+[1] * 0.81 +
+[5] * 152.41 +
+[17] * 0.49 +
+[33] * 0.07 +
+[46] * 0   
+
+Class 1 :
+154.96 + 
+[1] * -0.81 +
+[5] * -152.41 +
+[17] * -0.49 +
+[33] * -0.07 +
+[46] * 0   
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         245               94.9612 %
+Incorrectly Classified Instances        13                5.0388 %
+Kappa statistic                          0.7528
+Mean absolute error                      0.0639
+Root mean squared error                  0.1747
+Coverage of cases (0.95 level)          99.6124 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.639    0.000    1.000      0.639    0.780      0.777    0.972     0.976     0
+                 1.000    0.361    0.945      1.000    0.972      0.777    0.972     0.996     1
+Weighted Avg.    0.950    0.311    0.952      0.950    0.945      0.777    0.972     0.993     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  23  13 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.functions.SMO -i -o -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+
+Time taken to build model: 0.11 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         254               96.2121 %
+Incorrectly Classified Instances        10                3.7879 %
+Kappa statistic                          0.7715
+Mean absolute error                      0.0379
+Root mean squared error                  0.1946
+Relative absolute error                 19.7329 %
+Root relative squared error             63.2043 %
+Coverage of cases (0.95 level)          96.2121 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.679    0.004    0.950      0.679    0.792      0.785    0.837     0.679     0
+                 0.996    0.321    0.963      0.996    0.979      0.785    0.837     0.963     1
+Weighted Avg.    0.962    0.288    0.962      0.962    0.959      0.785    0.837     0.933     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  19   9 |   a = 0
+   1 235 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         252               95.4545 %
+Incorrectly Classified Instances        12                4.5455 %
+Kappa statistic                          0.7155
+Mean absolute error                      0.0455
+Root mean squared error                  0.2132
+Relative absolute error                 23.6431 %
+Root relative squared error             69.2185 %
+Coverage of cases (0.95 level)          95.4545 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.607    0.004    0.944      0.607    0.739      0.737    0.801     0.615     0
+                 0.996    0.393    0.955      0.996    0.975      0.737    0.801     0.955     1
+Weighted Avg.    0.955    0.352    0.954      0.955    0.950      0.737    0.801     0.919     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  17  11 |   a = 0
+   1 235 |   b = 1
+
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 1
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.6444 * (normalized) 1
+ +      -0.3869 * (normalized) 2
+ +      -0.1904 * (normalized) 3
+ +      -0.1856 * (normalized) 4
+ +      -0.0893 * (normalized) 5
+ +      -0.3179 * (normalized) 6
+ +      -0.5894 * (normalized) 7
+ +      -0.5894 * (normalized) 8
+ +      -0.3451 * (normalized) 9
+ +      -0.1506 * (normalized) 10
+ +      -0.0901 * (normalized) 11
+ +       0.1553 * (normalized) 12
+ +       0.1553 * (normalized) 13
+ +      -0.1615 * (normalized) 14
+ +      -0.2074 * (normalized) 15
+ +      -0.2055 * (normalized) 16
+ +      -2.5183 * (normalized) 17
+ +      -0.7348 * (normalized) 18
+ +      -0.5107 * (normalized) 19
+ +      -0.4533 * (normalized) 20
+ +      -0.0616 * (normalized) 21
+ +      -0.2106 * (normalized) 22
+ +      -0.2329 * (normalized) 23
+ +      -0.2329 * (normalized) 24
+ +      -0.2884 * (normalized) 25
+ +      -0.2266 * (normalized) 26
+ +      -0.1936 * (normalized) 27
+ +       0.1929 * (normalized) 28
+ +       0.1929 * (normalized) 29
+ +       0.0446 * (normalized) 30
+ +       0.169  * (normalized) 31
+ +       0.1531 * (normalized) 32
+ +      -1.1989 * (normalized) 33
+ +      -0.5267 * (normalized) 34
+ +      -0.3585 * (normalized) 35
+ +      -0.3223 * (normalized) 36
+ +      -0.0048 * (normalized) 37
+ +       0.0002 * (normalized) 38
+ +      -0.3212 * (normalized) 39
+ +      -0.3212 * (normalized) 40
+ +      -0.3735 * (normalized) 41
+ +      -0.3066 * (normalized) 42
+ +      -0.2826 * (normalized) 43
+ +       0.0308 * (normalized) 44
+ +       0.0308 * (normalized) 45
+ +      -0.3098 * (normalized) 46
+ +       0.0083 * (normalized) 47
+ +      -0.0283 * (normalized) 48
+ +       1.7181
+
+Number of kernel evaluations: 9438 (78.266% cached)
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         233               90.3101 %
+Incorrectly Classified Instances        25                9.6899 %
+Kappa statistic                          0.4309
+Mean absolute error                      0.0969
+Root mean squared error                  0.3113
+Coverage of cases (0.95 level)          90.3101 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.306    0.000    1.000      0.306    0.468      0.524    0.653     0.402     0
+                 1.000    0.694    0.899      1.000    0.947      0.524    0.653     0.899     1
+Weighted Avg.    0.903    0.598    0.913      0.903    0.880      0.524    0.653     0.830     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  11  25 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.functions.VotedPerceptron -i -o -I 1 -E 1.0 -S 1 -M 10000
+
+Time taken to build model: 0.05 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         243               92.0455 %
+Incorrectly Classified Instances        21                7.9545 %
+Kappa statistic                          0.6326
+Mean absolute error                      0.0795
+Root mean squared error                  0.282 
+Relative absolute error                 41.4392 %
+Root relative squared error             91.5918 %
+Coverage of cases (0.95 level)          92.0455 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.064    0.595      0.786    0.677      0.641    0.886     0.587     0
+                 0.936    0.214    0.974      0.936    0.955      0.641    0.884     0.976     1
+Weighted Avg.    0.920    0.198    0.933      0.920    0.925      0.641    0.884     0.934     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  22   6 |   a = 0
+  15 221 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         241               91.2879 %
+Incorrectly Classified Instances        23                8.7121 %
+Kappa statistic                          0.6283
+Mean absolute error                      0.0873
+Root mean squared error                  0.2952
+Relative absolute error                 45.4143 %
+Root relative squared error             95.8333 %
+Coverage of cases (0.95 level)          91.2879 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.857    0.081    0.558      0.857    0.676      0.648    0.889     0.503     0
+                 0.919    0.143    0.982      0.919    0.950      0.648    0.894     0.979     1
+Weighted Avg.    0.913    0.136    0.937      0.913    0.921      0.648    0.893     0.928     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  24   4 |   a = 0
+  19 217 |   b = 1
+
+
+VotedPerceptron: Number of perceptrons=53
+
+
+=== Error on test data ===
+
+Correctly Classified Instances          31               12.0155 %
+Incorrectly Classified Instances       227               87.9845 %
+Kappa statistic                         -0.0823
+Mean absolute error                      0.8798
+Root mean squared error                  0.9379
+Coverage of cases (0.95 level)          12.0155 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.694    0.973    0.104      0.694    0.181      -0.389   0.278     0.100     0
+                 0.027    0.306    0.353      0.027    0.050      -0.389   0.129     0.773     1
+Weighted Avg.    0.120    0.399    0.318      0.120    0.068      -0.389   0.150     0.679     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25  11 |   a = 0
+ 216   6 |   b = 1
+
+weka.classifiers.rules.DecisionTable -i -o -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+
+Time taken to build model: 0.35 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         263               99.6212 %
+Incorrectly Classified Instances         1                0.3788 %
+Kappa statistic                          0.9803
+Mean absolute error                      0.0226
+Root mean squared error                  0.0516
+Relative absolute error                 11.7529 %
+Root relative squared error             16.7445 %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      53.5985 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.004    0.966      1.000    0.982      0.981    1.000     1.000     0
+                 0.996    0.000    1.000      0.996    0.998      0.981    1.000     1.000     1
+Weighted Avg.    0.996    0.000    0.996      0.996    0.996      0.981    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   1 235 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         261               98.8636 %
+Incorrectly Classified Instances         3                1.1364 %
+Kappa statistic                          0.9371
+Mean absolute error                      0.0304
+Root mean squared error                  0.109 
+Relative absolute error                 15.7886 %
+Root relative squared error             35.3784 %
+Coverage of cases (0.95 level)          98.8636 %
+Mean rel. region size (0.95 level)      51.3258 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.939    0.959     0.924     0
+                 1.000    0.107    0.987      1.000    0.994      0.939    0.959     0.990     1
+Weighted Avg.    0.989    0.096    0.989      0.989    0.988      0.939    0.959     0.983     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 236 |   b = 1
+
+
+Decision Table:
+
+Number of training instances: 264
+Number of Rules : 7
+Non matches covered by Majority class.
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 324
+	Merit of best subset found:  100    
+Evaluation (for feature selection): CV (leave one out) 
+Feature set: 1,33,49
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         222               86.0465 %
+Incorrectly Classified Instances        36               13.9535 %
+Kappa statistic                          0     
+Mean absolute error                      0.2319
+Root mean squared error                  0.3524
+Coverage of cases (0.95 level)         100      %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.000     0.140     0
+                 1.000    1.000    0.860      1.000    0.925      0.000    0.000     0.860     1
+Weighted Avg.    0.860    0.860    0.740      0.860    0.796      0.000    0.000     0.760     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  36 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.rules.JRip -i -o -F 3 -N 2.0 -O 2 -S 1
+
+Time taken to build model: 0.14 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         264              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         262               99.2424 %
+Incorrectly Classified Instances         2                0.7576 %
+Kappa statistic                          0.96  
+Mean absolute error                      0.0087
+Root mean squared error                  0.0871
+Relative absolute error                  4.5166 %
+Root relative squared error             28.2863 %
+Coverage of cases (0.95 level)          99.2424 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.964    0.004    0.964      0.964    0.964      0.960    0.976     0.931     0
+                 0.996    0.036    0.996      0.996    0.996      0.960    0.976     0.994     1
+Weighted Avg.    0.992    0.032    0.992      0.992    0.992      0.960    0.976     0.988     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  27   1 |   a = 0
+   1 235 |   b = 1
+
+
+JRIP rules:
+===========
+
+(33 >= 1) and (1 >= 0) => 49=0 (28.0/0.0)
+ => 49=1 (236.0/0.0)
+
+Number of Rules : 2
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         222               86.0465 %
+Incorrectly Classified Instances        36               13.9535 %
+Kappa statistic                          0     
+Mean absolute error                      0.1395
+Root mean squared error                  0.3735
+Coverage of cases (0.95 level)          86.0465 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.140     0
+                 1.000    1.000    0.860      1.000    0.925      0.000    0.500     0.860     1
+Weighted Avg.    0.860    0.860    0.740      0.860    0.796      0.000    0.500     0.760     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  36 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.rules.OneR -i -o -B 6
+
+Time taken to build model: 0.07 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         261               98.8636 %
+Incorrectly Classified Instances         3                1.1364 %
+Kappa statistic                          0.9371
+Mean absolute error                      0.0114
+Root mean squared error                  0.1066
+Relative absolute error                  5.9199 %
+Root relative squared error             34.6184 %
+Coverage of cases (0.95 level)          98.8636 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.939    0.946     0.904     0
+                 1.000    0.107    0.987      1.000    0.994      0.939    0.946     0.987     1
+Weighted Avg.    0.989    0.096    0.989      0.989    0.988      0.939    0.946     0.979     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         261               98.8636 %
+Incorrectly Classified Instances         3                1.1364 %
+Kappa statistic                          0.9371
+Mean absolute error                      0.0114
+Root mean squared error                  0.1066
+Relative absolute error                  5.9108 %
+Root relative squared error             34.6092 %
+Coverage of cases (0.95 level)          98.8636 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.939    0.946     0.904     0
+                 1.000    0.107    0.987      1.000    0.994      0.939    0.946     0.987     1
+Weighted Avg.    0.989    0.096    0.989      0.989    0.988      0.939    0.946     0.979     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 236 |   b = 1
+
+
+1:
+	< 0.5	-> 1
+	>= 0.5	-> 0
+	?	-> 1
+(261/264 instances correct)
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         258              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Coverage of cases (0.95 level)         100      %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  36   0 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.rules.ZeroR -i -o
+
+Time taken to build model: 0.02 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         236               89.3939 %
+Incorrectly Classified Instances        28               10.6061 %
+Kappa statistic                          0     
+Mean absolute error                      0.192 
+Root mean squared error                  0.3079
+Relative absolute error                100      %
+Root relative squared error            100      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.106     0
+                 1.000    1.000    0.894      1.000    0.944      0.000    0.500     0.894     1
+Weighted Avg.    0.894    0.894    0.799      0.894    0.844      0.000    0.500     0.810     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  28 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         236               89.3939 %
+Incorrectly Classified Instances        28               10.6061 %
+Kappa statistic                          0     
+Mean absolute error                      0.1923
+Root mean squared error                  0.308 
+Relative absolute error                100      %
+Root relative squared error            100      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.466     0.099     0
+                 1.000    1.000    0.894      1.000    0.944      0.000    0.466     0.887     1
+Weighted Avg.    0.894    0.894    0.799      0.894    0.844      0.000    0.466     0.804     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  28 |   a = 0
+   0 236 |   b = 1
+
+
+ZeroR predicts class value: 1
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         222               86.0465 %
+Incorrectly Classified Instances        36               13.9535 %
+Kappa statistic                          0     
+Mean absolute error                      0.2181
+Root mean squared error                  0.3478
+Coverage of cases (0.95 level)         100      %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.140     0
+                 1.000    1.000    0.860      1.000    0.925      0.000    0.500     0.860     1
+Weighted Avg.    0.860    0.860    0.740      0.860    0.796      0.000    0.500     0.760     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  36 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.trees.DecisionStump -i -o
+
+Time taken to build model: 0.06 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         261               98.8636 %
+Incorrectly Classified Instances         3                1.1364 %
+Kappa statistic                          0.9371
+Mean absolute error                      0.0223
+Root mean squared error                  0.1055
+Relative absolute error                 11.603  %
+Root relative squared error             34.2705 %
+Coverage of cases (0.95 level)          98.8636 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.939    0.967     0.910     0
+                 1.000    0.107    0.987      1.000    0.994      0.939    0.967     0.992     1
+Weighted Avg.    0.989    0.096    0.989      0.989    0.988      0.939    0.967     0.983     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         261               98.8636 %
+Incorrectly Classified Instances         3                1.1364 %
+Kappa statistic                          0.9371
+Mean absolute error                      0.0224
+Root mean squared error                  0.1061
+Relative absolute error                 11.6269 %
+Root relative squared error             34.4456 %
+Coverage of cases (0.95 level)          98.8636 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.000    1.000      0.893    0.943      0.939    0.942     0.910     0
+                 1.000    0.107    0.987      1.000    0.994      0.939    0.942     0.990     1
+Weighted Avg.    0.989    0.096    0.989      0.989    0.988      0.939    0.942     0.981     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  25   3 |   a = 0
+   0 236 |   b = 1
+
+
+Decision Stump
+
+Classifications
+
+1 <= 0.5 : 1
+1 > 0.5 : 0
+1 is missing : 1
+
+Class distributions
+
+1 <= 0.5
+0	1	
+0.02	0.98	
+1 > 0.5
+0	1	
+1.0	0.0	
+1 is missing
+0	1	
+0.0	1.0	
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         258              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0172
+Root mean squared error                  0.0186
+Coverage of cases (0.95 level)         100      %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  36   0 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.trees.HoeffdingTree -i -o -L 2 -S 1 -E 1.0E-7 -H 0.05 -M 0.01 -G 200.0 -N 0.0
+
+Time taken to build model: 0.14 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         255               96.5909 %
+Incorrectly Classified Instances         9                3.4091 %
+Kappa statistic                          0.8381
+Mean absolute error                      0.0341
+Root mean squared error                  0.1846
+Relative absolute error                 17.7594 %
+Root relative squared error             59.96   %
+Coverage of cases (0.95 level)          96.5909 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.964    0.034    0.771      0.964    0.857      0.845    0.972     0.797     0
+                 0.966    0.036    0.996      0.966    0.981      0.845    0.973     0.994     1
+Weighted Avg.    0.966    0.036    0.972      0.966    0.968      0.845    0.973     0.973     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  27   1 |   a = 0
+   8 228 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         255               96.5909 %
+Incorrectly Classified Instances         9                3.4091 %
+Kappa statistic                          0.8381
+Mean absolute error                      0.0341
+Root mean squared error                  0.1846
+Relative absolute error                 17.7323 %
+Root relative squared error             59.9449 %
+Coverage of cases (0.95 level)          96.5909 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.964    0.034    0.771      0.964    0.857      0.845    0.972     0.796     0
+                 0.966    0.036    0.996      0.966    0.981      0.845    0.972     0.994     1
+Weighted Avg.    0.966    0.036    0.972      0.966    0.968      0.845    0.972     0.973     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  27   1 |   a = 0
+   8 228 |   b = 1
+
+
+1 (237.000) NB1 NB adaptive1
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         257               99.6124 %
+Incorrectly Classified Instances         1                0.3876 %
+Kappa statistic                          0.984 
+Mean absolute error                      0.0043
+Root mean squared error                  0.0626
+Coverage of cases (0.95 level)          99.6124 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.005    0.973      1.000    0.986      0.984    1.000     1.000     0
+                 0.995    0.000    1.000      0.995    0.998      0.984    1.000     1.000     1
+Weighted Avg.    0.996    0.001    0.996      0.996    0.996      0.984    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  36   0 |   a = 0
+   1 221 |   b = 1
+
+weka.classifiers.trees.J48 -i -o -C 0.25 -M 2
+
+Time taken to build model: 0.18 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         261               98.8636 %
+Incorrectly Classified Instances         3                1.1364 %
+Kappa statistic                          0.9428
+Mean absolute error                      0.0238
+Root mean squared error                  0.0937
+Relative absolute error                 12.4128 %
+Root relative squared error             30.4195 %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      57.197  %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.013    0.903      1.000    0.949      0.944    0.998     0.978     0
+                 0.987    0.000    1.000      0.987    0.994      0.944    0.998     1.000     1
+Weighted Avg.    0.989    0.001    0.990      0.989    0.989      0.944    0.998     0.997     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   3 233 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         255               96.5909 %
+Incorrectly Classified Instances         9                3.4091 %
+Kappa statistic                          0.8173
+Mean absolute error                      0.0461
+Root mean squared error                  0.1764
+Relative absolute error                 23.9657 %
+Root relative squared error             57.256  %
+Coverage of cases (0.95 level)          98.4848 %
+Mean rel. region size (0.95 level)      55.4924 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.821    0.017    0.852      0.821    0.836      0.818    0.950     0.736     0
+                 0.983    0.179    0.979      0.983    0.981      0.818    0.950     0.990     1
+Weighted Avg.    0.966    0.161    0.965      0.966    0.966      0.818    0.950     0.963     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  23   5 |   a = 0
+   4 232 |   b = 1
+
+
+J48 pruned tree
+------------------
+
+33 <= 0: 1 (226.88)
+33 > 0
+|   17 <= 2
+|   |   33 <= 1: 0 (5.44/1.44)
+|   |   33 > 1
+|   |   |   23 <= 25521: 1 (3.12)
+|   |   |   23 > 25521: 0 (2.92/0.92)
+|   17 > 2
+|   |   33 <= 2: 1 (2.09)
+|   |   33 > 2: 0 (23.56/1.56)
+
+Number of Leaves  : 	6
+
+Size of the tree : 	11
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         222               86.0465 %
+Incorrectly Classified Instances        36               13.9535 %
+Kappa statistic                          0     
+Mean absolute error                      0.216 
+Root mean squared error                  0.3481
+Coverage of cases (0.95 level)         100      %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.140     0
+                 1.000    1.000    0.860      1.000    0.925      0.000    0.500     0.860     1
+Weighted Avg.    0.860    0.860    0.740      0.860    0.796      0.000    0.500     0.760     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  36 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.trees.RandomForest -i -o -I 10 -K 0 -S 1 -num-slots 1
+
+Time taken to build model: 0.1 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         264              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0167
+Root mean squared error                  0.0594
+Relative absolute error                  8.7056 %
+Root relative squared error             19.2894 %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      54.7348 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         255               96.5909 %
+Incorrectly Classified Instances         9                3.4091 %
+Kappa statistic                          0.8173
+Mean absolute error                      0.0461
+Root mean squared error                  0.1512
+Relative absolute error                 23.9584 %
+Root relative squared error             49.0806 %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      56.4394 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.821    0.017    0.852      0.821    0.836      0.818    0.992     0.935     0
+                 0.983    0.179    0.979      0.983    0.981      0.818    0.992     0.999     1
+Weighted Avg.    0.966    0.161    0.965      0.966    0.966      0.818    0.992     0.992     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  23   5 |   a = 0
+   4 232 |   b = 1
+
+
+Random forest of 10 trees, each constructed while considering 6 random features.
+Out of bag error: 0.0492
+
+
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         222               86.0465 %
+Incorrectly Classified Instances        36               13.9535 %
+Kappa statistic                          0     
+Mean absolute error                      0.146 
+Root mean squared error                  0.2979
+Coverage of cases (0.95 level)         100      %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    1.000     1.000     0
+                 1.000    1.000    0.860      1.000    0.925      0.000    1.000     1.000     1
+Weighted Avg.    0.860    0.860    0.740      0.860    0.796      0.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  36 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.trees.RandomTree -i -o -K 0 -M 1.0 -S 1
+
+Time taken to build model: 0.03 seconds
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         264              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0004
+Root mean squared error                  0.0031
+Relative absolute error                  0.2074 %
+Root relative squared error              1.0229 %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   0 236 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         250               94.697  %
+Incorrectly Classified Instances        14                5.303  %
+Kappa statistic                          0.6912
+Mean absolute error                      0.0565
+Root mean squared error                  0.2294
+Relative absolute error                 29.375  %
+Root relative squared error             74.4618 %
+Coverage of cases (0.95 level)          95.0758 %
+Mean rel. region size (0.95 level)      51.3258 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.643    0.017    0.818      0.643    0.720      0.697    0.799     0.663     0
+                 0.983    0.357    0.959      0.983    0.971      0.697    0.799     0.955     1
+Weighted Avg.    0.947    0.321    0.944      0.947    0.944      0.697    0.799     0.924     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  18  10 |   a = 0
+   4 232 |   b = 1
+
+
+
+RandomTree
+==========
+
+34 < 0.5 : 1 (226.88/0)
+34 >= 0.5
+|   35 < 5
+|   |   41 < 60423.5
+|   |   |   41 < 46559
+|   |   |   |   44 < 12720.5
+|   |   |   |   |   40 < 13495
+|   |   |   |   |   |   40 < 2650 : 1 (1.03/0)
+|   |   |   |   |   |   40 >= 2650
+|   |   |   |   |   |   |   25 < 9891
+|   |   |   |   |   |   |   |   41 < 7579.5 : 0 (1.04/0.04)
+|   |   |   |   |   |   |   |   41 >= 7579.5 : 1 (1.04/0)
+|   |   |   |   |   |   |   25 >= 9891
+|   |   |   |   |   |   |   |   3 < 0.5 : 1 (0.1/0)
+|   |   |   |   |   |   |   |   3 >= 0.5 : 0 (4/0)
+|   |   |   |   |   40 >= 13495 : 1 (3.09/0)
+|   |   |   |   44 >= 12720.5
+|   |   |   |   |   14 < 3754.5 : 1 (0.05/0)
+|   |   |   |   |   14 >= 3754.5
+|   |   |   |   |   |   12 < 16283.5
+|   |   |   |   |   |   |   19 < 1 : 0 (1.01/0.01)
+|   |   |   |   |   |   |   19 >= 1 : 0 (2/0)
+|   |   |   |   |   |   12 >= 16283.5 : 1 (0.04/0)
+|   |   |   41 >= 46559 : 1 (2.06/0)
+|   |   41 >= 60423.5
+|   |   |   10 < 33409 : 1 (0.04/0)
+|   |   |   10 >= 33409
+|   |   |   |   20 < 1.5 : 1 (0.02/0)
+|   |   |   |   20 >= 1.5 : 0 (2/0)
+|   35 >= 5
+|   |   34 < 25
+|   |   |   10 < 2047 : 1 (0.22/0)
+|   |   |   10 >= 2047
+|   |   |   |   20 < 2.5 : 1 (0.22/0)
+|   |   |   |   20 >= 2.5 : 0 (14/0)
+|   |   34 >= 25
+|   |   |   34 < 31.5 : 1 (1.03/0)
+|   |   |   34 >= 31.5
+|   |   |   |   3 < 9 : 1 (0.11/0)
+|   |   |   |   3 >= 9
+|   |   |   |   |   26 < 140221.5 : 1 (0.02/0)
+|   |   |   |   |   26 >= 140221.5 : 0 (4/0)
+
+Size of the tree : 43
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         222               86.0465 %
+Incorrectly Classified Instances        36               13.9535 %
+Kappa statistic                          0     
+Mean absolute error                      0.1485
+Root mean squared error                  0.3422
+Coverage of cases (0.95 level)          99.6124 %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.990     0.981     0
+                 1.000    1.000    0.860      1.000    0.925      0.000    0.990     0.998     1
+Weighted Avg.    0.860    0.860    0.740      0.860    0.796      0.000    0.990     0.996     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  36 |   a = 0
+   0 222 |   b = 1
+
+weka.classifiers.trees.REPTree -i -o -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+
+Time taken to build model: 0.12 seconds
+Time taken to test model on training data: 0.04 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         256               96.9697 %
+Incorrectly Classified Instances         8                3.0303 %
+Kappa statistic                          0.8581
+Mean absolute error                      0.0526
+Root mean squared error                  0.1551
+Relative absolute error                 27.3816 %
+Root relative squared error             50.372  %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      58.3333 %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.034    0.778      1.000    0.875      0.867    0.983     0.778     0
+                 0.966    0.000    1.000      0.966    0.983      0.867    0.983     0.996     1
+Weighted Avg.    0.970    0.004    0.976      0.970    0.971      0.867    0.983     0.973     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  28   0 |   a = 0
+   8 228 |   b = 1
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         253               95.8333 %
+Incorrectly Classified Instances        11                4.1667 %
+Kappa statistic                          0.8021
+Mean absolute error                      0.0541
+Root mean squared error                  0.174 
+Relative absolute error                 28.1337 %
+Root relative squared error             56.4824 %
+Coverage of cases (0.95 level)          99.6212 %
+Mean rel. region size (0.95 level)      57.197  %
+Total Number of Instances              264     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.929    0.038    0.743      0.929    0.825      0.809    0.982     0.802     0
+                 0.962    0.071    0.991      0.962    0.976      0.809    0.982     0.998     1
+Weighted Avg.    0.958    0.068    0.965      0.958    0.960      0.809    0.982     0.977     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  26   2 |   a = 0
+   9 227 |   b = 1
+
+
+
+REPTree
+============
+
+33 < 0.5 : 1 (149.08/0) [77.69/0]
+33 >= 0.5 : 0 (26.92/7.92) [10.31/1.31]
+
+Size of the tree : 3
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         222               86.0465 %
+Incorrectly Classified Instances        36               13.9535 %
+Kappa statistic                          0     
+Mean absolute error                      0.2225
+Root mean squared error                  0.3474
+Coverage of cases (0.95 level)         100      %
+Total Number of Instances              258     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.140     0
+                 1.000    1.000    0.860      1.000    0.925      0.000    0.500     0.860     1
+Weighted Avg.    0.860    0.860    0.740      0.860    0.796      0.000    0.500     0.760     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  36 |   a = 0
+   0 222 |   b = 1
+
