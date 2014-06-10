@@ -77,7 +77,7 @@ discard it).
   2.8. The URI of a chosen 'membership' property (e.g. rdf:type, or
 dc:subject)
 
-This script uses these parameters when calling the following 3
+  This script uses these parameters when calling the following 3
 subscripts:
 
 3. `genFeatsP.py`: uses all the 8 parameters to generate a training
@@ -113,7 +113,7 @@ dataset the following is computed:
 
   3.12. A boolean that indicates whether this concept has changed or not
 
-This last is the target feature. To compute it, parameters 2.2, 2.3
+  This last is the target feature. To compute it, parameters 2.2, 2.3
 and 2.4 are used to compare the same concept in different versions of
 the input dataset. Different definitions of what is necessary to
 consider a concept has changed or not are implemented; for the paper
