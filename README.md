@@ -83,6 +83,7 @@ target='_blank'>this paper</a>. Concretely, per concept read in input
 dataset the following is computed:
 
   3.1. Direct children (according to parameter 2.7)
+
   3.2. Children at depth 2
   3.3. Children at depth 3
   3.4. Children at depth 4
