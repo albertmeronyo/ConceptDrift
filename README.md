@@ -54,24 +54,31 @@ parameters
 2. `oeml.sh`: executes *one* OEML experiment. An OEML experiment has
 essentially the following parameters:
 
-2.1. The input dataset containing the versions to train / evaluate the
-classifier 
-2.2. The number of versions that will be used for training 
-2.3. The deltaFC parameter: what specific snapshot will be used to
-decide if a concept of the training set has changed or not 
-2.4. The deltaTT parameter: what specific snapshot will be used to
-decide if a concept of the evaluation set has changed or not 
-2.5. A boolean that indicates how to deal with concepts that do not
+  2.1. The input dataset containing the versions to train / evaluate
+ the classifier
+
+  2.2. The number of versions that will be used for training
+
+  2.3. The deltaFC parameter: what specific snapshot will be used to
+decide if a concept of the training set has changed or not
+
+  2.4. The deltaTT parameter: what specific snapshot will be used to
+decide if a concept of the evaluation set has changed or not
+
+  2.5. A boolean that indicates how to deal with concepts that do not
 appear in all snapshots (essentially, consider it as changed, or
-discard it). 
-2.6. The URI of the top concept in the dataset 
-2.7. The URI of the predicate connecting concepts (e.g. skos:broader,
-or rdfs:subClassOf) 
-2.8. The URI of a chosen 'membership' property (e.g. rdf:type, or
-dc:subject) 
+discard it).
+
+  2.6. The URI of the top concept in the dataset 
+
+  2.7. The URI of the predicate connecting concepts
+(e.g. skos:broader, or rdfs:subClassOf)
+
+  2.8. The URI of a chosen 'membership' property (e.g. rdf:type, or
+dc:subject)
 
 This script uses these parameters when calling the following 3
-subscripts: 
+subscripts:
 
 3. `genFeatsP.py`: uses all the 8 parameters to generate a training
 and an evaluation dataset. These datasets are two CSVs with features
@@ -85,15 +92,25 @@ dataset the following is computed:
   3.1. Direct children (according to parameter 2.7)
 
   3.2. Children at depth 2
+
   3.3. Children at depth 3
+
   3.4. Children at depth 4
+
   3.5. Direct parents
+
   3.6. Siblings
+
   3.7. 'Members' of this concept (according to parameter 2.8)
+
   3.8. Id. considering all children at depth 2
+
   3.9. Id. considering all children at depth 3
+
   3.10. Id. considering all children at depth 4
+
   3.11. Ratio of 'members' and children of the concept
+
   3.12. A boolean that indicates whether this concept has changed or not
 
 This last is the target feature. To compute it, parameters 2.2, 2.3
