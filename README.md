@@ -41,6 +41,87 @@ Dumps of the output of these experiments are available <a
 href='https://github.com/albertmeronyo/ConceptDrift/tree/master/oeml/exp'
 target='_blank'>here</a>.
 
+### Pipeline detailed description
+
+The important scripts in this approach, tentatively called OEML
+(Ontology Evolution through Machine Learning) are (in execution
+order):
+
+1. `oemlExperiments.sh`: executes *all* OEML experiments (see below) of
+the paper, permuting all possible (reasonable) values of the various
+parameters
+
+2. `oeml.sh`: executes *one* OEML experiment. An OEML experiment has
+essentially the following parameters:
+
+2.1. The input dataset containing the versions to train / evaluate the
+classifier 
+2.2. The number of versions that will be used for training 
+2.3. The deltaFC parameter: what specific snapshot will be used to
+decide if a concept of the training set has changed or not 
+2.4. The deltaTT parameter: what specific snapshot will be used to
+decide if a concept of the evaluation set has changed or not 
+2.5. A boolean that indicates how to deal with concepts that do not
+appear in all snapshots (essentially, consider it as changed, or
+discard it). 
+2.6. The URI of the top concept in the dataset 
+2.7. The URI of the predicate connecting concepts (e.g. skos:broader,
+or rdfs:subClassOf) 
+2.8. The URI of a chosen 'membership' property (e.g. rdf:type, or
+dc:subject) 
+
+This script uses these parameters when calling the following 3
+subscripts: 
+
+3. `genFeatsP.py`: uses all the 8 parameters to generate a training
+and an evaluation dataset. These datasets are two CSVs with features
+that may be correlated with the fact that a concept changed between
+one version of the input dataset and another, getting inspiration from
+<a
+href='http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1002630'
+target='_blank'>this paper</a>. Concretely, per concept read in input
+dataset the following is computed:
+
+3.1. Direct children (according to parameter 2.7)
+3.2. Children at depth 2
+3.3. Children at depth 3
+3.4. Children at depth 4
+3.5. Direct parents
+3.6. Siblings
+3.7. 'Members' of this concept (according to parameter 2.8)
+3.8. Id. considering all children at depth 2
+3.9. Id. considering all children at depth 3
+3.10. Id. considering all children at depth 4
+3.11. Ratio of 'members' and children of the concept
+3.12. A boolean that indicates whether this concept has changed or not
+
+This last is the target feature. To compute it, parameters 2.2, 2.3
+and 2.4 are used to compare the same concept in different versions of
+the input dataset. Different definitions of what is necessary to
+consider a concept has changed or not are implemented; for the paper
+we consider definitions of <a
+href='http://link.springer.com/chapter/10.1007%2F978-3-642-16438-5_17#page-1'
+target='_blank'>this paper</a>.
+
+4. `identity-aggregator-p-R`: puts all instances together of all the
+versions compared, since the previous script can only compare versions
+on a 1vs1 basis. Uses the parameter 2.5 to consider only the concepts
+that appear in all versions, or to consider all of them (if a concept
+does not appear in one of the considered versions, it is considered as
+if it has changed).
+
+5. `weka-batch.sh`: uses the WEKA API to train all classifiers that
+come with WEKA with the generated training and evaluation datasets,
+and writes statistics on their performance in
+`./exp/experiment-name/results.txt`
+
+6. `oemlResults.sh`: writes results of all experiments in stdout in a
+nice format.
+
+Script 1 executes multiple instances of script 2, and each script 2
+executes 3, 4 and 5. The user only needs to manually execute scripts 1
+(to initiate the entire process) and 6 to visualise the results.
+
 ## Extensional Drift in Statistical Linked Data
 
 **Directory:** `semStats` 
