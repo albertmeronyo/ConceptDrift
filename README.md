@@ -82,18 +82,18 @@ href='http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.10
 target='_blank'>this paper</a>. Concretely, per concept read in input
 dataset the following is computed:
 
-3.1. Direct children (according to parameter 2.7)
-3.2. Children at depth 2
-3.3. Children at depth 3
-3.4. Children at depth 4
-3.5. Direct parents
-3.6. Siblings
-3.7. 'Members' of this concept (according to parameter 2.8)
-3.8. Id. considering all children at depth 2
-3.9. Id. considering all children at depth 3
-3.10. Id. considering all children at depth 4
-3.11. Ratio of 'members' and children of the concept
-3.12. A boolean that indicates whether this concept has changed or not
+  3.1. Direct children (according to parameter 2.7)
+  3.2. Children at depth 2
+  3.3. Children at depth 3
+  3.4. Children at depth 4
+  3.5. Direct parents
+  3.6. Siblings
+  3.7. 'Members' of this concept (according to parameter 2.8)
+  3.8. Id. considering all children at depth 2
+  3.9. Id. considering all children at depth 3
+  3.10. Id. considering all children at depth 4
+  3.11. Ratio of 'members' and children of the concept
+  3.12. A boolean that indicates whether this concept has changed or not
 
 This last is the target feature. To compute it, parameters 2.2, 2.3
 and 2.4 are used to compare the same concept in different versions of
