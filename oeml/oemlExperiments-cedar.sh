@@ -42,7 +42,7 @@ LABEL_PROP="http://www.w3.org/2004/02/skos/core#prefLabel"
 #     done
 # done
 
-for n in $(seq 3 8)
+for n in $(seq 1 8)
 do
     mkdir $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/ 2> /dev/null
     rm -rf $EXP_DIRECTORY$NAME-$n-1-1-allDrift-T/* 2> /dev/null
