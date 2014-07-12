@@ -4,14 +4,18 @@ OUTPUT=$4
 MEM="-Xmx18g"
 WEKAPATH="-classpath weka.jar"
 
+# Remove individual names in training and evaluation
+java $WEKAPATH weka.filters.unsupervised.attribute.Remove -R 1 -i $1 -o $1.clean
+java $WEKAPATH weka.filters.unsupervised.attribute.Remove -R 1 -i $2 -o $2.clean
+
 # Conversion of last attribute to nominal, training dataset
-java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $1 -o $1.arff
+java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $1.clean -o $1.arff
 
 # NA fileds of training as numeric
 sed 's/string/numeric/g' $1.arff > $1.num.arff
 
 # Id., evaluation dataset
-java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $2 -o $2.arff
+java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $2.clean -o $2.arff
 
 # NA fields of evaluation as numeric
 sed 's/string/numeric/g' $2.arff > $2.num.arff

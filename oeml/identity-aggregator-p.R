@@ -65,7 +65,7 @@ if (length(input.files) > 1) {
 }
 
 # Remove instance names
-merged[,1] <- NULL
+# merged[,1] <- NULL
 
 # Rename features
 colnames(merged) <- as.character(seq(1:length(colnames(merged))))
