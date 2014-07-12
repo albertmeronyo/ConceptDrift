@@ -22,13 +22,13 @@ if (length(input.files) > 1) {
     num.feats <- ncol(merged)
     for (i in 2:length(all)) {
         df <- data.frame(all[i])
-	colnames(df) <- as.character(seq(1:length(colnames(df))))
+	# colnames(df) <- as.character(seq(1:length(colnames(df))))
         # If all = F, we only consider nodes in all snapshots
         # Otherwise, consider everything and fill with NAs
 	print(head(merged))
 	print(head(df))
         merged <- merge(merged, df, by.x=1, by.y=1, all = in.all.snaps)
-	colnames(merged) <- as.character(seq(1:length(colnames(merged))))
+	# colnames(merged) <- as.character(seq(1:length(colnames(merged))))
     }
 
     # List of column numbers where target variables lie
@@ -68,7 +68,7 @@ if (length(input.files) > 1) {
 # merged[,1] <- NULL
 
 # Rename features
-colnames(merged) <- as.character(seq(1:length(colnames(merged))))
+# colnames(merged) <- as.character(seq(1:length(colnames(merged))))
 
 # Save dataset
 write.csv(merged, output.file.training, quote = FALSE, na = "", row.names = FALSE)
@@ -95,7 +95,7 @@ if (diff > 0) {
 eval['foo'] <- eval.targets
 
 # Rename features
-colnames(eval) <- as.character(seq(1:ncol(merged)))
+# colnames(eval) <- as.character(seq(1:ncol(merged)))
 
 # Save dataset
 write.csv(eval, output.file.eval, quote = FALSE, na = "", row.names = FALSE)

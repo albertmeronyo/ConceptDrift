@@ -227,7 +227,7 @@ for ds in t_snapshots:
 
     with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        headers = ['concept', 'dirChildren', 'dirChildren1', 'dirChildren2', 'dirChildren3', 'numParents', 'numSiblings', 'dirArticles', 'dirArticlesChildren0', 'dirArticlesChildren1', 'dirArticlesChildren2', 'dirArticlesChildren3', 'ratio', 'ratio0', 'ratio1', 'ratio2', 'ratio3', 'changed']
+        headers = ['concept..' + ds + '..' + r_snapshot , 'dirChildren..' + ds + '..' + r_snapshot , 'dirChildren1..' + ds + '..' + r_snapshot , 'dirChildren2..' + ds + '..' + r_snapshot , 'dirChildren3..' + ds + '..' + r_snapshot , 'numParents..' + ds + '..' + r_snapshot , 'numSiblings..' + ds + '..' + r_snapshot , 'dirArticles..' + ds + '..' + r_snapshot , 'dirArticlesChildren0..' + ds + '..' + r_snapshot , 'dirArticlesChildren1..' + ds + '..' + r_snapshot , 'dirArticlesChildren2..' + ds + '..' + r_snapshot , 'dirArticlesChildren3..' + ds + '..' + r_snapshot , 'ratio..' + ds + '..' + r_snapshot , 'ratio0..' + ds + '..' + r_snapshot , 'ratio1..' + ds + '..' + r_snapshot , 'ratio2..' + ds + '..' + r_snapshot , 'ratio3..' + ds + '..' + r_snapshot , 'changed..' + ds + '..' + r_snapshot]
         writer.writerow(headers)
         if not args.partial_tree:
             # Stack to do a DFS on the hierarchy
@@ -407,7 +407,7 @@ print "Dataset %s has %s nodes" % (e_snapshot, str(len(tree)))
 # Write stats on THIS tree, compare last attribute with 3.8 tree                                                                                     
 with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    headers = ['concept', 'dirChildren', 'dirChildren1', 'dirChildren2', 'dirChildren3', 'numParents', 'numSiblings', 'dirArticles', 'dirArticlesChildren0', 'dirArticlesChildren1', 'dirArticlesChildren2', 'dirArticlesChildren3', 'ratio', 'ratio0', 'ratio1', 'ratio2', 'ratio3', 'changed']
+    headers = ['concept..' + r_snapshot + '..' + e_snapshot , 'dirChildren..' + r_snapshot + '..' + e_snapshot , 'dirChildren1..' + r_snapshot + '..' + e_snapshot , 'dirChildren2..' + r_snapshot + '..' + e_snapshot , 'dirChildren3..' + r_snapshot + '..' + e_snapshot , 'numParents..' + r_snapshot + '..' + e_snapshot , 'numSiblings..' + r_snapshot + '..' + e_snapshot , 'dirArticles..' + r_snapshot + '..' + e_snapshot , 'dirArticlesChildren0..' + r_snapshot + '..' + e_snapshot , 'dirArticlesChildren1..' + r_snapshot + '..' + e_snapshot , 'dirArticlesChildren2..' + r_snapshot + '..' + e_snapshot , 'dirArticlesChildren3..' + r_snapshot + '..' + e_snapshot , 'ratio..' + r_snapshot + '..' + e_snapshot , 'ratio0..' + r_snapshot + '..' + e_snapshot , 'ratio1..' + r_snapshot + '..' + e_snapshot , 'ratio2..' + r_snapshot + '..' + e_snapshot , 'ratio3..' + r_snapshot + '..' + e_snapshot , 'changed..' + r_snapshot + '..' + e_snapshot]
     writer.writerow(headers)
     if not args.partial_tree:
         # Stack to do a DFS on the hierarchy
