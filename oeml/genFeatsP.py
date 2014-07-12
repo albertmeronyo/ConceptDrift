@@ -227,7 +227,8 @@ for ds in t_snapshots:
 
     with open(args.output + 'feats_' + ds + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-
+        headers = ['concept', 'dirChildren', 'dirChildren1', 'dirChildren2', 'dirChildren3', 'numParents', 'numSiblings', 'dirArticles', 'dirArticlesChildren0', 'dirArticlesChildren1', 'dirArticlesChildren2', 'dirArticlesChildren3', 'ratio', 'ratio0', 'ratio1', 'ratio2', 'ratio3', 'changed']
+        writer.writerow(headers)
         if not args.partial_tree:
             # Stack to do a DFS on the hierarchy
             nodeStack = []
@@ -406,6 +407,8 @@ print "Dataset %s has %s nodes" % (e_snapshot, str(len(tree)))
 # Write stats on THIS tree, compare last attribute with 3.8 tree                                                                                     
 with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    headers = ['concept', 'dirChildren', 'dirChildren1', 'dirChildren2', 'dirChildren3', 'numParents', 'numSiblings', 'dirArticles', 'dirArticlesChildren0', 'dirArticlesChildren1', 'dirArticlesChildren2', 'dirArticlesChildren3', 'ratio', 'ratio0', 'ratio1', 'ratio2', 'ratio3', 'changed']
+    writer.writerow(headers)
     if not args.partial_tree:
         # Stack to do a DFS on the hierarchy
         nodeStack = []
