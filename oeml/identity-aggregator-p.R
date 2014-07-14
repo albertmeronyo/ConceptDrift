@@ -87,7 +87,7 @@ eval.dataset <- tail(head(args,-3),1)
 eval <- read.csv(eval.dataset, header=T)
 
 # Remove instance names
-eval[,1] <- NULL
+# eval[,1] <- NULL
 # Save target column, remove
 eval.targets <- eval[,ncol(eval)]
 eval[,ncol(eval)] <- NULL
