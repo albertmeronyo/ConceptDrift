@@ -100,7 +100,7 @@ if (diff > 0) {
    eval[as.character(seq(1:diff))] <- NA
 }
 
-eval['foo'] <- eval.targets
+eval['t'] <- eval.targets
 
 # Rename features
 # colnames(eval) <- as.character(seq(1:ncol(merged)))
