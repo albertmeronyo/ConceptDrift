@@ -4,15 +4,15 @@
 
 args <- commandArgs(trailingOnly = TRUE)
 
-# input.files <- head(args,-4)
-# output.file.training <- head(tail(args,3),1)
-# output.file.eval <- head(tail(args,2),1)
-# in.all.snaps <- tail(args,1)
+input.files <- head(args,-4)
+output.file.training <- head(tail(args,3),1)
+output.file.eval <- head(tail(args,2),1)
+in.all.snaps <- tail(args,1)
 
-input.files <- c('feats_1849-hisco.nt.csv', 'feats_1859-hisco.nt.csv', 'feats_1869-hisco.nt.csv', 'feats_1889-hisco.nt.csv', 'feats_1899-hisco.nt.csv', 'feats_1909-hisco.nt.csv')
-output.file.training <- c('training.csv')
-output.file.eval <- c('evaluation.csv')
-in.all.snaps <- T
+# input.files <- c('feats_1849-hisco.nt.csv', 'feats_1859-hisco.nt.csv', 'feats_1869-hisco.nt.csv', 'feats_1889-hisco.nt.csv', 'feats_1899-hisco.nt.csv', 'feats_1909-hisco.nt.csv')
+# output.file.training <- c('training.csv')
+# output.file.eval <- c('evaluation.csv')
+# in.all.snaps <- T
 
 print(paste("Input file: ", input.files))
 print(paste("Output file training: ", output.file.training))
@@ -82,8 +82,8 @@ write.csv(merged, output.file.training, quote = FALSE, na = "", row.names = FALS
 ####################
 # Evaluation dataset
 ####################
-# eval.dataset <- tail(head(args,-3),1)
-eval.dataset <- c('feats_1930-hisco.nt.csv')
+eval.dataset <- tail(head(args,-3),1)
+# eval.dataset <- c('feats_1930-hisco.nt.csv')
 eval <- read.csv(eval.dataset, header=T)
 
 # Remove instance names
