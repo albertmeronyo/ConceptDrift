@@ -1,0 +1,16 @@
+1 dirChildren
+2 dirChildren1
+3 dirChildren2
+4 dirChildren3
+5 numParents
+6 numSiblings
+7 dirArticles
+8 dirArticlesChildren0
+9 dirArticlesChildren1
+10 dirArticlesChildren2
+11 dirArticlesChildren3
+12 ratio
+13 ratio0
+14 ratio1
+15 ratio2
+16 ratio3
