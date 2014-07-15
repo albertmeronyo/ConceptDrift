@@ -19,12 +19,17 @@ class BaseLiner():
         self.log.info('Initializing data structures...')
         self.trainData = {}
         self.evalData = {}
+        self.predictionRandomRate = 0.
+        self.predictionPastChangedRate = 0.
 
         self.log.info('Reading datasets...')
         self.readInputFiles()
         self.log.debug([self.trainData, self.evalData])
-        self.log.info('Random prediction...')
-        self.randomPrediction()
+        self.log.info('Making predictions...')
+        self.predictionRandom()
+        self.log.info('Random performance is %s' % self.predictionRandomRate)
+        self.predictionPastChanged()
+        self.log.info('PastChanged performance is %s' % self.predictionPastChangedRate)
 
     def readInputFiles(self):
         with open(self.trainFile, 'rb') as csvfile:
@@ -39,16 +44,20 @@ class BaseLiner():
             for row in csvreader:
                 self.evalData[row[0]] = row[-1]
 
-    def randomPrediction(self):
-        predictions = [random.choice([0,1]) for x in self.evalData]
-        print predictions
+    def predictionRandom(self):
         rate = 0.
-        i = 0
-        for x in self.evalData.values():
-            if int(x) == int(predictions[i]):
+        for x in self.evalData.keys():
+            if int(self.evalData[x]) == int(random.choice([0,1])):
                 rate += 1
-            i += 1
-        print rate/len(predictions)
+        self.predictionRandomRate = rate / len(self.evalData)
+
+    def predictionPastChanged(self):
+        rate = 0.
+        for x in self.evalData.keys():
+            if x in self.trainData:
+                if int(self.evalData[x]) == int(self.trainData[x]):
+                    rate += 1
+        self.predictionPastChangedRate = rate / len(self.evalData)
 
 if __name__ == "__main__":
     # Argument parsing
