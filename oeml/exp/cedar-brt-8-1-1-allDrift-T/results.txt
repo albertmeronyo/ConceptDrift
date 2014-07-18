@@ -96,7 +96,7 @@ LogScore AIC: -271.09117813144803
 
 
 Time taken to build model: 0.38 seconds
-Time taken to test model on training data: 0.02 seconds
+Time taken to test model on training data: 0.04 seconds
 
 === Error on training data ===
 
@@ -156,126 +156,112 @@ Weighted Avg.    0.910    0.156    0.929      0.910    0.916      0.652    0.847
  10  2 |  a = 0
   7 81 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.bayes.BayesNet -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.bayes.BayesNet -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Bayes Network Classifier
-not using ADTree
-#attributes=18 #classindex=17
-Network structure (nodes followed by parents)
-7(2): 98 
-12(2): 98 
-26(2): 98 
-31(2): 98 
-11(2): 98 
-92(1): 98 
-2(2): 98 
-32(1): 98 
-87(1): 98 
-33(1): 98 
-23(1): 98 
-40(1): 98 
-41(1): 98 
-45(1): 98 
-46(1): 98 
-91(2): 98 
-10(2): 98 
-98(2): 
-LogScore Bayes: -264.2072050826218
-LogScore BDeu: -277.9504086125747
-LogScore MDL: -293.2351247123468
-LogScore ENTROPY: -254.09117813144803
-LogScore AIC: -271.09117813144803
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          54               54      %
-Incorrectly Classified Instances        46               46      %
-Kappa statistic                          0.1113
-Mean absolute error                      0.4648
-Root mean squared error                  0.6758
-Coverage of cases (0.95 level)          55      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.115    0.000    1.000      0.115    0.207      0.243    0.946     0.924     0
-                 1.000    0.885    0.511      1.000    0.676      0.243    0.946     0.947     1
-Weighted Avg.    0.540    0.425    0.765      0.540    0.432      0.243    0.946     0.935     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  6 46 |  a = 0
-  0 48 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        1:0       0.633 
+     2        1:0        1:0       0.991 
+     3        1:0        2:1   +   0.982 
+     4        2:1        2:1       0.999 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   0.999 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   0.982 
+     9        1:0        2:1   +   0.999 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   0.982 
+    13        1:0        2:1   +   0.999 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   0.999 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   0.982 
+    19        1:0        2:1   +   0.999 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   0.982 
+    22        1:0        2:1   +   0.999 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        2:1   +   0.999 
+    26        2:1        2:1       1 
+    27        1:0        2:1   +   0.982 
+    28        1:0        2:1   +   0.999 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   0.999 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   0.982 
+    33        1:0        2:1   +   0.999 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   0.982 
+    37        1:0        2:1   +   0.999 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   0.999 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   0.982 
+    44        1:0        2:1   +   0.999 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   0.999 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   0.999 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        1:0       0.991 
+    52        1:0        2:1   +   0.982 
+    53        1:0        2:1   +   0.999 
+    54        2:1        2:1       1 
+    55        2:1        2:1       0.999 
+    56        2:1        2:1       1 
+    57        1:0        1:0       0.633 
+    58        2:1        2:1       0.941 
+    59        1:0        2:1   +   0.999 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   0.982 
+    62        1:0        2:1   +   0.999 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   0.982 
+    65        1:0        2:1   +   0.999 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   0.982 
+    68        1:0        2:1   +   0.999 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   0.982 
+    71        1:0        2:1   +   0.999 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   0.999 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   0.982 
+    77        2:1        2:1       0.999 
+    78        2:1        2:1       1 
+    79        1:0        1:0       0.633 
+    80        1:0        2:1   +   0.948 
+    81        2:1        2:1       0.998 
+    82        2:1        2:1       0.999 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        1:0       0.633 
+    86        1:0        2:1   +   0.948 
+    87        2:1        2:1       0.998 
+    88        2:1        2:1       0.998 
+    89        1:0        2:1   +   0.982 
+    90        1:0        2:1   +   0.999 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   0.999 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   0.999 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   0.999 
+    98        2:1        2:1       1 
+    99        1:0        2:1   +   0.982 
+   100        1:0        2:1   +   0.999 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.bayes.NaiveBayes >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -455,8 +441,8 @@ Attribute              0         1
 
 
 
-Time taken to build model: 0.32 seconds
-Time taken to test model on training data: 0.06 seconds
+Time taken to build model: 0.38 seconds
+Time taken to test model on training data: 0.02 seconds
 
 === Error on training data ===
 
@@ -516,613 +502,328 @@ Weighted Avg.    0.820    0.240    0.890      0.820    0.843      0.441    0.828
   9  3 |  a = 0
  15 73 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.bayes.NaiveBayes -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.bayes.NaiveBayes -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Naive Bayes Classifier
-
-                   Class
-Attribute              0         1
-                  (0.13)    (0.87)
-===================================
-7
-  mean             5.9524    3.0195
-  std. dev.        3.3923    2.1258
-  weight sum           12        88
-  precision        1.4286    1.4286
-
-12
-  mean          1489.8876  256.7679
-  std. dev.     1564.2462   360.386
-  weight sum           12        88
-  precision       76.0794   76.0794
-
-26
-  mean                 16   39.8298
-  std. dev.       50.7017   39.7264
-  weight sum           12        47
-  precision             8         8
-
-31
-  mean                 16   37.7872
-  std. dev.       50.7017    38.196
-  weight sum           12        47
-  precision             8         8
-
-11
-  mean           624.3417  255.4125
-  std. dev.      991.2417  356.9195
-  weight sum           12        88
-  precision         48.65     48.65
-
-92
-  mean           642.9844  167.7668
-  std. dev.      710.2866  301.3064
-  weight sum           12        41
-  precision       59.8125   59.8125
-
-2
-  mean             3.5714    0.8604
-  std. dev.        2.8868    1.1302
-  weight sum           12        88
-  precision        1.4286    1.4286
-
-32
-  mean            28.6882   40.7907
-  std. dev.       49.1149   37.5915
-  weight sum           12        47
-  precision        5.9355    5.9355
-
-87
-  mean             6.1458    3.1707
-  std. dev.        3.4407    2.3115
-  weight sum           12        41
-  precision          1.25      1.25
-
-33
-  mean            33.5417   40.4947
-  std. dev.       47.1145   37.3389
-  weight sum           12        47
-  precision          5.75      5.75
-
-23
-  mean             5.6944    2.8369
-  std. dev.        3.4331    2.2523
-  weight sum           12        47
-  precision        1.6667    1.6667
-
-40
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-41
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-45
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-46
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-91
-  mean              288.5  167.4222
-  std. dev.      471.7833  300.6876
-  weight sum           12        41
-  precision       59.6897   59.6897
-
-10
-  mean           227.3284  193.5996
-  std. dev.      723.4802  297.7048
-  weight sum           12        88
-  precision       51.4706   51.4706
-
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          55               55      %
-Incorrectly Classified Instances        45               45      %
-Kappa statistic                          0.1286
-Mean absolute error                      0.4477
-Root mean squared error                  0.6638
-Coverage of cases (0.95 level)          59      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.154    0.021    0.889      0.154    0.262      0.232    0.961     0.919     0
-                 0.979    0.846    0.516      0.979    0.676      0.232    0.961     0.968     1
-Weighted Avg.    0.550    0.417    0.710      0.550    0.461      0.232    0.961     0.942     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  8 44 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        1:0       1 
+     2        1:0        1:0       1 
+     3        1:0        2:1   +   0.979 
+     4        2:1        2:1       0.999 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   0.999 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   0.979 
+     9        1:0        2:1   +   0.999 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   0.979 
+    13        1:0        2:1   +   0.999 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   0.999 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   0.978 
+    19        1:0        2:1   +   0.999 
+    20        2:1        2:1       1 
+    21        1:0        1:0       1 
+    22        1:0        2:1   +   0.999 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        1:0       1 
+    26        2:1        1:0   +   1 
+    27        1:0        2:1   +   0.979 
+    28        1:0        2:1   +   0.999 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   0.999 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   0.978 
+    33        1:0        2:1   +   0.999 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   0.979 
+    37        1:0        2:1   +   0.998 
+    38        2:1        2:1       0.999 
+    39        2:1        2:1       0.999 
+    40        2:1        2:1       0.999 
+    41        1:0        2:1   +   0.999 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   0.919 
+    44        1:0        2:1   +   0.999 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   0.999 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   0.999 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        1:0       0.999 
+    52        1:0        2:1   +   0.866 
+    53        1:0        2:1   +   0.999 
+    54        2:1        2:1       1 
+    55        2:1        2:1       0.999 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   0.999 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   0.999 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   0.998 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   0.998 
+    65        1:0        2:1   +   0.999 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   0.984 
+    68        1:0        2:1   +   0.983 
+    69        2:1        2:1       0.988 
+    70        1:0        2:1   +   0.998 
+    71        1:0        2:1   +   0.999 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   0.999 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   0.999 
+    77        2:1        2:1       0.999 
+    78        2:1        2:1       1 
+    79        1:0        1:0       1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        1:0       1 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        1:0       1 
+    90        1:0        2:1   +   0.999 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   0.999 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   0.999 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        1:0       1 
+    98        2:1        1:0   +   1 
+    99        1:0        2:1   +   0.725 
+   100        1:0        2:1   +   0.999 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.bayes.NaiveBayesMultinomial >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-java -Xmx18g -classpath weka.jar weka.classifiers.bayes.NaiveBayesMultinomial -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.bayes.NaiveBayesMultinomial -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Naive Bayes Classifier
-
-                   Class
-Attribute              0         1
-                  (0.13)    (0.87)
-===================================
-7
-  mean             5.9524    3.0195
-  std. dev.        3.3923    2.1258
-  weight sum           12        88
-  precision        1.4286    1.4286
-
-12
-  mean          1489.8876  256.7679
-  std. dev.     1564.2462   360.386
-  weight sum           12        88
-  precision       76.0794   76.0794
-
-26
-  mean                 16   39.8298
-  std. dev.       50.7017   39.7264
-  weight sum           12        47
-  precision             8         8
-
-31
-  mean                 16   37.7872
-  std. dev.       50.7017    38.196
-  weight sum           12        47
-  precision             8         8
-
-11
-  mean           624.3417  255.4125
-  std. dev.      991.2417  356.9195
-  weight sum           12        88
-  precision         48.65     48.65
-
-92
-  mean           642.9844  167.7668
-  std. dev.      710.2866  301.3064
-  weight sum           12        41
-  precision       59.8125   59.8125
-
-2
-  mean             3.5714    0.8604
-  std. dev.        2.8868    1.1302
-  weight sum           12        88
-  precision        1.4286    1.4286
-
-32
-  mean            28.6882   40.7907
-  std. dev.       49.1149   37.5915
-  weight sum           12        47
-  precision        5.9355    5.9355
-
-87
-  mean             6.1458    3.1707
-  std. dev.        3.4407    2.3115
-  weight sum           12        41
-  precision          1.25      1.25
-
-33
-  mean            33.5417   40.4947
-  std. dev.       47.1145   37.3389
-  weight sum           12        47
-  precision          5.75      5.75
-
-23
-  mean             5.6944    2.8369
-  std. dev.        3.4331    2.2523
-  weight sum           12        47
-  precision        1.6667    1.6667
-
-40
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-41
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-45
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-46
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-91
-  mean              288.5  167.4222
-  std. dev.      471.7833  300.6876
-  weight sum           12        41
-  precision       59.6897   59.6897
-
-10
-  mean           227.3284  193.5996
-  std. dev.      723.4802  297.7048
-  weight sum           12        88
-  precision       51.4706   51.4706
-
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          55               55      %
-Incorrectly Classified Instances        45               45      %
-Kappa statistic                          0.1286
-Mean absolute error                      0.4477
-Root mean squared error                  0.6638
-Coverage of cases (0.95 level)          59      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.154    0.021    0.889      0.154    0.262      0.232    0.961     0.919     0
-                 0.979    0.846    0.516      0.979    0.676      0.232    0.961     0.968     1
-Weighted Avg.    0.550    0.417    0.710      0.550    0.461      0.232    0.961     0.942     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  8 44 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        1:0       1 
+     2        1:0        1:0       1 
+     3        1:0        2:1   +   0.979 
+     4        2:1        2:1       0.999 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   0.999 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   0.979 
+     9        1:0        2:1   +   0.999 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   0.979 
+    13        1:0        2:1   +   0.999 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   0.999 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   0.978 
+    19        1:0        2:1   +   0.999 
+    20        2:1        2:1       1 
+    21        1:0        1:0       1 
+    22        1:0        2:1   +   0.999 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        1:0       1 
+    26        2:1        1:0   +   1 
+    27        1:0        2:1   +   0.979 
+    28        1:0        2:1   +   0.999 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   0.999 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   0.978 
+    33        1:0        2:1   +   0.999 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   0.979 
+    37        1:0        2:1   +   0.998 
+    38        2:1        2:1       0.999 
+    39        2:1        2:1       0.999 
+    40        2:1        2:1       0.999 
+    41        1:0        2:1   +   0.999 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   0.919 
+    44        1:0        2:1   +   0.999 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   0.999 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   0.999 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        1:0       0.999 
+    52        1:0        2:1   +   0.866 
+    53        1:0        2:1   +   0.999 
+    54        2:1        2:1       1 
+    55        2:1        2:1       0.999 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   0.999 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   0.999 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   0.998 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   0.998 
+    65        1:0        2:1   +   0.999 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   0.984 
+    68        1:0        2:1   +   0.983 
+    69        2:1        2:1       0.988 
+    70        1:0        2:1   +   0.998 
+    71        1:0        2:1   +   0.999 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   0.999 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   0.999 
+    77        2:1        2:1       0.999 
+    78        2:1        2:1       1 
+    79        1:0        1:0       1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        1:0       1 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        1:0       1 
+    90        1:0        2:1   +   0.999 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   0.999 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   0.999 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        1:0       1 
+    98        2:1        1:0   +   1 
+    99        1:0        2:1   +   0.725 
+   100        1:0        2:1   +   0.999 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.bayes.NaiveBayesMultinomialUpdateable >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-java -Xmx18g -classpath weka.jar weka.classifiers.bayes.NaiveBayesMultinomialUpdateable -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.bayes.NaiveBayesMultinomialUpdateable -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Naive Bayes Classifier
-
-                   Class
-Attribute              0         1
-                  (0.13)    (0.87)
-===================================
-7
-  mean             5.9524    3.0195
-  std. dev.        3.3923    2.1258
-  weight sum           12        88
-  precision        1.4286    1.4286
-
-12
-  mean          1489.8876  256.7679
-  std. dev.     1564.2462   360.386
-  weight sum           12        88
-  precision       76.0794   76.0794
-
-26
-  mean                 16   39.8298
-  std. dev.       50.7017   39.7264
-  weight sum           12        47
-  precision             8         8
-
-31
-  mean                 16   37.7872
-  std. dev.       50.7017    38.196
-  weight sum           12        47
-  precision             8         8
-
-11
-  mean           624.3417  255.4125
-  std. dev.      991.2417  356.9195
-  weight sum           12        88
-  precision         48.65     48.65
-
-92
-  mean           642.9844  167.7668
-  std. dev.      710.2866  301.3064
-  weight sum           12        41
-  precision       59.8125   59.8125
-
-2
-  mean             3.5714    0.8604
-  std. dev.        2.8868    1.1302
-  weight sum           12        88
-  precision        1.4286    1.4286
-
-32
-  mean            28.6882   40.7907
-  std. dev.       49.1149   37.5915
-  weight sum           12        47
-  precision        5.9355    5.9355
-
-87
-  mean             6.1458    3.1707
-  std. dev.        3.4407    2.3115
-  weight sum           12        41
-  precision          1.25      1.25
-
-33
-  mean            33.5417   40.4947
-  std. dev.       47.1145   37.3389
-  weight sum           12        47
-  precision          5.75      5.75
-
-23
-  mean             5.6944    2.8369
-  std. dev.        3.4331    2.2523
-  weight sum           12        47
-  precision        1.6667    1.6667
-
-40
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-41
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-45
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-46
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-91
-  mean              288.5  167.4222
-  std. dev.      471.7833  300.6876
-  weight sum           12        41
-  precision       59.6897   59.6897
-
-10
-  mean           227.3284  193.5996
-  std. dev.      723.4802  297.7048
-  weight sum           12        88
-  precision       51.4706   51.4706
-
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          55               55      %
-Incorrectly Classified Instances        45               45      %
-Kappa statistic                          0.1286
-Mean absolute error                      0.4477
-Root mean squared error                  0.6638
-Coverage of cases (0.95 level)          59      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.154    0.021    0.889      0.154    0.262      0.232    0.961     0.919     0
-                 0.979    0.846    0.516      0.979    0.676      0.232    0.961     0.968     1
-Weighted Avg.    0.550    0.417    0.710      0.550    0.461      0.232    0.961     0.942     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  8 44 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        1:0       1 
+     2        1:0        1:0       1 
+     3        1:0        2:1   +   0.979 
+     4        2:1        2:1       0.999 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   0.999 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   0.979 
+     9        1:0        2:1   +   0.999 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   0.979 
+    13        1:0        2:1   +   0.999 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   0.999 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   0.978 
+    19        1:0        2:1   +   0.999 
+    20        2:1        2:1       1 
+    21        1:0        1:0       1 
+    22        1:0        2:1   +   0.999 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        1:0       1 
+    26        2:1        1:0   +   1 
+    27        1:0        2:1   +   0.979 
+    28        1:0        2:1   +   0.999 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   0.999 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   0.978 
+    33        1:0        2:1   +   0.999 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   0.979 
+    37        1:0        2:1   +   0.998 
+    38        2:1        2:1       0.999 
+    39        2:1        2:1       0.999 
+    40        2:1        2:1       0.999 
+    41        1:0        2:1   +   0.999 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   0.919 
+    44        1:0        2:1   +   0.999 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   0.999 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   0.999 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        1:0       0.999 
+    52        1:0        2:1   +   0.866 
+    53        1:0        2:1   +   0.999 
+    54        2:1        2:1       1 
+    55        2:1        2:1       0.999 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   0.999 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   0.999 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   0.998 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   0.998 
+    65        1:0        2:1   +   0.999 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   0.984 
+    68        1:0        2:1   +   0.983 
+    69        2:1        2:1       0.988 
+    70        1:0        2:1   +   0.998 
+    71        1:0        2:1   +   0.999 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   0.999 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   0.999 
+    77        2:1        2:1       0.999 
+    78        2:1        2:1       1 
+    79        1:0        1:0       1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        1:0       1 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        1:0       1 
+    90        1:0        2:1   +   0.999 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   0.999 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   0.999 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        1:0       1 
+    98        2:1        1:0   +   1 
+    99        1:0        2:1   +   0.725 
+   100        1:0        2:1   +   0.999 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.bayes.NaiveBayesUpdateable >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -1302,8 +1003,8 @@ Attribute              0         1
 
 
 
-Time taken to build model: 0.3 seconds
-Time taken to test model on training data: 0.06 seconds
+Time taken to build model: 0.33 seconds
+Time taken to test model on training data: 0.05 seconds
 
 === Error on training data ===
 
@@ -1363,207 +1064,112 @@ Weighted Avg.    0.820    0.240    0.890      0.820    0.843      0.441    0.828
   9  3 |  a = 0
  15 73 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.bayes.NaiveBayesUpdateable -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.bayes.NaiveBayesUpdateable -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Naive Bayes Classifier
-
-                   Class
-Attribute              0         1
-                  (0.13)    (0.87)
-===================================
-7
-  mean             5.9524    3.0195
-  std. dev.        3.3923    2.1258
-  weight sum           12        88
-  precision        1.4286    1.4286
-
-12
-  mean          1489.8876  256.7679
-  std. dev.     1564.2462   360.386
-  weight sum           12        88
-  precision       76.0794   76.0794
-
-26
-  mean                 16   39.8298
-  std. dev.       50.7017   39.7264
-  weight sum           12        47
-  precision             8         8
-
-31
-  mean                 16   37.7872
-  std. dev.       50.7017    38.196
-  weight sum           12        47
-  precision             8         8
-
-11
-  mean           624.3417  255.4125
-  std. dev.      991.2417  356.9195
-  weight sum           12        88
-  precision         48.65     48.65
-
-92
-  mean           642.9844  167.7668
-  std. dev.      710.2866  301.3064
-  weight sum           12        41
-  precision       59.8125   59.8125
-
-2
-  mean             3.5714    0.8604
-  std. dev.        2.8868    1.1302
-  weight sum           12        88
-  precision        1.4286    1.4286
-
-32
-  mean            28.6882   40.7907
-  std. dev.       49.1149   37.5915
-  weight sum           12        47
-  precision        5.9355    5.9355
-
-87
-  mean             6.1458    3.1707
-  std. dev.        3.4407    2.3115
-  weight sum           12        41
-  precision          1.25      1.25
-
-33
-  mean            33.5417   40.4947
-  std. dev.       47.1145   37.3389
-  weight sum           12        47
-  precision          5.75      5.75
-
-23
-  mean             5.6944    2.8369
-  std. dev.        3.4331    2.2523
-  weight sum           12        47
-  precision        1.6667    1.6667
-
-40
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-41
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-45
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-46
-  mean                  0    0.5714
-  std. dev.        0.1667    0.8207
-  weight sum           12        14
-  precision             1         1
-
-91
-  mean              288.5  167.4222
-  std. dev.      471.7833  300.6876
-  weight sum           12        41
-  precision       59.6897   59.6897
-
-10
-  mean           227.3284  193.5996
-  std. dev.      723.4802  297.7048
-  weight sum           12        88
-  precision       51.4706   51.4706
-
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          55               55      %
-Incorrectly Classified Instances        45               45      %
-Kappa statistic                          0.1286
-Mean absolute error                      0.4477
-Root mean squared error                  0.6638
-Coverage of cases (0.95 level)          59      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.154    0.021    0.889      0.154    0.262      0.232    0.961     0.919     0
-                 0.979    0.846    0.516      0.979    0.676      0.232    0.961     0.968     1
-Weighted Avg.    0.550    0.417    0.710      0.550    0.461      0.232    0.961     0.942     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  8 44 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        1:0       1 
+     2        1:0        1:0       1 
+     3        1:0        2:1   +   0.979 
+     4        2:1        2:1       0.999 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   0.999 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   0.979 
+     9        1:0        2:1   +   0.999 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   0.979 
+    13        1:0        2:1   +   0.999 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   0.999 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   0.978 
+    19        1:0        2:1   +   0.999 
+    20        2:1        2:1       1 
+    21        1:0        1:0       1 
+    22        1:0        2:1   +   0.999 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        1:0       1 
+    26        2:1        1:0   +   1 
+    27        1:0        2:1   +   0.979 
+    28        1:0        2:1   +   0.999 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   0.999 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   0.978 
+    33        1:0        2:1   +   0.999 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   0.979 
+    37        1:0        2:1   +   0.998 
+    38        2:1        2:1       0.999 
+    39        2:1        2:1       0.999 
+    40        2:1        2:1       0.999 
+    41        1:0        2:1   +   0.999 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   0.919 
+    44        1:0        2:1   +   0.999 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   0.999 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   0.999 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        1:0       0.999 
+    52        1:0        2:1   +   0.866 
+    53        1:0        2:1   +   0.999 
+    54        2:1        2:1       1 
+    55        2:1        2:1       0.999 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   0.999 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   0.999 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   0.998 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   0.998 
+    65        1:0        2:1   +   0.999 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   0.984 
+    68        1:0        2:1   +   0.983 
+    69        2:1        2:1       0.988 
+    70        1:0        2:1   +   0.998 
+    71        1:0        2:1   +   0.999 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   0.999 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   0.999 
+    77        2:1        2:1       0.999 
+    78        2:1        2:1       1 
+    79        1:0        1:0       1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        1:0       1 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        1:0       1 
+    90        1:0        2:1   +   0.999 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   0.999 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   0.999 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        1:0       1 
+    98        2:1        1:0   +   1 
+    99        1:0        2:1   +   0.725 
+   100        1:0        2:1   +   0.999 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.functions.Logistic -D -- -R 1.0E-8 -M -1 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -1681,7 +1287,7 @@ Variable             0
 10              1.0665
 
 
-Time taken to build model: 0.39 seconds
+Time taken to build model: 0.24 seconds
 Time taken to test model on training data: 0.02 seconds
 
 === Error on training data ===
@@ -1742,145 +1348,112 @@ Weighted Avg.    0.900    0.373    0.900      0.900    0.900      0.527    0.760
   7  5 |  a = 0
   5 83 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.functions.Logistic -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.functions.Logistic -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Logistic Regression with ridge parameter of 1.0E-8
-Coefficients...
-                 Class
-Variable             0
-======================
-7             -10.7943
-12              0.0067
-26             -1.3733
-31              0.4984
-11             -0.0038
-92              0.0143
-2              -4.8744
-32              0.0757
-87              9.1752
-33             -0.2572
-23             -2.8074
-40             -86.521
-41             -86.521
-45             -86.521
-46             -86.521
-91             -0.0266
-10              0.0644
-Intercept       53.234
-
-
-Odds Ratios...
-                 Class
-Variable             0
-======================
-7                    0
-12              1.0068
-26              0.2533
-31               1.646
-11              0.9962
-92              1.0144
-2               0.0076
-32              1.0786
-87           9655.0629
-33              0.7732
-23              0.0604
-40                   0
-41                   0
-45                   0
-46                   0
-91              0.9738
-10              1.0665
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          48               48      %
-Incorrectly Classified Instances        52               52      %
-Kappa statistic                         -0.0015
-Mean absolute error                      0.52  
-Root mean squared error                  0.7211
-Coverage of cases (0.95 level)          48      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.019    0.021    0.500      0.019    0.037      -0.006   0.078     0.355     0
-                 0.979    0.981    0.480      0.979    0.644      -0.006   0.499     0.480     1
-Weighted Avg.    0.480    0.482    0.490      0.480    0.328      -0.006   0.280     0.415     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  1 51 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   1 
+     2        1:0        2:1   +   1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       1 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   1 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   1 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   1 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   1 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   1 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   1 
+    22        1:0        2:1   +   1 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        1:0       1 
+    26        2:1        1:0   +   1 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   1 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   1 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   1 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   1 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   1 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   1 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   1 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   1 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        2:1   +   1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   1 
+    54        2:1        2:1       1 
+    55        2:1        2:1       1 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   1 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   1 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   1 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   1 
+    68        1:0        2:1   +   1 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   1 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   1 
+    74        2:1        2:1       1 
+    75        1:0        2:1   +   1 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       1 
+    78        2:1        2:1       1 
+    79        1:0        2:1   +   1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        2:1   +   1 
+    85        1:0        2:1   +   1 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        2:1   +   1 
+    90        1:0        2:1   +   1 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   1 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   1 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   1 
+    98        2:1        1:0   +   1 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   1 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.functions.MultilayerPerceptron -D -- -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -2162,8 +1735,8 @@ Class 1
     Node 1
 
 
-Time taken to build model: 0.69 seconds
-Time taken to test model on training data: 0.01 seconds
+Time taken to build model: 0.65 seconds
+Time taken to test model on training data: 0.02 seconds
 
 === Error on training data ===
 
@@ -2223,309 +1796,112 @@ Weighted Avg.    0.930    0.225    0.933      0.930    0.931      0.681    0.857
   9  3 |  a = 0
   4 84 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.functions.MultilayerPerceptron -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.functions.MultilayerPerceptron -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Sigmoid Node 0
-    Inputs    Weights
-    Threshold    5.585261216550646
-    Node 2    -2.7406174120406273
-    Node 3    -2.2511000316484595
-    Node 4    -2.3016154264999638
-    Node 5    -3.3275495415560568
-    Node 6    -2.4305050248690505
-    Node 7    -3.7262389505814273
-    Node 8    -1.888220870826146
-    Node 9    -3.216114153515523
-    Node 10    -3.9795431276947446
-Sigmoid Node 1
-    Inputs    Weights
-    Threshold    -5.585026570316499
-    Node 2    2.6872781752316137
-    Node 3    2.2062875779602495
-    Node 4    2.325137565745857
-    Node 5    3.281640617597683
-    Node 6    2.4625011459278046
-    Node 7    3.7076242063093243
-    Node 8    1.9347519737549566
-    Node 9    3.258844771360013
-    Node 10    4.014797481420006
-Sigmoid Node 2
-    Inputs    Weights
-    Threshold    0.518011770571309
-    Attrib 7    0.5469805465076578
-    Attrib 12    -0.966621423264691
-    Attrib 26    1.0765336704321453
-    Attrib 31    -0.13502181974784103
-    Attrib 11    1.8270342988753587
-    Attrib 92    -2.1851314803077395
-    Attrib 2    1.4828101423781535
-    Attrib 32    0.8030880060465636
-    Attrib 87    0.24996965343122263
-    Attrib 33    0.6701242769075119
-    Attrib 23    0.9954228041606632
-    Attrib 40    1.1628037007425045
-    Attrib 41    1.1850914478571608
-    Attrib 45    1.167050937274685
-    Attrib 46    1.1391199658178548
-    Attrib 91    -1.572037071875817
-    Attrib 10    -2.2613327466643605
-Sigmoid Node 3
-    Inputs    Weights
-    Threshold    0.5351557977787628
-    Attrib 7    0.5211677348526604
-    Attrib 12    -0.8654817485899664
-    Attrib 26    0.8964047536849327
-    Attrib 31    -0.08768601571667281
-    Attrib 11    1.47282742934887
-    Attrib 92    -1.819004383183473
-    Attrib 2    1.1414747031139805
-    Attrib 32    0.6661070946572252
-    Attrib 87    0.17156947788893254
-    Attrib 33    0.5017852907168262
-    Attrib 23    0.7821660759940818
-    Attrib 40    1.0871021086512598
-    Attrib 41    1.006233543633776
-    Attrib 45    1.0703151157684219
-    Attrib 46    1.0174776789240143
-    Attrib 91    -1.2599671703673128
-    Attrib 10    -1.8964651199002018
-Sigmoid Node 4
-    Inputs    Weights
-    Threshold    1.0581502267579272
-    Attrib 7    -0.35685721724829395
-    Attrib 12    -1.1980426609831032
-    Attrib 26    2.1142453545097055
-    Attrib 31    0.49676476139693326
-    Attrib 11    -0.7339097563247226
-    Attrib 92    -0.16536163448769742
-    Attrib 2    -0.4808598659523398
-    Attrib 32    0.41842857878903217
-    Attrib 87    -0.4744020687333031
-    Attrib 33    0.35296218449990063
-    Attrib 23    -0.3484691833570199
-    Attrib 40    1.1106014575568104
-    Attrib 41    1.0439314615777568
-    Attrib 45    1.1345070563063817
-    Attrib 46    1.0624892393895211
-    Attrib 91    0.24458624993078917
-    Attrib 10    -2.093555110000922
-Sigmoid Node 5
-    Inputs    Weights
-    Threshold    1.346566906512618
-    Attrib 7    -0.5767308542988213
-    Attrib 12    -1.7863787380511682
-    Attrib 26    2.87359361861886
-    Attrib 31    0.8156758378265396
-    Attrib 11    -1.515590046914677
-    Attrib 92    0.38688889695048795
-    Attrib 2    -1.0595474462004237
-    Attrib 32    0.46421551919812054
-    Attrib 87    -0.5786345571557812
-    Attrib 33    0.38515487296455314
-    Attrib 23    -0.8005887954400216
-    Attrib 40    1.31781715638659
-    Attrib 41    1.2826833269530662
-    Attrib 45    1.3117154065169296
-    Attrib 46    1.2486707810389512
-    Attrib 91    0.78749457638015
-    Attrib 10    -2.359101396501005
-Sigmoid Node 6
-    Inputs    Weights
-    Threshold    0.9915715141067633
-    Attrib 7    -0.44115436003309133
-    Attrib 12    -1.3696950660805318
-    Attrib 26    2.2017255049506286
-    Attrib 31    0.6701165986541102
-    Attrib 11    -1.0027331275445173
-    Attrib 92    0.04021429550602508
-    Attrib 2    -0.6754879420814209
-    Attrib 32    0.3676840769112801
-    Attrib 87    -0.5629913691166915
-    Attrib 33    0.3971702655087918
-    Attrib 23    -0.4839999814648491
-    Attrib 40    1.1343164053663153
-    Attrib 41    1.084610794169901
-    Attrib 45    1.0965183489052617
-    Attrib 46    1.0646434098277067
-    Attrib 91    0.49246255505546827
-    Attrib 10    -2.0809377720630176
-Sigmoid Node 7
-    Inputs    Weights
-    Threshold    1.5500821738184267
-    Attrib 7    -0.6323406726648597
-    Attrib 12    -1.9498102548437777
-    Attrib 26    3.1127695118521777
-    Attrib 31    0.9358350391552125
-    Attrib 11    -1.6524251348000978
-    Attrib 92    0.4544383702975023
-    Attrib 2    -1.1679475890099886
-    Attrib 32    0.4675192854608278
-    Attrib 87    -0.5979677655834983
-    Attrib 33    0.46086828663308593
-    Attrib 23    -0.8279580432755057
-    Attrib 40    1.395439588892996
-    Attrib 41    1.3591825377698392
-    Attrib 45    1.4151838153288308
-    Attrib 46    1.4147191066639293
-    Attrib 91    0.825400860564394
-    Attrib 10    -2.590731315039033
-Sigmoid Node 8
-    Inputs    Weights
-    Threshold    0.8864522794382601
-    Attrib 7    -0.13154810650125798
-    Attrib 12    -0.9711937712370604
-    Attrib 26    1.6740787470677745
-    Attrib 31    0.32373805037188735
-    Attrib 11    -0.2797940418733644
-    Attrib 92    -0.5374916509335947
-    Attrib 2    -0.0607222001405647
-    Attrib 32    0.44701219277879795
-    Attrib 87    -0.2465683279286731
-    Attrib 33    0.3013871623894366
-    Attrib 23    -0.024966626171034102
-    Attrib 40    0.9360155511015813
-    Attrib 41    0.9805030945667499
-    Attrib 45    1.0034311959661397
-    Attrib 46    0.9295091269168096
-    Attrib 91    -0.13714932848676947
-    Attrib 10    -1.9064748864826169
-Sigmoid Node 9
-    Inputs    Weights
-    Threshold    0.25456991609769986
-    Attrib 7    0.8362582694288817
-    Attrib 12    -1.0447268184847092
-    Attrib 26    0.8658351719477703
-    Attrib 31    -0.3040779755281518
-    Attrib 11    2.4417252118682615
-    Attrib 92    -2.600496943267616
-    Attrib 2    1.9950881837612444
-    Attrib 32    1.0488193575892104
-    Attrib 87    0.32211997201976184
-    Attrib 33    0.7661966831933802
-    Attrib 23    1.2726041396052197
-    Attrib 40    1.2805978068724062
-    Attrib 41    1.2192638972808931
-    Attrib 45    1.2516679859835766
-    Attrib 46    1.2424205665618608
-    Attrib 91    -1.86049440856306
-    Attrib 10    -2.2685933948448787
-Sigmoid Node 10
-    Inputs    Weights
-    Threshold    0.010914067048411639
-    Attrib 7    0.9924274358432329
-    Attrib 12    -1.1409100100658556
-    Attrib 26    0.38196731854305854
-    Attrib 31    -0.43424552576710646
-    Attrib 11    3.2975930954511457
-    Attrib 92    -3.2035126249591084
-    Attrib 2    2.5216468976601405
-    Attrib 32    1.1463513255456301
-    Attrib 87    0.513285084588721
-    Attrib 33    0.8169309106233954
-    Attrib 23    1.4939248949061283
-    Attrib 40    1.3948655718540148
-    Attrib 41    1.3453408006835856
-    Attrib 45    1.361747964548709
-    Attrib 46    1.3908025561573278
-    Attrib 91    -2.2477097224196663
-    Attrib 10    -1.9886672729337562
-Class 0
-    Input
-    Node 0
-Class 1
-    Input
-    Node 1
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          49               49      %
-Incorrectly Classified Instances        51               51      %
-Kappa statistic                          0.017 
-Mean absolute error                      0.5104
-Root mean squared error                  0.7137
-Coverage of cases (0.95 level)          49      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.038    0.021    0.667      0.038    0.073      0.052    0.067     0.374     0
-                 0.979    0.962    0.485      0.979    0.648      0.052    0.067     0.311     1
-Weighted Avg.    0.490    0.472    0.579      0.490    0.349      0.052    0.067     0.343     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  2 50 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   1 
+     2        1:0        2:1   +   1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       1 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   1 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   1 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   1 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   1 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   1 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   1 
+    22        1:0        2:1   +   1 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        2:1   +   1 
+    26        2:1        2:1       0.999 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   1 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   1 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   1 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   1 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   1 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   1 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   1 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   1 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        2:1   +   1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   1 
+    54        2:1        2:1       1 
+    55        2:1        2:1       1 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   1 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   1 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   1 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   1 
+    68        1:0        2:1   +   1 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   1 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   1 
+    74        2:1        2:1       1 
+    75        1:0        1:0       0.983 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       1 
+    78        2:1        2:1       1 
+    79        1:0        2:1   +   0.999 
+    80        1:0        1:0       0.945 
+    81        2:1        1:0   +   0.971 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       0.99 
+    85        1:0        2:1   +   0.999 
+    86        1:0        1:0       0.97 
+    87        2:1        1:0   +   0.991 
+    88        2:1        1:0   +   0.992 
+    89        1:0        2:1   +   1 
+    90        1:0        2:1   +   1 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   1 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   1 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   1 
+    98        2:1        2:1       1 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   1 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.functions.SGD -D -- -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -2618,7 +1994,7 @@ Loss function: Hinge loss (SVM)
  +      -1.4613 (normalized) 10
  +       0.7   
 
-Time taken to build model: 0.19 seconds
+Time taken to build model: 0.34 seconds
 Time taken to test model on training data: 0.02 seconds
 
 === Error on training data ===
@@ -2679,120 +2055,112 @@ Weighted Avg.    0.920    0.371    0.915      0.920    0.917      0.595    0.775
   7  5 |  a = 0
   3 85 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.functions.SGD -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.functions.SGD -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Loss function: Hinge loss (SVM)
-
-98 = 
-
-         0.8878 (normalized) 7
- +      -0.931  (normalized) 12
- +       1.7281 (normalized) 26
- +       0.7025 (normalized) 31
- +       0.1927 (normalized) 11
- +      -0.9358 (normalized) 92
- +      -1.1136 (normalized) 2
- +      -0.2373 (normalized) 32
- +      -0.9969 (normalized) 87
- +      -0.315  (normalized) 33
- +      -0.0389 (normalized) 23
- +       1.894  (normalized) 40
- +       1.894  (normalized) 41
- +       1.894  (normalized) 45
- +       1.894  (normalized) 46
- +       0.0049 (normalized) 91
- +      -1.4613 (normalized) 10
- +       0.7   
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          50               50      %
-Incorrectly Classified Instances        50               50      %
-Kappa statistic                          0.0355
-Mean absolute error                      0.5   
-Root mean squared error                  0.7071
-Coverage of cases (0.95 level)          50      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.058    0.021    0.750      0.058    0.107      0.094    0.518     0.533     0
-                 0.979    0.942    0.490      0.979    0.653      0.094    0.518     0.489     1
-Weighted Avg.    0.500    0.463    0.625      0.500    0.369      0.094    0.518     0.512     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  3 49 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   1 
+     2        1:0        2:1   +   1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       1 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   1 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   1 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   1 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   1 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   1 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   1 
+    22        1:0        2:1   +   1 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        2:1   +   1 
+    26        2:1        2:1       1 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   1 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   1 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   1 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   1 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   1 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   1 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   1 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   1 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        2:1   +   1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   1 
+    54        2:1        2:1       1 
+    55        2:1        2:1       1 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   1 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   1 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   1 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   1 
+    68        1:0        2:1   +   1 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   1 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   1 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       1 
+    78        2:1        2:1       1 
+    79        1:0        1:0       1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        2:1   +   1 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        2:1   +   1 
+    90        1:0        2:1   +   1 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   1 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   1 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   1 
+    98        2:1        2:1       1 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   1 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.functions.SimpleLogistic -D -- -I 0 -M 500 -H 50 -W 0.0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -2942,116 +2310,112 @@ Weighted Avg.    0.890    0.591    0.873      0.890    0.877      0.381    0.824
   4  8 |  a = 0
   3 85 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.functions.SimpleLogistic -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.functions.SimpleLogistic -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-SimpleLogistic:
-
-Class 0 :
--0.04 + 
-[12] * 0    +
-[26] * -0.01 +
-[2] * 0    +
-[40] * -8.05 +
-[10] * 0   
-
-Class 1 :
-0.04 + 
-[12] * 0    +
-[26] * 0.01 +
-[2] * 0    +
-[40] * 8.05 +
-[10] * 0   
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          50               50      %
-Incorrectly Classified Instances        50               50      %
-Kappa statistic                          0.0355
-Mean absolute error                      0.4999
-Root mean squared error                  0.7051
-Coverage of cases (0.95 level)          50      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.058    0.021    0.750      0.058    0.107      0.094    0.664     0.673     0
-                 0.979    0.942    0.490      0.979    0.653      0.094    0.664     0.688     1
-Weighted Avg.    0.500    0.463    0.625      0.500    0.369      0.094    0.664     0.681     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  3 49 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   0.997 
+     2        1:0        2:1   +   0.983 
+     3        1:0        2:1   +   0.997 
+     4        2:1        2:1       0.997 
+     5        2:1        2:1       0.997 
+     6        1:0        2:1   +   0.997 
+     7        2:1        2:1       0.997 
+     8        1:0        2:1   +   0.997 
+     9        1:0        2:1   +   0.997 
+    10        2:1        2:1       0.997 
+    11        2:1        2:1       0.997 
+    12        1:0        2:1   +   0.997 
+    13        1:0        2:1   +   0.997 
+    14        2:1        2:1       0.997 
+    15        2:1        2:1       0.997 
+    16        1:0        2:1   +   0.997 
+    17        2:1        2:1       0.997 
+    18        1:0        2:1   +   0.997 
+    19        1:0        2:1   +   0.997 
+    20        2:1        2:1       0.997 
+    21        1:0        2:1   +   0.986 
+    22        1:0        2:1   +   0.997 
+    23        2:1        2:1       0.997 
+    24        2:1        2:1       0.997 
+    25        1:0        2:1   +   0.888 
+    26        2:1        2:1       0.888 
+    27        1:0        2:1   +   0.997 
+    28        1:0        2:1   +   0.997 
+    29        2:1        2:1       0.997 
+    30        1:0        2:1   +   0.997 
+    31        2:1        2:1       0.997 
+    32        1:0        2:1   +   0.997 
+    33        1:0        2:1   +   0.997 
+    34        2:1        2:1       0.997 
+    35        2:1        2:1       0.997 
+    36        1:0        2:1   +   0.997 
+    37        1:0        2:1   +   0.997 
+    38        2:1        2:1       0.997 
+    39        2:1        2:1       0.997 
+    40        2:1        2:1       0.997 
+    41        1:0        2:1   +   0.997 
+    42        2:1        2:1       0.997 
+    43        1:0        2:1   +   0.997 
+    44        1:0        2:1   +   0.997 
+    45        2:1        2:1       0.997 
+    46        1:0        2:1   +   0.997 
+    47        2:1        2:1       0.997 
+    48        1:0        2:1   +   0.997 
+    49        2:1        2:1       0.997 
+    50        2:1        2:1       0.997 
+    51        1:0        2:1   +   0.994 
+    52        1:0        2:1   +   0.997 
+    53        1:0        2:1   +   0.997 
+    54        2:1        2:1       0.997 
+    55        2:1        2:1       0.997 
+    56        2:1        2:1       0.997 
+    57        1:0        2:1   +   0.997 
+    58        2:1        2:1       0.997 
+    59        1:0        2:1   +   0.997 
+    60        2:1        2:1       0.997 
+    61        1:0        2:1   +   0.997 
+    62        1:0        2:1   +   0.997 
+    63        2:1        2:1       0.997 
+    64        1:0        2:1   +   0.997 
+    65        1:0        2:1   +   0.997 
+    66        2:1        2:1       0.997 
+    67        1:0        2:1   +   0.995 
+    68        1:0        2:1   +   0.986 
+    69        2:1        2:1       0.986 
+    70        1:0        2:1   +   0.997 
+    71        1:0        2:1   +   0.997 
+    72        2:1        2:1       0.997 
+    73        1:0        2:1   +   0.997 
+    74        2:1        2:1       0.997 
+    75        1:0        1:0       0.998 
+    76        1:0        2:1   +   0.997 
+    77        2:1        2:1       0.997 
+    78        2:1        2:1       0.997 
+    79        1:0        1:0       0.998 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       0.997 
+    83        2:1        2:1       0.997 
+    84        1:0        1:0       0.999 
+    85        1:0        1:0       0.946 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   0.922 
+    88        2:1        1:0   +   0.999 
+    89        1:0        2:1   +   0.988 
+    90        1:0        2:1   +   0.997 
+    91        2:1        2:1       0.997 
+    92        1:0        2:1   +   0.997 
+    93        2:1        2:1       0.997 
+    94        1:0        2:1   +   0.997 
+    95        2:1        2:1       0.997 
+    96        2:1        2:1       0.997 
+    97        1:0        2:1   +   0.926 
+    98        2:1        2:1       0.927 
+    99        1:0        2:1   +   0.997 
+   100        1:0        2:1   +   0.997 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.functions.SMO -D -- -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0" >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -3155,8 +2519,8 @@ Number of kernel evaluations: 985 (80.514% cached)
 
 
 
-Time taken to build model: 0.29 seconds
-Time taken to test model on training data: 0.02 seconds
+Time taken to build model: 0.37 seconds
+Time taken to test model on training data: 0.04 seconds
 
 === Error on training data ===
 
@@ -3216,131 +2580,112 @@ Weighted Avg.    0.910    0.588    0.902      0.910    0.893      0.480    0.661
   4  8 |  a = 0
   1 87 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.functions.SMO -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.functions.SMO -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-SMO
-
-Kernel used:
-  Linear Kernel: K(x,y) = <x,y>
-
-Classifier for classes: 0, 1
-
-BinarySMO
-
-Machine linear: showing attribute weights, not support vectors.
-
-         0.0534 * (normalized) 7
- +      -0.9097 * (normalized) 12
- +       0.4557 * (normalized) 26
- +       0.332  * (normalized) 31
- +      -0.2769 * (normalized) 11
- +      -0.917  * (normalized) 92
- +      -0.7216 * (normalized) 2
- +       0.0797 * (normalized) 32
- +      -0.2887 * (normalized) 87
- +       0.0007 * (normalized) 33
- +      -0.1139 * (normalized) 23
- +       0.6893 * (normalized) 40
- +       0.6893 * (normalized) 41
- +       0.6893 * (normalized) 45
- +       0.6893 * (normalized) 46
- +       0.0718 * (normalized) 91
- +      -0.1966 * (normalized) 10
- +       1.0565
-
-Number of kernel evaluations: 985 (80.514% cached)
-
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          50               50      %
-Incorrectly Classified Instances        50               50      %
-Kappa statistic                          0.0355
-Mean absolute error                      0.5   
-Root mean squared error                  0.7071
-Coverage of cases (0.95 level)          50      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.058    0.021    0.750      0.058    0.107      0.094    0.518     0.533     0
-                 0.979    0.942    0.490      0.979    0.653      0.094    0.518     0.489     1
-Weighted Avg.    0.500    0.463    0.625      0.500    0.369      0.094    0.518     0.512     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  3 49 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   1 
+     2        1:0        2:1   +   1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       1 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   1 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   1 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   1 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   1 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   1 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   1 
+    22        1:0        2:1   +   1 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        2:1   +   1 
+    26        2:1        2:1       1 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   1 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   1 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   1 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   1 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   1 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   1 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   1 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   1 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        2:1   +   1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   1 
+    54        2:1        2:1       1 
+    55        2:1        2:1       1 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   1 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   1 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   1 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   1 
+    68        1:0        2:1   +   1 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   1 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   1 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       1 
+    78        2:1        2:1       1 
+    79        1:0        1:0       1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        1:0       1 
+    86        1:0        1:0       1 
+    87        2:1        2:1       1 
+    88        2:1        1:0   +   1 
+    89        1:0        2:1   +   1 
+    90        1:0        2:1   +   1 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   1 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   1 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   1 
+    98        2:1        2:1       1 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   1 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.functions.VotedPerceptron -D -- -I 1 -E 1.0 -S 1 -M 10000 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -3412,8 +2757,8 @@ Header of reduced data:
 Classifier Model
 VotedPerceptron: Number of perceptrons=25
 
-Time taken to build model: 0.16 seconds
-Time taken to test model on training data: 0.02 seconds
+Time taken to build model: 0.41 seconds
+Time taken to test model on training data: 0.04 seconds
 
 === Error on training data ===
 
@@ -3473,99 +2818,112 @@ Weighted Avg.    0.880    0.376    0.889      0.880    0.884      0.472    0.819
   7  5 |  a = 0
   7 81 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.functions.VotedPerceptron -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.functions.VotedPerceptron -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-VotedPerceptron: Number of perceptrons=25
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          51               51      %
-Incorrectly Classified Instances        49               49      %
-Kappa statistic                          0.0555
-Mean absolute error                      0.4888
-Root mean squared error                  0.6984
-Coverage of cases (0.95 level)          52      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.058    0.000    1.000      0.058    0.109      0.169    0.538     0.557     0
-                 1.000    0.942    0.495      1.000    0.662      0.169    0.538     0.500     1
-Weighted Avg.    0.510    0.452    0.758      0.510    0.375      0.169    0.538     0.530     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  3 49 |  a = 0
-  0 48 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   1 
+     2        1:0        1:0       1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       1 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   1 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   1 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   1 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   1 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   1 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   1 
+    22        1:0        2:1   +   1 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        2:1   +   1 
+    26        2:1        2:1       1 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   1 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   1 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   1 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   1 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   1 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   1 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   1 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   1 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        1:0       1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   1 
+    54        2:1        2:1       1 
+    55        2:1        2:1       1 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   1 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   1 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   1 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   1 
+    68        1:0        2:1   +   1 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   1 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   1 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       1 
+    78        2:1        2:1       1 
+    79        1:0        2:1   +   0.881 
+    80        1:0        2:1   +   1 
+    81        2:1        2:1       1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        2:1   +   0.881 
+    86        1:0        2:1   +   1 
+    87        2:1        2:1       1 
+    88        2:1        2:1       1 
+    89        1:0        2:1   +   1 
+    90        1:0        2:1   +   1 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   1 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   1 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   1 
+    98        2:1        2:1       1 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   1 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.rules.DecisionTable -D -- -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5" >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -3649,8 +3007,8 @@ Non matches covered by Majority class.
 Evaluation (for feature selection): CV (leave one out) 
 Feature set: 3,12,16,18
 
-Time taken to build model: 0.69 seconds
-Time taken to test model on training data: 0.04 seconds
+Time taken to build model: 0.38 seconds
+Time taken to test model on training data: 0.02 seconds
 
 === Error on training data ===
 
@@ -3710,111 +3068,112 @@ Weighted Avg.    0.860    0.523    0.860      0.860    0.860      0.337    0.887
   5  7 |  a = 0
   7 81 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.rules.DecisionTable -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.rules.DecisionTable -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Decision Table:
-
-Number of training instances: 100
-Number of Rules : 20
-Non matches covered by Majority class.
-	Best first.
-	Start set: no attributes
-	Search direction: forward
-	Stale search after 5 node expansions
-	Total number of subsets evaluated: 146
-	Merit of best subset found:   98    
-Evaluation (for feature selection): CV (leave one out) 
-Feature set: 3,12,16,18
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          48               48      %
-Incorrectly Classified Instances        52               52      %
-Kappa statistic                          0     
-Mean absolute error                      0.5187
-Root mean squared error                  0.6975
-Coverage of cases (0.95 level)          48      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.520     0
-                 1.000    1.000    0.480      1.000    0.649      0.000    0.500     0.480     1
-Weighted Avg.    0.480    0.480    0.230      0.480    0.311      0.000    0.500     0.501     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  0 52 |  a = 0
-  0 48 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   0.967 
+     2        1:0        2:1   +   0.967 
+     3        1:0        2:1   +   0.967 
+     4        2:1        2:1       0.967 
+     5        2:1        2:1       0.967 
+     6        1:0        2:1   +   0.967 
+     7        2:1        2:1       0.967 
+     8        1:0        2:1   +   0.967 
+     9        1:0        2:1   +   0.967 
+    10        2:1        2:1       0.967 
+    11        2:1        2:1       0.967 
+    12        1:0        2:1   +   0.967 
+    13        1:0        2:1   +   0.967 
+    14        2:1        2:1       0.967 
+    15        2:1        2:1       0.967 
+    16        1:0        2:1   +   0.967 
+    17        2:1        2:1       0.967 
+    18        1:0        2:1   +   0.967 
+    19        1:0        2:1   +   0.967 
+    20        2:1        2:1       0.967 
+    21        1:0        2:1   +   0.967 
+    22        1:0        2:1   +   0.967 
+    23        2:1        2:1       0.967 
+    24        2:1        2:1       0.967 
+    25        1:0        2:1   +   0.967 
+    26        2:1        2:1       0.967 
+    27        1:0        2:1   +   0.967 
+    28        1:0        2:1   +   0.967 
+    29        2:1        2:1       0.967 
+    30        1:0        2:1   +   0.967 
+    31        2:1        2:1       0.967 
+    32        1:0        2:1   +   0.967 
+    33        1:0        2:1   +   0.967 
+    34        2:1        2:1       0.967 
+    35        2:1        2:1       0.967 
+    36        1:0        2:1   +   0.967 
+    37        1:0        2:1   +   0.967 
+    38        2:1        2:1       0.967 
+    39        2:1        2:1       0.967 
+    40        2:1        2:1       0.967 
+    41        1:0        2:1   +   0.967 
+    42        2:1        2:1       0.967 
+    43        1:0        2:1   +   0.967 
+    44        1:0        2:1   +   0.967 
+    45        2:1        2:1       0.967 
+    46        1:0        2:1   +   0.967 
+    47        2:1        2:1       0.967 
+    48        1:0        2:1   +   0.967 
+    49        2:1        2:1       0.967 
+    50        2:1        2:1       0.967 
+    51        1:0        2:1   +   0.967 
+    52        1:0        2:1   +   0.967 
+    53        1:0        2:1   +   0.967 
+    54        2:1        2:1       0.967 
+    55        2:1        2:1       0.967 
+    56        2:1        2:1       0.967 
+    57        1:0        2:1   +   0.967 
+    58        2:1        2:1       0.967 
+    59        1:0        2:1   +   0.967 
+    60        2:1        2:1       0.967 
+    61        1:0        2:1   +   0.967 
+    62        1:0        2:1   +   0.967 
+    63        2:1        2:1       0.967 
+    64        1:0        2:1   +   0.967 
+    65        1:0        2:1   +   0.967 
+    66        2:1        2:1       0.967 
+    67        1:0        2:1   +   0.967 
+    68        1:0        2:1   +   0.967 
+    69        2:1        2:1       0.967 
+    70        1:0        2:1   +   0.967 
+    71        1:0        2:1   +   0.967 
+    72        2:1        2:1       0.967 
+    73        1:0        2:1   +   0.967 
+    74        2:1        2:1       0.967 
+    75        1:0        2:1   +   0.967 
+    76        1:0        2:1   +   0.967 
+    77        2:1        2:1       0.967 
+    78        2:1        2:1       0.967 
+    79        1:0        2:1   +   0.967 
+    80        1:0        2:1   +   0.967 
+    81        2:1        2:1       0.967 
+    82        2:1        2:1       0.967 
+    83        2:1        2:1       0.967 
+    84        1:0        2:1   +   0.967 
+    85        1:0        2:1   +   0.967 
+    86        1:0        2:1   +   0.967 
+    87        2:1        2:1       0.967 
+    88        2:1        2:1       0.967 
+    89        1:0        2:1   +   0.967 
+    90        1:0        2:1   +   0.967 
+    91        2:1        2:1       0.967 
+    92        1:0        2:1   +   0.967 
+    93        2:1        2:1       0.967 
+    94        1:0        2:1   +   0.967 
+    95        2:1        2:1       0.967 
+    96        2:1        2:1       0.967 
+    97        1:0        2:1   +   0.967 
+    98        2:1        2:1       0.967 
+    99        1:0        2:1   +   0.967 
+   100        1:0        2:1   +   0.967 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.rules.JRip -D -- -F 3 -N 2.0 -O 2 -S 1 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -3894,8 +3253,8 @@ JRIP rules:
 Number of Rules : 3
 
 
-Time taken to build model: 0.47 seconds
-Time taken to test model on training data: 0.01 seconds
+Time taken to build model: 0.27 seconds
+Time taken to test model on training data: 0.02 seconds
 
 === Error on training data ===
 
@@ -3955,107 +3314,112 @@ Weighted Avg.    0.900    0.373    0.900      0.900    0.900      0.527    0.731
   7  5 |  a = 0
   5 83 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.rules.JRip -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.rules.JRip -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-JRIP rules:
-===========
-
-(40 <= 0) and (32 <= 32) => 98=0 (11.0/1.0)
-(12 >= 2625) => 98=0 (2.0/0.0)
- => 98=1 (87.0/0.0)
-
-Number of Rules : 3
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          50               50      %
-Incorrectly Classified Instances        50               50      %
-Kappa statistic                          0.0355
-Mean absolute error                      0.5   
-Root mean squared error                  0.7071
-Coverage of cases (0.95 level)          50      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.058    0.021    0.750      0.058    0.107      0.094    0.518     0.533     0
-                 0.979    0.942    0.490      0.979    0.653      0.094    0.518     0.489     1
-Weighted Avg.    0.500    0.463    0.625      0.500    0.369      0.094    0.518     0.512     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  3 49 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   1 
+     2        1:0        2:1   +   1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       1 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   1 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   1 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   1 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   1 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   1 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   1 
+    22        1:0        2:1   +   1 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        2:1   +   1 
+    26        2:1        2:1       1 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   1 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   1 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   1 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   1 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   1 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   1 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   1 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   1 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        2:1   +   1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   1 
+    54        2:1        2:1       1 
+    55        2:1        2:1       1 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   1 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   1 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   1 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   1 
+    68        1:0        2:1   +   1 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   1 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   1 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       1 
+    78        2:1        2:1       1 
+    79        1:0        1:0       1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        1:0       1 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        2:1   +   1 
+    90        1:0        2:1   +   1 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   1 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   1 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   1 
+    98        2:1        2:1       1 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   1 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.rules.OneR -D -- -B 6 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -4132,7 +3496,7 @@ Classifier Model
 
 
 Time taken to build model: 0.16 seconds
-Time taken to test model on training data: 0.02 seconds
+Time taken to test model on training data: 0.01 seconds
 
 === Error on training data ===
 
@@ -4192,103 +3556,112 @@ Weighted Avg.    0.850    0.596    0.845      0.850    0.847      0.264    0.627
   4  8 |  a = 0
   7 81 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.rules.OneR -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.rules.OneR -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-12:
-	< 2555.5	-> 1
-	>= 2555.5	-> 0
-(92/100 instances correct)
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          50               50      %
-Incorrectly Classified Instances        50               50      %
-Kappa statistic                          0.0355
-Mean absolute error                      0.5   
-Root mean squared error                  0.7071
-Coverage of cases (0.95 level)          50      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.058    0.021    0.750      0.058    0.107      0.094    0.518     0.533     0
-                 0.979    0.942    0.490      0.979    0.653      0.094    0.518     0.489     1
-Weighted Avg.    0.500    0.463    0.625      0.500    0.369      0.094    0.518     0.512     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  3 49 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   1 
+     2        1:0        2:1   +   1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       1 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   1 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   1 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   1 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   1 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   1 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   1 
+    22        1:0        2:1   +   1 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        2:1   +   1 
+    26        2:1        2:1       1 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   1 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   1 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   1 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   1 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   1 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   1 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   1 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   1 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        2:1   +   1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   1 
+    54        2:1        2:1       1 
+    55        2:1        2:1       1 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   1 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   1 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   1 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   1 
+    68        1:0        2:1   +   1 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   1 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   1 
+    74        2:1        2:1       1 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       1 
+    78        2:1        2:1       1 
+    79        1:0        1:0       1 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        1:0       1 
+    85        1:0        1:0       1 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        2:1   +   1 
+    90        1:0        2:1   +   1 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   1 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   1 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   1 
+    98        2:1        2:1       1 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   1 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.rules.ZeroR >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -4360,8 +3733,8 @@ Header of reduced data:
 Classifier Model
 ZeroR predicts class value: 1
 
-Time taken to build model: 0.24 seconds
-Time taken to test model on training data: 0.01 seconds
+Time taken to build model: 0.38 seconds
+Time taken to test model on training data: 0.03 seconds
 
 === Error on training data ===
 
@@ -4421,99 +3794,112 @@ Weighted Avg.    0.880    0.880    0.774      0.880    0.824      0.000    0.424
   0 12 |  a = 0
   0 88 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.rules.ZeroR -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.rules.ZeroR -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-ZeroR predicts class value: 1
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          48               48      %
-Incorrectly Classified Instances        52               52      %
-Kappa statistic                          0     
-Mean absolute error                      0.5149
-Root mean squared error                  0.6354
-Coverage of cases (0.95 level)         100      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.520     0
-                 1.000    1.000    0.480      1.000    0.649      0.000    0.500     0.480     1
-Weighted Avg.    0.480    0.480    0.230      0.480    0.311      0.000    0.500     0.501     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  0 52 |  a = 0
-  0 48 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   0.873 
+     2        1:0        2:1   +   0.873 
+     3        1:0        2:1   +   0.873 
+     4        2:1        2:1       0.873 
+     5        2:1        2:1       0.873 
+     6        1:0        2:1   +   0.873 
+     7        2:1        2:1       0.873 
+     8        1:0        2:1   +   0.873 
+     9        1:0        2:1   +   0.873 
+    10        2:1        2:1       0.873 
+    11        2:1        2:1       0.873 
+    12        1:0        2:1   +   0.873 
+    13        1:0        2:1   +   0.873 
+    14        2:1        2:1       0.873 
+    15        2:1        2:1       0.873 
+    16        1:0        2:1   +   0.873 
+    17        2:1        2:1       0.873 
+    18        1:0        2:1   +   0.873 
+    19        1:0        2:1   +   0.873 
+    20        2:1        2:1       0.873 
+    21        1:0        2:1   +   0.873 
+    22        1:0        2:1   +   0.873 
+    23        2:1        2:1       0.873 
+    24        2:1        2:1       0.873 
+    25        1:0        2:1   +   0.873 
+    26        2:1        2:1       0.873 
+    27        1:0        2:1   +   0.873 
+    28        1:0        2:1   +   0.873 
+    29        2:1        2:1       0.873 
+    30        1:0        2:1   +   0.873 
+    31        2:1        2:1       0.873 
+    32        1:0        2:1   +   0.873 
+    33        1:0        2:1   +   0.873 
+    34        2:1        2:1       0.873 
+    35        2:1        2:1       0.873 
+    36        1:0        2:1   +   0.873 
+    37        1:0        2:1   +   0.873 
+    38        2:1        2:1       0.873 
+    39        2:1        2:1       0.873 
+    40        2:1        2:1       0.873 
+    41        1:0        2:1   +   0.873 
+    42        2:1        2:1       0.873 
+    43        1:0        2:1   +   0.873 
+    44        1:0        2:1   +   0.873 
+    45        2:1        2:1       0.873 
+    46        1:0        2:1   +   0.873 
+    47        2:1        2:1       0.873 
+    48        1:0        2:1   +   0.873 
+    49        2:1        2:1       0.873 
+    50        2:1        2:1       0.873 
+    51        1:0        2:1   +   0.873 
+    52        1:0        2:1   +   0.873 
+    53        1:0        2:1   +   0.873 
+    54        2:1        2:1       0.873 
+    55        2:1        2:1       0.873 
+    56        2:1        2:1       0.873 
+    57        1:0        2:1   +   0.873 
+    58        2:1        2:1       0.873 
+    59        1:0        2:1   +   0.873 
+    60        2:1        2:1       0.873 
+    61        1:0        2:1   +   0.873 
+    62        1:0        2:1   +   0.873 
+    63        2:1        2:1       0.873 
+    64        1:0        2:1   +   0.873 
+    65        1:0        2:1   +   0.873 
+    66        2:1        2:1       0.873 
+    67        1:0        2:1   +   0.873 
+    68        1:0        2:1   +   0.873 
+    69        2:1        2:1       0.873 
+    70        1:0        2:1   +   0.873 
+    71        1:0        2:1   +   0.873 
+    72        2:1        2:1       0.873 
+    73        1:0        2:1   +   0.873 
+    74        2:1        2:1       0.873 
+    75        1:0        2:1   +   0.873 
+    76        1:0        2:1   +   0.873 
+    77        2:1        2:1       0.873 
+    78        2:1        2:1       0.873 
+    79        1:0        2:1   +   0.873 
+    80        1:0        2:1   +   0.873 
+    81        2:1        2:1       0.873 
+    82        2:1        2:1       0.873 
+    83        2:1        2:1       0.873 
+    84        1:0        2:1   +   0.873 
+    85        1:0        2:1   +   0.873 
+    86        1:0        2:1   +   0.873 
+    87        2:1        2:1       0.873 
+    88        2:1        2:1       0.873 
+    89        1:0        2:1   +   0.873 
+    90        1:0        2:1   +   0.873 
+    91        2:1        2:1       0.873 
+    92        1:0        2:1   +   0.873 
+    93        2:1        2:1       0.873 
+    94        1:0        2:1   +   0.873 
+    95        2:1        2:1       0.873 
+    96        2:1        2:1       0.873 
+    97        1:0        2:1   +   0.873 
+    98        2:1        2:1       0.873 
+    99        1:0        2:1   +   0.873 
+   100        1:0        2:1   +   0.873 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.trees.DecisionStump >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -4665,118 +4051,112 @@ Weighted Avg.    0.900    0.158    0.925      0.900    0.908      0.628    0.879
  10  2 |  a = 0
   8 80 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.trees.DecisionStump -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.trees.DecisionStump -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Decision Stump
-
-Classifications
-
-40 <= 0.5 : 0
-40 > 0.5 : 1
-40 is missing : 1
-
-Class distributions
-
-40 <= 0.5
-0	1	
-0.5714285714285714	0.42857142857142855	
-40 > 0.5
-0	1	
-0.0	1.0	
-40 is missing
-0	1	
-0.0	1.0	
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          48               48      %
-Incorrectly Classified Instances        52               52      %
-Kappa statistic                          0     
-Mean absolute error                      0.52  
-Root mean squared error                  0.7211
-Coverage of cases (0.95 level)          48      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.520     0
-                 1.000    1.000    0.480      1.000    0.649      0.000    0.500     0.480     1
-Weighted Avg.    0.480    0.480    0.230      0.480    0.311      0.000    0.500     0.501     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  0 52 |  a = 0
-  0 48 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   1 
+     2        1:0        2:1   +   1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       1 
+     5        2:1        2:1       1 
+     6        1:0        2:1   +   1 
+     7        2:1        2:1       1 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   1 
+    10        2:1        2:1       1 
+    11        2:1        2:1       1 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   1 
+    14        2:1        2:1       1 
+    15        2:1        2:1       1 
+    16        1:0        2:1   +   1 
+    17        2:1        2:1       1 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   1 
+    20        2:1        2:1       1 
+    21        1:0        2:1   +   1 
+    22        1:0        2:1   +   1 
+    23        2:1        2:1       1 
+    24        2:1        2:1       1 
+    25        1:0        2:1   +   1 
+    26        2:1        2:1       1 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   1 
+    29        2:1        2:1       1 
+    30        1:0        2:1   +   1 
+    31        2:1        2:1       1 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   1 
+    34        2:1        2:1       1 
+    35        2:1        2:1       1 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   1 
+    38        2:1        2:1       1 
+    39        2:1        2:1       1 
+    40        2:1        2:1       1 
+    41        1:0        2:1   +   1 
+    42        2:1        2:1       1 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   1 
+    45        2:1        2:1       1 
+    46        1:0        2:1   +   1 
+    47        2:1        2:1       1 
+    48        1:0        2:1   +   1 
+    49        2:1        2:1       1 
+    50        2:1        2:1       1 
+    51        1:0        2:1   +   1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   1 
+    54        2:1        2:1       1 
+    55        2:1        2:1       1 
+    56        2:1        2:1       1 
+    57        1:0        2:1   +   1 
+    58        2:1        2:1       1 
+    59        1:0        2:1   +   1 
+    60        2:1        2:1       1 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   1 
+    63        2:1        2:1       1 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   1 
+    66        2:1        2:1       1 
+    67        1:0        2:1   +   1 
+    68        1:0        2:1   +   1 
+    69        2:1        2:1       1 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   1 
+    72        2:1        2:1       1 
+    73        1:0        2:1   +   1 
+    74        2:1        2:1       1 
+    75        1:0        2:1   +   1 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       1 
+    78        2:1        2:1       1 
+    79        1:0        2:1   +   1 
+    80        1:0        2:1   +   1 
+    81        2:1        2:1       1 
+    82        2:1        2:1       1 
+    83        2:1        2:1       1 
+    84        1:0        2:1   +   1 
+    85        1:0        2:1   +   1 
+    86        1:0        2:1   +   1 
+    87        2:1        2:1       1 
+    88        2:1        2:1       1 
+    89        1:0        2:1   +   1 
+    90        1:0        2:1   +   1 
+    91        2:1        2:1       1 
+    92        1:0        2:1   +   1 
+    93        2:1        2:1       1 
+    94        1:0        2:1   +   1 
+    95        2:1        2:1       1 
+    96        2:1        2:1       1 
+    97        1:0        2:1   +   1 
+    98        2:1        2:1       1 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   1 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.trees.HoeffdingTree -D -- -L 2 -S 1 -E 1.0E-7 -H 0.05 -M 0.01 -G 200.0 -N 0.0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -4848,8 +4228,8 @@ Header of reduced data:
 Classifier Model
 1 (89.000) NB1 NB adaptive1
 
-Time taken to build model: 0.45 seconds
-Time taken to test model on training data: 0.01 seconds
+Time taken to build model: 0.46 seconds
+Time taken to test model on training data: 0.04 seconds
 
 === Error on training data ===
 
@@ -4909,99 +4289,112 @@ Weighted Avg.    0.880    0.880    0.774      0.880    0.824      0.000    0.424
   0 12 |  a = 0
   0 88 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.trees.HoeffdingTree -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.trees.HoeffdingTree -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-1 (89.000) NB1 NB adaptive1
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          48               48      %
-Incorrectly Classified Instances        52               52      %
-Kappa statistic                          0     
-Mean absolute error                      0.5149
-Root mean squared error                  0.6354
-Coverage of cases (0.95 level)         100      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.520     0
-                 1.000    1.000    0.480      1.000    0.649      0.000    0.500     0.480     1
-Weighted Avg.    0.480    0.480    0.230      0.480    0.311      0.000    0.500     0.501     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  0 52 |  a = 0
-  0 48 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   0.873 
+     2        1:0        2:1   +   0.873 
+     3        1:0        2:1   +   0.873 
+     4        2:1        2:1       0.873 
+     5        2:1        2:1       0.873 
+     6        1:0        2:1   +   0.873 
+     7        2:1        2:1       0.873 
+     8        1:0        2:1   +   0.873 
+     9        1:0        2:1   +   0.873 
+    10        2:1        2:1       0.873 
+    11        2:1        2:1       0.873 
+    12        1:0        2:1   +   0.873 
+    13        1:0        2:1   +   0.873 
+    14        2:1        2:1       0.873 
+    15        2:1        2:1       0.873 
+    16        1:0        2:1   +   0.873 
+    17        2:1        2:1       0.873 
+    18        1:0        2:1   +   0.873 
+    19        1:0        2:1   +   0.873 
+    20        2:1        2:1       0.873 
+    21        1:0        2:1   +   0.873 
+    22        1:0        2:1   +   0.873 
+    23        2:1        2:1       0.873 
+    24        2:1        2:1       0.873 
+    25        1:0        2:1   +   0.873 
+    26        2:1        2:1       0.873 
+    27        1:0        2:1   +   0.873 
+    28        1:0        2:1   +   0.873 
+    29        2:1        2:1       0.873 
+    30        1:0        2:1   +   0.873 
+    31        2:1        2:1       0.873 
+    32        1:0        2:1   +   0.873 
+    33        1:0        2:1   +   0.873 
+    34        2:1        2:1       0.873 
+    35        2:1        2:1       0.873 
+    36        1:0        2:1   +   0.873 
+    37        1:0        2:1   +   0.873 
+    38        2:1        2:1       0.873 
+    39        2:1        2:1       0.873 
+    40        2:1        2:1       0.873 
+    41        1:0        2:1   +   0.873 
+    42        2:1        2:1       0.873 
+    43        1:0        2:1   +   0.873 
+    44        1:0        2:1   +   0.873 
+    45        2:1        2:1       0.873 
+    46        1:0        2:1   +   0.873 
+    47        2:1        2:1       0.873 
+    48        1:0        2:1   +   0.873 
+    49        2:1        2:1       0.873 
+    50        2:1        2:1       0.873 
+    51        1:0        2:1   +   0.873 
+    52        1:0        2:1   +   0.873 
+    53        1:0        2:1   +   0.873 
+    54        2:1        2:1       0.873 
+    55        2:1        2:1       0.873 
+    56        2:1        2:1       0.873 
+    57        1:0        2:1   +   0.873 
+    58        2:1        2:1       0.873 
+    59        1:0        2:1   +   0.873 
+    60        2:1        2:1       0.873 
+    61        1:0        2:1   +   0.873 
+    62        1:0        2:1   +   0.873 
+    63        2:1        2:1       0.873 
+    64        1:0        2:1   +   0.873 
+    65        1:0        2:1   +   0.873 
+    66        2:1        2:1       0.873 
+    67        1:0        2:1   +   0.873 
+    68        1:0        2:1   +   0.873 
+    69        2:1        2:1       0.873 
+    70        1:0        2:1   +   0.873 
+    71        1:0        2:1   +   0.873 
+    72        2:1        2:1       0.873 
+    73        1:0        2:1   +   0.873 
+    74        2:1        2:1       0.873 
+    75        1:0        2:1   +   0.873 
+    76        1:0        2:1   +   0.873 
+    77        2:1        2:1       0.873 
+    78        2:1        2:1       0.873 
+    79        1:0        2:1   +   0.873 
+    80        1:0        2:1   +   0.873 
+    81        2:1        2:1       0.873 
+    82        2:1        2:1       0.873 
+    83        2:1        2:1       0.873 
+    84        1:0        2:1   +   0.873 
+    85        1:0        2:1   +   0.873 
+    86        1:0        2:1   +   0.873 
+    87        2:1        2:1       0.873 
+    88        2:1        2:1       0.873 
+    89        1:0        2:1   +   0.873 
+    90        1:0        2:1   +   0.873 
+    91        2:1        2:1       0.873 
+    92        1:0        2:1   +   0.873 
+    93        2:1        2:1       0.873 
+    94        1:0        2:1   +   0.873 
+    95        2:1        2:1       0.873 
+    96        2:1        2:1       0.873 
+    97        1:0        2:1   +   0.873 
+    98        2:1        2:1       0.873 
+    99        1:0        2:1   +   0.873 
+   100        1:0        2:1   +   0.873 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.trees.J48 -D -- -C 0.25 -M 2 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -5082,8 +4475,8 @@ Number of Leaves  : 	2
 Size of the tree : 	3
 
 
-Time taken to build model: 0.18 seconds
-Time taken to test model on training data: 0.01 seconds
+Time taken to build model: 0.45 seconds
+Time taken to test model on training data: 0.04 seconds
 
 === Error on training data ===
 
@@ -5143,108 +4536,112 @@ Weighted Avg.    0.870    0.593    0.856      0.870    0.862      0.314    0.763
   4  8 |  a = 0
   5 83 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.trees.J48 -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.trees.J48 -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-J48 pruned tree
-------------------
-
-12 <= 1913: 1 (94.0/7.0)
-12 > 1913: 0 (6.0/1.0)
-
-Number of Leaves  : 	2
-
-Size of the tree : 	3
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          50               50      %
-Incorrectly Classified Instances        50               50      %
-Kappa statistic                          0.0355
-Mean absolute error                      0.5018
-Root mean squared error                  0.6558
-Coverage of cases (0.95 level)         100      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.058    0.021    0.750      0.058    0.107      0.094    0.518     0.533     0
-                 0.979    0.942    0.490      0.979    0.653      0.094    0.518     0.489     1
-Weighted Avg.    0.500    0.463    0.625      0.500    0.369      0.094    0.518     0.512     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  3 49 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   0.926 
+     2        1:0        1:0       0.833 
+     3        1:0        2:1   +   0.926 
+     4        2:1        2:1       0.926 
+     5        2:1        2:1       0.926 
+     6        1:0        2:1   +   0.926 
+     7        2:1        2:1       0.926 
+     8        1:0        2:1   +   0.926 
+     9        1:0        2:1   +   0.926 
+    10        2:1        2:1       0.926 
+    11        2:1        2:1       0.926 
+    12        1:0        2:1   +   0.926 
+    13        1:0        2:1   +   0.926 
+    14        2:1        2:1       0.926 
+    15        2:1        2:1       0.926 
+    16        1:0        2:1   +   0.926 
+    17        2:1        2:1       0.926 
+    18        1:0        2:1   +   0.926 
+    19        1:0        2:1   +   0.926 
+    20        2:1        2:1       0.926 
+    21        1:0        2:1   +   0.926 
+    22        1:0        2:1   +   0.926 
+    23        2:1        2:1       0.926 
+    24        2:1        2:1       0.926 
+    25        1:0        2:1   +   0.926 
+    26        2:1        2:1       0.926 
+    27        1:0        2:1   +   0.926 
+    28        1:0        2:1   +   0.926 
+    29        2:1        2:1       0.926 
+    30        1:0        2:1   +   0.926 
+    31        2:1        2:1       0.926 
+    32        1:0        2:1   +   0.926 
+    33        1:0        2:1   +   0.926 
+    34        2:1        2:1       0.926 
+    35        2:1        2:1       0.926 
+    36        1:0        2:1   +   0.926 
+    37        1:0        2:1   +   0.926 
+    38        2:1        2:1       0.926 
+    39        2:1        2:1       0.926 
+    40        2:1        2:1       0.926 
+    41        1:0        2:1   +   0.926 
+    42        2:1        2:1       0.926 
+    43        1:0        2:1   +   0.926 
+    44        1:0        2:1   +   0.926 
+    45        2:1        2:1       0.926 
+    46        1:0        2:1   +   0.926 
+    47        2:1        2:1       0.926 
+    48        1:0        2:1   +   0.926 
+    49        2:1        2:1       0.926 
+    50        2:1        2:1       0.926 
+    51        1:0        2:1   +   0.926 
+    52        1:0        2:1   +   0.926 
+    53        1:0        2:1   +   0.926 
+    54        2:1        2:1       0.926 
+    55        2:1        2:1       0.926 
+    56        2:1        2:1       0.926 
+    57        1:0        2:1   +   0.926 
+    58        2:1        2:1       0.926 
+    59        1:0        2:1   +   0.926 
+    60        2:1        2:1       0.926 
+    61        1:0        2:1   +   0.926 
+    62        1:0        2:1   +   0.926 
+    63        2:1        2:1       0.926 
+    64        1:0        2:1   +   0.926 
+    65        1:0        2:1   +   0.926 
+    66        2:1        2:1       0.926 
+    67        1:0        2:1   +   0.926 
+    68        1:0        2:1   +   0.926 
+    69        2:1        2:1       0.926 
+    70        1:0        2:1   +   0.926 
+    71        1:0        2:1   +   0.926 
+    72        2:1        2:1       0.926 
+    73        1:0        2:1   +   0.926 
+    74        2:1        2:1       0.926 
+    75        1:0        1:0       0.833 
+    76        1:0        2:1   +   0.926 
+    77        2:1        2:1       0.926 
+    78        2:1        2:1       0.926 
+    79        1:0        1:0       0.833 
+    80        1:0        1:0       0.833 
+    81        2:1        1:0   +   0.833 
+    82        2:1        2:1       0.926 
+    83        2:1        2:1       0.926 
+    84        1:0        1:0       0.833 
+    85        1:0        1:0       0.833 
+    86        1:0        1:0       0.833 
+    87        2:1        1:0   +   0.833 
+    88        2:1        1:0   +   0.833 
+    89        1:0        2:1   +   0.926 
+    90        1:0        2:1   +   0.926 
+    91        2:1        2:1       0.926 
+    92        1:0        2:1   +   0.926 
+    93        2:1        2:1       0.926 
+    94        1:0        2:1   +   0.926 
+    95        2:1        2:1       0.926 
+    96        2:1        2:1       0.926 
+    97        1:0        2:1   +   0.926 
+    98        2:1        2:1       0.926 
+    99        1:0        2:1   +   0.926 
+   100        1:0        2:1   +   0.926 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.trees.RandomForest -D -- -I 10 -K 0 -S 1 -num-slots 1 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -5319,8 +4716,8 @@ Out of bag error: 0.12
 
 
 
-Time taken to build model: 0.46 seconds
-Time taken to test model on training data: 0.05 seconds
+Time taken to build model: 0.44 seconds
+Time taken to test model on training data: 0.04 seconds
 
 === Error on training data ===
 
@@ -5380,102 +4777,112 @@ Weighted Avg.    0.880    0.520    0.872      0.880    0.875      0.390    0.824
   5  7 |  a = 0
   5 83 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.trees.RandomForest -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.trees.RandomForest -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-Random forest of 10 trees, each constructed while considering 5 random features.
-Out of bag error: 0.12
-
-
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          51               51      %
-Incorrectly Classified Instances        49               49      %
-Kappa statistic                          0.0555
-Mean absolute error                      0.4613
-Root mean squared error                  0.6379
-Coverage of cases (0.95 level)          82      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.058    0.000    1.000      0.058    0.109      0.169    0.912     0.889     0
-                 1.000    0.942    0.495      1.000    0.662      0.169    0.912     0.928     1
-Weighted Avg.    0.510    0.452    0.758      0.510    0.375      0.169    0.912     0.908     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  3 49 |  a = 0
-  0 48 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   0.578 
+     2        1:0        1:0       0.572 
+     3        1:0        2:1   +   0.745 
+     4        2:1        2:1       0.969 
+     5        2:1        2:1       0.995 
+     6        1:0        2:1   +   0.969 
+     7        2:1        2:1       0.995 
+     8        1:0        2:1   +   0.789 
+     9        1:0        2:1   +   0.945 
+    10        2:1        2:1       0.995 
+    11        2:1        2:1       0.995 
+    12        1:0        2:1   +   0.745 
+    13        1:0        2:1   +   0.925 
+    14        2:1        2:1       0.955 
+    15        2:1        2:1       0.995 
+    16        1:0        2:1   +   0.969 
+    17        2:1        2:1       0.995 
+    18        1:0        2:1   +   0.768 
+    19        1:0        2:1   +   0.969 
+    20        2:1        2:1       0.995 
+    21        1:0        2:1   +   0.725 
+    22        1:0        2:1   +   0.945 
+    23        2:1        2:1       0.995 
+    24        2:1        2:1       0.995 
+    25        1:0        2:1   +   0.954 
+    26        2:1        2:1       0.991 
+    27        1:0        2:1   +   0.745 
+    28        1:0        2:1   +   0.969 
+    29        2:1        2:1       0.995 
+    30        1:0        2:1   +   0.989 
+    31        2:1        2:1       0.995 
+    32        1:0        2:1   +   0.768 
+    33        1:0        2:1   +   0.925 
+    34        2:1        2:1       0.955 
+    35        2:1        2:1       0.955 
+    36        1:0        2:1   +   0.745 
+    37        1:0        2:1   +   0.945 
+    38        2:1        2:1       0.995 
+    39        2:1        2:1       0.995 
+    40        2:1        2:1       0.995 
+    41        1:0        2:1   +   0.969 
+    42        2:1        2:1       0.995 
+    43        1:0        2:1   +   0.745 
+    44        1:0        2:1   +   0.969 
+    45        2:1        2:1       0.995 
+    46        1:0        2:1   +   0.928 
+    47        2:1        2:1       0.955 
+    48        1:0        2:1   +   0.945 
+    49        2:1        2:1       0.995 
+    50        2:1        2:1       0.995 
+    51        1:0        1:0       0.528 
+    52        1:0        2:1   +   0.835 
+    53        1:0        2:1   +   0.969 
+    54        2:1        2:1       0.995 
+    55        2:1        2:1       0.928 
+    56        2:1        2:1       0.955 
+    57        1:0        2:1   +   0.928 
+    58        2:1        2:1       0.955 
+    59        1:0        2:1   +   0.969 
+    60        2:1        2:1       0.995 
+    61        1:0        2:1   +   0.879 
+    62        1:0        2:1   +   0.989 
+    63        2:1        2:1       0.995 
+    64        1:0        2:1   +   0.858 
+    65        1:0        2:1   +   0.969 
+    66        2:1        2:1       0.995 
+    67        1:0        2:1   +   0.725 
+    68        1:0        2:1   +   0.82 
+    69        2:1        2:1       0.857 
+    70        1:0        2:1   +   0.835 
+    71        1:0        2:1   +   0.969 
+    72        2:1        2:1       0.995 
+    73        1:0        2:1   +   0.969 
+    74        2:1        2:1       0.995 
+    75        1:0        1:0       0.762 
+    76        1:0        2:1   +   0.898 
+    77        2:1        2:1       0.969 
+    78        2:1        2:1       0.995 
+    79        1:0        1:0       0.615 
+    80        1:0        1:0       0.599 
+    81        2:1        2:1       0.538 
+    82        2:1        2:1       0.989 
+    83        2:1        2:1       0.995 
+    84        1:0        1:0       0.806 
+    85        1:0        1:0       0.594 
+    86        1:0        1:0       0.643 
+    87        2:1        2:1       0.538 
+    88        2:1        2:1       0.538 
+    89        1:0        2:1   +   0.815 
+    90        1:0        2:1   +   0.969 
+    91        2:1        2:1       0.995 
+    92        1:0        2:1   +   0.969 
+    93        2:1        2:1       0.995 
+    94        1:0        2:1   +   0.945 
+    95        2:1        2:1       0.995 
+    96        2:1        2:1       0.995 
+    97        1:0        2:1   +   0.954 
+    98        2:1        2:1       0.991 
+    99        1:0        2:1   +   0.835 
+   100        1:0        2:1   +   0.969 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.trees.RandomTree -D -- -K 0 -M 1.0 -S 1 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -5572,8 +4979,8 @@ RandomTree
 
 Size of the tree : 21
 
-Time taken to build model: 0.25 seconds
-Time taken to test model on training data: 0.01 seconds
+Time taken to build model: 0.24 seconds
+Time taken to test model on training data: 0.04 seconds
 
 === Error on training data ===
 
@@ -5633,124 +5040,112 @@ Weighted Avg.    0.880    0.448    0.880      0.880    0.880      0.432    0.655
   6  6 |  a = 0
   6 82 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.trees.RandomTree -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.trees.RandomTree -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-
-RandomTree
-==========
-
-11 < 2 : 0 (4/0)
-11 >= 2
-|   10 < 2
-|   |   92 < 49 : 1 (6.4/0)
-|   |   92 >= 49
-|   |   |   12 < 463.5
-|   |   |   |   2 < 1.5
-|   |   |   |   |   12 < 371.5
-|   |   |   |   |   |   11 < 80.5 : 1 (0.6/0)
-|   |   |   |   |   |   11 >= 80.5 : 0 (3/0)
-|   |   |   |   |   12 >= 371.5 : 1 (1/0)
-|   |   |   |   2 >= 1.5 : 1 (2/0)
-|   |   |   12 >= 463.5 : 0 (3/0)
-|   10 >= 2
-|   |   10 < 2555.5
-|   |   |   31 < 6
-|   |   |   |   31 < 3 : 1 (7.9/0)
-|   |   |   |   31 >= 3 : 0 (1.98/0.98)
-|   |   |   31 >= 6 : 1 (69.13/0)
-|   |   10 >= 2555.5 : 0 (1/0)
-
-Size of the tree : 21
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          54               54      %
-Incorrectly Classified Instances        46               46      %
-Kappa statistic                          0.1099
-Mean absolute error                      0.4658
-Root mean squared error                  0.6735
-Coverage of cases (0.95 level)          54      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.135    0.021    0.875      0.135    0.233      0.210    0.443     0.525     0
-                 0.979    0.865    0.511      0.979    0.671      0.210    0.443     0.501     1
-Weighted Avg.    0.540    0.426    0.700      0.540    0.444      0.210    0.443     0.513     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  7 45 |  a = 0
-  1 47 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        1:0       1 
+     2        1:0        1:0       1 
+     3        1:0        2:1   +   1 
+     4        2:1        2:1       0.987 
+     5        2:1        2:1       0.987 
+     6        1:0        2:1   +   0.987 
+     7        2:1        2:1       0.987 
+     8        1:0        2:1   +   1 
+     9        1:0        2:1   +   0.987 
+    10        2:1        2:1       0.987 
+    11        2:1        2:1       0.987 
+    12        1:0        2:1   +   1 
+    13        1:0        2:1   +   0.987 
+    14        2:1        2:1       0.987 
+    15        2:1        2:1       0.987 
+    16        1:0        2:1   +   0.987 
+    17        2:1        2:1       0.987 
+    18        1:0        2:1   +   1 
+    19        1:0        2:1   +   0.987 
+    20        2:1        2:1       0.987 
+    21        1:0        1:0       0.6 
+    22        1:0        2:1   +   0.987 
+    23        2:1        2:1       0.987 
+    24        2:1        2:1       0.987 
+    25        1:0        2:1   +   0.987 
+    26        2:1        2:1       0.987 
+    27        1:0        2:1   +   1 
+    28        1:0        2:1   +   0.987 
+    29        2:1        2:1       0.987 
+    30        1:0        2:1   +   0.987 
+    31        2:1        2:1       0.987 
+    32        1:0        2:1   +   1 
+    33        1:0        2:1   +   0.987 
+    34        2:1        2:1       0.987 
+    35        2:1        2:1       0.987 
+    36        1:0        2:1   +   1 
+    37        1:0        2:1   +   0.987 
+    38        2:1        2:1       0.987 
+    39        2:1        2:1       0.987 
+    40        2:1        2:1       0.987 
+    41        1:0        2:1   +   0.987 
+    42        2:1        2:1       0.987 
+    43        1:0        2:1   +   1 
+    44        1:0        2:1   +   0.987 
+    45        2:1        2:1       0.987 
+    46        1:0        2:1   +   0.987 
+    47        2:1        2:1       0.987 
+    48        1:0        2:1   +   0.987 
+    49        2:1        2:1       0.987 
+    50        2:1        2:1       0.987 
+    51        1:0        1:0       1 
+    52        1:0        2:1   +   1 
+    53        1:0        2:1   +   0.987 
+    54        2:1        2:1       0.987 
+    55        2:1        2:1       0.987 
+    56        2:1        2:1       0.987 
+    57        1:0        2:1   +   0.987 
+    58        2:1        2:1       0.987 
+    59        1:0        2:1   +   0.987 
+    60        2:1        2:1       0.987 
+    61        1:0        2:1   +   1 
+    62        1:0        2:1   +   0.987 
+    63        2:1        2:1       0.987 
+    64        1:0        2:1   +   1 
+    65        1:0        2:1   +   0.987 
+    66        2:1        2:1       0.987 
+    67        1:0        1:0       0.6 
+    68        1:0        2:1   +   0.987 
+    69        2:1        2:1       0.987 
+    70        1:0        2:1   +   1 
+    71        1:0        2:1   +   0.987 
+    72        2:1        2:1       0.987 
+    73        1:0        2:1   +   0.987 
+    74        2:1        2:1       0.987 
+    75        1:0        1:0       1 
+    76        1:0        2:1   +   1 
+    77        2:1        2:1       0.987 
+    78        2:1        2:1       0.987 
+    79        1:0        1:0       0.6 
+    80        1:0        1:0       1 
+    81        2:1        1:0   +   1 
+    82        2:1        2:1       0.987 
+    83        2:1        2:1       0.987 
+    84        1:0        1:0       1 
+    85        1:0        1:0       0.6 
+    86        1:0        1:0       1 
+    87        2:1        1:0   +   1 
+    88        2:1        1:0   +   1 
+    89        1:0        1:0       0.6 
+    90        1:0        2:1   +   0.987 
+    91        2:1        2:1       0.987 
+    92        1:0        2:1   +   0.987 
+    93        2:1        2:1       0.987 
+    94        1:0        2:1   +   0.987 
+    95        2:1        2:1       0.987 
+    96        2:1        2:1       0.987 
+    97        1:0        2:1   +   0.987 
+    98        2:1        2:1       0.987 
+    99        1:0        2:1   +   1 
+   100        1:0        2:1   +   0.987 
 
 java -Xmx18g -classpath weka.jar weka.classifiers.meta.AttributeSelectedClassifier -t ./exp/cedar-brt-8-1-1-allDrift-T//training.csv.clean.num.arff -i -d ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -E 'weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10' -S 'weka.attributeSelection.Ranker -T 0.05 -N -1' -W weka.classifiers.trees.REPTree -D -- -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
@@ -5827,8 +5222,8 @@ REPTree
 
 Size of the tree : 1
 
-Time taken to build model: 0.21 seconds
-Time taken to test model on training data: 0.02 seconds
+Time taken to build model: 0.41 seconds
+Time taken to test model on training data: 0.04 seconds
 
 === Error on training data ===
 
@@ -5888,102 +5283,110 @@ Weighted Avg.    0.890    0.735    0.869      0.890    0.860      0.296    0.730
   2 10 |  a = 0
   1 87 |  b = 1
 
-java -Xmx18g -classpath weka.jar weka.classifiers.trees.REPTree -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
-
-AttributeSelectedClassifier:
+java -Xmx18g -classpath weka.jar weka.classifiers.trees.REPTree -l ./exp/cedar-brt-8-1-1-allDrift-T//temp.model -T ./exp/cedar-brt-8-1-1-allDrift-T//evaluation.csv.clean.num.arff -i -p 0 >> ./exp/cedar-brt-8-1-1-allDrift-T//results.txt
 
 
+=== Predictions on test data ===
 
-=== Attribute Selection on all input data ===
-
-Search Method:
-	Attribute ranking.
-	Threshold for discarding attributes:   0.05  
-
-Attribute Evaluator (supervised, Class (nominal): 97 98):
-	ReliefF Ranking Filter
-	Instances sampled: all
-	Number of nearest neighbours (k): 10
-	Equal influence nearest neighbours
-
-Ranked attributes:
- 0.1879     6 7
- 0.1751    11 12
- 0.1309    25 26
- 0.1252    30 31
- 0.1241    10 11
- 0.1131    91 92
- 0.0858     1 2
- 0.0789    31 32
- 0.0747    86 87
- 0.0638    32 33
- 0.0638    22 23
- 0.0625    39 40
- 0.0625    40 41
- 0.0625    44 45
- 0.0625    45 46
- 0.0603    90 91
- 0.0558     9 10
-
-Selected attributes: 6,11,25,30,10,91,1,31,86,32,22,39,40,44,45,90,9 : 17
-
-
-Header of reduced data:
-@relation 'training-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.Remove-Rfirst-weka.filters.unsupervised.attribute.Remove-V-R6,11,25,30,10,91,1,31,86,32,22,39-40,44-45,90,9,97'
-
-@attribute 7 numeric
-@attribute 12 numeric
-@attribute 26 numeric
-@attribute 31 numeric
-@attribute 11 numeric
-@attribute 92 numeric
-@attribute 2 numeric
-@attribute 32 numeric
-@attribute 87 numeric
-@attribute 33 numeric
-@attribute 23 numeric
-@attribute 40 numeric
-@attribute 41 numeric
-@attribute 45 numeric
-@attribute 46 numeric
-@attribute 91 numeric
-@attribute 10 numeric
-@attribute 98 {0,1}
-
-@data
-
-
-Classifier Model
-
-REPTree
-============
- : 1 (66/8) [34/4]
-
-Size of the tree : 1
-
-
-=== Error on test data ===
-
-Correctly Classified Instances          48               48      %
-Incorrectly Classified Instances        52               52      %
-Kappa statistic                          0     
-Mean absolute error                      0.5152
-Root mean squared error                  0.64  
-Coverage of cases (0.95 level)         100      %
-Total Number of Instances              100     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.520     0
-                 1.000    1.000    0.480      1.000    0.649      0.000    0.500     0.480     1
-Weighted Avg.    0.480    0.480    0.230      0.480    0.311      0.000    0.500     0.501     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
-  0 52 |  a = 0
-  0 48 |  b = 1
+ inst#     actual  predicted error prediction
+     1        1:0        2:1   +   0.88 
+     2        1:0        2:1   +   0.88 
+     3        1:0        2:1   +   0.88 
+     4        2:1        2:1       0.88 
+     5        2:1        2:1       0.88 
+     6        1:0        2:1   +   0.88 
+     7        2:1        2:1       0.88 
+     8        1:0        2:1   +   0.88 
+     9        1:0        2:1   +   0.88 
+    10        2:1        2:1       0.88 
+    11        2:1        2:1       0.88 
+    12        1:0        2:1   +   0.88 
+    13        1:0        2:1   +   0.88 
+    14        2:1        2:1       0.88 
+    15        2:1        2:1       0.88 
+    16        1:0        2:1   +   0.88 
+    17        2:1        2:1       0.88 
+    18        1:0        2:1   +   0.88 
+    19        1:0        2:1   +   0.88 
+    20        2:1        2:1       0.88 
+    21        1:0        2:1   +   0.88 
+    22        1:0        2:1   +   0.88 
+    23        2:1        2:1       0.88 
+    24        2:1        2:1       0.88 
+    25        1:0        2:1   +   0.88 
+    26        2:1        2:1       0.88 
+    27        1:0        2:1   +   0.88 
+    28        1:0        2:1   +   0.88 
+    29        2:1        2:1       0.88 
+    30        1:0        2:1   +   0.88 
+    31        2:1        2:1       0.88 
+    32        1:0        2:1   +   0.88 
+    33        1:0        2:1   +   0.88 
+    34        2:1        2:1       0.88 
+    35        2:1        2:1       0.88 
+    36        1:0        2:1   +   0.88 
+    37        1:0        2:1   +   0.88 
+    38        2:1        2:1       0.88 
+    39        2:1        2:1       0.88 
+    40        2:1        2:1       0.88 
+    41        1:0        2:1   +   0.88 
+    42        2:1        2:1       0.88 
+    43        1:0        2:1   +   0.88 
+    44        1:0        2:1   +   0.88 
+    45        2:1        2:1       0.88 
+    46        1:0        2:1   +   0.88 
+    47        2:1        2:1       0.88 
+    48        1:0        2:1   +   0.88 
+    49        2:1        2:1       0.88 
+    50        2:1        2:1       0.88 
+    51        1:0        2:1   +   0.88 
+    52        1:0        2:1   +   0.88 
+    53        1:0        2:1   +   0.88 
+    54        2:1        2:1       0.88 
+    55        2:1        2:1       0.88 
+    56        2:1        2:1       0.88 
+    57        1:0        2:1   +   0.88 
+    58        2:1        2:1       0.88 
+    59        1:0        2:1   +   0.88 
+    60        2:1        2:1       0.88 
+    61        1:0        2:1   +   0.88 
+    62        1:0        2:1   +   0.88 
+    63        2:1        2:1       0.88 
+    64        1:0        2:1   +   0.88 
+    65        1:0        2:1   +   0.88 
+    66        2:1        2:1       0.88 
+    67        1:0        2:1   +   0.88 
+    68        1:0        2:1   +   0.88 
+    69        2:1        2:1       0.88 
+    70        1:0        2:1   +   0.88 
+    71        1:0        2:1   +   0.88 
+    72        2:1        2:1       0.88 
+    73        1:0        2:1   +   0.88 
+    74        2:1        2:1       0.88 
+    75        1:0        2:1   +   0.88 
+    76        1:0        2:1   +   0.88 
+    77        2:1        2:1       0.88 
+    78        2:1        2:1       0.88 
+    79        1:0        2:1   +   0.88 
+    80        1:0        2:1   +   0.88 
+    81        2:1        2:1       0.88 
+    82        2:1        2:1       0.88 
+    83        2:1        2:1       0.88 
+    84        1:0        2:1   +   0.88 
+    85        1:0        2:1   +   0.88 
+    86        1:0        2:1   +   0.88 
+    87        2:1        2:1       0.88 
+    88        2:1        2:1       0.88 
+    89        1:0        2:1   +   0.88 
+    90        1:0        2:1   +   0.88 
+    91        2:1        2:1       0.88 
+    92        1:0        2:1   +   0.88 
+    93        2:1        2:1       0.88 
+    94        1:0        2:1   +   0.88 
+    95        2:1        2:1       0.88 
+    96        2:1        2:1       0.88 
+    97        1:0        2:1   +   0.88 
+    98        2:1        2:1       0.88 
+    99        1:0        2:1   +   0.88 
+   100        1:0        2:1   +   0.88 
 
