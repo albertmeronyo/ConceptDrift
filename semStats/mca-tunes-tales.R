@@ -10,7 +10,7 @@ require(ggplot2)
 ################################################
 
 # First dataset: BRT_1909_02A1_T1 and BRT_1909_02A2_T1
-res <- read.csv('/Users/Albert/src/ConceptDrift/semStats/data/occupations-tt-1947.csv', header = TRUE)
+res <- read.csv('/Users/Albert/src/ConceptDrift/semStats/data/occupations-tt-groningen-1899.csv', header = TRUE)
 
 #############
 # Pre-process
@@ -24,9 +24,17 @@ df <- df[!duplicated(df),]
 # Assign column data types
 df$age_label <- as.factor(df$age_label)
 df$sex_label <- as.factor(df$sex_label)
-df$province_label <- as.factor(df$province_label)
+# df$province_label <- as.factor(df$province_label)
 df$occupation_label <- as.factor(df$occupation_label)
+df$marital_status_label <- as.factor(df$marital_status_label)
 df$population <- as.numeric(df$population)
+
+########################################################
+# Removal of factors that couldn't be filtered in SPARQL
+########################################################
+
+df <- subset(df, !df$age_label %in% c('VROUWEN', 'O.', 'LEEFTIJDEN EN GEBOORTEJAREN ', 'G.', 'TOTAAL', 'TOTAAL DER MANNEN EN VROUWEN', 'MANNEN'))
+df$age_label <- factor(df$age_label)
 
 ################################
 # Removal of column "population"
