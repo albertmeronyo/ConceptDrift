@@ -33,8 +33,51 @@ df$population <- as.numeric(df$population)
 # Removal of factors that couldn't be filtered in SPARQL
 ########################################################
 
-df <- subset(df, !df$age_label %in% c('VROUWEN', 'O.', 'LEEFTIJDEN EN GEBOORTEJAREN ', 'G.', 'TOTAAL', 'TOTAAL DER MANNEN EN VROUWEN', 'MANNEN'))
-df$age_label <- factor(df$age_label)
+except <- c("I. Fabr. van aardewerk, glas, kalk en steen",
+            "II. Bewerking van diamant en andere edelsteenen en gesteenten",
+            "III. Boek- en steendrukkerij, drukken van hout-, koper-, en staalgravure, photographie enz.",
+            "IV. Bouwbedrijven, openbare werken, reiniging",
+            "IX. Leder, wasdoek en caoutchouc",
+            "V. Chemische nijverheid",
+            "VI. Hout-, kurk-, stroobewerking, snij- en draaiwerk van verschillende stoffen",
+            "VII. Kleeding en reiniging",
+            "VIII. Kunstnijverheid",
+            "X. Oer, steenkolen, turf",
+            "XI. Bewerking van metalen",
+            "XII. Vervaardiging van stoom- en andere werktuigen, instrumenten, oorlogsmaterieel",
+            "XIII. Scheepsbouw en rijtuigfabricage",
+            "XIV. Fabricage van papier",
+            "XIX. Visscherij en jacht",
+            "XV. Textiele nijverheid",
+            "XVI. Gasfabricage",
+            "XVII. Fabricage van voedings- en genotmiddelen",
+            "XVIII. Landbouw",
+            "XVIII. Landbouwbedrijven",
+            "XX. Warenhandel. 1)",
+            "XXI. Verkeerswezen",
+            "XXII. Crediet- en bankwezen",
+            "XXIII. Verzekeringswezen",
+            "XXIV. Vrije beroepen",
+            "XXIX. In dienst van den Staat (exclusief posterij, telegraphie, telephonie, landsdrukkerij e.a. nijverheidsbedrijven",
+            "XXV. Onderwijs (excl. openbaar en godsdienstonderwijs)",
+            "XXVI. Verpleging en verzorging van armen enz.",
+            "XXVII. Huiselijke diensten",
+            "XXVIII. Losse werklieden",
+            "XXX. In dienst van provincies",
+            "XXXI. In dienst van eene gemeente (excl. gasfabrieken, dienst der openbare werken en andere nijverheidsbedrijven)",
+            "XXXII. In dienst van een waterschap",
+            "XXXIII. In dienst van een kerkgenootschap of kerkelijke gezindte",
+            "XXXIV. Gepensionn.",
+            "XXXIV. Gepensionneerden",
+            "XXXV. Beroep onbekend",
+            "XXXVI. Zonder beroep"
+)
+ages <- c("VROUWEN", "O.", "LEEFTIJDEN EN GEBOORTEJAREN ", "G.", "TOTAAL", "TOTAAL DER MANNEN EN VROUWEN", "MANNEN"
+  )
+
+df <- subset(df, df$occupation_label %in% except)
+df <- subset(df, !df$age_label %in% ages)
+df$occupation_label <- factor(df$occupation_label)
 
 ################################
 # Removal of column "population"
