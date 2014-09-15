@@ -17,7 +17,7 @@ study concept drift.
 
 **Associated papers:**
 
-- Predicting Concept Drift in Linked Data (EKAW 2014, under review)
+- Predicting Concept Drift in Versioned Linked Data on the Web (AAAI 2015, under review)
 
 The development and maintenance of Knowledge Organization Systems
 (KOS) is a knowledge intensive task that requires a lot of manual ef-
