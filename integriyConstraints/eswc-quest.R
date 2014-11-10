@@ -1,4 +1,5 @@
 library(SPARQL)
+library(benford.analysis)
 
 ###################
 # 1. Data retrieval
@@ -21,7 +22,7 @@ prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
 prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#>
 prefix cedarterms: <http://bit.ly/cedar#>"
 
-query <- paste(sparql_prefix, sprintf("select ?muni (sum(?pop) as ?pop) from <urn:graph:cedar:release> where {
+query <- paste(sparql_prefix, sprintf("select * from <urn:graph:cedar:release> where {
   ?obs a qb:Observation.
   ?obs cedarterms:population ?pop.
   ?obs sdmx-dimension:sex sdmx-code:sex-%s .
@@ -30,6 +31,8 @@ query <- paste(sparql_prefix, sprintf("select ?muni (sum(?pop) as ?pop) from <ur
   ?slice qb:observation ?obs.
   ?slice sdmx-dimension:refPeriod \"%s\"^^xsd:integer .
   ?slice cedarterms:censusType \"%s\" .
-} group by ?muni", gender, year, census))
+} limit 1000", gender, year, census))
 
 res <- SPARQL(endpoint,query)$results
+pop <- res$pop
+plot(density(pop))
