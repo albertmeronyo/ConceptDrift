@@ -90,10 +90,11 @@ for (i in 1:length(years)) {
 #########
 # 3. Plot
 #########
-plots <- plotlist(rep(NA, length(years)))
+plots <- list(rep(NA, length(years)))
 for (i in 1:length(years)) {
   plot <- ggplot(dfs[[i]], aes(x=pop))
   plot <- plot + geom_density()
+  plot <- plot + ggtitle(years[i])
   plots[[i]] <- plot  
 }
 
