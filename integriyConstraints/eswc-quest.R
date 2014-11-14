@@ -90,6 +90,9 @@ for (i in 1:length(years)) {
 #########
 # 3. Plot
 #########
+
+# Probability density function
+
 plots <- list(rep(NA, length(years)))
 for (i in 1:length(years)) {
   plot <- ggplot(dfs[[i]], aes(x=pop))
@@ -99,3 +102,13 @@ for (i in 1:length(years)) {
 }
 
 multiplot(plotlist=plots, cols=2)
+
+# Benford's law distribution
+
+bplots <- list(rep(NA, length(years)))
+for (i in 1:length(years)) {
+  b <- benford(as.numeric(dfs[[i]]$pop), number.of.digits = 1)
+  bplots[[i]] <- plot(b)
+}
+
+multiplot(plotlist=bplots, cols=2)
