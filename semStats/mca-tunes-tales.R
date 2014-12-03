@@ -10,7 +10,7 @@ require(ggplot2)
 ################################################
 
 # First dataset: BRT_1909_02A1_T1 and BRT_1909_02A2_T1
-res <- read.csv('/Users/Albert/src/ConceptDrift/semStats/data/occupations-tt-groningen-1899.csv', header = TRUE)
+res <- read.csv('/Users/Albert/src/ConceptDrift/semStats/data/occupations-tt-groningen-1947.csv', header = TRUE)
 
 #############
 # Pre-process
