@@ -8,8 +8,6 @@
 @prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
 eg:dataset-people a qb:DataSet ;
 		  dct:title       "Random people"@en ;
 		  rdfs:label      "Rnadom people"@en ;
@@ -75,18 +73,3 @@ eg:o5 a qb:Observation ;
       sdmx-dimension:civilStatus "married" ;
       eg:yearsMarried 3 ;
 .
-
-## The rules
-[] a rule:SPARQLRule ;
-   rule:content """
-       PREFIX qb: <http://purl.org/linked-data/cube#>
-       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-       PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-     IF {
-       ?obs sdmx-dimension:age ?age
-       BIND ((0 <= ?age && ?age <= 150) AS ?c)
-     }
-     THEN {
-       ?obs <http://example.org/ns#edits> ?c
-     }
-   """.
