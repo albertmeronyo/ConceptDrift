@@ -3,31 +3,171 @@
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix eg: <http://example.org/ns#> .
 
-# Human age is between 0 and 150
+# num1 : 0 <= age
 
-eg:age-rule a rule:SPARQLRule ;
+eg:num1 a rule:SPARQLRule ;
    rule:content """
-       PREFIX qb: <http://purl.org/linked-data/cube#>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-       PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
      IF {
        ?obs sdmx-dimension:age ?age
-       BIND ((0 <= ?age && ?age <= 150) AS ?c)
+       BIND ((0 <= ?age) AS ?c)
      }
      THEN {
-       ?obs eg:age-rule ?c
+       ?obs eg:num1 ?c
+     }
+   """.
+
+# num2 : 0 < height
+
+eg:num2 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>
+       PREFIX qb: <http://purl.org/linked-data/cube#> .
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:age ?height .
+       BIND ((0 < ?height) AS ?c)
+     }
+     THEN {
+       ?obs eg:num2 ?c
+     }
+   """.
+
+# num3 : age <= 150
+
+eg:num3 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX qb: <http://purl.org/linked-data/cube#> .
+     IF {
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:age ?age .
+       BIND ((?age <= 150) AS ?c)
+     }
+     THEN {
+       ?obs eg:num3 ?c
+     }
+   """.
+
+# num4 : yearsmarried < age
+
+eg:num4 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>
+       PREFIX qb: <http://purl.org/linked-data/cube#> .
+     IF {
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:age ?age .
+       ?obs eg:yearsMarried ?yearsMarried .
+       BIND ((?yearsMarried < ?age) AS ?c)
+     }
+     THEN {
+       ?obs eg:num4 ?c
+     }
+   """.
+
+# cat5 : if( agegroup == 'child' ) status != 'married'
+
+eg:cat5 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:civilStatus ?civilStatus .
+       ?obs eg:agegroup ?ageGroup .
+       FILTER (?ageGroup IN ("child"))
+       BIND ((?civilStatus != "married") AS ?c)
+     }
+     THEN {
+       ?obs eg:cat5 ?c
+     }
+   """.
+
+# mix6 : if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )
+
+eg:mix6 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:civilStatus ?civilStatus .
+       ?obs eg:yearsMarried ?yearsMarried .
+       ?obs sdmx-dimension:age ?age .
+       FILTER (?age < ?yearsMarried + 17)
+       BIND ((?civilStatus NOT IN ("married", "widowed")) AS ?c)
+     }
+     THEN {
+       ?obs eg:mix6 ?c
+     }
+   """.
+
+# mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
+
+eg:mix7 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       FILTER (?age < 18)
+       BIND ((?ageGroup NOT IN ("adult", "elderly")) AS ?c)
+     }
+     THEN {
+       ?obs eg:mix7 ?c
+     }
+   """.
+
+# mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
+
+eg:mix8 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       FILTER (?age <= 18 && ?age < 65)
+       BIND ((?ageGroup NOT IN ("child", "elderly")) AS ?c)
+     }
+     THEN {
+       ?obs eg:mix8 ?c
+     }
+   """.
+
+# mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
+
+eg:mix9 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       FILTER (?age <= 65)
+       BIND ((?ageGroup NOT IN ("adult", "child")) AS ?c)
+     }
+     THEN {
+       ?obs eg:mix9 ?c
      }
    """.
 
 # If something is an observation is also a foo
-eg:foo-rule a rule:SPARQLRule ;
-   rule:content """
-       PREFIX qb: <http://purl.org/linked-data/cube#>
-       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-     IF {
-       ?obs a qb:Observation
-     }
-     THEN {
-       ?obs a eg:foo 
-     }
-   """.
+# eg:foo-rule a rule:SPARQLRule ;
+#    rule:content """
+#        PREFIX qb: <http://purl.org/linked-data/cube#>
+#        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+#      IF {
+#        ?obs a qb:Observation
+#      }
+#      THEN {
+#        ?obs a eg:foo 
+#      }
+#    """.
