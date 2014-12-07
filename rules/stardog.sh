@@ -19,6 +19,7 @@ stardog-admin db create -n $DB_NAME $A_BOX $R_BOX
 
 # With SL inference! :-)
 # ./stardog query "people;reasoning=SL" "select ?s ?o where {?s <http://example.org/ns#edits> ?o}"
+# ./stardog query "people;reasoning=SL" "select ?s ?p ?o where {?s ?p ?o . filter(?o = true || ?o = false)} order by ?s ?p" > ../../ConceptDrift/rules/stardog-sl-out.txt
 
 # Providing explanations
 # ./stardog reasoning explain -r SL people "eg:o1 a eg:foo"

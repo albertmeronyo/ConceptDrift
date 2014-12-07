@@ -8,8 +8,10 @@
 eg:num1 a rule:SPARQLRule ;
    rule:content """
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
      IF {
-       ?obs sdmx-dimension:age ?age
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:age ?age .
        BIND ((0 <= ?age) AS ?c)
      }
      THEN {
@@ -22,10 +24,10 @@ eg:num1 a rule:SPARQLRule ;
 eg:num2 a rule:SPARQLRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>
-       PREFIX qb: <http://purl.org/linked-data/cube#> .
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
      IF {
        ?obs a qb:Observation .
-       ?obs eg:age ?height .
+       ?obs eg:height ?height .
        BIND ((0 < ?height) AS ?c)
      }
      THEN {
@@ -33,131 +35,131 @@ eg:num2 a rule:SPARQLRule ;
      }
    """.
 
-# num3 : age <= 150
+# # num3 : age <= 150
 
-eg:num3 a rule:SPARQLRule ;
-   rule:content """
-       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-       PREFIX qb: <http://purl.org/linked-data/cube#> .
-     IF {
-       ?obs a qb:Observation .
-       ?obs sdmx-dimension:age ?age .
-       BIND ((?age <= 150) AS ?c)
-     }
-     THEN {
-       ?obs eg:num3 ?c
-     }
-   """.
+# eg:num3 a rule:SPARQLRule ;
+#    rule:content """
+#        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+#        PREFIX qb: <http://purl.org/linked-data/cube#> 
+#      IF {
+#        ?obs a qb:Observation .
+#        ?obs sdmx-dimension:age ?age .
+#        BIND ((?age <= 150) AS ?c)
+#      }
+#      THEN {
+#        ?obs eg:num3 ?c
+#      }
+#    """.
 
-# num4 : yearsmarried < age
+# # num4 : yearsmarried < age
 
-eg:num4 a rule:SPARQLRule ;
-   rule:content """
-       PREFIX eg: <http://example.org/ns#>
-       PREFIX qb: <http://purl.org/linked-data/cube#> .
-     IF {
-       ?obs a qb:Observation .
-       ?obs sdmx-dimension:age ?age .
-       ?obs eg:yearsMarried ?yearsMarried .
-       BIND ((?yearsMarried < ?age) AS ?c)
-     }
-     THEN {
-       ?obs eg:num4 ?c
-     }
-   """.
+# eg:num4 a rule:SPARQLRule ;
+#    rule:content """
+#        PREFIX eg: <http://example.org/ns#>
+#        PREFIX qb: <http://purl.org/linked-data/cube#> 
+#      IF {
+#        ?obs a qb:Observation .
+#        ?obs sdmx-dimension:age ?age .
+#        ?obs eg:yearsMarried ?yearsMarried .
+#        BIND ((?yearsMarried < ?age) AS ?c)
+#      }
+#      THEN {
+#        ?obs eg:num4 ?c
+#      }
+#    """.
 
-# cat5 : if( agegroup == 'child' ) status != 'married'
+# # cat5 : if( agegroup == 'child' ) status != 'married'
 
-eg:cat5 a rule:SPARQLRule ;
-   rule:content """
-       PREFIX eg: <http://example.org/ns#>	
-       PREFIX qb: <http://purl.org/linked-data/cube#> 
-       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-     IF {
-       ?obs a qb:Observation .
-       ?obs sdmx-dimension:civilStatus ?civilStatus .
-       ?obs eg:agegroup ?ageGroup .
-       FILTER (?ageGroup IN ("child"))
-       BIND ((?civilStatus != "married") AS ?c)
-     }
-     THEN {
-       ?obs eg:cat5 ?c
-     }
-   """.
+# eg:cat5 a rule:SPARQLRule ;
+#    rule:content """
+#        PREFIX eg: <http://example.org/ns#>	
+#        PREFIX qb: <http://purl.org/linked-data/cube#> 
+#        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+#      IF {
+#        ?obs a qb:Observation .
+#        ?obs sdmx-dimension:civilStatus ?civilStatus .
+#        ?obs eg:agegroup ?ageGroup .
+#        FILTER (?ageGroup IN ("child"))
+#        BIND ((?civilStatus != "married") AS ?c)
+#      }
+#      THEN {
+#        ?obs eg:cat5 ?c
+#      }
+#    """.
 
-# mix6 : if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )
+# # mix6 : if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )
 
-eg:mix6 a rule:SPARQLRule ;
-   rule:content """
-       PREFIX eg: <http://example.org/ns#>	
-       PREFIX qb: <http://purl.org/linked-data/cube#> 
-       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-     IF {
-       ?obs a qb:Observation .
-       ?obs sdmx-dimension:civilStatus ?civilStatus .
-       ?obs eg:yearsMarried ?yearsMarried .
-       ?obs sdmx-dimension:age ?age .
-       FILTER (?age < ?yearsMarried + 17)
-       BIND ((?civilStatus NOT IN ("married", "widowed")) AS ?c)
-     }
-     THEN {
-       ?obs eg:mix6 ?c
-     }
-   """.
+# eg:mix6 a rule:SPARQLRule ;
+#    rule:content """
+#        PREFIX eg: <http://example.org/ns#>	
+#        PREFIX qb: <http://purl.org/linked-data/cube#> 
+#        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+#      IF {
+#        ?obs a qb:Observation .
+#        ?obs sdmx-dimension:civilStatus ?civilStatus .
+#        ?obs eg:yearsMarried ?yearsMarried .
+#        ?obs sdmx-dimension:age ?age .
+#        FILTER (?age < ?yearsMarried + 17)
+#        BIND ((?civilStatus NOT IN ("married", "widowed")) AS ?c)
+#      }
+#      THEN {
+#        ?obs eg:mix6 ?c
+#      }
+#    """.
 
-# mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
+# # mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
 
-eg:mix7 a rule:SPARQLRule ;
-   rule:content """
-       PREFIX eg: <http://example.org/ns#>	
-       PREFIX qb: <http://purl.org/linked-data/cube#> 
-     IF {
-       ?obs a qb:Observation .
-       ?obs eg:agegroup ?ageGroup .
-       ?obs sdmx-dimension:age ?age .
-       FILTER (?age < 18)
-       BIND ((?ageGroup NOT IN ("adult", "elderly")) AS ?c)
-     }
-     THEN {
-       ?obs eg:mix7 ?c
-     }
-   """.
+# eg:mix7 a rule:SPARQLRule ;
+#    rule:content """
+#        PREFIX eg: <http://example.org/ns#>	
+#        PREFIX qb: <http://purl.org/linked-data/cube#> 
+#      IF {
+#        ?obs a qb:Observation .
+#        ?obs eg:agegroup ?ageGroup .
+#        ?obs sdmx-dimension:age ?age .
+#        FILTER (?age < 18)
+#        BIND ((?ageGroup NOT IN ("adult", "elderly")) AS ?c)
+#      }
+#      THEN {
+#        ?obs eg:mix7 ?c
+#      }
+#    """.
 
-# mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
+# # mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
 
-eg:mix8 a rule:SPARQLRule ;
-   rule:content """
-       PREFIX eg: <http://example.org/ns#>	
-       PREFIX qb: <http://purl.org/linked-data/cube#> 
-     IF {
-       ?obs a qb:Observation .
-       ?obs eg:agegroup ?ageGroup .
-       ?obs sdmx-dimension:age ?age .
-       FILTER (?age <= 18 && ?age < 65)
-       BIND ((?ageGroup NOT IN ("child", "elderly")) AS ?c)
-     }
-     THEN {
-       ?obs eg:mix8 ?c
-     }
-   """.
+# eg:mix8 a rule:SPARQLRule ;
+#    rule:content """
+#        PREFIX eg: <http://example.org/ns#>	
+#        PREFIX qb: <http://purl.org/linked-data/cube#> 
+#      IF {
+#        ?obs a qb:Observation .
+#        ?obs eg:agegroup ?ageGroup .
+#        ?obs sdmx-dimension:age ?age .
+#        FILTER (?age <= 18 && ?age < 65)
+#        BIND ((?ageGroup NOT IN ("child", "elderly")) AS ?c)
+#      }
+#      THEN {
+#        ?obs eg:mix8 ?c
+#      }
+#    """.
 
-# mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
+# # mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
 
-eg:mix9 a rule:SPARQLRule ;
-   rule:content """
-       PREFIX eg: <http://example.org/ns#>	
-       PREFIX qb: <http://purl.org/linked-data/cube#> 
-     IF {
-       ?obs a qb:Observation .
-       ?obs eg:agegroup ?ageGroup .
-       ?obs sdmx-dimension:age ?age .
-       FILTER (?age <= 65)
-       BIND ((?ageGroup NOT IN ("adult", "child")) AS ?c)
-     }
-     THEN {
-       ?obs eg:mix9 ?c
-     }
-   """.
+# eg:mix9 a rule:SPARQLRule ;
+#    rule:content """
+#        PREFIX eg: <http://example.org/ns#>	
+#        PREFIX qb: <http://purl.org/linked-data/cube#> 
+#      IF {
+#        ?obs a qb:Observation .
+#        ?obs eg:agegroup ?ageGroup .
+#        ?obs sdmx-dimension:age ?age .
+#        FILTER (?age <= 65)
+#        BIND ((?ageGroup NOT IN ("adult", "child")) AS ?c)
+#      }
+#      THEN {
+#        ?obs eg:mix9 ?c
+#      }
+#    """.
 
 # If something is an observation is also a foo
 # eg:foo-rule a rule:SPARQLRule ;
