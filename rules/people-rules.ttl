@@ -1,8 +1,9 @@
 @prefix rule: <tag:stardog:api:rule:> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix eg: <http://example.org/ns#> .
+
+# Human age is between 0 and 150
 
 eg:age-rule a rule:SPARQLRule ;
    rule:content """
@@ -18,3 +19,15 @@ eg:age-rule a rule:SPARQLRule ;
      }
    """.
 
+# If something is an observation is also a foo
+eg:foo-rule a rule:SPARQLRule ;
+   rule:content """
+       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+     IF {
+       ?obs a qb:Observation
+     }
+     THEN {
+       ?obs a eg:foo 
+     }
+   """.
