@@ -72,14 +72,14 @@ eg:num4 a rule:SPARQLRule ;
 
 eg:cat5 a rule:SPARQLRule ;
    rule:content """
-       PREFIX eg: <http://example.org/ns#>	
-       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX eg: <http://example.org/ns#>
+       PREFIX qb: <http://purl.org/linked-data/cube#>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
-       BIND ( IF(?ageGroup = "child", ?civilStatus != "married", ?civilStatus = "married") AS ?c )
+       BIND ( IF(?ageGroup = "child", ?civilStatus != "married", ?civilStatus = ?civilStatus) AS ?c )
      }
      THEN {
        ?obs eg:cat5 ?c
@@ -98,7 +98,7 @@ eg:mix6 a rule:SPARQLRule ;
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:yearsMarried ?yearsMarried .
        ?obs sdmx-dimension:age ?age .
-       BIND ( IF(?age < ?yearsMarried + 17, ?civilStatus NOT IN ("married", "widowed"), ?civilStatus IN ("married", "widowed")) AS ?c )
+       BIND ( IF(?age < ?yearsMarried + 17, ?civilStatus != "married" && ?civilStatus != "widowed", ?age = ?age) AS ?c )
      }
      THEN {
        ?obs eg:mix6 ?c
@@ -107,57 +107,54 @@ eg:mix6 a rule:SPARQLRule ;
 
 # # mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
 
-# eg:mix7 a rule:SPARQLRule ;
-#    rule:content """
-#        PREFIX eg: <http://example.org/ns#>	
-#        PREFIX qb: <http://purl.org/linked-data/cube#> 
-#      IF {
-#        ?obs a qb:Observation .
-#        ?obs eg:agegroup ?ageGroup .
-#        ?obs sdmx-dimension:age ?age .
-#        FILTER (?age < 18)
-#        BIND ((?ageGroup NOT IN ("adult", "elderly")) AS ?c)
-#      }
-#      THEN {
-#        ?obs eg:mix7 ?c
-#      }
-#    """.
+eg:mix7 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       BIND ( IF(?age < 18, ?ageGroup != "adult" && ?ageGroup != "elderly", ?age = ?age) AS ?c )
+     }
+     THEN {
+       ?obs eg:mix7 ?c
+     }
+   """.
 
 # # mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
 
-# eg:mix8 a rule:SPARQLRule ;
-#    rule:content """
-#        PREFIX eg: <http://example.org/ns#>	
-#        PREFIX qb: <http://purl.org/linked-data/cube#> 
-#      IF {
-#        ?obs a qb:Observation .
-#        ?obs eg:agegroup ?ageGroup .
-#        ?obs sdmx-dimension:age ?age .
-#        FILTER (?age <= 18 && ?age < 65)
-#        BIND ((?ageGroup NOT IN ("child", "elderly")) AS ?c)
-#      }
-#      THEN {
-#        ?obs eg:mix8 ?c
-#      }
-#    """.
+eg:mix8 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       BIND ( IF(18 <= ?age && ?age < 65, ?ageGroup != "child" && ?ageGroup != "elderly", ?age = ?age) AS ?c )
+     }
+     THEN {
+       ?obs eg:mix8 ?c
+     }
+   """.
 
 # # mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
 
-# eg:mix9 a rule:SPARQLRule ;
-#    rule:content """
-#        PREFIX eg: <http://example.org/ns#>	
-#        PREFIX qb: <http://purl.org/linked-data/cube#> 
-#      IF {
-#        ?obs a qb:Observation .
-#        ?obs eg:agegroup ?ageGroup .
-#        ?obs sdmx-dimension:age ?age .
-#        FILTER (?age <= 65)
-#        BIND ((?ageGroup NOT IN ("adult", "child")) AS ?c)
-#      }
-#      THEN {
-#        ?obs eg:mix9 ?c
-#      }
-#    """.
+eg:mix9 a rule:SPARQLRule ;
+   rule:content """
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       BIND ( IF(65 <= ?age, ?ageGroup != "adult" && ?ageGroup != "child", ?age = ?age) AS ?c )
+     }
+     THEN {
+       ?obs eg:mix9 ?c
+     }
+   """.
 
 # If something is an observation is also a foo
 # eg:foo-rule a rule:SPARQLRule ;

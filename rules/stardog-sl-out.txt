@@ -1,31 +1,51 @@
 +-------+---------+-------+
 |   s   |    p    |   o   |
 +-------+---------+-------+
-| eg:o1 | eg:cat5 | false |
+| eg:o1 | eg:cat5 | true  |
+| eg:o1 | eg:mix6 | true  |
+| eg:o1 | eg:mix7 | true  |
+| eg:o1 | eg:mix8 | true  |
+| eg:o1 | eg:mix9 | true  |
 | eg:o1 | eg:num1 | true  |
 | eg:o1 | eg:num2 | true  |
 | eg:o1 | eg:num3 | true  |
 | eg:o1 | eg:num4 | true  |
 | eg:o2 | eg:cat5 | true  |
+| eg:o2 | eg:mix6 | true  |
+| eg:o2 | eg:mix7 | true  |
+| eg:o2 | eg:mix8 | true  |
+| eg:o2 | eg:mix9 | true  |
 | eg:o2 | eg:num1 | true  |
 | eg:o2 | eg:num2 | true  |
 | eg:o2 | eg:num3 | true  |
 | eg:o2 | eg:num4 | true  |
 | eg:o3 | eg:cat5 | true  |
+| eg:o3 | eg:mix6 | true  |
+| eg:o3 | eg:mix7 | true  |
+| eg:o3 | eg:mix8 | true  |
+| eg:o3 | eg:mix9 | true  |
 | eg:o3 | eg:num1 | true  |
 | eg:o3 | eg:num2 | true  |
 | eg:o3 | eg:num3 | true  |
 | eg:o3 | eg:num4 | false |
-| eg:o4 | eg:cat5 | false |
+| eg:o4 | eg:cat5 | true  |
+| eg:o4 | eg:mix6 | true  |
+| eg:o4 | eg:mix7 | true  |
+| eg:o4 | eg:mix8 | true  |
+| eg:o4 | eg:mix9 | true  |
 | eg:o4 | eg:num1 | true  |
 | eg:o4 | eg:num2 | true  |
 | eg:o4 | eg:num3 | false |
 | eg:o4 | eg:num4 | true  |
 | eg:o5 | eg:cat5 | true  |
+| eg:o5 | eg:mix6 | true  |
+| eg:o5 | eg:mix7 | true  |
+| eg:o5 | eg:mix8 | true  |
+| eg:o5 | eg:mix9 | true  |
 | eg:o5 | eg:num1 | true  |
 | eg:o5 | eg:num2 | false |
 | eg:o5 | eg:num3 | true  |
 | eg:o5 | eg:num4 | true  |
 +-------+---------+-------+
 
-Query returned 25 results in 00:00:00.170
+Query returned 45 results in 00:00:00.164
