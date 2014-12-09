@@ -12,10 +12,10 @@ eg:num1 a rule:SPARQLRule ;
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
-       BIND ((0 <= ?age) AS ?c)
+       FILTER (?age < 0)
      }
      THEN {
-       ?obs eg:num1 ?c
+       ?obs eg:violates eg:num1
      }
    """.
 
@@ -28,10 +28,10 @@ eg:num2 a rule:SPARQLRule ;
      IF {
        ?obs a qb:Observation .
        ?obs eg:height ?height .
-       BIND ((0 < ?height) AS ?c)
+       FILTER (?height <= 0)
      }
      THEN {
-       ?obs eg:num2 ?c
+       ?obs eg:violates eg:num2
      }
    """.
 
@@ -44,10 +44,10 @@ eg:num3 a rule:SPARQLRule ;
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
-       BIND ((?age <= 150) AS ?c)
+       FILTER (?age > 150)
      }
      THEN {
-       ?obs eg:num3 ?c
+       ?obs eg:violates eg:num3
      }
    """.
 
@@ -61,10 +61,10 @@ eg:num4 a rule:SPARQLRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
        ?obs eg:yearsMarried ?yearsMarried .
-       BIND ((?yearsMarried < ?age) AS ?c)
+       FILTER (?yearsMarried >= ?age)
      }
      THEN {
-       ?obs eg:num4 ?c
+       ?obs eg:violates eg:num4
      }
    """.
 
@@ -79,10 +79,11 @@ eg:cat5 a rule:SPARQLRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
-       BIND ( IF(?ageGroup = "child", ?civilStatus != "married", ?civilStatus = ?civilStatus) AS ?c )
+       FILTER (?ageGroup = "child")
+       FILTER (?status = "married")
      }
      THEN {
-       ?obs eg:cat5 ?c
+       ?obs eg:violates eg:cat5
      }
    """.
 
@@ -98,10 +99,11 @@ eg:mix6 a rule:SPARQLRule ;
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:yearsMarried ?yearsMarried .
        ?obs sdmx-dimension:age ?age .
-       BIND ( IF(?age < ?yearsMarried + 17, ?civilStatus != "married" && ?civilStatus != "widowed", ?age = ?age) AS ?c )
+       FILTER (?age < ?yearsMarried + 17)
+       FILTER (?status IN ("married", "widowed"))
      }
      THEN {
-       ?obs eg:mix6 ?c
+       ?obs eg:violates eg:mix6
      }
    """.
 
@@ -115,10 +117,11 @@ eg:mix7 a rule:SPARQLRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       BIND ( IF(?age < 18, ?ageGroup != "adult" && ?ageGroup != "elderly", ?age = ?age) AS ?c )
+       FILTER (?age < 18)
+       FILTER (?ageGroup IN ("adult", "elderly"))
      }
      THEN {
-       ?obs eg:mix7 ?c
+       ?obs eg:violates eg:mix7
      }
    """.
 
@@ -132,10 +135,11 @@ eg:mix8 a rule:SPARQLRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       BIND ( IF(18 <= ?age && ?age < 65, ?ageGroup != "child" && ?ageGroup != "elderly", ?age = ?age) AS ?c )
+       FILTER (18 <= ?age && ?age < 65)
+       FILTER (?ageGroup IN ("child", "elderly"))
      }
      THEN {
-       ?obs eg:mix8 ?c
+       ?obs eg:violates eg:mix8
      }
    """.
 
@@ -149,10 +153,11 @@ eg:mix9 a rule:SPARQLRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       BIND ( IF(65 <= ?age, ?ageGroup != "adult" && ?ageGroup != "child", ?age = ?age) AS ?c )
+       FILTER (65 <= ?age)
+       FILTER (?ageGroup IN ("adult", "child"))
      }
      THEN {
-       ?obs eg:mix9 ?c
+       ?obs eg:violates eg:mix9
      }
    """.
 
