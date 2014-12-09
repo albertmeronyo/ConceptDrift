@@ -79,8 +79,7 @@ eg:cat5 a rule:SPARQLRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
-       FILTER (?ageGroup = "child")
-       FILTER (?status = "married")
+       FILTER (?ageGroup = "child" && ?civilStats = "married")
      }
      THEN {
        ?obs eg:violates eg:cat5
@@ -99,15 +98,14 @@ eg:mix6 a rule:SPARQLRule ;
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:yearsMarried ?yearsMarried .
        ?obs sdmx-dimension:age ?age .
-       FILTER (?age < ?yearsMarried + 17)
-       FILTER (?status IN ("married", "widowed"))
+       FILTER (?age < ?yearsMarried + 17 && ?civilStatus IN ("married", "widowed"))
      }
      THEN {
        ?obs eg:violates eg:mix6
      }
    """.
 
-# # mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
+# mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
 
 eg:mix7 a rule:SPARQLRule ;
    rule:content """
@@ -117,33 +115,32 @@ eg:mix7 a rule:SPARQLRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER (?age < 18)
-       FILTER (?ageGroup IN ("adult", "elderly"))
+       FILTER (?age < 18 && ?ageGroup IN ("adult", "elderly"))
      }
      THEN {
        ?obs eg:violates eg:mix7
      }
    """.
 
-# # mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
+# mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
 
 eg:mix8 a rule:SPARQLRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
      IF {
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER (18 <= ?age && ?age < 65)
-       FILTER (?ageGroup IN ("child", "elderly"))
+       FILTER ((18 <= ?age && ?age < 65) && ?ageGroup IN ("child", "elderly"))
      }
      THEN {
        ?obs eg:violates eg:mix8
      }
    """.
 
-# # mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
+# mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
 
 eg:mix9 a rule:SPARQLRule ;
    rule:content """
@@ -153,8 +150,7 @@ eg:mix9 a rule:SPARQLRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER (65 <= ?age)
-       FILTER (?ageGroup IN ("adult", "child"))
+       FILTER (65 <= ?age && ?ageGroup IN ("adult", "child"))
      }
      THEN {
        ?obs eg:violates eg:mix9
