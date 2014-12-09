@@ -1,9 +1,14 @@
 +-------+-------------+---------+
 |   s   |      p      |    o    |
 +-------+-------------+---------+
+| eg:o2 | eg:violates | eg:mix6 |
+| eg:o2 | eg:violates | eg:cat5 |
 | eg:o3 | eg:violates | eg:num4 |
+| eg:o3 | eg:violates | eg:mix6 |
 | eg:o4 | eg:violates | eg:num3 |
 | eg:o5 | eg:violates | eg:num2 |
+| eg:o5 | eg:violates | eg:mix8 |
+| eg:o5 | eg:violates | eg:cat5 |
 +-------+-------------+---------+
 
-Query returned 3 results in 00:00:00.138
+Query returned 8 results in 00:00:00.104
