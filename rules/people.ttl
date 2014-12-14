@@ -13,7 +13,20 @@ eg:dataset-people a qb:DataSet ;
 		  rdfs:label      "Rnadom people"@en ;
 		  qb:structure    eg:dsd-people ;  
 		  sdmx-attribute:unitMeasure <http://dbpedia.org/resource/Year> ;
-		  sdmx-attribute:unitMeasure <http://dbpedia.org/resource/Meter> .
+		  sdmx-attribute:unitMeasure <http://dbpedia.org/resource/Meter> ;
+		  qb:slice eg:slice1 
+.
+
+eg:sliceByAdults a qb:SliceKey ;
+		 rdfs:label "Slice by adults"@en;
+		 rdfs:comment "Slice by grouping adults together"@en;
+		 qb:componentProperty eg:agegroup .
+
+eg:sliceByNonAdults a qb:SliceKey ;
+		 rdfs:label "Slice by non-adults"@en;
+		 rdfs:comment "Slice by grouping children and elderly together"@en;
+		 qb:componentProperty eg:agegroup .
+
 
 eg:dsd-people a qb:DataStructureDefinition ;
 	      qb:component
@@ -27,6 +40,7 @@ eg:dsd-people a qb:DataStructureDefinition ;
 	        qb:order     4 ];
 	      qb:component
 	      [ qb:measure eg:yearsmarried ];
+	      qb:sliceKey eg:sliceByAdults , eg:sliceByNonAdults 
 .
 
 eg:o1 a qb:Observation ;
@@ -72,4 +86,16 @@ eg:o5 a qb:Observation ;
       eg:height -7 ;
       sdmx-dimension:civilStatus "married" ;
       eg:yearsMarried 3 ;
+.
+
+eg:slice1 a qb:Slice ;
+	  qb:sliceStructure eg:sliceByAdults ;
+	  eg:agegroup "adult" ;
+	  qb:observation eg:o1, eg:o3
+.
+
+eg:slice2 a qb:Slice ;
+	  qb:sliceStructure eg:sliceByNonAdults ;
+	  eg:agegroup "child" , "elderly" ;
+	  qb:observation eg:o2, eg:o4, eg:o5
 .
