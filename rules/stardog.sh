@@ -27,4 +27,4 @@ stardog-admin db create -n $DB_NAME $A_BOX $R_BOX
 # ./stardog reasoning explain -r SL people "eg:o1 a eg:foo"
 
 # Macro-edits
-# ./stardog query people "prefix stardog: <tag:stardog:api:> select ?foo where { bind(stardog:R(eg:slice1, eg:slice2, eg:height)) as ?foo}"
+# ./stardog query people "prefix stardog: <tag:stardog:api:> select ?foo where { bind(stardog:R(eg:slice1, eg:slice2, eg:height) as ?foo)}"
