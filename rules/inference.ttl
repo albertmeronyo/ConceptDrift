@@ -1,7 +1,0 @@
-@prefix eg: <http://example.org/ns#> .
-
-eg:o1 eg:age-rule "true" .
-# eg:o2 eg:age-rule "true" .
-# eg:o3 eg:age-rule "true" .
-# eg:o4 eg:age-rule "false" .
-# eg:o5 eg:age-rule "true" .
