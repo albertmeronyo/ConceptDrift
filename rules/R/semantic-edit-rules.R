@@ -1,12 +1,12 @@
 library(editrules)
 
-people <- read.csv("~/src/ConceptDrift/rules/people.csv")
+people <- read.csv("~/src/ConceptDrift/rules/data/people.csv")
 E <- editset(c("age >=0", "age <= 150"))
 E
 ve <- violatedEdits(E, people)
 ve
 
-E <- editfile("~/src/ConceptDrift/rules/edits.txt")
+E <- editfile("~/src/ConceptDrift/rules/data/edits.txt")
 E
 ve <- violatedEdits(E, people)
 ve
