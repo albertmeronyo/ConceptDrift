@@ -1,7 +1,7 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix ler: 	 <http://bit.ly/ler#> .
+@prefix ler: 	 <http://bit.ly/linked-edit-rules#> .
 
 cedar-maritalstatus:maritalStatus a qb:DimensionProperty, rdf:Property ;
 	rdfs:range cedar-maritalstatus:MaritalStatus;
