@@ -1,10 +1,24 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix qb: 	 <http://purl.org/linked-data/cube#> .
 @prefix ler: 	 <http://bit.ly/linked-edit-rules#> .
 
-cedar-maritalstatus:maritalStatus a qb:DimensionProperty, rdf:Property ;
-	rdfs:range cedar-maritalstatus:MaritalStatus;
-	qb:concept cedar-maritalstatus:MaritalStatus;
-	rdfs:label "Marital status"@en ;
-	rdfs:comment "A person's marital status indicates whether the person is married"@en ;
+ler:EditRule a rdfs:Class, owl:Class;
+    rdfs:label "Linked Edit Rule"@en;
+    rdfs:comment "An edit rule defines a statistical constraint over RDF Data Cubes on certain components and a scope"@en;
+    rdfs:seeAlso <https://github.com/albertmeronyo/ConceptDrift/> .
+
+ler:scope a rdf:Property ;
+    rdfs:range qb:ObservationGroup ;
+    rdfs:domain ler:EditRule ;
+    rdfs:label "LER Scope"@en ;
+    rdfs:comment "The scope of an edit rule indicates whether it constraints observations, slices or datasets"@en
+.
+
+ler:component a rdf:Property ;
+    rdfs:range qb:ComponentProperty ;
+    rdfs:domain ler:EditRule ;
+    rdfs:label "LER Component@en ;
+    rdfs:comment "The component of an edit rule indicates the dimension, attribute or measure it constraints"@en
+.
