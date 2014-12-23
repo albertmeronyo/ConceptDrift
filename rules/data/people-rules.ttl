@@ -2,10 +2,11 @@
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix eg: <http://example.org/ns#> .
+@prefix ler: <http://example.org/ler#> .
 
 # num1 : 0 <= age
 
-eg:num1 a rule:SPARQLRule ;
+eg:num1 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -17,11 +18,14 @@ eg:num1 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:num1
      }
-   """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age
+.
 
 # num2 : 0 < height
 
-eg:num2 a rule:SPARQLRule ;
+eg:num2 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -33,11 +37,15 @@ eg:num2 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:num2
      }
-   """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component eg:height
+.
+
 
 # num3 : age <= 150
 
-eg:num3 a rule:SPARQLRule ;
+eg:num3 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -49,11 +57,15 @@ eg:num3 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:num3
      }
-   """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age
+.
+
 
 # num4 : yearsmarried < age
 
-eg:num4 a rule:SPARQLRule ;
+eg:num4 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -66,11 +78,15 @@ eg:num4 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:num4
      }
-   """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:yearsMarried .
+.
+
 
 # cat5 : if( agegroup == 'child' ) status != 'married'
 
-eg:cat5 a rule:SPARQLRule ;
+eg:cat5 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -84,11 +100,15 @@ eg:cat5 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:cat5
      }
-   """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:civilStatus, eg:agegroup
+.
+
 
 # mix6 : if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )
 
-eg:mix6 a rule:SPARQLRule ;
+eg:mix6 a rule:SPARQLRule, ler:EditRule;
    rule:content """
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -103,11 +123,15 @@ eg:mix6 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:mix6
      }
-   """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, sdmx-dimension:civilStatus, eg:yearsMarried
+.
+
 
 # mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
 
-eg:mix7 a rule:SPARQLRule ;
+eg:mix7 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -120,11 +144,15 @@ eg:mix7 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:mix7
      }
-   """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:agegroup
+.
+
 
 # mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
 
-eg:mix8 a rule:SPARQLRule ;
+eg:mix8 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -138,11 +166,15 @@ eg:mix8 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:mix8
      }
-   """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:agegroup
+.
+
 
 # mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
 
-eg:mix9 a rule:SPARQLRule ;
+eg:mix9 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -156,17 +188,7 @@ eg:mix9 a rule:SPARQLRule ;
      THEN {
        ?obs eg:violates eg:mix9
      }
-   """.
-
-# If something is an observation is also a foo
-# eg:foo-rule a rule:SPARQLRule ;
-#    rule:content """
-#        PREFIX qb: <http://purl.org/linked-data/cube#>
-#        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-#      IF {
-#        ?obs a qb:Observation
-#      }
-#      THEN {
-#        ?obs a eg:foo 
-#      }
-#    """.
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:agegroup
+.
