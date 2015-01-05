@@ -2,7 +2,7 @@
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix eg: <http://example.org/ns#> .
-@prefix ler: <http://example.org/ler#> .
+@prefix ler: <http://example.org/linked-edit-rules#> .
 
 # num1 : 0 <= age
 
