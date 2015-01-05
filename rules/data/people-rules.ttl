@@ -80,7 +80,7 @@ eg:num4 a rule:SPARQLRule, ler:EditRule ;
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age, eg:yearsMarried .
+   ler:component sdmx-dimension:age, eg:yearsMarried
 .
 
 
