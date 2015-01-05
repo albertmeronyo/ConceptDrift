@@ -80,8 +80,8 @@ eg:num4 a rule:SPARQLRule, ler:EditRule ;
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age ;
-   ler:component eg:yearsMarried .
+   ler:component sdmx-dimension:age, eg:yearsMarried
+.
 
 
 # cat5 : if( agegroup == 'child' ) status != 'married'
