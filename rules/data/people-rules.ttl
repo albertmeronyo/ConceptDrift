@@ -1,7 +1,7 @@
 @prefix rule: <tag:stardog:api:rule:> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
-@prefix eg: <http://example.org/ns#> .
+@prefix eg: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/> .
 @prefix ler: <http://bit.ly/linked-edit-rules#> .
 
 # num1 : 0 <= age
