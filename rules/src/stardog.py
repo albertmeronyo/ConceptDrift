@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 from common.stardogwrapper import StardogWrapper
+from common.lerharvester import LERHarvester
+from common.qbharvester import QBHarvester
 from ConfigParser import SafeConfigParser
 
 CONFIG_INI = '../config.ini'
 
-DB_NAME="people"
 A_BOX="/Users/Albert/src/ConceptDrift/rules/people.ttl"
 R_BOX="/Users/Albert/src/ConceptDrift/rules/people-rules.ttl"
 
@@ -18,8 +19,22 @@ if __name__ == '__main__':
     s.restartServer()
 
     # Retrive rules (as requested)
-
+    lerh = LERHarvester(config)
+    lerh.getRules()
 
     # Retrieve observations (as requested)
 
+
+    # Feed Stardog instance
+
     
+    # Launch query with SL reasoning
+
+
+    # Catch and return result
+    
+    
+    # Shutdown Stardog
+    s.stopServer()
+
+    exit(0)
