@@ -8,6 +8,7 @@
 
 eg:num1 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX eg: <http://example.org/ns#>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
      IF {
