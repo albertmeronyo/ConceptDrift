@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import os
-import os.path
 from subprocess import call
 
 class StardogWrapper():

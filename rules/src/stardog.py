@@ -6,9 +6,6 @@ from ConfigParser import SafeConfigParser
 
 CONFIG_INI = '../config.ini'
 
-A_BOX="/Users/Albert/src/ConceptDrift/rules/people.ttl"
-R_BOX="/Users/Albert/src/ConceptDrift/rules/people-rules.ttl"
-
 if __name__ == '__main__':
     # Read config file
     config = SafeConfigParser()
@@ -21,6 +18,7 @@ if __name__ == '__main__':
     # Retrive rules (as requested)
     lerh = LERHarvester(config)
     lerh.getRules()
+    lerh.serializeRules()
 
     # Retrieve observations (as requested)
 
