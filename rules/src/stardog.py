@@ -21,7 +21,9 @@ if __name__ == '__main__':
     lerh.serializeRules()
 
     # Retrieve observations (as requested)
-
+    qbh = QBHarvester(config)
+    qbh.getCube()
+    qbh.serializeCube()
 
     # Feed Stardog instance
 
