@@ -3,6 +3,8 @@
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix eg: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/> .
 @prefix ler: <http://bit.ly/linked-edit-rules#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 # num1 : 0 <= age
 
@@ -14,7 +16,6 @@ eg:num1 a rule:SPARQLRule, ler:EditRule ;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
@@ -59,7 +60,6 @@ eg:num2 a rule:SPARQLRule, ler:EditRule ;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs eg:height ?height .
@@ -105,7 +105,6 @@ eg:num3 a rule:SPARQLRule, ler:EditRule ;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
@@ -151,7 +150,6 @@ eg:num4 a rule:SPARQLRule, ler:EditRule ;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
@@ -198,7 +196,6 @@ eg:cat5 a rule:SPARQLRule, ler:EditRule ;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
@@ -245,7 +242,6 @@ eg:mix6 a rule:SPARQLRule, ler:EditRule;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
@@ -293,7 +289,6 @@ eg:mix7 a rule:SPARQLRule, ler:EditRule ;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
@@ -340,7 +335,6 @@ eg:mix8 a rule:SPARQLRule, ler:EditRule ;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
@@ -387,7 +381,6 @@ eg:mix9 a rule:SPARQLRule, ler:EditRule ;
        PREFIX prov: <http://www.w3.org/ns/prov#>
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
