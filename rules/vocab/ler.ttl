@@ -7,7 +7,7 @@
 ler:EditRule a rdfs:Class, owl:Class;
     rdfs:label "Linked Edit Rule"@en;
     rdfs:comment "An edit rule defines a statistical constraint over RDF Data Cubes on certain components and a scope"@en;
-    rdfs:seeAlso <https://github.com/albertmeronyo/ConceptDrift/>
+    rdfs:seeAlso <https://github.com/albertmeronyo/ConceptDrift/tree/master/rules>
 .
 
 ler:scope a rdf:Property ;
