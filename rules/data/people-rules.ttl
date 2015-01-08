@@ -35,9 +35,7 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
 	  prov:used leri:num1 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
-	  prov:generatedAtTime ?now ;
-          oa:hasBody ?body ;
-	  oa:hasTarget ?obs .
+	  prov:generatedAtTime ?now .
      }
    """;
    ler:scope qb:Observation ;
