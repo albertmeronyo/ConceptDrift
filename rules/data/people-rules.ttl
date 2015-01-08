@@ -27,7 +27,8 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
        BIND (now() as ?now)
      }
      THEN {
-       ?act a prov:Activity .
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" .
      }
    """;
    ler:scope qb:Observation ;
