@@ -31,7 +31,8 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
           rdfs:label "Consistency check" ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
-  	  prov:used ?obs .
+  	  prov:used ?obs ;
+	  prov:used leri:num2 .
      }
    """;
    ler:scope qb:Observation ;
