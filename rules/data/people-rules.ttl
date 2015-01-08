@@ -32,8 +32,7 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
   	  prov:used ?obs ;
-	  prov:used leri:num1 ;
-       	  <bar> <baz> .
+	  prov:used leri:num1 .
      }
    """;
    ler:scope qb:Observation ;
