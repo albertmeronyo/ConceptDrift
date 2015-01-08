@@ -27,12 +27,7 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
        BIND (now() as ?now)
      }
      THEN {
-       ?act a prov:Activity ;
-          rdfs:label "Consistency check" ;
-	  prov:wasAssociatedWith <http://stardog.com/> ;
-	  prov:startedAtTime ?now ;
-	  prov:used ?obs ;
-	  prov:used leri:num1 .
+       ?act a prov:Activity .
      }
    """;
    ler:scope qb:Observation ;
