@@ -28,12 +28,17 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
      }
      THEN {
        ?act a prov:Activity .
+       ?act rdfs:label "Consistency check" ;
+       ?act prov:wasAssociatedWith <http://stardog.com/> ;
+       ?act prov:startedAtTime ?now ;
+       ?act prov:used ?obs ;
+       ?act prov:used leri:num1 .
      }
    """;
    ler:scope qb:Observation ;
    ler:component sdmx-dimension:age ;
-   rdfs:label "0 <= age" ;
-   rdfs:comment "Age must be zero or a positive number" ;
+   rdfs:label "0 <= age"@en ;
+   rdfs:comment "Age must be zero or a positive number"@en ;
    dc:creator <http://www.albertmeronyo.org/> ;
    dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
 .
