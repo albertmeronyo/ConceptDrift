@@ -21,9 +21,18 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
        FILTER (?age < 0)
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs a prov:Activity .
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used leri:num1 .
      }
    """;
    ler:scope qb:Observation ;
