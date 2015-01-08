@@ -29,6 +29,7 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
      THEN {
        ?act a prov:Activity ;
           rdfs:label "Consistency check" .
+	  prov:wasAssociatedWith <http://stardog.com/> .
      }
    """;
    ler:scope qb:Observation ;
