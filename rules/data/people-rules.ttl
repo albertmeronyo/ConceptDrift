@@ -1,16 +1,16 @@
 @prefix rule: <tag:stardog:api:rule:> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
-@prefix eg: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/> .
+@prefix leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/> .
 @prefix ler: <http://bit.ly/linked-edit-rules#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 # num1 : 0 <= age
 
-eg:num1 a rule:SPARQLRule, ler:EditRule ;
+leri:num1 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
-       PREFIX eg: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX qb: <http://purl.org/linked-data/cube#>
        PREFIX oa: <http://www.w3.org/ns/oa#>
@@ -28,7 +28,7 @@ eg:num1 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?obs ;
 	  prov:used ?obs ;
-	  prov:used eg:num1 .
+	  prov:used leri:num1 .
        ?obs a oa:Annotation ;
           prov:wasGeneratedBy ?obs ;
 	  prov:generatedAtTime ?obs ;
@@ -36,7 +36,7 @@ eg:num1 a rule:SPARQLRule, ler:EditRule ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?obs a rdfs:Resource ;
-	  ler:inconsistentWith eg:num1 .
+	  ler:inconsistentWith leri:num1 .
      }
    """;
    ler:scope qb:Observation ;
@@ -49,8 +49,9 @@ eg:num1 a rule:SPARQLRule, ler:EditRule ;
 
 # num2 : 0 < height
 
-eg:num2 a rule:SPARQLRule, ler:EditRule ;
+leri:num2 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX oa: <http://www.w3.org/ns/oa#>
@@ -72,7 +73,7 @@ eg:num2 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
 	  prov:used ?obs ;
-	  prov:used eg:num2 .
+	  prov:used leri:num2 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
 	  prov:generatedAtTime ?now ;
@@ -80,7 +81,7 @@ eg:num2 a rule:SPARQLRule, ler:EditRule ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?body a rdfs:Resource ;
-	  ler:inconsistentWith eg:num2 .
+	  ler:inconsistentWith leri:num2 .
      }
    """;
    ler:scope qb:Observation ;
@@ -93,8 +94,9 @@ eg:num2 a rule:SPARQLRule, ler:EditRule ;
 
 # num3 : age <= 150
 
-eg:num3 a rule:SPARQLRule, ler:EditRule ;
+leri:num3 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX eg: <http://example.org/ns#>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
@@ -117,7 +119,7 @@ eg:num3 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
 	  prov:used ?obs ;
-	  prov:used eg:num3 .
+	  prov:used leri:num3 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
 	  prov:generatedAtTime ?now ;
@@ -125,7 +127,7 @@ eg:num3 a rule:SPARQLRule, ler:EditRule ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?body a rdfs:Resource ;
-	  ler:inconsistentWith eg:num3 .
+	  ler:inconsistentWith leri:num3 .
      }
    """;
    ler:scope qb:Observation ;
@@ -138,8 +140,9 @@ eg:num3 a rule:SPARQLRule, ler:EditRule ;
 
 # num4 : yearsmarried < age
 
-eg:num4 a rule:SPARQLRule, ler:EditRule ;
+leri:num4 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>       
@@ -163,7 +166,7 @@ eg:num4 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
 	  prov:used ?obs ;
-	  prov:used eg:num4 .
+	  prov:used leri:num4 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
 	  prov:generatedAtTime ?now ;
@@ -171,7 +174,7 @@ eg:num4 a rule:SPARQLRule, ler:EditRule ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?body a rdfs:Resource ;
-	  ler:inconsistentWith eg:num4 .
+	  ler:inconsistentWith leri:num4 .
      }
    """;
    ler:scope qb:Observation ;
@@ -184,8 +187,9 @@ eg:num4 a rule:SPARQLRule, ler:EditRule ;
 
 # cat5 : if( agegroup == 'child' ) status != 'married'
 
-eg:cat5 a rule:SPARQLRule, ler:EditRule ;
+leri:cat5 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
@@ -209,7 +213,7 @@ eg:cat5 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
 	  prov:used ?obs ;
-	  prov:used eg:cat5 .
+	  prov:used leri:cat5 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
 	  prov:generatedAtTime ?now ;
@@ -217,7 +221,7 @@ eg:cat5 a rule:SPARQLRule, ler:EditRule ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?body a rdfs:Resource ;
-	  ler:inconsistentWith eg:cat5 .
+	  ler:inconsistentWith leri:cat5 .
      }
    """;
    ler:scope qb:Observation ;
@@ -230,8 +234,9 @@ eg:cat5 a rule:SPARQLRule, ler:EditRule ;
 
 # mix6 : if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )
 
-eg:mix6 a rule:SPARQLRule, ler:EditRule;
+leri:mix6 a rule:SPARQLRule, ler:EditRule;
    rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
@@ -256,7 +261,7 @@ eg:mix6 a rule:SPARQLRule, ler:EditRule;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
 	  prov:used ?obs ;
-	  prov:used eg:mix6 .
+	  prov:used leri:mix6 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
 	  prov:generatedAtTime ?now ;
@@ -264,7 +269,7 @@ eg:mix6 a rule:SPARQLRule, ler:EditRule;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?body a rdfs:Resource ;
-	  ler:inconsistentWith eg:mix6 .
+	  ler:inconsistentWith leri:mix6 .
      }
    """;
    ler:scope qb:Observation ;
@@ -277,8 +282,9 @@ eg:mix6 a rule:SPARQLRule, ler:EditRule;
 
 # mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
 
-eg:mix7 a rule:SPARQLRule, ler:EditRule ;
+leri:mix7 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
@@ -302,7 +308,7 @@ eg:mix7 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
 	  prov:used ?obs ;
-	  prov:used eg:mix7 .
+	  prov:used leri:mix7 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
 	  prov:generatedAtTime ?now ;
@@ -310,7 +316,7 @@ eg:mix7 a rule:SPARQLRule, ler:EditRule ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?body a rdfs:Resource ;
-	  ler:inconsistentWith eg:mix7 .
+	  ler:inconsistentWith leri:mix7 .
      }
    """;
    ler:scope qb:Observation ;
@@ -323,8 +329,9 @@ eg:mix7 a rule:SPARQLRule, ler:EditRule ;
 
 # mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
 
-eg:mix8 a rule:SPARQLRule, ler:EditRule ;
+leri:mix8 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
@@ -348,7 +355,7 @@ eg:mix8 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
 	  prov:used ?obs ;
-	  prov:used eg:mix8 .
+	  prov:used leri:mix8 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
 	  prov:generatedAtTime ?now ;
@@ -356,7 +363,7 @@ eg:mix8 a rule:SPARQLRule, ler:EditRule ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?body a rdfs:Resource ;
-	  ler:inconsistentWith eg:mix8 .
+	  ler:inconsistentWith leri:mix8 .
      }
    """;
    ler:scope qb:Observation ;
@@ -369,8 +376,9 @@ eg:mix8 a rule:SPARQLRule, ler:EditRule ;
 
 # mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
 
-eg:mix9 a rule:SPARQLRule, ler:EditRule ;
+leri:mix9 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
@@ -394,7 +402,7 @@ eg:mix9 a rule:SPARQLRule, ler:EditRule ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
 	  prov:startedAtTime ?now ;
 	  prov:used ?obs ;
-	  prov:used eg:mix9 .
+	  prov:used leri:mix9 .
        ?ann a oa:Annotation ;
           prov:wasGeneratedBy ?act ;
 	  prov:generatedAtTime ?now ;
@@ -402,7 +410,7 @@ eg:mix9 a rule:SPARQLRule, ler:EditRule ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
        ?body a rdfs:Resource ;
-	  ler:inconsistentWith eg:mix9 .
+	  ler:inconsistentWith leri:mix9 .
      }
    """;
    ler:scope qb:Observation ;
