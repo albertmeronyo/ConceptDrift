@@ -8,20 +8,45 @@
 
 eg:num1 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
-       PREFIX eg: <http://example.org/ns#>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
        FILTER (?age < 0)
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:num1
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:num1 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:num1 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age
+   ler:component sdmx-dimension:age ;
+   rdfs:label "0 <= age" ;
+   rdfs:comment "Age must be zero or a positive number" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
 
 # num2 : 0 < height
@@ -30,19 +55,44 @@ eg:num2 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs eg:height ?height .
        FILTER (?height <= 0)
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:num2
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:num2 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:num2 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component eg:height
+   ler:component eg:height ;
+   rdfs:label "0 < height" ;
+   rdfs:comment "Height must be a positive number" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
-
 
 # num3 : age <= 150
 
@@ -51,19 +101,44 @@ eg:num3 a rule:SPARQLRule, ler:EditRule ;
        PREFIX eg: <http://example.org/ns#>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
        FILTER (?age > 150)
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:num3
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:num3 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:num3 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age
+   ler:component sdmx-dimension:age ;
+   rdfs:label "age <= 150" ;
+   rdfs:comment "Age can't be greater than 150" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
-
 
 # num4 : yearsmarried < age
 
@@ -71,21 +146,46 @@ eg:num4 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#> 
-       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>       
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
        ?obs eg:yearsMarried ?yearsMarried .
        FILTER (?yearsMarried >= ?age)
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:num4
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:num4 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:num4 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age, eg:yearsMarried
+   ler:component sdmx-dimension:age, eg:yearsMarried ;
+   rdfs:label "yearsmarried < age" ;
+   rdfs:comment "A person can't be married more years than her age" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
-
 
 # cat5 : if( agegroup == 'child' ) status != 'married'
 
@@ -94,20 +194,45 @@ eg:cat5 a rule:SPARQLRule, ler:EditRule ;
        PREFIX eg: <http://example.org/ns#>
        PREFIX qb: <http://purl.org/linked-data/cube#>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
        FILTER (?ageGroup = "child" && ?civilStatus = "married")
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:cat5
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:cat5 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:cat5 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:civilStatus, eg:agegroup
+   ler:component sdmx-dimension:civilStatus, eg:agegroup ;
+   rdfs:label "if( agegroup == 'child' ) status != 'married'" ;
+   rdfs:comment "Children can't be married" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
-
 
 # mix6 : if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )
 
@@ -116,21 +241,46 @@ eg:mix6 a rule:SPARQLRule, ler:EditRule;
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:yearsMarried ?yearsMarried .
        ?obs sdmx-dimension:age ?age .
        FILTER ((?age < ?yearsMarried + 17) && (?civilStatus = "married" || ?civilStatus = "widowed"))
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:mix6
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:mix6 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:mix6 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age, sdmx-dimension:civilStatus, eg:yearsMarried
+   ler:component sdmx-dimension:age, sdmx-dimension:civilStatus, eg:yearsMarried ;
+   rdfs:label "if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )" ;
+   rdfs:comment "An underage can't be married nor widowed" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
-
 
 # mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
 
@@ -139,20 +289,45 @@ eg:mix7 a rule:SPARQLRule, ler:EditRule ;
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
        FILTER ((?age < 18) && (?ageGroup = "adult" || ?ageGroup = "elderly"))
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:mix7
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:mix7 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:mix7 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age, eg:agegroup
+   ler:component sdmx-dimension:age, eg:agegroup ;
+   rdfs:label "if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )";
+   rdfs:comment "An underage can't be an adult nor an elderly" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
-
 
 # mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
 
@@ -161,20 +336,45 @@ eg:mix8 a rule:SPARQLRule, ler:EditRule ;
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
        FILTER ((18 <= ?age && ?age < 65) && (?ageGroup = "child" || ?ageGroup = "elderly"))
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:mix8
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:mix8 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:mix8 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age, eg:agegroup
+   ler:component sdmx-dimension:age, eg:agegroup ;
+   rdfs:label "if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )" ;
+   rdfs:comment "Persons aged between 18 and 64 can't be children nor elderly" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
-
 
 # mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
 
@@ -183,16 +383,42 @@ eg:mix9 a rule:SPARQLRule, ler:EditRule ;
        PREFIX eg: <http://example.org/ns#>	
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX oa: <http://www.w3.org/ns/oa#>
+       PREFIX prov: <http://www.w3.org/ns/prov#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX dc: <http://purl.org/dc/elements/1.1/>
      IF {
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
        FILTER ((65 <= ?age) && (?ageGroup  = "adult" || ?ageGroup = "child"))
+       BIND (UUID() as ?act)
+       BIND (UUID() as ?ann)
+       BIND (UUID() as ?body)
+       BIND (now() as ?now)
      }
      THEN {
-       ?obs eg:violates eg:mix9
+       ?act a prov:Activity ;
+          rdfs:label "Consistency check" ;
+	  prov:wasAssociatedWith <http://stardog.com/> ;
+	  prov:startedAtTime ?now ;
+	  prov:used ?obs ;
+	  prov:used eg:mix9 .
+       ?ann a oa:Annotation ;
+          prov:wasGeneratedBy ?act ;
+	  prov:generatedAtTime ?now ;
+          oa:hasBody ?body ;
+	  oa:hasTarget ?obs .
+          # Possibly more targets
+       ?body a rdfs:Resource ;
+	  ler:inconsistentWith eg:mix9 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:age, eg:agegroup
+   ler:component sdmx-dimension:age, eg:agegroup ;
+   rdfs:label "if( 65 <= age ) !( agegroup %in% c('adult', 'child') )";
+   rdfs:comment "People above 65 years old can't be adults nor children" ;   
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+0100"^^xsd:dateTime
 .
