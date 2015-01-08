@@ -20,6 +20,13 @@ ler:scope a rdf:Property ;
 ler:component a rdf:Property ;
     rdfs:range qb:ComponentProperty ;
     rdfs:domain ler:EditRule ;
-    rdfs:label "LER Component@en ;
+    rdfs:label "LER Component"@en ;
     rdfs:comment "The component of an edit rule indicates the dimension, attribute or measure it constraints"@en
+.
+
+ler:inconsistentWith a rdf:Property ;
+    rdfs:range rdfs:Resource ; # Ideally bodies of oa:Annotation
+    rdfs:domain ler:EditRule ;
+    rdfs:label "LER Inconsistent With"@en ;
+    rdfs:comment "Indicates that the annotated target is inconsistent with the Linked Edit Rule of the predicate"@en
 .
