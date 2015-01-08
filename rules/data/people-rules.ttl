@@ -28,10 +28,10 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
      }
      THEN {
        ?act a prov:Activity .
-       ?act rdfs:label "Consistency check" ;
-       ?act prov:wasAssociatedWith <http://stardog.com/> ;
-       ?act prov:startedAtTime ?now ;
-       ?act prov:used ?obs ;
+       ?act rdfs:label "Consistency check"@en .
+       ?act prov:wasAssociatedWith <http://stardog.com/> .
+       ?act prov:startedAtTime ?now .
+       ?act prov:used ?obs .
        ?act prov:used leri:num1 .
      }
    """;
