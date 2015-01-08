@@ -28,6 +28,7 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
      }
      THEN {
        ?act prov:used leri:num1 .
+       ?act prov:used ?obs .
      }
    """;
    ler:scope qb:Observation ;
