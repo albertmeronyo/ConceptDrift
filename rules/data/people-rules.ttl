@@ -20,25 +20,21 @@ eg:num1 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
        FILTER (?age < 0)
-       BIND (UUID() as ?act)
-       BIND (UUID() as ?ann)
-       BIND (UUID() as ?body)
-       BIND (now() as ?now)
      }
      THEN {
-       ?act a prov:Activity ;
+       ?obs a prov:Activity ;
           rdfs:label "Consistency check" ;
 	  prov:wasAssociatedWith <http://stardog.com/> ;
-	  prov:startedAtTime ?now ;
+	  prov:startedAtTime ?obs ;
 	  prov:used ?obs ;
 	  prov:used eg:num1 .
-       ?ann a oa:Annotation ;
-          prov:wasGeneratedBy ?act ;
-	  prov:generatedAtTime ?now ;
-          oa:hasBody ?body ;
+       ?obs a oa:Annotation ;
+          prov:wasGeneratedBy ?obs ;
+	  prov:generatedAtTime ?obs ;
+          oa:hasBody ?obs ;
 	  oa:hasTarget ?obs .
           # Possibly more targets
-       ?body a rdfs:Resource ;
+       ?obs a rdfs:Resource ;
 	  ler:inconsistentWith eg:num1 .
      }
    """;
