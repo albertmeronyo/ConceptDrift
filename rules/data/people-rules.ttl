@@ -10,6 +10,7 @@
 
 eg:num1 a rule:SPARQLRule, ler:EditRule ;
    rule:content """
+       PREFIX eg: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX qb: <http://purl.org/linked-data/cube#>
        PREFIX oa: <http://www.w3.org/ns/oa#>
