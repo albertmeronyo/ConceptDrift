@@ -23,20 +23,7 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
        FILTER (?age < 0)
      }
      THEN {
-       ?obs a prov:Activity ;
-          rdfs:label "Consistency check" ;
-	  prov:wasAssociatedWith <http://stardog.com/> ;
-	  prov:startedAtTime ?obs ;
-	  prov:used ?obs ;
-	  prov:used leri:num1 .
-       ?obs a oa:Annotation ;
-          prov:wasGeneratedBy ?obs ;
-	  prov:generatedAtTime ?obs ;
-          oa:hasBody ?obs ;
-	  oa:hasTarget ?obs .
-          # Possibly more targets
-       ?obs a rdfs:Resource ;
-	  ler:inconsistentWith leri:num1 .
+       ?obs a prov:Activity .
      }
    """;
    ler:scope qb:Observation ;
