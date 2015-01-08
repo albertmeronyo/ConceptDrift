@@ -33,7 +33,7 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
 	  prov:startedAtTime ?now ;
   	  prov:used ?obs ;
 	  prov:used leri:num1 .
-       ?ann a oa:Annotation .
+       <foo> <bar> <baz> .
      }
    """;
    ler:scope qb:Observation ;
