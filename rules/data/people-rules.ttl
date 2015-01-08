@@ -34,8 +34,7 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
   	  prov:used ?obs ;
 	  prov:used leri:num1 .
        ?ann a oa:Annotation ;
-          prov:wasGeneratedBy ?act ;
-	  prov:generatedAtTime ?now .
+          prov:wasGeneratedBy ?act .
      }
    """;
    ler:scope qb:Observation ;
