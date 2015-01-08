@@ -38,9 +38,6 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
 	  prov:generatedAtTime ?now ;
           oa:hasBody ?body ;
 	  oa:hasTarget ?obs .
-          # Possibly more targets
-       ?body a rdfs:Resource ;
-	  ler:inconsistentWith leri:num1 .
      }
    """;
    ler:scope qb:Observation ;
