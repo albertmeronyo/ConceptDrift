@@ -5,6 +5,7 @@
 @prefix ler: <http://bit.ly/linked-edit-rules#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix eg: <http://example.org/ns#> .
 
 # cat5 : if( agegroup == 'child' ) status != 'married'
 
@@ -22,9 +23,10 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
+       FILTER (?ageGroup = "child" && ?civilStatus = "married")
      }
      THEN {
-       ?act a prov:Activity .
+        ?obs ler:inconsistentWith leri:cat5 .
      }
    """;
    ler:scope qb:Observation ;
