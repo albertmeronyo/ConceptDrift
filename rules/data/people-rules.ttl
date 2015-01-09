@@ -22,12 +22,11 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
-       BIND (UUID() AS ?act)
        FILTER (?ageGroup = "child" && ?civilStatus = "married")
      }
      THEN {
-       ?act a prov:Activity .
-       ?act rdfs:label "Consistency check" .
+       ?obs a prov:Activity .
+       ?obs rdfs:label "Consistency check" .
      }
    """;
    ler:scope qb:Observation ;
