@@ -28,7 +28,6 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
      }
      THEN {
        ?act ler:inconsistentWith leri:cat5 .
-       ?act ler:inconsistentWith ?now .
      }
    """;
    ler:scope qb:Observation ;
