@@ -20,11 +20,11 @@ leri:num1 a rule:SPARQLRule, ler:EditRule ;
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
-       FILTER (?age < 0)
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER (?age < 0)
      }
      THEN {
        ?act a prov:Activity .
@@ -52,11 +52,11 @@ leri:num2 a rule:SPARQLRule, ler:EditRule ;
      IF {
        ?obs a qb:Observation .
        ?obs eg:height ?height .
-       FILTER (?height <= 0)
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER (?height <= 0)
      }
      THEN {
        ?act a prov:Activity .
@@ -85,11 +85,11 @@ leri:num3 a rule:SPARQLRule, ler:EditRule ;
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
-       FILTER (?age > 150)
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER (?age > 150)
      }
      THEN {
        ?act a prov:Activity ;
@@ -132,11 +132,11 @@ leri:num4 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:age ?age .
        ?obs eg:yearsMarried ?yearsMarried .
-       FILTER (?yearsMarried >= ?age)
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER (?yearsMarried >= ?age)
      }
      THEN {
        ?act a prov:Activity ;
@@ -179,11 +179,11 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
-       FILTER (?ageGroup = "child" && ?civilStatus = "married")
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER (?ageGroup = "child" && ?civilStatus = "married")
      }
      THEN {
        ?act a prov:Activity ;
@@ -227,11 +227,11 @@ leri:mix6 a rule:SPARQLRule, ler:EditRule;
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:yearsMarried ?yearsMarried .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((?age < ?yearsMarried + 17) && (?civilStatus = "married" || ?civilStatus = "widowed"))
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER ((?age < ?yearsMarried + 17) && (?civilStatus = "married" || ?civilStatus = "widowed"))
      }
      THEN {
        ?act a prov:Activity ;
@@ -274,11 +274,11 @@ leri:mix7 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((?age < 18) && (?ageGroup = "adult" || ?ageGroup = "elderly"))
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER ((?age < 18) && (?ageGroup = "adult" || ?ageGroup = "elderly"))
      }
      THEN {
        ?act a prov:Activity ;
@@ -321,11 +321,11 @@ leri:mix8 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((18 <= ?age && ?age < 65) && (?ageGroup = "child" || ?ageGroup = "elderly"))
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER ((18 <= ?age && ?age < 65) && (?ageGroup = "child" || ?ageGroup = "elderly"))
      }
      THEN {
        ?act a prov:Activity ;
@@ -368,11 +368,11 @@ leri:mix9 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((65 <= ?age) && (?ageGroup  = "adult" || ?ageGroup = "child"))
        BIND (UUID() as ?act)
        BIND (UUID() as ?ann)
        BIND (UUID() as ?body)
        BIND (now() as ?now)
+       FILTER ((65 <= ?age) && (?ageGroup  = "adult" || ?ageGroup = "child"))
      }
      THEN {
        ?act a prov:Activity ;
