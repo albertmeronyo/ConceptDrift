@@ -22,11 +22,10 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
-       FILTER (?ageGroup = "child" && ?civilStatus = "married")
      }
      THEN {
        ?obs a prov:Activity .
-       ?obs rdfs:comment "faulty"@en .
+       ?agegroup a prov:Agent .
      }
    """;
    ler:scope qb:Observation ;
