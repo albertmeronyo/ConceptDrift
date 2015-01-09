@@ -19,12 +19,12 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
      IF {
-       ?obs a qb:Observation.
-       ?obs sdmx-dimension:civilStatus ?civilStatus.
-       ?obs eg:agegroup ?ageGroup.
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:civilStatus ?civilStatus .
+       ?obs eg:agegroup ?ageGroup .
      }
      THEN {
-       ?act a prov:Activity; prov:wasAssociatedWith <http://stardog.com/>; prov:startedAtTime <time>; prov:used ?obs; prov:used leri:cat5.
+       ?act a prov:Activity .
      }
    """;
    ler:scope qb:Observation ;
