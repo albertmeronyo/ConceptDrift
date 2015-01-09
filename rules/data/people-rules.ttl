@@ -26,6 +26,7 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
      }
      THEN {
        ?obs a prov:Activity .
+       ?obs a qb:ObservationGroup .
      }
    """;
    ler:scope qb:Observation ;
