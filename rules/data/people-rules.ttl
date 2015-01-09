@@ -24,7 +24,7 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs eg:agegroup ?ageGroup.
      }
      THEN {
-       ?act a prov:Activity; rdfs:label "Consistency check"; prov:wasAssociatedWith <http://stardog.com/>; prov:startedAtTime <time>; prov:used ?obs; prov:used leri:cat5.
+       ?act a prov:Activity; prov:wasAssociatedWith <http://stardog.com/>; prov:startedAtTime <time>; prov:used ?obs; prov:used leri:cat5.
      }
    """;
    ler:scope qb:Observation ;
