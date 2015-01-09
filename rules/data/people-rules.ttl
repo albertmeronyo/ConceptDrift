@@ -23,7 +23,6 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
        BIND (UUID() AS ?act)
-       BIND (now() AS ?now)
        FILTER (?ageGroup = "child" && ?civilStatus = "married")
      }
      THEN {
