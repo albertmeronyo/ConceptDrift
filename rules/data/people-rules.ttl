@@ -22,11 +22,11 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
-       BIND (UUID() AS ?act)
+       BIND (now() AS ?now)
        FILTER (?ageGroup = "child" && ?civilStatus = "married")
      }
      THEN {
-       ?act ler:inconsistentWith leri:cat5 .
+       leri:cat5 ler:inconsistentWith ?now .
      }
    """;
    ler:scope qb:Observation ;
