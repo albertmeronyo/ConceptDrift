@@ -22,13 +22,9 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation.
        ?obs sdmx-dimension:civilStatus ?civilStatus.
        ?obs eg:agegroup ?ageGroup.
-       BIND (UUID() as ?act)
-       BIND (UUID() as ?ann)
-       BIND (UUID() as ?body)
-       BIND (now() as ?now)
      }
      THEN {
-       ?act a prov:Activity; rdfs:label "Consistency check"; prov:wasAssociatedWith <http://stardog.com/>; prov:startedAtTime ?now; prov:used ?obs; prov:used leri:cat5.
+       ?act a prov:Activity; rdfs:label "Consistency check"; prov:wasAssociatedWith <http://stardog.com/>; prov:startedAtTime <time>; prov:used ?obs; prov:used leri:cat5.
      }
    """;
    ler:scope qb:Observation ;
