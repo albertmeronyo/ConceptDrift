@@ -27,6 +27,7 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
      THEN {
        ?obs a prov:Activity .
        ?obs a qb:ObservationGroup .
+       ?obs rdfs:comment "faulty"@en .
      }
    """;
    ler:scope qb:Observation ;
