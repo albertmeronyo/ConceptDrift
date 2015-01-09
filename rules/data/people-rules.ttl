@@ -27,6 +27,7 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
      }
      THEN {
        ?act a prov:Activity .
+       ?act rdfs:label "Consistency check" .
      }
    """;
    ler:scope qb:Observation ;
