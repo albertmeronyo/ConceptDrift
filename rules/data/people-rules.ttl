@@ -7,33 +7,31 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix eg: <http://example.org/ns#> .
 
-# cat5 : if( agegroup == 'child' ) status != 'married'
+# mix6 : if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )
 
-leri:cat5 a rule:SPARQLRule, ler:EditRule ;
+leri:mix6 a rule:SPARQLRule, ler:EditRule;
    rule:content """
        PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
-       PREFIX eg: <http://example.org/ns#>
-       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-       PREFIX oa: <http://www.w3.org/ns/oa#>
-       PREFIX prov: <http://www.w3.org/ns/prov#>
-       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       PREFIX sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
      IF {
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
-       ?obs eg:agegroup ?ageGroup .
-       FILTER (?ageGroup = "child" && ?civilStatus = "married")
+       ?obs eg:yearsMarried ?yearsMarried .
+       ?obs sdmx-dimension:age ?age .
+       FILTER ((?age < ?yearsMarried + 17) && (?civilStatus = sdmx-code:status-M || ?civilStatus = sdmx-code:status-W))
      }
      THEN {
-        ?obs ler:inconsistentWith leri:cat5 .
+        ?obs ler:inconsistentWith leri:mix6 .
      }
    """;
    ler:scope qb:Observation ;
-   ler:component sdmx-dimension:civilStatus, eg:agegroup ;
-   rdfs:label "if( agegroup == 'child' ) status != 'married'" ;
-   rdfs:comment "Children can't be married" ;
+   ler:component sdmx-dimension:age, sdmx-dimension:civilStatus, eg:yearsMarried ;
+   rdfs:label "if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )" ;
+   rdfs:comment "An underage can't be married nor widowed" ;
    dc:creator <http://www.albertmeronyo.org/> ;
    dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
 .
-
