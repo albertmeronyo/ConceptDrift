@@ -6,6 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix eg: <http://example.org/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # num1 : 0 <= age
 
@@ -152,7 +153,7 @@ leri:mix6 a rule:SPARQLRule, ler:EditRule;
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:yearsMarried ?yearsMarried .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((?age < ?yearsMarried + 17) && (?civilStatus = sdmx-code:status-M || ?civilStatus = sdmx-code:status-W))
+       FILTER ((?age < ?yearsMarried + 17) && (?civilStatus = 'married' || ?civilStatus = 'widowed'))
      }
      THEN {
         ?obs ler:inconsistentWith leri:mix6 .

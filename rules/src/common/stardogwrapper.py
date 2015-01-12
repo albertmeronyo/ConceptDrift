@@ -14,6 +14,7 @@ class StardogWrapper():
         self.RULE_FILE = self.config.get('io', 'rule_file')
         self.QB_FILE = self.config.get('io', 'qb_file')
         self.SL_QUERY = self.config.get('general', 'sl_query')
+        self.REPORT_QUERY = self.config.get('general', 'report_query')
         os.chdir(self.HOME_STARDOG)
 
     def removeLockFile(self):
@@ -42,6 +43,8 @@ class StardogWrapper():
         self.removeLockFile()
         # Attempt to start the server
         call([self.HOME_STARDOG + 'stardog-admin', 'server', 'start'])
+        # Clean knowledge base
+        call([self.HOME_STARDOG + 'stardog-admin', 'db', 'drop', self.DB_NAME])
 
     def restartServer(self):
         '''
@@ -63,7 +66,10 @@ class StardogWrapper():
         '''
         Queries Stardog in SL reasoning mode
         '''
+        # Trigger PROV and OA reporting through SPARQL INSERT using SL reasoning mode
         call([self.HOME_STARDOG + 'stardog', 'query', self.DB_NAME + ';reasoning=SL', self.SL_QUERY])
+        # Query for the report graph, not in SL mode
+        call([self.HOME_STARDOG + 'stardog', 'query', self.DB_NAME, self.REPORT_QUERY])
 
 if __name__ == '__main__':
     s = StardogWrapper()
