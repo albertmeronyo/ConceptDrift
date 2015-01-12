@@ -7,6 +7,136 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix eg: <http://example.org/ns#> .
 
+# num1 : 0 <= age
+
+leri:num1 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:age ?age .
+       FILTER (?age < 0)
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:num1 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age ;
+   rdfs:label "0 <= age"@en ;
+   rdfs:comment "Age must be zero or a positive number"@en ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+# num2 : 0 < height
+
+leri:num2 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX eg: <http://example.org/ns#>
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:height ?height .
+       FILTER (?height <= 0)
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:num2 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component eg:height ;
+   rdfs:label "0 < height" ;
+   rdfs:comment "Height must be a positive number" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+# num3 : age <= 150
+
+leri:num3 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX eg: <http://example.org/ns#>
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:age ?age .
+       FILTER (?age > 150)
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:num3 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age ;
+   rdfs:label "age <= 150" ;
+   rdfs:comment "Age can't be greater than 150" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+# num4 : yearsmarried < age
+
+leri:num4 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX eg: <http://example.org/ns#>
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>       
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:age ?age .
+       ?obs eg:yearsMarried ?yearsMarried .
+       FILTER (?yearsMarried >= ?age)
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:num4 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:yearsMarried ;
+   rdfs:label "yearsmarried < age" ;
+   rdfs:comment "A person can't be married more years than her age" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+# cat5 : if( agegroup == 'child' ) status != 'married'
+
+leri:cat5 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX eg: <http://example.org/ns#>
+       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs sdmx-dimension:civilStatus ?civilStatus .
+       ?obs eg:agegroup ?ageGroup .
+       FILTER (?ageGroup = "child" && ?civilStatus = "married")
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:cat5 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:civilStatus, eg:agegroup ;
+   rdfs:label "if( agegroup == 'child' ) status != 'married'" ;
+   rdfs:comment "Children can't be married" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
 # mix6 : if( age < yearsmarried + 17 ) !( status %in% c('married', 'widowed') )
 
 leri:mix6 a rule:SPARQLRule, ler:EditRule;
@@ -35,3 +165,102 @@ leri:mix6 a rule:SPARQLRule, ler:EditRule;
    dc:creator <http://www.albertmeronyo.org/> ;
    dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
 .
+
+# mix7 : if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )
+
+leri:mix7 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       FILTER ((?age < 18) && (?ageGroup = "adult" || ?ageGroup = "elderly"))
+     }
+     THEN {
+        ?obs ler:inconsistentWith leri:mix7 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:agegroup ;
+   rdfs:label "if( age < 18 ) !( agegroup %in% c('adult', 'elderly') )";
+   rdfs:comment "An underage can't be an adult nor an elderly" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+# mix8 : if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )
+
+leri:mix8 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       FILTER ((18 <= ?age && ?age < 65) && (?ageGroup = "child" || ?ageGroup = "elderly"))
+     }
+     THEN {
+        ?obs ler:inconsistentWith leri:mix8 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:agegroup ;
+   rdfs:label "if( 18 <= age & age < 65 ) !( agegroup %in% c('child', 'elderly') )" ;
+   rdfs:comment "Persons aged between 18 and 64 can't be children nor elderly" ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+# mix9 : if( 65 <= age ) !( agegroup %in% c('adult', 'child') ) 
+
+leri:mix9 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation .
+       ?obs eg:agegroup ?ageGroup .
+       ?obs sdmx-dimension:age ?age .
+       FILTER ((65 <= ?age) && (?ageGroup  = "adult" || ?ageGroup = "child"))
+     }
+     THEN {
+        ?obs ler:inconsistentWith leri:mix9 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:agegroup ;
+   rdfs:label "if( 65 <= age ) !( agegroup %in% c('adult', 'child') )";
+   rdfs:comment "People above 65 years old can't be adults nor children" ;   
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
