@@ -46,56 +46,56 @@ eg:dsd-people a qb:DataStructureDefinition ;
 eg:o1 a qb:Observation ;
       qb:dataset eg:dataset-people ;
       sdmx-dimension:age 21 ;
-      eg:agegroup "adult" ;
+      eg:agegroup eg:adult ;
       eg:height 6.0 ;
-      sdmx-dimension:civilStatus "single" ;
+      sdmx-dimension:civilStatus sdmx-code:status-S ;
       eg:yearsMarried -1 ;
 .
 
 eg:o2 a qb:Observation ;
       qb:dataset eg:dataset-people ;
       sdmx-dimension:age 2 ;
-      eg:agegroup "child" ;
+      eg:agegroup eg:child ;
       eg:height 3 ;
-      sdmx-dimension:civilStatus "married" ;
+      sdmx-dimension:civilStatus sdmx-code:status-M ;
       eg:yearsMarried 0 ;
 .
 
 eg:o3 a qb:Observation ;
       qb:dataset eg:dataset-people ;
       sdmx-dimension:age 18 ;
-      eg:agegroup "adult" ;
+      eg:agegroup eg:adult ;
       eg:height 5.7 ;
-      sdmx-dimension:civilStatus "married" ;
+      sdmx-dimension:civilStatus sdmx-code:status-M ;
       eg:yearsMarried 20 ;
 .
 
 eg:o4 a qb:Observation ;
       qb:dataset eg:dataset-people ;
       sdmx-dimension:age 221 ;
-      eg:agegroup "elderly" ;
+      eg:agegroup eg:elderly ;
       eg:height 5 ;
-      sdmx-dimension:civilStatus "widowed" ;
+      sdmx-dimension:civilStatus sdmx-code:status-W ;
       eg:yearsMarried 2 ;
 .
 
 eg:o5 a qb:Observation ;
       qb:dataset eg:dataset-people ;
       sdmx-dimension:age 34 ;
-      eg:agegroup "child" ;
+      eg:agegroup eg:child ;
       eg:height -7 ;
-      sdmx-dimension:civilStatus "married" ;
+      sdmx-dimension:civilStatus sdmx-code:status-M ;
       eg:yearsMarried 3 ;
 .
 
 eg:slice1 a qb:Slice ;
 	  qb:sliceStructure eg:sliceByAdults ;
-	  eg:agegroup "adult" ;
+	  eg:agegroup eg:adult ;
 	  qb:observation eg:o1, eg:o3
 .
 
 eg:slice2 a qb:Slice ;
 	  qb:sliceStructure eg:sliceByNonAdults ;
-	  eg:agegroup "child" , "elderly" ;
+	  eg:agegroup eg:child , eg:elderly ;
 	  qb:observation eg:o2, eg:o4, eg:o5
 .
