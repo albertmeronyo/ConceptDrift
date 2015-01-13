@@ -124,7 +124,7 @@ leri:cat5 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:agegroup ?ageGroup .
-       FILTER (?ageGroup = "child" && ?civilStatus = "married")
+       FILTER (?ageGroup = eg:child && ?civilStatus = sdmx-code:status-M)
      }
      THEN {
        ?obs ler:inconsistentWith leri:cat5 .
@@ -153,7 +153,7 @@ leri:mix6 a rule:SPARQLRule, ler:EditRule;
        ?obs sdmx-dimension:civilStatus ?civilStatus .
        ?obs eg:yearsMarried ?yearsMarried .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((?age < ?yearsMarried + 17) && (?civilStatus = 'married' || ?civilStatus = 'widowed'))
+       FILTER ((?age < ?yearsMarried + 17) && (?civilStatus = sdmx-code:status-M || ?civilStatus = sdmx-code:status-W))
      }
      THEN {
         ?obs ler:inconsistentWith leri:mix6 .
@@ -180,7 +180,7 @@ leri:mix7 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((?age < 18) && (?ageGroup = "adult" || ?ageGroup = "elderly"))
+       FILTER ((?age < 18) && (?ageGroup = eg:adult || ?ageGroup = eg:elderly))
      }
      THEN {
         ?obs ler:inconsistentWith leri:mix7 .
@@ -207,7 +207,7 @@ leri:mix8 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((18 <= ?age && ?age < 65) && (?ageGroup = "child" || ?ageGroup = "elderly"))
+       FILTER ((18 <= ?age && ?age < 65) && (?ageGroup = eg:child || ?ageGroup = eg:elderly))
      }
      THEN {
         ?obs ler:inconsistentWith leri:mix8 .
@@ -234,7 +234,7 @@ leri:mix9 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation .
        ?obs eg:agegroup ?ageGroup .
        ?obs sdmx-dimension:age ?age .
-       FILTER ((65 <= ?age) && (?ageGroup  = "adult" || ?ageGroup = "child"))
+       FILTER ((65 <= ?age) && (?ageGroup  = eg:adult || ?ageGroup = eg:child))
      }
      THEN {
         ?obs ler:inconsistentWith leri:mix9 .
