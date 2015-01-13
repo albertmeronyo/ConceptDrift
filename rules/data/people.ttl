@@ -7,6 +7,7 @@
 
 @prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
 @prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
 
 eg:dataset-people a qb:DataSet ;
 		  dct:title       "Random people"@en ;
