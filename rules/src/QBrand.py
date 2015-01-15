@@ -100,5 +100,5 @@ class QBrand():
         self.g.serialize(outfile, format="turtle")
 
 if __name__ == '__main__':
-    qbrand = QBrand(1000, 80, "../data/test.ttl")
+    qbrand = QBrand(10000, 80, "../data/test.ttl")
     exit(0)
