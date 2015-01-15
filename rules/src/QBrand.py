@@ -73,7 +73,7 @@ class QBrand():
         """
         Add faulty observations to the graph
         """
-        for obs in range(self.healthyObs):
+        for obs in range(self.faultyObs):
             random.seed()
             self.thisObs = self.namespaces['eg'].thisObs + str(self.obsID)
             self.age = random.randint(0, 150)
