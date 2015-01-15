@@ -60,7 +60,7 @@ class QBrand():
                                              URIRef(self.namespaces['sdmx-code'] + "status-W")
                 ])
             if self.status == URIRef(self.namespaces['sdmx-code'] + "status-M"):
-                self.yearsmarried = Literal(random.randint(0, self.age - 18))  
+                self.yearsmarried = Literal(random.randint(0, self.age - 17))  
             else:
                 self.yearsmarried = Literal(0)
             self.age = Literal(self.age)
@@ -97,7 +97,6 @@ class QBrand():
         Serializes current graph to outfile
         """
         self.g.serialize(outfile, format="turtle")
-        
 
 if __name__ == '__main__':
     qbrand = QBrand(1000, 80, "../data/test.ttl")
