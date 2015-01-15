@@ -58,14 +58,15 @@ class QBrand():
                 self.status = random.choice([URIRef(self.namespaces['sdmx-code'] + "status-S"),
                                              URIRef(self.namespaces['sdmx-code'] + "status-M"),
                                              URIRef(self.namespaces['sdmx-code'] + "status-W")
-                ])
+                                         ])
             if self.status == URIRef(self.namespaces['sdmx-code'] + "status-M"):
-                self.yearsmarried = Literal(random.randint(0, self.age - 17))  
+                self.yearsmarried = Literal(random.randint(0, self.age - 18))  
             else:
                 self.yearsmarried = Literal(0)
             self.age = Literal(self.age)
 
-            self.addObs()        
+            self.addObs()  
+      
             self.obsID += 1
 
     def addFaultyObs(self):
