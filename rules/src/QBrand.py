@@ -33,7 +33,7 @@ class QBrand():
         self.addHealthyObs()
         self.addFaultyObs()
 
-        self.printGraph()
+        # self.printGraph()
 
         self.serializeGraph(__outfile)
 
