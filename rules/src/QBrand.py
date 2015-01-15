@@ -73,6 +73,34 @@ class QBrand():
         """
         Add faulty observations to the graph
         """
+        for obs in range(self.healthyObs):
+            random.seed()
+            self.thisObs = self.namespaces['eg'].thisObs + str(self.obsID)
+            self.age = random.randint(0, 150)
+            if self.age >= 18:
+                self.agegroup = self.namespaces['eg'].child
+            elif self.age < 18 and self.age >= 65:
+                self.agegroup = self.namespaces['eg'].adult
+            else:
+                self.agegroup = self.namespaces['eg'].elderly
+            self.height = Literal(random.uniform(0.1, 11.0))
+            if self.age < 18:
+                self.status = URIRef(self.namespaces['sdmx-code'] + "status-S")
+            else:
+                self.status = random.choice([URIRef(self.namespaces['sdmx-code'] + "status-S"),
+                                             URIRef(self.namespaces['sdmx-code'] + "status-M"),
+                                             URIRef(self.namespaces['sdmx-code'] + "status-W")
+                                         ])
+            if self.status == URIRef(self.namespaces['sdmx-code'] + "status-M"):
+                self.yearsmarried = Literal(random.randint(0, self.age - 18))  
+            else:
+                self.yearsmarried = Literal(0)
+            self.age = Literal(self.age)
+
+            self.addObs()  
+      
+            self.obsID += 1
+
 
     def addObs(self):
         """
@@ -100,5 +128,5 @@ class QBrand():
         self.g.serialize(outfile, format="turtle")
 
 if __name__ == '__main__':
-    qbrand = QBrand(10000, 80, "../data/test.ttl")
+    qbrand = QBrand(10000, 5, "../data/test.ttl")
     exit(0)
