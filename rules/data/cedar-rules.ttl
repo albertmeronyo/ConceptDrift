@@ -1,0 +1,36 @@
+@prefix rule: <tag:stardog:api:rule:> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/> .
+@prefix ler: <http://bit.ly/linked-edit-rules#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix eg: <http://example.org/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# cedar1: observations have one occupation at most
+
+leri:cedar1 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX cedarterms: <http://bit.ly/cedar#>
+       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+     IF {
+       ?obs a qb:Observation.
+       ?obs cedarterms:occupationPosition ?pos1 .
+       ?obs cedarterms:occupationPosition ?pos2 .
+       FILTER (?pos1 != ?pos2 && ?pos1 < ?pos2)
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:cedar1 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component cedarterms:occupationPosition ;
+   rdfs:label "One occupation position per observation"@en ;
+   rdfs:comment "A population count can't account for two occupation positions at the same time"@en ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
