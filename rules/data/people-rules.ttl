@@ -249,20 +249,28 @@ leri:mix9 a rule:SPARQLRule, ler:EditRule ;
    dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
 .
 
+leri:macro1 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX eg: <http://example.org/ns#>	
+       PREFIX qb: <http://purl.org/linked-data/cube#> 
+       PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX stardog: <tag:stardog:api:> prefix eg: <http://example.org/ns#>
+     IF {
+       FILTER (stardog:R(\"wilcox.test\", eg:slice1, eg:slice2, eg:height) < 6)
+     }
+     THEN {
+        ?obs ler:inconsistentWith leri:mix9 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component sdmx-dimension:age, eg:agegroup ;
+   rdfs:label "if( 65 <= age ) !( agegroup %in% c('adult', 'child') )";
+   rdfs:comment "People above 65 years old can't be adults nor children" ;   
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+select ?foo where { bind(stardog:R(\"wilcox.test\", eg:slice1, eg:slice2, eg:height) as ?foo)}"
