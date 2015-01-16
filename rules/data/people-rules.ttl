@@ -257,11 +257,11 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
        PREFIX stardog: <tag:stardog:api:> 
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
      IF {
        ?x a qb:Slice .
        ?x qb:sliceStructure ?xs .
-       ?xs rdfs:label ?xl .
-       FILTER (?xl = "Slice by adults")
+       ?xs rdfs:label "Slice by adults" .
      }
      THEN {
         ?x ler:inconsistentWith leri:macro1 .
