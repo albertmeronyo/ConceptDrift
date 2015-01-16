@@ -260,8 +260,9 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
      IF {
        ?x a qb:Slice .
-       ?x qb:sliceStructure ?xs .
-       ?xs rdfs:label ?xl .
+       ?x qb:sliceStructure eg:sliceByAdults .
+       ?y a qb:Slice .
+       ?y qb:sliceStructure eg:sliceByNonAdults .
      }
      THEN {
         ?x ler:inconsistentWith leri:macro1 .
