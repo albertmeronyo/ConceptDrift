@@ -256,7 +256,7 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
        PREFIX qb: <http://purl.org/linked-data/cube#> 
        PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
-       PREFIX stardog: <tag:stardog:api:> prefix eg: <http://example.org/ns#>
+       PREFIX stardog: <tag:stardog:api:> 
      IF {
        ?x a qb:Slice .
        ?x qb:sliceStructure ?xs .
@@ -267,13 +267,13 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
        FILTER (stardog:R(\"wilcox.test\", ?x, ?y, eg:height) < 0.05)
      }
      THEN {
-        ?obs ler:inconsistentWith leri:mix9 .
+        ?obs ler:inconsistentWith leri:macro1 .
      }
    """;
    ler:scope qb:Observation ;
    ler:component sdmx-dimension:age, eg:agegroup ;
-   rdfs:label "if( 65 <= age ) !( agegroup %in% c('adult', 'child') )";
-   rdfs:comment "People above 65 years old can't be adults nor children" ;   
+   rdfs:label "dist(X) != dist(Y), X heights of adults, Y heights of non-adults";
+   rdfs:comment "Heights of adults and non-adults must follow different distributions" ;   
    dc:creator <http://www.albertmeronyo.org/> ;
    dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
 .
