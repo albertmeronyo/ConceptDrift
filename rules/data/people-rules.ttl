@@ -259,6 +259,7 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
        PREFIX stardog: <tag:stardog:api:> 
      IF {
        ?x a qb:Slice .
+       ?x qb:sliceStructure ?xs .
      }
      THEN {
         ?x ler:inconsistentWith leri:macro1 .
