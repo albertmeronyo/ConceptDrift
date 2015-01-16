@@ -264,7 +264,6 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
        ?y a qb:Slice .
        ?y qb:sliceStructure ?ys .
        ?ys rdfs:label "Slice by non-adults"@en .
-       FILTER (stardog:R(\"wilcox.test\", ?x, ?y, eg:height) < 0.05)
      }
      THEN {
         ?obs ler:inconsistentWith leri:macro1 .
