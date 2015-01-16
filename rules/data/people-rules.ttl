@@ -266,6 +266,7 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
      }
      THEN {
        ?x ler:inconsistentWith leri:macro1 .
+       ?y ler:inconsistentWith leri:macro1 .
      }
    """;
    ler:scope qb:Observation ;
