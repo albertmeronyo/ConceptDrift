@@ -258,7 +258,13 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
        PREFIX stardog: <tag:stardog:api:> prefix eg: <http://example.org/ns#>
      IF {
-       FILTER (stardog:R(\"wilcox.test\", eg:slice1, eg:slice2, eg:height) < 6)
+       ?x a qb:Slice .
+       ?x qb:sliceStructure ?xs .
+       ?xs rdfs:label "Slice by adults"@en .
+       ?y a qb:Slice .
+       ?y qb:sliceStructure ?ys .
+       ?ys rdfs:label "Slice by non-adults"@en .
+       FILTER (stardog:R(\"wilcox.test\", ?x, ?y, eg:height) < 0.05)
      }
      THEN {
         ?obs ler:inconsistentWith leri:mix9 .
@@ -271,6 +277,3 @@ leri:macro1 a rule:SPARQLRule, ler:EditRule ;
    dc:creator <http://www.albertmeronyo.org/> ;
    dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
 .
-
-
-select ?foo where { bind(stardog:R(\"wilcox.test\", eg:slice1, eg:slice2, eg:height) as ?foo)}"
