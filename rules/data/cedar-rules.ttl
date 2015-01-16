@@ -45,8 +45,9 @@ leri:cedar2 a rule:SPARQLRule, ler:EditRule ;
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
      IF {
-       ?obs a qb:Observation.
-       ?obs cedarterms:population ?population .
+       ?obs a qb:Observation .
+       ?measure a qb:MeasureProperty .
+       ?obs ?measure ?population .
        FILTER (datatype(?population) != xsd:integer)
      }
      THEN {
@@ -54,7 +55,7 @@ leri:cedar2 a rule:SPARQLRule, ler:EditRule ;
      }
    """;
    ler:scope qb:Observation ;
-   ler:component cedarterms:population ;
+   ler:component qb:MeasureProperty, cedarterms:population ;
    rdfs:label "class(population) == 'integer'"@en ;
    rdfs:comment "A population count must be an integer number"@en ;
    dc:creator <http://www.albertmeronyo.org/> ;
@@ -71,8 +72,9 @@ leri:cedar3 a rule:SPARQLRule, ler:EditRule ;
        PREFIX ler: <http://bit.ly/linked-edit-rules#>
        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
      IF {
-       ?obs a qb:Observation.
-       ?obs cedarterms:population ?population .
+       ?obs a qb:Observation .
+       ?measure a qb:MeasureProperty .
+       ?obs ?measure ?population .
        FILTER (?population <= 0)
      }
      THEN {
@@ -80,7 +82,34 @@ leri:cedar3 a rule:SPARQLRule, ler:EditRule ;
      }
    """;
    ler:scope qb:Observation ;
-   ler:component cedarterms:population ;
+   ler:component qb:MeasureProperty, cedarterms:population ;
+   rdfs:label "population > 0'"@en ;
+   rdfs:comment "A population count must be a positive number"@en ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+# cedar4: dataset meets Benford's Law
+
+leri:cedar4 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX cedarterms: <http://bit.ly/cedar#>
+       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+       PREFIX stardog: <tag:stardog:api:> 
+     IF {
+       ?ds a qb:DataSet .
+       ?measure a qb:MeasureProperty .
+       FILTER (stardog:R("benford", ?ds, ?measure) <= 0.05)
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:cedar4 .
+     }
+   """;
+   ler:scope qb:DataSet ;
+   ler:component qb:MeasureProperty, cedarterms:population ;
    rdfs:label "population > 0'"@en ;
    rdfs:comment "A population count must be a positive number"@en ;
    dc:creator <http://www.albertmeronyo.org/> ;
