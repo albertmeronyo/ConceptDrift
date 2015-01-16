@@ -7,6 +7,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix eg: <http://example.org/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cedarterms: <http://bit.ly/cedar#> .
 
 # cedar1: observations have one occupation at most
 
@@ -20,7 +21,7 @@ leri:cedar1 a rule:SPARQLRule, ler:EditRule ;
        ?obs a qb:Observation.
        ?obs cedarterms:occupationPosition ?pos1 .
        ?obs cedarterms:occupationPosition ?pos2 .
-       FILTER (?pos1 != ?pos2 && ?pos1 < ?pos2)
+       FILTER (?pos1 != ?pos2)
      }
      THEN {
        ?obs ler:inconsistentWith leri:cedar1 .
@@ -34,3 +35,54 @@ leri:cedar1 a rule:SPARQLRule, ler:EditRule ;
    dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
 .
 
+# cedar2: population counts must be integers
+
+leri:cedar2 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX cedarterms: <http://bit.ly/cedar#>
+       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+     IF {
+       ?obs a qb:Observation.
+       ?obs cedarterms:population ?population .
+       FILTER (datatype(?population) != xsd:integer)
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:cedar2 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component cedarterms:population ;
+   rdfs:label "class(population) == 'integer'"@en ;
+   rdfs:comment "A population count must be an integer number"@en ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
+
+# cedar3: population > 0
+
+leri:cedar3 a rule:SPARQLRule, ler:EditRule ;
+   rule:content """
+       PREFIX leri: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/>
+       PREFIX cedarterms: <http://bit.ly/cedar#>
+       PREFIX qb: <http://purl.org/linked-data/cube#>
+       PREFIX ler: <http://bit.ly/linked-edit-rules#>
+       PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+     IF {
+       ?obs a qb:Observation.
+       ?obs cedarterms:population ?population .
+       FILTER (?population <= 0)
+     }
+     THEN {
+       ?obs ler:inconsistentWith leri:cedar3 .
+     }
+   """;
+   ler:scope qb:Observation ;
+   ler:component cedarterms:population ;
+   rdfs:label "population > 0'"@en ;
+   rdfs:comment "A population count must be a positive number"@en ;
+   dc:creator <http://www.albertmeronyo.org/> ;
+   dc:date "2015-01-08T16:03:40+01:00"^^xsd:dateTime
+.
