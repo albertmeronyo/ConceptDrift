@@ -1,5 +1,5 @@
 @prefix ns1: <http://purl.org/linked-data/sdmx/2009/dimension#> .
-@prefix ns2: <http://example.org/ns#> .
+@prefix ns2: <http://lod.cedar-project.nl:8888/linked-edit-rules/resource/> .
 @prefix ns3: <http://purl.org/linked-data/cube#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
