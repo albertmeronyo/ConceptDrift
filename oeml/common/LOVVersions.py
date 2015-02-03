@@ -34,12 +34,12 @@ class LOVVersions:
             if "versions" in lov_json.keys():
                 self.versions[vocab] = []
                 for ver in lov_json["versions"]:
-                    self.versions[vocab].append(ver["fileURL"])
+                    self.versions[vocab].append( (ver["issued"], ver["fileURL"]) )
 
     def getVersions(self):
         '''
         Returns a dict of all cached LOV vocab versions (key = vocab,
-        value = list of version URIs)
+        value = list of ( date issued, version URI ) )
         '''
         return self.versions
                 
