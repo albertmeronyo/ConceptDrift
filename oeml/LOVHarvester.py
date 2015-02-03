@@ -22,6 +22,7 @@ class LOVHarvester:
 
         ver = LOVVersions(self.config)
         self.log.debug(ver.getVersions())
+        ver.serializeVersions()
 
         self.log.info("All done.")
 
