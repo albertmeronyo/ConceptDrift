@@ -42,6 +42,13 @@ class LOVVersions:
         value = list of ( date issued, version URI ) )
         '''
         return self.versions
+
+    def serializeVersions(self):
+        '''
+        Serializes retrieved versions in a json file
+        '''
+        with open(self.config.get('general', 'dump_file'), 'wb') as fp:
+            json.dump(self.getVersions(), fp)
                 
 
 
