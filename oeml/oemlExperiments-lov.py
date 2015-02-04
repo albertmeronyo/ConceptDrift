@@ -14,7 +14,7 @@ for dirname, dirnames, filenames in os.walk(lovDir):
         print os.path.join(dirname, subdirname)
         for x, y, versions in os.walk(os.path.join(dirname, subdirname)):
             nVersions = len(versions)
-            thisExpDir = expDir + subdirname + "/" + subdirname + "-" + str(nVersions) + "-1-1-allDrift-T/"
+            thisExpDir = expDir + subdirname + "-" + str(nVersions) + "-1-1-allDrift-T/"
             if not os.path.exists(thisExpDir):
                 os.makedirs(thisExpDir)
             call(["./oeml.sh", lovDir + subdirname + "/", thisExpDir, str(nVersions), str(1), str(1), "allDrift", "T", "http://www.w3.org/2002/07/owl#Thing", "http://www.w3.org/2000/01/rdf-schema#subClassOf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.w3.org/2000/01/rdf-schema#label"])
