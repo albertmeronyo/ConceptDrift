@@ -86,7 +86,8 @@ def recSKOSc(g, h, n, structprop = URIRef(args.str)):
 
 def recSKOS(g, h):
     for o in g.objects():
-        recSKOSc(g, h, o)
+        if isinstance(o, URIRef):
+            recSKOSc(g, h, o)
 
 def countChildren(h, n, r):
     if n not in h:
@@ -155,7 +156,8 @@ def fillLabelsC(l, t, n, g):
 
 def fillLabels(l, t, g):
     for o in g.objects():
-        fillLabelsC(l, t, o, g)
+        if isinstance(o, URIRef):
+            fillLabelsC(l, t, o, g)
 
 def simLabels(n, l1, l2):
     if n not in l1 or n not in l2:
