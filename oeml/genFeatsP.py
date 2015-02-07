@@ -78,7 +78,7 @@ if not os.path.exists(args.output):
 
 sys.setrecursionlimit(30000)
 
-def recSKOS(g, h, n):
+def recSKOSc(g, h, n):
     structprop = URIRef(args.str)
     if (None, structprop, n) not in g:
         return True
@@ -88,7 +88,11 @@ def recSKOS(g, h, n):
         for s, p, o in g.triples( (None, structprop, n) ):
             if s not in h[n]:
                 h[n].append(s)
-                recSKOS(g, h, s)
+                recSKOSc(g, h, s)
+
+def recSKOS(g, h):
+    for o in g.objects():
+        recSKOSc(g, h, o)
 
 def countChildren(h, n, r):
     if n not in h:
@@ -201,7 +205,7 @@ tree = {}
 labels = {}
 top = URIRef(args.top)
 
-recSKOS(g, tree, top)
+recSKOS(g, tree)
 fillLabels(labels, tree, top, g)
 
 print "Dataset %s has %s nodes" % (r_snapshot, str(len(tree)))
@@ -218,7 +222,7 @@ for ds in t_snapshots:
     # Compute tree
     tree_o = {}
     labels_o = {}
-    recSKOS(g_o, tree_o, top)
+    recSKOS(g_o, tree_o)
     fillLabels(labels_o, tree_o, top, g_o)
 
     print "Dataset %s has %s nodes" % (ds, str(len(tree_o)))
@@ -397,7 +401,7 @@ g_o.parse(args.input + e_snapshot, format=args.format)
 # Compute tree                                                                                                                                       
 tree_o = {}
 labels_o = {}
-recSKOS(g_o, tree_o, top)
+recSKOS(g_o, tree_o)
 fillLabels(labels_o, tree_o, top, g_o)
 
 print "Dataset %s has %s nodes" % (e_snapshot, str(len(tree)))
