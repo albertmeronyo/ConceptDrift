@@ -281,7 +281,7 @@ for ds in t_snapshots:
             elif args.change_definition == 'allDrift':
                 if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node) and not simLabels(node, labels, labels_o) > labelThreshold:
                     changed = 1
-            writer.writerow([ str(node).encode('utf-8'),
+            writer.writerow([ node,
                               dirChildren,
                               dirChildren1,
                               dirChildren2,
@@ -375,7 +375,7 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
         elif args.change_definition == 'allDrift':
             if not countArticles(g_o, node) == countArticles(g, node) and not countParents(g_o, node) == countParents(g, node) and not simLabels(node, labels, labels_o) > labelThreshold:
                 changed = 1
-        writer.writerow([ str(node).encode('utf-8'),
+        writer.writerow([ node,
                           dirChildren,
                           dirChildren1,
                           dirChildren2,
