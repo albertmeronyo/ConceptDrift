@@ -324,7 +324,7 @@ with open(args.output + 'feats_' + e_snapshot + '.csv', 'wb') as csvfile:
     writer = unicodecsv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, encoding="utf-8")
     headers = ['concept..' + r_snapshot + '..' + e_snapshot , 'dirChildren..' + r_snapshot + '..' + e_snapshot , 'dirChildren1..' + r_snapshot + '..' + e_snapshot , 'dirChildren2..' + r_snapshot + '..' + e_snapshot , 'dirChildren3..' + r_snapshot + '..' + e_snapshot , 'numParents..' + r_snapshot + '..' + e_snapshot , 'numSiblings..' + r_snapshot + '..' + e_snapshot , 'dirArticles..' + r_snapshot + '..' + e_snapshot , 'dirArticlesChildren0..' + r_snapshot + '..' + e_snapshot , 'dirArticlesChildren1..' + r_snapshot + '..' + e_snapshot , 'dirArticlesChildren2..' + r_snapshot + '..' + e_snapshot , 'dirArticlesChildren3..' + r_snapshot + '..' + e_snapshot , 'ratio..' + r_snapshot + '..' + e_snapshot , 'ratio0..' + r_snapshot + '..' + e_snapshot , 'ratio1..' + r_snapshot + '..' + e_snapshot , 'ratio2..' + r_snapshot + '..' + e_snapshot , 'ratio3..' + r_snapshot + '..' + e_snapshot , 'changed..' + r_snapshot + '..' + e_snapshot]
     writer.writerow(headers)
-    for key, children in tree:
+    for key, children in tree.iteritems():
         node = key
         dirChildren = countChildren(tree, node, 0)
         dirChildren1 = countChildren(tree, node, 1)
