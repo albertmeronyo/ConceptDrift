@@ -141,7 +141,7 @@ def countArticlesChildren(g, h, n, r,  dcsubject = URIRef(args.member)):
         else:
             return countArticles(g, n, dcsubject)
 
-def fillLabels(l, t, n, g):
+def fillLabelsC(l, t, n, g):
     labelProp = URIRef(args.label)
     nodeStack = []
     nodeStack.append(n)
@@ -158,6 +158,10 @@ def fillLabels(l, t, n, g):
             for child in t[c]:
                 if child not in doneNodeSet:
                     nodeStack.append(child)
+
+def fillLabels(l, t, g):
+    for o in g.objects():
+        fillLabelsC(l, t, o, g)
 
 def simLabels(n, l1, l2):
     if n not in l1 or n not in l2:
@@ -206,7 +210,7 @@ labels = {}
 top = URIRef(args.top)
 
 recSKOS(g, tree)
-fillLabels(labels, tree, top, g)
+fillLabels(labels, tree, g)
 
 print "Dataset %s has %s nodes" % (r_snapshot, str(len(tree)))
 
@@ -223,7 +227,7 @@ for ds in t_snapshots:
     tree_o = {}
     labels_o = {}
     recSKOS(g_o, tree_o)
-    fillLabels(labels_o, tree_o, top, g_o)
+    fillLabels(labels_o, tree_o, g_o)
 
     print "Dataset %s has %s nodes" % (ds, str(len(tree_o)))
 
@@ -402,7 +406,7 @@ g_o.parse(args.input + e_snapshot, format=args.format)
 tree_o = {}
 labels_o = {}
 recSKOS(g_o, tree_o)
-fillLabels(labels_o, tree_o, top, g_o)
+fillLabels(labels_o, tree_o, g_o)
 
 print "Dataset %s has %s nodes" % (e_snapshot, str(len(tree)))
 
