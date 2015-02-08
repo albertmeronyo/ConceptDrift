@@ -7,15 +7,17 @@ FEATURE_SELECTION="weka.classifiers.meta.AttributeSelectedClassifier -E \"weka.a
 
 # Conversion of last attribute to nominal, training dataset
 java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $1 -o $1.arff
+java $WEKAPATH weka.filters.unsupervised.attribute.AddValues -C last -L 0,1 -i $1.arff -o $1.targetValues.arff
 # Removal of concept names
-java $WEKAPATH weka.filters.unsupervised.attribute.Remove -R first -i $1.arff -o $1.clean.arff
+java $WEKAPATH weka.filters.unsupervised.attribute.Remove -R first -i $1.targetValues.arff -o $1.clean.arff
 # NA fileds of training as numeric
 sed 's/string/numeric/g' $1.clean.arff > $1.clean.num.arff
 
 # Id., evaluation dataset
 java $WEKAPATH weka.filters.unsupervised.attribute.NumericToNominal -R last -i $2 -o $2.arff
+java $WEKAPATH weka.filters.unsupervised.attribute.AddValues -C last -L 0,1 -i $2.arff -o $2.targetValues.arff
 # Removal of concept names
-java $WEKAPATH weka.filters.unsupervised.attribute.Remove -R first -i $2.arff -o $2.clean.arff
+java $WEKAPATH weka.filters.unsupervised.attribute.Remove -R first -i $2.targetValues.arff -o $2.clean.arff
 # NA fields of evaluation as numeric
 sed 's/string/numeric/g' $2.clean.arff > $2.clean.num.arff
 
