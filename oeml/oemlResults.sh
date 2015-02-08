@@ -2,7 +2,7 @@
 
 # Filter OEML results from exp/*/results.txt
 
-EXPDIR="./exp/"
+EXPDIR=$1
 
 for f in `ls $EXPDIR`
 do
