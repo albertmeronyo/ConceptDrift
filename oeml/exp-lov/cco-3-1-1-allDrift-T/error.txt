@@ -1,0 +1,4944 @@
+./oeml.sh: line 16: python2: command not found
+Error in `colnames<-`(`*tmp*`, value = c("1", "2")) : 
+  'names' attribute [2] must be the same length as the vector [0]
+Execution halted
+Refreshing GOE props...
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Warning, not in CLASSPATH?
+[KnowledgeFlow] Loading properties and plugins...
+[KnowledgeFlow] Initializing KF...
+
+No source has been specified
+Filter options:
+
+-R <col1,col2-col4,...>
+	Specifies list of columns to Discretize. First and last are valid indexes.
+	(default: first-last)
+-V
+	Invert matching sense of column indexes.
+
+General options:
+
+-h
+	Get help on available options.
+	(use -b -h for help on batch mode.)
+-i <file>
+	The name of the file containing input instances.
+	If not supplied then instances will be read from stdin.
+-o <file>
+	The name of the file output instances will be written to.
+	If not supplied then instances will be written to stdout.
+-c <class index>
+	The number of the attribute to use as the class.
+	"first" and "last" are also valid entries.
+	If not supplied then no class is assigned.
+
+
+Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+Filter options:
+
+-R <index1,index2-index4,...>
+	Specify list of columns to delete. First and last are valid
+	indexes. (default none)
+-V
+	Invert matching sense (i.e. only keep specified columns)
+
+General options:
+
+-h
+	Get help on available options.
+	(use -b -h for help on batch mode.)
+-i <file>
+	The name of the file containing input instances.
+	If not supplied then instances will be read from stdin.
+-o <file>
+	The name of the file output instances will be written to.
+	If not supplied then instances will be written to stdout.
+-c <class index>
+	The number of the attribute to use as the class.
+	"first" and "last" are also valid entries.
+	If not supplied then no class is assigned.
+
+Refreshing GOE props...
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Warning, not in CLASSPATH?
+[KnowledgeFlow] Loading properties and plugins...
+[KnowledgeFlow] Initializing KF...
+
+No source has been specified
+Filter options:
+
+-R <col1,col2-col4,...>
+	Specifies list of columns to Discretize. First and last are valid indexes.
+	(default: first-last)
+-V
+	Invert matching sense of column indexes.
+
+General options:
+
+-h
+	Get help on available options.
+	(use -b -h for help on batch mode.)
+-i <file>
+	The name of the file containing input instances.
+	If not supplied then instances will be read from stdin.
+-o <file>
+	The name of the file output instances will be written to.
+	If not supplied then instances will be written to stdout.
+-c <class index>
+	The number of the attribute to use as the class.
+	"first" and "last" are also valid entries.
+	If not supplied then no class is assigned.
+
+
+Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+Filter options:
+
+-R <index1,index2-index4,...>
+	Specify list of columns to delete. First and last are valid
+	indexes. (default none)
+-V
+	Invert matching sense (i.e. only keep specified columns)
+
+General options:
+
+-h
+	Get help on available options.
+	(use -b -h for help on batch mode.)
+-i <file>
+	The name of the file containing input instances.
+	If not supplied then instances will be read from stdin.
+-o <file>
+	The name of the file output instances will be written to.
+	If not supplied then instances will be written to stdout.
+-c <class index>
+	The number of the attribute to use as the class.
+	"first" and "last" are also valid entries.
+	If not supplied then no class is assigned.
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.bayes.BayesNet:
+
+-D
+	Do not use ADTree data structure
+
+-B <BIF file>
+	BIF file to compare with
+
+-Q weka.classifiers.bayes.net.search.SearchAlgorithm
+	Search algorithm
+
+-E weka.classifiers.bayes.net.estimate.SimpleEstimator
+	Estimator algorithm
+
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.bayes.NaiveBayes:
+
+-K
+	Use kernel density estimator rather than normal
+	distribution for numeric attributes
+-D
+	Use supervised discretization to process numeric attributes
+
+-O
+	Display model in old format (good when there are many classes)
+
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.bayes.NaiveBayesMultinomial:
+
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.bayes.NaiveBayesMultinomialUpdateable:
+
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.bayes.NaiveBayesUpdateable:
+
+-K
+	Use kernel density estimator rather than normal
+	distribution for numeric attributes
+-D
+	Use supervised discretization to process numeric attributes
+
+-O
+	Display model in old format (good when there are many classes)
+
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.functions.Logistic:
+
+-D
+	Turn on debugging output.
+-C
+	Use conjugate gradient descent rather than BFGS updates.
+-R <ridge>
+	Set the ridge in the log-likelihood.
+-M <number>
+	Set the maximum number of iterations (default -1, until convergence).
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.functions.MultilayerPerceptron:
+
+-L <learning rate>
+	Learning Rate for the backpropagation algorithm.
+	(Value should be between 0 - 1, Default = 0.3).
+-M <momentum>
+	Momentum Rate for the backpropagation algorithm.
+	(Value should be between 0 - 1, Default = 0.2).
+-N <number of epochs>
+	Number of epochs to train through.
+	(Default = 500).
+-V <percentage size of validation set>
+	Percentage size of validation set to use to terminate
+	training (if this is non zero it can pre-empt num of epochs.
+	(Value should be between 0 - 100, Default = 0).
+-S <seed>
+	The value used to seed the random number generator
+	(Value should be >= 0 and and a long, Default = 0).
+-E <threshold for number of consequetive errors>
+	The consequetive number of errors allowed for validation
+	testing before the netwrok terminates.
+	(Value should be > 0, Default = 20).
+-G
+	GUI will be opened.
+	(Use this to bring up a GUI).
+-A
+	Autocreation of the network connections will NOT be done.
+	(This will be ignored if -G is NOT set)
+-B
+	A NominalToBinary filter will NOT automatically be used.
+	(Set this to not use a NominalToBinary filter).
+-H <comma seperated numbers for nodes on each layer>
+	The hidden layers to be created for the network.
+	(Value should be a list of comma separated Natural 
+	numbers or the letters 'a' = (attribs + classes) / 2, 
+	'i' = attribs, 'o' = classes, 't' = attribs .+ classes)
+	for wildcard values, Default = a).
+-C
+	Normalizing a numeric class will NOT be done.
+	(Set this to not normalize the class if it's numeric).
+-I
+	Normalizing the attributes will NOT be done.
+	(Set this to not normalize the attributes).
+-R
+	Reseting the network will NOT be allowed.
+	(Set this to not allow the network to reset).
+-D
+	Learning rate decay will occur.
+	(Set this to cause the learning rate to decay).
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.functions.SGD:
+
+-F
+	Set the loss function to minimize.
+	0 = hinge loss (SVM), 1 = log loss (logistic regression),
+	2 = squared loss (regression), 3 = epsilon insensitive loss (regression),
+	4 = Huber loss (regression).
+	(default = 0)
+-L
+	The learning rate. If normalization is
+	turned off (as it is automatically for streaming data), then the
+	default learning rate will need to be reduced (try 0.0001).
+	(default = 0.01).
+-R <double>
+	The lambda regularization constant (default = 0.0001)
+-E <integer>
+	The number of epochs to perform (batch learning only, default = 500)
+-C <double>
+	The epsilon threshold (epsilon-insenstive and Huber loss only, default = 1e-3)
+-N
+	Don't normalize the data
+-M
+	Don't replace missing values
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.functions.SimpleLogistic:
+
+-I <iterations>
+	Set fixed number of iterations for LogitBoost
+-S
+	Use stopping criterion on training set (instead of
+	cross-validation)
+-P
+	Use error on probabilities (rmse) instead of
+	misclassification error for stopping criterion
+-M <iterations>
+	Set maximum number of boosting iterations
+-H <iterations>
+	Set parameter for heuristic for early stopping of
+	LogitBoost.
+	If enabled, the minimum is selected greedily, stopping
+	if the current minimum has not changed for iter iterations.
+	By default, heuristic is enabled with value 50. Set to
+	zero to disable heuristic.
+-W <beta>
+	Set beta for weight trimming for LogitBoost. Set to 0 for no weight trimming.
+
+-A
+	The AIC is used to choose the best iteration (instead of CV or training error).
+
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.functions.SMO:
+
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-no-checks
+	Turns off all checks - use with caution!
+	Turning them off assumes that data is purely numeric, doesn't
+	contain any missing values, and has a nominal class. Turning them
+	off also means that no header information will be stored if the
+	machine is linear. Finally, it also assumes that no instance has
+	a weight equal to 0.
+	(default: checks on)
+-C <double>
+	The complexity constant C. (default 1)
+-N
+	Whether to 0=normalize/1=standardize/2=neither. (default 0=normalize)
+-L <double>
+	The tolerance parameter. (default 1.0e-3)
+-P <double>
+	The epsilon for round-off error. (default 1.0e-12)
+-M
+	Fit logistic models to SVM outputs. 
+-V <double>
+	The number of folds for the internal
+	cross-validation. (default -1, use training data)
+-W <double>
+	The random number seed. (default 1)
+-K <classname and parameters>
+	The Kernel to use.
+	(default: weka.classifiers.functions.supportVector.PolyKernel)
+
+Options specific to kernel weka.classifiers.functions.supportVector.PolyKernel:
+
+-D
+	Enables debugging output (if available) to be printed.
+	(default: off)
+-no-checks
+	Turns off all checks - use with caution!
+	(default: checks on)
+-C <num>
+	The size of the cache (a prime number), 0 for full cache and 
+	-1 to turn it off.
+	(default: 250007)
+-E <num>
+	The Exponent to use.
+	(default: 1.0)
+-L
+	Use lower-order terms.
+	(default: no)
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.functions.VotedPerceptron:
+
+-I <int>
+	The number of iterations to be performed.
+	(default 1)
+-E <double>
+	The exponent for the polynomial kernel.
+	(default 1)
+-S <int>
+	The seed for the random number generation.
+	(default 1)
+-M <int>
+	The maximum number of alterations allowed.
+	(default 10000)
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.rules.DecisionTable:
+
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-X <number of folds>
+	Use cross validation to evaluate features.
+	Use number of folds = 1 for leave one out CV.
+	(Default = leave one out CV)
+-E <acc | rmse | mae | auc>
+	Performance evaluation measure to use for selecting attributes.
+	(Default = accuracy for discrete class and rmse for numeric class)
+-I
+	Use nearest neighbour instead of global table majority.
+-R
+	Display decision table rules.
+
+
+Options specific to search method weka.attributeSelection.BestFirst:
+
+-P <start set>
+	Specify a starting set of attributes.
+	Eg. 1,3,5-7.
+-D <0 = backward | 1 = forward | 2 = bi-directional>
+	Direction of search. (default = 1).
+-N <num>
+	Number of non-improving nodes to
+	consider before terminating search.
+-S <num>
+	Size of lookup cache for evaluated subsets.
+	Expressed as a multiple of the number of
+	attributes in the data set. (default = 1)
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.rules.JRip:
+
+-F <number of folds>
+	Set number of folds for REP
+	One fold is used as pruning set.
+	(default 3)
+-N <min. weights>
+	Set the minimal weights of instances
+	within a split.
+	(default 2.0)
+-O <number of runs>
+	Set the number of runs of
+	optimizations. (Default: 2)
+-D
+	Set whether turn on the
+	debug mode (Default: false)
+-S <seed>
+	The seed of randomization
+	(Default: 1)
+-E
+	Whether NOT check the error rate>=0.5
+	in stopping criteria 	(default: check)
+-P
+	Whether NOT use pruning
+	(default: use pruning)
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-z <class name>
+	Only outputs the source representation of the classifier,
+	giving it the supplied name.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.rules.OneR:
+
+-B <minimum bucket size>
+	The minimum number of objects in a bucket (default: 6).
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-z <class name>
+	Only outputs the source representation of the classifier,
+	giving it the supplied name.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.rules.ZeroR:
+
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-z <class name>
+	Only outputs the source representation of the classifier,
+	giving it the supplied name.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.trees.DecisionStump:
+
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.trees.HoeffdingTree:
+
+-L
+	The leaf prediction strategy to use. 0 = majority class, 1 = naive Bayes, 2 = naive Bayes adaptive.
+	(default = 2)
+-S
+	The splitting criterion to use. 0 = Gini, 1 = Info gain
+	(default = 1)
+-E
+	The allowable error in a split decision - values closer to zero will take longer to decide
+	(default = 1e-7)
+-H
+	Threshold below which a split will be forced to break ties
+	(default = 0.05)
+-M
+	Minimum fraction of weight required down at least two branches for info gain splitting
+	(default = 0.01)
+-G
+	Grace period - the number of instances a leaf should observe between split attempts
+	(default = 200)
+-N
+	The number of instances (weight) a leaf should observe before allowing naive Bayes to make predictions (NB or NB adaptive only)
+	(default = 0)
+-P
+	Print leaf models when using naive Bayes at the leaves.
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-z <class name>
+	Only outputs the source representation of the classifier,
+	giving it the supplied name.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.trees.RandomForest:
+
+-I <number of trees>
+	Number of trees to build.
+-K <number of features>
+	Number of features to consider (<1=int(logM+1)).
+-S
+	Seed for random number generator.
+	(default 1)
+-depth <num>
+	The maximum depth of the trees, 0 for unlimited.
+	(default 0)
+-print
+	Print the individual trees in the output
+-num-slots <num>
+	Number of execution slots.
+	(default 1 - i.e. no parallelism)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.trees.RandomTree:
+
+-K <number of attributes>
+	Number of attributes to randomly investigate
+	(<0 = int(log_2(#attributes)+1)).
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+-S <num>
+	Seed for random number generator.
+	(default 1)
+-depth <num>
+	The maximum depth of the tree, 0 for unlimited.
+	(default 0)
+-N <num>
+	Number of folds for backfitting (default 0, no backfitting).
+-U
+	Allow unclassified instances.
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+
+
+Weka exception: Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.meta.AttributeSelectedClassifier:
+
+-E <attribute evaluator specification>
+	Full class name of attribute evaluator, followed
+	by its options.
+	eg: "weka.attributeSelection.CfsSubsetEval -L"
+	(default weka.attributeSelection.CfsSubsetEval)
+-S <search method specification>
+	Full class name of search method, followed
+	by its options.
+	eg: "weka.attributeSelection.BestFirst -D 1"
+	(default weka.attributeSelection.BestFirst)
+-D
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-W
+	Full name of base classifier.
+	(default: weka.classifiers.trees.J48)
+
+Options specific to classifier weka.classifiers.trees.J48:
+
+-U
+	Use unpruned tree.
+-O
+	Do not collapse tree.
+-C <pruning confidence>
+	Set confidence threshold for pruning.
+	(default 0.25)
+-M <minimum number of instances>
+	Set minimum number of instances per leaf.
+	(default 2)
+-R
+	Use reduced error pruning.
+-N <number of folds>
+	Set number of folds for reduced error
+	pruning. One fold is used as pruning set.
+	(default 3)
+-B
+	Use binary splits only.
+-S
+	Don't perform subtree raising.
+-L
+	Do not clean up after the tree has been built.
+-A
+	Laplace smoothing for predicted probabilities.
+-J
+	Do not use MDL correction for info gain on numeric attributes.
+-Q <seed>
+	Seed for random data shuffling (default 1).
+
+
+Weka exception: Can't open file exp-lov/cco-3-1-1-allDrift-T/temp.model (No such file or directory).
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-disable <comma-separated list of evaluation metric names>
+	Comma separated list of metric names not to print to the output.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-i
+	Outputs detailed information-retrieval statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-z <class name>
+	Only outputs the source representation of the classifier,
+	giving it the supplied name.
+-g
+	Only outputs the graph representation of the classifier.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+
+Options specific to weka.classifiers.trees.REPTree:
+
+-M <minimum number of instances>
+	Set minimum number of instances per leaf (default 2).
+-V <minimum variance for split>
+	Set minimum numeric class variance proportion
+	of train variance for split (default 1e-3).
+-N <number of folds>
+	Number of folds for reduced error pruning (default 3).
+-S <seed>
+	Seed for random data shuffling (default 1).
+-P
+	No pruning.
+-L
+	Maximum tree depth (default -1, no maximum)
+-I
+	Initial class value count (default 0)
+-R
+	Spread initial count over all class values (i.e. don't use 1 per value)
+

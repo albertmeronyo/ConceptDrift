@@ -1,0 +1,4 @@
+[1] "Input file:  "
+[1] "Output file training:  exp-lov/bbccms-3-1-1-allDrift-T//training.csv"
+[1] "Output file evaluation:  exp-lov/bbccms-3-1-1-allDrift-T//evaluation.csv"
+[1] "Terms in all snaps:  T"

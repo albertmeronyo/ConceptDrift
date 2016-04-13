@@ -2,6 +2,7 @@ f <- read.csv('~/Downloads/effectiveness-study - features.csv')
 df <- data.frame(f)
 df$X <- NULL
 df$X.1 <- NULL
+df$X.2 <- NULL
 df$dataset <- NULL
 df$isTree <- NULL
 classifiers <- df$classifier
@@ -27,3 +28,12 @@ mlr <- multinom(classifiers ~ totalSize + nSnapshots + avgGap + avgSize + nInser
 summary(mlr)
 z <- summary(mlr)$coefficients/summary(mlr)$standard.errors
 p <- (1 - pnorm(abs(z), 0, 1)) * 2
+
+# linear models
+rf <- lm(f ~ totalSize + nSnapshots + avgGap + avgSize + nInserts + nDeletes + nComm + maxTreeDepth + avgTreeDepth + totalInstances + ratioInstances + ratioInstancesVSIS + totalStructural + ratioStructural + ratioStructuralVSIS, data = df[4:nrow(df),])
+rr <- lm(roc ~ totalSize + nSnapshots + avgGap + avgSize + nInserts + nDeletes + nComm + maxTreeDepth + avgTreeDepth + totalInstances + ratioInstances + ratioInstancesVSIS + totalStructural + ratioStructural + ratioStructuralVSIS, data = df[4:nrow(df),])
+
+stargazer(rf, rr, type="html", align=TRUE)
+
+f <- read.csv('~/Downloads/effectiveness-study - features-final.csv', header=FALSE)
+fdf <- data.frame(f)
