@@ -17,7 +17,7 @@ study concept drift.
 
 **Associated papers:**
 
-- Predicting Concept Drift in Versioned Linked Data on the Web (AAAI 2015, under review)
+- Multi-domain and Explainable Prediction of Changes in Web Vocabularies (K-CAP 2021)
 
 The development and maintenance of Knowledge Organization Systems
 (KOS) is a knowledge intensive task that requires a lot of manual ef-
